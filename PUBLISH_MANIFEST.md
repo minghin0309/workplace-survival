@@ -34,6 +34,8 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/AUTO_TRIGGER_CASES.md`
 - `tests/AUTO_TRIGGER_RESULTS.md`
 - `tests/FINAL_ACCEPTANCE_RESULTS.md`
+- `tests/mutation/MUTATION_PLAN.md`
+- `tests/mutation/check_validator_pass_gate.py`
 - `tests/evidence/README.md`
 - `tests/evidence/check_package.py`
 - `tests/evidence/compare_consistency.py`
