@@ -34,6 +34,24 @@ When statements in Data A conflict:
 - do not resolve the conflict using probability, convention, or Data B;
 - keep the affected assessment gray until the conflict is resolved.
 
+### Effective Data A and corrections
+
+Maintain one current set of effective Data A for the case.
+
+- Add a new background fact or answer when it is compatible with current Data A.
+- Replace a prior fact only when the user explicitly identifies a correction, including forms such as `correction`, `actually`, `change X to Y`, `not X — Y`, or equivalent clear wording in the user's language.
+- Remove a prior requirement, fact, or commitment when the user explicitly withdraws, cancels, or states that it no longer applies.
+- Apply the update only to the proposition it clearly targets; preserve unrelated owners, dates, requirements, progress, and commitments.
+- Treat a correction to the assistant's stated background understanding as a correction to the corresponding effective Data A.
+
+Do not append a superseded value as a second active fact. A superseded value may remain in conversation history, but it must not appear in current background understanding or affect ratings, questions, revisions, or placeholders.
+
+A new statement that conflicts with current Data A but does not clearly identify a correction, withdrawal, or governing version remains a conflict. Ask which version governs and keep the affected assessment gray.
+
+If the target could refer to more than one fact, role, work item, or case, ask the user to identify the target before changing Data A.
+
+Before every follow-up assessment, rebuild background understanding from effective Data A only and remove stale outputs caused solely by superseded content. A Data A correction does not replace Data B; Data B changes only under the revision-state rules.
+
 ## Data B: message under review
 
 Data B is the workplace message the user intends to send to a manager. It is the content being reviewed, not evidence used to verify itself.
@@ -354,7 +372,8 @@ Facts already explicit in Data A may be inserted into the answer structure. Neve
 
 ### Processing user answers
 
-- Add a factual answer, selected option, or correction to background understanding to Data A without asking the user to confirm it again.
+- Add a compatible factual answer or selected option to Data A without asking the user to confirm it again.
+- Process an explicit correction, withdrawal, or cancellation under `Effective Data A and corrections`; do not merely append it.
 - Add only what the user explicitly states or selects; do not add implications inferred from the answer.
 - Do not add unselected options, example content, or the assistant's answer structure to Data A.
 - Treat a newly submitted or revised message as Data B, not Data A.
@@ -415,5 +434,5 @@ A case consists of one work matter, its Data A, its current Data B, and follow-u
 - If it is unclear whether a message is a revision or a new case, ask the user before reusing Data A.
 - If it is unclear whether new content is background or a draft message, ask the user to classify it before adding it to Data A or replacing Data B.
 
-When Data A changes within the same case, reassess the affected judgments and continue to display both current dimension ratings. When Data B changes, reassess both dimensions.
+When Data A changes within the same case, rebuild from effective Data A, reassess the affected judgments, and continue to display both current dimension ratings. Superseded content must not continue to create a conflict, question, revision, or placeholder. When Data B changes, reassess both dimensions.
 

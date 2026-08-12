@@ -30,7 +30,7 @@ This skill reviews communication against known information. It does not independ
 - Keep Data B as content under review; never use it as evidence that verifies itself.
 - Rate and revise only Data B's identifiable new body. Exclude clearly marked quoted, forwarded, reply-header, original-message, and chat-preview content; never promote it to Data A without separate user designation.
 - Do not add assistant-generated questions, options, examples, answer structures, templates, or inferences to Data A.
-- Add only explicit user background, answers, or corrections to Data A.
+- Add only explicit user background or answers to Data A. Apply an explicit correction, withdrawal, or cancellation by replacing or removing only its targeted prior content.
 - Ask no more than three material questions per response, and never lead the user toward a preferred answer.
 - Do not force a question or revision when both dimensions are green.
 - Rate responsibility clarity and tone independently; never merge or average them.
@@ -88,7 +88,10 @@ Use the applicable fixed format in `FORMATS.md` and complete all safe work in on
 
 ### 5. Process follow-up input
 
-- Add explicit background facts, answers, and corrections to background understanding to Data A.
+- Add explicit compatible background facts and answers to Data A.
+- Replace a targeted prior fact when the user explicitly corrects it; remove a targeted requirement, fact, or commitment when the user explicitly withdraws or cancels it.
+- Rebuild background understanding from currently effective Data A. Do not retain superseded ratings, questions, revision text, or placeholders.
+- If a conflicting statement is not clearly a correction, ask which version governs. If a correction target or case is unclear, ask the user to identify the fact, work item, or case before changing Data A.
 - Reassess only the judgments affected by new Data A, but display the latest rating for both dimensions.
 - Treat a newly submitted or revised message as new Data B and reassess both dimensions.
 - If it is unclear whether input is background or a new draft, ask the user to classify it.

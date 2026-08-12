@@ -1285,6 +1285,194 @@ I will send the report Friday.
 - Reporting a Friday/Monday contradiction.
 - Revising the blockquote.
 
+## T13.3 — Effective Data A replacement
+
+### TC-50 — Withdrawn deadline no longer creates an omission
+
+**State:** Existing case. Data A says the manager requires an owner and deadline; Alex is the confirmed owner, the deadline is unknown, and current Data B is `Alex owns the task.` The prior responsibility rating is red, tone is green, overall is red, and a deadline question and placeholder are unresolved.
+
+**Input**
+
+```text
+Correction: the manager withdrew the deadline requirement. Only the owner is required now.
+```
+
+**Expected**
+
+- Removes the deadline requirement from effective Data A.
+- Rebuilds background understanding with only the current owner requirement and confirmed owner.
+- Rates responsibility clarity, tone, and overall status green.
+- Removes the deadline question and placeholder.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Retaining the old deadline requirement as an active conflict.
+- Keeping a deadline question, placeholder, red rating, or gray rating.
+- Treating the correction as replacement Data B.
+
+### TC-51 — Corrected owner replaces the old owner
+
+**State:** Existing case. Data A says Alex is the confirmed owner. Current Data B is `Jamie owns the task.`, producing responsibility red, tone green, overall red, and an Alex-based revision.
+
+**Input**
+
+```text
+I need to correct the background: Alex is not the owner; Jamie is the confirmed owner.
+```
+
+**Expected**
+
+- Replaces Alex with Jamie in effective Data A.
+- Rebuilds background understanding with Jamie only.
+- Reassesses current Data B as responsibility green, tone green, and overall green.
+- Removes the stale Alex-based revision and states `No revision needed`.
+
+**Forbidden**
+
+- Keeping Alex and Jamie as conflicting active owners.
+- Retaining the previous red rating or Alex-based revision.
+- Treating the correction as replacement Data B.
+
+### TC-52 — Cancelled requirement no longer produces stale output
+
+**State:** Existing case. Data A says the manager requires owner and progress; progress is confirmed as 80%, owner is unknown, and current Data B is `Progress is 80%.` The prior review is red and asks for the owner.
+
+**Input**
+
+```text
+The manager cancelled the owner request. The progress update is the only requirement now.
+```
+
+**Expected**
+
+- Removes the owner request from effective Data A.
+- Preserves the progress requirement and confirmed 80% value.
+- Rates responsibility clarity, tone, and overall status green.
+- Removes the owner question and any owner placeholder.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Treating the cancelled owner request as active.
+- Retaining a non-green rating caused solely by the owner request.
+- Removing the still-active progress requirement.
+
+### TC-53 — Unmarked conflicting statement does not silently replace Data A
+
+**State:** Existing case. Data A says Alex is the confirmed task owner. Current Data B is `Alex owns the task.` and no owner question is pending.
+
+**Input**
+
+```text
+Background update: Jamie is the task owner.
+```
+
+**Expected**
+
+- Treats Alex and Jamie as conflicting Data A statements rather than silently replacing Alex.
+- Rates responsibility clarity gray and tone green, with overall gray.
+- Asks neutrally which owner governs the current case.
+- Keeps current Data B unchanged pending clarification.
+
+**Forbidden**
+
+- Assuming the new statement is a correction without explicit correction or governing wording.
+- Selecting either owner using recency.
+- Replacing Data B with the new statement.
+
+### TC-54 — Targeted correction preserves unrelated Data A
+
+**State:** Existing case. Data A says Alex is the confirmed owner and Friday is the confirmed deadline. Current Data B is `Jamie will finish it Monday.`, producing responsibility red and tone green.
+
+**Input**
+
+```text
+Correction: Jamie, not Alex, is the confirmed owner.
+```
+
+**Expected**
+
+- Replaces only the owner, making Jamie the effective owner.
+- Preserves Friday as the effective deadline.
+- Keeps responsibility red solely because current Data B says Monday instead of Friday; tone remains green and overall remains red.
+- Revises Monday to Friday without changing Jamie.
+
+**Forbidden**
+
+- Removing or replacing the unrelated Friday deadline.
+- Continuing to report an owner contradiction.
+- Replacing current Data B with the correction statement.
+
+### TC-55 — Unclear correction target requires clarification
+
+**State:** Existing case. Data A says Alex owns the report and Taylor owns the deployment. Current Data B is `Jamie owns it.`, with responsibility gray and tone green because `it` is unclear.
+
+**Input**
+
+```text
+Correction: Jamie is the owner.
+```
+
+**Expected**
+
+- Does not replace either existing owner before the target is identified.
+- Keeps responsibility clarity gray, tone green, and overall gray.
+- Asks whether the correction concerns the report, deployment, or another work item.
+- Preserves both existing owner facts pending clarification.
+
+**Forbidden**
+
+- Replacing Alex, Taylor, or both without clarification.
+- Selecting a target from recency or Data B.
+- Treating the correction statement as replacement Data B.
+
+### TC-56 — Retracted fact no longer creates a contradiction
+
+**State:** Existing case. Data A says vendor approval is a confirmed blocker. Current Data B is `Vendor approval is no longer a blocker.`, producing responsibility red and tone green.
+
+**Input**
+
+```text
+Correction: retract the old blocker fact. Vendor approval is no longer a blocker.
+```
+
+**Expected**
+
+- Removes the old `vendor approval is a blocker` fact from effective Data A.
+- Uses the explicit current fact that vendor approval is no longer a blocker.
+- Reassesses current Data B as responsibility green, tone green, and overall green.
+- Removes the stale blocker contradiction and states `No revision needed`.
+
+**Forbidden**
+
+- Retaining both blocker states as an unresolved active conflict.
+- Keeping the prior red rating or blocker-based revision.
+- Treating the correction as replacement Data B.
+
+### TC-57 — Withdrawn commitment no longer governs the case
+
+**State:** Existing case. Data A says the user made a confirmed commitment to send the draft Friday. Current Data B is `I am no longer committing to a Friday draft.`, producing responsibility red and tone green.
+
+**Input**
+
+```text
+Background correction: I withdraw my Friday draft commitment; that commitment no longer applies.
+```
+
+**Expected**
+
+- Removes the Friday draft commitment from effective Data A.
+- Reassesses current Data B as responsibility green, tone green, and overall green.
+- Removes the stale commitment contradiction, question, or revision.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Keeping the withdrawn Friday commitment active.
+- Retaining a non-green rating caused solely by the withdrawn commitment.
+- Treating the withdrawal as replacement Data B.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -1296,3 +1484,4 @@ I will send the report Friday.
 - T9.7 short acknowledgements: TC-31–TC-32.
 - T13.1 quoted, forwarded, and nested content: TC-33–TC-43.
 - T13.2 mixed input classification: TC-44–TC-49.
+- T13.3 effective Data A replacement: TC-50–TC-57.

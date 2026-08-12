@@ -74,6 +74,19 @@ Do not rate while required input or a material input boundary is unresolved.
 - Do not carry background, answers, ratings, or commitments into a different case.
 - Ask for classification when it is unclear whether new input is background, a revised draft, or a new case.
 
+### Effective Data A
+
+Maintain one current set of effective Data A for each case.
+
+- Add compatible new background and answers.
+- Replace only the prior fact explicitly targeted by a user correction.
+- Remove only the requirement, fact, or commitment explicitly withdrawn, cancelled, or declared no longer applicable.
+- Preserve unrelated current Data A.
+- Do not treat an unmarked conflicting statement as a correction; ask which version governs.
+- Rebuild the assessment from effective Data A so superseded content no longer affects background understanding, ratings, questions, revisions, or placeholders.
+
+If the correction target or case is unclear, request classification before changing Data A.
+
 ### Images
 
 - Use clearly legible image content only in the role identified by the user or visible structure.
