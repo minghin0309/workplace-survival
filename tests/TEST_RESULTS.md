@@ -2,9 +2,9 @@
 
 ## Current status
 
-- Cases currently specified: 49.
-- Latest T13.2 text execution: TC-01–TC-20 and TC-26–TC-49, 44 passed and 0 failed.
-- Latest T13.2 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
+- Cases currently specified: 57.
+- Latest T13.3 text execution: TC-01–TC-20 and TC-26–TC-57, 52 passed and 0 failed.
+- Latest T13.3 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
 - Most recent attached-image execution remains the post-T11.5 run recorded below: 5 passed and 0 failed.
 
 ## Initial T10.1 run summary
@@ -175,3 +175,20 @@ New-case result: 6 passed, 0 failed.
 - Independent pre-test consistency review found no remaining classification, provenance, outer-label, embedded-content, or ownership conflict.
 
 Fresh text execution result: 44 passed, 0 failed.
+
+## T13.3 effective Data A replacement — 2026-08-12
+
+### New cases
+
+- TC-50–TC-53: 4 passed, 0 failed — deadline withdrawal, owner correction, request cancellation, and unmarked conflict.
+- TC-54–TC-57: 4 passed, 0 failed — targeted correction, unclear target, fact retraction, and commitment withdrawal.
+
+New-case result: 8 passed, 0 failed.
+
+### Regression
+
+- Existing text cases TC-01–TC-20 and TC-26–TC-49: 44 passed, 0 failed.
+- Image cases TC-21–TC-25: 5 semantic fixture checks passed, 0 failed; images were not attached and these are not fresh executions.
+- Independent pre-test consistency review found no remaining correction, conflict, target-scope, stale-state, Data B isolation, or ownership issue.
+
+Fresh text execution result: 52 passed, 0 failed.

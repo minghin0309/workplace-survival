@@ -45,9 +45,9 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T13.3 — Replace superseded Data A
 
-- [ ] Completed
+- [x] Completed
 
-- Source requirement: Pending specification — define replacement and withdrawal semantics for corrections in `SPEC.md` section 4 before runtime changes.
+- Source requirement: `SPEC.md` section 4, `Effective Data A`.
 - Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - explicit correction replaces the targeted old value;

@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.3 — Effective Data A replacement
+
+- Maintained one current set of effective Data A for each case.
+- Replaced explicitly corrected facts and removed explicitly withdrawn requirements, facts, and commitments.
+- Preserved unrelated background and kept unmarked conflicting statements unresolved.
+- Rebuilt follow-up output without stale ratings, questions, revisions, or placeholders.
+- Added TC-50–TC-57; 8 new and 44 existing text cases passed, with five image cases receiving semantic checks only.
+
 ### T13.2 — Mixed-input classification
 
 - Auto-classified background and draft text only when explicit semantic wording identifies both roles and boundaries.
