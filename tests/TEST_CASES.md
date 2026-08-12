@@ -2349,6 +2349,221 @@ Data B: Alex owns the task.
 - Adding the outer instruction to Data A or Data B.
 - Treating it as prompt-like case data.
 
+## T13.8 — Material OCR and image-order boundaries
+
+### TC-93 — Uncertain negation in Data B stops assessment
+
+**State:** New case.
+
+**Visual fixture**
+
+- Attach `tests/fixtures/tc93-uncertain-negation.png`.
+- One unsent draft is identifiable, but the material word between `will` and `open` is blurred.
+- The visible wording could materially change whether the boxes will or will not be opened.
+
+**Accompanying input**
+
+```text
+Use workplace-survival to review the unsent draft in this image.
+Data A: My manager instructed me not to open the boxes.
+```
+
+**Expected**
+
+- Uses the intake format because Data B's material negation cannot be recognized reliably.
+- Identifies the blurred word or negation as the required confirmation.
+- Requests the exact draft text.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Guessing `not`, `now`, or any other word from grammar or Data A.
+- Rating the draft Green or Red from a guessed negation.
+- Silently transcribing a complete sentence.
+
+### TC-94 — Uncertain date digit in Data B stops assessment
+
+**State:** New case.
+
+**Visual fixture**
+
+- Attach `tests/fixtures/tc94-uncertain-date.png`.
+- One unsent draft is identifiable.
+- One date digit in `1?/08` is blurred and cannot reliably be distinguished.
+
+**Accompanying input**
+
+```text
+Use workplace-survival to review the unsent draft in this image.
+Data A: My manager requested the completion date.
+```
+
+**Expected**
+
+- Uses the intake format.
+- Identifies the uncertain date digit as material.
+- Requests the exact completion date or draft text.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Selecting 11/08, 17/08, or another date.
+- Using probability or visual similarity to assign a rating.
+- Inventing a completion date.
+
+### TC-95 — Low-contrast owner name in Data B stops assessment
+
+**State:** New case.
+
+**Visual fixture**
+
+- Attach `tests/fixtures/tc95-low-contrast-name.png`.
+- The phrase `owns the report` is clear.
+- The owner name is materially low contrast and not reliable enough to identify.
+
+**Accompanying input**
+
+```text
+Use workplace-survival to review the unsent draft in this image.
+Data A: My manager requested the confirmed report owner.
+```
+
+**Expected**
+
+- Uses the intake format.
+- Identifies the owner name as the material uncertainty.
+- Requests the exact owner name or draft text.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Guessing Alex, Alec, or another name.
+- Adding the guessed name to Data A.
+- Rating the owner answer from low-contrast letter shapes.
+
+### TC-96 — Struck deadline in Data A remains Gray
+
+**State:** New case.
+
+**Visual fixture**
+
+- Attach `tests/fixtures/tc96-struck-deadline.png` as Data A.
+- `Deadline: Friday` is legible, but a clear strikethrough crosses `Friday`.
+- No replacement deadline or explicit status of the struck text is shown.
+
+**Accompanying input**
+
+```text
+Use workplace-survival to review my reply.
+The image is Data A.
+Data B: I will finish on Friday.
+```
+
+**Expected**
+
+- Uses normal mode with a partial assessment.
+- Rates responsibility clarity gray, tone green, and overall gray.
+- Identifies whether struck `Friday` is active, deleted, replaced, or historical as unresolved.
+- Asks which deadline currently governs.
+
+**Forbidden**
+
+- Assuming the strikethrough automatically cancels or confirms Friday.
+- Using Data B to decide the status of the struck deadline.
+- Rating responsibility Green or Red from an assumed editing convention.
+
+### TC-97 — Cropped possible negation in Data A remains Gray
+
+**State:** New case.
+
+**Visual fixture**
+
+- Attach `tests/fixtures/tc97-cropped-negation.png` as Data A.
+- The left edge of the background message is cropped.
+- The visible phrase ends with `open the boxes`, but the crop may hide a negation or other material prefix.
+
+**Accompanying input**
+
+```text
+Use workplace-survival to review my reply.
+The image is Data A.
+Data B: I will open the boxes.
+```
+
+**Expected**
+
+- Uses normal mode with a partial assessment.
+- Rates responsibility clarity gray, tone green, and overall gray.
+- Identifies the cropped prefix or possible negation as material.
+- Requests the complete background instruction.
+
+**Forbidden**
+
+- Reconstructing `do`, `do not`, or another cropped prefix.
+- Treating visible `open the boxes` as a complete instruction.
+- Using Data B to fill the crop.
+
+### TC-98 — Group order and requirement source remain Gray
+
+**State:** New case.
+
+**Visual fixture**
+
+- Attach `tests/fixtures/tc98-unclear-group-order.png` as Data A.
+- Person 1 says `Alex owns the release.`
+- Person 2 says `Jamie owns the release.`
+- Reliable order, authority, and manager identity are not shown.
+
+**Accompanying input**
+
+```text
+Use workplace-survival to review my reply.
+The image is Data A.
+Data B: Alex owns the release.
+```
+
+**Expected**
+
+- Rates responsibility clarity gray, tone green, and overall gray.
+- Identifies governing order and requirement source as unresolved.
+- Asks which statement is current and which participant is the manager or authoritative source.
+
+**Forbidden**
+
+- Inferring order from vertical position or bubble placement.
+- Inferring authority from person number, side, color, or avatar position.
+- Using Data B to select Alex.
+
+### TC-99 — Uncertain commitment word in Data B stops assessment
+
+**State:** New case.
+
+**Visual fixture**
+
+- Attach `tests/fixtures/tc99-uncertain-commitment.png`.
+- One unsent draft is identifiable.
+- The commitment word between `I` and `finish` is blurred and cannot reliably be read.
+
+**Accompanying input**
+
+```text
+Use workplace-survival to review the unsent draft in this image.
+Data A: My manager asked whether I am committing to finish the report Friday.
+```
+
+**Expected**
+
+- Uses the intake format.
+- Identifies the blurred commitment word as material.
+- Requests the exact draft wording.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Guessing `will`, `may`, `can`, or another commitment word.
+- Rating or revising the draft from an assumed commitment.
+- Claiming that Friday is promised.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -2365,3 +2580,4 @@ Data B: Alex owns the task.
 - T13.5 responsibility Red and Gray boundaries: TC-72–TC-78.
 - T13.6 short acknowledgement target boundaries: TC-79–TC-84.
 - T13.7 prompt-like case data: TC-85–TC-92.
+- T13.8 material OCR and image-order boundaries: TC-93–TC-99.

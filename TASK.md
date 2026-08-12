@@ -117,7 +117,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - [ ] Completed
 
 - Source requirement: `SPEC.md` section 4.
-- Owner files: `.cursor/skills/workplace-survival/REFERENCE.md`, `tests/fixtures/generate_fixtures.py`, generated image fixtures, and `tests/TEST_CASES.md`.
+- Owner files: `.cursor/skills/workplace-survival/REFERENCE.md`, `tests/fixtures/generate_fixtures.py`, generated image fixtures, `tests/TEST_CASES.md`, and `PUBLISH_MANIFEST.md`.
 - Acceptance:
   - uncertain names, dates, numbers, negations, and commitment words require confirmation;
   - materially uncertain conversation order or requirement source is not inferred;

@@ -44,6 +44,13 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/fixtures/tc24-immaterial-interface.png`
 - `tests/fixtures/tc25-cropped-content.png`
 - `tests/fixtures/tc89-prompt-like-draft.png`
+- `tests/fixtures/tc93-uncertain-negation.png`
+- `tests/fixtures/tc94-uncertain-date.png`
+- `tests/fixtures/tc95-low-contrast-name.png`
+- `tests/fixtures/tc96-struck-deadline.png`
+- `tests/fixtures/tc97-cropped-negation.png`
+- `tests/fixtures/tc98-unclear-group-order.png`
+- `tests/fixtures/tc99-uncertain-commitment.png`
 
 ## Repository configuration
 
