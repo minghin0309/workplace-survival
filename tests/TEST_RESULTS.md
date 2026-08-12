@@ -2,9 +2,9 @@
 
 ## Current status
 
-- Cases currently specified: 57.
-- Latest T13.3 text execution: TC-01–TC-20 and TC-26–TC-57, 52 passed and 0 failed.
-- Latest T13.3 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
+- Cases currently specified: 71.
+- Latest T13.4 text execution: TC-01–TC-20 and TC-26–TC-71, 66 passed and 0 failed.
+- Latest T13.4 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
 - Most recent attached-image execution remains the post-T11.5 run recorded below: 5 passed and 0 failed.
 
 ## Initial T10.1 run summary
@@ -192,3 +192,21 @@ New-case result: 8 passed, 0 failed.
 - Independent pre-test consistency review found no remaining correction, conflict, target-scope, stale-state, Data B isolation, or ownership issue.
 
 Fresh text execution result: 52 passed, 0 failed.
+
+## T13.4 tone boundaries — 2026-08-12
+
+### New cases
+
+- TC-58–TC-62: 5 passed, 0 failed — neutral directness, dismissive responsibility shifting, unsupported accusation, supported personalized blame, and neutral process accountability.
+- TC-63–TC-67: 5 passed, 0 failed — insult, targeted threat, operational consequence, person-directed hostility, and dismissive stance.
+- TC-68–TC-71: 4 passed, 0 failed — qualified fault suggestion, work-product degradation, specific supported defect, and task-directed frustration.
+
+New-case result: 14 passed, 0 failed.
+
+### Regression
+
+- Existing text cases TC-01–TC-20 and TC-26–TC-57: 52 passed, 0 failed.
+- Image cases TC-21–TC-25: 5 semantic fixture checks passed, 0 failed; images were not attached and these are not fresh executions.
+- Independent pre-test boundary review found no remaining directness, accusation-severity, hostility, dismissiveness, threat, degradation, dimension-independence, or ownership conflict.
+
+Fresh text execution result: 66 passed, 0 failed.

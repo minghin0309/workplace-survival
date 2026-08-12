@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.4 — Tone boundaries
+
+- Defined ordered Green, Yellow, and Red tone conditions for directness, ambiguity, responsibility shifting, accusation, insult, hostility, threat, and degradation.
+- Distinguished supported personalized blame from neutral process accountability and major unsupported accusations from qualified fault suggestions.
+- Separated person-directed hostility, task-directed frustration, global work-product degradation, and specific operational defects.
+- Kept responsibility and tone ratings independent.
+- Added TC-58–TC-71; 14 new and 52 existing text cases passed, with five image cases receiving semantic checks only.
+
 ### T13.3 — Effective Data A replacement
 
 - Maintained one current set of effective Data A for each case.

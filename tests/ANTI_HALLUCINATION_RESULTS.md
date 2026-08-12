@@ -7,8 +7,8 @@
 - Targeted cases passed: 6.
 - Targeted cases failed: 0.
 - Unsupported or fabricated facts found: 0.
-- Functional cases reviewed: 57.
-- Total functional and targeted cases: 63.
+- Functional cases reviewed: 71.
+- Total functional and targeted cases: 77.
 
 ## Targeted results
 
@@ -32,7 +32,7 @@
 
 ## Existing functional-suite audit
 
-The 57 functional cases include explicit forbidden-behavior checks covering unknown dates, owners, progress, commitments, manager intent, image content outside the visible input, Data B self-verification, cross-case data reuse, unsupported expansion of short acknowledgements, automatic promotion of embedded content to Data A, unsafe mixed-input classification, and stale or silently replaced Data A. In the latest T13.3 regression, 52 text cases passed and five image cases passed semantic fixture checks, with no fabricated fact reported.
+The 71 functional cases include explicit forbidden-behavior checks covering unknown dates, owners, progress, commitments, manager intent, image content outside the visible input, Data B self-verification, cross-case data reuse, unsupported expansion of short acknowledgements, automatic promotion of embedded content to Data A, unsafe mixed-input classification, stale or silently replaced Data A, and unsupported accusation boundaries. In the latest T13.4 regression, 66 text cases passed and five image cases passed semantic fixture checks, with no fabricated fact reported.
 
 ## T10.2 conclusion
 
@@ -51,6 +51,12 @@ All targeted anti-hallucination cases were rerun after the post-T11.5 changes an
 - No image case was part of this targeted anti-hallucination suite.
 
 ## T13.3 regression — 2026-08-12
+
+- AH-01–AH-06: 6 passed, 0 failed across 7 response rounds.
+- Unsupported or fabricated facts: 0.
+- No image case was part of this targeted anti-hallucination suite.
+
+## T13.4 regression — 2026-08-12
 
 - AH-01–AH-06: 6 passed, 0 failed across 7 response rounds.
 - Unsupported or fabricated facts: 0.
