@@ -35,11 +35,14 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/AUTO_TRIGGER_RESULTS.md`
 - `tests/FINAL_ACCEPTANCE_RESULTS.md`
 - `tests/evidence/README.md`
+- `tests/evidence/check_package.py`
 - `tests/evidence/compare_consistency.py`
 - `tests/evidence/t13-11-comparator-validation.json`
 - `tests/evidence/t13-11-plan.json`
 - `tests/evidence/t13-11-repeat.json`
+- `tests/evidence/t13-12-plan.json`
 - `tests/evidence/validate_evidence.py`
+- `tests/evidence/validate_final_acceptance.py`
 - `tests/evidence/t13-10-validation.json`
 
 ## Reproducible image fixtures

@@ -172,7 +172,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - [ ] Completed
 
 - Source requirement: `SPEC.md` section 7 acceptance requirement plus the evidence and consistency gaps tracked by T13.10–T13.11.
-- Owner files: all suite result files, `tests/FINAL_ACCEPTANCE_RESULTS.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
+- Owner files: all suite case/result files, `tests/evidence/`, `tests/FINAL_ACCEPTANCE_RESULTS.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
 - Acceptance:
   - functional, anti-hallucination, interaction-quality, explicit-invocation, and auto-trigger suites are rerun;
   - case pass rate and repeat-run consistency are reported separately;
