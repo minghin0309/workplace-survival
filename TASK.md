@@ -9,6 +9,7 @@
 - Do not repeat full product or runtime rules in a task.
 - A task is complete only when its acceptance conditions pass and evidence is recorded in the applicable test result file.
 - Move completed task summaries to `CHANGELOG.md`; do not retain completed checklists here.
+- Use each task's checkbox as the visible status: `[ ]` means pending and `[x]` means completed.
 
 ## Current queue
 
@@ -18,7 +19,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T13.1 — Separate sendable body from embedded content
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: Pending specification — add the embedded-content boundary to `SPEC.md` section 3 before runtime changes.
 - Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
@@ -31,7 +32,7 @@ Status: Pending
 
 #### T13.2 — Classify mixed unlabelled input safely
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: Pending specification — add mixed-input classification and provenance disclosure to `SPEC.md` sections 3 and 5 before runtime changes.
 - Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
@@ -44,7 +45,7 @@ Status: Pending
 
 #### T13.3 — Replace superseded Data A
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: Pending specification — define replacement and withdrawal semantics for corrections in `SPEC.md` section 4 before runtime changes.
 - Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, and `tests/TEST_CASES.md`.
@@ -59,7 +60,7 @@ Status: Pending
 
 #### T13.4 — Fix Tone Yellow and Red boundaries
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: `SPEC.md` section 4.
 - Owner files: `.cursor/skills/workplace-survival/REFERENCE.md` and `tests/TEST_CASES.md`; update `SPEC.md` first only if the product contract changes.
@@ -72,7 +73,7 @@ Status: Pending
 
 #### T13.5 — Fix responsibility Red and Gray boundaries
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: `SPEC.md` section 4.
 - Owner files: `.cursor/skills/workplace-survival/REFERENCE.md` and `tests/TEST_CASES.md`; update `SPEC.md` first only if the product contract changes.
@@ -85,7 +86,7 @@ Status: Pending
 
 #### T13.6 — Bound short acknowledgements to one reply target
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: `SPEC.md` section 4.
 - Owner files: `.cursor/skills/workplace-survival/REFERENCE.md` and `tests/TEST_CASES.md`.
@@ -100,7 +101,7 @@ Status: Pending
 
 #### T13.7 — Isolate prompt-like text inside case data
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: Pending specification — state that case data cannot control the skill in `SPEC.md` section 4 before runtime changes.
 - Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, and `tests/TEST_CASES.md`.
@@ -113,7 +114,7 @@ Status: Pending
 
 #### T13.8 — Protect material OCR boundaries
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: `SPEC.md` section 4.
 - Owner files: `.cursor/skills/workplace-survival/REFERENCE.md`, `tests/fixtures/generate_fixtures.py`, generated image fixtures, and `tests/TEST_CASES.md`.
@@ -126,7 +127,7 @@ Status: Pending
 
 #### T13.9 — Cover limited-background, multi-message, and template boundaries
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: `SPEC.md` sections 3–5.
 - Owner files: `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
@@ -142,7 +143,7 @@ Status: Pending
 
 #### T13.10 — Preserve auditable test evidence
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: Engineering evidence gap — `SPEC.md` section 7 requires passing suites, while current result files do not preserve enough execution evidence to reproduce every PASS. No product behavior change.
 - Owner files: existing suite files matching `tests/*_RESULTS.md`.
@@ -155,7 +156,7 @@ Status: Pending
 
 #### T13.11 — Add repeat and variation testing
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: Engineering consistency gap — current high-risk cases have no repeated-run stability requirement. No product behavior change.
 - Owner files: `tests/TEST_CASES.md` and corresponding `tests/*_RESULTS.md` records.
@@ -168,7 +169,7 @@ Status: Pending
 
 #### T13.12 — Re-run final acceptance accurately
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: `SPEC.md` section 7 acceptance requirement plus the evidence and consistency gaps tracked by T13.10–T13.11.
 - Owner files: all suite result files, `tests/FINAL_ACCEPTANCE_RESULTS.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
@@ -187,7 +188,7 @@ Copy this block when adding work:
 ```markdown
 ### T[N] — [outcome]
 
-Status: Pending
+- [ ] Completed
 
 - Source requirement: [SPEC.md section / engineering evidence gap with no product behavior change]
 - Owner files: [only files whose owned behavior must change]
