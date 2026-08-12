@@ -1473,6 +1473,337 @@ Background correction: I withdraw my Friday draft commitment; that commitment no
 - Retaining a non-green rating caused solely by the withdrawn commitment.
 - Treating the withdrawal as replacement Data B.
 
+## T13.4 — Tone boundaries
+
+### TC-58 — Neutral direct request is Green
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My draft is complete. My manager's approval is required before I can send the report.
+Data B: Please approve the report so I can send it today.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone green, and overall green.
+- Treats the direct request as a clear handoff without a concrete tone risk.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating tone yellow merely because the message directly asks the manager to act.
+- Rewriting the message to make it more formal or verbose.
+
+### TC-59 — Dismissive responsibility shifting is Yellow
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My draft is complete. My manager's approval is required before I can send the report.
+Data B: You need to approve it first. I've already done my part.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone yellow, and overall yellow.
+- Identifies `I've already done my part` as dismissive responsibility-shifting wording.
+- Describes the concrete risk without predicting the manager's reaction.
+- Minimally revises the wording while preserving the approval handoff.
+
+**Forbidden**
+
+- Rating tone red without insult, hostility, threat, or unsupported accusation.
+- Changing who must approve or who sends the report.
+
+### TC-60 — Unsupported explicit accusation is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The report is delayed. The cause is not confirmed. My manager asked for the current status.
+Data B: The report is delayed. You caused this by ignoring my messages.
+```
+
+**Expected**
+
+- Rates responsibility clarity red, tone red, and overall red.
+- Identifies the definitive causal claim as conflicting with Data A's unconfirmed cause in the responsibility dimension.
+- Identifies `You caused this by ignoring my messages` as an explicit accusation unsupported by Data A.
+- Requires removal or neutralization of the accusation before sending.
+- Does not claim that the accusation is false; states only that it is unsupported.
+
+**Forbidden**
+
+- Downgrading the explicit unsupported accusation to yellow.
+- Using the tone rating as the reason for the responsibility rating instead of the separate Data A conflict.
+- Predicting a definite manager reaction.
+
+### TC-61 — Supported personalized blame is Yellow
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The report is delayed because the manager's required approval was not completed. My manager asked for the current status.
+Data B: The report is delayed because you failed to approve it.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone yellow, and overall yellow.
+- Recognizes that Data A supports the approval fact, so the wording is not an unsupported accusation.
+- Identifies `you failed` as personalized blame that creates a concrete communication risk.
+- Minimally changes the blame-focused wording to a neutral process statement.
+
+**Forbidden**
+
+- Rating tone red solely because the supported statement uses `you`.
+- Removing or changing the confirmed cause of delay.
+
+### TC-62 — Neutral process accountability is Green
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The report is delayed because the required approval was not completed. My manager asked for the current status.
+Data B: The report is delayed because approval was not completed.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone green, and overall green.
+- Treats the confirmed negative fact as neutral process accountability.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating tone yellow or red merely because the message identifies an operational failure.
+- Adding personalized blame.
+
+### TC-63 — Explicit insult is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The report is delayed. My manager asked for the current status.
+Data B: The report is delayed. Your work is useless.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone red, and overall red.
+- Identifies `Your work is useless` as an explicit insult or degrading characterization.
+- Requires removal of the insult.
+
+**Forbidden**
+
+- Rating the insult yellow as mere directness.
+- Predicting how the manager will react.
+
+### TC-64 — Targeted threat is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The report is ready and requires my manager's approval before sending.
+Data B: Approve this now or I'll make sure you're blamed for the delay.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone red, and overall red.
+- Identifies `I'll make sure you're blamed` as a targeted threat or intimidation.
+- Requires removal of the threat while preserving the approval request.
+
+**Forbidden**
+
+- Treating the threat as a neutral consequence.
+- Changing the approval requirement.
+
+### TC-65 — Neutral operational consequence is Green
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Approval is required before the report can be sent. Without approval today, the report will be sent tomorrow.
+Data B: If approval is not received today, the report will be sent tomorrow.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone green, and overall green.
+- Treats the delayed send as a confirmed operational consequence, not a threat.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating tone red because the sentence uses an `if` condition.
+- Rewriting a clear factual consequence.
+
+### TC-66 — Explicit hostility is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The report is ready. My manager asked for the current status.
+Data B: The report is ready. I'm sick of dealing with you.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone red, and overall red.
+- Identifies `I'm sick of dealing with you` as explicit hostility.
+- Requires removal of the hostile sentence.
+
+**Forbidden**
+
+- Rating the hostility yellow as mere informality.
+- Altering the accurate report status.
+
+### TC-67 — Dismissive ambiguous stance is Yellow
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The report is ready. My manager asked for the current status.
+Data B: The report is ready. Whatever.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone yellow, and overall yellow.
+- Identifies `Whatever` as dismissive wording that leaves the sender's cooperative stance unclear.
+- Minimally removes or neutralizes only the dismissive wording.
+
+**Forbidden**
+
+- Rating tone red without insult, threat, hostility, or unsupported accusation.
+- Changing the report status.
+
+### TC-68 — Qualified unsupported fault suggestion is Yellow
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The report is delayed. The cause is not confirmed. My manager asked for the current status.
+Data B: The report is delayed. It seems you may have missed the approval.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone yellow, and overall yellow.
+- Recognizes that `It seems` and `may have` present a qualified possibility rather than a major accusation asserted as fact.
+- Identifies the personalized unsupported fault suggestion as a concrete non-major tone risk.
+- Minimally changes it to a neutral statement that the cause is not confirmed.
+
+**Forbidden**
+
+- Rating tone red as though the qualified suggestion were a serious accusation asserted as fact.
+- Presenting the possible missed approval as confirmed.
+- Changing the accurate delayed status.
+
+### TC-69 — Global degradation of a work product is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The draft is incomplete. My manager asked for the current status.
+Data B: The draft is incomplete. This draft is useless.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone red, and overall red.
+- Identifies `This draft is useless` as a global degrading characterization rather than a specific operational defect.
+- Requires removal or replacement of the degrading label.
+
+**Forbidden**
+
+- Rating the degradation yellow as ordinary task frustration.
+- Altering the accurate incomplete status.
+
+### TC-70 — Specific supported defect is Green
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The draft cannot be used yet because the required owner is missing. My manager asked for the current status.
+Data B: The draft cannot be used yet because the required owner is missing.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone green, and overall green.
+- Treats the supported, specific defect as a neutral operational fact.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating tone non-green merely because the draft cannot currently be used.
+- Replacing the specific defect with vague or personalized blame.
+
+### TC-71 — Task-directed dismissive frustration is Yellow
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The draft is incomplete. My manager asked for the current status.
+Data B: The draft is incomplete. I'm done dealing with this draft.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone yellow, and overall yellow.
+- Treats `I'm done dealing with this draft` as task-directed dismissiveness rather than person-directed hostility.
+- Minimally removes or neutralizes the dismissive sentence.
+
+**Forbidden**
+
+- Rating tone red without a degrading label, person-directed hostility, threat, or major unsupported accusation.
+- Altering the accurate incomplete status.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -1485,3 +1816,4 @@ Background correction: I withdraw my Friday draft commitment; that commitment no
 - T13.1 quoted, forwarded, and nested content: TC-33–TC-43.
 - T13.2 mixed input classification: TC-44–TC-49.
 - T13.3 effective Data A replacement: TC-50–TC-57.
+- T13.4 tone boundaries: TC-58–TC-71.

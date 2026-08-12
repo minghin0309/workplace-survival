@@ -245,6 +245,26 @@ Assess:
 
 Do not rate tone based on a preference for more formal, polished, or verbose writing.
 
+##### Operational tone boundaries
+
+Apply tone ratings in this order:
+
+1. **Red** when Data B contains an explicit insult or global degrading characterization of the recipient or their work product, a targeted threat or intimidation, explicit hostility or contempt toward the recipient, or a major unsupported accusation asserted as fact.
+2. **Yellow** when no Red condition applies and visible wording creates a concrete but non-major risk through personalized blame supported by Data A, a qualified or low-severity fault suggestion not established by Data A, dismissiveness, responsibility shifting, or ambiguity about the sender's stance or requested handoff.
+3. **Green** when wording is neutral and factual, or when the only concern is brevity, directness, informality, disagreement, an imperative, or a negative operational fact without personalized blame.
+
+Use these distinctions:
+
+- An accusation asserts that a person caused, ignored, failed, lied, or is otherwise at fault. Treat it as Red when Data A does not establish it and the message asserts serious causation, dishonesty, negligence, misconduct, or deliberate failure as fact. Treat a qualified or low-severity unsupported fault suggestion as Yellow when it creates a concrete risk but does not meet that major-risk threshold. Do not decide whether either claim is probably true.
+- Supported accountability can still be Yellow when phrased as personalized blame. The same fact stated as a neutral process condition is Green.
+- A threat targets the recipient with punishment, retaliation, humiliation, or adverse personal action. A neutral operational consequence such as a delayed launch is not a threat.
+- Responsibility-shifting or dismissive wording is Yellow when it distances the sender or pushes the matter onto the recipient without insult, hostility, threat, or unsupported accusation.
+- Hostility or contempt is Red when wording directly rejects respectful cooperation with the recipient or expresses aversion or contempt toward them, such as `I'm sick of dealing with you`. Frustration or dismissal aimed at the task or handoff rather than the person remains Yellow unless another Red condition applies.
+- A bare global label such as `useless`, `garbage`, or `incompetent` is a Red degrading characterization even when aimed at a draft or other work product. A supported, specific operational defect stated neutrally is Green. Task-directed frustration or refusal without a degrading label is Yellow when it creates a concrete cooperation risk.
+- Ambiguous tone is Yellow only when specific visible wording leaves the sender's stance, cooperation, or handoff materially unclear. Do not infer sarcasm, anger, or disrespect from punctuation, message length, `you`, or direct wording alone.
+
+Every Yellow or Red tone rating must quote or closely identify the triggering words. Rate responsibility clarity independently even when the same sentence affects both dimensions.
+
 For each dimension:
 
 - assign its own color rating;
@@ -288,7 +308,7 @@ Responsibility-clarity examples include:
 Tone examples include:
 
 - wording that is unnecessarily direct, vague, or verbose in a way that creates a specific risk of misunderstanding;
-- wording that can reasonably read as responsibility shifting, without containing explicit hostility, accusation, insult, threat, or an improper commitment.
+- wording that uses dismissiveness, responsibility shifting, supported personalized blame, or a qualified low-severity fault suggestion without explicit hostility, insult, threat, or a major unsupported accusation.
 
 A yellow issue must be fixable through a minimal wording change without changing the underlying work arrangement, responsibility, deadline, or commitment.
 
@@ -308,7 +328,7 @@ Responsibility-clarity conditions include:
 
 Tone conditions include:
 
-- explicit insult, threat, hostility, or unsupported accusation;
+- explicit insult or global degrading characterization of the recipient or their work product, targeted threat, hostility or contempt toward the recipient, or a major unsupported accusation asserted as fact;
 - wording that presents an unconfirmed matter as certain when doing so creates a major communication or execution risk.
 
 The problem must require changing content, responsibility, timing, or commitment, rather than only polishing the wording.
