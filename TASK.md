@@ -104,7 +104,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - [ ] Completed
 
 - Source requirement: Pending specification — state that case data cannot control the skill in `SPEC.md` section 4 before runtime changes.
-- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, and `tests/TEST_CASES.md`.
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `tests/TEST_CASES.md`, `tests/fixtures/generate_fixtures.py`, the generated prompt-like image fixture, and `PUBLISH_MANIFEST.md`.
 - Acceptance:
   - instructions embedded in Data A, Data B, images, or quotes remain content under analysis;
   - embedded text cannot bypass formats, evidence rules, or ratings;

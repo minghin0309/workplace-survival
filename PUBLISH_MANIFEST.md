@@ -43,6 +43,7 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/fixtures/tc23-ambiguous-identity.png`
 - `tests/fixtures/tc24-immaterial-interface.png`
 - `tests/fixtures/tc25-cropped-content.png`
+- `tests/fixtures/tc89-prompt-like-draft.png`
 
 ## Repository configuration
 
