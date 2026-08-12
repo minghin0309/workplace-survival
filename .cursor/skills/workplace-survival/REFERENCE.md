@@ -248,18 +248,29 @@ For every responsibility Red, identify the direct contradiction, execution-criti
 
 #### Short acknowledgements
 
-Treat a short acknowledgement such as `ok`, `okok`, `noted`, `received`, or `understood` as acknowledging all directly preceding instructions when those instructions are clear, non-conflicting, and require acknowledgement rather than a specific informational answer.
+A pure short acknowledgement has a new body consisting only of an acknowledgement token such as `ok`, `okok`, `noted`, `received`, or `understood`, plus immaterial punctuation or an equivalent polite acknowledgement.
 
-Do not rate responsibility clarity yellow merely because the acknowledgement does not restate each instruction.
+Apply the Green acknowledgement shortcut only when:
 
-This rule does not apply when:
+- exactly one reply target is identifiable;
+- that target is one message or one explicitly grouped instruction block, even if it contains multiple actions;
+- every instruction in the target is clear and non-conflicting;
+- the target does not conflict with another current Data A instruction governing the same action;
+- the target requires acknowledgement rather than a specific informational answer;
+- Data B contains no refusal, qualification, exception, modification, limitation, new action, or competing commitment.
 
-- Data A explicitly requests a specific owner, date, progress value, choice, explanation, or other informational answer;
-- the preceding instructions conflict or contain unresolved alternatives;
-- it is unclear which message Data B acknowledges;
-- Data B refuses, qualifies, changes, or limits the instruction.
+The shortcut means the user acknowledges that one target. It does not acknowledge unrelated earlier messages, prove execution or completion, externally verify facts, or create an expanded task list or commitment. Do not rate responsibility Yellow merely because a pure acknowledgement does not restate each instruction in its target.
 
-In those cases, rate the actual omission, ambiguity, or contradiction under the ordinary criteria. An acknowledgement confirms receipt or acceptance only; it does not prove execution, completion, or external verification.
+Do not apply the shortcut when:
+
+- more than one message or instruction block could be the reply target;
+- the target contains conflicting instructions or unresolved alternatives;
+- the target conflicts with another current instruction about the same action;
+- Data A requests a specific owner, date, progress value, choice, explanation, or other informational answer;
+- Data B refuses, qualifies, changes, limits, or contradicts the target;
+- Data B states an action that violates a negative instruction.
+
+If the target or governing instruction is unclear, rate responsibility Gray and ask which target and current instruction govern. If a specific informational answer is clearly omitted, apply the Red/Yellow main-purpose rules. If Data B qualifies, refuses, modifies, limits, or contradicts a clear target, assess the actual wording under the ordinary responsibility criteria; use Red for a direct contradiction. Do not rewrite a refusal, limitation, or violating action into acceptance or compliance without user confirmation. Rate tone independently.
 
 #### Tone
 

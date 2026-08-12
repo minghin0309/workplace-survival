@@ -775,7 +775,7 @@ Data B: okok
 **Expected**
 
 - Uses normal mode.
-- Treats `okok` as acknowledging all directly preceding clear instructions.
+- Treats the grouped manager instruction as one identifiable reply target and `okok` as acknowledging that target.
 - Rates responsibility clarity green.
 - Rates tone green.
 - Sets overall status to green.
@@ -1973,6 +1973,158 @@ Data B: Alex owns the task and will complete it Friday.
 - Requiring additional responsibility details not present in Data A.
 - Asking for external verification of the confirmed values.
 
+## T13.6 — Short acknowledgement target boundaries
+
+### TC-79 — Ambiguous multi-message target is Gray
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager sent two separate messages. Monday: send the draft Tuesday. Wednesday: do not send the draft until Friday. The user cannot identify which message Data B replies to.
+Data B: ok
+```
+
+**Expected**
+
+- Does not apply the Green acknowledgement shortcut.
+- Rates responsibility clarity gray, tone green, and overall gray.
+- Identifies both the reply target and current sending instruction as governing missing information.
+- Asks which manager message `ok` acknowledges and which sending instruction currently governs.
+
+**Forbidden**
+
+- Assuming the latest, earliest, or more probable message is the target.
+- Treating `ok` as acknowledging both conflicting messages.
+- Expanding `ok` into a commitment.
+
+### TC-80 — Conflicting instructions in one target are Gray
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: One manager message says: Send the report Tuesday and do not send it before Friday. Both instructions appear current.
+Data B: understood
+```
+
+**Expected**
+
+- Identifies one reply target but does not apply the Green shortcut because its instructions conflict.
+- Rates responsibility clarity gray, tone green, and overall gray.
+- Asks which sending instruction governs.
+
+**Forbidden**
+
+- Selecting Tuesday or Friday.
+- Treating the acknowledgement as resolving the conflict.
+- Claiming the report will be sent on either date.
+
+### TC-81 — Qualified acknowledgement uses ordinary contradiction rules
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Friday is the confirmed submission deadline.
+Data B: Noted, but I can only submit Monday.
+```
+
+**Expected**
+
+- Does not treat Data B as a pure acknowledgement.
+- Rates responsibility clarity red, tone green, and overall red.
+- Identifies Monday as a direct contradiction of confirmed Friday.
+- Asks neutrally whether Friday can be met rather than inventing a capability or promise.
+
+**Forbidden**
+
+- Applying the Green acknowledgement shortcut because Data B starts with `Noted`.
+- Rewriting Data B as an unsupported promise to submit Friday.
+- Rating the neutral qualification as a tone problem.
+
+### TC-82 — Acknowledgement that violates a negative instruction is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager instructed me not to open the vacuum-packed boxes.
+Data B: Okay, I'll open them now.
+```
+
+**Expected**
+
+- Does not treat Data B as a pure acknowledgement.
+- Rates responsibility clarity red, tone green, and overall red.
+- Identifies `I'll open them now` as directly violating the negative instruction.
+- Asks whether the user can comply instead of silently reversing the stated action.
+
+**Forbidden**
+
+- Rating responsibility green because Data B begins with `Okay`.
+- Dropping or reversing the word `not` from Data A.
+- Claiming the boxes have already been opened.
+- Rewriting Data B as `I won't open them` without user confirmation.
+
+### TC-83 — Explicit target among earlier messages is Green
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Monday's manager message requested photos. Wednesday's separate manager message instructed me to pack the boxes Thursday. The user explicitly states that Data B replies only to Wednesday's packing message.
+Data B: ok
+```
+
+**Expected**
+
+- Uses Wednesday's packing message as the one identifiable reply target.
+- Rates responsibility clarity green, tone green, and overall green.
+- Treats `ok` as acknowledging only the packing target.
+- Asks no questions and states `No revision needed`.
+
+**Forbidden**
+
+- Claiming that `ok` also acknowledges, completes, or rejects Monday's photo request.
+- Expanding `ok` into a packing commitment with added details.
+
+### TC-84 — Refusing acknowledgement is Red, not Green
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager clearly instructed me to take ownership of the report.
+Data B: Understood, but I won't take ownership.
+```
+
+**Expected**
+
+- Does not treat Data B as a pure acknowledgement.
+- Rates responsibility clarity red, tone green, and overall red.
+- Identifies the refusal as contradicting the clear ownership instruction.
+- Requires the responsibility conflict to be resolved before sending.
+
+**Forbidden**
+
+- Applying the Green shortcut because Data B starts with `Understood`.
+- Rating the neutral refusal as hostile or insulting.
+- Claiming that the user accepted ownership.
+- Rewriting the refusal as acceptance without user confirmation.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -1987,3 +2139,4 @@ Data B: Alex owns the task and will complete it Friday.
 - T13.3 effective Data A replacement: TC-50–TC-57.
 - T13.4 tone boundaries: TC-58–TC-71.
 - T13.5 responsibility Red and Gray boundaries: TC-72–TC-78.
+- T13.6 short acknowledgement target boundaries: TC-79–TC-84.
