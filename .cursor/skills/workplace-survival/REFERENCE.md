@@ -220,6 +220,32 @@ Assess:
 
 In limited-background mode, assess only the internal clarity of Data B and mark alignment with the manager's requirements as not assessed. Do not assume that every message must name an owner, date, or next step.
 
+##### Operational responsibility boundaries
+
+Apply responsibility-clarity ratings in this order:
+
+1. If Data B or its new body is not identifiable, use intake and do not rate.
+2. **Red** for a direct contradiction, known-wrong owner/date/value, or conflicting commitment.
+3. **Gray** when Data A conflicts or is materially ambiguous about the governing requirement, current version, or applicability, or when Data B's target or referent cannot be identified because more than one current Data A item fits. Data B cannot resolve governing uncertainty merely by choosing one interpretation.
+4. **Red** for a major internal ambiguity in Data B when the governing context and every required referent are identifiable but Data B itself still expresses competing meanings that can cause the recipient to take the wrong action.
+5. **Red** when Data B gives no valid answer to an explicit requirement and the omission defeats the reply's main purpose.
+6. **Yellow** for a non-critical omission or ambiguity that leaves the reply broadly usable and does not prevent its main purpose.
+7. **Green** when Data B satisfies applicable requirements and expresses its own actions, ownership, and handoff clearly.
+
+An unanswered explicit requirement defeats the main purpose when at least one of these is true:
+
+- it is the only substantive information requested;
+- Data B supplies none of the substantive answers explicitly requested;
+- Data A states that the information is required before a named decision, approval, handoff, or execution step can proceed.
+
+If Data B answers the primary request but omits one of several requested details, use Yellow unless Data A directly establishes that the omitted detail is execution-critical. Omission of a clearly optional suggestion is Green.
+
+Do not use Gray merely because the requested value is unknown. When the requirement is clear and Data B plainly does not answer it, the failure to answer can be rated Red or Yellow under the omission rules even though the missing value must remain a placeholder. Use Gray when the uncertainty prevents determining which requirement or fact governs, not when the omission itself is already established.
+
+When Data B clearly supplies a value that Data A requests and does not conflict with Data A, apply the Data B answer rule above; do not use Gray or demand external verification merely because the value first appears in Data B.
+
+For every responsibility Red, identify the direct contradiction, execution-critical ambiguity, or main-purpose condition. For every responsibility Gray, identify the exact governing information that cannot be determined.
+
 #### Short acknowledgements
 
 Treat a short acknowledgement such as `ok`, `okok`, `noted`, `received`, or `understood` as acknowledging all directly preceding instructions when those instructions are clear, non-conflicting, and require acknowledgement rather than a specific informational answer.
@@ -289,7 +315,7 @@ Use red when Data A or Data B provides direct evidence of a contradiction, incor
 
 #### Gray
 
-Use gray only when information required to assess that dimension is missing or materially ambiguous. Do not guess and then assign another color. Keep unaffected dimensions independently rated.
+Use gray only when information required to assess that dimension or determine its governing requirement is missing, conflicting, or materially ambiguous. Do not guess and then assign another color. Do not use Gray for a clearly established omission. Keep unaffected dimensions independently rated.
 
 Every non-green rating must identify either:
 
@@ -303,7 +329,7 @@ Use yellow only when a concrete issue is visible and the message remains broadly
 Responsibility-clarity examples include:
 
 - a non-critical ambiguity about ownership, handoff, next step, timing, or an action requested from the manager;
-- an omission that may prompt a follow-up question but does not, on the available evidence, cause incorrect execution.
+- one omitted detail among several requested items when the reply still fulfills its main purpose and the omission does not, on available evidence, cause incorrect execution.
 
 Tone examples include:
 
@@ -339,7 +365,7 @@ For every red rating:
 - explain the concrete execution or communication risk;
 - identify what must change.
 
-Do not assign red merely because an owner, date, progress update, or next step is absent. Use red for that absence only when Data A explicitly requires the information or the omission itself creates a major execution risk. If the available information cannot establish that the content is wrong, use gray rather than red.
+Do not assign red merely because an owner, date, progress update, or next step is absent. Apply the operational main-purpose test when Data A explicitly requires the information. For an alleged contradiction that available information cannot establish, use Gray rather than Red; for an established omission, use Red or Yellow under the omission rules.
 
 ### Overall status
 

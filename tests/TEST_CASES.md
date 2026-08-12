@@ -277,6 +277,7 @@ Data B: Here is the project update.
 
 **Expected**
 
+- Rates responsibility clarity red, tone green, and overall status red because the sole explicit owner request is unanswered.
 - Asks who the task owner is.
 - Identifies responsibility clarity as the affected dimension.
 - Explains that the answer affects whether the explicit request is answered.
@@ -301,6 +302,7 @@ Data B: Here is the update.
 
 **Expected**
 
+- Rates responsibility clarity red, tone green, and overall status red because Data B supplies none of the explicitly requested substantive answers.
 - Asks no more than three questions.
 - Prioritizes questions that most affect the rating or safe revision.
 - Defers lower-impact uncertainties.
@@ -324,6 +326,7 @@ Data B: The task is in progress.
 
 **Expected**
 
+- Rates responsibility clarity red, tone green, and overall status red because neither explicitly requested value is answered.
 - Uses placeholders or balanced neutral options.
 - Keeps both owner and deadline unknown in the answer structures.
 
@@ -437,6 +440,7 @@ Data B: I am handling the task and will update you when it is complete.
 
 **Expected**
 
+- Rates responsibility clarity red, tone green, and overall status red because the sole required completion date is unanswered.
 - Asks for the expected completion date.
 - Uses `[expected completion date]` or an equally descriptive placeholder if a partial revision is safe.
 - Does not treat the placeholder-bearing revision as complete.
@@ -1804,6 +1808,171 @@ Data B: The draft is incomplete. I'm done dealing with this draft.
 - Rating tone red without a degrading label, person-directed hostility, threat, or major unsupported accusation.
 - Altering the accurate incomplete status.
 
+## T13.5 — Responsibility Red and Gray boundaries
+
+### TC-72 — Sole explicit requirement omitted is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager explicitly requested only the confirmed task owner. No owner is known.
+Data B: The project remains on schedule.
+```
+
+**Expected**
+
+- Rates responsibility clarity red, tone green, and overall red.
+- Identifies the unanswered sole owner request as defeating the reply's main purpose.
+- Asks neutrally for the owner using a placeholder.
+
+**Forbidden**
+
+- Rating responsibility gray merely because the owner value is unknown.
+- Inventing or suggesting an owner.
+
+### TC-73 — Optional suggestion omitted is Green
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager requested the current status and said I may include the owner if useful, but the owner is not required. The confirmed status is on schedule.
+Data B: The project remains on schedule.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone green, and overall green.
+- Treats the omitted owner as a clearly optional suggestion.
+- Asks no owner question and states `No revision needed`.
+
+**Forbidden**
+
+- Rating the optional omission yellow, red, or gray.
+- Adding an owner placeholder.
+
+### TC-74 — Ambiguous requirement applicability is Gray
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager requires the owner only if this is the final report. It is unknown whether the current report is final. The confirmed status is on schedule.
+Data B: The project remains on schedule.
+```
+
+**Expected**
+
+- Rates responsibility clarity gray, tone green, and overall gray.
+- Identifies whether the current report is final as the governing missing information.
+- Asks neutrally whether the final-report condition applies.
+
+**Forbidden**
+
+- Assuming that the owner requirement applies or does not apply.
+- Rating the uncertain applicability as a known omission.
+
+### TC-75 — Secondary requested detail omitted is Yellow
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager explicitly requested current progress as the main purpose and blocker status as a secondary detail. Progress is confirmed as 80%; blocker status is unknown.
+Data B: Current progress is 80%.
+```
+
+**Expected**
+
+- Rates responsibility clarity yellow, tone green, and overall yellow.
+- Recognizes that Data B fulfills the stated main purpose but omits the secondary blocker detail.
+- Asks neutrally for blocker status and uses a placeholder if revising.
+
+**Forbidden**
+
+- Rating the secondary omission red without evidence that it blocks execution.
+- Rating it gray merely because blocker status is unknown.
+- Inventing a blocker.
+
+### TC-76 — Execution-gating omission is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager requires the deployment owner before approval can proceed. No owner is known.
+Data B: Please approve the deployment.
+```
+
+**Expected**
+
+- Rates responsibility clarity red, tone green, and overall red.
+- Identifies the missing owner as an explicit gate that prevents the requested approval.
+- Asks neutrally for the owner and uses a placeholder in any partial revision.
+
+**Forbidden**
+
+- Rating the execution-gating omission yellow or gray.
+- Inventing an owner.
+
+### TC-77 — Conflicting governing deadline is Gray
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: One current-looking manager note says Tuesday is the deadline. Another says Thursday. The user cannot determine which note governs.
+Data B: I will finish on Tuesday.
+```
+
+**Expected**
+
+- Rates responsibility clarity gray, tone green, and overall gray.
+- Identifies the governing deadline as materially conflicting Data A.
+- Asks which deadline governs.
+
+**Forbidden**
+
+- Selecting Tuesday because Data B uses it.
+- Selecting either deadline by order, probability, or convention.
+- Rating the unresolved conflict red as though Tuesday were known wrong.
+
+### TC-78 — Multiple explicit requirements answered is Green
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager requested the confirmed owner and deadline. Alex is the confirmed owner and Friday is the confirmed deadline.
+Data B: Alex owns the task and will complete it Friday.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone green, and overall green.
+- Recognizes that both explicit requirements are answered consistently.
+- Asks no questions and states `No revision needed`.
+
+**Forbidden**
+
+- Requiring additional responsibility details not present in Data A.
+- Asking for external verification of the confirmed values.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -1817,3 +1986,4 @@ Data B: The draft is incomplete. I'm done dealing with this draft.
 - T13.2 mixed input classification: TC-44–TC-49.
 - T13.3 effective Data A replacement: TC-50–TC-57.
 - T13.4 tone boundaries: TC-58–TC-71.
+- T13.5 responsibility Red and Gray boundaries: TC-72–TC-78.
