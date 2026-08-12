@@ -7,6 +7,12 @@
 - T13.10 representative functional records are stored in `tests/evidence/t13-10-validation.json`.
 - A full evidence-complete suite rerun remains pending under T13.12.
 
+Representative T13.10 records:
+
+- `t13.10-functional-structure-20260812`
+- `t13.10-functional-tc06-20260812`
+- `t13.10-functional-tc21-image-20260812`
+
 ## Current status
 
 - Cases currently specified: 111.
@@ -310,3 +316,13 @@ New-case result: 12 passed, 0 failed.
 - Independent review found no remaining route-order, limited-mode, case-split, template, mentor, skip-level, HR, customer, reply-all, format, or trigger-scope conflict.
 
 Current complete functional result: 111 passed, 0 failed.
+
+## T13.10 evidence-mechanism validation — 2026-08-12
+
+- Evidence file: `tests/evidence/t13-10-validation.json`.
+- Seven representative records cover all five active suites.
+- Six executed records are `PASS`; one historical explicit-invocation fixture is `NOT_RUN` and is not counted as a pass.
+- All five method classes are represented: automated, manual semantic, image attached, routing semantic, and environment limited.
+- Automated validation result: `validated 7 evidence records across 5 suites`.
+- Negative gates rejected four invalid claims: PASS with a failed assertion, environment-limited PASS, unopened image evidence, and invalid UTC time.
+- This validates the evidence mechanism only. Historical summaries remain summary-only, and the full evidence-complete rerun remains pending under T13.12.

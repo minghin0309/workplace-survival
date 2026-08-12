@@ -7,6 +7,8 @@
 - The T13.10 representative anti-hallucination record is stored in `tests/evidence/t13-10-validation.json`.
 - A full evidence-complete suite rerun remains pending under T13.12.
 
+Representative T13.10 record: `t13.10-ah-ah01-20260812`.
+
 ## Summary
 
 - Targeted cases executed: 6.

@@ -7,6 +7,8 @@
 - T13.10 validates the evidence format with representative records for every active suite.
 - This file must not claim evidence-complete final acceptance until the full T13.12 rerun is recorded.
 
+T13.10 validation evidence: `tests/evidence/t13-10-validation.json` with records `t13.10-functional-structure-20260812`, `t13.10-functional-tc06-20260812`, `t13.10-functional-tc21-image-20260812`, `t13.10-ah-ah01-20260812`, `t13.10-iq-iq01-20260812`, `t13.10-at-at01-20260812`, and `t13.10-ei-ei01-notrun-20260812`.
+
 ## Behavioral validation
 
 - Functional cases TC-01 through TC-32: 32 passed, 0 failed.

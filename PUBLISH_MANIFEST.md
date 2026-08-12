@@ -36,6 +36,7 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/FINAL_ACCEPTANCE_RESULTS.md`
 - `tests/evidence/README.md`
 - `tests/evidence/validate_evidence.py`
+- `tests/evidence/t13-10-validation.json`
 
 ## Reproducible image fixtures
 

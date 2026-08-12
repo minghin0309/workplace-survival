@@ -90,11 +90,12 @@ def validate_source(source: object, root: Path, run_id: str) -> None:
     )
 
 
-def validate_turns(turns: object, run_id: str) -> None:
+def validate_turns(turns: object, run_id: str) -> str:
     require(isinstance(turns, list) and turns, f"{run_id}: turns required")
     for expected_index, turn in enumerate(turns, start=1):
         require(isinstance(turn, dict), f"{run_id}: invalid turn")
         require(turn.get("index") == expected_index, f"{run_id}: turn order mismatch")
+        validate_timestamp(turn.get("executed_at_utc"), f"{run_id}: turn {expected_index}")
         input_raw = turn.get("input_raw")
         raw_output = turn.get("raw_output")
         require(isinstance(input_raw, str) and input_raw, f"{run_id}: turn input required")
@@ -104,6 +105,7 @@ def validate_turns(turns: object, run_id: str) -> None:
             turn.get("output_sha256") == sha256_text(raw_output),
             f"{run_id}: output hash mismatch",
         )
+    return turns[0]["executed_at_utc"]
 
 
 def validate_artifacts(artifacts: object, root: Path, method: str, run_id: str) -> None:
@@ -210,7 +212,11 @@ def validate_record(
         require(result in {"PASS", "FAIL"}, f"{run_id}: executed method cannot be NOT_RUN")
 
     validate_source(record.get("input_source"), root, run_id)
-    validate_turns(record.get("turns"), run_id)
+    first_turn_at = validate_turns(record.get("turns"), run_id)
+    require(
+        record["executed_at_utc"] == first_turn_at,
+        f"{run_id}: record timestamp must equal first turn timestamp",
+    )
     validate_artifacts(record.get("artifacts"), root, method, run_id)
     validate_assertions(record.get("assertions"), result, run_id)
 

@@ -7,6 +7,8 @@
 - The T13.10 environment-limited current-configuration record is stored in `tests/evidence/t13-10-validation.json`.
 - AT-10 remains the applicable final-configuration explicit-invocation regression.
 
+Representative T13.10 record: `t13.10-ei-ei01-notrun-20260812` (`NOT_RUN`, not counted as a pass).
+
 ## Summary
 
 - Slug used: `workplace-survival`.

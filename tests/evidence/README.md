@@ -33,6 +33,7 @@ Evidence files contain a JSON array. Every record requires:
   - `file_sha256`: SHA-256 of the cited source file;
 - `turns`: ordered execution turns, each containing:
   - `index`;
+  - `executed_at_utc`;
   - `input_raw`;
   - `input_sha256`;
   - `raw_output`;

@@ -7,6 +7,8 @@
 - The T13.10 routing-semantic record is stored in `tests/evidence/t13-10-validation.json`.
 - A live probabilistic dispatcher run is not available in this environment.
 
+Representative T13.10 record: `t13.10-at-at01-20260812`.
+
 ## Configuration
 
 - `disable-model-invocation`: Removed for auto-trigger validation.

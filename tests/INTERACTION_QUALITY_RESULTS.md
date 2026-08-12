@@ -7,6 +7,8 @@
 - The T13.10 representative interaction-quality record is stored in `tests/evidence/t13-10-validation.json`.
 - A full evidence-complete suite rerun remains pending under T13.12.
 
+Representative T13.10 record: `t13.10-iq-iq01-20260812`.
+
 ## Summary
 
 - Cases executed: 6.

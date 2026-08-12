@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.10 — Auditable test evidence
+
+- Added a canonical structured evidence schema with ordered raw input/output turns, model availability, UTC time, hashes, artifacts, assertions, results, limitations, and exact result citations.
+- Distinguished automated, manual semantic, image-attached, routing-semantic, and environment-limited methods.
+- Added a validator that rejects invalid timestamps, hashes, artifacts, citations, assertion states, method/result combinations, and repository-path escapes.
+- Marked pre-T13.10 test summaries as historical summary-only evidence.
+- Validated seven representative records across all five active suites; six passed and one historical explicit-invocation fixture was correctly recorded as `NOT_RUN`.
+- Full evidence-complete suite execution remains pending under T13.12.
+
 ### T13.9 — Mode, case, and recipient boundaries
 
 - Applied ordinary internal responsibility, timing, and tone ratings in Limited-background mode without inferring manager requirements.
