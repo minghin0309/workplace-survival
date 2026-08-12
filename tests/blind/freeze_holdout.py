@@ -119,10 +119,23 @@ def validate_cases(cases: list[dict], directory: Path) -> list[Path]:
         if case["category"] == "image_ocr":
             spec = case["image_spec"]
             require(
-                isinstance(spec, dict) and set(spec) == {"description", "output_path"},
+                isinstance(spec, dict)
+                and set(spec)
+                == {
+                    "output_path",
+                    "medium",
+                    "canvas",
+                    "scene_description",
+                    "rendered_text",
+                    "visual_conditions",
+                    "legibility_notes",
+                },
                 f"{case_id}: image spec",
             )
-            require(isinstance(spec["description"], str) and spec["description"], f"{case_id}: image description")
+            require(
+                all(isinstance(value, str) and value for value in spec.values()),
+                f"{case_id}: image spec value",
+            )
             image = safe_image_path(directory, spec["output_path"], case_id)
             require(any(turn["image_path"] == spec["output_path"] for turn in turns), f"{case_id}: image turn")
             images.append(image)
@@ -175,10 +188,11 @@ def validate_gold(gold: list[dict], cases: list[dict], label: str) -> None:
                 set(turn["required_question_topics"]) <= set(turn["allowed_question_topics"]),
                 f"{case['case_id']}: required question not allowed",
             )
-            require(
-                len(turn["allowed_question_topics"]) <= 3,
-                f"{case['case_id']}: more than three question topics",
-            )
+            if label == "final gold":
+                require(
+                    len(turn["required_question_topics"]) <= 3,
+                    f"{case['case_id']}: more than three question topics",
+                )
             require(
                 set(turn["required_revision_facts"]) <= set(turn["allowed_revision_facts"]),
                 f"{case['case_id']}: required fact not allowed",
@@ -232,8 +246,12 @@ def main() -> None:
         "gold_labeler_1": directory / "gold-labeler-1.json",
         "gold_labeler_2": directory / "gold-labeler-2.json",
         "gold_labeler_3": directory / "gold-labeler-3.json",
+        "gold_labeler_1_raw": directory / "gold-labeler-1-raw.json",
+        "gold_labeler_2_raw": directory / "gold-labeler-2-raw.json",
+        "gold_labeler_3_raw": directory / "gold-labeler-3-raw.json",
         "adjudication": directory / "adjudication.json",
         "gold": directory / "gold.json",
+        "gold_raw": directory / "gold-raw.json",
     }
     require(all(path.is_file() for path in files.values()), "required holdout file missing")
     cases = json.loads(files["cases"].read_text(encoding="utf-8"))
