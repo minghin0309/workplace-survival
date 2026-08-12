@@ -32,9 +32,9 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T13.2 — Classify mixed unlabelled input safely
 
-- [ ] Completed
+- [x] Completed
 
-- Source requirement: Pending specification — add mixed-input classification and provenance disclosure to `SPEC.md` sections 3 and 5 before runtime changes.
+- Source requirement: `SPEC.md` sections 3 and 5, mixed-input classification and provenance disclosure.
 - Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - auto-classification requires explicit semantic boundaries for both A and B;

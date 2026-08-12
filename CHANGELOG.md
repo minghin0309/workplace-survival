@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.2 — Mixed-input classification
+
+- Auto-classified background and draft text only when explicit semantic wording identifies both roles and boundaries.
+- Preserved already-unambiguous input while requesting only unresolved roles or draft selection.
+- Added exact adopted-background and evaluated-body provenance without recursively reclassifying phrases inside an outer payload.
+- Combined mixed classification with embedded-content exclusion using one evaluated-body entry.
+- Added TC-44–TC-49; 6 new and 38 existing text cases passed, with five image cases receiving semantic checks only.
+
 ### T13.1 — Embedded-content boundaries
 
 - Limited ratings and revisions to the identifiable new body.
