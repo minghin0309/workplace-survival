@@ -1,5 +1,7 @@
 import hashlib
 import json
+import re
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,6 +32,8 @@ SUITE_RESULT_FILES = {
 }
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
 RATINGS = {"Green", "Yellow", "Red", "Gray", None}
+SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
+COMMIT_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 
 
 def require(condition: bool, message: str) -> None:
@@ -77,6 +81,38 @@ def validate_model(model: object, run_id: str) -> None:
         require(reason in (None, ""), f"{run_id}: exact model cannot have unavailable_reason")
     else:
         require(isinstance(reason, str) and reason, f"{run_id}: unavailable model reason required")
+
+
+def validate_runtime(record: dict, root: Path, run_id: str) -> None:
+    commit = record.get("runtime_commit")
+    require(
+        isinstance(commit, str) and COMMIT_PATTERN.fullmatch(commit) is not None,
+        f"{run_id}: exact runtime commit required",
+    )
+    sources = record.get("runtime_sources")
+    require(isinstance(sources, list) and sources, f"{run_id}: runtime sources required")
+    seen: set[str] = set()
+    for source in sources:
+        require(isinstance(source, dict), f"{run_id}: invalid runtime source")
+        path = source.get("path")
+        require(isinstance(path, str) and path, f"{run_id}: runtime source path")
+        require(path not in seen, f"{run_id}: duplicate runtime source {path}")
+        seen.add(path)
+        resolve_repo_path(root, path, f"{run_id}: runtime source")
+        expected_hash = source.get("sha256")
+        require(
+            isinstance(expected_hash, str) and SHA256_PATTERN.fullmatch(expected_hash) is not None,
+            f"{run_id}: runtime source hash",
+        )
+        try:
+            blob = subprocess.check_output(
+                ["git", "show", f"{commit}:{path}"],
+                cwd=root,
+                stderr=subprocess.STDOUT,
+            )
+        except (OSError, subprocess.CalledProcessError) as exc:
+            raise ValueError(f"{run_id}: cannot read runtime source at commit: {path}") from exc
+        require(sha256_bytes(blob) == expected_hash, f"{run_id}: runtime blob hash mismatch {path}")
 
 
 def validate_source(source: object, root: Path, run_id: str) -> None:
@@ -254,6 +290,7 @@ def validate_record(
     require(isinstance(record.get("case_id"), str) and record["case_id"], f"{run_id}: case_id")
     validate_timestamp(record.get("executed_at_utc"), run_id)
     validate_model(record.get("model"), run_id)
+    validate_runtime(record, root, run_id)
 
     method = record.get("method")
     result = record.get("result")

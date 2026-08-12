@@ -17,6 +17,8 @@ Evidence files contain a JSON array. Every record requires:
 - `suite`: `functional`, `anti_hallucination`, `interaction_quality`, `auto_trigger`, or `explicit_invocation`;
 - `case_id`: exact case identifier or deterministic check identifier;
 - `executed_at_utc`: valid ISO-8601 UTC timestamp ending in `Z`;
+- `runtime_commit`: exact 40-character Git commit used for runtime instructions;
+- `runtime_sources`: runtime file paths and blob SHA-256 values at that commit;
 - `model`:
   - `id`: exact backend slug when available, otherwise the configured selector such as `inherit`;
   - `display_name`;

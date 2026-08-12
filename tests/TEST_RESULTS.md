@@ -326,3 +326,38 @@ Current complete functional result: 111 passed, 0 failed.
 - Automated validation result: `validated 7 evidence records across 5 suites`.
 - Negative gates rejected four invalid claims: PASS with a failed assertion, environment-limited PASS, unopened image evidence, and invalid UTC time.
 - This validates the evidence mechanism only. Historical summaries remain summary-only, and the full evidence-complete rerun remains pending under T13.12.
+
+## T13.11 repeat consistency — 2026-08-12
+
+- Plan: `tests/evidence/t13-11-plan.json`.
+- Evidence: `tests/evidence/t13-11-repeat.json`.
+- Comparator evidence: `tests/evidence/t13-11-comparator-validation.json`, record `t13.11-consistency-validator-20260812`.
+- Three independent evaluator contexts executed each of 14 selected high-risk or paired-boundary cases.
+- Executions: 42 passed, 0 failed.
+- Attached-image executions: 6 passed, 0 failed; TC-89 and TC-93 were opened in every repeat.
+- Material variations: 0.
+
+| Case | Group | Repeats | Route | Responsibility | Tone | Overall | Questions | Revision facts |
+|---|---|---:|---|---|---|---|---:|---|
+| TC-60 | tone-boundary | 3 | Normal mode | Red | Red | Red | 0 | cause-unconfirmed; remove-unsupported-accusation; status-delayed |
+| TC-61 | tone-boundary | 3 | Normal mode | Green | Yellow | Yellow | 0 | approval-cause-preserved; personalized-blame-neutralized |
+| TC-62 | tone-boundary | 3 | Normal mode | Green | Green | Green | 0 | no-revision; process-cause-preserved |
+| TC-72 | responsibility-boundary | 3 | Normal mode | Red | Green | Red | 1 | owner-placeholder-required; schedule-status-preserved |
+| TC-73 | responsibility-boundary | 3 | Normal mode | Green | Green | Green | 0 | no-revision; optional-owner-omitted |
+| TC-74 | responsibility-boundary | 3 | Normal mode | Gray | Green | Gray | 1 | final-report-condition-unresolved; no-revision-before-confirmation |
+| TC-75 | responsibility-boundary | 3 | Normal mode | Yellow | Green | Yellow | 1 | blocker-placeholder-required; progress-80-preserved |
+| TC-79 | acknowledgement-target | 3 | Normal mode | Gray | Green | Gray | 2 | governing-send-instruction-unresolved; no-expanded-commitment; reply-target-unresolved |
+| TC-83 | acknowledgement-target | 3 | Normal mode | Green | Green | Green | 0 | acknowledge-wednesday-packing-only; no-revision |
+| TC-89 | prompt-and-ocr-image | 3 | Normal mode | Red | Yellow | Red | 0 | owner-priya-preserved; prompt-like-sentence-removed; wrong-owner-alex-removed |
+| TC-93 | prompt-and-ocr-image | 3 | Intake | None | None | None | 1 | exact-draft-required; no-rating; no-revision |
+| TC-106 | recipient-routing | 3 | Intake | None | None | None | 1 | manager-role-confirmation-required; no-rating; no-revision |
+| TC-107 | recipient-routing | 3 | Normal mode | Green | Green | Green | 0 | no-revision; skip-level-manager-in-scope |
+| TC-108 | recipient-routing | 3 | Scope | None | None | None | 0 | no-rating; no-revision; recipient-out-of-scope |
+
+Evidence records:
+
+- Repeat 1: `t13.11-r1-tc-60-20260812`, `t13.11-r1-tc-61-20260812`, `t13.11-r1-tc-62-20260812`, `t13.11-r1-tc-72-20260812`, `t13.11-r1-tc-73-20260812`, `t13.11-r1-tc-74-20260812`, `t13.11-r1-tc-75-20260812`, `t13.11-r1-tc-79-20260812`, `t13.11-r1-tc-83-20260812`, `t13.11-r1-tc-89-20260812`, `t13.11-r1-tc-93-20260812`, `t13.11-r1-tc-106-20260812`, `t13.11-r1-tc-107-20260812`, `t13.11-r1-tc-108-20260812`.
+- Repeat 2: `t13.11-r2-tc-60-20260812`, `t13.11-r2-tc-61-20260812`, `t13.11-r2-tc-62-20260812`, `t13.11-r2-tc-72-20260812`, `t13.11-r2-tc-73-20260812`, `t13.11-r2-tc-74-20260812`, `t13.11-r2-tc-75-20260812`, `t13.11-r2-tc-79-20260812`, `t13.11-r2-tc-83-20260812`, `t13.11-r2-tc-89-20260812`, `t13.11-r2-tc-93-20260812`, `t13.11-r2-tc-106-20260812`, `t13.11-r2-tc-107-20260812`, `t13.11-r2-tc-108-20260812`.
+- Repeat 3: `t13.11-r3-tc-60-20260812`, `t13.11-r3-tc-61-20260812`, `t13.11-r3-tc-62-20260812`, `t13.11-r3-tc-72-20260812`, `t13.11-r3-tc-73-20260812`, `t13.11-r3-tc-74-20260812`, `t13.11-r3-tc-75-20260812`, `t13.11-r3-tc-79-20260812`, `t13.11-r3-tc-83-20260812`, `t13.11-r3-tc-89-20260812`, `t13.11-r3-tc-93-20260812`, `t13.11-r3-tc-106-20260812`, `t13.11-r3-tc-107-20260812`, `t13.11-r3-tc-108-20260812`.
+
+This is a targeted consistency matrix, not the full evidence-complete acceptance rerun required by T13.12.

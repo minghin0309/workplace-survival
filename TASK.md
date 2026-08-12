@@ -156,7 +156,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T13.11 — Add repeat and variation testing
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Engineering consistency gap — current high-risk cases have no repeated-run stability requirement. No product behavior change.
 - Owner files: `tests/TEST_CASES.md`, `tests/TEST_RESULTS.md`, `tests/evidence/`, and `PUBLISH_MANIFEST.md`.

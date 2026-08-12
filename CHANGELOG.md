@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.11 — Repeat and variation testing
+
+- Defined canonical expected observations for 14 high-risk and paired-boundary cases.
+- Ran every selected case three times in distinct evaluator contexts.
+- Compared route, both dimension ratings, overall status, question count, and canonical revision facts.
+- Opened TC-89 and TC-93 images in all six image-repeat executions.
+- Added validator gates for missing repeats, reused evaluator contexts, and material observation variation.
+- Result: 42 passed executions and zero material variations.
+
 ### T13.10 — Auditable test evidence
 
 - Added a canonical structured evidence schema with ordered raw input/output turns, model availability, UTC time, hashes, artifacts, assertions, results, limitations, and exact result citations.
