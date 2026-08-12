@@ -27,7 +27,7 @@
 
 ## Existing functional-suite audit
 
-The 78 functional cases also verify question limits, neutral answer structures, resolved-question handling, green-message behavior, minimal revision, risk wording, short-acknowledgement boundaries, paired Tone controls, and responsibility Red/Gray/Yellow boundaries. In the latest T13.5 regression, 73 text cases passed and five image cases passed semantic fixture checks.
+The 84 functional cases also verify question limits, neutral answer structures, resolved-question handling, green-message behavior, minimal revision, risk wording, one-target short acknowledgements, paired Tone controls, and responsibility Red/Gray/Yellow boundaries. In the latest T13.6 regression, 79 text cases passed and five image cases passed semantic fixture checks.
 
 ## T10.3 conclusion
 
@@ -44,3 +44,9 @@ All targeted interaction-quality cases were rerun after the post-T11.5 changes a
 - IQ-01–IQ-06: 6 passed, 0 failed across 10 response rounds.
 - Required assertions: 18 of 18 passed.
 - Unknown values remained placeholders and unresolved questions remained neutral.
+
+## T13.6 regression — 2026-08-12
+
+- IQ-01–IQ-06: 6 passed, 0 failed across 10 response rounds.
+- Required assertions: 18 of 18 passed.
+- IQ-01–IQ-06 contain no acknowledgement-target-specific case; T13.6 clarification-question assertions are recorded in functional TC-79–TC-84.

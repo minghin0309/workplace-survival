@@ -2,9 +2,9 @@
 
 ## Current status
 
-- Cases currently specified: 78.
-- Latest T13.5 text execution: TC-01–TC-20 and TC-26–TC-78, 73 passed and 0 failed.
-- Latest T13.5 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
+- Cases currently specified: 84.
+- Latest T13.6 text execution: TC-01–TC-20 and TC-26–TC-84, 79 passed and 0 failed.
+- Latest T13.6 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
 - Most recent attached-image execution remains the post-T11.5 run recorded below: 5 passed and 0 failed.
 
 ## Initial T10.1 run summary
@@ -228,3 +228,21 @@ New-case result: 7 passed, 0 failed.
 - Independent pre-test boundary review found no remaining T13.5 Red/Gray/Yellow, governing-context, referent, Data B answer, or existing-case conflict. Short-acknowledgement target scope remains pending under T13.6.
 
 Fresh text execution result: 73 passed, 0 failed.
+
+## T13.6 short acknowledgement targets — 2026-08-12
+
+### New and tightened cases
+
+- TC-31: updated grouped-instruction wording now treats the instructions as one reply target.
+- TC-79–TC-81: 3 passed, 0 failed — ambiguous multi-message target, conflicting target, and qualified acknowledgement.
+- TC-82–TC-84: 3 passed, 0 failed — negative-instruction violation, explicit target among earlier messages, and refusal.
+
+New-case result: 6 passed, 0 failed.
+
+### Regression
+
+- Existing text cases TC-01–TC-20 and TC-26–TC-78: 73 passed, 0 failed.
+- Image cases TC-21–TC-25: 5 semantic fixture checks passed, 0 failed; images were not attached and these are not fresh executions.
+- Independent pre-test boundary review found no remaining target, cross-instruction, grouped-action, qualification, refusal, contradiction, tone-independence, or unsafe-revision issue.
+
+Fresh text execution result: 79 passed, 0 failed.

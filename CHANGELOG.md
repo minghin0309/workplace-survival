@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.6 — Short acknowledgement targets
+
+- Limited pure short acknowledgements to one identifiable, clear, non-conflicting reply target.
+- Allowed multiple grouped actions inside that one target without requiring restatement.
+- Kept ambiguous or conflicting targets Gray and routed specific unanswered requests through T13.5 omission rules.
+- Assessed qualifications, refusals, limitations, modifications, and negative-instruction violations without the Green shortcut.
+- Prevented revisions from turning refusal or noncompliance into unsupported acceptance.
+- Updated TC-31 and added TC-79–TC-84; 6 new and 73 existing text cases passed, with five image cases receiving semantic checks only.
+
 ### T13.5 — Responsibility Red and Gray boundaries
 
 - Defined ordered responsibility Green, Yellow, Red, and Gray conditions.

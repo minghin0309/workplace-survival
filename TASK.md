@@ -86,7 +86,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T13.6 — Bound short acknowledgements to one reply target
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: `SPEC.md` section 4.
 - Owner files: `.cursor/skills/workplace-survival/REFERENCE.md` and `tests/TEST_CASES.md`.
