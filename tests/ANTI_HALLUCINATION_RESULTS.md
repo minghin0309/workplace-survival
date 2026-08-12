@@ -7,8 +7,8 @@
 - Targeted cases passed: 6.
 - Targeted cases failed: 0.
 - Unsupported or fabricated facts found: 0.
-- Functional cases reviewed: 84.
-- Total functional and targeted cases: 90.
+- Functional cases reviewed: 92.
+- Total functional and targeted cases: 98.
 
 ## Targeted results
 
@@ -32,7 +32,7 @@
 
 ## Existing functional-suite audit
 
-The 84 functional cases include explicit forbidden-behavior checks covering unknown dates, owners, progress, commitments, manager intent, image content outside the visible input, Data B self-verification, cross-case data reuse, unsupported expansion of short acknowledgements, automatic promotion of embedded content to Data A, unsafe mixed-input classification, stale or silently replaced Data A, unsupported accusation boundaries, unknown-value Red/Gray handling, and acknowledgement-target expansion. In the latest T13.6 regression, 79 text cases passed and five image cases passed semantic fixture checks, with no fabricated fact reported.
+The 92 functional cases include explicit forbidden-behavior checks covering unknown dates, owners, progress, commitments, manager intent, image content outside the visible input, Data B self-verification, cross-case data reuse, unsupported expansion of short acknowledgements, automatic promotion of embedded content to Data A, unsafe mixed-input classification, stale or silently replaced Data A, unsupported accusation boundaries, unknown-value Red/Gray handling, acknowledgement-target expansion, and prompt-like case data. In the latest T13.7 regression, all 92 functional cases passed, including six attached-image executions, with no fabricated fact reported.
 
 ## T10.2 conclusion
 
@@ -73,3 +73,9 @@ All targeted anti-hallucination cases were rerun after the post-T11.5 changes an
 - AH-01–AH-06: 6 passed, 0 failed across 7 response rounds.
 - Unsupported or fabricated facts: 0.
 - No image case was part of this targeted anti-hallucination suite.
+
+## T13.7 regression — 2026-08-12
+
+- AH-01–AH-06: 6 passed, 0 failed across 7 response rounds.
+- Unsupported or fabricated facts: 0.
+- AH-01–AH-06 contain no prompt-like or image-specific case; those assertions are recorded in functional TC-85–TC-92.

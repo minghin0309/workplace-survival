@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.7 — Prompt-like case data
+
+- Treated instructions inside Data A, Data B, images, quotations, and forwarded content only as case data.
+- Prevented payload text from overriding workflow, formats, evidence, ratings, classification, or confirmed facts.
+- Preserved and cited prompt-like wording when ordinary responsibility or tone rules made it relevant.
+- Distinguished legitimate outer user instructions and legitimate Green message content from control-like payload text.
+- Added a portable prompt-like PNG fixture and TC-85–TC-92.
+- All 92 functional cases passed, including six attached-image executions; targeted anti-hallucination remained 6 passed with zero unsupported facts.
+
 ### T13.6 — Short acknowledgement targets
 
 - Limited pure short acknowledgements to one identifiable, clear, non-conflicting reply target.
