@@ -20,11 +20,11 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 Status: Pending
 
-- Source requirement: `SPEC.md` sections 3 and 4.
-- Owner files: `REFERENCE.md`, `FORMATS.md`, and functional tests.
+- Source requirement: Pending specification — add the embedded-content boundary to `SPEC.md` section 3 before runtime changes.
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - only the identifiable sendable body is rated and revised;
-  - quoted, forwarded, reply-header, and nested content does not become Data A;
+  - quoted, forwarded, reply-header, and nested content does not become Data A solely because it appears inside Data B;
   - unclear boundaries stop assessment and request classification.
 - Tests: blockquote, email reply, forwarded message, chat quote, and malformed boundary cases.
 - Evidence: functional and anti-hallucination results.
@@ -33,8 +33,8 @@ Status: Pending
 
 Status: Pending
 
-- Source requirement: `SPEC.md` sections 3 and 4.
-- Owner files: `REFERENCE.md`, `FORMATS.md`, and functional tests.
+- Source requirement: Pending specification — add mixed-input classification and provenance disclosure to `SPEC.md` sections 3 and 5 before runtime changes.
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - auto-classification requires explicit semantic boundaries for both A and B;
   - adopted A and evaluated B are disclosed;
@@ -46,8 +46,8 @@ Status: Pending
 
 Status: Pending
 
-- Source requirement: `SPEC.md` section 4.
-- Owner files: `REFERENCE.md` and functional tests.
+- Source requirement: Pending specification — define replacement and withdrawal semantics for corrections in `SPEC.md` section 4 before runtime changes.
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - explicit correction replaces the targeted old value;
   - explicit withdrawal or cancellation removes the targeted requirement;
@@ -57,17 +57,17 @@ Status: Pending
 
 ### Priority 2 — Rating boundaries
 
-#### T13.4 — Fix Tone Green, Yellow, and Red boundaries
+#### T13.4 — Fix Tone Yellow and Red boundaries
 
 Status: Pending
 
 - Source requirement: `SPEC.md` section 4.
-- Owner files: `REFERENCE.md` and tone acceptance tests; update `SPEC.md` only if the product contract changes.
+- Owner files: `.cursor/skills/workplace-survival/REFERENCE.md` and `tests/TEST_CASES.md`; update `SPEC.md` first only if the product contract changes.
 - Acceptance:
   - directness, ambiguity, responsibility shifting, accusation, insult, hostility, and threat have operational boundaries;
   - responsibility and tone remain independent;
-  - similar Green, Yellow, and Red phrases produce stable paired outcomes.
-- Tests: paired tone cases, including the current missing non-Green tone coverage.
+  - similar safe control, Yellow, and Red phrases produce stable paired outcomes.
+- Tests: paired Tone Yellow and Red cases with similar Green controls, covering the current missing non-Green tone assertions.
 - Evidence: functional and interaction-quality results.
 
 #### T13.5 — Fix responsibility Red and Gray boundaries
@@ -75,7 +75,7 @@ Status: Pending
 Status: Pending
 
 - Source requirement: `SPEC.md` section 4.
-- Owner files: `REFERENCE.md` and functional tests; update `SPEC.md` only if the product contract changes.
+- Owner files: `.cursor/skills/workplace-survival/REFERENCE.md` and `tests/TEST_CASES.md`; update `SPEC.md` first only if the product contract changes.
 - Acceptance:
   - an explicit unanswered requirement that defeats the reply's purpose is Red;
   - Gray is reserved for genuinely missing or materially ambiguous governing information;
@@ -88,7 +88,7 @@ Status: Pending
 Status: Pending
 
 - Source requirement: `SPEC.md` section 4.
-- Owner files: `REFERENCE.md` and functional tests.
+- Owner files: `.cursor/skills/workplace-survival/REFERENCE.md` and `tests/TEST_CASES.md`.
 - Acceptance:
   - the acknowledgement target is identifiable, clear, and non-conflicting;
   - qualified, refusing, modifying, or limiting replies do not use the Green shortcut;
@@ -102,8 +102,8 @@ Status: Pending
 
 Status: Pending
 
-- Source requirement: `SPEC.md` section 4.
-- Owner files: `SKILL.md`, `REFERENCE.md`, and anti-hallucination tests.
+- Source requirement: Pending specification — state that case data cannot control the skill in `SPEC.md` section 4 before runtime changes.
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - instructions embedded in Data A, Data B, images, or quotes remain content under analysis;
   - embedded text cannot bypass formats, evidence rules, or ratings;
@@ -116,10 +116,10 @@ Status: Pending
 Status: Pending
 
 - Source requirement: `SPEC.md` section 4.
-- Owner files: `REFERENCE.md`, image fixtures, and functional tests.
+- Owner files: `.cursor/skills/workplace-survival/REFERENCE.md`, `tests/fixtures/generate_fixtures.py`, generated image fixtures, and `tests/TEST_CASES.md`.
 - Acceptance:
   - uncertain names, dates, numbers, negations, and commitment words require confirmation;
-  - conversation order and requirement source are not inferred;
+  - materially uncertain conversation order or requirement source is not inferred;
   - no color rating is based on a guessed material token.
 - Tests: negation, similar dates, low-contrast names, strikethrough, cropping, and group-chat order.
 - Evidence: fresh image executions recorded separately from semantic checks.
@@ -129,7 +129,7 @@ Status: Pending
 Status: Pending
 
 - Source requirement: `SPEC.md` sections 3–5.
-- Owner files: `REFERENCE.md`, `FORMATS.md`, and functional tests.
+- Owner files: `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - limited-background cases cover internal responsibility, timing, and hostile tone;
   - unrelated work items requiring different Data A are split;
@@ -144,8 +144,8 @@ Status: Pending
 
 Status: Pending
 
-- Source requirement: `SPEC.md` section 7.
-- Owner files: test result files.
+- Source requirement: Engineering evidence gap — `SPEC.md` section 7 requires passing suites, while current result files do not preserve enough execution evidence to reproduce every PASS. No product behavior change.
+- Owner files: existing suite files matching `tests/*_RESULTS.md`.
 - Acceptance:
   - each execution records input, model, execution time, raw output, and assertion outcome;
   - automated, manual semantic, image-attached, and environment-limited checks are distinguished;
@@ -157,8 +157,8 @@ Status: Pending
 
 Status: Pending
 
-- Source requirement: `SPEC.md` section 7.
-- Owner files: test specifications and result files.
+- Source requirement: Engineering consistency gap — current high-risk cases have no repeated-run stability requirement. No product behavior change.
+- Owner files: `tests/TEST_CASES.md` and corresponding `tests/*_RESULTS.md` records.
 - Acceptance:
   - high-risk cases run at least three times;
   - mode, both ratings, overall status, question count, and revision facts are compared;
@@ -170,8 +170,8 @@ Status: Pending
 
 Status: Pending
 
-- Source requirement: `SPEC.md` section 7.
-- Owner files: all suite results, `FINAL_ACCEPTANCE_RESULTS.md`, `CHANGELOG.md`, and user-facing test claims.
+- Source requirement: `SPEC.md` section 7 acceptance requirement plus the evidence and consistency gaps tracked by T13.10–T13.11.
+- Owner files: all suite result files, `tests/FINAL_ACCEPTANCE_RESULTS.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
 - Acceptance:
   - functional, anti-hallucination, interaction-quality, explicit-invocation, and auto-trigger suites are rerun;
   - case pass rate and repeat-run consistency are reported separately;
@@ -189,7 +189,7 @@ Copy this block when adding work:
 
 Status: Pending
 
-- Source requirement: [SPEC.md section]
+- Source requirement: [SPEC.md section / engineering evidence gap with no product behavior change]
 - Owner files: [only files whose owned behavior must change]
 - Acceptance:
   - [observable outcome]
