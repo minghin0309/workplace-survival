@@ -1,6 +1,6 @@
 ---
 name: workplace-survival
-description: Reviews and minimally revises workplace messages before they are sent to a manager. Checks work-responsibility clarity and tone against user-provided background, asks focused follow-up questions, and can draft a manager-message template when requested. Use when the user asks to check, revise, rewrite, or draft a work message intended for their manager. Do not use for general writing, casual conversation, or messages not intended for a manager.
+description: Reviews and minimally revises workplace messages before they are sent to a manager. Checks work-responsibility clarity and tone against user-provided background, asks focused follow-up questions, and can draft a manager-message template when requested. Automatically use only when the user asks to check, revise, rewrite, or draft a work message intended for their manager. If the user explicitly invokes this skill for an unclear or non-manager recipient, apply its recipient-scope boundary. Do not automatically use for general writing, casual conversation, or messages not intended for a manager.
 ---
 
 # Workplace Survival
@@ -45,6 +45,9 @@ This skill reviews communication against known information. It does not independ
 
 ### 1. Route the request
 
+- Confirm that the intended recipient or reply-all audience explicitly includes a manager. Direct, skip-level, and acting managers are in scope when identified as such.
+- If manager status is unclear, use the intake format to request the recipient's role and stop.
+- If the recipient is clearly not a manager and no manager is included, use the scope-boundary format in `FORMATS.md` and stop without ratings or revision.
 - Use the review workflow when the user asks to check, rate, or revise a message intended for a manager.
 - Use message-template mode when the user explicitly asks for a format or template and has not supplied Data B.
 - If Data B is missing and the user did not explicitly request a template, request Data B and stop.
@@ -54,16 +57,17 @@ This skill reviews communication against known information. It does not independ
 
 For a review:
 
-1. When one input combines possible background and draft text without A/B labels, classify it using `REFERENCE.md`.
-2. Auto-classify only when explicit semantic wording identifies each role and boundary. Otherwise use the intake format to request only the unresolved role or boundary, then stop without discarding any unambiguous role.
-3. Identify Data B's new body using the embedded-content rules in `REFERENCE.md`.
-4. If the body boundary is materially ambiguous, use the intake format to request the exact body and stop.
-5. If no body remains, treat Data B as missing, use the intake format, and stop.
-6. If image-based Data B cannot be identified reliably, request image confirmation and stop.
-7. Verify that Data A exists.
-8. If Data A is missing, request it and stop the assessment.
-9. If the user explicitly cannot or will not provide Data A, ask whether to continue in limited-background mode.
-10. Enter limited-background mode only after the user confirms.
+1. If the request contains unrelated work matters requiring different Data A, use the intake format to request a case split and stop.
+2. When one input combines possible background and draft text without A/B labels, classify it using `REFERENCE.md`.
+3. Auto-classify only when explicit semantic wording identifies each role and boundary. Otherwise use the intake format to request only the unresolved role or boundary, then stop without discarding any unambiguous role.
+4. Identify Data B's new body using the embedded-content rules in `REFERENCE.md`.
+5. If the body boundary is materially ambiguous, use the intake format to request the exact body and stop.
+6. If no body remains, treat Data B as missing, use the intake format, and stop.
+7. If image-based Data B cannot be identified reliably, request image confirmation and stop.
+8. Verify that Data A exists.
+9. If Data A is missing, request it and stop the assessment.
+10. If the user explicitly cannot or will not provide Data A, ask whether to continue in limited-background mode.
+11. Enter limited-background mode only after the user confirms.
 
 Do not output a rating while a required input is missing.
 
@@ -101,6 +105,8 @@ Use the applicable fixed format in `FORMATS.md` and complete all safe work in on
 ### 6. Isolate cases
 
 - Retain Data A when Data B is clearly a revision of the same message and work matter.
+- Treat multiple related items in one message as one case only when the same Data A governs all of them.
+- Split unrelated work matters that need different Data A before rating; never combine their background, ratings, questions, or revisions.
 - Start a new case when Data B clearly concerns a different work matter.
 - Never carry Data A into a new case.
 - If it is unclear whether Data B is a revision or a new case, ask the user before reusing Data A.

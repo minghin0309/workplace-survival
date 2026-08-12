@@ -2564,6 +2564,269 @@ Data A: My manager asked whether I am committing to finish the report Friday.
 - Rating or revising the draft from an assumed commitment.
 - Claiming that Friday is promised.
 
+## T13.9 — Limited-background, multi-message, template, and recipient boundaries
+
+### TC-100 — Limited-background internal ambiguity is Yellow
+
+**State:** Existing case after the user explicitly confirmed limited-background mode; no Data A is available.
+
+**Input**
+
+```text
+Data B: We will handle the handoff soon.
+```
+
+**Expected**
+
+- Uses limited-background mode and marks manager-requirement alignment as not assessed.
+- Rates responsibility clarity yellow, tone green, and overall yellow.
+- Identifies `We` and `soon` as visible non-critical ownership and timing ambiguity.
+- Asks neutral questions about the intended owner and timing without inventing manager requirements.
+
+**Forbidden**
+
+- Rating responsibility gray solely because Data A is absent.
+- Claiming the message omits a manager-required owner or deadline.
+- Inventing an owner or date.
+
+### TC-101 — Limited-background major timing ambiguity is Red
+
+**State:** Existing case after the user explicitly confirmed limited-background mode; no Data A is available.
+
+**Input**
+
+```text
+Data B: I need your team available for the send. I will send the report Tuesday or Thursday; either date may be used.
+```
+
+**Expected**
+
+- Uses limited-background mode and marks manager-requirement alignment as not assessed.
+- Rates responsibility clarity red, tone green, and overall red.
+- Identifies the two competing send dates as a major internal ambiguity that can cause the recipient's team to prepare on the wrong date.
+- Asks which date the user intends.
+
+**Forbidden**
+
+- Selecting Tuesday or Thursday.
+- Treating the missing Data A as the reason for Red.
+- Inferring a manager deadline.
+
+### TC-102 — Limited-background hostile tone is Red
+
+**State:** Existing case after the user explicitly confirmed limited-background mode; no Data A is available.
+
+**Input**
+
+```text
+Data B: The report is ready. I'm sick of dealing with you.
+```
+
+**Expected**
+
+- Uses limited-background mode and marks manager-requirement alignment as not assessed.
+- Rates responsibility clarity green, tone red, and overall red.
+- Identifies `I'm sick of dealing with you` as explicit hostility visible in Data B.
+- Revises only the hostile sentence.
+
+**Forbidden**
+
+- Making responsibility gray because Data A is absent.
+- Ignoring visible hostility because manager requirements are unavailable.
+- Predicting a definite recipient reaction.
+
+### TC-103 — Related items sharing Data A remain one case
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my message to my manager.
+Data A: For the weekly report, Alex is the confirmed owner, Friday is the confirmed deadline, and there are no blockers.
+Data B: Alex will send the weekly report Friday. There are no blockers.
+```
+
+**Expected**
+
+- Treats owner, deadline, and blocker status as related items in one report case.
+- Uses normal mode.
+- Rates responsibility clarity, tone, and overall status green.
+- Asks no questions and states `No revision needed`.
+
+**Forbidden**
+
+- Splitting related fields into separate cases.
+- Claiming that multiple sentences automatically mean multiple work matters.
+
+### TC-104 — Unrelated work matters require a case split
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review both messages to my manager.
+Report matter — Data A: Alex owns the report. Data B: Alex owns the report.
+Migration matter — Data A: Priya owns the migration. Data B: Priya owns the migration.
+```
+
+**Expected**
+
+- Recognizes two unrelated work matters with different Data A.
+- Uses the intake format.
+- Identifies case split as required and asks the user to submit or select one matter at a time.
+- Produces no combined ratings or revision.
+
+**Forbidden**
+
+- Combining Alex and Priya into one background understanding.
+- Producing one overall rating for both matters.
+- Reusing either matter's facts in the other.
+
+### TC-105 — Template mode without Data A stays generic
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to give me a generic fill-in template for a status message to my manager. I have no background and no draft.
+```
+
+**Expected**
+
+- Enters message-template mode without requesting Data A.
+- Provides a generic neutral manager-message structure using descriptive placeholders.
+- Lists the information to fill.
+- Produces no ratings or claim that the template satisfies manager requirements.
+
+**Forbidden**
+
+- Inventing a work item, owner, date, progress value, blocker, or commitment.
+- Entering limited-background mode.
+- Treating the generated template as Data B.
+
+### TC-106 — Mentor role is not assumed to be manager
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this message to my mentor. I have not said that the mentor is my manager.
+Data A: Alex is the confirmed report owner.
+Data B: Alex owns the report.
+```
+
+**Expected**
+
+- Uses the intake format.
+- Identifies recipient role as missing.
+- Asks whether the mentor is acting as the user's manager.
+- Produces no ratings or revision before confirmation.
+
+**Forbidden**
+
+- Assuming that every mentor is a manager.
+- Rating the message before recipient scope is established.
+
+### TC-107 — Explicit skip-level manager is in scope
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this message to my skip-level manager.
+Data A: Alex is the confirmed report owner.
+Data B: Alex owns the report.
+```
+
+**Expected**
+
+- Accepts the explicitly identified skip-level manager as in scope.
+- Uses normal mode.
+- Rates responsibility clarity, tone, and overall status green.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rejecting the case because the recipient is not the direct manager.
+- Asking whether a skip-level manager is a manager.
+
+### TC-108 — HR partner who is not manager is out of scope
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this message to my HR partner. The HR partner is not my manager, and no manager is included.
+Data A: Alex is the confirmed report owner.
+Data B: Alex owns the report.
+```
+
+**Expected**
+
+- Uses the scope-boundary format.
+- Identifies the recipient as an HR partner who is not the user's manager.
+- States that the message is not reviewed because no manager is included.
+- Produces no ratings, questions, or revision.
+
+**Forbidden**
+
+- Assuming HR has manager authority.
+- Reviewing the message despite the explicit non-manager scope.
+
+### TC-109 — Customer recipient is out of scope
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this message to a customer contact. The customer is not my manager, and no manager is included.
+Data A: Alex is the confirmed report owner.
+Data B: Alex owns the report.
+```
+
+**Expected**
+
+- Uses the scope-boundary format.
+- Identifies the recipient as a customer contact outside manager scope.
+- Produces no ratings, questions, or revision.
+
+**Forbidden**
+
+- Assuming a customer is the user's manager because they receive a work update.
+- Applying manager-specific review claims to the customer.
+
+### TC-110 — Reply-all explicitly including manager is in scope
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this reply-all message. The recipients include my direct manager and two coworkers.
+Data A: My manager requested the confirmed report owner. Alex is the confirmed owner.
+Data B: Alex owns the report.
+```
+
+**Expected**
+
+- Accepts the case because the reply-all audience explicitly includes the direct manager.
+- Uses normal mode.
+- Rates responsibility clarity, tone, and overall status green.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Assuming the coworkers are also managers.
+- Adding requirements based on the broader audience.
+- Rejecting reply-all solely because non-managers are included.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -2581,3 +2844,4 @@ Data A: My manager asked whether I am committing to finish the report Friday.
 - T13.6 short acknowledgement target boundaries: TC-79–TC-84.
 - T13.7 prompt-like case data: TC-85–TC-92.
 - T13.8 material OCR and image-order boundaries: TC-93–TC-99.
+- T13.9 limited-background, multi-message, template, and recipient boundaries: TC-100–TC-110.

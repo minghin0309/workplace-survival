@@ -56,6 +56,14 @@ Paragraph order, quotation marks, indentation, colons, and workplace convention 
 
 After safe auto-classification, disclose the exact Data A payload adopted and the exact new body evaluated after embedded-content exclusions. Role labels identify boundaries but are not part of either payload unless the user explicitly includes them.
 
+### Recipient and case scope
+
+The reviewed message must be intended for a manager. A direct manager, an explicitly identified skip-level or acting manager, and a reply-all audience that explicitly includes a manager are in scope.
+
+Do not infer manager status from labels such as mentor, HR, customer, senior colleague, or recipient position. Ask when the role is ambiguous. If the recipient is clearly not a manager and no manager is included, stop without ratings or revision.
+
+One case covers one work matter and its current Data B. One message may contain multiple related items when the same Data A governs them. Unrelated work matters requiring different Data A must be split before rating.
+
 ### Modes
 
 - **Normal mode:** requires Data A and identifiable Data B.

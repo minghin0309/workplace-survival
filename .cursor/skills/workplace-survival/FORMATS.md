@@ -4,16 +4,29 @@ Use the applicable format exactly in the listed section order. Keep the instruct
 
 ## Intake format
 
-Use this format when a review cannot start because Data A, Data B, A/B classification, a sendable-body boundary, or material image confirmation is required:
+Use this format when a review cannot start because recipient role, case split, Data A, Data B, A/B classification, a sendable-body boundary, or material image confirmation is required:
 
 ```markdown
 ## Information needed
 
-- Missing: [Data A / Data B / A-B classification / sendable-body boundary / image confirmation]
+- Missing: [recipient role / case split / Data A / Data B / A-B classification / sendable-body boundary / image confirmation]
 - Next step: [the exact information or confirmation the user must provide]
 ```
 
 Do not include ratings, inferred facts, or a revision in an intake response.
+
+## Scope-boundary format
+
+Use this format when the user explicitly identifies the recipient as a non-manager and no manager is included:
+
+```markdown
+## Scope
+
+- Recipient: [the user-provided role]
+- Result: Not reviewed — Workplace Survival is limited to messages intended for a manager.
+```
+
+Do not include ratings, evidence, questions, or a revision. Do not infer that a mentor, HR partner, customer, client, or senior colleague is a manager.
 
 ## Review format
 

@@ -130,7 +130,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - [ ] Completed
 
 - Source requirement: `SPEC.md` sections 3–5.
-- Owner files: `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - limited-background cases cover internal responsibility, timing, and hostile tone;
   - unrelated work items requiring different Data A are split;
