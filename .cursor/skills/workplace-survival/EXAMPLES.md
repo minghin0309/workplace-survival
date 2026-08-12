@@ -64,7 +64,7 @@ If the relationship between a new message and the current case is unclear, ask b
 - Data A: `Take photos now, do not open the boxes, pack tomorrow morning, and depart at 13:30.`
 - Data B: `okok`
 
-**Expected:** `Green / Green / Green` when this is one clear, non-conflicting instruction requiring acknowledgement. Do not expand the acknowledgement or claim completion.
+**Expected:** `Green / Green / Green` when this is one identifiable reply target containing clear, non-conflicting instructions that require acknowledgement. Do not expand the acknowledgement or claim completion.
 
 Contrast:
 
@@ -72,3 +72,18 @@ Contrast:
 - Data B: `okok`
 
 **Expected:** `Red / Green / Red`. The acknowledgement does not supply either requested fact; ask neutral questions using placeholders.
+
+## 9. Template without background
+
+- Request: `Give me a message template for a manager update.`
+- Data A: Not provided.
+- Data B: Not provided.
+
+**Expected:** Enter message-template mode, provide a generic neutral structure with descriptive placeholders, and produce no ratings or claim of requirement alignment.
+
+## 10. Explicit hostile tone
+
+- Data A: `The report is confirmed delayed; the manager asked for its status.`
+- Data B: `The report is delayed. This is your fault and your work is useless.`
+
+**Expected:** `Green / Red / Red`. Treat the status statement separately from the unsupported accusation and insult. The tone requires revision; do not soften the responsibility rating merely because tone is red.

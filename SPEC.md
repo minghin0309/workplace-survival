@@ -22,7 +22,7 @@ Runtime ownership is deliberately split to avoid repeating the same rule:
 - `.cursor/skills/workplace-survival/REFERENCE.md` owns detailed semantics and rating boundaries;
 - `.cursor/skills/workplace-survival/FORMATS.md` owns exact output structures and fixed text;
 - `.cursor/skills/workplace-survival/EXAMPLES.md` contains non-normative examples only;
-- `tests/TEST_CASES.md` owns exhaustive acceptance assertions.
+- `tests/TEST_CASES.md` owns acceptance assertions and recorded coverage boundaries.
 
 Lower-level files may implement this contract but must not expand product scope. If they conflict with this file, stop and resolve the specification before changing behavior.
 

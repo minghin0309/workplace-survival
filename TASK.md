@@ -12,7 +12,20 @@
 
 ## Current queue
 
-No active tasks.
+### T1 — Close known acceptance-coverage gaps
+
+Status: Pending
+
+- Source requirement: `SPEC.md` sections 3 and 4.
+- Owner files: `tests/TEST_CASES.md` and applicable result files.
+- Acceptance:
+  - fixed cases distinguish Green, Yellow, and Red tone boundaries;
+  - template mode without Data A produces a generic neutral template with placeholders and no ratings.
+- Tests:
+  - add paired tone-boundary cases;
+  - add a no-background message-template case.
+- Evidence:
+  - update suite results only after the cases are executed.
 
 ## Task template
 
@@ -23,7 +36,7 @@ Copy this block when adding work:
 
 Status: Pending
 
-- Source requirement: [SPEC.md section or confirmed product decision]
+- Source requirement: [SPEC.md section]
 - Owner files: [only files whose owned behavior must change]
 - Acceptance:
   - [observable outcome]

@@ -125,3 +125,11 @@ All 32 functional cases pass. The post-T11.5 regression added two short-acknowle
 - TC-26–TC-30: 5 passed, 0 failed.
 
 Final post-acceptance functional result: 32 passed, 0 failed.
+
+## Documentation consolidation regression — 2026-08-12
+
+- Scope: verify that retiring duplicate engineering documents and reducing non-normative examples did not change runtime behavior.
+- Normative runtime files checked against `main`: `SKILL.md`, `REFERENCE.md`, and `FORMATS.md` are unchanged.
+- Six isolated evaluator contexts re-ran the 27 text cases in TC-01–TC-32 against the current runtime files and exact assertions.
+- TC-21–TC-25 received semantic regression checks against their visual-fixture definitions; the PNGs were not attached in this consolidation run, so these checks are not recorded as fresh case executions.
+- Fresh execution result: 27 passed, 0 failed. Additional semantic visual-fixture checks: 5 passed, 0 failed.

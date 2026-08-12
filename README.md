@@ -124,6 +124,6 @@ The skill also supports automatic invocation for requests that clearly ask to ch
 - `ARCHITECTURE.md`: rule ownership and change flow.
 - `TASK.md`: active work only.
 - `CHANGELOG.md`: completed outcomes.
-- `tests/TEST_CASES.md`: exhaustive acceptance assertions.
+- `tests/TEST_CASES.md`: acceptance assertions and current coverage.
 
 Avoid copying rules between these files. Update the owner identified in `ARCHITECTURE.md`.

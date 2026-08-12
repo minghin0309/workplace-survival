@@ -9,7 +9,7 @@ SPEC.md
   └─ FORMATS.md     exact output structures and fixed text
 
 EXAMPLES.md         non-normative runtime examples
-TEST_CASES.md       exhaustive acceptance assertions
+TEST_CASES.md       acceptance assertions and coverage
 TASK.md             active work only
 CHANGELOG.md        completed outcomes
 ```
@@ -33,7 +33,7 @@ Keep all four files together when installing the skill.
 1. Start behavior changes in `SPEC.md`.
 2. Change only the runtime owner of the affected detail.
 3. Put exact output syntax only in `FORMATS.md`.
-4. Put exhaustive scenarios only in `tests/TEST_CASES.md`; keep `EXAMPLES.md` representative.
+4. Put acceptance scenarios only in `tests/TEST_CASES.md`; keep `EXAMPLES.md` representative.
 5. Record active implementation work in `TASK.md`, then move its completed outcome to `CHANGELOG.md`.
 6. If two normative files conflict, stop and resolve the ownership error before testing.
 
