@@ -30,7 +30,8 @@ Evidence files contain a JSON array. Every record requires:
   - `environment_limited`;
 - `input_source`:
   - `reference`: case-file path and optional heading;
-  - `file_sha256`: SHA-256 of the cited source file;
+  - `snapshot_raw`: exact case/source excerpt used for execution;
+  - `snapshot_sha256`: SHA-256 of that snapshot;
 - `turns`: ordered execution turns, each containing:
   - `index`;
   - `executed_at_utc`;
@@ -52,7 +53,21 @@ Evidence files contain a JSON array. Every record requires:
 - `limitations`: explicit method and environment limitations;
 - `result_citations`: suite-result files that cite this record's `run_id`.
 
-Hashes make later evidence mutation detectable. They do not prove that an evaluator faithfully copied the cited case; reviewers must compare `turns[].input_raw` with `input_source.reference`.
+Repeat-run records additionally require:
+
+- `consistency`:
+  - `group`;
+  - `repeat_index`;
+  - `evaluator_context_id`;
+- `observations`:
+  - `route`;
+  - `responsibility`;
+  - `tone`;
+  - `overall`;
+  - `question_count`;
+  - `revision_facts`: sorted factual effects, preserved values, and unresolved placeholders.
+
+Hashes make later evidence mutation detectable. Source files may evolve after a run, so validation checks the preserved snapshot rather than requiring the current file hash to remain unchanged. Reviewers must compare `turns[].input_raw` with `input_source.snapshot_raw`.
 
 ## Method rules
 
@@ -69,7 +84,7 @@ Hashes make later evidence mutation detectable. They do not prove that an evalua
 A record may say `PASS` only when:
 
 - exact ordered raw inputs and outputs are present;
-- hashes match all raw content, source files, and artifacts;
+- hashes match all raw content, source snapshots, and artifacts;
 - every assertion has a unique ID and passed;
 - the method is identified;
 - image artifacts were actually opened when image execution is claimed;
@@ -77,6 +92,8 @@ A record may say `PASS` only when:
 - every listed suite-result file cites the evidence file and `run_id`.
 
 The T13.10 validation set must cover every active suite and all five method classes. It validates the evidence mechanism with representative records; it does not make historical suite summaries evidence-complete. The full evidence-complete rerun remains T13.12 work.
+
+T13.11 repeat evidence may cover a subset of suites and methods. Every consistency record must cite a plan containing expected canonical observations, and each repeat of a case must use a distinct evaluator context. Records are compared with `compare_consistency.py`; different raw prose is allowed, but any difference from planned canonical observations fails.
 
 Validate evidence with:
 

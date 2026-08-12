@@ -29,6 +29,7 @@ SUITE_RESULT_FILES = {
     "explicit_invocation": "tests/EXPLICIT_INVOCATION_RESULTS.md",
 }
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
+RATINGS = {"Green", "Yellow", "Red", "Gray", None}
 
 
 def require(condition: bool, message: str) -> None:
@@ -84,9 +85,14 @@ def validate_source(source: object, root: Path, run_id: str) -> None:
     require(isinstance(reference, str) and reference, f"{run_id}: input source reference")
     source_path = resolve_repo_path(root, reference.split("#", 1)[0], f"{run_id}: source")
     require(source_path.is_file(), f"{run_id}: missing input source {source_path}")
+    snapshot_raw = source.get("snapshot_raw")
     require(
-        source.get("file_sha256") == sha256_bytes(source_path.read_bytes()),
-        f"{run_id}: source hash mismatch",
+        isinstance(snapshot_raw, str) and snapshot_raw,
+        f"{run_id}: source snapshot required",
+    )
+    require(
+        source.get("snapshot_sha256") == sha256_text(snapshot_raw),
+        f"{run_id}: source snapshot hash mismatch",
     )
 
 
@@ -161,6 +167,53 @@ def validate_assertions(assertions: object, result: str, run_id: str) -> None:
         require(any(not item["passed"] for item in assertions), f"{run_id}: FAIL lacks failed assertion")
 
 
+def validate_consistency_fields(record: dict, run_id: str) -> None:
+    consistency = record.get("consistency")
+    observations = record.get("observations")
+    require(
+        (consistency is None) == (observations is None),
+        f"{run_id}: consistency and observations must appear together",
+    )
+    if consistency is None:
+        return
+
+    require(isinstance(consistency, dict), f"{run_id}: consistency object")
+    require(
+        isinstance(consistency.get("group"), str) and consistency["group"],
+        f"{run_id}: consistency group",
+    )
+    require(
+        isinstance(consistency.get("repeat_index"), int)
+        and consistency["repeat_index"] > 0,
+        f"{run_id}: repeat index",
+    )
+    require(
+        isinstance(consistency.get("evaluator_context_id"), str)
+        and consistency["evaluator_context_id"],
+        f"{run_id}: evaluator context id",
+    )
+
+    require(isinstance(observations, dict), f"{run_id}: observations object")
+    require(
+        isinstance(observations.get("route"), str) and observations["route"],
+        f"{run_id}: observation route",
+    )
+    for field in ("responsibility", "tone", "overall"):
+        require(observations.get(field) in RATINGS, f"{run_id}: observation {field}")
+    require(
+        isinstance(observations.get("question_count"), int)
+        and observations["question_count"] >= 0,
+        f"{run_id}: observation question_count",
+    )
+    revision_facts = observations.get("revision_facts")
+    require(isinstance(revision_facts, list), f"{run_id}: revision_facts list")
+    require(
+        all(isinstance(item, str) and item for item in revision_facts),
+        f"{run_id}: invalid revision fact",
+    )
+    require(revision_facts == sorted(set(revision_facts)), f"{run_id}: revision_facts not canonical")
+
+
 def validate_citations(
     citations: object,
     root: Path,
@@ -219,6 +272,7 @@ def validate_record(
     )
     validate_artifacts(record.get("artifacts"), root, method, run_id)
     validate_assertions(record.get("assertions"), result, run_id)
+    validate_consistency_fields(record, run_id)
 
     limitations = record.get("limitations")
     require(isinstance(limitations, list), f"{run_id}: limitations must be a list")
@@ -234,8 +288,47 @@ def validate_record(
     )
 
 
+def validate_repeat_plan(records: list[dict], plan_path: Path) -> None:
+    plan = json.loads(plan_path.read_text(encoding="utf-8"))
+    required_repeats = plan.get("required_repeats")
+    require(
+        isinstance(required_repeats, int) and required_repeats >= 3,
+        "repeat plan requires at least three runs",
+    )
+    cases = plan.get("cases")
+    require(isinstance(cases, list) and cases, "repeat plan cases required")
+    planned = {item["case_id"]: item for item in cases}
+    require(len(planned) == len(cases), "duplicate case in repeat plan")
+
+    grouped: dict[str, list[dict]] = {}
+    for record in records:
+        require(record.get("consistency") is not None, f"{record['run_id']}: repeat metadata required")
+        grouped.setdefault(record["case_id"], []).append(record)
+
+    require(set(grouped) == set(planned), "repeat evidence does not cover complete plan")
+    for case_id, case_records in grouped.items():
+        expected = planned[case_id]
+        require(len(case_records) == required_repeats, f"{case_id}: repeat count")
+        require(
+            sorted(item["consistency"]["repeat_index"] for item in case_records)
+            == list(range(1, required_repeats + 1)),
+            f"{case_id}: repeat indices",
+        )
+        require(
+            len({item["consistency"]["evaluator_context_id"] for item in case_records})
+            == required_repeats,
+            f"{case_id}: evaluator contexts are not independent",
+        )
+        for record in case_records:
+            require(record["consistency"]["group"] == expected["group"], f"{case_id}: group")
+            require(record["observations"] == expected["observations"], f"{case_id}: observations")
+
+
 def main() -> None:
-    require(len(sys.argv) == 2, "usage: validate_evidence.py <evidence.json>")
+    require(
+        len(sys.argv) in {2, 3},
+        "usage: validate_evidence.py <evidence.json> [repeat-plan.json]",
+    )
     evidence_path = Path(sys.argv[1]).resolve()
     root = Path(__file__).resolve().parents[2]
     require(evidence_path.is_relative_to(root), "evidence file must be inside repository")
@@ -250,8 +343,18 @@ def main() -> None:
 
     suites = {record["suite"] for record in records}
     methods = {record["method"] for record in records}
-    require(suites == EXPECTED_SUITES, f"suite coverage mismatch: {sorted(suites)}")
-    require(methods == METHODS, f"method coverage mismatch: {sorted(methods)}")
+    if evidence_path.name == "t13-10-validation.json":
+        require(suites == EXPECTED_SUITES, f"suite coverage mismatch: {sorted(suites)}")
+        require(methods == METHODS, f"method coverage mismatch: {sorted(methods)}")
+    consistency_records = [record for record in records if record.get("consistency") is not None]
+    if consistency_records:
+        require(len(consistency_records) == len(records), "mixed repeat and non-repeat evidence")
+        require(len(sys.argv) == 3, "repeat evidence requires a plan")
+        plan_path = Path(sys.argv[2]).resolve()
+        require(plan_path.is_relative_to(root), "repeat plan must be inside repository")
+        validate_repeat_plan(records, plan_path)
+    else:
+        require(len(sys.argv) == 2, "repeat plan provided for non-repeat evidence")
     print(f"validated {len(records)} evidence records across {len(suites)} suites")
 
 

@@ -2851,6 +2851,27 @@ Data B: Alex owns the report.
 - Treating an acting manager as automatically out of scope.
 - Asking for recipient-role confirmation despite the explicit manager role.
 
+## T13.11 — Repeat and variation plan
+
+Run each selected case three times in independent evaluator contexts:
+
+- Tone boundary: TC-60, TC-61, TC-62.
+- Responsibility boundary: TC-72, TC-73, TC-74, TC-75.
+- Acknowledgement target: TC-79, TC-83.
+- Prompt and OCR image: TC-89, TC-93.
+- Recipient routing: TC-106, TC-107, TC-108.
+
+For each run, compare:
+
+- mode or non-review route;
+- responsibility rating;
+- tone rating;
+- overall status;
+- material question count;
+- revision facts and preserved case facts.
+
+Different prose is allowed. Any difference in the compared fields, unsupported fact, missing required fact, or changed case route fails the consistency check.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.

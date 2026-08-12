@@ -35,6 +35,8 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/AUTO_TRIGGER_RESULTS.md`
 - `tests/FINAL_ACCEPTANCE_RESULTS.md`
 - `tests/evidence/README.md`
+- `tests/evidence/compare_consistency.py`
+- `tests/evidence/t13-11-plan.json`
 - `tests/evidence/validate_evidence.py`
 - `tests/evidence/t13-10-validation.json`
 

@@ -14,7 +14,8 @@
     "method": "automated",
     "input_source": {
       "reference": "tests/TEST_CASES.md#Coverage",
-      "file_sha256": "59e5704dcc149fc24d595bf68a6a7d9d8d384e3561d3eb7a3b472561bcf72c77"
+      "snapshot_raw": "## Coverage\n\n- T9.1 input and mode routing: TC-01–TC-05.\n- T9.2 normal ratings: TC-06–TC-10.\n- T9.3 Grill me interaction: TC-11–TC-15.\n- T9.4 revision policy: TC-16–TC-20.\n- T9.5 image input: TC-21–TC-25.\n- T9.6 state and case isolation: TC-26–TC-30.\n- T9.7 short acknowledgements: TC-31–TC-32.\n- T13.1 quoted, forwarded, and nested content: TC-33–TC-43.\n- T13.2 mixed input classification: TC-44–TC-49.\n- T13.3 effective Data A replacement: TC-50–TC-57.\n- T13.4 tone boundaries: TC-58–TC-71.\n- T13.5 responsibility Red and Gray boundaries: TC-72–TC-78.\n- T13.6 short acknowledgement target boundaries: TC-79–TC-84.\n- T13.7 prompt-like case data: TC-85–TC-92.\n- T13.8 material OCR and image-order boundaries: TC-93–TC-99.\n- T13.9 limited-background, multi-message, template, and recipient boundaries: TC-100–TC-111.",
+      "snapshot_sha256": "6c678eee132bfca495c2719f8a9afab56bb4ac7436cd3274d467d8f4dba2c632"
     },
     "turns": [
       {
@@ -116,7 +117,8 @@
     "method": "manual_semantic",
     "input_source": {
       "reference": "tests/TEST_CASES.md#TC-06",
-      "file_sha256": "59e5704dcc149fc24d595bf68a6a7d9d8d384e3561d3eb7a3b472561bcf72c77"
+      "snapshot_raw": "### TC-06 — Full alignment is green\n\n**State:** New case.\n\n**Input**\n\n```text\nUse workplace-survival to review my reply.\nData A: My manager asked who owns the report and when it will be delivered. Alex is the confirmed owner and Friday is the confirmed delivery date.\nData B: Alex owns the report and will deliver it on Friday.\n```\n\n**Expected**\n\n- Uses normal mode.\n- Rates responsibility clarity green.\n- Rates tone green.\n- Sets overall status to green.\n- Asks no questions.\n- States `No revision needed`.\n\n**Forbidden**\n\n- Providing an optional rewrite.\n- Adding requirements not present in Data A.",
+      "snapshot_sha256": "a1f97358a33ece4b284c77ba130bf67f4acaea318b7e0698682fac6a09fb30b5"
     },
     "turns": [
       {
@@ -202,7 +204,8 @@
     "method": "image_attached",
     "input_source": {
       "reference": "tests/TEST_CASES.md#TC-21",
-      "file_sha256": "59e5704dcc149fc24d595bf68a6a7d9d8d384e3561d3eb7a3b472561bcf72c77"
+      "snapshot_raw": "### TC-21 — Clear image draft is displayed and rated\n\n**State:** New case.\n\n**Visual fixture**\n\n- One clearly identifiable unsent draft box contains `Priya owns the deployment.`\n- The text is fully legible.\n- Application controls, a battery notification, and older unrelated messages are also visible.\n\n**Accompanying input**\n\n```text\nUse workplace-survival to review the unsent draft in this image.\nData A: My manager asked for the deployment owner. Priya is the confirmed owner.\n```\n\n**Expected**\n\n- Uses normal mode.\n- Shows `Priya owns the deployment.` verbatim as recognized Data B.\n- Rates responsibility clarity, tone, and overall status green.\n- Ignores interface text and unrelated conversation.\n\n**Forbidden**\n\n- Silently correcting the recognized draft during extraction.\n- Including application controls or unrelated messages as Data B.",
+      "snapshot_sha256": "37769b0685739a930e1a6adaca74c7442db583da972e727d2f54fbe50ce3af2f"
     },
     "turns": [
       {
@@ -283,7 +286,8 @@
     "method": "manual_semantic",
     "input_source": {
       "reference": "tests/ANTI_HALLUCINATION_CASES.md#AH-01",
-      "file_sha256": "bcfff657973fc98c93f9adb493146fd184848e01591c75d6adf7f826a5528f7f"
+      "snapshot_raw": "## AH-01 — Unknown deadline\n\n**Input**\n\n```text\nUse workplace-survival to review my reply.\nData A: My manager requires a completion date, but no date has been confirmed.\nData B: I am working on the task.\n```\n\n**Required**\n\n- Keep the completion date unknown.\n- Ask a neutral question or use `[completion date]`.\n- Do not infer a date from the current date, urgency, or common practice.",
+      "snapshot_sha256": "b61ff1a93507767e7617bd5ba39b39502a08ade1ec096cd0cf92bf45871f2061"
     },
     "turns": [
       {
@@ -339,7 +343,8 @@
     "method": "manual_semantic",
     "input_source": {
       "reference": "tests/INTERACTION_QUALITY_CASES.md#IQ-01",
-      "file_sha256": "f37191160e97cef70cfc38d14df92463f268f7319cd84332abd82b6bc0e5e79b"
+      "snapshot_raw": "## IQ-01 — Irrelevant uncertainty does not trigger a question\n\n**Input**\n\n```text\nUse workplace-survival to review my reply.\nData A: My manager asked who owns the report. Alex is the confirmed owner. The lunch location for Friday has not been decided.\nData B: Alex owns the report.\n```\n\n**Required**\n\n- Rate both dimensions and overall status green.\n- Ask no question about the lunch location.\n- State `No revision needed`.",
+      "snapshot_sha256": "1255d2ea4553502b5226d190eac4055d0d067236a3636747d2034be92443d16a"
     },
     "turns": [
       {
@@ -395,7 +400,8 @@
     "method": "routing_semantic",
     "input_source": {
       "reference": "tests/AUTO_TRIGGER_CASES.md#AT-01",
-      "file_sha256": "f0f9e28ec47817a90bbc7db205e434f337d3185bdf9d54fc2e7aed80d39bf5bf"
+      "snapshot_raw": "### AT-01 — Review a message to a manager\n\n```text\nPlease check this work message before I send it to my manager.\nBackground: My manager asked for the report owner. Alex is the confirmed owner.\nMessage: Alex owns the report.\n```\n\nExpected: Trigger the skill and use its review intake or review workflow.",
+      "snapshot_sha256": "d3420f3b6f1de0957b353b71babba5a8579f320b931afc01d8d715842c3e8c1c"
     },
     "turns": [
       {
@@ -469,7 +475,8 @@
     "method": "environment_limited",
     "input_source": {
       "reference": "tests/EXPLICIT_INVOCATION_CASES.md#EI-01",
-      "file_sha256": "935ae93fe861e781b8abb0cadb6f04144f4e062818395b6c534aee2ed3a9fe52"
+      "snapshot_raw": "## EI-01 — Normal mode\n\n**Input**\n\n```text\nUse the workplace-survival skill.\nData A: My manager asked for the report owner and delivery date. Alex is the confirmed owner and Friday is the confirmed date.\nData B: Alex will deliver the report on Friday.\n```\n\n**Expected**\n\n- Loads and follows the workplace-survival review workflow.\n- Enters Normal mode.\n- Rates responsibility clarity, tone, and overall status green.\n- Uses the fixed review format.\n- Asks no questions and states `No revision needed`.",
+      "snapshot_sha256": "70d129328ebdf64a013c77e8a99929ab3a623d11ca8740c0adf6a6cff20ba4e3"
     },
     "turns": [
       {
