@@ -37,6 +37,14 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/blind/BLIND_CASE_BRIEF.md`
 - `tests/blind/BLIND_PLAN.md`
 - `tests/blind/GOLD_RUBRIC.md`
+- `tests/blind/cloud-holdout/case-freeze.json`
+- `tests/blind/cloud-holdout/cases-raw.json`
+- `tests/blind/cloud-holdout/cases.json`
+- `tests/blind/cloud-holdout/designer-attestation.json`
+- `tests/blind/cloud-holdout/images/BH-027.png`
+- `tests/blind/cloud-holdout/images/BH-028.png`
+- `tests/blind/cloud-holdout/images/BH-029.png`
+- `tests/blind/cloud-holdout/images/BH-030.png`
 - `tests/blind/blind_common.py`
 - `tests/blind/freeze_holdout.py`
 - `tests/blind/freeze_outputs.py`
