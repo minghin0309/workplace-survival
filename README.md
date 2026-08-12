@@ -127,3 +127,16 @@ The skill also supports automatic invocation for requests that clearly ask to ch
 - `tests/TEST_CASES.md`: acceptance assertions and current coverage.
 
 Avoid copying rules between these files. Update the owner identified in `ARCHITECTURE.md`.
+
+## Validation status
+
+The T13.12 evidence-complete acceptance run reports:
+
+- 136 behavioral cases passed, 0 failed;
+- 13 attached-image cases passed;
+- 1 automated package check passed;
+- 14 high-risk cases repeated three times with 0 material variations.
+
+See `tests/FINAL_ACCEPTANCE_RESULTS.md` and `tests/evidence/t13-12-final.json`.
+
+Automatic-trigger and final-configuration explicit-invocation cases were evaluated deterministically against the current frontmatter. A live probabilistic Cursor dispatcher was not available, so production routing variance is not claimed.

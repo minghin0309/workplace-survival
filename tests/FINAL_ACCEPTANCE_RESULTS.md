@@ -1,49 +1,78 @@
 # Workplace Survival Final Acceptance Results
 
-## Behavioral validation
+## T13.12 outcome — 2026-08-12
 
-- Functional cases TC-01 through TC-32: 32 passed, 0 failed.
-- Anti-hallucination cases AH-01 through AH-06: 6 passed, 0 failed.
-- Interaction-quality cases IQ-01 through IQ-06: 6 passed, 0 failed.
-- Explicit-invocation cases EI-01 through EI-03: 3 passed, 0 failed.
-- Automatic-trigger cases AT-01 through AT-10: 10 passed, 0 failed.
-- Total: 57 passed, 0 failed.
-- False automatic triggers: 0.
-- Missed automatic triggers: 0.
-- Unsupported facts or interaction defects: 0.
+### Behavioral case pass rate
 
-## Documentation and package validation
+- Functional TC-01–TC-111: 111 passed, 0 failed.
+- Anti-hallucination AH-01–AH-06: 6 passed, 0 failed.
+- Interaction quality IQ-01–IQ-06: 6 passed, 0 failed.
+- Final-configuration explicit invocation FCI-01–FCI-03: 3 passed, 0 failed.
+- Automatic trigger AT-01–AT-10: 10 passed, 0 failed.
+- Total behavioral cases: 136 passed, 0 failed.
 
-- All runtime Markdown links resolve one level deep.
-- `SKILL.md` frontmatter delimiters are valid.
-- Slug is valid and within the length limit.
-- Description is third-person, non-empty, and below 1024 characters.
-- Automatic invocation is enabled by the absence of `disable-model-invocation`.
-- Runtime skill files contain no Windows-style internal paths or backslash Markdown links.
+The package check is reported separately and is not counted as a behavioral case.
+
+### Image execution
+
+- Attached-image cases: 13 passed, 0 failed.
+- Every expected case-to-fixture mapping was validated.
+- Every PNG was opened with image-capable reading.
+- No semantic-only image check is counted as an attached-image execution.
+
+### Repeat consistency
+
+- Selected high-risk cases: 14.
+- Independent evaluator contexts per case: 3.
+- Repeat executions: 42 passed, 0 failed.
+- Material variations in route, ratings, overall status, question count, or revision facts: 0.
+
+Repeat executions are reported separately and are not added to the 136-case pass count.
+
+## Evidence
+
+- Final plan: `tests/evidence/t13-12-plan.json`.
+- Evidence-complete case records: `tests/evidence/t13-12-final.json`.
+- Final evidence records: 137 total:
+  - 136 behavioral cases;
+  - 1 automated package check.
+- Runtime commit: `c72404b4629833a8ca09d3c01639f47fdbcafedc`.
+- Package evidence record: `t13.12-package-01-20260812`.
+- Repeat plan: `tests/evidence/t13-11-plan.json`.
+- Repeat records: `tests/evidence/t13-11-repeat.json`.
+
+Every final record contains ordered raw input/output, UTC execution time, model availability, source snapshot, runtime commit and blob hashes, assertion outcomes, result, limitations, and exact result citations.
+
+Validation output:
+
+```text
+validated 137 evidence records across 5 suites
+case acceptance: 136/136 passed
+automated package checks: 1/1 passed
+repeat consistency: 14 cases × 3 runs; 0 material variations
+attached-image cases: 13/13 passed
+```
+
+## Package and publication
+
+- Automated package check: 1 passed, 0 failed.
 - Runtime package contains exactly `SKILL.md`, `REFERENCE.md`, `FORMATS.md`, and `EXAMPLES.md`.
-- README project and personal installation instructions are valid.
-- The five PNG image fixtures exist, are nonempty, and were read successfully by the image tests.
+- Runtime Markdown links, frontmatter, and installation paths are valid.
+- Automatic invocation is enabled by the absence of `disable-model-invocation`.
+- `PUBLISH_MANIFEST.md` exactly matches the publishable Git working set at execution.
+- Functional IDs are contiguous from TC-01 through TC-111.
+- All 13 PNG fixtures exist and are manifested.
 
-## Publication validation
+## Method limitations
 
-- `PUBLISH_MANIFEST.md` defines the intended GitHub file set.
-- `.gitignore` excludes `my idea.txt`, Python caches, and operating-system metadata.
-- No secret, cache, or generated-junk file was identified for publication.
-- Git is not installed in the current environment, so a staged or tracked Git index cannot be checked until repository creation.
-- The missing Git executable does not block artifact readiness or installation from the current project directory.
+- AT-01–AT-10 and FCI-01–FCI-03 use deterministic routing-semantic evaluation. A live probabilistic Cursor dispatcher was not available, so production trigger or invocation variance is not measured.
+- The evaluator API exposed the `inherit` selector and display name but not the exact resolved backend model slug; each affected evidence record states this.
+- T13.11 covers selected high-risk cases, not three repetitions of every functional case.
 
-## T11.5 conclusion
+## Historical results
 
-The skill is ready for project use, personal installation, and GitHub publication. This acceptance does not create a GitHub repository, commit files, or upload them.
+Results before T13.10 are retained in suite files as historical summary-only records. EI-01–EI-03 remain historical tests of the old `disable-model-invocation: true` configuration and are not counted in current final-configuration acceptance.
 
-## Post-T11.5 acceptance update
+## Conclusion
 
-- Added deterministic handling for short acknowledgements such as `okok`.
-- A short acknowledgement now accepts directly preceding clear, non-conflicting instructions without requiring itemized restatement.
-- A short acknowledgement still does not answer an explicit request for an owner, deadline, progress value, choice, explanation, or other specific information.
-- Green acknowledgements are not expanded into unsupported task lists, actions, owners, collective pronouns, dates, or commitments.
-- Strengthened minimal-revision behavior to preserve visible language and register markers after an initial TC-20 regression converted informal Cantonese to formal written Chinese.
-- Regenerated the five missing PNG fixtures and successfully reran TC-21 through TC-25.
-- Reran TC-01 through TC-32, AH-01 through AH-06, IQ-01 through IQ-06, and AT-01 through AT-10 against the final runtime files.
-- EI-01 through EI-03 remain the valid T11.2 development-configuration results; AT-10 revalidated explicit invocation under the final automatic-invocation configuration.
-- Current acceptance result: 57 passed, 0 failed.
+The repository passes the evidence-complete T13.12 acceptance plan for project use, personal installation, and publication. Live probabilistic dispatcher behavior remains an explicitly documented environment limitation.

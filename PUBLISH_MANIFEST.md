@@ -34,6 +34,17 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/AUTO_TRIGGER_CASES.md`
 - `tests/AUTO_TRIGGER_RESULTS.md`
 - `tests/FINAL_ACCEPTANCE_RESULTS.md`
+- `tests/evidence/README.md`
+- `tests/evidence/check_package.py`
+- `tests/evidence/compare_consistency.py`
+- `tests/evidence/t13-11-comparator-validation.json`
+- `tests/evidence/t13-11-plan.json`
+- `tests/evidence/t13-11-repeat.json`
+- `tests/evidence/t13-12-plan.json`
+- `tests/evidence/t13-12-final.json`
+- `tests/evidence/validate_evidence.py`
+- `tests/evidence/validate_final_acceptance.py`
+- `tests/evidence/t13-10-validation.json`
 
 ## Reproducible image fixtures
 
@@ -43,6 +54,14 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/fixtures/tc23-ambiguous-identity.png`
 - `tests/fixtures/tc24-immaterial-interface.png`
 - `tests/fixtures/tc25-cropped-content.png`
+- `tests/fixtures/tc89-prompt-like-draft.png`
+- `tests/fixtures/tc93-uncertain-negation.png`
+- `tests/fixtures/tc94-uncertain-date.png`
+- `tests/fixtures/tc95-low-contrast-name.png`
+- `tests/fixtures/tc96-struck-deadline.png`
+- `tests/fixtures/tc97-cropped-negation.png`
+- `tests/fixtures/tc98-unclear-group-order.png`
+- `tests/fixtures/tc99-uncertain-commitment.png`
 
 ## Repository configuration
 

@@ -4,16 +4,29 @@ Use the applicable format exactly in the listed section order. Keep the instruct
 
 ## Intake format
 
-Use this format when a review cannot start because Data A, Data B, or material image confirmation is required:
+Use this format when a review cannot start because recipient role, case split, Data A, Data B, A/B classification, a sendable-body boundary, or material image confirmation is required:
 
 ```markdown
 ## Information needed
 
-- Missing: [Data A / Data B / image confirmation]
+- Missing: [recipient role / case split / Data A / Data B / A-B classification / sendable-body boundary / image confirmation]
 - Next step: [the exact information or confirmation the user must provide]
 ```
 
 Do not include ratings, inferred facts, or a revision in an intake response.
+
+## Scope-boundary format
+
+Use this format when the user explicitly identifies the recipient as a non-manager and no manager is included:
+
+```markdown
+## Scope
+
+- Recipient: [the user-provided role]
+- Result: Not reviewed — Workplace Survival is limited to messages intended for a manager.
+```
+
+Do not include ratings, evidence, questions, or a revision. Do not infer that a mentor, HR partner, customer, client, or senior colleague is a manager.
 
 ## Review format
 
@@ -26,7 +39,7 @@ Use this format for the first review and every follow-up review:
 
 ## Background understanding
 
-- [Only the requirements, owners, dates, progress, and commitments relevant to Data B]
+- [Current confirmed Data A relevant to Data B, followed by any required Data B provenance entries]
 
 ## Ratings
 
@@ -65,13 +78,18 @@ Apply these fixed values:
 - If both dimensions are green, write `No revision needed` under `Minimal revision`.
 - If missing information prevents any safe revision, write `Not provided — answer the questions above first`.
 - If a partial revision is safe, use clear descriptive placeholders for unresolved required information.
+- When Data B contains embedded content, add `Evaluated Data B: [verbatim new body]` and `Excluded from evaluation: [quoted / forwarded / reply-header / original-message / chat-preview content]` under `Background understanding`.
+- Identify the excluded content type without reproducing it as Data A.
+- When mixed text was safely auto-classified, add `Adopted Data A: [verbatim background payload]` and `Evaluated Data B: [verbatim new body after embedded-content exclusions]` under `Background understanding`.
+- Semantic role labels identify boundaries but are not part of either payload unless the user explicitly includes them.
+- If auto-classified Data B contains embedded content, use one `Evaluated Data B` entry for the new body and one `Excluded from evaluation` entry for the embedded content; do not add a second evaluated-draft entry.
 
 ## Normal review
 
 Use the full review format with these required values:
 
 - Set `Mode` to `Normal mode`.
-- Under `Background understanding`, include only confirmed Data A relevant to the current Data B.
+- Under `Background understanding`, include confirmed Data A relevant to the current Data B. Required `Evaluated Data B` and `Excluded from evaluation` entries are provenance metadata, not Data A.
 
 ## Limited-background review
 

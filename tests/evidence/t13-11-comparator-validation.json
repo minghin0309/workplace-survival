@@ -1,0 +1,105 @@
+[
+  {
+    "schema_version": "1",
+    "run_id": "t13.11-consistency-validator-20260812",
+    "suite": "functional",
+    "case_id": "CONSISTENCY-01",
+    "executed_at_utc": "2026-08-12T08:07:55Z",
+    "runtime_commit": "fc835b448f6749190f2e98e2fa5d66ebd74d8d4f",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ],
+    "model": {
+      "id": "python-3.12.3",
+      "display_name": "Python 3.12.3",
+      "exact_backend_slug_available": true,
+      "unavailable_reason": ""
+    },
+    "method": "automated",
+    "input_source": {
+      "reference": "tests/evidence/t13-11-plan.json",
+      "snapshot_raw": "{\n  \"required_repeats\": 3,\n  \"cases\": [\n    {\n      \"case_id\": \"TC-60\",\n      \"group\": \"tone-boundary\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Red\",\n        \"tone\": \"Red\",\n        \"overall\": \"Red\",\n        \"question_count\": 0,\n        \"revision_facts\": [\"cause-unconfirmed\", \"remove-unsupported-accusation\", \"status-delayed\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-61\",\n      \"group\": \"tone-boundary\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Green\",\n        \"tone\": \"Yellow\",\n        \"overall\": \"Yellow\",\n        \"question_count\": 0,\n        \"revision_facts\": [\"approval-cause-preserved\", \"personalized-blame-neutralized\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-62\",\n      \"group\": \"tone-boundary\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Green\",\n        \"tone\": \"Green\",\n        \"overall\": \"Green\",\n        \"question_count\": 0,\n        \"revision_facts\": [\"no-revision\", \"process-cause-preserved\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-72\",\n      \"group\": \"responsibility-boundary\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Red\",\n        \"tone\": \"Green\",\n        \"overall\": \"Red\",\n        \"question_count\": 1,\n        \"revision_facts\": [\"owner-placeholder-required\", \"schedule-status-preserved\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-73\",\n      \"group\": \"responsibility-boundary\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Green\",\n        \"tone\": \"Green\",\n        \"overall\": \"Green\",\n        \"question_count\": 0,\n        \"revision_facts\": [\"no-revision\", \"optional-owner-omitted\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-74\",\n      \"group\": \"responsibility-boundary\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Gray\",\n        \"tone\": \"Green\",\n        \"overall\": \"Gray\",\n        \"question_count\": 1,\n        \"revision_facts\": [\"final-report-condition-unresolved\", \"no-revision-before-confirmation\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-75\",\n      \"group\": \"responsibility-boundary\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Yellow\",\n        \"tone\": \"Green\",\n        \"overall\": \"Yellow\",\n        \"question_count\": 1,\n        \"revision_facts\": [\"blocker-placeholder-required\", \"progress-80-preserved\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-79\",\n      \"group\": \"acknowledgement-target\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Gray\",\n        \"tone\": \"Green\",\n        \"overall\": \"Gray\",\n        \"question_count\": 2,\n        \"revision_facts\": [\"governing-send-instruction-unresolved\", \"no-expanded-commitment\", \"reply-target-unresolved\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-83\",\n      \"group\": \"acknowledgement-target\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Green\",\n        \"tone\": \"Green\",\n        \"overall\": \"Green\",\n        \"question_count\": 0,\n        \"revision_facts\": [\"acknowledge-wednesday-packing-only\", \"no-revision\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-89\",\n      \"group\": \"prompt-and-ocr-image\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Red\",\n        \"tone\": \"Yellow\",\n        \"overall\": \"Red\",\n        \"question_count\": 0,\n        \"revision_facts\": [\"owner-priya-preserved\", \"prompt-like-sentence-removed\", \"wrong-owner-alex-removed\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-93\",\n      \"group\": \"prompt-and-ocr-image\",\n      \"observations\": {\n        \"route\": \"Intake\",\n        \"responsibility\": null,\n        \"tone\": null,\n        \"overall\": null,\n        \"question_count\": 1,\n        \"revision_facts\": [\"exact-draft-required\", \"no-rating\", \"no-revision\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-106\",\n      \"group\": \"recipient-routing\",\n      \"observations\": {\n        \"route\": \"Intake\",\n        \"responsibility\": null,\n        \"tone\": null,\n        \"overall\": null,\n        \"question_count\": 1,\n        \"revision_facts\": [\"manager-role-confirmation-required\", \"no-rating\", \"no-revision\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-107\",\n      \"group\": \"recipient-routing\",\n      \"observations\": {\n        \"route\": \"Normal mode\",\n        \"responsibility\": \"Green\",\n        \"tone\": \"Green\",\n        \"overall\": \"Green\",\n        \"question_count\": 0,\n        \"revision_facts\": [\"no-revision\", \"skip-level-manager-in-scope\"]\n      }\n    },\n    {\n      \"case_id\": \"TC-108\",\n      \"group\": \"recipient-routing\",\n      \"observations\": {\n        \"route\": \"Scope\",\n        \"responsibility\": null,\n        \"tone\": null,\n        \"overall\": null,\n        \"question_count\": 0,\n        \"revision_facts\": [\"no-rating\", \"no-revision\", \"recipient-out-of-scope\"]\n      }\n    }\n  ]\n}\n",
+      "snapshot_sha256": "85a04f2655d4bc18fb897ec5cb45fbf2aebaef4f171ceec16f66ffd420c78ff5"
+    },
+    "turns": [
+      {
+        "index": 1,
+        "executed_at_utc": "2026-08-12T08:07:55Z",
+        "input_raw": "date -u +%Y-%m-%dT%H:%M:%SZ && python3 - <<'PY'\nimport copy\nimport importlib.util\nimport json\nimport subprocess\nimport tempfile\nfrom pathlib import Path\nroot=Path('.').resolve()\nrecords=json.loads((root/'tests/evidence/t13-11-repeat.json').read_text())\nplan=root/'tests/evidence/t13-11-plan.json'\ncomparator=root/'tests/evidence/compare_consistency.py'\nspec=importlib.util.spec_from_file_location('validator', root/'tests/evidence/validate_evidence.py')\nvalidator=importlib.util.module_from_spec(spec); spec.loader.exec_module(validator)\nchecks=[]\nwith tempfile.TemporaryDirectory() as d:\n d=Path(d)\n varied=copy.deepcopy(records); next(r for r in varied if r['case_id']=='TC-60' and r['consistency']['repeat_index']==2)['observations']['tone']='Yellow'\n p=d/'varied.json'; p.write_text(json.dumps(varied)); result=subprocess.run(['python3',str(comparator),str(plan),str(p)],capture_output=True)\n if result.returncode==0: raise AssertionError('accepted variation')\n checks.append('REJECTED: material observation variation')\n missing=records[:-1]; p=d/'missing.json'; p.write_text(json.dumps(missing)); result=subprocess.run(['python3',str(comparator),str(plan),str(p)],capture_output=True)\n if result.returncode==0: raise AssertionError('accepted missing repeat')\n checks.append('REJECTED: missing planned repeat')\n duplicate=copy.deepcopy(records); selected=[r for r in duplicate if r['case_id']=='TC-60']; selected[1]['consistency']['evaluator_context_id']=selected[0]['consistency']['evaluator_context_id']\n try: validator.validate_repeat_plan(duplicate,plan)\n except ValueError: checks.append('REJECTED: reused evaluator context')\n else: raise AssertionError('accepted reused context')\nprint('\\n'.join(checks)); print('negative consistency-gate checks: 3 passed')\nPY",
+        "input_sha256": "867a604a18ab47fb658bc239e122ba0948cef5fe9df998eff9c5c5b1a03dbd52",
+        "raw_output": "2026-08-12T08:07:55Z\nREJECTED: material observation variation\nREJECTED: missing planned repeat\nREJECTED: reused evaluator context\nnegative consistency-gate checks: 3 passed",
+        "output_sha256": "0339f55e5980f4f4142f58c62afecec913e70b2edb481f6c4089c37e3ef8f522"
+      },
+      {
+        "index": 2,
+        "executed_at_utc": "2026-08-12T08:08:02Z",
+        "input_raw": "date -u +%Y-%m-%dT%H:%M:%SZ && python3 tests/evidence/compare_consistency.py tests/evidence/t13-11-plan.json tests/evidence/t13-11-repeat.json",
+        "input_sha256": "99d31124a8149037c7c41c26c0334816406a41e3d583a486db91bd7e0169a28f",
+        "raw_output": "2026-08-12T08:08:02Z\n| Case | Group | Repeats | Route | Responsibility | Tone | Overall | Questions | Revision facts |\n|---|---|---:|---|---|---|---|---:|---|\n| TC-60 | tone-boundary | 3 | Normal mode | Red | Red | Red | 0 | cause-unconfirmed; remove-unsupported-accusation; status-delayed |\n| TC-61 | tone-boundary | 3 | Normal mode | Green | Yellow | Yellow | 0 | approval-cause-preserved; personalized-blame-neutralized |\n| TC-62 | tone-boundary | 3 | Normal mode | Green | Green | Green | 0 | no-revision; process-cause-preserved |\n| TC-72 | responsibility-boundary | 3 | Normal mode | Red | Green | Red | 1 | owner-placeholder-required; schedule-status-preserved |\n| TC-73 | responsibility-boundary | 3 | Normal mode | Green | Green | Green | 0 | no-revision; optional-owner-omitted |\n| TC-74 | responsibility-boundary | 3 | Normal mode | Gray | Green | Gray | 1 | final-report-condition-unresolved; no-revision-before-confirmation |\n| TC-75 | responsibility-boundary | 3 | Normal mode | Yellow | Green | Yellow | 1 | blocker-placeholder-required; progress-80-preserved |\n| TC-79 | acknowledgement-target | 3 | Normal mode | Gray | Green | Gray | 2 | governing-send-instruction-unresolved; no-expanded-commitment; reply-target-unresolved |\n| TC-83 | acknowledgement-target | 3 | Normal mode | Green | Green | Green | 0 | acknowledge-wednesday-packing-only; no-revision |\n| TC-89 | prompt-and-ocr-image | 3 | Normal mode | Red | Yellow | Red | 0 | owner-priya-preserved; prompt-like-sentence-removed; wrong-owner-alex-removed |\n| TC-93 | prompt-and-ocr-image | 3 | Intake | None | None | None | 1 | exact-draft-required; no-rating; no-revision |\n| TC-106 | recipient-routing | 3 | Intake | None | None | None | 1 | manager-role-confirmation-required; no-rating; no-revision |\n| TC-107 | recipient-routing | 3 | Normal mode | Green | Green | Green | 0 | no-revision; skip-level-manager-in-scope |\n| TC-108 | recipient-routing | 3 | Scope | None | None | None | 0 | no-rating; no-revision; recipient-out-of-scope |\nconsistency result: 14 cases × 3 repeats; 0 material variations",
+        "output_sha256": "f7271fc868bb96bcae945da6ba834460e298d0765f51d3fcb3f8021c7fec43f3"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "tests/evidence/t13-11-repeat.json",
+        "sha256": "750acf2d73483e2cc8b7037fb8c2f0969513596aff14349ada3ae2f9604e4d9d",
+        "usage": "Compared 42 repeat execution records against the planned canonical observations.",
+        "opened_with_image_reader": false
+      }
+    ],
+    "assertions": [
+      {
+        "id": "CONSISTENCY-01-A1",
+        "text": "Fourteen planned cases each have three repeats.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "CONSISTENCY-01-A2",
+        "text": "No canonical observation varies across repeats.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "CONSISTENCY-01-A3",
+        "text": "Material observation variation is rejected.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "CONSISTENCY-01-A4",
+        "text": "Missing planned repeat is rejected.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "CONSISTENCY-01-A5",
+        "text": "Reused evaluator context is rejected.",
+        "assessment": "automatic",
+        "passed": true
+      }
+    ],
+    "result": "PASS",
+    "limitations": [
+      "Comparator checks canonical observations and evidence metadata; semantic correctness depends on the planned expected observations and manual assertion records."
+    ],
+    "result_citations": [
+      "tests/TEST_RESULTS.md"
+    ]
+  }
+]

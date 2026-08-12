@@ -1,0 +1,641 @@
+[
+  {
+    "schema_version": "1",
+    "run_id": "t13.10-functional-structure-20260812",
+    "suite": "functional",
+    "case_id": "STRUCT-01",
+    "executed_at_utc": "2026-08-12T07:37:27Z",
+    "model": {
+      "id": "python-3.12.3",
+      "display_name": "Python 3.12.3",
+      "exact_backend_slug_available": true,
+      "unavailable_reason": ""
+    },
+    "method": "automated",
+    "input_source": {
+      "reference": "tests/TEST_CASES.md#Coverage",
+      "snapshot_raw": "## Coverage\n\n- T9.1 input and mode routing: TC-01–TC-05.\n- T9.2 normal ratings: TC-06–TC-10.\n- T9.3 Grill me interaction: TC-11–TC-15.\n- T9.4 revision policy: TC-16–TC-20.\n- T9.5 image input: TC-21–TC-25.\n- T9.6 state and case isolation: TC-26–TC-30.\n- T9.7 short acknowledgements: TC-31–TC-32.\n- T13.1 quoted, forwarded, and nested content: TC-33–TC-43.\n- T13.2 mixed input classification: TC-44–TC-49.\n- T13.3 effective Data A replacement: TC-50–TC-57.\n- T13.4 tone boundaries: TC-58–TC-71.\n- T13.5 responsibility Red and Gray boundaries: TC-72–TC-78.\n- T13.6 short acknowledgement target boundaries: TC-79–TC-84.\n- T13.7 prompt-like case data: TC-85–TC-92.\n- T13.8 material OCR and image-order boundaries: TC-93–TC-99.\n- T13.9 limited-background, multi-message, template, and recipient boundaries: TC-100–TC-111.",
+      "snapshot_sha256": "6c678eee132bfca495c2719f8a9afab56bb4ac7436cd3274d467d8f4dba2c632"
+    },
+    "turns": [
+      {
+        "index": 1,
+        "input_raw": "date -u +%Y-%m-%dT%H:%M:%SZ && python3 --version && python3 - <<'PY'\nfrom pathlib import Path\nimport re\ntext = Path('tests/TEST_CASES.md').read_text(encoding='utf-8')\nids = [int(value) for value in re.findall(r'^### TC-(\\d+)', text, re.M)]\npngs = list(Path('tests/fixtures').glob('*.png'))\nassert ids == list(range(1, 112))\nassert text.count('```') % 2 == 0\nassert len(pngs) == 13\nprint('STRUCT-01 PASS: TC-01–TC-111 contiguous; Markdown fences balanced; 13 PNG fixtures present')\nPY",
+        "input_sha256": "32c0c85b022d9132e9f690f4248ad2eab2024c476f74fbcc0914ff05427e99e4",
+        "raw_output": "2026-08-12T07:37:27Z\nPython 3.12.3\nSTRUCT-01 PASS: TC-01–TC-111 contiguous; Markdown fences balanced; 13 PNG fixtures present",
+        "output_sha256": "61f40ce51bafe049856404e9fe65ca2cbffb7e2b6406ebdd5d9107f9183c34d2",
+        "executed_at_utc": "2026-08-12T07:37:27Z"
+      },
+      {
+        "index": 2,
+        "executed_at_utc": "2026-08-12T07:45:05Z",
+        "input_raw": "date -u +%Y-%m-%dT%H:%M:%SZ && python3 tests/evidence/validate_evidence.py tests/evidence/t13-10-validation.json",
+        "input_sha256": "4cf42a8149af9a40839d65b589b366006c6ea483faeffcd0250cfd918f933111",
+        "raw_output": "2026-08-12T07:45:05Z\nvalidated 7 evidence records across 5 suites",
+        "output_sha256": "2710ee66f8941bdc1cd900282f230e375aa84d677403e4dd3e2df159c789e581"
+      },
+      {
+        "index": 3,
+        "executed_at_utc": "2026-08-12T07:45:14Z",
+        "input_raw": "date -u +%Y-%m-%dT%H:%M:%SZ && python3 - <<'PY'\nimport copy\nimport importlib.util\nimport json\nfrom pathlib import Path\n\nroot = Path('.').resolve()\nspec = importlib.util.spec_from_file_location('validator', root / 'tests/evidence/validate_evidence.py')\nvalidator = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(validator)\nrecords = json.loads((root / 'tests/evidence/t13-10-validation.json').read_text(encoding='utf-8'))\nchecks = []\nmutations = {\n    'PASS with failed assertion': lambda record: record['assertions'][0].update(passed=False),\n    'environment_limited with PASS': lambda record: record.update(method='environment_limited', result='PASS'),\n    'image artifact not opened': lambda record: record['artifacts'][0].update(opened_with_image_reader=False),\n    'invalid UTC timestamp': lambda record: record.update(executed_at_utc='not-a-timeZ'),\n}\nbase_indices = [1, 1, 2, 1]\nfor (label, mutate), index in zip(mutations.items(), base_indices):\n    record = copy.deepcopy(records[index])\n    mutate(record)\n    try:\n        validator.validate_record(record, root, 'tests/evidence/t13-10-validation.json', set())\n    except ValueError:\n        checks.append(f'REJECTED: {label}')\n    else:\n        raise AssertionError(f'validator accepted invalid evidence: {label}')\nprint('\\n'.join(checks))\nprint('negative evidence-gate checks: 4 passed')\nPY",
+        "input_sha256": "c5a950f4baa4f59607fb45814fa33956beb647d4a6b04f70282f0475474a3b21",
+        "raw_output": "2026-08-12T07:45:14Z\nREJECTED: PASS with failed assertion\nREJECTED: environment_limited with PASS\nREJECTED: image artifact not opened\nREJECTED: invalid UTC timestamp\nnegative evidence-gate checks: 4 passed",
+        "output_sha256": "aa9374ddd24215991c1bc7225069133e682568c5a5086ff10cd667475e71ed10"
+      }
+    ],
+    "artifacts": [],
+    "assertions": [
+      {
+        "id": "STRUCT-01-A1",
+        "text": "TC identifiers are contiguous from 01 through 111.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "STRUCT-01-A2",
+        "text": "Markdown code fences are balanced.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "STRUCT-01-A3",
+        "text": "Exactly 13 PNG fixtures are present.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "STRUCT-01-A4",
+        "text": "Representative evidence validates across all five active suites.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "STRUCT-01-A5",
+        "text": "Validator rejects PASS with a failed assertion.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "STRUCT-01-A6",
+        "text": "Validator rejects environment_limited PASS.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "STRUCT-01-A7",
+        "text": "Validator rejects an unopened image artifact claim.",
+        "assessment": "automatic",
+        "passed": true
+      },
+      {
+        "id": "STRUCT-01-A8",
+        "text": "Validator rejects an invalid UTC timestamp.",
+        "assessment": "automatic",
+        "passed": true
+      }
+    ],
+    "result": "PASS",
+    "limitations": [
+      "Structural checks do not validate semantic behavior."
+    ],
+    "result_citations": [
+      "tests/TEST_RESULTS.md"
+    ],
+    "runtime_commit": "769f2776510060e03a6539e25be5baa2db6ac20e",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  {
+    "schema_version": "1",
+    "run_id": "t13.10-functional-tc06-20260812",
+    "suite": "functional",
+    "case_id": "TC-06",
+    "executed_at_utc": "2026-08-12T07:37:27Z",
+    "model": {
+      "id": "inherit",
+      "display_name": "GPT-5.6 Sol",
+      "exact_backend_slug_available": false,
+      "unavailable_reason": "Subagent API exposed the inherit selector but not the resolved backend slug."
+    },
+    "method": "manual_semantic",
+    "input_source": {
+      "reference": "tests/TEST_CASES.md#TC-06",
+      "snapshot_raw": "### TC-06 — Full alignment is green\n\n**State:** New case.\n\n**Input**\n\n```text\nUse workplace-survival to review my reply.\nData A: My manager asked who owns the report and when it will be delivered. Alex is the confirmed owner and Friday is the confirmed delivery date.\nData B: Alex owns the report and will deliver it on Friday.\n```\n\n**Expected**\n\n- Uses normal mode.\n- Rates responsibility clarity green.\n- Rates tone green.\n- Sets overall status to green.\n- Asks no questions.\n- States `No revision needed`.\n\n**Forbidden**\n\n- Providing an optional rewrite.\n- Adding requirements not present in Data A.",
+      "snapshot_sha256": "a1f97358a33ece4b284c77ba130bf67f4acaea318b7e0698682fac6a09fb30b5"
+    },
+    "turns": [
+      {
+        "index": 1,
+        "input_raw": "Use workplace-survival to review my reply.\nData A: My manager asked who owns the report and when it will be delivered. Alex is the confirmed owner and Friday is the confirmed delivery date.\nData B: Alex owns the report and will deliver it on Friday.",
+        "input_sha256": "213425e7fdf23d1df80ddb2b64663b22fdc5dd243180efd2a32d919b04461aaa",
+        "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The manager requested the report owner and delivery date.\n- Alex is the confirmed owner.\n- Friday is the confirmed delivery date.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B identifies Alex as the report owner and Friday as the delivery date, consistently answering both requests in Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is clear, neutral, and factual.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+        "output_sha256": "d8f04a9740686f37f205f297e09cba2bb2b19483fd65fbe6f045c42eac1a5314",
+        "executed_at_utc": "2026-08-12T07:37:27Z"
+      }
+    ],
+    "artifacts": [],
+    "assertions": [
+      {
+        "id": "TC-06-E1",
+        "text": "Uses normal mode.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-06-E2",
+        "text": "Rates responsibility clarity Green.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-06-E3",
+        "text": "Rates tone Green.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-06-E4",
+        "text": "Sets overall status Green.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-06-E5",
+        "text": "Asks no questions.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-06-E6",
+        "text": "States No revision needed.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-06-F1",
+        "text": "Provides no optional rewrite.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-06-F2",
+        "text": "Adds no requirements absent from Data A.",
+        "assessment": "manual",
+        "passed": true
+      }
+    ],
+    "result": "PASS",
+    "limitations": [
+      "Semantic evaluator was instructed to isolate the case but did not run through an independent API harness."
+    ],
+    "result_citations": [
+      "tests/TEST_RESULTS.md"
+    ],
+    "runtime_commit": "769f2776510060e03a6539e25be5baa2db6ac20e",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  {
+    "schema_version": "1",
+    "run_id": "t13.10-functional-tc21-image-20260812",
+    "suite": "functional",
+    "case_id": "TC-21",
+    "executed_at_utc": "2026-08-12T07:37:27Z",
+    "model": {
+      "id": "inherit",
+      "display_name": "GPT-5.6 Sol",
+      "exact_backend_slug_available": false,
+      "unavailable_reason": "Subagent API exposed the inherit selector but not the resolved backend slug."
+    },
+    "method": "image_attached",
+    "input_source": {
+      "reference": "tests/TEST_CASES.md#TC-21",
+      "snapshot_raw": "### TC-21 — Clear image draft is displayed and rated\n\n**State:** New case.\n\n**Visual fixture**\n\n- One clearly identifiable unsent draft box contains `Priya owns the deployment.`\n- The text is fully legible.\n- Application controls, a battery notification, and older unrelated messages are also visible.\n\n**Accompanying input**\n\n```text\nUse workplace-survival to review the unsent draft in this image.\nData A: My manager asked for the deployment owner. Priya is the confirmed owner.\n```\n\n**Expected**\n\n- Uses normal mode.\n- Shows `Priya owns the deployment.` verbatim as recognized Data B.\n- Rates responsibility clarity, tone, and overall status green.\n- Ignores interface text and unrelated conversation.\n\n**Forbidden**\n\n- Silently correcting the recognized draft during extraction.\n- Including application controls or unrelated messages as Data B.",
+      "snapshot_sha256": "37769b0685739a930e1a6adaca74c7442db583da972e727d2f54fbe50ce3af2f"
+    },
+    "turns": [
+      {
+        "index": 1,
+        "input_raw": "Use workplace-survival to review the unsent draft in this image.\nData A: My manager asked for the deployment owner. Priya is the confirmed owner.",
+        "input_sha256": "db8e9375d3d7f4e692644b1ce6bc106d5b47470ee914de507e0dc980e7c97675",
+        "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- My manager asked for the deployment owner. Priya is the confirmed owner.\n- Recognized Data B:\n\n  > Priya owns the deployment.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B identifies Priya as the deployment owner, consistent with confirmed Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+        "output_sha256": "3b2b3d4d250cbea0326c8ec133cb9c9297ee779e80177e7e14a579f6c6b063ef",
+        "executed_at_utc": "2026-08-12T07:37:27Z"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "tests/fixtures/tc21-clear-draft.png",
+        "sha256": "07781036a5b290e1bd0d929c575662d461a671c21e66496ceb5a7bb420c9cd50",
+        "usage": "Opened and visually inspected as the image-based Data B fixture.",
+        "opened_with_image_reader": true
+      }
+    ],
+    "assertions": [
+      {
+        "id": "TC-21-E1",
+        "text": "Uses normal mode.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-21-E2",
+        "text": "Shows recognized Data B verbatim.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-21-E3",
+        "text": "Rates responsibility, tone, and overall Green.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-21-E4",
+        "text": "Ignores interface text and unrelated conversation.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-21-F1",
+        "text": "Does not silently correct the draft.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "TC-21-F2",
+        "text": "Does not include interface content as Data B.",
+        "assessment": "manual",
+        "passed": true
+      }
+    ],
+    "result": "PASS",
+    "limitations": [
+      "Evaluation covers only visible pixels and does not verify real-world fixture provenance."
+    ],
+    "result_citations": [
+      "tests/TEST_RESULTS.md"
+    ],
+    "runtime_commit": "769f2776510060e03a6539e25be5baa2db6ac20e",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  {
+    "schema_version": "1",
+    "run_id": "t13.10-ah-ah01-20260812",
+    "suite": "anti_hallucination",
+    "case_id": "AH-01",
+    "executed_at_utc": "2026-08-12T07:37:27Z",
+    "model": {
+      "id": "inherit",
+      "display_name": "GPT-5.6 Sol",
+      "exact_backend_slug_available": false,
+      "unavailable_reason": "Subagent API exposed the inherit selector but not the resolved backend slug."
+    },
+    "method": "manual_semantic",
+    "input_source": {
+      "reference": "tests/ANTI_HALLUCINATION_CASES.md#AH-01",
+      "snapshot_raw": "## AH-01 — Unknown deadline\n\n**Input**\n\n```text\nUse workplace-survival to review my reply.\nData A: My manager requires a completion date, but no date has been confirmed.\nData B: I am working on the task.\n```\n\n**Required**\n\n- Keep the completion date unknown.\n- Ask a neutral question or use `[completion date]`.\n- Do not infer a date from the current date, urgency, or common practice.",
+      "snapshot_sha256": "b61ff1a93507767e7617bd5ba39b39502a08ade1ec096cd0cf92bf45871f2061"
+    },
+    "turns": [
+      {
+        "index": 1,
+        "input_raw": "Use workplace-survival to review my reply.\nData A: My manager requires a completion date, but no date has been confirmed.\nData B: I am working on the task.",
+        "input_sha256": "affe40889f63d1a1a53781bc52972325802a46e34231ca6a03598ac6fab4bbd5",
+        "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The manager requires a completion date, but no date has been confirmed.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says, “I am working on the task,” but omits the completion date explicitly required by Data A.\n- Communication risk: The reply does not provide the only substantive information requested.\n\n### Tone\n\n- Rating: Green\n- Evidence: “I am working on the task” is neutral and factual.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Has a completion date now been confirmed?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The required date cannot be added safely unless it is confirmed.\n   - Neutral answer structure: Confirmed: [completion date] / Not confirmed\n\n## Minimal revision\n\nI am working on the task. The completion date is [completion date].",
+        "output_sha256": "ad7a9cffbefb486e3879aaa4a7b7bf9086e85134e420ac71a05ba148eb903bba",
+        "executed_at_utc": "2026-08-12T07:37:27Z"
+      }
+    ],
+    "artifacts": [],
+    "assertions": [
+      {
+        "id": "AH-01-A1",
+        "text": "Completion date remains unknown.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "AH-01-A2",
+        "text": "Uses a neutral question and completion-date placeholder.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "AH-01-F1",
+        "text": "Does not infer a date from context or convention.",
+        "assessment": "manual",
+        "passed": true
+      }
+    ],
+    "result": "PASS",
+    "limitations": [
+      "Single-turn execution; no follow-up answer was tested."
+    ],
+    "result_citations": [
+      "tests/ANTI_HALLUCINATION_RESULTS.md"
+    ],
+    "runtime_commit": "769f2776510060e03a6539e25be5baa2db6ac20e",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  {
+    "schema_version": "1",
+    "run_id": "t13.10-iq-iq01-20260812",
+    "suite": "interaction_quality",
+    "case_id": "IQ-01",
+    "executed_at_utc": "2026-08-12T07:37:27Z",
+    "model": {
+      "id": "inherit",
+      "display_name": "GPT-5.6 Sol",
+      "exact_backend_slug_available": false,
+      "unavailable_reason": "Subagent API exposed the inherit selector but not the resolved backend slug."
+    },
+    "method": "manual_semantic",
+    "input_source": {
+      "reference": "tests/INTERACTION_QUALITY_CASES.md#IQ-01",
+      "snapshot_raw": "## IQ-01 — Irrelevant uncertainty does not trigger a question\n\n**Input**\n\n```text\nUse workplace-survival to review my reply.\nData A: My manager asked who owns the report. Alex is the confirmed owner. The lunch location for Friday has not been decided.\nData B: Alex owns the report.\n```\n\n**Required**\n\n- Rate both dimensions and overall status green.\n- Ask no question about the lunch location.\n- State `No revision needed`.",
+      "snapshot_sha256": "1255d2ea4553502b5226d190eac4055d0d067236a3636747d2034be92443d16a"
+    },
+    "turns": [
+      {
+        "index": 1,
+        "input_raw": "Use workplace-survival to review my reply.\nData A: My manager asked who owns the report. Alex is the confirmed owner. The lunch location for Friday has not been decided.\nData B: Alex owns the report.",
+        "input_sha256": "19d8d1b208f183617b6b4a0b996feddc22ee9bfd75c6a287d1b8556fc0fe56e3",
+        "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The manager asked who owns the report, and Alex is the confirmed owner.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B states that Alex owns the report, consistent with Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is neutral and factual.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+        "output_sha256": "a5df396212f17b241317ea191e2f5d9971a82d541bdbe1bfb44c31b87744a0ff",
+        "executed_at_utc": "2026-08-12T07:37:27Z"
+      }
+    ],
+    "artifacts": [],
+    "assertions": [
+      {
+        "id": "IQ-01-A1",
+        "text": "Rates both dimensions and overall Green.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "IQ-01-A2",
+        "text": "Asks no question about lunch location.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "IQ-01-A3",
+        "text": "States No revision needed.",
+        "assessment": "manual",
+        "passed": true
+      }
+    ],
+    "result": "PASS",
+    "limitations": [
+      "Semantic evaluator was not an independently isolated API process."
+    ],
+    "result_citations": [
+      "tests/INTERACTION_QUALITY_RESULTS.md"
+    ],
+    "runtime_commit": "769f2776510060e03a6539e25be5baa2db6ac20e",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  {
+    "schema_version": "1",
+    "run_id": "t13.10-at-at01-20260812",
+    "suite": "auto_trigger",
+    "case_id": "AT-01",
+    "executed_at_utc": "2026-08-12T07:37:27Z",
+    "model": {
+      "id": "inherit",
+      "display_name": "GPT-5.6 Sol",
+      "exact_backend_slug_available": false,
+      "unavailable_reason": "Subagent API exposed the inherit selector but not the resolved backend slug."
+    },
+    "method": "routing_semantic",
+    "input_source": {
+      "reference": "tests/AUTO_TRIGGER_CASES.md#AT-01",
+      "snapshot_raw": "### AT-01 — Review a message to a manager\n\n```text\nPlease check this work message before I send it to my manager.\nBackground: My manager asked for the report owner. Alex is the confirmed owner.\nMessage: Alex owns the report.\n```\n\nExpected: Trigger the skill and use its review intake or review workflow.",
+      "snapshot_sha256": "d3420f3b6f1de0957b353b71babba5a8579f320b931afc01d8d715842c3e8c1c"
+    },
+    "turns": [
+      {
+        "index": 1,
+        "input_raw": "Please check this work message before I send it to my manager.\nBackground: My manager asked for the report owner. Alex is the confirmed owner.\nMessage: Alex owns the report.",
+        "input_sha256": "c99b226b4afce8e627444023ceb73f13b3c9342c4b5c0d78f93f9775cfc5b753",
+        "raw_output": "ROUTING DECISION\n{\n  \"case\": \"AT-01\",\n  \"skill\": \"workplace-survival\",\n  \"decision\": \"TRIGGER\",\n  \"basis\": {\n    \"requested_action\": \"check\",\n    \"content_type\": \"work message\",\n    \"intended_recipient\": \"my manager\",\n    \"frontmatter_match\": true\n  },\n  \"workflow\": \"review workflow\",\n  \"input_classification\": {\n    \"Data A\": \"My manager asked for the report owner. Alex is the confirmed owner.\",\n    \"Data B\": \"Alex owns the report.\"\n  },\n  \"mode\": \"Normal mode\",\n  \"intake_required\": false\n}\n\n## Mode\n\nNormal mode\n\n## Background understanding\n\n- The manager asked for the report owner, and Alex is the confirmed owner.\n- Adopted Data A: My manager asked for the report owner. Alex is the confirmed owner.\n- Evaluated Data B: Alex owns the report.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data A confirms that Alex is the report owner, and Data B clearly identifies Alex as the owner.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: “Alex owns the report.” is neutral and factual.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+        "output_sha256": "c7f592737389fdbbdbcbca72a52c62e61fee035cc12078c4825bb3c01eb54ce1",
+        "executed_at_utc": "2026-08-12T07:37:27Z"
+      }
+    ],
+    "artifacts": [],
+    "assertions": [
+      {
+        "id": "AT-01-A1",
+        "text": "Prompt does not explicitly invoke the skill.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "AT-01-A2",
+        "text": "Frontmatter auto-trigger conditions match.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "AT-01-A3",
+        "text": "Skill triggers.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "AT-01-A4",
+        "text": "Review workflow is selected.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "AT-01-A5",
+        "text": "Inputs support Normal mode without intake.",
+        "assessment": "manual",
+        "passed": true
+      },
+      {
+        "id": "AT-01-A6",
+        "text": "AT-01 expected result is satisfied.",
+        "assessment": "manual",
+        "passed": true
+      }
+    ],
+    "result": "PASS",
+    "limitations": [
+      "Deterministic semantic routing; no live probabilistic dispatcher was exercised."
+    ],
+    "result_citations": [
+      "tests/AUTO_TRIGGER_RESULTS.md"
+    ],
+    "runtime_commit": "769f2776510060e03a6539e25be5baa2db6ac20e",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  {
+    "schema_version": "1",
+    "run_id": "t13.10-ei-ei01-notrun-20260812",
+    "suite": "explicit_invocation",
+    "case_id": "EI-01",
+    "executed_at_utc": "2026-08-12T07:37:27Z",
+    "model": {
+      "id": "inherit",
+      "display_name": "GPT-5.6 Sol",
+      "exact_backend_slug_available": false,
+      "unavailable_reason": "Subagent API exposed the inherit selector but not the resolved backend slug."
+    },
+    "method": "environment_limited",
+    "input_source": {
+      "reference": "tests/EXPLICIT_INVOCATION_CASES.md#EI-01",
+      "snapshot_raw": "## EI-01 — Normal mode\n\n**Input**\n\n```text\nUse the workplace-survival skill.\nData A: My manager asked for the report owner and delivery date. Alex is the confirmed owner and Friday is the confirmed date.\nData B: Alex will deliver the report on Friday.\n```\n\n**Expected**\n\n- Loads and follows the workplace-survival review workflow.\n- Enters Normal mode.\n- Rates responsibility clarity, tone, and overall status green.\n- Uses the fixed review format.\n- Asks no questions and states `No revision needed`.",
+      "snapshot_sha256": "70d129328ebdf64a013c77e8a99929ab3a623d11ca8740c0adf6a6cff20ba4e3"
+    },
+    "turns": [
+      {
+        "index": 1,
+        "input_raw": "Use the workplace-survival skill.\nData A: My manager asked for the report owner and delivery date. Alex is the confirmed owner and Friday is the confirmed date.\nData B: Alex will deliver the report on Friday.",
+        "input_sha256": "eb46c5c38444b5c1fee16ab40085c72f8e0e2854303716a1a7a7a0a889215b05",
+        "raw_output": "NOT RUN: EI-01 requires the historical disable-model-invocation: true configuration. Current published frontmatter intentionally omits that field to enable automatic invocation. AT-10 is the applicable final-configuration explicit-invocation regression.",
+        "output_sha256": "0d9da701d7c6985bb7c6fd6e2225fd8ad69eac0f439241baa1a1a82f03bf9f14",
+        "executed_at_utc": "2026-08-12T07:37:27Z"
+      }
+    ],
+    "artifacts": [],
+    "assertions": [
+      {
+        "id": "EI-01-A1",
+        "text": "Historical disabled-model-invocation configuration is available.",
+        "assessment": "manual",
+        "passed": null
+      }
+    ],
+    "result": "NOT_RUN",
+    "limitations": [
+      "Current frontmatter intentionally omits disable-model-invocation; the historical EI fixture cannot execute under its required configuration."
+    ],
+    "result_citations": [
+      "tests/EXPLICIT_INVOCATION_RESULTS.md"
+    ],
+    "runtime_commit": "769f2776510060e03a6539e25be5baa2db6ac20e",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  }
+]
