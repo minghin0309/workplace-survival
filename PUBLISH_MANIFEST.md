@@ -60,8 +60,10 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/blind/attempt-1/score-report-attempt-2.json`
 - `tests/blind/attempt-1/score-report.json`
 - `tests/blind/attempt-1/sut-contexts.json`
+- `tests/blind/blind_common.py`
 - `tests/blind/freeze_holdout.py`
 - `tests/blind/freeze_outputs.py`
+- `tests/blind/normalize_outputs.py`
 - `tests/blind/score_blind.py`
 - `tests/mutation/MUTATION_PLAN.md`
 - `tests/mutation/MUTATION_RESULTS.md`

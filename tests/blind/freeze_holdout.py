@@ -319,7 +319,9 @@ def main() -> None:
     for policy_path in (
         root / "tests/blind/BLIND_CASE_BRIEF.md",
         root / "tests/blind/GOLD_RUBRIC.md",
+        root / "tests/blind/blind_common.py",
         root / "tests/blind/freeze_outputs.py",
+        root / "tests/blind/normalize_outputs.py",
         root / "tests/blind/score_blind.py",
         root / "tests/blind/BLIND_PLAN.md",
     ):

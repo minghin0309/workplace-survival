@@ -4,6 +4,8 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+from blind_common import case_input_text, context_transcript_text
+
 
 ROUTES = {"Normal mode", "Limited-background mode", "Message-template mode", "Intake", "Scope"}
 RATINGS = {"Green", "Yellow", "Red", "Gray", None}
@@ -278,23 +280,17 @@ def score(
                 raw["input_sha256"] == digest_text(case_turns[turn_index - 1]["input_raw"]),
                 f"{case_id}: input linkage",
             )
-            current_case_input = (
-                f"RECIPIENT:{cases[case_id]['recipient_description']}\n"
-                f"IMAGE:{case_turns[turn_index - 1]['image_path']}\n"
-                f"USER:{case_turns[turn_index - 1]['input_raw']}"
+            current_case_input = case_input_text(
+                cases[case_id],
+                case_turns[turn_index - 1],
             )
             require(
                 raw["case_input_sha256"] == digest_text(current_case_input),
                 f"{case_id}: complete case input linkage",
             )
-            transcript_parts = [f"RECIPIENT:{cases[case_id]['recipient_description']}"]
-            for prior_index in range(turn_index):
-                transcript_parts.append(f"USER:{case_turns[prior_index]['input_raw']}")
-                if prior_index < turn_index - 1:
-                    transcript_parts.append(f"ASSISTANT:{raw_turns[prior_index]['raw_output']}")
             require(
                 raw["context_transcript_sha256"]
-                == digest_text("\n---TRANSCRIPT---\n".join(transcript_parts)),
+                == digest_text(context_transcript_text(cases[case_id], raw_turns, turn_index)),
                 f"{case_id}: ordered full transcript linkage",
             )
             require(parse_time(raw["executed_at_utc"]) >= frozen_at, f"{case_id}: output predates freeze")

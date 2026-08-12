@@ -46,7 +46,7 @@ No human labeler is available. Heterogeneous model families reduce but do not el
 - Every holdout case uses a distinct output-generator context to prevent cross-case state carryover.
 - They must not read gold, labeler outputs, adjudication, scoring code, thresholds, public tests, or mutation evidence.
 - Image cases require actual image-capable reading.
-- Each raw output stores the complete recipient/input context hash, ordered prior user/Skill transcript hash, freeze-manifest hash, and an execution timestamp after the freeze timestamp.
+- Deterministic normalization stores the complete recipient/input context hash, ordered prior user/Skill transcript hash, freeze-manifest hash, and each genuine execution timestamp after the freeze timestamp.
 - Multi-round state remains ordered and case-local.
 
 Filesystem access logs are unavailable. Isolation is strengthened by minimal directories and separate contexts but remains partly prompt-enforced. Image-open confirmation is recorded with fixture hashes but remains evaluator-declared because no image-tool access log is exposed.
