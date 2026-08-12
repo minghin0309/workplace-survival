@@ -4,6 +4,13 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Blind holdout attempt 2 — invalid frozen-image run
+
+- Detected a frozen image whose bytes changed before output normalization.
+- Rejected the run without calculating accuracy.
+- Preserved unauthorized subagent branch/commit incidents and mechanical-envelope failures in the attempt report.
+- Stopped local prompt-only retries pending genuinely external hidden cases.
+
 ### Blind holdout attempt 1 — invalid harness run
 
 - Generated and gold-labelled a 30-case unseen holdout with four images.

@@ -1,0 +1,346 @@
+{
+  "adjudicator": {
+    "context_id": "retry-gold-adjudicator-gpt-final",
+    "model_id": "gpt-5.6-luna-high",
+    "model_family": "gpt",
+    "display_name": "GPT-5.6 Luna"
+  },
+  "source_labelers": [
+    {
+      "context_id": "retry-gold-claude-1",
+      "model_id": "claude-opus-5-thinking-high",
+      "model_family": "claude",
+      "display_name": "Claude Opus 5"
+    },
+    {
+      "context_id": "retry-gold-grok-2",
+      "model_id": "cursor-grok-4.5-high",
+      "model_family": "grok",
+      "display_name": "Grok 4.5"
+    },
+    {
+      "context_id": "retry-gold-kimi-3",
+      "model_id": "kimi-k3-high",
+      "model_family": "kimi",
+      "display_name": "Kimi K3"
+    }
+  ],
+  "field_scope": [
+    "route",
+    "responsibility",
+    "tone",
+    "overall",
+    "required_question_topics",
+    "allowed_question_topics",
+    "required_revision_facts",
+    "allowed_revision_facts",
+    "critical_invariants",
+    "rationale"
+  ],
+  "coverage": {
+    "case_count": 30,
+    "turn_count": 40,
+    "rated_turn_count": 35,
+    "gold_file": "/tmp/workplace-survival-blind-retry/gold.json"
+  },
+  "disagreements": [
+    {
+      "case_id": "BH-007",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Red",
+        "retry-gold-grok-2": "Red",
+        "retry-gold-kimi-3": "Yellow"
+      },
+      "adjudicated": "Red",
+      "rationale": "The writer alone held the packet for nine days and missed the cutoff; omitting that ownership is a main-purpose accountability failure, not merely an ambiguity."
+    },
+    {
+      "case_id": "BH-008",
+      "turn_index": 1,
+      "field": "tone",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The register is measured, but it directs retraining at the overnight team for the writer's own missed handoff, creating a concrete misdirected-blame risk."
+    },
+    {
+      "case_id": "BH-013",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Green",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The draft leaves the delivery consequence of dropping the active color pass at an unbounded 'see what I can do', a concrete non-critical execution gap."
+    },
+    {
+      "case_id": "BH-014",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The writer's threat to skip a recurring conference is an unconfirmed unilateral commitment, even though the underlying meeting facts are supported."
+    },
+    {
+      "case_id": "BH-015",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The response gives no usable basis for the rejection, despite the writer relying on a prior study; that is a non-critical information gap."
+    },
+    {
+      "case_id": "BH-015",
+      "turn_index": 1,
+      "field": "tone",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Red",
+        "retry-gold-kimi-3": "Yellow"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The reply is curt and dismissive but contains no insult, threat, or overt hostility."
+    },
+    {
+      "case_id": "BH-016",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Green",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "A recommendation to stop a pilot and freeze intake omits known decision-relevant scale and remaining-run context."
+    },
+    {
+      "case_id": "BH-017",
+      "turn_index": 2,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Green",
+        "retry-gold-grok-2": "Red",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Green",
+      "rationale": "This turn is the writer's correction, not an unsent stale draft; it candidly supplies the corrected date and confirms the remaining facts."
+    },
+    {
+      "case_id": "BH-018",
+      "turn_index": 2,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The recipient changed to a skip-level head unfamiliar with the audit, so unchanged text lacks decision-relevant background."
+    },
+    {
+      "case_id": "BH-018",
+      "turn_index": 2,
+      "field": "tone",
+      "source_values": {
+        "retry-gold-claude-1": "Green",
+        "retry-gold-grok-2": "Green",
+        "retry-gold-kimi-3": "Yellow"
+      },
+      "adjudicated": "Green",
+      "rationale": "The wording remains professional; the missing context is a responsibility/clarity issue, not a tone defect."
+    },
+    {
+      "case_id": "BH-019",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Green",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "Approximate severity figures in an incident summary have no source or preliminary qualification, so confirmation is a material non-critical gap."
+    },
+    {
+      "case_id": "BH-019",
+      "turn_index": 2,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Green",
+        "retry-gold-grok-2": "Red",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Green",
+      "rationale": "The correction turn itself is candid and resolves the record; it does not present the superseded figures as the final draft."
+    },
+    {
+      "case_id": "BH-020",
+      "turn_index": 2,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Red"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The announced Tuesday changeover is an authority risk, but the approval threshold is not disclosed until the later correction, so it is not yet a confirmed major execution contradiction."
+    },
+    {
+      "case_id": "BH-020",
+      "turn_index": 2,
+      "field": "tone",
+      "source_values": {
+        "retry-gold-claude-1": "Green",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Green",
+      "rationale": "The assertive register requested by the writer is direct but not hostile."
+    },
+    {
+      "case_id": "BH-020",
+      "turn_index": 3,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "Once the writer recalls the $5,000 threshold and approximately $9,000 value, the standing first draft is known to omit required sign-off."
+    },
+    {
+      "case_id": "BH-021",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Green",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The cover note says the vendor window is likely infeasible but does not state the decision or action requested from the manager."
+    },
+    {
+      "case_id": "BH-022",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The template explicitly requires owner and date for each action item, and the writer has left that section empty."
+    },
+    {
+      "case_id": "BH-023",
+      "turn_index": 1,
+      "field": "tone",
+      "source_values": {
+        "retry-gold-claude-1": "Yellow",
+        "retry-gold-grok-2": "Yellow",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Yellow",
+      "rationale": "The heated peer quote is clearly attributed, but forwarding it verbatim risks escalation despite the writer's stated intent."
+    },
+    {
+      "case_id": "BH-024",
+      "turn_index": 1,
+      "field": "route",
+      "source_values": {
+        "retry-gold-claude-1": "Intake",
+        "retry-gold-grok-2": "Intake",
+        "retry-gold-kimi-3": "Normal mode"
+      },
+      "adjudicated": "Intake",
+      "rationale": "The writer has not selected a recipient, and one candidate is implicated by the records; routing information is required before rating."
+    },
+    {
+      "case_id": "BH-026",
+      "turn_index": 1,
+      "field": "responsibility",
+      "source_values": {
+        "retry-gold-claude-1": "Red",
+        "retry-gold-grok-2": "Green",
+        "retry-gold-kimi-3": "Green"
+      },
+      "adjudicated": "Green",
+      "rationale": "The case establishes an external vendor as the primary recipient and does not establish that the writer lacks authority to condition a future volume commitment; the manager is transparently CC'd."
+    },
+    {
+      "case_id": "BH-027",
+      "turn_index": 1,
+      "field": "required_question_topics",
+      "source_values": {
+        "retry-gold-claude-1": [
+          "obscured-transmission-repair-timeline"
+        ],
+        "retry-gold-grok-2": [
+          "confirm-redacted-replacement-choice",
+          "confirm-redacted-transmission-timing"
+        ],
+        "retry-gold-kimi-3": [
+          "obscured-draft-spans"
+        ]
+      },
+      "adjudicated": [
+        "obscured-transmission-repair-timeline"
+      ],
+      "rationale": "The frozen case description identifies the repair timeline as the destroyed governing span; the fully specified line-4 decision question is preserved rather than guessed or treated as missing."
+    },
+    {
+      "case_id": "BH-028",
+      "turn_index": 1,
+      "field": "route",
+      "source_values": {
+        "retry-gold-claude-1": "Intake",
+        "retry-gold-grok-2": "Normal mode",
+        "retry-gold-kimi-3": "Message-template mode"
+      },
+      "adjudicated": "Message-template mode",
+      "rationale": "The writer explicitly asks for a manager message drafted from the board and supplies no draft to rate; unresolved board cells become placeholders in the template."
+    },
+    {
+      "case_id": "BH-028",
+      "turn_index": 2,
+      "field": "route",
+      "source_values": {
+        "retry-gold-claude-1": "Intake",
+        "retry-gold-grok-2": "Normal mode",
+        "retry-gold-kimi-3": "Message-template mode"
+      },
+      "adjudicated": "Message-template mode",
+      "rationale": "The added confirmation issue changes the template facts but does not turn an explicit no-draft drafting request into a review of an existing message."
+    },
+    {
+      "case_id": "BH-029",
+      "turn_index": 1,
+      "field": "route",
+      "source_values": {
+        "retry-gold-claude-1": "Intake",
+        "retry-gold-grok-2": "Normal mode",
+        "retry-gold-kimi-3": "Message-template mode"
+      },
+      "adjudicated": "Message-template mode",
+      "rationale": "The writer supplies no draft and asks what to say in reply; the incomplete scan constrains placeholders in the requested template rather than changing the route."
+    }
+  ],
+  "unanimous_values_preserved": true
+}

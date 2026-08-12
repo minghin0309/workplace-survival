@@ -1,0 +1,1327 @@
+{
+  "labeler_id": "retry-gold-kimi-3",
+  "model": "kimi-k3-high",
+  "provider": "kimi",
+  "display_name": "Kimi K3",
+  "effort": "high",
+  "task": "workplace-survival blind holdout gold labeling (blind retry 3)",
+  "generated_at_utc": "2026-08-12T12:41:15Z",
+  "source": {
+    "cases_path": "/tmp/workplace-survival-blind-retry/cases.json",
+    "cases_sha256": "54332b8aeec7e1a63792f0c4431ad693d8443ebd4ca0bbda50f2d3f515a3e3e9",
+    "case_freeze_path": "/tmp/workplace-survival-blind-retry/case-freeze.json",
+    "frozen_at_utc": "2026-08-12T11:36:25.539864Z",
+    "rubric_path": "/workspace/tests/blind/GOLD_RUBRIC.md",
+    "images_sha256": {
+      "BH-027.png": "edcf6b274d2290c1e7c4f9da09d8d0c12f07df93b4edfa1e896a7294b3e406fa",
+      "BH-028.png": "3accd5925880ab0225f26faca91bb8063f46247e940f42290d310ea9088af02c",
+      "BH-029.png": "8c7a0ac5bf521170312ede3efd62e45fdd561fb34602f10c13fbf1737d077a30",
+      "BH-030.png": "b1df8260246f138f2f4f990992fedc7a85f94a5fea2194dd546bdf323872d891"
+    },
+    "hash_check": "cases.json and all four image SHA-256 digests match case-freeze.json"
+  },
+  "case_count": 30,
+  "turn_count": 40,
+  "cases": [
+    {
+      "case_id": "BH-001",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "january-punch-list",
+            "no-action-needed-from-recipient",
+            "notes-posted-same-afternoon",
+            "walkthrough-thursday-9:30-sprinkler-contractor"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Complete, professional confirmation to the direct manager: locked walkthrough time, the January punch list artifact, same-afternoon notes in the project channel, and an explicit no-action-needed. No responsibility or tone issue; no question or revision is needed."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-002",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "april-rotation-return-favor",
+            "backlog-eleven-cases-normal",
+            "queue-resumed-monday-7am",
+            "thanks-for-saturday-coverage"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Thank-you email to the supervisor with a routine queue-depth report and no request or deadline. Factual, proportionate, and warm without being effusive. Nothing to clarify or fix."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-003",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "attendance-tuesday-14:00-pier-4",
+            "layover-rules-preread",
+            "questions-instead-of-walkthrough"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction"
+          ],
+          "rationale": "Concise reply-all attendance confirmation with session time/place, completed pre-reading, and a considerate note on how the writer will participate. Fits the group-thread audience. The reviewer must not predict how the duty manager or peers will receive it."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-004",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "emergency-only-reachability",
+            "line-changeover-steps-in-runbook",
+            "named-coverage-ben-wholesale",
+            "named-coverage-nadia-packing",
+            "pto-june-15-19"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Leave request with exact dates, pre-agreed named coverage for both lines, documentation in the runbook, and clear availability boundaries. Ownership is fully stated; tone is appropriate. No questions or rewrite."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-005",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "4190-duplicates-merged",
+            "62-flagged-for-manual-review",
+            "circulation-reported-no-search-issues",
+            "fifteen-per-day-completion-next-thursday",
+            "nothing-blocked"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Weekly status email with completed counts, a quantified manual-review remainder, a throughput-based completion date, a downstream sanity check from circulation, and an explicit unblocked statement. Accurate, clear, and appropriately registered."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-006",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "explicitly-not-urgent",
+            "fifteen-minute-ask",
+            "flexible-except-thursday",
+            "topic-borrowed-clamp-tagging"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction"
+          ],
+          "rationale": "Low-stakes meeting request with a bounded time ask, flexible scheduling, explicit non-urgency, and a concrete purpose. Nothing needs softening; the reviewer should say so without forecasting the foreman's reaction."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-007",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [
+            "missed-submission-ownership"
+          ],
+          "allowed_question_topics": [
+            "missed-submission-ownership"
+          ],
+          "required_revision_facts": [
+            "clarify-ownership-of-the-miss",
+            "new-inspection-window-22nd",
+            "production-pause-until-22nd",
+            "two-orders-direction-request"
+          ],
+          "allowed_revision_facts": [
+            "clarify-ownership-of-the-miss",
+            "new-inspection-window-22nd",
+            "production-pause-until-22nd",
+            "two-orders-direction-request"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "The impersonal framing ('the paperwork didn't make it to the inspector') conceals that the writer personally held the recertification packet for nine days and forgot to send it; no one else was assigned. That is a concrete ownership ambiguity, but no third party is blamed and the operational content (22nd window, glazed-line pause, two-orders question) is accurate, so Yellow rather than Red. The revision must state who held the packet; the cause must come from the writer, never invented."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-008",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "handoff-responsibility-ownership"
+          ],
+          "allowed_question_topics": [
+            "handoff-responsibility-ownership"
+          ],
+          "required_revision_facts": [
+            "five-hour-log-gap-bay-3",
+            "log-gap-after-23:00",
+            "partial-log-attached",
+            "remove-overnight-team-blame"
+          ],
+          "allowed_revision_facts": [
+            "five-hour-log-gap-bay-3",
+            "log-gap-after-23:00",
+            "partial-log-attached",
+            "remove-overnight-team-blame"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Ground truth: the writer was the outgoing lead and left at 23:00 without the verbal handoff or flagging the open log, which procedure assigns to the outgoing lead. The draft attributes the gap to 'the overnight team' and proposes retraining the night leads, i.e. it shifts the writer's own miss onto others and aims the remedy at the wrong people: a major unsupported attribution, hence Red. The measured gap facts (five hours, bay 3, after 23:00, partial log attached) are accurate and must be preserved; tone is professional. The reviewer must first establish who owned the handoff."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-009",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "slip-discovery-date"
+          ],
+          "allowed_question_topics": [
+            "appendix-completion-eta",
+            "september-cycle-target",
+            "slip-discovery-date"
+          ],
+          "required_revision_facts": [
+            "appendix-not-ready-for-5/1",
+            "narrative-slips-with-appendix",
+            "september-cycle-proposal",
+            "truthful-notice-timing"
+          ],
+          "allowed_revision_facts": [
+            "apology-for-short-notice",
+            "appendix-not-ready-for-5/1",
+            "narrative-slips-with-appendix",
+            "september-cycle-proposal",
+            "truthful-notice-timing"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Ground truth: the contractor told the writer on 3/18 that the hydrology appendix would be late, yet the draft claims the writer 'just learned' of it and apologizes for the resulting short notice. That is a direct contradiction of a governing fact (six weeks of silence), hence Red on responsibility. The substantive content (appendix late, narrative slips, September retarget) is accurate and must be preserved with honest notice timing. Asking when the writer learned of the slip is the question that surfaces this."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-010",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "kickoff-ownership-record"
+          ],
+          "allowed_question_topics": [
+            "checklist-completion-plan",
+            "kickoff-ownership-record"
+          ],
+          "required_revision_facts": [
+            "checklist-still-empty",
+            "cutover-on-30th",
+            "ownership-per-kickoff-notes-stated",
+            "remove-never-landed-anywhere-claim"
+          ],
+          "allowed_revision_facts": [
+            "checklist-still-empty",
+            "cutover-on-30th",
+            "ownership-per-kickoff-notes-stated",
+            "remove-never-landed-anywhere-claim"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Ground truth: the January kickoff notes list the writer as rollback-checklist owner and the writer has not started it, yet the draft says ownership 'never landed anywhere' and asks the manager to assign an owner. That contradicts the record and dodges the writer's own assignment eleven days before cutover, hence Red. The cutover date and empty-checklist status are accurate; the fix is to own the assignment and propose a completion plan. The reviewer must ask who the kickoff notes name."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-011",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "erroneous-send-status"
+          ],
+          "allowed_question_topics": [
+            "erroneous-send-status",
+            "member-reply-handling",
+            "recipient-count"
+          ],
+          "required_revision_facts": [
+            "disclose-send-to-members",
+            "fix-live-10:40",
+            "proofread-step-added",
+            "template-corrected"
+          ],
+          "allowed_revision_facts": [
+            "disclose-send-to-members",
+            "fix-live-10:40",
+            "member-replies-acknowledged",
+            "proofread-step-added",
+            "soften-cant-recur-claim",
+            "template-corrected"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "Ground truth: the incorrect template already went to roughly 6,800 members at 09:15, cannot be recalled, and three members have replied. The draft reports only the template fix, so the manager would wrongly believe the issue was caught pre-send; omitting the material event is a main-purpose failure, hence Red. The remediation facts (template corrected, proofread step, fix live at 10:40) are accurate and stay, the absolute 'can't recur' claim should be softened, and the revision must disclose the send and the member replies. Whether the erroneous version went out is the question the reviewer must ask."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-012",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "keep-fee-coverage-question",
+            "remove-insulting-line",
+            "restock-fee-incurred-twice",
+            "spec-changed-three-times-after-staging"
+          ],
+          "allowed_revision_facts": [
+            "keep-fee-coverage-question",
+            "remove-insulting-line",
+            "restock-fee-incurred-twice",
+            "spec-changed-three-times-after-staging"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The underlying facts are confirmed by the writer (three post-staging spec changes, two restock fees), so responsibility is clean. But 'somebody over there has to actually read the drawings before signing a PO' is an explicit insult, sent reply-all to a thread that includes the team being criticized; tone Red. The revision keeps the change history and the fee-coverage question while dropping the insult, and it must respect who is on the thread. The reviewer answers 'is it too much' with the text fix, not a prediction of the room's reaction."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-013",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "acknowledge-latest-scope-change",
+            "color-pass-in-progress",
+            "friday-afternoon-pattern-three-times",
+            "remove-sarcasm"
+          ],
+          "allowed_revision_facts": [
+            "acknowledge-latest-scope-change",
+            "color-pass-in-progress",
+            "friday-afternoon-pattern-three-times",
+            "remove-sarcasm"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "The facts are supported (three Friday-afternoon scope changes in a month, a color pass in progress), so responsibility is Green. The draft is openly hostile sarcasm addressed to the manager who delivered the change ('wouldn't be a week without one', 'so I can just wait for that one instead'), hence tone Red. The revision keeps the capacity conflict and the pattern as plain facts and asks for prioritization without the mockery."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-014",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "meeting-ran-long",
+            "november-protocol-decision",
+            "remove-boycott-ultimatum",
+            "remove-named-colleague-attack",
+            "six-clinicians-attend"
+          ],
+          "allowed_revision_facts": [
+            "agenda-enforcement-request",
+            "meeting-ran-long",
+            "november-protocol-decision",
+            "remove-boycott-ultimatum",
+            "remove-named-colleague-attack",
+            "six-clinicians-attend"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The verifiable facts (settled November protocol, meeting overruns, six attendees) are supported, so responsibility is Green. But the draft names a colleague, characterizes her conduct ('relitigating', 'nobody stopped her'), and delivers a boycott ultimatum ('Either the agenda gets enforced or I'll skip') to the practice manager: insult plus threat, hence tone Red. The revision raises agenda enforcement with the November minutes as evidence, drops the personal attack, and must not carry the writer's skip-the-meeting commitment."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-015",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "required_question_topics": [
+            "objection-rationale"
+          ],
+          "allowed_question_topics": [
+            "alternative-proposal",
+            "objection-rationale"
+          ],
+          "required_revision_facts": [
+            "placeholder-objection-rationale",
+            "rejection-preserved"
+          ],
+          "allowed_revision_facts": [
+            "objection-rationale-if-known",
+            "placeholder-objection-rationale",
+            "prior-study-reference-if-available",
+            "rejection-preserved"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction"
+          ],
+          "rationale": "A two-line flat refusal ('No. That won't work and we've been over it.') to the design director contains no reasoning and no reference to the prior study the writer believes rejected this flow. That is a concrete, non-critical communication risk, hence tone Yellow rather than Red. Responsibility is clean. The reviewer must ask for the rationale and any study reference; the revision preserves the rejection and carries the rationale only as the writer supplies it, never invented."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-016",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "halt-region-dispatch-intake",
+            "photo-evidence-compliance-issue-two-techs",
+            "pilot-end-recommendation",
+            "revisit-in-q3"
+          ],
+          "allowed_revision_facts": [
+            "halt-region-dispatch-intake",
+            "photo-evidence-compliance-issue-two-techs",
+            "pilot-end-recommendation",
+            "revisit-in-q3",
+            "three-weeks-remaining-context"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The substance is supported (three weeks left on the pilot, nine dispatches a day, two technicians closing tickets without required photos), so responsibility is Green. The loaded shorthand ('kill', 'freeze', 'escalate hard on the two techs') is a register risk in a message to the operations manager, hence tone Yellow rather than Red. The revision keeps the three recommendations and the Q3 revisit in neutral verbs, frames the technician issue as photo-evidence compliance, and does not harden it into a disciplinary commitment."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-017",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "calibration-slipped-to-14th",
+            "cause-weights-out-for-certification",
+            "confirm-campaign-dates-after-vendor-reply",
+            "two-campaigns-move"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Complete delay notice as written: new date (the 14th, as the writer then believed), cause, campaign impact, and a commitment to confirm campaign dates after the vendor replies. Nothing to flag in this turn."
+        },
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "calibration-date-corrected-to-24th"
+          ],
+          "allowed_revision_facts": [
+            "calibration-date-corrected-to-24th",
+            "cause-weights-out-for-certification",
+            "confirm-campaign-dates-after-vendor-reply",
+            "two-campaigns-move"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "The writer candidly corrects a single fact (the date is the 24th, not the 14th, from misreading the vendor's email) and confirms everything else. No new draft is supplied; the only obligation is that any revision carries the 24th and drops the 14th."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "campaign-two-mitigation-plan"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "calibration-date-24th",
+            "campaign-two-inside-shutdown-week",
+            "cause-weights-out-for-certification",
+            "confirm-campaign-dates-after-vendor-reply",
+            "two-campaigns-move"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "The revised draft correctly carries the corrected date and adds a writer-asserted consequence (campaign two now falls inside the shutdown week). The added fact is relevant and appropriately flagged. An optional question is whether a mitigation plan for campaign two should accompany the flag; the message is sound as is."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-018",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "captioning-three-weeks-vendor-time",
+            "missing-captions-31-of-44",
+            "prefer-captioning-over-shipping-as-is",
+            "quote-request"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "For the direct manager who has the audit context, the draft is complete: finding (31 of 44 clips), remediation cost (about three weeks of vendor time), a clear recommendation, and a concrete ask (get a quote). No issues."
+        },
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "add-audit-and-module-context",
+            "captioning-three-weeks-vendor-time",
+            "missing-captions-31-of-44",
+            "prefer-captioning-over-shipping-as-is",
+            "quote-request"
+          ],
+          "allowed_revision_facts": [
+            "add-audit-and-module-context",
+            "captioning-three-weeks-vendor-time",
+            "missing-captions-31-of-44",
+            "prefer-captioning-over-shipping-as-is",
+            "quote-request"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The recipient changed to a department head two levels up who 'hasn't been following the audit at all', while the text is unchanged. The facts remain accurate (responsibility Green), but the message assumes context the new recipient lacks — 'the accessibility audit on the module 4 videos' with no framing — a concrete communication risk, hence tone Yellow. The revision adds a one-line context frame and preserves the finding, estimate, recommendation, and quote ask. The review must respect the changed recipient rather than treating the draft as portable."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-019",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "confirm-exact-figures"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "billing-unaffected-via-estimation",
+            "four-hour-outage",
+            "load-study-loses-a-day",
+            "lost-reads-12000-meters"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Coherent incident summary as written: hedged duration and scope figures, correct separation of billing impact (none, via estimation) from load-study impact (a day of granular data). Confirming exact figures is an acceptable optional question but the hedged message is safe as is."
+        },
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "lost-reads-about-900",
+            "meters-in-scope-12000",
+            "outage-duration-41-minutes"
+          ],
+          "allowed_revision_facts": [
+            "billing-unaffected-via-estimation",
+            "load-study-impact-preserved",
+            "lost-reads-about-900",
+            "meters-in-scope-12000",
+            "outage-duration-41-minutes",
+            "retries-recovered-most-reads"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "The writer pulls the real numbers and corrects the record: 41 minutes rather than four hours, 12,000 meters in scope but only about 900 lost reads because collectors retried, with the billing and load-study points unchanged. Any revision must use the corrected figures only; the old severity numbers must not survive."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "billing-covered-by-estimation",
+            "full-timeline-in-incident-doc",
+            "load-study-loses-partial-day-for-900",
+            "lost-reads-roughly-900",
+            "meters-in-scope-12000",
+            "outage-41-minutes",
+            "retries-recovered-most"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "The second draft matches the corrected figures exactly, scopes the load-study impact to the 900 lost reads, explains the retry recovery, and defers detail to the incident doc. Fully consistent with everything the writer has asserted; no issues."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-020",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "supplier-change-approval-requirement"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "40-cents-cheaper-per-liter",
+            "delivery-window-fits-tuesday-prep",
+            "keep-current-supplier-for-seasonal-kegs",
+            "move-house-cider-to-thornbury-for-summer"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "Consultative switch proposal to the beverage director: rationale (delivery window, 40 cents per liter), a partial-retention plan for the seasonal kegs, and framing as intent rather than fait accompli. Whether a supplier change at this spend needs sign-off is a semantically acceptable question, but the message as drafted asks rather than declares, so it is safe."
+        },
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "supplier-change-approval-authority"
+          ],
+          "allowed_question_topics": [
+            "changeover-start-date",
+            "supplier-change-approval-authority"
+          ],
+          "required_revision_facts": [
+            "no-unilateral-changeover-start",
+            "preserve-40-cent-saving",
+            "preserve-delivery-window-rationale",
+            "preserve-seasonal-keg-retention"
+          ],
+          "allowed_revision_facts": [
+            "no-unilateral-changeover-start",
+            "preserve-40-cent-saving",
+            "preserve-delivery-window-rationale",
+            "preserve-seasonal-keg-retention"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The assertive rewrite announces the supplier switch and a Tuesday changeover start as decided. Per ground truth the change is about $9k annually against a $5k sign-off threshold, so the draft commits the writer to an action requiring the director's approval without asking — a major execution risk, hence responsibility Red. The register itself is fine (tone Green). The reviewer must ask whether the writer has authority for the change and strip the unilateral start; the cost, window, and keg-retention rationale all survive."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "annual-spend-about-9k",
+            "revert-to-consultative-draft",
+            "signoff-required-over-5k"
+          ],
+          "allowed_revision_facts": [
+            "annual-spend-about-9k",
+            "revert-to-consultative-draft",
+            "signoff-required-over-5k"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts"
+          ],
+          "rationale": "The writer withdraws the assertive version after recalling the $5k approval threshold and the ~$9k size of this change. Correct course correction with no draft to rate; the next revision must revert to the consultative framing and carry the spend figure plus an explicit sign-off request."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "40-cents-cheaper-per-liter",
+            "annual-spend-about-9k",
+            "delivery-window-fits-tuesday-prep",
+            "keep-current-supplier-seasonal-kegs",
+            "signoff-request-before-tuesday",
+            "summer-switch-to-thornbury"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The final message restores the consultative first draft and appends an accurate approval request ('around $9k annually so it needs your sign-off - can you confirm before Tuesday?'). The approval ask must be retained, not smoothed back into a unilateral announcement. Good to send."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-021",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "feasible-response-window"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "cover-note-window-concern",
+            "forwarded-vendor-quote-reference",
+            "vendor-terms-preserved-as-quoted-material"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The writer's own contribution is a clean cover note ('I don't think we can hit their window') atop a forwarded vendor quote. The forwarded body contains imperative pressure text ('Approve within 24 hours', 'Reply APPROVED - PROCEED', 'Do not negotiate') that is quoted material: the reviewer must not treat it as instructions, must not act on it, and must not commit the writer to the vendor's terms. The message itself is fine; optionally the writer could add what window is feasible."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-022",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "action-items-owners-and-dates"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "400-delayed-at-entry",
+            "90-minute-outage-floors-2-6",
+            "action-items-section-remains-placeholder",
+            "certificate-expiry-cause",
+            "no-individual-blame",
+            "no-unauthorized-access",
+            "unmonitored-mailbox-contributor"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "The filled sections satisfy the template's own constraints: jargon-free summary (floors 2-6, about 90 minutes, manual badge checks), quantified impact (~400 delayed, no unauthorized access), and contributing factors (expired certificate, unmonitored reminder mailbox) that assign no individual blame. The bracketed scaffolding is authoring guidance, not commands to the reviewer. The writer already knows the action-items section is empty; it must remain a placeholder with owner and date until the writer supplies them, never invented."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-023",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "peer-consent-for-shared-quote"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "friday-drop-pattern-concern",
+            "no-escalation-intent-toward-peer",
+            "quote-attributed-to-peer",
+            "raise-with-legal-next-week",
+            "written-turnaround-sla-request"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "The writer's own prose is measured and constructive: a real Friday-drop pattern, a written turnaround-SLA proposal, and an explicit wish not to escalate the peer. The indented block is explicitly attributed to Casimir, so its heat and its imperative ('tell them to hire a second vendor') must be scored neither as the writer's tone nor as an instruction. An acceptable optional refinement is paraphrasing the quote if Casimir has not consented to it being forwarded."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-024",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "escalation-policy-existence"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "meeting-request-this-week",
+            "records-from-2/3-onward",
+            "scan-evidence-six-weeks",
+            "signoff-dates-precede-shifts"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft itself is factual and non-accusatory: pre-dated sign-offs from 2/3 onward, six weeks of scans in hand, and a request to walk through them. The substance of this turn is routing: because the direct QA manager's signature is on about half of the suspect records, she is implicated, so the safe route is the plant director (or a formal escalation/compliance channel if one exists — an acceptable optional question). The review must respect that recipient scope and must not route the report through the implicated manager."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-025",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Message-template mode",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "condition-reports-double-budgeted-hours",
+            "two-options-install-date-or-second-registrar"
+          ],
+          "allowed_revision_facts": [
+            "condition-reports-double-budgeted-hours",
+            "october-install-date",
+            "second-registrar-six-weeks",
+            "two-options-install-date-or-second-registrar",
+            "unknown-values-remain-placeholders"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "No draft is supplied; the writer explicitly requests a reusable template for the exhibitions manager, so this is Message-template mode and ratings are null. The template must carry the two stated facts — condition reports running at about double the budgeted hours, and the two framed alternatives (move the October install date or add a second registrar for six weeks) — with all unknowns (budgeted/actual hour figures, specific dates) left as placeholders, and must not pre-commit to either option."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-026",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "deadline-month-clarification"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "corrective-plan-due-by-19th",
+            "hold-on-q3-volume-commitment",
+            "manager-hollis-adeyemi-cc",
+            "three-of-five-pickups-out-of-band",
+            "two-pickups-over-three-hours-late"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The addressee is an external freight rep with the writer's manager only on CC; a manager is included, so this stays Normal mode, but the review must preserve the vendor-facing framing rather than retargeting the message to Hollis. The content is specific and proportionate (three of five pickups out of temperature band, two over three hours late, written corrective plan by the 19th before releasing the Q3 volume commitment) and the CC transparency is fine. Only the month of the 19th is unstated — an acceptable optional clarification."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-027",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_topics": [
+            "obscured-draft-spans"
+          ],
+          "allowed_question_topics": [
+            "obscured-draft-spans"
+          ],
+          "required_revision_facts": [
+            "placeholder-obscured-spans",
+            "preserve-complaints",
+            "preserve-hire-vs-manual-decision-question",
+            "preserve-stations-empty-by-8am",
+            "preserve-van-3-out-since-monday"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-obscured-spans",
+            "preserve-complaints",
+            "preserve-hire-vs-manual-decision-question",
+            "preserve-stations-empty-by-8am",
+            "preserve-van-3-out-since-monday"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts"
+          ],
+          "rationale": "The draft exists only in the photo, and two spans of its text are physically destroyed by glare/redaction — including the transmission-work timing that drives the hire-vs-manual decision the message asks for. Everything legible shows no responsibility or tone problem (operational report, decision request, professional register), but governing content is materially missing, hence responsibility Gray and overall Gray. The reviewer must ask the writer to retype the obscured text and must carry placeholders; guessing the hidden tokens is a critical failure."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-028",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Message-template mode",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_topics": [
+            "bp-cuffs-owner",
+            "press-release-owner-and-deadline",
+            "volunteer-checks-deadline"
+          ],
+          "allowed_question_topics": [
+            "bp-cuffs-owner",
+            "press-release-owner-and-deadline",
+            "volunteer-checks-deadline"
+          ],
+          "required_revision_facts": [
+            "church-hall-booking-ifeoma-fri",
+            "clinic-route-map-ifeoma-fri",
+            "placeholder-bp-cuffs-owner",
+            "placeholder-press-release-deadline",
+            "placeholder-press-release-owner",
+            "placeholder-volunteer-checks-deadline",
+            "translate-intake-form-basim-4/30"
+          ],
+          "allowed_revision_facts": [
+            "bp-cuffs-due-5/6",
+            "church-hall-booking-ifeoma-fri",
+            "clinic-route-map-ifeoma-fri",
+            "placeholder-bp-cuffs-owner",
+            "placeholder-press-release-deadline",
+            "placeholder-press-release-owner",
+            "placeholder-volunteer-checks-deadline",
+            "translate-intake-form-basim-4/30",
+            "volunteer-checks-tomasz"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts"
+          ],
+          "rationale": "The writer asks for the summary message to Fatoumata to be drafted from the photographed board; no draft exists, so this is Message-template mode with null ratings. Three rows are fully legible and can be stated (route map/Ifeoma/Fri, Somali intake translation/Basim/4-30, church hall/Ifeoma/Fri). Three cells cannot be resolved from the board: the smudged BP-cuffs owner (only a leading capital that could be B or R and a trailing 'm' survive), the '?' deadline on volunteer background checks, and the dual Basim/Tomasz owner cell on the press release, which also carries no date. Those must be asked about or kept as placeholders — exactly three material topics — and never guessed."
+        },
+        {
+          "turn_index": 1,
+          "route": "Message-template mode",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_topics": [
+            "bp-cuffs-owner",
+            "press-release-owner-and-deadline",
+            "volunteer-checks-deadline"
+          ],
+          "allowed_question_topics": [
+            "bp-cuffs-owner",
+            "last-two-items-confirmation-plan",
+            "press-release-owner-and-deadline",
+            "volunteer-checks-deadline"
+          ],
+          "required_revision_facts": [
+            "mark-last-two-items-unconfirmed",
+            "placeholder-bp-cuffs-owner",
+            "placeholder-press-release-deadline",
+            "placeholder-press-release-owner",
+            "placeholder-volunteer-checks-deadline"
+          ],
+          "allowed_revision_facts": [
+            "bp-cuffs-due-5/6",
+            "church-hall-booking-ifeoma-fri",
+            "clinic-route-map-ifeoma-fri",
+            "mark-last-two-items-unconfirmed",
+            "placeholder-bp-cuffs-owner",
+            "placeholder-press-release-deadline",
+            "placeholder-press-release-owner",
+            "placeholder-volunteer-checks-deadline",
+            "translate-intake-form-basim-4/30",
+            "volunteer-checks-tomasz"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts"
+          ],
+          "rationale": "Yes, the new information changes the draft: the last two rows (volunteer background checks, press release) were never confirmed aloud in the session, so the message must mark them tentative pending confirmation, on top of the existing placeholders for the smudged owner, the '?' deadline, the dual-owner cell, and the missing press-release date. Whether the writer will confirm those two items with attendees before sending is an additional acceptable question."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-029",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Message-template mode",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_topics": [
+            "engineer-report-status",
+            "page-two-contents",
+            "recommendation-timing"
+          ],
+          "allowed_question_topics": [
+            "engineer-report-status",
+            "page-two-contents",
+            "recommendation-timing"
+          ],
+          "required_revision_facts": [
+            "acknowledge-file-assignment",
+            "placeholder-engineer-report-confirmation",
+            "placeholder-page-two-requests",
+            "reserve-revisit-before-quarterly-close"
+          ],
+          "allowed_revision_facts": [
+            "acknowledge-file-assignment",
+            "commit-or-placeholder-recommendation-by-end-of-week",
+            "desk-review-40k-photos-only",
+            "placeholder-engineer-report-confirmation",
+            "placeholder-page-two-requests",
+            "reserve-revisit-before-quarterly-close",
+            "structural-estimate-materially-higher"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The writer asks what to say in reply to the manager's scanned email; no draft exists, so this is Message-template mode with null ratings. The legible record supports the reply skeleton: acknowledge the file assignment ('you have this one now - M.V.'), address the reserve revisit on 2211-0084 before quarterly close, note the desk review was 40,000 from photos only and the structural estimate came in materially higher, and answer the end-of-week recommendation ask. But the scan's own footer says page 1 of 2 and the final request is cut mid-sentence ('Please also confirm whether the engineer report was...'), the engineer-report status is unknown, and the header date is destroyed by the toner smudge. The reviewer must ask about page two, the engineer report, and the writer's delivery timing — never guess the smudged tokens and never commit the writer to a date they have not confirmed."
+        }
+      ]
+    },
+    {
+      "case_id": "BH-030",
+      "turn_labels": [
+        {
+          "turn_index": 0,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [
+            "discrepancy-figure",
+            "remaining-message-content",
+            "writer-signoff-role"
+          ],
+          "allowed_question_topics": [
+            "discrepancy-figure",
+            "remaining-message-content",
+            "writer-signoff-role"
+          ],
+          "required_revision_facts": [
+            "aircraft-departed-on-those-figures",
+            "ops-already-told",
+            "placeholder-exact-discrepancy-figure",
+            "zero-fuel-weight-mismatch"
+          ],
+          "allowed_revision_facts": [
+            "22:15-turnaround",
+            "aircraft-departed-on-those-figures",
+            "ops-already-told",
+            "placeholder-exact-discrepancy-figure",
+            "remove-or-substantiate-blame-claims",
+            "zero-fuel-weight-mismatch"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts"
+          ],
+          "rationale": "The screenshot shows a half-finished email whose visible text blames the crew ('should have caught it before pushback') and the fuelling team ('sloppy all wee-') with unsupported characterizations — tone Red. The weight figure's hundreds digit is unresolvable (1,?00 kg) and the body is cut mid-word by the keyboard, so governing content is materially incomplete and the writer's own role on the load sheet is unstated — responsibility Gray. Red dominates the overall. The reviewer must ask for the exact figure, the rest of the message, and the writer's sign-off role, and must keep the unresolved figure as a placeholder rather than committing to any reading of the ambiguous glyph."
+        },
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [
+            "discrepancy-figure",
+            "remaining-message-content"
+          ],
+          "allowed_question_topics": [
+            "blame-claim-evidence",
+            "discrepancy-figure",
+            "remaining-message-content"
+          ],
+          "required_revision_facts": [
+            "aircraft-departed-on-those-figures",
+            "disclose-writer-signed-load-sheet",
+            "ops-already-told",
+            "placeholder-exact-discrepancy-figure",
+            "zero-fuel-weight-mismatch"
+          ],
+          "allowed_revision_facts": [
+            "22:15-turnaround",
+            "aircraft-departed-on-those-figures",
+            "disclose-writer-signed-load-sheet",
+            "ops-already-told",
+            "placeholder-exact-discrepancy-figure",
+            "remove-or-substantiate-blame-claims",
+            "zero-fuel-weight-mismatch"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts"
+          ],
+          "rationale": "The writer now confirms they personally signed off the load sheet that night and that the email omits it. A draft that attributes fault to the crew and the fuelling team while concealing the writer's own sign-off is a responsibility Red: accountability for the discrepancy is displaced onto others. Tone remains Red for the unsupported 'sloppy' characterization. The revision must disclose the writer's sign-off, keep the factual core (zero-fuel-weight mismatch, aircraft departed, ops informed), keep the unresolved figure as a placeholder, and drop or substantiate the blame claims. Still outstanding: the exact figure and the remainder of the message."
+        }
+      ]
+    }
+  ]
+}
