@@ -1,0 +1,153 @@
+{
+  "artifact": "cloud-isolated blind holdout gold labeler 2",
+  "generated_at_utc": "2026-08-12T14:03:20Z",
+  "labeler": {
+    "cloud_agent_id": "bc-79285575-1d42-5954-b2c1-6fa0fe9c0af2",
+    "cloud_agent_url": "https://cursor.com/agents/bc-79285575-1d42-5954-b2c1-6fa0fe9c0af2",
+    "cloud_agent_name": "Cloud blind gold Grok",
+    "model_id": "cursor-grok-4.5-high",
+    "model_family": "grok",
+    "display_name": "Grok 4.5",
+    "model_id_source": "Task instruction specified model_id cursor-grok-4.5-high. Cloud run-info originalModelName was null.",
+    "isolation_mode": "cloud agent labeling from holdout fixtures only; no skill runtime, scorer, public tests, mutation, plan, history, PRs, or other labeler outputs consulted for labels",
+    "branch": "cursor/gold-labeler-2-0af2"
+  },
+  "files_read": [
+    "tests/blind/GOLD_RUBRIC.md",
+    "tests/blind/cloud-holdout/cases.json",
+    "tests/blind/cloud-holdout/case-freeze.json",
+    "tests/blind/cloud-holdout/images/BH-027.png",
+    "tests/blind/cloud-holdout/images/BH-028.png",
+    "tests/blind/cloud-holdout/images/BH-029.png",
+    "tests/blind/cloud-holdout/images/BH-030.png"
+  ],
+  "files_written": [
+    "tests/blind/cloud-holdout/gold-labeler-2.json",
+    "tests/blind/cloud-holdout/gold-labeler-2-attestation.json"
+  ],
+  "non_repository_files_used": [],
+  "prohibited_sources_not_accessed": {
+    "statement": "Labels were derived only from GOLD_RUBRIC.md, cases.json, case-freeze.json, and the four PNGs. The following classes were not used as labeling inputs.",
+    "items": [
+      "skill runtime files under .cursor/skills/workplace-survival/",
+      "tests/blind/BLIND_PLAN.md",
+      "tests/blind/score_blind.py as a labeling oracle",
+      "public/mutation/history/PR review text for case answers",
+      "other gold labeler outputs (gold-labeler-1/3, gold.json, adjudication)",
+      "cases-raw.json content for labeling decisions",
+      "designer-attestation.json content for labeling decisions"
+    ],
+    "incidental_metadata_observed": [
+      "Directory listing of tests/blind/ and cloud-holdout/ (names only) to locate allowed fixtures",
+      "freeze_holdout.py schema fragments for exact gold-labeler document shape {labeler, labels}",
+      "designer-attestation.json top-level keys only, as a template for this attestation file shape"
+    ]
+  },
+  "hash_verification": {
+    "cases_sha256": "e3326ae81b10af8a0dcf40eb3074cbd4ebd527939c7eb40b68b4bb26840db815",
+    "cases_sha256_matches_freeze": true,
+    "images": {
+      "BH-027.png": "5b1650dede0ec8121381426d1c30c2ee701c2ee7026bdf9749f0f10946d5757f",
+      "BH-028.png": "3e086b5e2eef763f0220dad9e0c5ebc5be721f444387081ee28c947422073274",
+      "BH-029.png": "3654fa5fe210391e471e179fe19124b20411e2663069be4880d9b7ef423cef39",
+      "BH-030.png": "cffd701fc1ada900927f6da60cf948dee9cacb0b927a7234f10786cd5e523dc0"
+    },
+    "images_match_freeze": true,
+    "images_opened": true
+  },
+  "counts": {
+    "cases": 30,
+    "turns_total": 36,
+    "turn_labels_written": 36,
+    "routes": {
+      "Normal mode": 34,
+      "Message-template mode": 1,
+      "Intake": 1,
+      "Limited-background mode": 0,
+      "Scope": 0
+    },
+    "overall": {
+      "Green": 11,
+      "Yellow": 11,
+      "Gray": 2,
+      "Red": 10,
+      "null": 2
+    }
+  },
+  "images": {
+    "hash_algorithm": "sha256",
+    "files": [
+      {
+        "name": "BH-027.png",
+        "path": "images/BH-027.png",
+        "sha256": "5b1650dede0ec8121381426d1c30c2ee701c2ee7026bdf9749f0f10946d5757f",
+        "bytes": 492816,
+        "dimensions_px": [
+          1360,
+          980
+        ],
+        "mode": "RGB",
+        "opened_and_verified": true
+      },
+      {
+        "name": "BH-028.png",
+        "path": "images/BH-028.png",
+        "sha256": "3e086b5e2eef763f0220dad9e0c5ebc5be721f444387081ee28c947422073274",
+        "bytes": 322389,
+        "dimensions_px": [
+          830,
+          689
+        ],
+        "mode": "RGB",
+        "opened_and_verified": true
+      },
+      {
+        "name": "BH-029.png",
+        "path": "images/BH-029.png",
+        "sha256": "3654fa5fe210391e471e179fe19124b20411e2663069be4880d9b7ef423cef39",
+        "bytes": 325539,
+        "dimensions_px": [
+          1100,
+          700
+        ],
+        "mode": "RGB",
+        "opened_and_verified": true
+      },
+      {
+        "name": "BH-030.png",
+        "path": "images/BH-030.png",
+        "sha256": "cffd701fc1ada900927f6da60cf948dee9cacb0b927a7234f10786cd5e523dc0",
+        "bytes": 880065,
+        "dimensions_px": [
+          1280,
+          900
+        ],
+        "mode": "RGB",
+        "opened_and_verified": true
+      }
+    ],
+    "labeling_note": "Image ratings rely on cases.json visual_conditions/legibility_notes plus pixel inspection; illegible regions were not token-guessed."
+  },
+  "validation": {
+    "checks_passed": [
+      "gold-labeler-2.json top-level keys exactly {labeler, labels}",
+      "labeler metadata keys exactly {context_id, model_id, model_family, display_name}",
+      "30 case_id labels BH-001..BH-030 in order",
+      "36 turn_labels with 1-based contiguous turn_index",
+      "overall equals max(responsibility, tone) with Red>Gray>Yellow>Green on rated routes",
+      "non-review routes Intake/Message-template mode have null ratings",
+      "topic/fact lists sorted unique; requiredsubseteq allowed; critical_invariants nonempty subset of rubric tokens",
+      "cases.json and four PNG sha256 values match case-freeze.json",
+      "four PNGs open as PNG and verify()"
+    ]
+  },
+  "content_declarations": {
+    "schema": "Each label item is {case_id, turn_labels}; each turn includes route, responsibility, tone, overall, required_question_topics, allowed_question_topics, required_revision_facts, allowed_revision_facts, critical_invariants, rationale",
+    "no_skill_output_seen": true,
+    "turn_index_base": 1
+  },
+  "limitations": [
+    "Topic and fact tokens are concise canonical kebab-case chosen by this labeler; another isolated labeler may choose synonymous tokens.",
+    "Incidental schema discovery used freeze_holdout.py field sets to satisfy exact envelope validation without reading other label files."
+  ]
+}
