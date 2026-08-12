@@ -1,5 +1,12 @@
 # Workplace Survival Explicit Invocation Results
 
+## Evidence policy
+
+- Canonical evidence requirements: `tests/evidence/README.md`.
+- T11.2 results are historical summary-only records from the disabled-model-invocation configuration.
+- The T13.10 environment-limited current-configuration record is stored in `tests/evidence/t13-10-validation.json`.
+- AT-10 remains the applicable final-configuration explicit-invocation regression.
+
 ## Summary
 
 - Slug used: `workplace-survival`.

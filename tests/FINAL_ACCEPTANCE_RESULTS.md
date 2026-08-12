@@ -1,5 +1,12 @@
 # Workplace Survival Final Acceptance Results
 
+## Evidence status
+
+- Canonical evidence requirements: `tests/evidence/README.md`.
+- The acceptance results below predate T13.10 and are historical summary-only records.
+- T13.10 validates the evidence format with representative records for every active suite.
+- This file must not claim evidence-complete final acceptance until the full T13.12 rerun is recorded.
+
 ## Behavioral validation
 
 - Functional cases TC-01 through TC-32: 32 passed, 0 failed.

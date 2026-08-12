@@ -1,5 +1,12 @@
 # Workplace Survival Interaction Quality Results
 
+## Evidence policy
+
+- Canonical evidence requirements: `tests/evidence/README.md`.
+- Runs before T13.10 are historical summary-only results.
+- The T13.10 representative interaction-quality record is stored in `tests/evidence/t13-10-validation.json`.
+- A full evidence-complete suite rerun remains pending under T13.12.
+
 ## Summary
 
 - Cases executed: 6.

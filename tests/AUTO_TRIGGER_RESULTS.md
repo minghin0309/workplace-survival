@@ -1,5 +1,12 @@
 # Workplace Survival Auto-Trigger Results
 
+## Evidence policy
+
+- Canonical evidence requirements: `tests/evidence/README.md`.
+- Runs before T13.10 are historical summary-only results.
+- The T13.10 routing-semantic record is stored in `tests/evidence/t13-10-validation.json`.
+- A live probabilistic dispatcher run is not available in this environment.
+
 ## Configuration
 
 - `disable-model-invocation`: Removed for auto-trigger validation.

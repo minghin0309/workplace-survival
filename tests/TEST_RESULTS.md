@@ -1,5 +1,12 @@
 # Workplace Survival Functional Test Results
 
+## Evidence policy
+
+- Canonical evidence requirements: `tests/evidence/README.md`.
+- Runs recorded before T13.10 are historical summary-only results, not evidence-complete executions.
+- T13.10 representative functional records are stored in `tests/evidence/t13-10-validation.json`.
+- A full evidence-complete suite rerun remains pending under T13.12.
+
 ## Current status
 
 - Cases currently specified: 111.

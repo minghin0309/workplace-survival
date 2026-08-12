@@ -146,7 +146,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - [ ] Completed
 
 - Source requirement: Engineering evidence gap — `SPEC.md` section 7 requires passing suites, while current result files do not preserve enough execution evidence to reproduce every PASS. No product behavior change.
-- Owner files: existing suite files matching `tests/*_RESULTS.md`.
+- Owner files: existing suite files matching `tests/*_RESULTS.md`, `tests/evidence/`, and `PUBLISH_MANIFEST.md`.
 - Acceptance:
   - each execution records input, model, execution time, raw output, and assertion outcome;
   - automated, manual semantic, image-attached, and environment-limited checks are distinguished;
