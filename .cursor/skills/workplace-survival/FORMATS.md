@@ -4,12 +4,12 @@ Use the applicable format exactly in the listed section order. Keep the instruct
 
 ## Intake format
 
-Use this format when a review cannot start because Data A, Data B, a sendable-body boundary, or material image confirmation is required:
+Use this format when a review cannot start because Data A, Data B, A/B classification, a sendable-body boundary, or material image confirmation is required:
 
 ```markdown
 ## Information needed
 
-- Missing: [Data A / Data B / sendable-body boundary / image confirmation]
+- Missing: [Data A / Data B / A-B classification / sendable-body boundary / image confirmation]
 - Next step: [the exact information or confirmation the user must provide]
 ```
 
@@ -67,6 +67,9 @@ Apply these fixed values:
 - If a partial revision is safe, use clear descriptive placeholders for unresolved required information.
 - When Data B contains embedded content, add `Evaluated Data B: [verbatim new body]` and `Excluded from evaluation: [quoted / forwarded / reply-header / original-message / chat-preview content]` under `Background understanding`.
 - Identify the excluded content type without reproducing it as Data A.
+- When mixed text was safely auto-classified, add `Adopted Data A: [verbatim background payload]` and `Evaluated Data B: [verbatim new body after embedded-content exclusions]` under `Background understanding`.
+- Semantic role labels identify boundaries but are not part of either payload unless the user explicitly includes them.
+- If auto-classified Data B contains embedded content, use one `Evaluated Data B` entry for the new body and one `Excluded from evaluation` entry for the embedded content; do not add a second evaluated-draft entry.
 
 ## Normal review
 

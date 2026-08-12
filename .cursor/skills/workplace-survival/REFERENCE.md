@@ -81,6 +81,32 @@ If markers are malformed, nested inconsistently, or permit more than one reasona
 
 If removing clearly embedded content leaves no new body, treat Data B as missing.
 
+### Mixed text without A/B labels
+
+Auto-classify one plain-text submission into Data A and Data B only when explicit semantic wording identifies both roles and their complete boundaries. Valid patterns include:
+
+- `My manager wrote: [background]` followed by `I plan to send: [draft]`;
+- `Background: [background]` followed by `Draft: [draft]`;
+- equivalent unambiguous wording in the user's language.
+
+The role labels establish provenance but are not part of either payload unless the user explicitly includes them in the content itself.
+
+Do not auto-classify from formatting alone. Paragraph order, quotation marks, indentation, colons, or the fact that one sentence sounds like a requirement are insufficient.
+
+Use intake instead when:
+
+- speaker roles are unclear in a multi-person conversation;
+- more than one passage could be the user's draft;
+- a passage could reasonably be either background or sendable text;
+- labels identify speakers but not which content the user intends to send;
+- a labelled region has no reliable end boundary.
+
+Request only the unresolved role or boundary, then stop without ratings or revision. Preserve a clearly bounded Data A or Data B while requesting the other; request both only when both remain unresolved.
+
+Once an explicit or semantic outer label has classified a complete payload as Data A or Data B, do not recursively reclassify phrases inside that payload merely because they contain wording such as `my manager wrote` or `I plan to send`. Apply the embedded-content rules to quoted or forwarded regions inside classified Data B.
+
+After safe auto-classification, show `Adopted Data A` with the exact background payload and `Evaluated Data B` with the exact new body after embedded-content exclusions. This provenance display does not promote Data B to Data A.
+
 ## Review modes
 
 ### Normal mode

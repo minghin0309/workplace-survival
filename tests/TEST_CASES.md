@@ -1124,6 +1124,167 @@ I will finish this on Thursday.
 - Rating the manager's quoted tone as the user's tone.
 - Revising the blockquote.
 
+## T13.2 — Mixed input classification
+
+### TC-44 — Explicit semantic boundaries allow auto-classification
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this.
+My manager wrote: Alex is the confirmed deployment owner.
+I plan to send: Alex owns the deployment.
+```
+
+**Expected**
+
+- Auto-classifies `Alex is the confirmed deployment owner.` as Data A.
+- Auto-classifies `Alex owns the deployment.` as Data B.
+- Shows `Adopted Data A: Alex is the confirmed deployment owner.` and `Evaluated Data B: Alex owns the deployment.` under background understanding.
+- Excludes the semantic role labels from both payloads.
+- Rates responsibility clarity, tone, and overall status green.
+
+**Forbidden**
+
+- Asking for A/B labels despite the unambiguous semantic boundaries.
+- Treating both sentences as Data B.
+- Including `My manager wrote:` or `I plan to send:` in the classified payloads.
+- Omitting the provenance display.
+
+### TC-45 — Unlabelled paragraphs require explicit classification
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this.
+The report belongs to Alex and Friday was mentioned.
+Alex will send the report Friday.
+```
+
+**Expected**
+
+- Uses the intake format.
+- Identifies A-B classification as missing.
+- Requests explicit Data A and exact Data B.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Assuming the first paragraph is Data A from its position or wording.
+- Assuming the second paragraph is Data B from its position or wording.
+- Using either paragraph to verify the other.
+
+### TC-46 — Unclear multi-person roles stop classification
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my manager message.
+Pat: Morgan owns the release.
+Lee: Taylor owns the release.
+Morgan: I will send it tonight.
+```
+
+**Expected**
+
+- Uses the intake format.
+- Identifies A-B classification as missing.
+- Requests identification of the manager, user, background, and exact message to send.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Inferring roles from speaker order, names, or sentence content.
+- Selecting an owner or draft.
+- Treating every line as Data A or every line as Data B.
+
+### TC-47 — Multiple candidate drafts require selection
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this.
+Background: Alex is the confirmed owner and Friday is the confirmed deadline.
+Possible wording 1: Alex will send it Friday.
+Possible wording 2: I can probably get it out next week.
+```
+
+**Expected**
+
+- Recognizes that the background boundary is clear but Data B is not uniquely selected.
+- Uses the intake format.
+- Requests which candidate is the actual Data B.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Choosing the first or second candidate.
+- Combining both candidates.
+- Rating either candidate before selection.
+
+### TC-48 — Explicit Data B label prevents phrase-based reclassification
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Alex is the confirmed report owner and Friday is the confirmed deadline.
+Data B: I wrote "my manager wrote about Alex" in my notes, and I will send the report Friday.
+```
+
+**Expected**
+
+- Respects the explicit Data B label.
+- Evaluates the complete Data B payload, including `my manager wrote about Alex`.
+- Rates responsibility clarity, tone, and overall status green.
+- Does not show `Adopted Data A` provenance for any phrase extracted from Data B.
+
+**Forbidden**
+
+- Reclassifying the quoted phrase as Data A.
+- Splitting Data B at `my manager wrote`.
+- Asking for A/B classification.
+
+### TC-49 — Auto-classified draft still applies embedded-content boundaries
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this.
+My manager wrote: Friday is the confirmed report deadline.
+I plan to send:
+I will send the report Friday.
+
+> My manager wrote: Send it Monday.
+```
+
+**Expected**
+
+- Auto-classifies `Friday is the confirmed report deadline.` as Data A.
+- Treats the complete region after `I plan to send:` as the outer Data B payload without recursively reclassifying its phrase.
+- Evaluates only `I will send the report Friday.` as the new body.
+- Shows one `Adopted Data A`, one `Evaluated Data B`, and one `Excluded from evaluation` entry.
+- Rates responsibility clarity, tone, and overall status green.
+
+**Forbidden**
+
+- Adding Monday or the nested `My manager wrote:` blockquote to Data A.
+- Showing a second `Evaluated Data B` entry containing the blockquote.
+- Reporting a Friday/Monday contradiction.
+- Revising the blockquote.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -1134,3 +1295,4 @@ I will finish this on Thursday.
 - T9.6 state and case isolation: TC-26–TC-30.
 - T9.7 short acknowledgements: TC-31–TC-32.
 - T13.1 quoted, forwarded, and nested content: TC-33–TC-43.
+- T13.2 mixed input classification: TC-44–TC-49.

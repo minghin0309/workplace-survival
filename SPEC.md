@@ -48,6 +48,14 @@ Clearly marked quotations, forwarded material, reply headers, original-message b
 
 Preserve embedded content unchanged if reproducing the complete message. If its boundary is materially ambiguous, request the exact body and stop without ratings. If no body remains after exclusion, treat Data B as missing.
 
+### Mixed input without A/B labels
+
+Auto-classify background and draft text only when explicit semantic wording identifies both roles and their boundaries, such as `My manager wrote: ...` followed by `I plan to send: ...`.
+
+Paragraph order, quotation marks, indentation, colons, and workplace convention are not sufficient by themselves. If speaker roles, passage roles, or the intended draft have more than one reasonable interpretation, request explicit labels for the unresolved role and stop without ratings. Retain any role whose complete boundary is already unambiguous.
+
+After safe auto-classification, disclose the exact Data A payload adopted and the exact new body evaluated after embedded-content exclusions. Role labels identify boundaries but are not part of either payload unless the user explicitly includes them.
+
 ### Modes
 
 - **Normal mode:** requires Data A and identifiable Data B.
@@ -118,6 +126,8 @@ Every review shows:
 4. overall status;
 5. up to three material confirmation questions;
 6. a minimal revision or the applicable no-revision/unavailable result.
+
+When mixed text is auto-classified, background understanding also discloses the exact adopted Data A payload and evaluated new body.
 
 Exact section order, fixed values, intake output, limited-background output, image disclosure, and template output are defined only in `.cursor/skills/workplace-survival/FORMATS.md`.
 
