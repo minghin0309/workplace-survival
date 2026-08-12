@@ -2,10 +2,10 @@
 
 ## Current status
 
-- Cases currently specified: 92.
-- Latest T13.7 functional execution: 92 passed and 0 failed.
+- Cases currently specified: 99.
+- Latest T13.8 functional execution: 99 passed and 0 failed.
 - Text cases: 86 passed and 0 failed.
-- Attached-image cases TC-21–TC-25 and TC-89: 6 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
+- Attached-image cases: 13 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
 
 ## Initial T10.1 run summary
 
@@ -265,3 +265,21 @@ New-case result: 8 passed, 0 failed.
 - Independent pre-test review found no remaining instruction/data-isolation, outer-request, Green-control, citation, image, ownership, or ordinary-content conflict.
 
 Current complete functional result: 92 passed, 0 failed.
+
+## T13.8 material OCR and image-order boundaries — 2026-08-12
+
+### New image cases
+
+- TC-93–TC-95: 3 passed, 0 failed — uncertain negation, date digit, and low-contrast owner name in Data B.
+- TC-96–TC-98: 3 passed, 0 failed — struck deadline, cropped possible negation, and unclear group order/authority in Data A.
+- TC-99: PASS — uncertain commitment word in Data B.
+
+Each new PNG was attached, opened, and visually inspected. New-case result: 7 passed, 0 failed.
+
+### Regression
+
+- Existing text cases: 86 passed, 0 failed.
+- Existing image cases TC-21–TC-25 and TC-89: 6 passed, 0 failed with every PNG attached and visually inspected.
+- Independent pre-test review found no remaining token-materiality, fixture-validity, Data B intake, Data A Gray, strikethrough, crop, order/source, ownership, T13.7, or T13.9 conflict.
+
+Current complete functional result: 99 passed, 0 failed.

@@ -27,7 +27,7 @@
 
 ## Existing functional-suite audit
 
-The 92 functional cases also verify question limits, neutral answer structures, resolved-question handling, green-message behavior, minimal revision, risk wording, one-target short acknowledgements, paired Tone controls, responsibility boundaries, and prompt-like data isolation. In the latest T13.7 regression, all 92 functional cases passed, including six attached-image executions.
+The 99 functional cases also verify question limits, neutral answer structures, resolved-question handling, green-message behavior, minimal revision, risk wording, one-target short acknowledgements, paired Tone controls, responsibility boundaries, prompt-like data isolation, and material OCR/order confirmation. In the latest T13.8 regression, all 99 functional cases passed, including 13 attached-image executions.
 
 ## T10.3 conclusion
 
@@ -56,3 +56,9 @@ All targeted interaction-quality cases were rerun after the post-T11.5 changes a
 - IQ-01–IQ-06: 6 passed, 0 failed across 10 response rounds.
 - Required assertions: 18 of 18 passed.
 - IQ-01–IQ-06 contain no prompt-like case; T13.7 format, evidence, citation, and outer-request assertions are recorded in functional TC-85–TC-92.
+
+## T13.8 regression — 2026-08-12
+
+- IQ-01–IQ-06: 6 passed, 0 failed across 10 response rounds.
+- Required assertions: 18 of 18 passed.
+- IQ-01–IQ-06 contain no OCR or image-order case; T13.8 confirmation assertions are recorded in attached-image functional TC-93–TC-99.

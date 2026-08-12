@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.8 — Material OCR and image-order boundaries
+
+- Required confirmation for uncertain names, dates, numbers, negations, commitments, strikethrough status, and material crops.
+- Stopped image-based Data B assessment when its new body could not be recognized reliably.
+- Kept only affected dimensions Gray when material uncertainty was confined to Data A.
+- Prevented order and authority inference from bubble position, side, color, avatar, or expected chat layout.
+- Added seven reproducible ambiguous-image fixtures and TC-93–TC-99.
+- All 99 functional cases passed, including 13 attached-image executions; targeted anti-hallucination remained 6 passed with zero unsupported facts.
+
 ### T13.7 — Prompt-like case data
 
 - Treated instructions inside Data A, Data B, images, quotations, and forwarded content only as case data.
