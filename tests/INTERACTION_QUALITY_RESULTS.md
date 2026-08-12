@@ -5,7 +5,7 @@
 - Canonical evidence requirements: `tests/evidence/README.md`.
 - Runs before T13.10 are historical summary-only results.
 - The T13.10 representative interaction-quality record is stored in `tests/evidence/t13-10-validation.json`.
-- A full evidence-complete suite rerun remains pending under T13.12.
+- T13.12 evidence-complete records are stored in `tests/evidence/t13-12-final.json`.
 
 Representative T13.10 record: `t13.10-iq-iq01-20260812`.
 
@@ -77,3 +77,16 @@ All targeted interaction-quality cases were rerun after the post-T11.5 changes a
 - IQ-01–IQ-06: 6 passed, 0 failed across 10 response rounds.
 - Required assertions: 18 of 18 passed.
 - IQ-01–IQ-06 contain no explicit recipient-scope case; T13.9 role and scope assertions are recorded in functional TC-106–TC-111.
+
+## T13.12 evidence-complete record index
+
+- Evidence file: `tests/evidence/t13-12-final.json`.
+- Records:
+  - `t13.12-iq-01-20260812`, `t13.12-iq-02-20260812`, `t13.12-iq-03-20260812`, `t13.12-iq-04-20260812`, `t13.12-iq-05-20260812`, `t13.12-iq-06-20260812`
+
+## T13.12 final result
+
+- Cases: 6 passed, 0 failed.
+- Response rounds: 10.
+- Required assertions: 18 of 18 passed.
+- All records satisfy the T13.10 evidence schema.

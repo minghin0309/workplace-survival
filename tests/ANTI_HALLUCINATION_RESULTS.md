@@ -5,7 +5,7 @@
 - Canonical evidence requirements: `tests/evidence/README.md`.
 - Runs before T13.10 are historical summary-only results.
 - The T13.10 representative anti-hallucination record is stored in `tests/evidence/t13-10-validation.json`.
-- A full evidence-complete suite rerun remains pending under T13.12.
+- T13.12 evidence-complete records are stored in `tests/evidence/t13-12-final.json`.
 
 Representative T13.10 record: `t13.10-ah-ah01-20260812`.
 
@@ -100,3 +100,16 @@ All targeted anti-hallucination cases were rerun after the post-T11.5 changes an
 - AH-01–AH-06: 6 passed, 0 failed across 7 response rounds.
 - Unsupported or fabricated facts: 0.
 - AH-01–AH-06 contain no recipient-scope case; those assertions are recorded in functional TC-106–TC-111.
+
+## T13.12 evidence-complete record index
+
+- Evidence file: `tests/evidence/t13-12-final.json`.
+- Records:
+  - `t13.12-ah-01-20260812`, `t13.12-ah-02-20260812`, `t13.12-ah-03-20260812`, `t13.12-ah-04-20260812`, `t13.12-ah-05-20260812`, `t13.12-ah-06-20260812`
+
+## T13.12 final result
+
+- Cases: 6 passed, 0 failed.
+- Response rounds: 7.
+- Unsupported or fabricated facts: 0.
+- All records satisfy the T13.10 evidence schema.

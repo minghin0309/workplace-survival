@@ -5,7 +5,7 @@
 - Canonical evidence requirements: `tests/evidence/README.md`.
 - T11.2 results are historical summary-only records from the disabled-model-invocation configuration.
 - The T13.10 environment-limited current-configuration record is stored in `tests/evidence/t13-10-validation.json`.
-- AT-10 remains the applicable final-configuration explicit-invocation regression.
+- FCI-01–FCI-03 and AT-10 are the applicable final-configuration semantic regressions.
 
 Representative T13.10 record: `t13.10-ei-ei01-notrun-20260812` (`NOT_RUN`, not counted as a pass).
 
@@ -37,3 +37,16 @@ The final published frontmatter omits `disable-model-invocation` to enable autom
 - The Normal, Limited-background, and Message-template behavioral paths still satisfied their assertions in all three evaluations.
 - AT-10 passed under the current configuration and remains the applicable explicit-invocation regression.
 - Method limitation: behavioral evaluation did not exercise Cursor's live explicit-invocation dispatcher.
+
+## T13.12 evidence-complete record index
+
+- Evidence file: `tests/evidence/t13-12-final.json`.
+- Records:
+  - `t13.12-fci-01-20260812`, `t13.12-fci-02-20260812`, `t13.12-fci-03-20260812`
+
+## T13.12 final result
+
+- Final-configuration cases FCI-01–FCI-03: 3 passed, 0 failed.
+- Normal, Limited-background, and Message-template routing paths passed.
+- Final frontmatter at the recorded runtime commit contains the correct slug and omits `disable-model-invocation`.
+- Limitation: no live Cursor invocation dispatcher was available; the three cases use deterministic routing-semantic evaluation.

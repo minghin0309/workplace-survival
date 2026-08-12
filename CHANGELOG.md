@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.12 — Evidence-complete final acceptance
+
+- Executed all five active behavioral suites with T13.10-compliant raw evidence.
+- Added current final-configuration explicit-invocation cases FCI-01–FCI-03.
+- Passed 136 behavioral cases and one separate automated package check.
+- Opened and validated all 13 image fixtures.
+- Reported T13.11 repeat consistency separately: 14 cases × 3 runs with zero material variations.
+- Replaced stale acceptance claims with current counts, runtime commit, evidence links, and dispatcher limitations.
+
 ### T13.11 — Repeat and variation testing
 
 - Defined canonical expected observations for 14 high-risk and paired-boundary cases.

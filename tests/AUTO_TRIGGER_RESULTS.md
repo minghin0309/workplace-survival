@@ -51,3 +51,17 @@ All four target scenarios triggered, all five excluded scenarios remained exclud
 - AT-07 remained excluded for a clearly non-manager friend message.
 - AT-10 confirmed explicit invocation under the final automatic-invocation configuration.
 - Method limitation: cases were evaluated deterministically against the current frontmatter and expected workflow; this was not a live probabilistic dispatcher run.
+
+## T13.12 evidence-complete record index
+
+- Evidence file: `tests/evidence/t13-12-final.json`.
+- Records:
+  - `t13.12-at-01-20260812`, `t13.12-at-02-20260812`, `t13.12-at-03-20260812`, `t13.12-at-04-20260812`, `t13.12-at-05-20260812`, `t13.12-at-06-20260812`, `t13.12-at-07-20260812`, `t13.12-at-08-20260812`
+  - `t13.12-at-09-20260812`, `t13.12-at-10-20260812`
+
+## T13.12 final result
+
+- Deterministic routing cases: 10 passed, 0 failed.
+- False triggers: 0.
+- Missed triggers: 0.
+- Limitation: no live probabilistic dispatcher was available; these results validate frontmatter-routing semantics, not production trigger variance.

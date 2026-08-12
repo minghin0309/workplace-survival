@@ -5,7 +5,7 @@
 - Canonical evidence requirements: `tests/evidence/README.md`.
 - Runs recorded before T13.10 are historical summary-only results, not evidence-complete executions.
 - T13.10 representative functional records are stored in `tests/evidence/t13-10-validation.json`.
-- A full evidence-complete suite rerun remains pending under T13.12.
+- T13.12 evidence-complete records are stored in `tests/evidence/t13-12-final.json`.
 
 Representative T13.10 records:
 
@@ -325,7 +325,7 @@ Current complete functional result: 111 passed, 0 failed.
 - All five method classes are represented: automated, manual semantic, image attached, routing semantic, and environment limited.
 - Automated validation result: `validated 7 evidence records across 5 suites`.
 - Negative gates rejected four invalid claims: PASS with a failed assertion, environment-limited PASS, unopened image evidence, and invalid UTC time.
-- This validates the evidence mechanism only. Historical summaries remain summary-only, and the full evidence-complete rerun remains pending under T13.12.
+- This validated the evidence mechanism only; the full evidence-complete rerun is recorded in the T13.12 section below.
 
 ## T13.11 repeat consistency — 2026-08-12
 
@@ -361,3 +361,30 @@ Evidence records:
 - Repeat 3: `t13.11-r3-tc-60-20260812`, `t13.11-r3-tc-61-20260812`, `t13.11-r3-tc-62-20260812`, `t13.11-r3-tc-72-20260812`, `t13.11-r3-tc-73-20260812`, `t13.11-r3-tc-74-20260812`, `t13.11-r3-tc-75-20260812`, `t13.11-r3-tc-79-20260812`, `t13.11-r3-tc-83-20260812`, `t13.11-r3-tc-89-20260812`, `t13.11-r3-tc-93-20260812`, `t13.11-r3-tc-106-20260812`, `t13.11-r3-tc-107-20260812`, `t13.11-r3-tc-108-20260812`.
 
 This is a targeted consistency matrix, not the full evidence-complete acceptance rerun required by T13.12.
+
+## T13.12 evidence-complete record index
+
+- Evidence file: `tests/evidence/t13-12-final.json`.
+- Records:
+  - `t13.12-tc-01-20260812`, `t13.12-tc-02-20260812`, `t13.12-tc-03-20260812`, `t13.12-tc-04-20260812`, `t13.12-tc-05-20260812`, `t13.12-tc-06-20260812`, `t13.12-tc-07-20260812`, `t13.12-tc-08-20260812`
+  - `t13.12-tc-09-20260812`, `t13.12-tc-10-20260812`, `t13.12-tc-11-20260812`, `t13.12-tc-12-20260812`, `t13.12-tc-13-20260812`, `t13.12-tc-14-20260812`, `t13.12-tc-15-20260812`, `t13.12-tc-16-20260812`
+  - `t13.12-tc-17-20260812`, `t13.12-tc-18-20260812`, `t13.12-tc-19-20260812`, `t13.12-tc-20-20260812`, `t13.12-tc-21-20260812`, `t13.12-tc-22-20260812`, `t13.12-tc-23-20260812`, `t13.12-tc-24-20260812`
+  - `t13.12-tc-25-20260812`, `t13.12-tc-26-20260812`, `t13.12-tc-27-20260812`, `t13.12-tc-28-20260812`, `t13.12-tc-29-20260812`, `t13.12-tc-30-20260812`, `t13.12-tc-31-20260812`, `t13.12-tc-32-20260812`
+  - `t13.12-tc-33-20260812`, `t13.12-tc-34-20260812`, `t13.12-tc-35-20260812`, `t13.12-tc-36-20260812`, `t13.12-tc-37-20260812`, `t13.12-tc-38-20260812`, `t13.12-tc-39-20260812`, `t13.12-tc-40-20260812`
+  - `t13.12-tc-41-20260812`, `t13.12-tc-42-20260812`, `t13.12-tc-43-20260812`, `t13.12-tc-44-20260812`, `t13.12-tc-45-20260812`, `t13.12-tc-46-20260812`, `t13.12-tc-47-20260812`, `t13.12-tc-48-20260812`
+  - `t13.12-tc-49-20260812`, `t13.12-tc-50-20260812`, `t13.12-tc-51-20260812`, `t13.12-tc-52-20260812`, `t13.12-tc-53-20260812`, `t13.12-tc-54-20260812`, `t13.12-tc-55-20260812`, `t13.12-tc-56-20260812`
+  - `t13.12-tc-57-20260812`, `t13.12-tc-58-20260812`, `t13.12-tc-59-20260812`, `t13.12-tc-60-20260812`, `t13.12-tc-61-20260812`, `t13.12-tc-62-20260812`, `t13.12-tc-63-20260812`, `t13.12-tc-64-20260812`
+  - `t13.12-tc-65-20260812`, `t13.12-tc-66-20260812`, `t13.12-tc-67-20260812`, `t13.12-tc-68-20260812`, `t13.12-tc-69-20260812`, `t13.12-tc-70-20260812`, `t13.12-tc-71-20260812`, `t13.12-tc-72-20260812`
+  - `t13.12-tc-73-20260812`, `t13.12-tc-74-20260812`, `t13.12-tc-75-20260812`, `t13.12-tc-76-20260812`, `t13.12-tc-77-20260812`, `t13.12-tc-78-20260812`, `t13.12-tc-79-20260812`, `t13.12-tc-80-20260812`
+  - `t13.12-tc-81-20260812`, `t13.12-tc-82-20260812`, `t13.12-tc-83-20260812`, `t13.12-tc-84-20260812`, `t13.12-tc-85-20260812`, `t13.12-tc-86-20260812`, `t13.12-tc-87-20260812`, `t13.12-tc-88-20260812`
+  - `t13.12-tc-89-20260812`, `t13.12-tc-90-20260812`, `t13.12-tc-91-20260812`, `t13.12-tc-92-20260812`, `t13.12-tc-93-20260812`, `t13.12-tc-94-20260812`, `t13.12-tc-95-20260812`, `t13.12-tc-96-20260812`
+  - `t13.12-tc-97-20260812`, `t13.12-tc-98-20260812`, `t13.12-tc-99-20260812`, `t13.12-tc-100-20260812`, `t13.12-tc-101-20260812`, `t13.12-tc-102-20260812`, `t13.12-tc-103-20260812`, `t13.12-tc-104-20260812`
+  - `t13.12-tc-105-20260812`, `t13.12-tc-106-20260812`, `t13.12-tc-107-20260812`, `t13.12-tc-108-20260812`, `t13.12-tc-109-20260812`, `t13.12-tc-110-20260812`, `t13.12-tc-111-20260812`, `t13.12-package-01-20260812`
+
+## T13.12 final functional result — 2026-08-12
+
+- Functional cases: 111 passed, 0 failed.
+- Text cases: 98 passed, 0 failed.
+- Attached-image cases: 13 passed, 0 failed; every expected fixture was opened and hash-validated.
+- Automated package check: 1 passed, 0 failed.
+- Evidence records satisfy the T13.10 schema and use runtime commit `c72404b4629833a8ca09d3c01639f47fdbcafedc`.

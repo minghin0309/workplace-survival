@@ -41,6 +41,7 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/evidence/t13-11-plan.json`
 - `tests/evidence/t13-11-repeat.json`
 - `tests/evidence/t13-12-plan.json`
+- `tests/evidence/t13-12-final.json`
 - `tests/evidence/validate_evidence.py`
 - `tests/evidence/validate_final_acceptance.py`
 - `tests/evidence/t13-10-validation.json`
