@@ -1,0 +1,39 @@
+{
+  "mutant_id": "M08",
+  "classification": "KILLED",
+  "killing_cases": [
+    "TC-106"
+  ],
+  "failed_assertions": [
+    {
+      "case_id": "TC-106",
+      "assertion": "Uses the intake format.",
+      "evidence": "The output uses Normal mode and proceeds directly to background understanding and ratings instead of the intake format."
+    },
+    {
+      "case_id": "TC-106",
+      "assertion": "Identifies recipient role as missing.",
+      "evidence": "The output does not identify the mentor's recipient role as missing."
+    },
+    {
+      "case_id": "TC-106",
+      "assertion": "Asks whether the mentor is acting as the user's manager.",
+      "evidence": "The output asks no confirmation question and states that no confirmation is needed."
+    },
+    {
+      "case_id": "TC-106",
+      "assertion": "Produces no ratings or revision before confirmation.",
+      "evidence": "The output produces responsibility, tone, and overall ratings plus a Minimal revision section before confirming the mentor's role."
+    },
+    {
+      "case_id": "TC-106",
+      "assertion": "Assuming that every mentor is a manager.",
+      "evidence": "The output treats the message as in scope for Normal mode without confirming whether the mentor is acting as the user's manager."
+    },
+    {
+      "case_id": "TC-106",
+      "assertion": "Rating the message before recipient scope is established.",
+      "evidence": "The output assigns Green responsibility, tone, and overall ratings although recipient scope was never established."
+    }
+  ]
+}

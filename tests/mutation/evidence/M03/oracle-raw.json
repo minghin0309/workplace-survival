@@ -1,0 +1,27 @@
+{
+  "classification": "KILLED",
+  "killing_cases": [
+    "TC-63",
+    "TC-69"
+  ],
+  "failed_assertions": {
+    "TC-63": [
+      "Expected: Rates responsibility clarity green, tone red, and overall red."
+    ],
+    "TC-69": [
+      "Expected: Rates responsibility clarity green, tone red, and overall red."
+    ]
+  },
+  "evidence": {
+    "TC-63": {
+      "baseline": "Tone must be Red and overall status must be Red for “Your work is useless.”",
+      "actual": "Tone is Yellow and overall status is Yellow.",
+      "notes": "Responsibility clarity is Green as expected; the response identifies the degrading wording and removes it in the minimal revision."
+    },
+    "TC-69": {
+      "baseline": "Tone must be Red and overall status must be Red for “This draft is useless.”",
+      "actual": "Tone is Yellow and overall status is Yellow.",
+      "notes": "Responsibility clarity is Green as expected; the response identifies the global degrading characterization and removes it in the minimal revision."
+    }
+  }
+}

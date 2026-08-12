@@ -1,0 +1,46 @@
+{
+  "mutant": "M05",
+  "classification": "KILLED",
+  "cases": {
+    "TC-79": {
+      "result": "FAIL",
+      "failures": [
+        {
+          "id": "TC-79-E4",
+          "kind": "Expected",
+          "text": "Asks which manager message `ok` acknowledges and which sending instruction currently governs.",
+          "reason": "The response asks only which instruction currently governs; it does not ask which manager message `ok` acknowledges."
+        }
+      ]
+    },
+    "TC-83": {
+      "result": "FAIL",
+      "failures": [
+        {
+          "id": "TC-83-E1",
+          "kind": "Expected",
+          "text": "Uses Wednesday's packing message as the one identifiable reply target.",
+          "reason": "The response instead applies a rule under which `ok` acknowledges all earlier manager messages and instruction blocks."
+        },
+        {
+          "id": "TC-83-E3",
+          "kind": "Expected",
+          "text": "Treats `ok` as acknowledging only the packing target.",
+          "reason": "The response explicitly says `ok` acknowledges both Monday's photo request and Wednesday's packing instruction."
+        },
+        {
+          "id": "TC-83-F1",
+          "kind": "Forbidden",
+          "text": "Claiming that `ok` also acknowledges, completes, or rejects Monday's photo request.",
+          "reason": "The response explicitly claims that `ok` acknowledges Monday's photo request."
+        }
+      ]
+    }
+  },
+  "exact_failure_ids": [
+    "TC-79-E4",
+    "TC-83-E1",
+    "TC-83-E3",
+    "TC-83-F1"
+  ]
+}

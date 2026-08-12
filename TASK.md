@@ -185,7 +185,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.1 — Mutation testing
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Test-quality follow-up after T13 final acceptance; no product behavior change.
 - Owner files: `tests/mutation/`, surviving-mutant regression cases, and `PUBLISH_MANIFEST.md`.

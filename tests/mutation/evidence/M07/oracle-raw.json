@@ -1,0 +1,43 @@
+{
+  "mutant": "M07",
+  "test_case": "TC-93",
+  "classification": "KILLED",
+  "result": "FAIL",
+  "image_behavior": {
+    "image_path": "/tmp/workplace-survival-mutants/m07/tests/fixtures/tc93-uncertain-negation.png",
+    "opened_with_image_capable_reading": true,
+    "open_assertion": "PASS",
+    "interpretation_assertion": "FAIL",
+    "failure": "Although the image was opened with image-capable reading, the response treated the blurred material word as reliably legible and transcribed it as \"not\"."
+  },
+  "exact_failures": [
+    {
+      "assertion": "Uses the intake format because Data B's material negation cannot be recognized reliably.",
+      "observed": "Used \"Normal mode\" and completed an assessment."
+    },
+    {
+      "assertion": "Identifies the blurred word or negation as the required confirmation.",
+      "observed": "Reported \"Confirmation needed: None\" and did not identify the blurred word or negation."
+    },
+    {
+      "assertion": "Requests the exact draft text.",
+      "observed": "Made no request for the exact draft text."
+    },
+    {
+      "assertion": "Produces no ratings or revision.",
+      "observed": "Produced Green responsibility, Green tone, and Green overall ratings, plus a \"Minimal revision\" disposition of \"No revision needed\"."
+    },
+    {
+      "assertion": "Forbidden: Guessing `not`, `now`, or any other word from grammar or Data A.",
+      "observed": "Guessed the blurred word as \"not\"."
+    },
+    {
+      "assertion": "Forbidden: Rating the draft Green or Red from a guessed negation.",
+      "observed": "Rated the draft Green after guessing the negation as \"not\"."
+    },
+    {
+      "assertion": "Forbidden: Silently transcribing a complete sentence.",
+      "observed": "Silently transcribed the complete draft as \"I will not open the boxes.\""
+    }
+  ]
+}

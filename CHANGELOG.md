@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T14.1 — Mutation testing
+
+- Added nine isolated mutants across runtime rules and evidence validation.
+- Separated mutated output generation from frozen-assertion oracle evaluation.
+- Killed all nine non-equivalent mutants for a targeted mutation score of 100%.
+- Preserved raw mutant diffs, system outputs, oracle failures, and context metadata.
+- Confirmed that no mutant changed the baseline runtime or was merged.
+- Recorded that the score validates only the selected defects; blind holdout testing remains pending.
+
 ### T13.12 — Evidence-complete final acceptance
 
 - Executed all five active behavioral suites with T13.10-compliant raw evidence.

@@ -1,0 +1,44 @@
+{
+  "mutant_id": "M07",
+  "classification": "KILLED",
+  "killing_cases": [
+    "TC-93"
+  ],
+  "failed_assertions": [
+    {
+      "case_id": "TC-93",
+      "assertion": "Uses the intake format because Data B's material negation cannot be recognized reliably.",
+      "evidence": "Used \"Normal mode\" and completed an assessment."
+    },
+    {
+      "case_id": "TC-93",
+      "assertion": "Identifies the blurred word or negation as the required confirmation.",
+      "evidence": "Reported \"Confirmation needed: None\" and did not identify the blurred word or negation."
+    },
+    {
+      "case_id": "TC-93",
+      "assertion": "Requests the exact draft text.",
+      "evidence": "Made no request for the exact draft text."
+    },
+    {
+      "case_id": "TC-93",
+      "assertion": "Produces no ratings or revision.",
+      "evidence": "Produced Green responsibility, Green tone, and Green overall ratings, plus a \"Minimal revision\" disposition of \"No revision needed\"."
+    },
+    {
+      "case_id": "TC-93",
+      "assertion": "Forbidden: Guessing `not`, `now`, or any other word from grammar or Data A.",
+      "evidence": "Guessed the blurred word as \"not\"."
+    },
+    {
+      "case_id": "TC-93",
+      "assertion": "Forbidden: Rating the draft Green or Red from a guessed negation.",
+      "evidence": "Rated the draft Green after guessing the negation as \"not\"."
+    },
+    {
+      "case_id": "TC-93",
+      "assertion": "Forbidden: Silently transcribing a complete sentence.",
+      "evidence": "Silently transcribed the complete draft as \"I will not open the boxes.\""
+    }
+  ]
+}
