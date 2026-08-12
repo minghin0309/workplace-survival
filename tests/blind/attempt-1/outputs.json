@@ -1,0 +1,607 @@
+{
+  "freeze_manifest_sha256": "b09b99a3fb8c1ce5c9a0125583a2cf7704f797f9aaf6d70ffd70825945cbc226",
+  "runtime_commit": "f8c4d18c352c017715acfdb8c87f45393b474410",
+  "runtime_sources": [
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "c9a9ad03ffc667ded8938f057cfda7812b5c4383971ac0e80689bae2f129de39"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "e09bee8326fc56d24609d02bd769330d3a3b326c2db99afd0acd105b5162855c"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "runtime_directory": "/tmp/workplace-survival-blind/runtime",
+  "generator_model": {
+    "model_id": "inherit",
+    "model_family": "gpt",
+    "display_name": "GPT-5.6 Sol",
+    "gold_access": false,
+    "filesystem_access_audit_available": false,
+    "limitation": "Separate prompt-restricted contexts; no filesystem access log was available."
+  },
+  "cases": [
+    {
+      "case_id": "BH-001",
+      "generator_context_id": "bc-3ff9c259-c379-5a83-9cae-10392a06c0ea",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:25:59Z",
+          "input_sha256": "88e68481d752748bf9d02bc0b7c51024d98f7d5d2b0036051ea4000f28ac63e0",
+          "case_input_sha256": "43bcf3c4a358152202bf68bf1f7a2222f631c187968c93c24deacc8359e56115",
+          "context_transcript_sha256": "1e63bd73be79d7e2e3c587b478a8e635becd2474f805e50bb9c3b168efe0230f",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Please provide the relevant background for this message, including any requirements, owners, dates, progress, or commitments it should match.\n",
+          "raw_output_sha256": "4bbe35151fd8acacf8c35c4a955e61e4f51cc3e6c588a5a8a7bec0bd166fa8ef",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-002",
+      "generator_context_id": "bc-62ddf49c-5cc7-56a3-a0b0-2f3e70700caa",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:26:25.613Z",
+          "input_sha256": "3b82c1320104ac6129b24724e9411faef61b52440631b335fb0ca9e98ea1f815",
+          "case_input_sha256": "cfcf80edcccbadf590ea9f893caa5ffd92fcb79d46c4a6705114feb68044e271",
+          "context_transcript_sha256": "fd4f22cdf910fa06273e2bb3f43145e60bd2e7d8403f97ee64eab6c00cb3c657",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Daniel Okafor is the author's direct manager, and email is the normal channel for time-off requests.\n- Nothing is scheduled to go live during Sep 14 through Sep 18.\n- Marcus has agreed to cover the author's on-call shifts on Wednesday and Thursday.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message identifies the requested PTO dates, the on-call coverage owner and days, and the next step of filing the request in the HR system after Daniel confirms.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The request is neutral, factual, and courteous.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "raw_output_sha256": "0854a14037ae54726c01ead02254a8e70dc33c30fa0281acaad3c9be6a674c06",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-003",
+      "generator_context_id": "bc-dd7930a6-f63d-58b3-a97b-6c59395e7bf3",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:25:46Z",
+          "input_sha256": "7ccc3b71816eb4026b2db0c30edeff44182bf40befcfef5d2a1d50454ca53f7b",
+          "case_input_sha256": "af02504324176f4ffd92029369fe6bb763cbc04997b04d1e81b0ff47fd3da95d",
+          "context_transcript_sha256": "0806739da26f63f1967086451228c92e3c1df217cd4bd9b23254c81567beec96",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Postgres 14 to 16 migration is running to plan.\n- The stated replica cutover, error-rate, and replication-lag metrics match the actual state of the work.\n- The primary cutover remains scheduled for the Aug 29 maintenance window.\n- The author owns the migration.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message clearly states completed replica cutover, current health metrics, the unchanged primary-cutover timing, and that no action is needed from Yusuf now; it also commits to flagging any change. This is consistent with the confirmed background.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and appropriately direct.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "raw_output_sha256": "b7b571f94b572edbf06e4bf33e47b79c7f4e6fb6f9fa00b8b8a76d9a8e4f7906",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-004",
+      "generator_context_id": "bc-7d8b93e9-3b45-5b26-b434-0956479b2d03",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:26:15.947Z",
+          "input_sha256": "4f23502d22f0d033f22de48ba5ee096df8c5256712f806cda135bc3419b6fb78",
+          "case_input_sha256": "6b50d441463afa1b586546e6dded37d603f72e5294ad33670f06fbce1f5d5e81",
+          "context_transcript_sha256": "7a141b323090cfc831b6d716f72ccbff92815c166218a9ee4373f5bc2c476d95",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Please provide the relevant background for this message, such as any requirements, responsibilities, dates, progress, or commitments Hannah has already established.",
+          "raw_output_sha256": "7d3dc978d4b5ee65861488c664ae4b907470e2bc26d2e57fe609fe62e20e6fdd",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-005",
+      "generator_context_id": "bc-cc9415d6-191b-5b01-9118-0781a43d999f",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:25:55.176Z",
+          "input_sha256": "743e2ed580242c5d2d5068d05768870aaa241ed8e0e2f8f049b961ff3ac2efb9",
+          "case_input_sha256": "19dc27169baa0ac840bfa0c3eb7526542bf0d0042cbeb4e942420fe9b7fc7579",
+          "context_transcript_sha256": "0c7f83dfcb996c7bb065d00a2893cd42a0726c93e42f388f9ca3429c8604781e",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Tomas and Wen stayed late Friday to hold the load generators steady; the load test produced clean numbers at 3x peak and identified the connection pool ceiling.\n- The full writeup is drafted and scheduled for Monday.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message clearly credits Tomas and Wen for their work, reports the completed test result, and states that the full writeup goes out Monday.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is appreciative, factual, and respectful toward all recipients.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "raw_output_sha256": "ae6ac9554f2b65f0780f6d61b291302bd56565e2d0fbdb7edd4a2c1e70142346",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-006",
+      "generator_context_id": "bc-ad4a53dd-255b-5420-bc12-bce292850f50",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:25:54.165Z",
+          "input_sha256": "b636a091516e30cd9099554781aa352e3211a932e8c9b4d0623c70e1274c7d3a",
+          "case_input_sha256": "33cbc40d04ff885d9031bbd4f3379d2b3e38a62239cad3b00d21948fad4d2d33",
+          "context_transcript_sha256": "ba2840c7bffe9f7459d0f25245bfb1fecce6c95ed94a81248166a89a07baea6b",
+          "raw_output": "Quick one: There’s an optional vendor demo Thursday at 2 p.m. for the log search tool. Would you like someone from our side there, or should we skip it? I’m available either way; I just don’t want us to send two people if one is enough.",
+          "raw_output_sha256": "22a300b4f6a47a12f22fa0d8a592006fd1f1f407d26bf56697d217381d5d911b",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-007",
+      "generator_context_id": "bc-450422c0-0cc7-5e53-bbd8-e412f7361149",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:25:58.635255368Z",
+          "input_sha256": "77a3a003525325d67ac28bba193da65c343f16664bf7c595bfa62a178ee7c5a8",
+          "case_input_sha256": "aad8fbfeffb0d7c66aaa0132f4c5a82c49398fe57ad4f957f02be63d423fa0a5",
+          "context_transcript_sha256": "84d24b751f8a4abdba3e801e1cef63ad4bcce476d126cfffe2a6d16baaeba9bd",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- You are the named owner of the nightly reconciliation job.\n- Two weeks ago, you muted the job's failure alert during a noisy-alert cleanup and did not re-enable it.\n- The muted alert is why the Saturday and Sunday failures went unnoticed until Monday.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Yellow\n- Evidence: The message says “we're digging into it” and “expect the backfill to be done” without identifying your ownership of the job, and it omits your role in muting and not re-enabling the failure alert.\n- Communication risk: The collective wording and omitted cause can leave Ana unclear about your responsibility for the incident and the corrective work.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: The repeated collective framing—“we're” and the implied “we” in “expect”—distances the sender from responsibility that the background assigns to them.\n- Communication risk: The wording can read as responsibility shifting even though the rest of the message is neutral and factual.\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ana - heads up that the nightly reconciliation job didn't complete Saturday or Sunday. I own the job, and I had muted its failure alert during the noisy-alert cleanup two weeks ago and didn't re-enable it, so I didn't see the weekend failures until Monday. I'm digging into it now and expect to have the backfill done by Wednesday. It shouldn't affect the month-end close.",
+          "raw_output_sha256": "df50c99c27eb70212819ca2bdcc0086b8f8c3c7359e7d9cadc25f8f06a1e8055",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-008",
+      "generator_context_id": "bc-6d4a0121-f592-5def-9037-dd920a4bc877",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:26:25.993485Z",
+          "input_sha256": "37a9d24593269223d8e48ec9d2bb4c169e20d567e32a979b3d9578cdc41eeeb9",
+          "case_input_sha256": "ab25e72da3cf4a2581d2635585f609aaa45632ec77a62ad5831082c581cb9e4a",
+          "context_transcript_sha256": "86685c13c6dfc065af142670cc926ace3fd2e543e10c1998c5c0a9f485642426",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Please provide the relevant background for this handoff, including confirmed interim owners or agreements and any required deadlines or commitments for the four items.",
+          "raw_output_sha256": "8408021b7ac051275fe6b3109dd0dc46c2dc0eb1de537ff40d02e54830d0ded2",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-009",
+      "generator_context_id": "bc-677bce2b-c1b3-575b-ad6a-ea3dfadb43a5",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:26:41.588445Z",
+          "input_sha256": "a75375665b671cbcdba0c05a8f80fc3ee9de8da934e56004e2ed0053ed59581f",
+          "case_input_sha256": "4fb4ef04428a24bd650f5d2d1e23ed5fd1d6061ccecf673624a0e9629fea4b7e",
+          "context_transcript_sha256": "b0e4f287984831abb401fe70845026f9a718cc5f4f72c59719e9f8824db36acc",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The new export format depends on a platform-team schema change that is still in review with no merge date.\n- Shipping Thursday is not possible without that schema change.\n- Meera relays ship dates to the customer-facing program team.\n- Data B states that QA has a clean run, docs are drafted, and the author will handle the flag flip.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says, “We're on track to ship the new export format Thursday,” but Data A states that shipping Thursday is not possible because the required platform schema change is still in review with no merge date. It also omits that blocking dependency.\n- Communication risk: Meera could relay an unattainable Thursday ship date to the program team without knowing that the date depends on an unmerged schema change.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, with no hostility, blame, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What ship timing, if any, should be communicated while the platform schema change has no merge date?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the revision can give Meera a replacement date or should state that timing remains unconfirmed.\n   - Neutral answer structure: [No ship date is confirmed / The ship date is [date], contingent on the schema change merging by [date] / Other: [timing and dependency]]\n\n## Minimal revision\n\nQA has a clean run and docs are drafted, but we aren't on track to ship the new export format Thursday. It depends on the platform team's schema change, which is still in review with no merge date. I'll handle the flag flip once that change is merged; the ship date is not yet confirmed.",
+          "raw_output_sha256": "e74413b76e1b98ddfce36f89c0f63985a60441e72509d139b4f9bcf185b01e77",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-010",
+      "generator_context_id": "bc-db898513-f26a-5f14-afca-714819d1f3f0",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:43:19.208670Z",
+          "input_sha256": "89500d510f8307721e652e9d52eef9db7428e597c8b8d0b690f75066a8c82321",
+          "case_input_sha256": "485126ccaba11357f7d2872922e2787785d4f18037e5c63a8fbe2ac73158bb17",
+          "context_transcript_sha256": "93dbd5dac140570b5a1362680bfa7995ce1835fab84b03f99416599d44993a2e",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- You made the staging load balancer configuration change that caused production traffic to be routed to a drained pool between 14:05 and 14:40.\n- The summary will be sent to your manager and forwarded into a broader incident review thread.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Yellow\n- Evidence: Data B says \"a misconfiguration in the staging load balancer routed\" the traffic and \"It's been corrected,\" although Data A confirms that you made the configuration change that caused the routing error.\n- Communication risk: The passive wording leaves your role in causing the incident unclear to the broader review audience.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: The passive phrase \"a misconfiguration in the staging load balancer routed\" omits the known actor.\n- Communication risk: The wording can read as distancing the sender from confirmed responsibility for the incident.\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nShort version for the incident thread: a staging load balancer configuration change I made routed a slice of production traffic to a drained pool between 14:05 and 14:40. It's been corrected and we're adding a guardrail so it can't recur.",
+          "raw_output_sha256": "abc32f335db08e14099805bc314f72183ab755a0c000d9db0ac4ae9f91ffb7ae",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-011",
+      "generator_context_id": "bc-5a65f414-87c4-5a59-ad7f-4f840b76e256",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:27:46.865477226Z",
+          "input_sha256": "8f8668d53ca3216dcc810ea8146ff1dcb3257567b26f467db32ae41ddb7c86f7",
+          "case_input_sha256": "ee7b402627eaf9ecab96cd9638b034aae36da145802604220e10ecd8ecbe2b58",
+          "context_transcript_sha256": "5676a966f22b4fbf049665651d84bcae059fb10891120ebec80ae0a74a004ce0",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Please provide the relevant background from Noor, including what she asked you to report or do and any known requirements, owners, or dates for this matter.",
+          "raw_output_sha256": "64a7e9961ac193f307b16c9d7477f80abefb1d5714a516b3883f94586f7fe815",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-012",
+      "generator_context_id": "bc-032fd373-185f-52cd-abc4-6052a48564b8",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:28:17.851258763Z",
+          "input_sha256": "253f69bd9e571b723fe28a2c4d8cf5edeee7dc769bd0366ba59d0f4fb6a54c8a",
+          "case_input_sha256": "b87892e4846eee54010f0c12c89a2f183ca69aaba65942d94e4fae05c2db6020",
+          "context_transcript_sha256": "173c138e5826a92c2711b4bdd1a4ca700b77ede561c7c2ce45b8f101849153db",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The design spec remained unreviewed for nine days.\n- Toby was out sick for five of those days.\n- Sam Ortiz is the author's manager and is a peer of the design team's manager.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B identifies the blocked design review, its impact on the steering-group update, and asks Sam to raise the issue with the design side.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Red\n- Evidence: \"Toby sat on the spec for nine days\" assigns Toby the full delay even though Data A says he was out sick for five of those days; \"tired of covering for that team\" generalizes blame to the whole team; and \"me asking clearly does nothing\" is dismissive.\n- Communication risk: The wording presents a serious personalized fault claim that the background does not support and can turn an operational escalation into blame.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nThe design spec has been unreviewed for nine days, and the delay is now affecting our update to the steering group. I've raised it with the design team, but it remains unresolved. Can you take it up with their manager?",
+          "raw_output_sha256": "4478d86e313cd5c9505521b06edbcdc8e82d51453f3d429ec41bb4cc9f59025d",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-013",
+      "generator_context_id": "bc-7175158e-0a68-551a-8b5a-cb41f30a9fb0",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:43:18Z",
+          "input_sha256": "4dd1ebb657e6e8a16cc11779fca6cb5ef7aed87e2ea490c67f3cf3b4a3b7e06d",
+          "case_input_sha256": "ffb5b527862327bdfb78cbec836e7f1a20a6af4534c1154d6b4918301c3180a9",
+          "context_transcript_sha256": "722a14533963d5b5a0a3217cf553dcb323d153f9d880d72a9df37bd57651c367",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- PR-4412 has been open for six weeks and is for a $900 license.\n- Beatrice Kohl is the author's manager and sits on the internal tooling budget committee with the procurement lead.\n- The procurement lead designed the workflow, is Beatrice's peer, and is not on this email.\n- The purpose of the message is to ask for approval of the purchase request.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Yellow\n- Evidence: “Can we please just buy the thing” asks for the purchase generally, but does not clearly ask Beatrice to approve PR-4412.\n- Communication risk: Beatrice may need to clarify whether the requested next step is her approval or another purchasing action.\n\n### Tone\n\n- Rating: Red\n- Evidence: “This process is a joke” globally degrades the workflow, and “Whoever designed this workflow has clearly never had to ship anything on a deadline” makes a personalized, unsupported criticism of its designer.\n- Communication risk: The wording creates a major risk of insulting the procurement lead and shifting attention away from the approval request.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSubject: Re: Purchase request PR-4412\n\nThis request has been open for six weeks and is for a $900 license. Could you please approve PR-4412 so we can purchase it?",
+          "raw_output_sha256": "d863e0c9ad725510770d3608cc09bb0b0de6c9468eaea41c850edc2b59b50b5d",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-014",
+      "generator_context_id": "bc-821296f8-89ac-596c-a968-1a9497d5fd3d",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:14Z",
+          "input_sha256": "31f1d396c85cb8c9fe95bef0dcc6deefe52c3373d08f7b6c9a9e46f6d5b6921e",
+          "case_input_sha256": "c85340d8479ecad5f4d0e7770217a4f732c7aec3015538b1506df668229fc2f4",
+          "context_transcript_sha256": "4a8209ca430365f7f4d4f36b555a5a0a5dcbe32cbb2ced70ca20f3224f2fef71",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The analytics warehouse access request is real and has been raised three times in standup.\n- The access ticket is queued with an IT team that Jonas does not manage.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message clearly states that access is still unavailable and that the sender will continue following up.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Yellow\n- Evidence: “I'm sure everyone has bigger priorities” and “Third time's the charm maybe” add dismissive, blame-tinged asides to the factual reminder that the issue was raised three times.\n- Communication risk: The asides may make the note read as a reproach to Jonas even though the ticket is queued with an IT team he does not manage.\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nAs I mentioned in standup on Monday, Tuesday, and yesterday, I still don't have access to the analytics warehouse. The access ticket is queued with IT, so I'll keep following up.",
+          "raw_output_sha256": "1f39bf208f081581999afba666c61f47445578ab765f42bba3817db770057a0b",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-015",
+      "generator_context_id": "bc-d0ef4d4b-637b-5b72-9d2c-b9c1b0e7d48b",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:28:47.129878889Z",
+          "input_sha256": "537eb9db5169e511ffbae1329bc239590167997875af2878f54feb980393595f",
+          "case_input_sha256": "fe3f4fa86c763653db624af68ae00a3538e7c814102d1f6eae37bb71822462eb",
+          "context_transcript_sha256": "f227fc4a04fe838fc70fc3c386b568bca7aa7d0ac16b4ae4be888f396eed8c8a",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Three of the four regressions were included in the written test plan but were not executed before sign-off.\n- The two QA engineers who signed off are recipients on the reply-all thread, along with the author's manager and the release manager.\n- The author worked the weekend on the rollback.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message clearly identifies QA sign-off, the unexecuted tests, and the author's boundary about future weekend cleanup; these points are consistent with the provided background.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Red\n- Evidence: “shipped garbage” globally degrades the work product, while “this needs saying” and “cleaning up after that team's sign-off” add confrontational, personalized blame in a reply-all message.\n- Communication risk: The degrading and confrontational wording can turn the release-retro discussion into a public attack on the QA recipients instead of a factual account of the process failure.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nReplying all to document what happened: QA signed off on a build with regressions that affected every customer on the EU cluster. Three of the four regressions were in the test plan but were not run before sign-off. I worked the weekend on the rollback, and I'm not available to take on another weekend rollback following QA sign-off.",
+          "raw_output_sha256": "8930423c7f2f452142d7748dbc01ebb1b9b71e2f9d17207cbeb96b440c6f3fef",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-016",
+      "generator_context_id": "bc-d0cc8334-4906-59a0-b154-5e72afacc286",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:16.336308Z",
+          "input_sha256": "7cffd6cec2b98492f784b758dbcccaff7e3ff801ca58b84ea150a099f174fc24",
+          "case_input_sha256": "f3847d7ff86fc2951c20fb6c146ef4b7d1b42886a015f96cfd6686b4f5e32573",
+          "context_transcript_sha256": "93163c93e4e38a4a7d9b2c3a9b677a7549bd7b40962845cf5e5598c15de06799",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The firewall-exception approval request has been open since August 3.\n- The pilot needs outbound port 443 opened for two host addresses, not the entire 10.24.0.0/16 subnet.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B asks netops to open outbound port 443 for the entire 10.24.0.0/16 subnet and tighten it later, while Data A says the pilot needs only two host addresses.\n- Communication risk: Approving the message as written could cause netops to implement an unnecessarily broad firewall rule. The request must be limited to the two pilot hosts.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: “No more delays” and “we've been sitting on this since the 3rd” express task-directed frustration and can read as dismissive when directing the manager to approve and pass on the change.\n- Communication risk: The wording may create avoidable friction around the approval and handoff.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What are the two host addresses that need outbound port 443 for the pilot?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The addresses are required to replace the overbroad subnet-wide rule with the intended pilot scope.\n   - Neutral answer structure: [host address 1] and [host address 2]\n\n## Minimal revision\n\nNeed the firewall exception approved today. We've been waiting since the 3rd. Simplest path: have netops open 443 outbound for [host address 1] and [host address 2] for the pilot, and we can revisit the scope once the pilot is done.",
+          "raw_output_sha256": "4e93904ab438560539645402363c93ddc8520c119a5420616dece9fd6ab55a2b",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-017",
+      "generator_context_id": "bc-57f47933-cf0c-559f-ba83-5d1eac6275a1",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:07.854326759Z",
+          "input_sha256": "3913f54534f47c365f15c776a94157e5092bf588d6816bd43cf13cc63f8a599f",
+          "case_input_sha256": "7eac78c24a01cb9f9e3e09673f32f8c66ab82c68cab50b7e6bd58d554c445869",
+          "context_transcript_sha256": "09f63bd6a3ecc784856a61ab0f93f30d1034e2cd02b271698718a3c820692627",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Please provide the relevant background for this message, including the confirmed milestone, reason for the delay, and current target date.",
+          "raw_output_sha256": "1edcd0580ba14309361f9ccd4cc9793f52583fff50505516755cf34b89963af8",
+          "image_artifacts": []
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": "2026-08-12T10:40:11.752001631Z",
+          "input_sha256": "2887e3ad821a423a67591473b4d386c462273fee6068bd4a575b6e672913f53f",
+          "case_input_sha256": "7eac78c24a01cb9f9e3e09673f32f8c66ab82c68cab50b7e6bd58d554c445869",
+          "context_transcript_sha256": "6639aaf3715f8bd68ff4bc2f65db1e75951a6aa3990f051e0279b637e5158083",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Brightline integration missed the Aug 7 milestone.\n- Brightline's legal review requested added consent fields mid-sprint; the author's team did not decide to expand the scope.\n- The added work cost about a week.\n- The new target is Aug 21.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A says the added consent fields came from Brightline's legal review, but Data B says, “We took on extra scope mid-sprint,” which can attribute the expansion to the author's team.\n- Communication risk: Ingrid could carry an incorrect attribution for the delay into the client-facing account review.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is direct and factual and contains no blame, hostility, threat, or disrespect.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ingrid - we missed the Aug 7 milestone on the Brightline integration. Brightline's legal review added consent fields mid-sprint, which cost us about a week. New target is Aug 21.",
+          "raw_output_sha256": "88dc3b23889d076405b1f001123900a2d72d45baadf76c964235a693fc3b0c59",
+          "image_artifacts": []
+        },
+        {
+          "turn_index": 3,
+          "executed_at_utc": "2026-08-12T10:40:14.224947485Z",
+          "input_sha256": "859f0029a399a9f9715ea09b507efd68afe42f03441c6dcdacb1fe3c4b40c186",
+          "case_input_sha256": "7eac78c24a01cb9f9e3e09673f32f8c66ab82c68cab50b7e6bd58d554c445869",
+          "context_transcript_sha256": "052746e1e581c18f88894a53c77a8bd219d6ed6471c9ebcb6f7fffd2005f38d2",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Brightline integration missed the Aug 7 milestone.\n- Brightline's legal review requested added consent fields mid-sprint; the author's team did not decide to expand the scope.\n- The added work cost about a week.\n- The new target is Aug 21.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The revised draft identifies Brightline's legal review as the source of the two added consent fields, states their roughly one-week effect, gives the Aug 21 target, and clearly says the author confirmed it with Brightline's PM.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, with no personalized blame, hostility, threat, or disrespect.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "raw_output_sha256": "66508074865e4a5dfc888c83a9382cf862d55c5ae663fd34cc8f7e4791f7097f",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-018",
+      "generator_context_id": "bc-9aa52c18-02d4-5096-89be-d839ab8c9586",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:31:05.023Z",
+          "input_sha256": "268de6853fa292634b288360ae0ffbf5780f9087f79ffa9bb174642ab8fa53f3",
+          "case_input_sha256": "464fa782df328080b1e659dc8ab52794680f10b9ee71c509f3b30b7776e3c330",
+          "context_transcript_sha256": "493fe91d7220b3cd50f3f89b3fded75d7d6283b1f32bc6cfa51f010380c43654",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Provide the relevant background for this funnel-instrumentation message, including any requirements or agreement from Paul about scope, timing, and the decision he needs to make.",
+          "raw_output_sha256": "326021a35a1a2e6f0478500f55b2d8d5f379402ec7e4da0f57bb913c25754d42",
+          "image_artifacts": []
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": "2026-08-12T10:31:05.023Z",
+          "input_sha256": "893b6792afd982b639b384b8c12613d443473ca927c6c1c9fc73206e409889fa",
+          "case_input_sha256": "464fa782df328080b1e659dc8ab52794680f10b9ee71c509f3b30b7776e3c330",
+          "context_transcript_sha256": "577dfe611687070d1d8bec3bbdb0ffbf7efbd2c977ea5520d18d62bb08721022",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Provide the relevant background for this funnel-instrumentation message, including any requirements or agreement from Paul about scope, timing, and the decision he needs to make. I’ll use the shorter draft as the current Data B.",
+          "raw_output_sha256": "e06c89dccfc6cf2a0e886d8920b122f9ef9c7c7cd091b1117da1ba58a9b3b178",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-019",
+      "generator_context_id": "bc-f6e1f1d0-7164-506f-a7aa-370596822069",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:28:04.294834Z",
+          "input_sha256": "bee1956a4fe9972ee5041c225d95234af16fc5eda80890bcee619f0520d53d77",
+          "case_input_sha256": "512abd20e379f4dfe7a1bde5d57389a0788798cdb88313f86dd3fae3e0e14894",
+          "context_transcript_sha256": "3acde7c9f4bf6ef88a9c3a759482b8eef1ed3f4e71347a92a6a4e346ee21f219",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Provide the relevant background for this project message, including any confirmed requirements, owners, dates, staffing context, or commitments that should be used to assess the draft.",
+          "raw_output_sha256": "5047a2b5e3253cf5adc789e5188ef0149100a651e4eb1e2e8592482d8dbd9598",
+          "image_artifacts": []
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": "2026-08-12T10:28:23.440682Z",
+          "input_sha256": "6ba2ddbf90a7552aed5764e2a6294dc1314d9b1f87ae303bd69aee5c5cc8ad50",
+          "case_input_sha256": "512abd20e379f4dfe7a1bde5d57389a0788798cdb88313f86dd3fae3e0e14894",
+          "context_transcript_sha256": "0c2aa29d2ce3550b8a2562dd701a499444c6b50083e9045adb4acebcee83c923",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The intended recipient is Kiran, the author's direct manager, rather than Wendy.\n- Kiran already knows about the staffing gap because the author and Kiran discussed it in their 1:1 on Monday.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A changes the recipient to Kiran, but Data B still opens with “Wendy -”.\n- Communication risk: Sending a message addressed to Wendy to Kiran creates a direct recipient mismatch and may make the intended audience unclear.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft neutrally describes the project risk, staffing gap, date risk, and request for a 20-minute discussion.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nKiran - flagging that the search relevance project is at risk. We're two engineers short after the reorg and the Oct 1 date isn't achievable at current staffing. I'd like 20 minutes to walk through options.",
+          "raw_output_sha256": "ed884b883f3a6feea21421855042fcd2f4bae89044f934ab8651ca1886db2cd2",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-020",
+      "generator_context_id": "bc-8884d583-e0ac-5835-a5bb-85d0fe6032ae",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:50:15.681939515Z",
+          "input_sha256": "ef17c95ff3c520a78db868c0c0f1e98e5bd546b4bbfae60cd61d0f6d08e17805",
+          "case_input_sha256": "3615aa8eaff5731abae24ca287a937596aa52eea73e2bb3625614665536075bd",
+          "context_transcript_sha256": "13c8ddd93c1fde755af59bff25d72fecfa9627281c80a09fec80ae907505f8f4",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Tessa Lindgren is the author's manager and coordinates the shared QA environment booking calendar.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Yellow\n- Evidence: The draft says \"we need the shared QA environment locked\" but does not identify whether Tessa should lock it, confirm the booking, or coordinate another owner.\n- Communication risk: Tessa may not know which booking action or handoff the sender is requesting.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft states the environment window and deployment restriction directly without blame, hostility, or disrespect.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\n1. Question: What action do you want Tessa to take for the environment booking?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines how to state the requested action or handoff without assigning an unconfirmed responsibility.\n   - Neutral answer structure: [lock the environment / confirm the booking / coordinate with a specified owner / other: ___]\n\n## Minimal revision\n\nNot provided — answer the question above first",
+          "raw_output_sha256": "b63b9e19e549347207176d526810141371f9f5af39a4b4294ef5f71213a8111b",
+          "image_artifacts": []
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": "2026-08-12T10:50:21.978457812Z",
+          "input_sha256": "b89c40664af4b991ecb50cf86d6ce41123237a72a6ca401e0f6884319687bfe0",
+          "case_input_sha256": "3615aa8eaff5731abae24ca287a937596aa52eea73e2bb3625614665536075bd",
+          "context_transcript_sha256": "54da4eb364aaff53b7bef052ecde90b83c79027a4866c918a26a35462df019d6",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Tessa Lindgren is the author's manager and coordinates the shared QA environment booking calendar.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Yellow\n- Evidence: The current draft uses the corrected Sep 3 through Sep 5 window, but \"we need the shared QA environment locked\" still does not identify whether Tessa should lock it, confirm the booking, or coordinate another owner.\n- Communication risk: Tessa may not know which booking action or handoff the sender is requesting.\n\n### Tone\n\n- Rating: Green\n- Evidence: The current draft states the corrected environment window and deployment restriction directly without blame, hostility, or disrespect.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\n1. Question: What action do you want Tessa to take for the environment booking?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines how to state the requested action or handoff without assigning an unconfirmed responsibility.\n   - Neutral answer structure: [lock the environment / confirm the booking / coordinate with a specified owner / other: ___]\n\n## Minimal revision\n\nNot provided — answer the question above first",
+          "raw_output_sha256": "5271048af775faf1cabaa82b3b589536e6d01bafcfebf43fa1aafa7f25261b20",
+          "image_artifacts": []
+        },
+        {
+          "turn_index": 3,
+          "executed_at_utc": "2026-08-12T10:50:27.064038035Z",
+          "input_sha256": "a10ed6ee1b232072dfec315a0eb55c5a91734a64994eaeb810e0102c5662fbdf",
+          "case_input_sha256": "3615aa8eaff5731abae24ca287a937596aa52eea73e2bb3625614665536075bd",
+          "context_transcript_sha256": "b5f3c0366954a295fb1d5289a995240926a5267894fe99f62762252a42b55e00",
+          "raw_output": "Only the booking window changed:\n\n- First version: Sep 30 through Oct 2\n- Current version: Sep 3 through Sep 5\n\nEverything else in your draft remains the same.",
+          "raw_output_sha256": "ff765bb630b30345508eba9e96e8dc6ee560111c27d0b8710d68754d248dabe8",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-021",
+      "generator_context_id": "bc-f75f626f-a224-569f-a2dd-bf46846bbb03",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:04Z",
+          "input_sha256": "fe88ac84718e5a16cb7af0ac88885b5d97383bb798d54d92a6b3a3a6226632fc",
+          "case_input_sha256": "3a0f524cbad1624aac6e1d14a10ff92804f4cf1534963240e29f7a303340676c",
+          "context_transcript_sha256": "eea3634df812cc075e981b2700f0ea7ddbd5afdccd03da1eb214fbee67dbab11",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Please provide the background relevant to this renewal, including any current instructions from Lucia or procurement that should govern your note.",
+          "raw_output_sha256": "13bb783442898717b764cf2d18db6569b1f6c908710ebbdf818e6f1665e8c707",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-022",
+      "generator_context_id": "bc-6bab023a-5989-5a59-8f72-64a6d3a649e8",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:32:37.622799676Z",
+          "input_sha256": "dae51ba7e302cee10c8e965b45b1d3887aaf5189bc310fe1a17692ae36971198",
+          "case_input_sha256": "3b9d81be7e4c022fc650e5bca4b9712fd609afdfe194e3b9a538047ac161351f",
+          "context_transcript_sha256": "0842ec9a6094111886d973b4711a52a7d9926515b7c25e1f7a5aa3f124854c9a",
+          "raw_output": "## Information needed\n\n- Missing: sendable-body boundary\n- Next step: Please provide the exact text you intend to send to Owen, separate from the pasted chat thread.",
+          "raw_output_sha256": "4c71af09e7555312fee1c0c1d35962e4ac70a51c35a0b8e8cfcc993f15eead50",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-023",
+      "generator_context_id": "bc-41c08c57-4223-5213-b8f0-7311fbf44b60",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:41.640420722Z",
+          "input_sha256": "7fa07f911a084757aa0b851abcf85fec10872620189a91545a62496c09d6e133",
+          "case_input_sha256": "652ce87f017371ce1c16ef15efb5fde15d80757b0fe2d33a6b7418f17d078914",
+          "context_transcript_sha256": "fd0626f6b0e149c0b27e3c4a8f24b119ff6d9e3edb1489ccae70a9485f31ca9e",
+          "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Provide the relevant background for this message, including any known review-policy requirements or process that should govern the expedited design review.",
+          "raw_output_sha256": "ca5659d1cd2b4fe092e7c8cc5efdc8c83d1d509725586efc2c352173e2ef28f0",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-024",
+      "generator_context_id": "bc-c187150a-dfa3-553f-83d1-8192307c97d5",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:32:11Z",
+          "input_sha256": "f85ca287fe21759c42c8788a5257aa58964e4486a41b7ac2ba412a471f0cb791",
+          "case_input_sha256": "1cc338c0afa80869f897de806c5fe4491c0caf54e0472698aa61d19b19f81328",
+          "context_transcript_sha256": "23a83756b65154a22be04d1c8e2f7ee3b161343600e09730eae70e70cbe9d599",
+          "raw_output": "## Message template\n\nHi Sofia,\n\nHere’s my weekly status update for [week ending date].\n\nBilling export pipeline\n- Current status: [current status]\n- Progress this week: [progress made]\n- Next steps: [next steps]\n- Risks or blockers: [risks or blockers, or none]\n- Input or decision needed: [input or decision needed, or none]\n\nPartner API sandbox\n- Current status: [current status]\n- Progress this week: [progress made]\n- Next steps: [next steps]\n- Risks or blockers: [risks or blockers, or none]\n- Input or decision needed: [input or decision needed, or none]\n\n## Information to fill\n\n- Week-ending date\n- Current status for each workstream\n- Progress made this week for each workstream\n- Next steps for each workstream\n- Risks or blockers for each workstream, or none\n- Any input or decision needed for each workstream, or none",
+          "raw_output_sha256": "44cee6dd9e580ac26748b4b998fd83988d340ac91fd3d72f55f67f5daf19268d",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-025",
+      "generator_context_id": "bc-ba3de5c6-bcfa-5638-84c3-5300fd72b47e",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:41:36.915543497Z",
+          "input_sha256": "4753f297aa1c219a0d38bba77231eea185087d02d4d7648389b8f8dfb1e2639e",
+          "case_input_sha256": "ee02cf612f9ea11e1e8d54efce434e0ebb4430d2150a39598689f93355a21deb",
+          "context_transcript_sha256": "4c2057d8428237cccd6da321c0a9c23fefb6ae1c987847dec9cdee56b0e1f03d",
+          "raw_output": "## Information needed\n\n- Missing: recipient role\n- Next step: Confirm whether the message is intended for Rafael (your manager), Cheryl (the program lead), or both.",
+          "raw_output_sha256": "d09184b25f94bef05dadd7eab9e3272a67017738aeb1ca988a116b11bb3ee1d6",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-026",
+      "generator_context_id": "bc-408036a9-bad3-5b14-b02f-9914c8420eb5",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:33.034367Z",
+          "input_sha256": "efc31c4dd6ac6de6e359df5de5cf2e15c3848d2f98c75e587ba324c31e510ac4",
+          "case_input_sha256": "6e5f08f4704d7629097ba38f53be6b67a85fc79745b8e98d1ca01e02aeb9cfd7",
+          "context_transcript_sha256": "1c18015de4a2c96532791a2b09e7bf625aa8a9ca1fee4185aa765c9deddf3c52",
+          "raw_output": "## Message template\n\nHi Martin,\n\nI want to raise a staffing gap for the ingest service. We currently have one person on the on-call rotation, which creates [specific coverage or operational risk].\n\nCould you raise this with the director and ask for [specific staffing support or decision]? It would help to have a response by [decision date or relevant timeframe] because [operational reason].\n\nPlease let me know if you need any additional information from me for that discussion.\n\n## Information to fill\n\n- Specific coverage or operational risk\n- Specific staffing support or decision requested\n- Decision date or relevant timeframe\n- Operational reason for that timeframe",
+          "raw_output_sha256": "0873f1c4c17085ef2183a5ba1a2a22aef5baa20ef69d6adb4f3c661768044442",
+          "image_artifacts": []
+        }
+      ]
+    },
+    {
+      "case_id": "BH-027",
+      "generator_context_id": "bc-7e1d7771-887c-524c-9ac7-46211542b805",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:42:47Z",
+          "input_sha256": "b2fd257ee3546e2bf89ab128b954fd72c44bf8fe311a9a92273f63d33f98529b",
+          "case_input_sha256": "fd5d67f8fb071ae2236f5d5b827ff238d988709aa4a95db552b90571a4da342c",
+          "context_transcript_sha256": "1c8645cebcb4726ebc90d038d09db52bf2b2fa6b358018dc16c0bc6693f94870",
+          "raw_output": "## Information needed\n\n- Missing: image confirmation\n- Next step: Please provide the exact full text of the cropped final line beginning “heads up than a que…” so I can identify the complete unsent draft.",
+          "raw_output_sha256": "dd0d4e59abbb8bf93ae6e548c3df3fc71387836548390b30119c47905dfd8810",
+          "image_artifacts": [
+            {
+              "path": "/tmp/workplace-survival-blind/images/BH-027.png",
+              "sha256": "82e5fe5b16ff85d728e687c633fbdc791f315973b389b6f87b3882c0ba4b63ed",
+              "open": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "BH-028",
+      "generator_context_id": "bc-bc10d628-a6e5-5e62-a17a-44e1a3cb2bd1",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:09Z",
+          "input_sha256": "9227792ba63500572b0958b69eb538eec3399cdb72946c805402b52dcd26af20",
+          "case_input_sha256": "59ab8e5c7ee161c6c00fc9c4be094e7be5864f5fb649a3cf868c7033167b7fe0",
+          "context_transcript_sha256": "d2eedac948f31bbb5ae204d0fd3e35dfc80360d0f349ac60b2392790124affc4",
+          "raw_output": "## Message template\n\nHi Frank,\n\nHere are the draft Q4 capacity numbers from yesterday's planning session:\n\n- Ingest — ask: 3; have: 2\n- Search — ask: [confirm whether 6 or 8 with Dana]; have: 4\n- Billing — ask: 2; have: 2\n\nThe board was marked \"not final.\"\n\n## Information to fill\n\n- Confirmed Search ask: [6 or 8]",
+          "raw_output_sha256": "28cb1260781fac012c6ce72edec23921f71e44d11b26cdad80f8434e0fbdac89",
+          "image_artifacts": [
+            {
+              "path": "/tmp/workplace-survival-blind/images/BH-028.png",
+              "sha256": "82b8ccdde55f32d7674b1e72f823374f085edbcd28d1f21ea5fa1587be4b11bf",
+              "open": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "BH-029",
+      "generator_context_id": "bc-5419342b-3017-5f99-ad93-1daead83646d",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:32.050581633Z",
+          "input_sha256": "354edce8255e15fa2d8cc7641189091242dc57cdfa1c1cd014cb40a8e6e637d2",
+          "case_input_sha256": "ffde2403e8b1d03f5848e9e92bf29bba15b3165b01083bbd3c20e569b943aee1",
+          "context_transcript_sha256": "7b5ec910c0300569804fe15fa7e8b9ee2979fc07da7b51e9f072e65eba9777e7",
+          "raw_output": "## Information needed\n\n- Missing: recipient role\n- Next step: Is at least one recipient your direct, skip-level, or acting manager?\n",
+          "raw_output_sha256": "479d2dc471ad3afbc955a684fa8cc47638921983277dde0c14aa3ee4b9bf9231",
+          "image_artifacts": [
+            {
+              "path": "/tmp/workplace-survival-blind/images/BH-029.png",
+              "sha256": "b1ba44cd4ff1943d7d97b76e86ec805c325d411a339664e0bdb0b236ffb64ea2",
+              "open": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "BH-030",
+      "generator_context_id": "bc-b1311b45-a5d7-5906-a40b-2434bfab0472",
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-12T10:40:13.881871020Z",
+          "input_sha256": "ee46de9466a8c6f3bbb321f8809d8e7a5d3962fe713d9b5eec6da38d693ee4b7",
+          "case_input_sha256": "5e4f204677a4a0bc974906db2a5111c1730c2587c19e0d7bf92ed531ff2a664d",
+          "context_transcript_sha256": "98607e86cc2fc20b963b1bda3c1e5ef013cd0e5d35c46f01e3b39e8e7bb0d41a",
+          "raw_output": "## Information needed\n\n- Missing: image confirmation\n- Next step: Please confirm the exact numerals in the composer draft after “cleared at” and “about”; the photo angle and screen artifacts make those material values unreliable to read.\n",
+          "raw_output_sha256": "f0f8dc1d668e4f2c988ce481cee36622689c859e81cbe4633569c3a4ea28c1d8",
+          "image_artifacts": [
+            {
+              "path": "/tmp/workplace-survival-blind/images/BH-030.png",
+              "sha256": "ca2cfceb818f8b967367b3d80705cd9b831f94dd07bbf28a912e550aadcda7f1",
+              "open": true
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": "2026-08-12T10:40:22.722407649Z",
+          "input_sha256": "28e64a3ceb0914e28dee97c14b9a696729043d4019ec61799d7cde7a89f91e35",
+          "case_input_sha256": "5e4f204677a4a0bc974906db2a5111c1730c2587c19e0d7bf92ed531ff2a664d",
+          "context_transcript_sha256": "eac404a360bc4405c8b86fa6318bc019b40f3847c575884b37599806e726109d",
+          "raw_output": "## Information needed\n\n- Missing: image confirmation\n- Next step: The delay value is now confirmed as 4 hours. Please confirm the exact cleared-at time shown after “queue backlog cleared at”; that remaining material timestamp is not reliably legible in the photo.\n",
+          "raw_output_sha256": "840a3548ae1ce004a81f9e3189b8178ffa825662dbdd4eb11f1b01b2e376906a",
+          "image_artifacts": []
+        }
+      ]
+    }
+  ]
+}

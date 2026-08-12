@@ -1,0 +1,17 @@
+{
+  "case_id": "BH-019",
+  "outputs": [
+    {
+      "turn_index": 1,
+      "output_raw": "## Information needed\n\n- Missing: Data A\n- Next step: Please provide the relevant background from your manager, including any requirements or facts this draft should match."
+    },
+    {
+      "turn_index": 2,
+      "output_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The outage lasted 41 minutes, not four hours.\n- 12,000 meters were affected, but collector retries reduced the loss to about 900 interval reads.\n- The billing and load-study impact points in the draft remain correct.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says the collector network was down roughly four hours and that interval reads were lost for about 12,000 meters, while the corrected background says the outage lasted 41 minutes and only about 900 interval reads were lost.\n- Communication risk: The incident summary materially overstates the outage duration and lost reads.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\n\"Hi Kwabena - writing up Sunday's meter-read outage. The collector network was down for 41 minutes. 12,000 meters were affected, but collector retries meant only about 900 interval reads were lost. Estimation kicks in automatically so billing isn't affected, but the load study team loses a day of granular data.\""
+    },
+    {
+      "turn_index": 3,
+      "output_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The outage lasted 41 minutes, not four hours.\n- 12,000 meters were affected, but collector retries reduced the loss to about 900 interval reads.\n- The billing and load-study impact points in the first draft remain correct.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The revised draft correctly states the 41-minute duration, 12,000 affected meters, roughly 900 lost reads, and billing coverage. However, it says the load study team loses a \"partial day\" of data, while the confirmed background says the original load-study point—that the team loses a day of granular data—remains correct.\n- Communication risk: The revised summary changes a confirmed impact statement and may understate the load-study impact.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\n\"Hi Kwabena - Sunday's collector outage lasted 41 minutes. 12,000 meters were in scope but retries recovered most of them, so we lost roughly 900 interval reads. Estimation covers billing; the load study team loses a day of granular data for those 900. Full timeline in the incident doc.\""
+    }
+  ]
+}
