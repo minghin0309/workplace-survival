@@ -73,7 +73,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T13.5 — Fix responsibility Red and Gray boundaries
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: `SPEC.md` section 4.
 - Owner files: `.cursor/skills/workplace-survival/REFERENCE.md` and `tests/TEST_CASES.md`; update `SPEC.md` first only if the product contract changes.

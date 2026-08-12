@@ -2,9 +2,9 @@
 
 ## Current status
 
-- Cases currently specified: 71.
-- Latest T13.4 text execution: TC-01–TC-20 and TC-26–TC-71, 66 passed and 0 failed.
-- Latest T13.4 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
+- Cases currently specified: 78.
+- Latest T13.5 text execution: TC-01–TC-20 and TC-26–TC-78, 73 passed and 0 failed.
+- Latest T13.5 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
 - Most recent attached-image execution remains the post-T11.5 run recorded below: 5 passed and 0 failed.
 
 ## Initial T10.1 run summary
@@ -210,3 +210,21 @@ New-case result: 14 passed, 0 failed.
 - Independent pre-test boundary review found no remaining directness, accusation-severity, hostility, dismissiveness, threat, degradation, dimension-independence, or ownership conflict.
 
 Fresh text execution result: 66 passed, 0 failed.
+
+## T13.5 responsibility Red and Gray boundaries — 2026-08-12
+
+### New and tightened cases
+
+- TC-11–TC-13 and TC-18: fixed responsibility, tone, and overall ratings now pass.
+- TC-72–TC-74: 3 passed, 0 failed — sole explicit omission, optional suggestion, and ambiguous requirement applicability.
+- TC-75–TC-78: 4 passed, 0 failed — secondary omission, execution gate, conflicting deadline, and fully answered requirements.
+
+New-case result: 7 passed, 0 failed.
+
+### Regression
+
+- Existing text cases TC-01–TC-20 and TC-26–TC-71: 66 passed, 0 failed.
+- Image cases TC-21–TC-25: 5 semantic fixture checks passed, 0 failed; images were not attached and these are not fresh executions.
+- Independent pre-test boundary review found no remaining T13.5 Red/Gray/Yellow, governing-context, referent, Data B answer, or existing-case conflict. Short-acknowledgement target scope remains pending under T13.6.
+
+Fresh text execution result: 73 passed, 0 failed.

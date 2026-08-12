@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.5 — Responsibility Red and Gray boundaries
+
+- Defined ordered responsibility Green, Yellow, Red, and Gray conditions.
+- Classified unanswered sole requests, no-answer replies, and execution-gating omissions as Red.
+- Reserved Gray for conflicting or materially ambiguous governing context and unresolved referents.
+- Classified secondary non-critical omissions as Yellow and optional omissions as Green.
+- Added fixed ratings to TC-11–TC-13 and TC-18 plus TC-72–TC-78; 7 new and 66 existing text cases passed, with five image cases receiving semantic checks only.
+
 ### T13.4 — Tone boundaries
 
 - Defined ordered Green, Yellow, and Red tone conditions for directness, ambiguity, responsibility shifting, accusation, insult, hostility, threat, and degradation.
