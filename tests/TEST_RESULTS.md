@@ -117,7 +117,7 @@ All 32 functional cases pass. The post-T11.5 regression added two short-acknowle
 
 - TC-01–TC-19: 19 passed, 0 failed.
 - TC-20 initially failed because the revision converted informal Cantonese to formal written Chinese.
-- `SPEC.md`, `IMPLEMENTATION_SUMMARY.md`, `REFERENCE.md`, and `EXAMPLES.md` were tightened to preserve visible register markers and replace only the problematic responsibility wording.
+- The specification and runtime reference/examples were tightened to preserve visible register markers and replace only the problematic responsibility wording.
 - TC-20 rerun: PASS — revision remained informal Cantonese: `阿明搞掂啲資料之後，我會交。`
 - TC-21–TC-25 initially could not run because the five generated PNG fixtures were absent.
 - Installed Pillow for the local Python launcher and regenerated all five fixtures with `tests/fixtures/generate_fixtures.py`.

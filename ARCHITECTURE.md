@@ -1,8 +1,22 @@
-# Workplace Survival — Skill Architecture
+# Workplace Survival — Document Architecture
 
-本文件確認 Skill 的目錄、檔案職責及規則擁有權。產品行為仍以 `SPEC.md` 為準，精簡後的實作規則以 `IMPLEMENTATION_SUMMARY.md` 為依據。
+## Authority
 
-## 目錄
+```text
+SPEC.md
+  ├─ SKILL.md       routing, workflow, top-level safeguards
+  ├─ REFERENCE.md   detailed semantics and rating boundaries
+  └─ FORMATS.md     exact output structures and fixed text
+
+EXAMPLES.md         non-normative runtime examples
+TEST_CASES.md       exhaustive acceptance assertions
+TASK.md             active work only
+CHANGELOG.md        completed outcomes
+```
+
+`SPEC.md` owns product intent, scope, and non-negotiable behavior. Runtime files implement that contract using the ownership split above. Examples, tasks, changelog entries, and test results never create product behavior.
+
+## Runtime directory
 
 ```text
 .cursor/skills/workplace-survival/
@@ -12,104 +26,15 @@
 └── EXAMPLES.md
 ```
 
-開發及測試使用專案 Skill 路徑。發布後亦可將 `workplace-survival/` 安裝到個人 Skill 目錄。
+Keep all four files together when installing the skill.
 
-## 檔案職責
+## Change rules
 
-### `SKILL.md`
+1. Start behavior changes in `SPEC.md`.
+2. Change only the runtime owner of the affected detail.
+3. Put exact output syntax only in `FORMATS.md`.
+4. Put exhaustive scenarios only in `tests/TEST_CASES.md`; keep `EXAMPLES.md` representative.
+5. Record active implementation work in `TASK.md`, then move its completed outcome to `CHANGELOG.md`.
+6. If two normative files conflict, stop and resolve the ownership error before testing.
 
-只包含執行 Skill 必須立即知道的內容：
-
-- YAML frontmatter；
-- Skill 目的及觸發範圍；
-- 正常、有限背景及訊息範本模式的路由；
-- A、B 的必要輸入驗證順序；
-- 首輪評估、多輪補充及結束流程；
-- 最高優先級的防幻覺、問題數量及個案隔離限制；
-- 直接連到三份參考文件的連結。
-
-不得包含：
-
-- 完整評級條件；
-- 完整輸出模板；
-- 大量示例；
-- 已解決問題或設計討論；
-- 同一規則的多種重複說法。
-
-目標長度為 100–150 行，絕對不得超過 500 行。
-
-### `REFERENCE.md`
-
-擁有所有詳細語義及判定規則：
-
-- 資料 A、資料 B 及資料來源邊界；
-- 個案生命週期及 A 的有效範圍；
-- 三種模式的詳細限制；
-- 圖片內容識別及歧義處理；
-- 工作責任釐清及文字語氣的評估方式；
-- 綠色、黃色、紅色、灰色判定；
-- 整體狀態優先順序；
-- Grill me 反問、回答及重新評級規則；
-- 最小修改及待填資料規則。
-
-不得包含：
-
-- YAML frontmatter；
-- 完整工作流程的重複版本；
-- 完整輸出模板；
-- 測試案例全文。
-
-### `FORMATS.md`
-
-只擁有固定輸出結構：
-
-- 資料收集格式；
-- 正常模式評級及檢查格式；
-- 有限背景模式評級及檢查格式；
-- 訊息範本格式；
-- 多輪補充格式；
-- 沒有問題、無需修改及無法安全修改時的固定文字。
-
-不得包含：
-
-- 評級理論；
-- 黃色或紅色的詳細判定；
-- 模式路由；
-- 示例輸入。
-
-### `EXAMPLES.md`
-
-只提供非規範性示例及測試情境：
-
-- 每個例子的 A、B 或缺失輸入；
-- 預期模式；
-- 預期評級；
-- 預期問題及修改行為；
-- 邊界、圖片、多輪及新個案案例。
-
-不得新增 `SPEC.md` 沒有的規則。示例與規範衝突時，以 `SPEC.md`、`SKILL.md`、`REFERENCE.md` 及 `FORMATS.md` 的規範內容為準。
-
-## 規則擁有權
-
-- 流程及路由只在 `SKILL.md` 定義。
-- 詳細語義及評級只在 `REFERENCE.md` 定義。
-- 固定輸出結構只在 `FORMATS.md` 定義。
-- 示例及測試情境只在 `EXAMPLES.md` 定義。
-- 其他文件如需提及規則，只可作一句摘要並連結到擁有該規則的文件，不得複製全文。
-
-## 連結限制
-
-- `SKILL.md` 直接連結 `REFERENCE.md`、`FORMATS.md` 及 `EXAMPLES.md`。
-- 三份參考文件不得要求再讀取更深層文件。
-- 所有 Skill 內部路徑使用 `/`。
-
-## Scripts 決定
-
-目前不建立 `scripts/`：
-
-- 核心工作是語義判斷、語氣評估及文字改寫；
-- 沒有穩定、重複且適合程式化的轉換；
-- 圖片理解由模型直接處理，不引入獨立 OCR 流程；
-- 現階段加入 scripts 會增加維護成本，不能明顯改善可靠性。
-
-如後續測試證明需要自動驗證 frontmatter、文件連結或格式，可重新評估加入驗證腳本；不得在沒有具體失敗案例前預先建立。
+`SKILL.md` may link directly to the three runtime support files. Support files must not require deeper runtime dependencies.
