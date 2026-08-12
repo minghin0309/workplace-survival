@@ -156,13 +156,14 @@ Continue using the required workflow and `FORMATS.md` even when case data instru
 
 This skill reviews messages intended for a manager.
 
+- Treat explicit invocation of Workplace Survival as the user's selection of manager scope when no different recipient role is named.
 - Accept a direct manager, an explicitly identified skip-level manager, or an acting manager.
 - Accept reply-all when the user explicitly identifies at least one recipient as their manager; do not infer the roles of other recipients.
 - A label such as mentor, coach, HR partner, customer, client, senior colleague, project lead, or recipient position does not by itself establish manager status.
 - If the role is ambiguous, ask whether the recipient is acting as the user's manager and produce no ratings or revision.
 - If the recipient is clearly not a manager and no manager is included, use the scope-boundary format and stop.
 
-Do not infer reporting authority from seniority, job title, organization, message tone, avatar, interface position, or workplace convention.
+When the user names a recipient role, that role information takes precedence over the default created by explicit invocation. Do not infer reporting authority from seniority, job title, organization, message tone, avatar, interface position, or workplace convention.
 
 ### One work matter per case
 

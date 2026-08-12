@@ -2,9 +2,9 @@
 
 ## Current status
 
-- Cases currently specified: 99.
-- Latest T13.8 functional execution: 99 passed and 0 failed.
-- Text cases: 86 passed and 0 failed.
+- Cases currently specified: 111.
+- Latest T13.9 functional execution: 111 passed and 0 failed.
+- Text cases: 98 passed and 0 failed.
 - Attached-image cases: 13 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
 
 ## Initial T10.1 run summary
@@ -283,3 +283,23 @@ Each new PNG was attached, opened, and visually inspected. New-case result: 7 pa
 - Independent pre-test review found no remaining token-materiality, fixture-validity, Data B intake, Data A Gray, strikethrough, crop, order/source, ownership, T13.7, or T13.9 conflict.
 
 Current complete functional result: 99 passed, 0 failed.
+
+## T13.9 mode, case, and recipient boundaries — 2026-08-12
+
+### New cases
+
+- TC-100–TC-103: 4 passed, 0 failed — limited-background ownership/timing/hostility and related items sharing Data A.
+- TC-104–TC-107: 4 passed, 0 failed — unrelated case split, no-background template, mentor ambiguity, and skip-level manager.
+- TC-108–TC-111: 4 passed, 0 failed — non-manager HR/customer scope, reply-all including a manager, and acting manager.
+
+New-case result: 12 passed, 0 failed.
+
+### Regression and correction
+
+- The first recipient-scope implementation was too strict: 45 existing text cases stopped for role confirmation because they explicitly invoked Workplace Survival without naming another recipient.
+- The route was corrected so explicit invocation with no different named role selects manager scope; named mentor, HR, customer, and other roles still override that default.
+- Final existing text regression: 86 passed, 0 failed.
+- Final attached-image regression: 13 passed, 0 failed with every PNG opened and visually inspected.
+- Independent review found no remaining route-order, limited-mode, case-split, template, mentor, skip-level, HR, customer, reply-all, format, or trigger-scope conflict.
+
+Current complete functional result: 111 passed, 0 failed.

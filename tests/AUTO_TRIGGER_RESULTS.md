@@ -33,3 +33,12 @@ False positives: 0.
 ## T11.3 conclusion
 
 All four target scenarios triggered, all five excluded scenarios remained excluded, and explicit invocation still worked. The 10 cases were rerun after the post-T11.5 changes with 0 false triggers and 0 missed triggers. No description narrowing was required. Automatic model invocation remains enabled because `disable-model-invocation` is absent from the final frontmatter.
+
+## T13.9 routing-description regression — 2026-08-12
+
+- AT-01–AT-10: 10 passed, 0 failed.
+- False triggers: 0.
+- Missed triggers: 0.
+- AT-07 remained excluded for a clearly non-manager friend message.
+- AT-10 confirmed explicit invocation under the final automatic-invocation configuration.
+- Method limitation: cases were evaluated deterministically against the current frontmatter and expected workflow; this was not a live probabilistic dispatcher run.

@@ -4,6 +4,16 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.9 — Mode, case, and recipient boundaries
+
+- Applied ordinary internal responsibility, timing, and tone ratings in Limited-background mode without inferring manager requirements.
+- Kept related items sharing Data A in one case and split unrelated work matters before rating.
+- Added a generic no-background manager template with placeholders and no ratings.
+- Defined direct, skip-level, acting-manager, mentor, HR, customer, and reply-all scope boundaries.
+- Preserved automatic-trigger narrowing while allowing explicit invocation to return scope guidance for named non-manager recipients.
+- Added TC-100–TC-111.
+- After correcting an initially over-strict recipient check, all 111 functional cases passed, including 13 attached-image executions.
+
 ### T13.8 — Material OCR and image-order boundaries
 
 - Required confirmation for uncertain names, dates, numbers, negations, commitments, strikethrough status, and material crops.

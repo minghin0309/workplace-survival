@@ -45,8 +45,8 @@ This skill reviews communication against known information. It does not independ
 
 ### 1. Route the request
 
-- Confirm that the intended recipient or reply-all audience explicitly includes a manager. Direct, skip-level, and acting managers are in scope when identified as such.
-- If manager status is unclear, use the intake format to request the recipient's role and stop.
+- Proceed when the user explicitly invokes this manager-message skill without naming a different recipient role, or when the intended recipient or reply-all audience explicitly includes a direct, skip-level, or acting manager.
+- If the user names another role and its manager status is unclear, use the intake format to request the recipient's role and stop.
 - If the recipient is clearly not a manager and no manager is included, use the scope-boundary format in `FORMATS.md` and stop without ratings or revision.
 - Use the review workflow when the user asks to check, rate, or revise a message intended for a manager.
 - Use message-template mode when the user explicitly asks for a format or template and has not supplied Data B.

@@ -21,3 +21,10 @@ Explicit invocation by the `workplace-survival` slug works with model invocation
 ## Final-configuration regression
 
 The final published frontmatter omits `disable-model-invocation` to enable automatic invocation, so the original EI configuration is historical and is not expected to remain present. After the post-T11.5 changes, AT-10 passed again and confirmed that explicit `workplace-survival` invocation still loads the skill under the final automatic-invocation configuration.
+
+## T13.9 final-configuration check — 2026-08-12
+
+- A strict attempt to rerun EI-01–EI-03 against current frontmatter was not recorded as a suite pass: all three fixtures require the historical `disable-model-invocation: true` field, which is intentionally absent.
+- The Normal, Limited-background, and Message-template behavioral paths still satisfied their assertions in all three evaluations.
+- AT-10 passed under the current configuration and remains the applicable explicit-invocation regression.
+- Method limitation: behavioral evaluation did not exercise Cursor's live explicit-invocation dispatcher.

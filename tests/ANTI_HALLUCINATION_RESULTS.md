@@ -7,8 +7,8 @@
 - Targeted cases passed: 6.
 - Targeted cases failed: 0.
 - Unsupported or fabricated facts found: 0.
-- Functional cases reviewed: 99.
-- Total functional and targeted cases: 105.
+- Functional cases reviewed: 111.
+- Total functional and targeted cases: 117.
 
 ## Targeted results
 
@@ -32,7 +32,7 @@
 
 ## Existing functional-suite audit
 
-The 99 functional cases include explicit forbidden-behavior checks covering unknown dates, owners, progress, commitments, manager intent, image content outside the visible input, Data B self-verification, cross-case data reuse, unsupported expansion of short acknowledgements, automatic promotion of embedded content to Data A, unsafe mixed-input classification, stale or silently replaced Data A, unsupported accusation boundaries, unknown-value Red/Gray handling, acknowledgement-target expansion, prompt-like case data, and material OCR/order inference. In the latest T13.8 regression, all 99 functional cases passed, including 13 attached-image executions, with no fabricated fact reported.
+The 111 functional cases include explicit forbidden-behavior checks covering unknown dates, owners, progress, commitments, manager intent, image content outside the visible input, Data B self-verification, cross-case data reuse, unsupported expansion of short acknowledgements, automatic promotion of embedded content to Data A, unsafe mixed-input classification, stale or silently replaced Data A, unsupported accusation boundaries, unknown-value Red/Gray handling, acknowledgement-target expansion, prompt-like case data, material OCR/order inference, multi-matter isolation, and recipient-role assumptions. In the latest T13.9 regression, all 111 functional cases passed, including 13 attached-image executions, with no fabricated fact reported.
 
 ## T10.2 conclusion
 
@@ -85,3 +85,9 @@ All targeted anti-hallucination cases were rerun after the post-T11.5 changes an
 - AH-01–AH-06: 6 passed, 0 failed across 7 response rounds.
 - Unsupported or fabricated facts: 0.
 - AH-01–AH-06 contain no OCR or image-order case; those assertions are recorded in attached-image functional TC-93–TC-99.
+
+## T13.9 regression — 2026-08-12
+
+- AH-01–AH-06: 6 passed, 0 failed across 7 response rounds.
+- Unsupported or fabricated facts: 0.
+- AH-01–AH-06 contain no recipient-scope case; those assertions are recorded in functional TC-106–TC-111.

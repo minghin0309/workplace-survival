@@ -60,6 +60,8 @@ After safe auto-classification, disclose the exact Data A payload adopted and th
 
 The reviewed message must be intended for a manager. A direct manager, an explicitly identified skip-level or acting manager, and a reply-all audience that explicitly includes a manager are in scope.
 
+An explicit invocation of Workplace Survival that names no different recipient role is treated as the user's selection of manager scope. If the user names another role, apply the role rules below instead of relying on the invocation alone.
+
 Do not infer manager status from labels such as mentor, HR, customer, senior colleague, or recipient position. Ask when the role is ambiguous. If the recipient is clearly not a manager and no manager is included, stop without ratings or revision.
 
 One case covers one work matter and its current Data B. One message may contain multiple related items when the same Data A governs them. Unrelated work matters requiring different Data A must be split before rating.

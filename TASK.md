@@ -127,7 +127,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T13.9 — Cover limited-background, multi-message, and template boundaries
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: `SPEC.md` sections 3–5.
 - Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.

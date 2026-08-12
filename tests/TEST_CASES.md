@@ -2827,6 +2827,30 @@ Data B: Alex owns the report.
 - Adding requirements based on the broader audience.
 - Rejecting reply-all solely because non-managers are included.
 
+### TC-111 — Explicit acting manager is in scope
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this message to my acting manager.
+Data A: Alex is the confirmed report owner.
+Data B: Alex owns the report.
+```
+
+**Expected**
+
+- Accepts the explicitly identified acting manager as in scope.
+- Uses normal mode.
+- Rates responsibility clarity, tone, and overall status green.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Treating an acting manager as automatically out of scope.
+- Asking for recipient-role confirmation despite the explicit manager role.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -2844,4 +2868,4 @@ Data B: Alex owns the report.
 - T13.6 short acknowledgement target boundaries: TC-79–TC-84.
 - T13.7 prompt-like case data: TC-85–TC-92.
 - T13.8 material OCR and image-order boundaries: TC-93–TC-99.
-- T13.9 limited-background, multi-message, template, and recipient boundaries: TC-100–TC-110.
+- T13.9 limited-background, multi-message, template, and recipient boundaries: TC-100–TC-111.
