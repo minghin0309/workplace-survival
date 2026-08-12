@@ -814,6 +814,316 @@ Data B: okok
 - Inventing an owner or deadline.
 - Claiming that either requested value has been externally verified.
 
+## T13.1 — Quoted, forwarded, and nested content
+
+### TC-33 — Markdown blockquote is excluded from the new body
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Alex is the confirmed report owner.
+Data B:
+Alex owns the report.
+
+> Jamie owns the report and it is already late.
+```
+
+**Expected**
+
+- Evaluates only `Alex owns the report.` as the new body.
+- Identifies the blockquote as excluded content.
+- Shows `Evaluated Data B: Alex owns the report.` and an `Excluded from evaluation` blockquote entry under background understanding.
+- Rates responsibility clarity, tone, and overall status green.
+- Leaves the blockquote unchanged if reproducing the complete message.
+
+**Forbidden**
+
+- Adding Jamie or lateness to Data A.
+- Rating the blockquote as the user's responsibility wording or tone.
+- Revising the blockquote.
+
+### TC-34 — Email reply header and original message are excluded
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Friday is the confirmed report deadline.
+Data B:
+I will send the report on Friday.
+
+On Monday, Pat wrote:
+From: Pat
+Sent: Monday
+To: Me
+Subject: Report
+Send it on Thursday.
+```
+
+**Expected**
+
+- Evaluates only `I will send the report on Friday.` as the new body.
+- Identifies the reply introduction, header block, and original message as excluded content.
+- Rates responsibility clarity, tone, and overall status green.
+
+**Forbidden**
+
+- Adding Thursday to Data A.
+- Reporting a Friday/Thursday contradiction.
+- Revising the original email.
+
+### TC-35 — Forwarded content does not control tone or background
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager asked me only to acknowledge receipt of the information.
+Data B:
+Received.
+
+-----Original Message-----
+From: Customer
+You people are useless.
+```
+
+**Expected**
+
+- Evaluates only `Received.` as the new body.
+- Identifies the original message as excluded content.
+- Rates responsibility clarity, tone, and overall status green.
+- Leaves the forwarded content unchanged if reproducing the complete message.
+
+**Forbidden**
+
+- Rating the user's tone red because of the customer's words.
+- Treating the customer's words as manager requirements or Data A.
+- Revising the forwarded content.
+
+### TC-36 — Chat quote preview is excluded
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: I am the confirmed owner of the handoff.
+Data B:
+[Replying to Manager: "Jamie will handle the handoff."]
+I will handle the handoff.
+```
+
+**Expected**
+
+- Evaluates only `I will handle the handoff.` as the new body.
+- Identifies the chat quote preview as excluded content.
+- Rates responsibility clarity, tone, and overall status green.
+
+**Forbidden**
+
+- Treating Jamie as a confirmed or competing owner.
+- Reporting a contradiction caused by the quote preview.
+- Revising the quote preview.
+
+### TC-37 — Ambiguous quote boundary stops assessment
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Alex is the confirmed owner.
+Data B:
+Alex owns it.
+[Quoted message from Jamie
+Taylor owns it.
+I will send this part.
+```
+
+**Expected**
+
+- Uses the intake format.
+- Identifies the sendable-body boundary as missing.
+- Requests the exact new body or explicit quote boundaries.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Guessing which lines are quoted.
+- Combining all lines into the user's body and rating them.
+- Adding Jamie or Taylor to Data A.
+
+### TC-38 — Embedded content without a new body counts as missing Data B
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Alex is the confirmed report owner.
+Data B:
+> Alex owns the report.
+```
+
+**Expected**
+
+- Uses the intake format.
+- Identifies Data B as missing after excluding the blockquote.
+- Requests the new body the user intends to send.
+- Produces no ratings or revision.
+
+**Forbidden**
+
+- Rating the quoted sentence as the user's message.
+- Treating the blockquote as Data A without separate user designation.
+- Producing a revision from the blockquote.
+
+### TC-39 — Limited-background mode excludes embedded content
+
+**State:** Existing case after the user explicitly confirmed limited-background mode; no Data A is available.
+
+**Input**
+
+```text
+Data B:
+I will send the report on Friday.
+
+> You people are useless.
+```
+
+**Expected**
+
+- Uses limited-background mode.
+- Starts background understanding with `Data A was not provided; this review assesses Data B only`.
+- Shows `Evaluated Data B: I will send the report on Friday.` and an `Excluded from evaluation` blockquote entry.
+- Marks manager-requirement alignment as not assessed.
+- Rates responsibility clarity, tone, and overall status green based only on the new body.
+
+**Forbidden**
+
+- Rating the quoted insult as the user's tone.
+- Adding the blockquote to Data A.
+- Claiming the body matches the manager's original requirements.
+
+### TC-40 — Inline quotation remains part of the new body
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Alex is the confirmed report owner and Friday is the confirmed deadline.
+Data B: I told Sam, "Alex owns the report," and I will send it Friday.
+```
+
+**Expected**
+
+- Evaluates the complete Data B, including the inline quotation, as the new body.
+- Rates responsibility clarity, tone, and overall status green.
+- Does not add an `Excluded from evaluation` entry.
+
+**Forbidden**
+
+- Removing or excluding `"Alex owns the report"` solely because it uses quotation marks or reported speech.
+- Treating the inline quotation as separate Data A.
+- Asking the user to identify a quote boundary.
+
+### TC-41 — Revision changes only the new body
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Tuesday is the confirmed deadline.
+Data B:
+I will finish this on Thursday.
+
+> Please keep this exact quoted line.
+```
+
+**Expected**
+
+- Shows `Evaluated Data B: I will finish this on Thursday.` and an `Excluded from evaluation` blockquote entry.
+- Rates responsibility clarity red, tone green, and overall status red.
+- Minimally changes Thursday to Tuesday in the new body.
+- Leaves `> Please keep this exact quoted line.` unchanged if reproducing the complete message.
+
+**Forbidden**
+
+- Revising, removing, or paraphrasing the blockquote.
+- Treating the blockquote as Data A.
+- Changing wording unrelated to the deadline contradiction.
+
+### TC-42 — Nested content inside a forwarded block remains excluded
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Alex is the confirmed report owner.
+Data B:
+Alex owns the report.
+
+-----Original Message-----
+From: Pat
+> Jamie owns the report.
+```
+
+**Expected**
+
+- Evaluates only `Alex owns the report.` as the new body.
+- Treats the complete original-message region, including its nested blockquote, as excluded content.
+- Rates responsibility clarity, tone, and overall status green.
+
+**Forbidden**
+
+- Treating Jamie as a competing owner.
+- Splitting the nested blockquote out as user-authored wording.
+- Revising any part of the original-message region.
+
+### TC-43 — Separately designated embedded content may be Data A
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Treat the clearly marked quoted original message inside Data B as Data A as well as embedded content.
+Data B:
+I will finish this on Thursday.
+
+> Manager: Tuesday is the confirmed deadline.
+```
+
+**Expected**
+
+- Evaluates only `I will finish this on Thursday.` as the new body.
+- Uses the separately designated quoted statement as Data A.
+- Rates responsibility clarity red, tone green, and overall status red because Thursday contradicts confirmed Tuesday.
+- Minimally changes Thursday to Tuesday while leaving the blockquote unchanged if reproducing the complete message.
+
+**Forbidden**
+
+- Refusing to use the blockquote as Data A despite the explicit designation.
+- Rating the manager's quoted tone as the user's tone.
+- Revising the blockquote.
+
 ## Coverage
 
 - T9.1 input and mode routing: TC-01–TC-05.
@@ -823,3 +1133,4 @@ Data B: okok
 - T9.5 image input: TC-21–TC-25.
 - T9.6 state and case isolation: TC-26–TC-30.
 - T9.7 short acknowledgements: TC-31–TC-32.
+- T13.1 quoted, forwarded, and nested content: TC-33–TC-43.

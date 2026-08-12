@@ -54,6 +54,33 @@ Data B may provide information that Data A explicitly requests. When it clearly 
 
 Data B never becomes Data A merely because the user wrote or submitted it. A fact stated only in Data B remains a claim under review. It enters Data A only if the user separately supplies or confirms it as background under the Data A rules.
 
+### New body and embedded content
+
+The new body is the identifiable wording the user intends to send as their own message. Rate and revise only this body.
+
+Treat the following as embedded content when their structural boundaries are clear:
+
+- Markdown blockquote lines beginning with `>`;
+- a reply introduction such as `On [date], [name] wrote:` and the attached original message;
+- an email header block containing fields such as `From:`, `Sent:`, `To:`, or `Subject:`;
+- a separator such as `-----Original Message-----` or `Begin forwarded message`;
+- a clearly labelled forwarded message;
+- a chat reply preview or quote block with an identifiable quoted author.
+
+For embedded content:
+
+- do not attribute its tone, claims, responsibility wording, or commitments to the user;
+- do not use it to verify the new body or resolve missing Data A unless the user separately and explicitly designates it as background;
+- do not add it to Data A solely because it appears inside Data B;
+- add it to Data A only when the user separately and explicitly designates it as background;
+- do not revise it; preserve it verbatim if reproducing the complete outgoing message.
+
+Quotation marks or reported speech inside the user's own sentence do not by themselves create embedded content. Exclude text only when structure or explicit labelling establishes a separate quoted or forwarded region.
+
+If markers are malformed, nested inconsistently, or permit more than one reasonable body boundary, request the exact new body and stop without ratings or revision. Do not guess which lines belong to the user.
+
+If removing clearly embedded content leaves no new body, treat Data B as missing.
+
 ## Review modes
 
 ### Normal mode

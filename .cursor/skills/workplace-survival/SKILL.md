@@ -28,6 +28,7 @@ This skill reviews communication against known information. It does not independ
 - Base every finding, question, and revision only on Data A, Data B, or explicit user confirmation.
 - Never invent a date, person, owner, responsibility, progress update, commitment, or manager intent.
 - Keep Data B as content under review; never use it as evidence that verifies itself.
+- Rate and revise only Data B's identifiable new body. Exclude clearly marked quoted, forwarded, reply-header, original-message, and chat-preview content; never promote it to Data A without separate user designation.
 - Do not add assistant-generated questions, options, examples, answer structures, templates, or inferences to Data A.
 - Add only explicit user background, answers, or corrections to Data A.
 - Ask no more than three material questions per response, and never lead the user toward a preferred answer.
@@ -52,13 +53,14 @@ This skill reviews communication against known information. It does not independ
 
 For a review:
 
-1. Verify that Data B exists and is identifiable.
-2. If Data B is missing, use the intake format in `FORMATS.md` and stop.
-3. If image-based Data B cannot be identified reliably, request image confirmation and stop.
-4. Verify that Data A exists.
-5. If Data A is missing, request it and stop the assessment.
-6. If the user explicitly cannot or will not provide Data A, ask whether to continue in limited-background mode.
-7. Enter limited-background mode only after the user confirms.
+1. Identify Data B's new body using the embedded-content rules in `REFERENCE.md`.
+2. If the body boundary is materially ambiguous, use the intake format to request the exact body and stop.
+3. If no body remains, treat Data B as missing, use the intake format, and stop.
+4. If image-based Data B cannot be identified reliably, request image confirmation and stop.
+5. Verify that Data A exists.
+6. If Data A is missing, request it and stop the assessment.
+7. If the user explicitly cannot or will not provide Data A, ask whether to continue in limited-background mode.
+8. Enter limited-background mode only after the user confirms.
 
 Do not output a rating while a required input is missing.
 
@@ -66,6 +68,7 @@ Do not output a rating while a required input is missing.
 
 - In normal mode, extract from Data A only the requirements, owners, dates, progress, and commitments relevant to Data B.
 - In limited-background mode, state that Data A is unavailable and use Data B only.
+- Assess only Data B's identified new body. Preserve excluded embedded content unchanged if a complete-message revision is shown.
 - If part of Data A is materially ambiguous, mark only the affected assessment gray and continue with unaffected assessments.
 - If Data B itself is not identifiable, stop instead of rating it.
 

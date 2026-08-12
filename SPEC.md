@@ -40,6 +40,14 @@ Data B is the identifiable message the user intends to send. It is content under
 
 Data B is required for a review. Plain text is preferred; a screenshot containing a clearly identifiable unsent draft is also accepted.
 
+### Embedded content in Data B
+
+Rate and revise only the identifiable new body that the user intends to send as their own wording.
+
+Clearly marked quotations, forwarded material, reply headers, original-message blocks, and chat quote previews are embedded content, not part of that body. They do not become Data A solely because they appear inside Data B. The user may separately and explicitly provide embedded content as background.
+
+Preserve embedded content unchanged if reproducing the complete message. If its boundary is materially ambiguous, request the exact body and stop without ratings. If no body remains after exclusion, treat Data B as missing.
+
 ### Modes
 
 - **Normal mode:** requires Data A and identifiable Data B.
