@@ -4,6 +4,13 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Blind holdout attempt 1 — invalid harness run
+
+- Generated and gold-labelled a 30-case unseen holdout with four images.
+- Stopped scoring after frozen evidence metadata failed the preregistered input-linkage contract.
+- Reported no Skill accuracy metric and preserved both failed score attempts.
+- Retired the consumed holdout and required a fresh-case retry with deterministic output normalization.
+
 ### T14.1 — Mutation testing
 
 - Added nine isolated mutants across runtime rules and evidence validation.
