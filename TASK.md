@@ -197,6 +197,21 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - no mutant is merged into the baseline runtime.
 - Evidence: mutation plan, raw outputs, mutant diffs, and final mutation report.
 
+#### T14.2 — Blind holdout testing
+
+- [ ] Completed
+
+- Source requirement: Independent accuracy follow-up after mutation testing; no product behavior change during scoring.
+- Owner files: `tests/blind/`, `TASK.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - holdout cases are generated without access to runtime rules or public tests;
+  - gold labels are frozen before any Skill output is generated;
+  - Skill output generation cannot read gold labels or scoring thresholds;
+  - disagreements are adjudicated before unblinding;
+  - critical invariant, mode, rating, question, and revision metrics are reported;
+  - failures are preserved before any rule or test change.
+- Evidence: frozen case/gold hashes, raw Skill outputs, adjudication log, scoring report, and method limitations.
+
 ## Task template
 
 Copy this block when adding work:

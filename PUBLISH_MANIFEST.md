@@ -34,6 +34,12 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/AUTO_TRIGGER_CASES.md`
 - `tests/AUTO_TRIGGER_RESULTS.md`
 - `tests/FINAL_ACCEPTANCE_RESULTS.md`
+- `tests/blind/BLIND_CASE_BRIEF.md`
+- `tests/blind/BLIND_PLAN.md`
+- `tests/blind/GOLD_RUBRIC.md`
+- `tests/blind/freeze_holdout.py`
+- `tests/blind/freeze_outputs.py`
+- `tests/blind/score_blind.py`
 - `tests/mutation/MUTATION_PLAN.md`
 - `tests/mutation/MUTATION_RESULTS.md`
 - `tests/mutation/check_validator_pass_gate.py`
