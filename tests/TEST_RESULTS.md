@@ -117,7 +117,7 @@ All 32 functional cases pass. The post-T11.5 regression added two short-acknowle
 
 - TC-01–TC-19: 19 passed, 0 failed.
 - TC-20 initially failed because the revision converted informal Cantonese to formal written Chinese.
-- `SPEC.md`, `IMPLEMENTATION_SUMMARY.md`, `REFERENCE.md`, and `EXAMPLES.md` were tightened to preserve visible register markers and replace only the problematic responsibility wording.
+- The specification and runtime reference/examples were tightened to preserve visible register markers and replace only the problematic responsibility wording.
 - TC-20 rerun: PASS — revision remained informal Cantonese: `阿明搞掂啲資料之後，我會交。`
 - TC-21–TC-25 initially could not run because the five generated PNG fixtures were absent.
 - Installed Pillow for the local Python launcher and regenerated all five fixtures with `tests/fixtures/generate_fixtures.py`.
@@ -125,3 +125,11 @@ All 32 functional cases pass. The post-T11.5 regression added two short-acknowle
 - TC-26–TC-30: 5 passed, 0 failed.
 
 Final post-acceptance functional result: 32 passed, 0 failed.
+
+## Documentation consolidation regression — 2026-08-12
+
+- Scope: verify that retiring duplicate engineering documents and reducing non-normative examples did not change runtime behavior.
+- Normative runtime files checked against `main`: `SKILL.md`, `REFERENCE.md`, and `FORMATS.md` are unchanged.
+- Six isolated evaluator contexts re-ran the 27 text cases in TC-01–TC-32 against the current runtime files and exact assertions.
+- TC-21–TC-25 received semantic regression checks against their visual-fixture definitions; the PNGs were not attached in this consolidation run, so these checks are not recorded as fresh case executions.
+- Fresh execution result: 27 passed, 0 failed. Additional semantic visual-fixture checks: 5 passed, 0 failed.

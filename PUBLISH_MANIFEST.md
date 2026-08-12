@@ -16,9 +16,9 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 ## Engineering documentation
 
 - `SPEC.md`
-- `IMPLEMENTATION_SUMMARY.md`
 - `ARCHITECTURE.md`
 - `TASK.md`
+- `CHANGELOG.md`
 
 ## Test specifications and results
 

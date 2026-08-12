@@ -44,4 +44,4 @@ Rule ownership is clearer, `SKILL.md` retains the core safeguards and workflow, 
 
 ## Post-T11.5 note
 
-This file preserves the historical T10.4 compaction snapshot and its then-current TC-01–TC-30 regression. The later short-acknowledgement and register-preservation changes, current TC-01–TC-32 regression, and 57-case acceptance result are recorded in `TASK.md`, `tests/TEST_RESULTS.md`, and `tests/FINAL_ACCEPTANCE_RESULTS.md`.
+This file preserves the historical T10.4 compaction snapshot and its then-current TC-01–TC-30 regression. Later release outcomes are summarized in `CHANGELOG.md`; current execution details remain in `tests/TEST_RESULTS.md` and `tests/FINAL_ACCEPTANCE_RESULTS.md`.

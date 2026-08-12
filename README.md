@@ -117,3 +117,13 @@ Use the workplace-survival skill to review this message to my manager.
 ```
 
 The skill also supports automatic invocation for requests that clearly ask to check, revise, rewrite, or draft a work message intended for a manager.
+
+## Development documents
+
+- `SPEC.md`: product intent, scope, and non-negotiable behavior.
+- `ARCHITECTURE.md`: rule ownership and change flow.
+- `TASK.md`: active work only.
+- `CHANGELOG.md`: completed outcomes.
+- `tests/TEST_CASES.md`: acceptance assertions and current coverage.
+
+Avoid copying rules between these files. Update the owner identified in `ARCHITECTURE.md`.
