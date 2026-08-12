@@ -1,6 +1,13 @@
 # Workplace Survival Functional Test Results
 
-## Run summary
+## Current status
+
+- Cases currently specified: 43.
+- Latest T13.1 text execution: TC-01–TC-20 and TC-26–TC-43, 38 passed and 0 failed.
+- Latest T13.1 image regression: TC-21–TC-25 received semantic checks only, 5 passed and 0 failed; no fresh image execution is claimed.
+- Most recent attached-image execution remains the post-T11.5 run recorded below: 5 passed and 0 failed.
+
+## Initial T10.1 run summary
 
 - Scope: T10.1 functional validation.
 - Test specification: `tests/TEST_CASES.md`.
@@ -133,3 +140,21 @@ Final post-acceptance functional result: 32 passed, 0 failed.
 - Six isolated evaluator contexts re-ran the 27 text cases in TC-01–TC-32 against the current runtime files and exact assertions.
 - TC-21–TC-25 received semantic regression checks against their visual-fixture definitions; the PNGs were not attached in this consolidation run, so these checks are not recorded as fresh case executions.
 - Fresh execution result: 27 passed, 0 failed. Additional semantic visual-fixture checks: 5 passed, 0 failed.
+
+## T13.1 embedded-content boundaries — 2026-08-12
+
+### New cases
+
+- TC-33–TC-36: 4 passed, 0 failed — clear blockquote, email reply, forwarded message, and chat preview boundaries.
+- TC-37–TC-39: 3 passed, 0 failed — malformed boundary intake, quote-only missing Data B, and limited-background exclusion.
+- TC-40–TC-43: 4 passed, 0 failed — inline-quote control, body-only revision, nested forwarding, and explicit Data A designation.
+
+New-case result: 11 passed, 0 failed.
+
+### Regression
+
+- Existing text cases TC-01–TC-20 and TC-26–TC-32: 27 passed, 0 failed.
+- Image cases TC-21–TC-25: 5 semantic fixture checks passed, 0 failed; images were not attached and these are not fresh executions.
+- Independent pre-test consistency review found no remaining T13.1 ownership conflict, rule contradiction, or uncovered acceptance condition.
+
+Fresh text execution result: 38 passed, 0 failed.

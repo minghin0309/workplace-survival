@@ -8,7 +8,7 @@
 - Runtime changes go only to the file that owns the affected rule, as defined in `ARCHITECTURE.md`.
 - Do not repeat full product or runtime rules in a task.
 - A task is complete only when its acceptance conditions pass and evidence is recorded in the applicable test result file.
-- Move completed task summaries to `CHANGELOG.md`; do not retain completed checklists here.
+- Keep completed items checked in the current phase so progress stays visible; also summarize completed outcomes in `CHANGELOG.md`. Archive the phase after every item is complete.
 - Use each task's checkbox as the visible status: `[ ]` means pending and `[x]` means completed.
 
 ## Current queue
@@ -19,9 +19,9 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T13.1 — Separate sendable body from embedded content
 
-- [ ] Completed
+- [x] Completed
 
-- Source requirement: Pending specification — add the embedded-content boundary to `SPEC.md` section 3 before runtime changes.
+- Source requirement: `SPEC.md` section 3, `Embedded content in Data B`.
 - Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/SKILL.md`, `.cursor/skills/workplace-survival/REFERENCE.md`, `.cursor/skills/workplace-survival/FORMATS.md`, and `tests/TEST_CASES.md`.
 - Acceptance:
   - only the identifiable sendable body is rated and revised;

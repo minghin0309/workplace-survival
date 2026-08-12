@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### T13.1 — Embedded-content boundaries
+
+- Limited ratings and revisions to the identifiable new body.
+- Excluded clearly marked quotations, forwarded messages, reply headers, original-message blocks, nested forwarding, and chat previews.
+- Allowed embedded content to become Data A only after separate explicit user designation.
+- Added intake behavior for malformed boundaries and quote-only Data B.
+- Added TC-33–TC-43; 11 new and 27 existing text cases passed, with five image cases receiving semantic checks only.
+
 ### Documentation consolidation
 
 - Established one owner for each rule category.
