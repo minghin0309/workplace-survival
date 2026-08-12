@@ -1,0 +1,14 @@
+{
+  "mutant_id": "M09",
+  "classification": "KILLED",
+  "killing_cases": [
+    "tests/mutation/check_validator_pass_gate.py"
+  ],
+  "failed_assertions": [
+    {
+      "case_id": "tests/mutation/check_validator_pass_gate.py",
+      "assertion": "Mutated validator accepted PASS evidence containing a failed assertion.",
+      "evidence": "Frozen executable gate exited 1 with the acceptance failure."
+    }
+  ]
+}

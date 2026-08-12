@@ -1,0 +1,30 @@
+{
+  "mutant_id": "M03",
+  "sut_context_id": "bc-197a84e3-9b06-5a02-a83f-94acc0b9a59e",
+  "sut_allowed_inputs": [
+    "mutated SKILL.md",
+    "mutated REFERENCE.md",
+    "mutated FORMATS.md",
+    "raw case inputs embedded in the SUT instruction"
+  ],
+  "sut_forbidden_inputs": [
+    "SPEC.md",
+    "TASK.md",
+    "EXAMPLES.md",
+    "tests/TEST_CASES.md",
+    "tests/mutation/MUTATION_PLAN.md",
+    "Expected assertions",
+    "Forbidden assertions"
+  ],
+  "oracle_context_id": "bc-6b51e8ec-4ace-5c05-aafc-8d1ace120ba8",
+  "oracle_allowed_inputs": [
+    "frozen assertions for TC-63, TC-69",
+    "/tmp/m03-sut.json"
+  ],
+  "oracle_forbidden_inputs": [
+    "mutated runtime files",
+    "mutation implementation instructions"
+  ],
+  "filesystem_access_audit_available": false,
+  "limitation": "Isolation was enforced by separate subagent contexts and explicit access instructions; the subagent API did not provide a filesystem access log, so non-access cannot be cryptographically proven."
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "case_id": "TC-33",
+    "raw_input": "Use workplace-survival to review my reply.\nData A: Alex is the confirmed report owner.\nData B:\nAlex owns the report.\n\n> Jamie owns the report and it is already late.",
+    "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Alex is the confirmed report owner.\n- Evaluated Data B: Alex owns the report.\n\n> Jamie owns the report and it is already late.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A confirms Alex as the report owner, but Data B also states that Jamie owns the report.\n- Communication risk: The conflicting owner statements could cause the recipient to assign responsibility to the wrong person.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, including the operational statement that the report is already late.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nAlex owns the report.\n\n> Alex owns the report and it is already late."
+  },
+  {
+    "case_id": "TC-34",
+    "raw_input": "Use workplace-survival to review my reply.\nData A: Friday is the confirmed report deadline.\nData B:\nI will send the report on Friday.\n\nOn Monday, Pat wrote:\nFrom: Pat\nSent: Monday\nTo: Me\nSubject: Report\nSend it on Thursday.",
+    "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Friday is the confirmed report deadline.\n- Evaluated Data B: I will send the report on Friday.\n\nOn Monday, Pat wrote:\nFrom: Pat\nSent: Monday\nTo: Me\nSubject: Report\nSend it on Thursday.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A confirms Friday as the report deadline, while Data B includes both a Friday commitment and an instruction to send it on Thursday.\n- Communication risk: The conflicting dates could cause the report to be sent or expected on the wrong day.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is direct, neutral, and contains no hostility, blame, threat, or disrespect.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nI will send the report on Friday.\n\nOn Monday, Pat wrote:\nFrom: Pat\nSent: Monday\nTo: Me\nSubject: Report\nSend it on Friday."
+  }
+]

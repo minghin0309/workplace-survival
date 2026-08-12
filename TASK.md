@@ -181,6 +181,22 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - Tests: all suites after T13.1–T13.11.
 - Evidence: final acceptance report.
 
+### Phase 14 — Independent test-strength validation
+
+#### T14.1 — Mutation testing
+
+- [x] Completed
+
+- Source requirement: Test-quality follow-up after T13 final acceptance; no product behavior change.
+- Owner files: `tests/mutation/`, surviving-mutant regression cases, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - each mutant changes one observable rule in an isolated worktree;
+  - system output generation cannot read test expectations;
+  - every non-equivalent survivor becomes a regression test;
+  - mutation score and method limitations are recorded;
+  - no mutant is merged into the baseline runtime.
+- Evidence: mutation plan, raw outputs, mutant diffs, and final mutation report.
+
 ## Task template
 
 Copy this block when adding work:

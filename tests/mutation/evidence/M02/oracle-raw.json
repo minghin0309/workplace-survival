@@ -1,0 +1,54 @@
+{
+  "mutant_id": "M02",
+  "classification": "KILLED",
+  "cases": [
+    {
+      "case_id": "TC-51",
+      "result": "FAIL",
+      "failed_assertions": [
+        {
+          "assertion": "Replaces Alex with Jamie in effective Data A.",
+          "evidence": "Background understanding keeps all three statements active: `Alex is the confirmed owner.`, `Alex is not the owner.`, and `Jamie is the confirmed owner.`"
+        },
+        {
+          "assertion": "Rebuilds background understanding with Jamie only.",
+          "evidence": "Background understanding still includes both Alex statements instead of Jamie only."
+        },
+        {
+          "assertion": "Reassesses current Data B as responsibility green, tone green, and overall green.",
+          "evidence": "Responsibility is rated Gray and overall status is Gray; only tone is Green."
+        },
+        {
+          "assertion": "Removes the stale Alex-based revision and states `No revision needed`.",
+          "evidence": "Minimal revision says `Not provided — answer the questions above first`, not `No revision needed`."
+        },
+        {
+          "assertion": "Forbidden: Keeping Alex and Jamie as conflicting active owners.",
+          "evidence": "The response explicitly says current Data A has conflicting owner information and asks which owner statement governs."
+        }
+      ]
+    },
+    {
+      "case_id": "TC-54",
+      "result": "FAIL",
+      "failed_assertions": [
+        {
+          "assertion": "Replaces only the owner, making Jamie the effective owner.",
+          "evidence": "Background understanding retains `Alex is the confirmed owner.` alongside `Jamie, not Alex, is the confirmed owner.`"
+        },
+        {
+          "assertion": "Keeps responsibility red solely because current Data B says Monday instead of Friday; tone remains green and overall remains red.",
+          "evidence": "Although the ratings are Red/Green/Red, the responsibility evidence also reports an owner conflict, so Red is not solely due to Monday versus Friday."
+        },
+        {
+          "assertion": "Revises Monday to Friday without changing Jamie.",
+          "evidence": "The revision is `[confirmed owner] will finish it Friday.`, replacing Jamie with an unresolved placeholder."
+        },
+        {
+          "assertion": "Forbidden: Continuing to report an owner contradiction.",
+          "evidence": "The response explicitly reports conflicting owner information and asks which owner statement governs."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+diff --git a/.cursor/skills/workplace-survival/REFERENCE.md b/.cursor/skills/workplace-survival/REFERENCE.md
+index 7e06dc8..b2170cf 100644
+--- a/.cursor/skills/workplace-survival/REFERENCE.md
++++ b/.cursor/skills/workplace-survival/REFERENCE.md
+@@ -39,12 +39,12 @@ When statements in Data A conflict:
+ Maintain one current set of effective Data A for the case.
+ 
+ - Add a new background fact or answer when it is compatible with current Data A.
+-- Replace a prior fact only when the user explicitly identifies a correction, including forms such as `correction`, `actually`, `change X to Y`, `not X — Y`, or equivalent clear wording in the user's language.
++- Add an explicit correction as a new active fact while retaining the prior fact as equally active.
+ - Remove a prior requirement, fact, or commitment when the user explicitly withdraws, cancels, or states that it no longer applies.
+ - Apply the update only to the proposition it clearly targets; preserve unrelated owners, dates, requirements, progress, and commitments.
+ - Treat a correction to the assistant's stated background understanding as a correction to the corresponding effective Data A.
+ 
+-Do not append a superseded value as a second active fact. A superseded value may remain in conversation history, but it must not appear in current background understanding or affect ratings, questions, revisions, or placeholders.
++Append every superseded value as a second active fact and keep both versions in current background understanding, ratings, questions, revisions, and placeholders.
+ 
+ A new statement that conflicts with current Data A but does not clearly identify a correction, withdrawal, or governing version remains a conflict. Ask which version governs and keep the affected assessment gray.
+ 
