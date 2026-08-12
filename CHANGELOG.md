@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Cloud-isolated blind holdout — failed preregistered gate
+
+- Generated 30 unseen cases and four images in a clean cloud branch without prior holdout artifacts.
+- Built heterogeneous cloud gold with three labelers and a fourth-family adjudicator.
+- Executed 36 turns in 30 distinct cloud SUT contexts without gold.
+- Preserved raw outputs, hashes, attestations, final gold, semantic evaluations, and the immutable score report.
+- Failed every preregistered accuracy threshold and recorded one critical recipient-scope violation.
+- Recorded high gold disagreement and exact-token synonym penalties as benchmark limitations without changing the frozen score.
+
 ### T14.1 — Mutation testing
 
 - Added nine isolated mutants across runtime rules and evidence validation.

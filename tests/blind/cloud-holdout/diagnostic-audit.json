@@ -1,0 +1,1327 @@
+{
+  "audit_type": "post-unblinding diagnostic audit",
+  "categories": {
+    "A_clear_skill_output_defects": {
+      "case_count": 18,
+      "case_ids": [
+        "BH-002",
+        "BH-004",
+        "BH-007",
+        "BH-008",
+        "BH-009",
+        "BH-010",
+        "BH-011",
+        "BH-012",
+        "BH-014",
+        "BH-016",
+        "BH-017",
+        "BH-018",
+        "BH-019",
+        "BH-020",
+        "BH-023",
+        "BH-028",
+        "BH-029",
+        "BH-030"
+      ],
+      "findings": [
+        {
+          "case_ids": [
+            "BH-002",
+            "BH-004"
+          ],
+          "summary": "Green controls were routed to generic Intake despite enough case-local background for Normal/Green review."
+        },
+        {
+          "case_ids": [
+            "BH-008",
+            "BH-011",
+            "BH-012",
+            "BH-016"
+          ],
+          "summary": "Responsibility/tone risk cases were routed to generic Data A/background Intake instead of applying the provided case context."
+        },
+        {
+          "case_ids": [
+            "BH-017",
+            "BH-019",
+            "BH-020"
+          ],
+          "summary": "Multi-round turns lost or delayed use of accumulated context, causing early Intake responses and later missed required follow-up topics."
+        },
+        {
+          "case_ids": [
+            "BH-027",
+            "BH-029",
+            "BH-030"
+          ],
+          "summary": "Image cases were treated as missing input/draft rather than reviewing the intended manager communication from visible or known image constraints."
+        },
+        {
+          "case_ids": [
+            "BH-007",
+            "BH-009",
+            "BH-010",
+            "BH-014"
+          ],
+          "summary": "Outputs used specific hidden/background facts in revisions without asking for gold-required confirmations/placeholders."
+        },
+        {
+          "case_ids": [
+            "BH-018"
+          ],
+          "summary": "Tone severity was overcalled as Red for vendor bad-faith wording where gold treated it as Yellow."
+        },
+        {
+          "case_ids": [
+            "BH-023"
+          ],
+          "summary": "Output asked for owner identity but missed gold-required root-cause/prior-cause questions for over-owning the export fix."
+        },
+        {
+          "case_ids": [
+            "BH-028"
+          ],
+          "summary": "The revision addressed Ingrid rather than the manager and triggered the sole critical recipient-scope invariant failure."
+        }
+      ],
+      "turn_count": 19,
+      "turns": [
+        "BH-002:T1",
+        "BH-004:T1",
+        "BH-007:T1",
+        "BH-008:T1",
+        "BH-009:T1",
+        "BH-010:T1",
+        "BH-011:T1",
+        "BH-012:T1",
+        "BH-014:T1",
+        "BH-016:T1",
+        "BH-017:T1",
+        "BH-017:T2",
+        "BH-018:T1",
+        "BH-019:T1",
+        "BH-020:T1",
+        "BH-023:T1",
+        "BH-028:T1",
+        "BH-029:T1",
+        "BH-030:T1"
+      ]
+    },
+    "B_gold_label_ambiguity_disagreement_risk": {
+      "case_count": 18,
+      "case_ids": [
+        "BH-007",
+        "BH-008",
+        "BH-010",
+        "BH-011",
+        "BH-012",
+        "BH-013",
+        "BH-014",
+        "BH-015",
+        "BH-016",
+        "BH-017",
+        "BH-018",
+        "BH-019",
+        "BH-020",
+        "BH-021",
+        "BH-023",
+        "BH-025",
+        "BH-026",
+        "BH-028"
+      ],
+      "findings": [
+        {
+          "case_ids": [
+            "BH-007",
+            "BH-008",
+            "BH-014"
+          ],
+          "summary": "Red-vs-Yellow/Green responsibility boundary split on when omission/understatement becomes main-purpose failure."
+        },
+        {
+          "case_ids": [
+            "BH-015",
+            "BH-016",
+            "BH-018",
+            "BH-021"
+          ],
+          "summary": "Tone/responsibility severity splits indicate risk around Red-vs-Yellow and Green-vs-Yellow thresholds."
+        },
+        {
+          "case_ids": [
+            "BH-017",
+            "BH-019",
+            "BH-020"
+          ],
+          "summary": "Multi-round adequacy of impact, alignment, recipient-awareness, and audience adaptation had repeated Green-vs-Yellow splits."
+        },
+        {
+          "case_ids": [
+            "BH-026",
+            "BH-028"
+          ],
+          "summary": "Routing/Gray-vs-Red judgments were disputed for ambiguous destination or partially unreadable image-governed content."
+        }
+      ],
+      "labeler_categorical_disagreements_reviewed": [
+        {
+          "fields": {
+            "overall": [
+              "Red",
+              "Red",
+              "Yellow"
+            ],
+            "responsibility": [
+              "Red",
+              "Red",
+              "Yellow"
+            ]
+          },
+          "turn": "BH-007:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Red",
+              "Red",
+              "Yellow"
+            ],
+            "responsibility": [
+              "Red",
+              "Red",
+              "Yellow"
+            ]
+          },
+          "turn": "BH-008:T1"
+        },
+        {
+          "fields": {
+            "tone": [
+              "Yellow",
+              "Green",
+              "Green"
+            ]
+          },
+          "turn": "BH-010:T1"
+        },
+        {
+          "fields": {
+            "tone": [
+              "Yellow",
+              "Green",
+              "Green"
+            ]
+          },
+          "turn": "BH-011:T1"
+        },
+        {
+          "fields": {
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-012:T1"
+        },
+        {
+          "fields": {
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-013:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Red",
+              "Red",
+              "Yellow"
+            ],
+            "responsibility": [
+              "Red",
+              "Red",
+              "Green"
+            ]
+          },
+          "turn": "BH-014:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Red",
+              "Yellow",
+              "Yellow"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "tone": [
+              "Red",
+              "Yellow",
+              "Yellow"
+            ]
+          },
+          "turn": "BH-015:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Red",
+              "Red",
+              "Yellow"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "tone": [
+              "Red",
+              "Red",
+              "Yellow"
+            ]
+          },
+          "turn": "BH-016:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Green",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Green",
+              "Green"
+            ]
+          },
+          "turn": "BH-017:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-017:T2"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-017:T3"
+        },
+        {
+          "fields": {
+            "responsibility": [
+              "Yellow",
+              "Green",
+              "Green"
+            ]
+          },
+          "turn": "BH-018:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-019:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-019:T2"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-019:T3"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Green",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Green",
+              "Green"
+            ]
+          },
+          "turn": "BH-020:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-020:T2"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Green",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Green",
+              "Green"
+            ]
+          },
+          "turn": "BH-021:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Green",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Green",
+              "Green"
+            ],
+            "tone": [
+              "Yellow",
+              "Green",
+              "Green"
+            ]
+          },
+          "turn": "BH-022:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-023:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ],
+            "responsibility": [
+              "Yellow",
+              "Yellow",
+              "Green"
+            ]
+          },
+          "turn": "BH-025:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              null,
+              null,
+              "Green"
+            ],
+            "responsibility": [
+              null,
+              null,
+              "Green"
+            ],
+            "route": [
+              "Intake",
+              "Intake",
+              "Normal mode"
+            ],
+            "tone": [
+              null,
+              null,
+              "Green"
+            ]
+          },
+          "turn": "BH-026:T1"
+        },
+        {
+          "fields": {
+            "overall": [
+              "Gray",
+              "Red",
+              "Red"
+            ],
+            "responsibility": [
+              "Gray",
+              "Red",
+              "Red"
+            ]
+          },
+          "turn": "BH-028:T1"
+        }
+      ],
+      "turn_count": 23,
+      "turns": [
+        "BH-007:T1",
+        "BH-008:T1",
+        "BH-010:T1",
+        "BH-011:T1",
+        "BH-012:T1",
+        "BH-013:T1",
+        "BH-014:T1",
+        "BH-015:T1",
+        "BH-016:T1",
+        "BH-017:T1",
+        "BH-017:T2",
+        "BH-017:T3",
+        "BH-018:T1",
+        "BH-019:T1",
+        "BH-019:T2",
+        "BH-019:T3",
+        "BH-020:T1",
+        "BH-020:T2",
+        "BH-021:T1",
+        "BH-023:T1",
+        "BH-025:T1",
+        "BH-026:T1",
+        "BH-028:T1"
+      ]
+    },
+    "C_exact_canonical_token_vocabulary_mismatch": {
+      "case_count": 13,
+      "case_ids": [
+        "BH-008",
+        "BH-010",
+        "BH-013",
+        "BH-014",
+        "BH-015",
+        "BH-017",
+        "BH-018",
+        "BH-020",
+        "BH-021",
+        "BH-026",
+        "BH-027",
+        "BH-028",
+        "BH-029"
+      ],
+      "findings": [
+        {
+          "case_ids": [
+            "BH-026",
+            "BH-027",
+            "BH-028",
+            "BH-029",
+            "BH-008"
+          ],
+          "summary": "Question-topic actual tokens often used broad or synonymous vocabulary not present in gold allowed/required sets."
+        },
+        {
+          "case_ids": [
+            "BH-010",
+            "BH-013",
+            "BH-014",
+            "BH-015",
+            "BH-017",
+            "BH-018",
+            "BH-020",
+            "BH-028"
+          ],
+          "summary": "Revision-fact tokens often expressed the same preservation/removal/placeholder facts using alternate canonical wording."
+        },
+        {
+          "case_ids": [
+            "BH-021"
+          ],
+          "summary": "No required facts were due, but actual allowed/preserved vendor-summary facts used synonymous tokens and therefore failed turn compliance."
+        }
+      ],
+      "question_required_synonym_examples": [
+        {
+          "evaluator_token": "cover-arrangement",
+          "gold_required": "cover-arrangement-confirmation",
+          "turn": "BH-008:T1"
+        },
+        {
+          "evaluator_token": "destination-choice",
+          "gold_required": "intended-recipient",
+          "turn": "BH-026:T1"
+        },
+        {
+          "evaluator_token": "image-illegible-content",
+          "gold_required": "obscured-message-body",
+          "turn": "BH-027:T1"
+        },
+        {
+          "evaluator_token": "timing-interpretation",
+          "gold_required": "thread-date",
+          "turn": "BH-027:T1"
+        },
+        {
+          "evaluator_token": "export-format-duration",
+          "gold_required": "cropped-final-clause",
+          "turn": "BH-028:T1"
+        },
+        {
+          "evaluator_token": "reconciliation-scope",
+          "gold_required": "reconciliation-ownership-boundary",
+          "turn": "BH-028:T1"
+        },
+        {
+          "evaluator_token": "rollback-owner",
+          "gold_required": "rollback-decision-owner",
+          "turn": "BH-028:T1"
+        },
+        {
+          "evaluator_token": "account-count",
+          "gold_required": "exact-affected-account-count",
+          "turn": "BH-029:T1"
+        }
+      ],
+      "revision_required_synonym_examples_minimum": [
+        {
+          "evaluator_token": "finance-returned-figures-six-days-ago / pricing-table-not-started",
+          "gold_required": "remove-unverified-finance-blocker-claim",
+          "turn": "BH-010:T1"
+        },
+        {
+          "evaluator_token": "unilateral-deprioritisation-assumption-removed",
+          "gold_required": "remove-passive-aggressive-deprioritisation-assumption",
+          "turn": "BH-013:T1"
+        },
+        {
+          "evaluator_token": "hedging-and-self-blame-removed",
+          "gold_required": "remove-severity-minimising-hedges",
+          "turn": "BH-014:T1"
+        },
+        {
+          "evaluator_token": "six-weeks-attributed-as-sender-estimate",
+          "gold_required": "preserve-six-week-estimate-as-sender-estimate",
+          "turn": "BH-015:T1"
+        },
+        {
+          "evaluator_token": "accusation-about-who-agreed-the-date-removed",
+          "gold_required": "remove-accusation-about-who-agreed-the-date",
+          "turn": "BH-015:T1"
+        },
+        {
+          "evaluator_token": "miss-date-corrected-to-21st + revised-date-corrected-to-7-july",
+          "gold_required": "preserve-corrected-dates-21st-and-7-july",
+          "turn": "BH-017:T3"
+        },
+        {
+          "evaluator_token": "bad-faith-and-avoidance-accusation-removed",
+          "gold_required": "remove-intent-accusation-strung-along",
+          "turn": "BH-018:T1"
+        },
+        {
+          "evaluator_token": "recipient-readdressed-to-ines",
+          "gold_required": "adjust-audience-to-manager-only",
+          "turn": "BH-020:T2"
+        },
+        {
+          "evaluator_token": "ingestion-rewrite-pulled-from-sprint",
+          "gold_required": "preserve-ingestion-rewrite-pull-decision",
+          "turn": "BH-020:T2"
+        },
+        {
+          "evaluator_token": "smaller-scope-returning-monday",
+          "gold_required": "preserve-monday-smaller-scope-commitment",
+          "turn": "BH-020:T2"
+        },
+        {
+          "evaluator_token": "recipient-readdressed-to-ines",
+          "gold_required": "remove-team-channel-salutation",
+          "turn": "BH-020:T2"
+        },
+        {
+          "evaluator_token": "export-format-continuation-queried",
+          "gold_required": "placeholder-cropped-export-format-clause",
+          "turn": "BH-028:T1"
+        },
+        {
+          "evaluator_token": "rollback-decision-owner-queried",
+          "gold_required": "placeholder-rollback-decision-owner",
+          "turn": "BH-028:T1"
+        },
+        {
+          "evaluator_token": "agreement-limited-to-confirmed-points",
+          "gold_required": "remove-blanket-agreement-to-all-points",
+          "turn": "BH-028:T1"
+        },
+        {
+          "evaluator_token": "reconciliation-scope-placeholder-retained",
+          "gold_required": "scope-reconciliation-commitment",
+          "turn": "BH-028:T1"
+        }
+      ],
+      "turn_count": 13,
+      "turns": [
+        "BH-008:T1",
+        "BH-010:T1",
+        "BH-013:T1",
+        "BH-014:T1",
+        "BH-015:T1",
+        "BH-017:T3",
+        "BH-018:T1",
+        "BH-020:T2",
+        "BH-021:T1",
+        "BH-026:T1",
+        "BH-027:T1",
+        "BH-028:T1",
+        "BH-029:T1"
+      ]
+    },
+    "D_route_rating_extraction_uncertainty": {
+      "case_count": 7,
+      "case_ids": [
+        "BH-017",
+        "BH-020",
+        "BH-024",
+        "BH-027",
+        "BH-028",
+        "BH-029",
+        "BH-030"
+      ],
+      "findings": [
+        {
+          "case_ids": [
+            "BH-017"
+          ],
+          "summary": "Turn 3 produced a corrected revision but evaluator/gold rating diverged on whether stale original Data B made the review Red or Yellow."
+        },
+        {
+          "case_ids": [
+            "BH-020"
+          ],
+          "summary": "The audience mismatch was extracted as Tone Yellow / Responsibility Green, while gold treated it as Responsibility Yellow / Tone Green; overall stayed Yellow."
+        },
+        {
+          "case_ids": [
+            "BH-024"
+          ],
+          "summary": "Template output contained bracket placeholders, but evaluator extracted no revision facts, creating a placeholder-fact miss without a route/rating miss."
+        },
+        {
+          "case_ids": [
+            "BH-027",
+            "BH-029",
+            "BH-030"
+          ],
+          "summary": "Image or non-draft requests sat on the boundary between Intake and Normal review with Gray/Red responsibility ratings."
+        },
+        {
+          "case_ids": [
+            "BH-028"
+          ],
+          "summary": "Image content was Red in final gold but one labeler chose Gray; evaluator also marked a recipient-scope invariant failure on the generated revision."
+        }
+      ],
+      "turn_count": 7,
+      "turns": [
+        "BH-017:T3",
+        "BH-020:T2",
+        "BH-024:T1",
+        "BH-027:T1",
+        "BH-028:T1",
+        "BH-029:T1",
+        "BH-030:T1"
+      ]
+    },
+    "E_critical_invariant_failures": {
+      "case_count": 1,
+      "case_ids": [
+        "BH-028"
+      ],
+      "turn_count": 1,
+      "turns": [
+        "BH-028:T1"
+      ],
+      "violations": [
+        {
+          "evaluator_result": false,
+          "invariant": "recipient-scope-respected",
+          "summary": "Minimal revision replied to Ingrid rather than preserving the intended manager-recipient context.",
+          "turn": "BH-028:T1"
+        }
+      ]
+    }
+  },
+  "constraints_observed": [
+    "Did not alter gold, outputs, evaluations, score report, scorer, or workspace files.",
+    "Did not compute an alternative pass/fail result or adjust preregistered metrics.",
+    "Wrote diagnostic artifact only under /tmp."
+  ],
+  "created_at_utc": "2026-08-12T15:15:00Z",
+  "exact_token_synonym_quantification": {
+    "note": "Counts are diagnostic semantic buckets only. They do not alter required recall or turn compliance because the preregistered scorer requires exact token membership.",
+    "question_synonym_case_ids": [
+      "BH-008",
+      "BH-026",
+      "BH-027",
+      "BH-028",
+      "BH-029"
+    ],
+    "required_question_misses_observed_from_score_totals": 46,
+    "required_question_misses_that_are_exact_token_synonym_problems": 8,
+    "required_revision_fact_misses_observed_from_score_totals": 60,
+    "required_revision_fact_misses_that_are_exact_token_synonym_problems_minimum": 15,
+    "revision_synonym_case_ids": [
+      "BH-010",
+      "BH-013",
+      "BH-014",
+      "BH-015",
+      "BH-017",
+      "BH-018",
+      "BH-020",
+      "BH-028"
+    ]
+  },
+  "limitations": [
+    "Categories are non-exclusive: one failed case can be both a clear output defect and a gold-ambiguity/token-vocabulary risk.",
+    "Gold-label ambiguity is inferred from the three provisional labeler categorical vote splits and adjudication record; no human gold review was available.",
+    "Exact-token synonym counts are conservative semantic audit judgments over evaluator tokens and raw outputs; they are not scorer inputs.",
+    "The audit did not open or re-OCR images beyond using the frozen cases/output/evaluation records, consistent with diagnostic-only scope.",
+    "No workspace file was edited and no score-report metric was recomputed as an alternative pass condition."
+  ],
+  "mismatches_by_case": [
+    {
+      "case_id": "BH-002",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics"
+      ]
+    },
+    {
+      "case_id": "BH-004",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics"
+      ]
+    },
+    {
+      "case_id": "BH-007",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk"
+      ],
+      "score_report_mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-008",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-009",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects"
+      ],
+      "score_report_mismatches": [
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-010",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch"
+      ],
+      "score_report_mismatches": [
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-011",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-012",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-013",
+      "diagnostic_categories": [
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch"
+      ],
+      "score_report_mismatches": [
+        "turn 1: responsibility",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-014",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch"
+      ],
+      "score_report_mismatches": [
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-015",
+      "diagnostic_categories": [
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch"
+      ],
+      "score_report_mismatches": [
+        "turn 1: responsibility",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-016",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-017",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch",
+        "D_route_rating_extraction_uncertainty"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts",
+        "turn 2: route",
+        "turn 2: responsibility",
+        "turn 2: tone",
+        "turn 2: overall",
+        "turn 2: question topics",
+        "turn 2: revision facts",
+        "turn 3: responsibility",
+        "turn 3: overall",
+        "turn 3: question topics",
+        "turn 3: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-018",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch"
+      ],
+      "score_report_mismatches": [
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-019",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts",
+        "turn 2: responsibility",
+        "turn 2: overall",
+        "turn 2: question topics",
+        "turn 2: revision facts",
+        "turn 3: responsibility",
+        "turn 3: overall",
+        "turn 3: question topics",
+        "turn 3: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-020",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch",
+        "D_route_rating_extraction_uncertainty"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts",
+        "turn 2: responsibility",
+        "turn 2: tone",
+        "turn 2: question topics",
+        "turn 2: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-021",
+      "diagnostic_categories": [
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch"
+      ],
+      "score_report_mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-023",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk"
+      ],
+      "score_report_mismatches": [
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-024",
+      "diagnostic_categories": [
+        "D_route_rating_extraction_uncertainty"
+      ],
+      "score_report_mismatches": [
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-025",
+      "diagnostic_categories": [
+        "B_gold_label_ambiguity_disagreement_risk"
+      ],
+      "score_report_mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-026",
+      "diagnostic_categories": [
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch"
+      ],
+      "score_report_mismatches": [
+        "turn 1: question topics"
+      ]
+    },
+    {
+      "case_id": "BH-027",
+      "diagnostic_categories": [
+        "C_exact_canonical_token_vocabulary_mismatch",
+        "D_route_rating_extraction_uncertainty"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-028",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "B_gold_label_ambiguity_disagreement_risk",
+        "C_exact_canonical_token_vocabulary_mismatch",
+        "D_route_rating_extraction_uncertainty",
+        "E_critical_invariant_failures"
+      ],
+      "score_report_mismatches": [
+        "turn 1: question topics",
+        "turn 1: revision facts",
+        "turn 1: critical invariant"
+      ]
+    },
+    {
+      "case_id": "BH-029",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "C_exact_canonical_token_vocabulary_mismatch",
+        "D_route_rating_extraction_uncertainty"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    },
+    {
+      "case_id": "BH-030",
+      "diagnostic_categories": [
+        "A_clear_skill_output_defects",
+        "D_route_rating_extraction_uncertainty"
+      ],
+      "score_report_mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: question topics",
+        "turn 1: revision facts"
+      ]
+    }
+  ],
+  "score_report_observed": {
+    "failed_case_count": 25,
+    "failed_case_ids": [
+      "BH-002",
+      "BH-004",
+      "BH-007",
+      "BH-008",
+      "BH-009",
+      "BH-010",
+      "BH-011",
+      "BH-012",
+      "BH-013",
+      "BH-014",
+      "BH-015",
+      "BH-016",
+      "BH-017",
+      "BH-018",
+      "BH-019",
+      "BH-020",
+      "BH-021",
+      "BH-023",
+      "BH-024",
+      "BH-025",
+      "BH-026",
+      "BH-027",
+      "BH-028",
+      "BH-029",
+      "BH-030"
+    ],
+    "metrics": {
+      "case_exact_pass_rate": 0.16666666666666666,
+      "critical_invariant_violations": 1,
+      "overall_accuracy": 0.4117647058823529,
+      "question_turn_compliance": 0.2222222222222222,
+      "required_question_recall": 0.0,
+      "required_revision_fact_recall": 0.0,
+      "responsibility_accuracy": 0.3235294117647059,
+      "revision_turn_compliance": 0.25,
+      "route_accuracy": 0.6388888888888888,
+      "tone_accuracy": 0.5588235294117647
+    },
+    "mismatched_unique_turn_count": 30,
+    "mismatched_unique_turns": [
+      "BH-002:T1",
+      "BH-004:T1",
+      "BH-007:T1",
+      "BH-008:T1",
+      "BH-009:T1",
+      "BH-010:T1",
+      "BH-011:T1",
+      "BH-012:T1",
+      "BH-013:T1",
+      "BH-014:T1",
+      "BH-015:T1",
+      "BH-016:T1",
+      "BH-017:T1",
+      "BH-017:T2",
+      "BH-017:T3",
+      "BH-018:T1",
+      "BH-019:T1",
+      "BH-019:T2",
+      "BH-019:T3",
+      "BH-020:T1",
+      "BH-020:T2",
+      "BH-021:T1",
+      "BH-023:T1",
+      "BH-024:T1",
+      "BH-025:T1",
+      "BH-026:T1",
+      "BH-027:T1",
+      "BH-028:T1",
+      "BH-029:T1",
+      "BH-030:T1"
+    ],
+    "passed": false,
+    "passed_case_count": 5,
+    "passed_case_ids": [
+      "BH-001",
+      "BH-003",
+      "BH-005",
+      "BH-006",
+      "BH-022"
+    ],
+    "totals": {
+      "critical_violations": 1,
+      "overall": 14,
+      "question_turns_compliant": 8,
+      "rated_overall": 34,
+      "rated_responsibility": 34,
+      "rated_tone": 34,
+      "required_facts": 60,
+      "required_facts_hit": 0,
+      "required_questions": 46,
+      "required_questions_hit": 0,
+      "responsibility": 11,
+      "revision_turns_compliant": 9,
+      "route": 23,
+      "tone": 19,
+      "turns": 36
+    }
+  },
+  "source_files": [
+    "/workspace/tests/blind/cloud-holdout/cases.json",
+    "/workspace/tests/blind/cloud-holdout/gold-labeler-1.json",
+    "/workspace/tests/blind/cloud-holdout/gold-labeler-2.json",
+    "/workspace/tests/blind/cloud-holdout/gold-labeler-3.json",
+    "/workspace/tests/blind/cloud-holdout/adjudication.json",
+    "/workspace/tests/blind/cloud-holdout/gold.json",
+    "/workspace/tests/blind/cloud-holdout/outputs.json",
+    "/workspace/tests/blind/cloud-holdout/evaluations.json",
+    "/workspace/tests/blind/cloud-holdout/score-report.json",
+    "/workspace/tests/blind/BLIND_PLAN.md",
+    "/workspace/tests/blind/GOLD_RUBRIC.md",
+    "/workspace/tests/blind/score_blind.py"
+  ]
+}

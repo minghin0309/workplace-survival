@@ -199,7 +199,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.2 — Cloud-isolated blind holdout testing
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Independent accuracy follow-up after mutation testing; no product behavior change during scoring.
 - Owner files: `tests/blind/`, `TASK.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
