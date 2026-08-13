@@ -1,0 +1,1262 @@
+{
+  "schema_version": "v2",
+  "artifact": "gold-blind-evaluations",
+  "evaluation_quality": {
+    "extractors": [
+      {
+        "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+        "model_id": "unverified",
+        "model_family": "claude",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/extractor-1-attestation.json",
+        "attestation_sha256": "988a66f242b84161b24e290870dfb08944c3d9c0103b2799702a6e614eecb664"
+      },
+      {
+        "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+        "model_id": "unverified",
+        "model_family": "kimi",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/extractor-2-attestation.json",
+        "attestation_sha256": "44044f1247d240bab47ffc6221bb0b71544c9897d88a9c7fb538f08d79293f63"
+      }
+    ],
+    "adjudicator": {
+      "context_id": "current-context-unavailable-under-read-isolation",
+      "model_id": "gpt-5.5",
+      "model_family": "gpt"
+    }
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/outputs-v2-raw.json",
+    "sha256": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4"
+  },
+  "cases": [
+    {
+      "case_id": "V2-001",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, all eight invariants, and no question or revision claims."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-002",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-002-1-1",
+              "text": "The revision states that Hollis pushed the pyrometer recalibration from 19 March to 2 April.",
+              "evidence_span": "Hollis has pushed the pyrometer recalibration from 19 March to 2 April."
+            },
+            {
+              "claim_id": "r-V2-002-1-2",
+              "text": "The revision states that the current test tile batch has been moved to the test kiln at twelve tiles per firing instead of forty.",
+              "evidence_span": "I have moved the current batch to the test kiln; twelve tiles per firing instead of forty."
+            },
+            {
+              "claim_id": "r-V2-002-1-3",
+              "text": "The revision states the mitigation adds about four days but still lands inside the 30 April client date.",
+              "evidence_span": "That adds about four days but still lands inside the 30 April client date."
+            },
+            {
+              "claim_id": "r-V2-002-1-4",
+              "text": "The revision reframes the contractor escalation as an option Sunniva may take rather than as her problem to absorb, replacing the draft's 'the contract is yours to lean on' phrasing.",
+              "evidence_span": "If you would like to press Hollis for an earlier date, that remains an option; otherwise I am happy running on the test kiln."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/1 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-003",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, all eight invariants, and no question or revision claims."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-004",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, all eight invariants, and no question or revision claims."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-005",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-005-1-1",
+              "text": "The revision attributes performance of the casing log review to Hargrove rather than to Oleander's team.",
+              "evidence_span": "Hargrove has performed the casing log review"
+            },
+            {
+              "claim_id": "r-V2-005-1-2",
+              "text": "The revision characterises the 8 May readout as preliminary and verbal, saying nothing anomalous had been seen.",
+              "evidence_span": "gave a preliminary verbal readout on 8 May that it hadn't seen anything anomalous"
+            },
+            {
+              "claim_id": "r-V2-005-1-3",
+              "text": "The revision states the written report is expected on 10 May.",
+              "evidence_span": "The written report is expected on 10 May"
+            },
+            {
+              "claim_id": "r-V2-005-1-4",
+              "text": "The revision states Yusuf has not yet reviewed or signed off the casing integrity.",
+              "evidence_span": "Yusuf hasn't reviewed or signed off the casing integrity yet"
+            },
+            {
+              "claim_id": "r-V2-005-1-5",
+              "text": "The revision retains the sender's commitment to send the summary this afternoon.",
+              "evidence_span": "I will get the summary over to you this afternoon."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/5 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once. The retained summary-sending sentence is treated as safe because it does not certify interpretation or sign-off."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-006",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-006-1-1",
+              "text": "The revision states Juno completed the 17:00 handover checklist at 16:52 and that it was countersigned by the volunteer on shift, replacing the draft's blanket acceptance of responsibility.",
+              "evidence_span": "I completed the 17:00 handover checklist at 16:52, and it was countersigned by the volunteer on shift."
+            },
+            {
+              "claim_id": "r-V2-006-1-2",
+              "text": "The revision states Bay 3 overnight closing sits on the volunteer cohort rota coordinated by Fenwick.",
+              "evidence_span": "Bay 3 overnight closing sits on the volunteer cohort rota, coordinated by Fenwick."
+            },
+            {
+              "claim_id": "r-V2-006-1-3",
+              "text": "The revision states Juno had raised in writing on 4 June and 21 August that the Thursday rota had no named closer.",
+              "evidence_span": "I had raised in writing on 4 June and 21 August that the Thursday rota had no named closer."
+            },
+            {
+              "claim_id": "r-V2-006-1-4",
+              "text": "The revision retains the factual statement that the trays were left uncovered overnight.",
+              "evidence_span": "The trays were left uncovered overnight."
+            },
+            {
+              "claim_id": "r-V2-006-1-5",
+              "text": "The revision keeps an apology for the trouble caused without the draft's unconfirmed remediation commitment.",
+              "evidence_span": "I am sorry for the trouble it has caused."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/5 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-007",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V2-007-1-1",
+              "text": "Asks whether Delroy explicitly reassigned the patch-impact model from Vesna to Rhys.",
+              "evidence_span": "Did Delroy explicitly reassign the patch-impact model from Vesna to Rhys?"
+            },
+            {
+              "claim_id": "q-V2-007-1-2",
+              "text": "Asks for the current status of Delroy's sign-off for the match-history API keys.",
+              "evidence_span": "What is the current status of Delroy's sign-off for the match-history API keys?"
+            },
+            {
+              "claim_id": "q-V2-007-1-3",
+              "text": "Asks what priority arrangement was agreed for the model relative to the scrim reports and the draft-priority board.",
+              "evidence_span": "What priority arrangement, if any, was agreed for the model relative to the scrim reports and draft-priority board?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-007-1-1",
+              "text": "The revision conditions acceptance of the patch-impact model on confirming its reassignment from Vesna.",
+              "evidence_span": "happy to pick up the patch-impact model if we confirm it's being reassigned from Vesna to me"
+            },
+            {
+              "claim_id": "r-V2-007-1-2",
+              "text": "The revision states Rhys needs Delroy's sign-off to request the match-history API keys.",
+              "evidence_span": "I'll need your sign-off to request the match-history API keys"
+            },
+            {
+              "claim_id": "r-V2-007-1-3",
+              "text": "The revision requests confirmation of how to prioritise the model against the existing scrim reports and the draft board due 3 October.",
+              "evidence_span": "confirmation of how to prioritise it alongside the Monday and Thursday scrim reports and the draft board due 3 October."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction substance agreed; canonical claims preserve exact spans and normalized IDs."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-008",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-008-1-1",
+              "text": "The revision attributes the 4 June outage to an expired TLS certificate on the vendor's infrastructure and states its duration as three hours and fourteen minutes.",
+              "evidence_span": "the Consulta Vantage video consult platform was unavailable for three hours and fourteen minutes due to an expired TLS certificate on the vendor's infrastructure"
+            },
+            {
+              "claim_id": "r-V2-008-1-2",
+              "text": "The revision states no Pawline system was involved.",
+              "evidence_span": "No Pawline system was involved."
+            },
+            {
+              "claim_id": "r-V2-008-1-3",
+              "text": "The revision states the team invoked the phone-fallback protocol nine minutes after the first failed consult.",
+              "evidence_span": "The team invoked the phone-fallback protocol nine minutes after the first failed consult."
+            },
+            {
+              "claim_id": "r-V2-008-1-4",
+              "text": "The revision gives the consult outcomes: forty-one of 46 completed by phone and the remaining five rebooked within 24 hours.",
+              "evidence_span": "Forty-one of the 46 booked consults were completed by phone, and the remaining five were rebooked within 24 hours."
+            },
+            {
+              "claim_id": "r-V2-008-1-5",
+              "text": "The revision states no animal welfare incident arose.",
+              "evidence_span": "No animal welfare incident arose."
+            },
+            {
+              "claim_id": "r-V2-008-1-6",
+              "text": "The revision states the vendor has committed to a written post-incident review by 11 June.",
+              "evidence_span": "Consulta Vantage has committed to providing a written post-incident review by 11 June."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/6 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-009",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-009-1-1",
+              "text": "The revision states the schedule moves from 8 April to 22 April to 6 May and the eighteen hundred pounds of vessel change fees, without the draft's blame framing.",
+              "evidence_span": "Ardnamurchan has moved from 8 April to 22 April and now 6 May, which has incurred eighteen hundred quid in vessel change fees."
+            },
+            {
+              "claim_id": "r-V2-009-1-2",
+              "text": "The revision explains that 6 May cannot deliver full scope because the nesting restriction starts 1 May and blocks fourteen of the twenty-two turbines.",
+              "evidence_span": "The 6 May date does not work for the full inspection scope because the nesting restriction starts on 1 May and prevents access to fourteen of the twenty-two turbines."
+            },
+            {
+              "claim_id": "r-V2-009-1-3",
+              "text": "The revision states the next viable full-scope window is 12 August and that the Fjordling II slot is held only until 18 April.",
+              "evidence_span": "The next viable full-scope window is 12 August, and the current Fjordling II slot is only held until 18 April."
+            },
+            {
+              "claim_id": "r-V2-009-1-4",
+              "text": "The revision adds an explicit decision request with an 18 April deadline naming the 12 August option.",
+              "evidence_span": "Can you please confirm by 18 April whether to move the inspection window to 12 August?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction substance agreed; canonical claims preserve exact spans and normalized IDs."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-010",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-010-1-1",
+              "text": "The revision states the A0 scanner failed on 3 December and that Bergstrom has given no delivery estimate, replacing the draft's 'temperamental' framing.",
+              "evidence_span": "The A0 scanner failed on 3 December, and Bergstrom has not provided a delivery estimate."
+            },
+            {
+              "claim_id": "r-V2-010-1-2",
+              "text": "The revision states 512 volumes remain and single-scanner throughput projects completion on 12 March, six weeks after the 31 January funder deadline.",
+              "evidence_span": "We have 512 volumes remaining; at single-scanner throughput, completion is projected for 12 March, six weeks after the 31 January funder deadline."
+            },
+            {
+              "claim_id": "r-V2-010-1-3",
+              "text": "The revision states a replacement scanner costs approximately £2,400 for six weeks and can be delivered within four working days.",
+              "evidence_span": "A replacement scanner is available for approximately £2,400 for six weeks and can be delivered within four working days."
+            },
+            {
+              "claim_id": "r-V2-010-1-4",
+              "text": "The revision states only Ferdinand can authorise the rental or submit an extension request, gives the 1 January funder cutoff, and asks him to confirm which action he will take.",
+              "evidence_span": "As only you can authorise the rental or submit an extension request, and any extension request must reach the funder by 1 January, could you please confirm whether you authorise the rental or intend to submit an extension request?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction substance agreed; canonical claims preserve exact spans and normalized IDs."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-011",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-011-1-1",
+              "text": "The revision states Ike proposed the modified sterilisation cycle on Line 1 and gives the temperature and duration change.",
+              "evidence_span": "I proposed a modified sterilisation cycle on Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety."
+            },
+            {
+              "claim_id": "r-V2-011-1-2",
+              "text": "The revision attributes execution of the validation to Marta Whelan-Duke by name and gives the contamination reduction from 7.1 to 2.4 percent across five weeks and 340 trays.",
+              "evidence_span": "Marta Whelan-Duke ran the validation over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent."
+            },
+            {
+              "claim_id": "r-V2-011-1-3",
+              "text": "The revision adds the cost of doing nothing on Line 2: roughly sixty-four trays scrapped per week at eleven pounds each.",
+              "evidence_span": "At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour."
+            },
+            {
+              "claim_id": "r-V2-011-1-4",
+              "text": "The revision states requalification requires fourteen hours of downtime and asks Corinne to approve it.",
+              "evidence_span": "Requalifying the autoclave requires fourteen hours of downtime. Can you approve the downtime?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-011-2-1",
+              "text": "The revision retains Ike as the proposer of the modified cycle for Line 1 with the same temperature and duration change.",
+              "evidence_span": "I proposed a modified sterilisation cycle for Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety."
+            },
+            {
+              "claim_id": "r-V2-011-2-2",
+              "text": "The revision describes the validation in the passive voice so the executor is not named, while keeping the five-week, 340-tray scope and the 7.1 to 2.4 percent result.",
+              "evidence_span": "The cycle was validated over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent."
+            },
+            {
+              "claim_id": "r-V2-011-2-3",
+              "text": "The output proposes that the executor can be described without naming her, addressing the user's attribution concern.",
+              "evidence_span": "The executor can be described without naming her."
+            },
+            {
+              "claim_id": "r-V2-011-2-4",
+              "text": "The revision retains the Line 2 cost of doing nothing at roughly sixty-four scrapped trays per week at eleven pounds each.",
+              "evidence_span": "Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour."
+            },
+            {
+              "claim_id": "r-V2-011-2-5",
+              "text": "The revision retains the fourteen-hour requalification downtime statement and the approval request.",
+              "evidence_span": "Requalifying the autoclave requires fourteen hours of downtime. Can you approve the downtime?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/5 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-011-3-1",
+              "text": "The revision retains Ike as proposer of the modified cycle for Line 1 with the same temperature and duration change.",
+              "evidence_span": "I proposed a modified sterilisation cycle for Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety."
+            },
+            {
+              "claim_id": "r-V2-011-3-2",
+              "text": "The revision keeps the unnamed passive attribution of the validation with the same scope and contamination result.",
+              "evidence_span": "The cycle was validated over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent."
+            },
+            {
+              "claim_id": "r-V2-011-3-3",
+              "text": "The revision retains the Line 2 cost of doing nothing.",
+              "evidence_span": "At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour."
+            },
+            {
+              "claim_id": "r-V2-011-3-4",
+              "text": "The revision adds that the gasket replacement is scheduled for 4 February so both jobs can share one fourteen-hour window instead of two stoppages.",
+              "evidence_span": "The autoclave door gasket replacement is already scheduled for 4 February, so both jobs can share that fourteen-hour window instead of requiring two separate stoppages."
+            },
+            {
+              "claim_id": "r-V2-011-3-5",
+              "text": "The revision changes the ask to approving fourteen hours of Line 2 downtime on 4 February covering both the gasket replacement and the requalification.",
+              "evidence_span": "Can you approve fourteen hours of Line 2 downtime on 4 February for both the gasket replacement and autoclave requalification?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/5 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-012",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-012-1-1",
+              "text": "The revision moves an explicit secondment decision request into the opening line, replacing the draft's closing 'Let me know your thoughts'.",
+              "evidence_span": "Hi Ovid, could you decide whether to bring the two seconded adjusters back to storm-damage early?"
+            },
+            {
+              "claim_id": "r-V2-012-1-2",
+              "text": "The revision retains the queue growth from three hundred and eighty on 1 March to six hundred and twelve.",
+              "evidence_span": "We were at three hundred and eighty open claims on 1 March and we are now at six hundred and twelve."
+            },
+            {
+              "claim_id": "r-V2-012-1-3",
+              "text": "The revision retains the six-versus-eight adjuster clear dates of 6 June and 14 May.",
+              "evidence_span": "At six we clear on 6 June, at eight we clear on 14 May."
+            },
+            {
+              "claim_id": "r-V2-012-1-4",
+              "text": "The revision retains the fourteen-day initial contact figure against the ten-day standard.",
+              "evidence_span": "We are also at fourteen days to initial contact against a ten day standard."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/1 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-012-2-1",
+              "text": "The revision shortens the message and puts the secondment ask in the first line.",
+              "evidence_span": "Hi Ovid — can we bring the two motor-seconded adjusters back to storm-damage early?"
+            },
+            {
+              "claim_id": "r-V2-012-2-2",
+              "text": "The revision compresses the queue modelling into one line giving the 612-claim queue clearing 6 June at six adjusters and 14 May at eight.",
+              "evidence_span": "At six adjusters, the 612-claim queue clears 6 June; at eight, 14 May."
+            },
+            {
+              "claim_id": "r-V2-012-2-3",
+              "text": "The revision retains the initial contact gap of 14 days against the 10-working-day standard.",
+              "evidence_span": "Initial contact is at 14 days against the 10-working-day standard."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/3 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        },
+        {
+          "turn_index": 3,
+          "route": "Message-template mode",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-012-3-1",
+              "text": "The drafted reply states the adjusters are needed by 22 April to keep the 14 May clear date.",
+              "evidence_span": "By 22 April to keep the 14 May clear date."
+            },
+            {
+              "claim_id": "r-V2-012-3-2",
+              "text": "The drafted reply states every day later moves the clear date out by a day.",
+              "evidence_span": "Every day later moves that clear date out by a day."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Raw output used Message-template mode, so responsibility/tone/overall are null because no rating labels were present. Both extractors agreed on route, null ratings, and all eight invariants; canonical claims split the drafted reply into exact scorer-ready spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-013",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-013-1-1",
+              "text": "The revision replaces the superseded figure with the revised quote of twenty-one thousand four hundred and fifty pounds, valid thirty days from 2 October.",
+              "evidence_span": "Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid thirty days from 2 October."
+            },
+            {
+              "claim_id": "r-V2-013-1-2",
+              "text": "The output states explicitly that the quote amount must be updated before sending.",
+              "evidence_span": "The quote amount must be updated before sending."
+            },
+            {
+              "claim_id": "r-V2-013-1-3",
+              "text": "The revision retains the survey findings of eleven of sixteen panes with failed putty and water reaching the pedestal bearing.",
+              "evidence_span": "Eleven of sixteen panes have failed putty and water is getting to the pedestal bearing."
+            },
+            {
+              "claim_id": "r-V2-013-1-4",
+              "text": "The revision retains the request that Wilhelmina take the spend to the board on 24 October because it is above Emeka's authority.",
+              "evidence_span": "That is above my authority so I need you to take it to the board on 24 October."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/1 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-013-2-1",
+              "text": "The revision is rewritten as continuous prose without a clipped salutation or list formatting, opening with the survey findings.",
+              "evidence_span": "The Crowsfoot Point glazing survey came back badly: eleven of sixteen panes have failed putty, and water is getting to the pedestal bearing."
+            },
+            {
+              "claim_id": "r-V2-013-2-2",
+              "text": "The revision uses the revised quote of twenty-one thousand four hundred and fifty pounds valid for thirty days from 2 October.",
+              "evidence_span": "Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid for thirty days from 2 October."
+            },
+            {
+              "claim_id": "r-V2-013-2-3",
+              "text": "The revision retains the board handoff to Wilhelmina for 24 October in prose form.",
+              "evidence_span": "As this is above my authority, I need you to take it to the board on 24 October."
+            },
+            {
+              "claim_id": "r-V2-013-2-4",
+              "text": "The output states explicitly that the amount must be corrected.",
+              "evidence_span": "The amount must be corrected."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-013-3-1",
+              "text": "The revision keeps the continuous prose opening with the survey findings.",
+              "evidence_span": "The Crowsfoot Point glazing survey came back badly: eleven of sixteen panes have failed putty, and water is getting to the pedestal bearing."
+            },
+            {
+              "claim_id": "r-V2-013-3-2",
+              "text": "The revision carries the revised quote of twenty-one thousand four hundred and fifty pounds valid for thirty days from 2 October.",
+              "evidence_span": "Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid for thirty days from 2 October."
+            },
+            {
+              "claim_id": "r-V2-013-3-3",
+              "text": "The revision retains the board handoff to Wilhelmina for 24 October.",
+              "evidence_span": "As this is above my authority, I need you to take it to the board on 24 October."
+            },
+            {
+              "claim_id": "r-V2-013-3-4",
+              "text": "The output states explicitly that the amount must be updated before sending.",
+              "evidence_span": "The amount must be updated before sending."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-014",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-014-1-1",
+              "text": "The revision replaces the claim of approval with a statement that the application remains under assessment.",
+              "evidence_span": "the Threadneedle corridor extension application remains under assessment"
+            },
+            {
+              "claim_id": "r-V2-014-1-2",
+              "text": "The revision states no written decision has been received and that Q1 flight planning on the corridor cannot begin until one is.",
+              "evidence_span": "We have not received a written decision, and we cannot begin Q1 flight planning on that corridor until we do."
+            },
+            {
+              "claim_id": "r-V2-014-1-3",
+              "text": "The output states explicitly that both of the draft's claims must be corrected.",
+              "evidence_span": "both claims must be corrected"
+            },
+            {
+              "claim_id": "r-V2-014-1-4",
+              "text": "The revision retains the offer to write the investor-update slide.",
+              "evidence_span": "Happy to write the slide if useful."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-015",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-015-1-1",
+              "text": "The revision reframes the effect as Solvei's subjective counter impression at Fennwick Street and states she cannot confirm the routine is reducing waste.",
+              "evidence_span": "My impression from working the counter is that there is less left in the case at closing at Fennwick Street, but I can't confirm that the routine is reducing waste."
+            },
+            {
+              "claim_id": "r-V2-015-1-2",
+              "text": "The revision states the routine has only been introduced at Fennwick Street and that no baseline or verified waste figures exist for comparison.",
+              "evidence_span": "It has only been introduced at Fennwick Street, and I don't have a baseline or verified waste figures for a comparison."
+            },
+            {
+              "claim_id": "r-V2-015-1-3",
+              "text": "The revision withholds the rollout recommendation on the available information.",
+              "evidence_span": "Based on the information I have, I can't recommend rolling it out to the other shops yet."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction substance agreed; canonical claims preserve exact spans and normalized IDs."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-016",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-016-1-1",
+              "text": "The revision redirects approval to Yannick Ostrowski on the standard PR-2 form because the total is above one thousand euros, instead of asking Ilse to approve it.",
+              "evidence_span": "Since this is above one thousand euros, I need to submit the standard PR-2 form to Yannick Ostrowski for approval rather than ask you to approve it."
+            },
+            {
+              "claim_id": "r-V2-016-1-2",
+              "text": "The revision retains the requested items and the three thousand one hundred and eighty euro total.",
+              "evidence_span": "I need two acoustic recorders and solar kits for the nightjar survey. Comes to three thousand one hundred and eighty euros all in."
+            },
+            {
+              "claim_id": "r-V2-016-1-3",
+              "text": "The revision ties the urgency to the 1 March installation date and states the form must be submitted now to allow for approval turnaround and supplier lead time.",
+              "evidence_span": "I need them on site before 1 March, so the form needs submitting now to allow for the approval turnaround and supplier lead time."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/3 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-017",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-017-1-1",
+              "text": "The revision replaces the hedged 'might not pass' framing with the confirmed 0.9 kilonewton test result against the 1.5 kilonewton requirement and the consequence that the opening night cannot proceed without a three-day rebuild.",
+              "evidence_span": "It tested at 0.9 kilonewtons on 28 March, below Kelvinhaugh's 1.5-kilonewton requirement, so the venue won't permit it to be rigged and the opening night can't proceed without a three-day rebuild."
+            },
+            {
+              "claim_id": "r-V2-017-1-2",
+              "text": "The revision states only two free workshop days remain before the truck loads on 14 April.",
+              "evidence_span": "We only have two free workshop days before the truck loads on 14 April."
+            },
+            {
+              "claim_id": "r-V2-017-1-3",
+              "text": "The revision states Basil is available 10-12 April if booked by 5 April, at £340 per day for a £1,020 total.",
+              "evidence_span": "Basil is available 10–12 April if booked by 5 April, at £340 per day (£1,020 total)."
+            },
+            {
+              "claim_id": "r-V2-017-1-4",
+              "text": "The revision adds an explicit request for Marguerite to approve the freelance booking and release the £1,020 budget by 5 April.",
+              "evidence_span": "Can you approve the freelance booking and release the £1,020 budget by 5 April?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once. The underlying screenshot was not read; no-image-token-guess is resolved true based only on the raw output text and SUT-visible metadata, with transcription fidelity not independently verified."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-018",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-018-1-1",
+              "text": "The revision changes the subject line from an admission of fault to a neutral description of the ingest configuration issue.",
+              "evidence_span": "Subject: Kilbrannan offset - ingest configuration issue"
+            },
+            {
+              "claim_id": "r-V2-018-1-2",
+              "text": "The revision states Tobias found the 40 cm offset in lines 12-19 during routine crossline QC rather than causing it.",
+              "evidence_span": "Aoife, I found the 40 cm offset in lines 12-19 during routine crossline QC."
+            },
+            {
+              "claim_id": "r-V2-018-1-3",
+              "text": "The revision attributes the cause to a UTC/BST tide-gauge timestamp mismatch introduced at ingest.",
+              "evidence_span": "It is caused by a UTC/BST tide-gauge timestamp mismatch introduced at ingest."
+            },
+            {
+              "claim_id": "r-V2-018-1-4",
+              "text": "The revision reassigns ownership of the ingest configuration to Runa's software team and states Tobias has no write access to patch it, removing the draft's commitment to patch it himself.",
+              "evidence_span": "Runa's software team owns the ingest configuration, and I don't have write access to patch it."
+            },
+            {
+              "claim_id": "r-V2-018-1-5",
+              "text": "The revision states that reprocessing the eight affected lines takes six hours of compute once the configuration is corrected.",
+              "evidence_span": "Once the configuration is corrected, reprocessing the eight affected lines will take six hours of compute."
+            },
+            {
+              "claim_id": "r-V2-018-1-6",
+              "text": "The revision routes the reprocessing decision to Aoife, asking her to choose between in-house reprocessing and returning the job to the software team.",
+              "evidence_span": "Please decide whether the affected lines should be reprocessed in-house or the job returned to the software team."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/6 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once. The underlying screenshot was not read; no-image-token-guess is resolved true based only on the raw output text and SUT-visible metadata, with transcription fidelity not independently verified."
+        }
+      ]
+    }
+  ]
+}
