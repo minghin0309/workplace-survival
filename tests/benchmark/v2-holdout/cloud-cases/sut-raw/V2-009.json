@@ -1,0 +1,50 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-009",
+  "timestamps": {
+    "started_at": "2026-08-13T10:35:45Z",
+    "completed_at": "2026-08-13T10:35:50Z"
+  },
+  "context": {
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "execution_branch": "cursor/workplace-v2-009-f6f5",
+    "mode": "Workplace Survival SUT",
+    "state": "Sequential; one turn; no prior case state"
+  },
+  "model": {
+    "name": "GPT-5.6 Sol",
+    "identifier": "gpt-5.6-sol"
+  },
+  "runtime": {
+    "skill": {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    "reference": {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    "formats": {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    "examples": {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  },
+  "input": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-009.json",
+    "sha256": "b52d76ca883b01c61955ae92c87cd5d739fe55b9c6f3a2e5d6cc68f361a02c0b",
+    "turn_count": 1
+  },
+  "responses": [
+    {
+      "turn_index": 1,
+      "input_raw": "I am annoyed and I can tell it shows. Before I send: \"Saoirse - you keep moving the goalposts on Ardnamurchan and it is costing us real money. This is the third time now, that is eighteen hundred quid of change fees down the drain, and the date you have picked does not even work because of the nesting restriction. Can you please just make a decision and stick to it this time. Dovid\"",
+      "started_at": "2026-08-13T10:35:45Z",
+      "completed_at": "2026-08-13T10:35:50Z",
+      "response_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saoirse Pentland-Ross is Dovid's direct manager and owns the inspection-window decision.\n- The Ardnamurchan inspection window moved from 8 April to 22 April and then to 6 May; Saoirse made each change, and the first two changes incurred eighteen hundred pounds in vessel change fees.\n- The nesting restriction starts on 1 May and prevents vessel access to the eastern cluster, so the 6 May window cannot cover fourteen of the twenty-two turbines or deliver the full inspection scope.\n- The next viable full-scope window is 12 August.\n- The current Fjordling II slot is held until 18 April, after which the vessel is committed elsewhere until July; Dovid needs Saoirse's decision by 18 April.\n- Dovid has not previously raised the nesting restriction with Saoirse in writing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B asks Saoirse to \"make a decision\" but does not identify the required inspection-window decision or state the 18 April deadline. Data A establishes that the vessel hold expires on 18 April and that Dovid needs her decision by then.\n- Communication risk: Saoirse may not know the exact decision or response deadline, so the vessel hold could expire before Dovid can act.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"you keep moving the goalposts,\" \"eighteen hundred quid of change fees down the drain,\" and \"just make a decision and stick to it this time\" personalize blame and make the request dismissive. Data A supports the schedule-change and fee facts, so this is not an unsupported major accusation.\n- Communication risk: The blame-focused wording may distract from the urgent scheduling and compliance decision and make cooperation less clear.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSaoirse - Ardnamurchan has moved from 8 April to 22 April and now 6 May, which has incurred eighteen hundred quid in vessel change fees. The 6 May date does not work for the full inspection scope because the nesting restriction starts on 1 May and prevents access to fourteen of the twenty-two turbines. The next viable full-scope window is 12 August, and the current Fjordling II slot is only held until 18 April. Can you please confirm by 18 April whether to move the inspection window to 12 August? Dovid"
+    }
+  ]
+}
