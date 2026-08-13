@@ -1,0 +1,101 @@
+{
+  "version": "1",
+  "concepts": [
+    {
+      "concept_id": "current-root-cause",
+      "domain": "question",
+      "description": "Ask what caused the current incident or failure.",
+      "aliases": ["cause-of-current-failure", "current-cause", "root-cause", "why-it-failed"]
+    },
+    {
+      "concept_id": "confirmed-owner",
+      "domain": "question",
+      "description": "Ask who currently owns the work or decision.",
+      "aliases": ["assignee", "responsible-person", "task-owner", "who-is-responsible"]
+    },
+    {
+      "concept_id": "confirmed-deadline",
+      "domain": "question",
+      "description": "Ask for the current confirmed completion or delivery date.",
+      "aliases": ["completion-date", "delivery-date", "due-date", "target-date"]
+    },
+    {
+      "concept_id": "commitment-scope",
+      "domain": "question",
+      "description": "Ask which work, period, or boundary the sender can commit to.",
+      "aliases": ["ownership-boundary", "responsibility-scope", "scope-of-commitment"]
+    },
+    {
+      "concept_id": "approval-authority",
+      "domain": "question",
+      "description": "Ask who has authority to approve or decide.",
+      "aliases": ["decision-authority", "signoff-owner", "who-can-approve"]
+    },
+    {
+      "concept_id": "recipient-manager-role",
+      "domain": "question",
+      "description": "Ask whether the named recipient is acting as the user's manager.",
+      "aliases": ["manager-role-confirmation", "recipient-role"]
+    },
+    {
+      "concept_id": "operational-impact",
+      "domain": "question",
+      "description": "Ask for the concrete execution or customer impact.",
+      "aliases": ["business-impact", "execution-impact", "impact"]
+    },
+    {
+      "concept_id": "blocker-status",
+      "domain": "question",
+      "description": "Ask whether a blocker exists and what it is.",
+      "aliases": ["blocking-issue", "current-blocker", "impediment"]
+    },
+    {
+      "concept_id": "preserve-intended-recipient",
+      "domain": "revision",
+      "description": "Keep the user-identified recipient or audience.",
+      "aliases": ["correct-addressee", "manager-recipient-preserved", "recipient-preserved"]
+    },
+    {
+      "concept_id": "preserve-confirmed-owner",
+      "domain": "revision",
+      "description": "Keep the confirmed owner unchanged.",
+      "aliases": ["confirmed-owner-preserved", "keep-owner"]
+    },
+    {
+      "concept_id": "preserve-confirmed-deadline",
+      "domain": "revision",
+      "description": "Keep the confirmed date or deadline unchanged.",
+      "aliases": ["confirmed-date-preserved", "keep-deadline"]
+    },
+    {
+      "concept_id": "placeholder-unknown-value",
+      "domain": "revision",
+      "description": "Represent a required unknown value with a descriptive placeholder.",
+      "aliases": ["keep-unknown-placeholder", "required-placeholder", "unresolved-placeholder"]
+    },
+    {
+      "concept_id": "remove-unsupported-accusation",
+      "domain": "revision",
+      "description": "Remove or neutralize an unsupported blame or intent claim.",
+      "aliases": ["neutralize-blame", "remove-bad-faith-claim", "remove-unconfirmed-accusation"]
+    },
+    {
+      "concept_id": "qualify-unconfirmed-cause",
+      "domain": "revision",
+      "description": "State that a cause or attribution remains unconfirmed.",
+      "aliases": ["cause-remains-unknown", "conditional-cause", "uncertain-causation"]
+    },
+    {
+      "concept_id": "remove-unsafe-commitment",
+      "domain": "revision",
+      "description": "Remove or condition a commitment that lacks authority or confirmed scope.",
+      "aliases": ["conditional-ownership", "remove-overcommitment", "scope-commitment"]
+    },
+    {
+      "concept_id": "no-revision",
+      "domain": "revision",
+      "description": "No revision is needed for a Green message.",
+      "aliases": ["no-change-needed", "no-revision-needed", "preserve-message"]
+    }
+  ]
+}

@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Blind benchmark methodology v2
+
+- Separated explicit SUT-visible Data A from evaluator-only construction notes.
+- Replaced exact question/revision token equality with ontology aliases and semantic claim matching.
+- Added gold uncertainty tiers, heterogeneous adjudication requirements, and a human-review template.
+- Added content-addressed cloud artifact freezing and mutation checks.
+- Passed six methodology tests without changing runtime Skill files.
+- Preserved all historical blind scores unchanged.
+
 ### Blind defect remediation
 
 - Re-triaged 18 diagnostic cases into 3 confirmed product defects and 15 benchmark/gold ambiguities.
