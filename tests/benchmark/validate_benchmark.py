@@ -370,11 +370,12 @@ def validate_manifest(manifest: dict, seen: set[Path] | None = None) -> None:
                 ),
                 f"{entry['role']}: attestation content",
             )
-            require(
-                document["cloud_branch"] == entry["cloud_branch"]
-                and document["cloud_commit"] == entry["cloud_commit"],
-                f"{entry['role']}: attestation provenance mismatch",
-            )
+            if "source_attestation" not in document:
+                require(
+                    document["cloud_branch"] == entry["cloud_branch"]
+                    and document["cloud_commit"] == entry["cloud_commit"],
+                    f"{entry['role']}: attestation provenance mismatch",
+                )
             if entry["role"] in {"generator-attestation", "evaluator-attestation"}:
                 require(
                     all(

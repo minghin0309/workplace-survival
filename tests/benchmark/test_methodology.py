@@ -429,6 +429,31 @@ class BenchmarkMethodologyTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validate_benchmark.validate_gold(gold)
 
+    def test_canonical_wrapper_separates_artifact_and_source_provenance(self):
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory)
+            manifest = self._valid_gold_manifest(directory)
+            entry = next(
+                item
+                for item in manifest["artifacts"]
+                if item["role"] == "labeler-1-attestation"
+            )
+            path = Path(entry["path"])
+            document = json.loads(path.read_text())
+            source = directory / "raw-attestation.json"
+            source.write_text('{"raw": true}\n')
+            import hashlib
+
+            document["source_attestation"] = {
+                "path": str(source),
+                "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+            }
+            document["cloud_branch"] = "cursor/source-agent"
+            document["cloud_commit"] = "b" * 40
+            path.write_text(json.dumps(document) + "\n")
+            entry["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+            validate_benchmark.validate_manifest(manifest)
+
     def test_attestation_family_mismatch_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             directory = Path(directory)
