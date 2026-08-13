@@ -1,0 +1,877 @@
+{
+  "schema_version": "v2",
+  "artifact": "semantic-matches",
+  "extraction_snapshot": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/extractions-manifest-v2.json",
+    "sha256": "cc5dd4dd8dd80fd8ea6477c52941206c55d213067cfed2f5a2b3d1cdf424d419"
+  },
+  "matcher": {
+    "context_id": "unverified",
+    "model_id": "unverified",
+    "model_family": "gpt",
+    "gold_access": true
+  },
+  "source_hashes": {
+    "evaluations": "61c5aa0791ab3138fa597f13d59330668f4ecc3d24bc651115e728a468189764",
+    "gold": "63245c97c837721862769598c42e2fd47d4c2f87ee1b0624763800d8b32dc05d",
+    "ontology": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+    "outputs": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4"
+  },
+  "cases": [
+    {
+      "case_id": "V2-001",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V2-002",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-002-1-1",
+              "concept_id": "preserve-confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-confirmed-deadline'."
+            },
+            {
+              "claim_id": "r-V2-002-1-2",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.0,
+              "rationale": "Unsupported: the revision claim is factual but does not express any one allowed concept for this turn."
+            },
+            {
+              "claim_id": "r-V2-002-1-3",
+              "concept_id": "preserve-confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-confirmed-deadline'."
+            },
+            {
+              "claim_id": "r-V2-002-1-4",
+              "concept_id": "preserve-confirmed-owner",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-confirmed-owner'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-003",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V2-004",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V2-005",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-005-1-1",
+              "concept_id": "attribute-review-to-contractor",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'attribute-review-to-contractor'."
+            },
+            {
+              "claim_id": "r-V2-005-1-2",
+              "concept_id": "state-preliminary-verbal-readout",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-preliminary-verbal-readout'."
+            },
+            {
+              "claim_id": "r-V2-005-1-3",
+              "concept_id": "state-preliminary-verbal-readout",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-preliminary-verbal-readout'."
+            },
+            {
+              "claim_id": "r-V2-005-1-4",
+              "concept_id": "state-signoff-pending-with-geologist",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-signoff-pending-with-geologist'."
+            },
+            {
+              "claim_id": "r-V2-005-1-5",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.0,
+              "rationale": "Unsupported: the revision claim is factual but does not express any one allowed concept for this turn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-006",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-006-1-1",
+              "concept_id": "state-handover-completed-and-signed",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-handover-completed-and-signed'."
+            },
+            {
+              "claim_id": "r-V2-006-1-2",
+              "concept_id": "state-rota-ownership-outside-remit",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-rota-ownership-outside-remit'."
+            },
+            {
+              "claim_id": "r-V2-006-1-3",
+              "concept_id": "reference-prior-written-rota-warnings",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'reference-prior-written-rota-warnings'."
+            },
+            {
+              "claim_id": "r-V2-006-1-4",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.0,
+              "rationale": "Unsupported: the revision claim is factual but does not express any one allowed concept for this turn."
+            },
+            {
+              "claim_id": "r-V2-006-1-5",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'remove-unsafe-commitment'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-007",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V2-007-1-1",
+              "concept_id": "commitment-scope",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed question concept 'commitment-scope'."
+            },
+            {
+              "claim_id": "q-V2-007-1-2",
+              "concept_id": "approval-authority",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed question concept 'approval-authority'."
+            },
+            {
+              "claim_id": "q-V2-007-1-3",
+              "concept_id": "commitment-scope",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed question concept 'commitment-scope'."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-007-1-1",
+              "concept_id": "state-model-assigned-to-contractor",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-model-assigned-to-contractor'."
+            },
+            {
+              "claim_id": "r-V2-007-1-2",
+              "concept_id": "state-api-key-dependency",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-api-key-dependency'."
+            },
+            {
+              "claim_id": "r-V2-007-1-3",
+              "concept_id": "request-prioritisation-decision",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'request-prioritisation-decision'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-008",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-008-1-1",
+              "concept_id": "state-vendor-root-cause-and-outage-duration",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-vendor-root-cause-and-outage-duration'."
+            },
+            {
+              "claim_id": "r-V2-008-1-2",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'remove-unsupported-accusation'."
+            },
+            {
+              "claim_id": "r-V2-008-1-3",
+              "concept_id": "state-fallback-invoked-and-outcomes",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-fallback-invoked-and-outcomes'."
+            },
+            {
+              "claim_id": "r-V2-008-1-4",
+              "concept_id": "state-fallback-invoked-and-outcomes",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-fallback-invoked-and-outcomes'."
+            },
+            {
+              "claim_id": "r-V2-008-1-5",
+              "concept_id": "state-no-welfare-incident",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-no-welfare-incident'."
+            },
+            {
+              "claim_id": "r-V2-008-1-6",
+              "concept_id": "state-vendor-post-incident-review-date",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-vendor-post-incident-review-date'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-009",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-009-1-1",
+              "concept_id": "neutralise-hostile-framing",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'neutralise-hostile-framing'."
+            },
+            {
+              "claim_id": "r-V2-009-1-2",
+              "concept_id": "state-nesting-restriction-scope-impact",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-nesting-restriction-scope-impact'."
+            },
+            {
+              "claim_id": "r-V2-009-1-3",
+              "concept_id": "state-next-viable-window-12-august",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-next-viable-window-12-august'."
+            },
+            {
+              "claim_id": "r-V2-009-1-4",
+              "concept_id": "state-decision-deadline-18-april",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-decision-deadline-18-april'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-010",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-010-1-1",
+              "concept_id": "state-supplier-has-no-lamp-eta",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-supplier-has-no-lamp-eta'."
+            },
+            {
+              "claim_id": "r-V2-010-1-2",
+              "concept_id": "state-single-scanner-slip-to-12-march",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-single-scanner-slip-to-12-march'."
+            },
+            {
+              "claim_id": "r-V2-010-1-3",
+              "concept_id": "state-rental-option-cost-and-lead-time",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-rental-option-cost-and-lead-time'."
+            },
+            {
+              "claim_id": "r-V2-010-1-4",
+              "concept_id": "state-extension-deadline-1-january",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-extension-deadline-1-january'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-011",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-011-1-1",
+              "concept_id": "attribute-validation-execution-accurately",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'attribute-validation-execution-accurately'."
+            },
+            {
+              "claim_id": "r-V2-011-1-2",
+              "concept_id": "attribute-validation-execution-accurately",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'attribute-validation-execution-accurately'."
+            },
+            {
+              "claim_id": "r-V2-011-1-3",
+              "concept_id": "state-cost-of-no-change",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-cost-of-no-change'."
+            },
+            {
+              "claim_id": "r-V2-011-1-4",
+              "concept_id": "preserve-downtime-requirement",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-downtime-requirement'."
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-011-2-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.0,
+              "rationale": "Unsupported: the revision claim is factual but does not express any one allowed concept for this turn."
+            },
+            {
+              "claim_id": "r-V2-011-2-2",
+              "concept_id": "attribute-validation-without-naming-individual",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'attribute-validation-without-naming-individual'."
+            },
+            {
+              "claim_id": "r-V2-011-2-3",
+              "concept_id": "offer-named-attribution-on-request",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'offer-named-attribution-on-request'."
+            },
+            {
+              "claim_id": "r-V2-011-2-4",
+              "concept_id": "state-cost-of-no-change",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-cost-of-no-change'."
+            },
+            {
+              "claim_id": "r-V2-011-2-5",
+              "concept_id": "preserve-downtime-requirement",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-downtime-requirement'."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-011-3-1",
+              "concept_id": "attribute-validation-without-naming-individual",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'attribute-validation-without-naming-individual'."
+            },
+            {
+              "claim_id": "r-V2-011-3-2",
+              "concept_id": "attribute-validation-without-naming-individual",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'attribute-validation-without-naming-individual'."
+            },
+            {
+              "claim_id": "r-V2-011-3-3",
+              "concept_id": "state-cost-of-no-change",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-cost-of-no-change'."
+            },
+            {
+              "claim_id": "r-V2-011-3-4",
+              "concept_id": "state-gasket-window-date-4-february",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-gasket-window-date-4-february'."
+            },
+            {
+              "claim_id": "r-V2-011-3-5",
+              "concept_id": "preserve-approval-ask",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-approval-ask'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-012",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-012-1-1",
+              "concept_id": "state-explicit-ask-for-adjuster-return",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-explicit-ask-for-adjuster-return'."
+            },
+            {
+              "claim_id": "r-V2-012-1-2",
+              "concept_id": "preserve-open-claim-counts",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-open-claim-counts'."
+            },
+            {
+              "claim_id": "r-V2-012-1-3",
+              "concept_id": "preserve-clear-date-comparison",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-clear-date-comparison'."
+            },
+            {
+              "claim_id": "r-V2-012-1-4",
+              "concept_id": "preserve-regulatory-standard-breach",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-regulatory-standard-breach'."
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-012-2-1",
+              "concept_id": "lead-with-ask-in-first-two-lines",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'lead-with-ask-in-first-two-lines'."
+            },
+            {
+              "claim_id": "r-V2-012-2-2",
+              "concept_id": "preserve-clear-date-comparison",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-clear-date-comparison'."
+            },
+            {
+              "claim_id": "r-V2-012-2-3",
+              "concept_id": "preserve-regulatory-standard-breach",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-regulatory-standard-breach'."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-012-3-1",
+              "concept_id": "state-return-by-22-april",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-return-by-22-april'."
+            },
+            {
+              "claim_id": "r-V2-012-3-2",
+              "concept_id": "state-day-for-day-slip-after-22-april",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-day-for-day-slip-after-22-april'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-013",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-013-1-1",
+              "concept_id": "correct-superseded-quote-figure",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'correct-superseded-quote-figure'."
+            },
+            {
+              "claim_id": "r-V2-013-1-2",
+              "concept_id": "correct-superseded-quote-figure",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'correct-superseded-quote-figure'."
+            },
+            {
+              "claim_id": "r-V2-013-1-3",
+              "concept_id": "state-pane-failure-and-bearing-risk",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-pane-failure-and-bearing-risk'."
+            },
+            {
+              "claim_id": "r-V2-013-1-4",
+              "concept_id": "preserve-board-meeting-24-october",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-board-meeting-24-october'."
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-013-2-1",
+              "concept_id": "use-continuous-prose-register",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'use-continuous-prose-register'."
+            },
+            {
+              "claim_id": "r-V2-013-2-2",
+              "concept_id": "correct-superseded-quote-figure",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'correct-superseded-quote-figure'."
+            },
+            {
+              "claim_id": "r-V2-013-2-3",
+              "concept_id": "preserve-board-meeting-24-october",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-board-meeting-24-october'."
+            },
+            {
+              "claim_id": "r-V2-013-2-4",
+              "concept_id": "correct-superseded-quote-figure",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'correct-superseded-quote-figure'."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-013-3-1",
+              "concept_id": "use-continuous-prose-register",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'use-continuous-prose-register'."
+            },
+            {
+              "claim_id": "r-V2-013-3-2",
+              "concept_id": "state-revised-quote-figure",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-revised-quote-figure'."
+            },
+            {
+              "claim_id": "r-V2-013-3-3",
+              "concept_id": "preserve-board-meeting-24-october",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'preserve-board-meeting-24-october'."
+            },
+            {
+              "claim_id": "r-V2-013-3-4",
+              "concept_id": "state-revised-quote-figure",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-revised-quote-figure'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-014",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-014-1-1",
+              "concept_id": "state-application-status-under-assessment",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-application-status-under-assessment'."
+            },
+            {
+              "claim_id": "r-V2-014-1-2",
+              "concept_id": "state-q1-planning-blocked-pending-decision",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-q1-planning-blocked-pending-decision'."
+            },
+            {
+              "claim_id": "r-V2-014-1-3",
+              "concept_id": "remove-unverified-approval-claim",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'remove-unverified-approval-claim'."
+            },
+            {
+              "claim_id": "r-V2-014-1-4",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.0,
+              "rationale": "Unsupported: the revision claim is factual but does not express any one allowed concept for this turn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-015",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-015-1-1",
+              "concept_id": "state-subjective-impression-as-impression",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-subjective-impression-as-impression'."
+            },
+            {
+              "claim_id": "r-V2-015-1-2",
+              "concept_id": "state-routine-live-at-one-shop-only",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-routine-live-at-one-shop-only'."
+            },
+            {
+              "claim_id": "r-V2-015-1-3",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.0,
+              "rationale": "Unsupported: the revision claim is factual but does not express any one allowed concept for this turn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-016",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-016-1-1",
+              "concept_id": "route-request-via-pr2-to-procurement-director",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'route-request-via-pr2-to-procurement-director'."
+            },
+            {
+              "claim_id": "r-V2-016-1-2",
+              "concept_id": "state-manager-approval-limit-exceeded",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-manager-approval-limit-exceeded'."
+            },
+            {
+              "claim_id": "r-V2-016-1-3",
+              "concept_id": "state-timeline-against-1-march-deadline",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-timeline-against-1-march-deadline'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-017",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-017-1-1",
+              "concept_id": "state-confirmed-load-test-failure",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-confirmed-load-test-failure'."
+            },
+            {
+              "claim_id": "r-V2-017-1-2",
+              "concept_id": "state-rebuild-day-shortfall",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-rebuild-day-shortfall'."
+            },
+            {
+              "claim_id": "r-V2-017-1-3",
+              "concept_id": "state-basil-booking-deadline-5-april",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-basil-booking-deadline-5-april'."
+            },
+            {
+              "claim_id": "r-V2-017-1-4",
+              "concept_id": "state-explicit-approval-ask",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-explicit-approval-ask'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-018",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-018-1-1",
+              "concept_id": "correct-subject-line-misattribution",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'correct-subject-line-misattribution'."
+            },
+            {
+              "claim_id": "r-V2-018-1-2",
+              "concept_id": "state-detection-and-escalation-by-sender",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-detection-and-escalation-by-sender'."
+            },
+            {
+              "claim_id": "r-V2-018-1-3",
+              "concept_id": "correct-fault-attribution-to-ingest-config",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'correct-fault-attribution-to-ingest-config'."
+            },
+            {
+              "claim_id": "r-V2-018-1-4",
+              "concept_id": "correct-fault-attribution-to-ingest-config",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'correct-fault-attribution-to-ingest-config'."
+            },
+            {
+              "claim_id": "r-V2-018-1-5",
+              "concept_id": "state-reprocessing-compute-time",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-reprocessing-compute-time'."
+            },
+            {
+              "claim_id": "r-V2-018-1-6",
+              "concept_id": "state-reprocessing-route-decision-for-manager",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Semantic match: the claim meaning fits the allowed revision concept 'state-reprocessing-route-decision-for-manager'."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
