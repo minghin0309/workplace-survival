@@ -1,0 +1,63 @@
+{
+  "schema_version": "v3",
+  "labeler_id": "gold-labeler-3",
+  "model_context": {
+    "model_family": "gpt",
+    "model_identity": "GPT-5.5 via Cursor Cloud coding agent",
+    "labeling_mode": "independent blind gold labeling",
+    "declared_isolation": "Repository content was read only from the case file, the two case-declared PNG images, the blind gold rubric, and the semantic ontology. No skill, scorer, oracle, methodology, spec, other labels, history, PR, external, search, glob, listing, or benchmark runtime was used."
+  },
+  "git_context": {
+    "base_branch": "cursor/blind-v3-holdout-17a0",
+    "working_branch": "cursor/gold-labeler-3-v3-holdout-708c",
+    "label_output_commit": "7cb53c012590214b3c13f48b5b9d0341659404a7",
+    "label_output_path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3.json",
+    "attestation_path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3-attestation.json"
+  },
+  "permitted_read_hashes_sha256": {
+    "tests/benchmark/v3-holdout/cloud-cases/cases.json": "b453ec8a2ff60c16b9f2f1fcb7c163db81ed93687a621a28f801e8b774183946",
+    "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d",
+    "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40",
+    "tests/blind/GOLD_RUBRIC.md": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+  },
+  "image_open_records": [
+    {
+      "case_id": "V3-017",
+      "path_opened": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d",
+      "opened_directly": true,
+      "observed_text_summary": "Unsent Rivet chat to Dana Miyashiro about jet fan FAN-1074 in the northbound bore tripping on overload; the portal flow value is partly obscured; asks Dana to put the bore into reduced mode until Priit pulls and checks the fan.",
+      "image_uncertainty": "The numeric flow token was not fully legible, so the label uses the no-image-token-guess invariant and requires confirmation of the obscured value."
+    },
+    {
+      "case_id": "V3-018",
+      "path_opened": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40",
+      "opened_directly": true,
+      "observed_text_summary": "Unsent mail draft to Sofia Lindenberg saying the Kestrel Yard winch drum came back out of tolerance, the lift plan changed, Owen already told the yard the company would cover crane hire, Owen signed off the revised lift plan himself, and the planners are blamed.",
+      "image_uncertainty": "The relevant draft text was legible enough to label the authority and tone issues without guessing."
+    }
+  ],
+  "output_hashes_sha256": {
+    "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3.json": "33b8e6b6f7dfabf1def9444d7e2fd9d288d049d7dacbfdfeb1326152e81eccaa"
+  },
+  "validation": {
+    "expected_cases": 18,
+    "expected_turns": 24,
+    "validation_status_at_attestation_write": "pending post-attestation validation",
+    "notes": "The label file was committed and pushed before validation in order to preserve the output hash and commit cited above."
+  },
+  "protocol_violations": [
+    {
+      "description": "I initially attempted to open /workspace/images/V3-017.png and /workspace/images/V3-018.png from the shorthand image paths in the user request. Both attempts returned file-not-found and did not read repository content. I then opened the case-declared image paths under tests/benchmark/v3-holdout/cloud-cases/images/ directly.",
+      "content_exposed": false,
+      "impact_on_labels": "No image content or other repository content was obtained from the failed paths; labels are based on the five permitted successful reads."
+    }
+  ],
+  "limitations": [
+    "No repository listing, glob, search, test suite, scorer, oracle, Skill, methodology, other labels, gold outputs, history, PR data, or external resource was consulted.",
+    "The V3-017 flow value was partly obscured in the image; the label intentionally treats that value as unknown rather than guessing.",
+    "The attestation cites the label-output commit rather than the final attestation commit because embedding the final commit hash inside the committed file would be self-referential."
+  ]
+}
