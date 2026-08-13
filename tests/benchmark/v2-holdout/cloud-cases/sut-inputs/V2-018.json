@@ -1,0 +1,36 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-018",
+  "recipient_context": "Aoife Ballantyne-Cruz, survey operations manager at Fathom Line Surveys and Tobias's direct manager. She must decide whether the affected lines are reprocessed in-house or the job goes back to the software team, and she is the interface to the client.",
+  "data_a": {
+    "organization": "Fathom Line Surveys, a hydrographic survey contractor.",
+    "sender": "Tobias Mwangi-Reuter, survey data processor.",
+    "manager": "Aoife Ballantyne-Cruz, survey operations manager.",
+    "channel": "Email compose window; the draft exists only as an on-screen screenshot.",
+    "situation_facts": [
+      "The multibeam dataset for the Kilbrannan Sound charting job shows a forty centimetre vertical offset in survey lines twelve through nineteen.",
+      "The offset was traced to a tide-gauge timestamp mismatch, UTC against British Summer Time, introduced at the ingest step.",
+      "The ingest configuration is owned by the software team, led by Runa Halvorsen.",
+      "Tobias's remit is post-processing quality control; he has read access to the ingest configuration but no write access and no authority to change it.",
+      "Tobias detected the offset during routine crossline QC on 12 August and raised it the same day.",
+      "Reprocessing the eight affected lines takes six hours of compute once the configuration is corrected.",
+      "The deliverable to the hydrographic office is due 21 August.",
+      "The software team has a two-day standard turnaround for configuration defects.",
+      "Whether to reprocess in-house or return the job to the software team is Aoife's decision.",
+      "Aoife is the sole interface to the client on this job."
+    ],
+    "ownership_map": {
+      "ingest configuration": "Runa Halvorsen, software team lead",
+      "post-processing quality control and defect detection": "Tobias Mwangi-Reuter",
+      "reprocessing route decision and client interface": "Aoife Ballantyne-Cruz"
+    },
+    "constraints": []
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "This is the email I am about to send Aoife, screenshot attached. Anything I should change?",
+      "image_path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png"
+    }
+  ]
+}
