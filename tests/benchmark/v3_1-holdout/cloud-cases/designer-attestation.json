@@ -1,0 +1,266 @@
+{
+  "schema": "v3.1-holdout-designer-attestation",
+  "case_set_id": "v31-unseen-holdout",
+  "attested_role": "Blind case designer for the v3.1 unseen holdout",
+  "attested_on": {
+    "value": "2026-08-13",
+    "status": "unverified",
+    "note": "Date reported by the execution environment. The designer cannot verify the clock from inside the run."
+  },
+  "sole_repository_input": {
+    "path": "tests/benchmark/v3_1/V3_1_CASE_BRIEF.md",
+    "sha256": "1ed073b1cb476ed8dd1299ff38fedc0c4e524d89b4dc4dd32d918df342ce782a",
+    "byte_length": 3648,
+    "read_method": "Whole file read once at the start of the run, then re-hashed by the validator.",
+    "statement": "This file is the only pre-existing repository file whose content was read during construction."
+  },
+  "inputs_not_read": [
+    "Any other repository path, including every file outside tests/benchmark/v3_1/V3_1_CASE_BRIEF.md and the artifacts this run itself created.",
+    "Benchmark runtime and contract code.",
+    "Gold labels, scorers, rubrics and ontology.",
+    "Tests of any kind.",
+    "Prior v1, v2 and v3 cases and any archived case artifacts.",
+    "Plan, history, changelog and specification documents.",
+    "Pull requests, issues, review comments and commit messages of other branches.",
+    "Repository skills, including the skill file listed in the environment's skills catalogue.",
+    "External sources: no web search, no page fetch, no third-party corpus."
+  ],
+  "listing_and_search": {
+    "statement": "No directory listing, glob or content search was run over any repository path outside the holdout output directory this run created.",
+    "output_directory_listing": "The output directory tests/benchmark/v3_1-holdout/cloud-cases was listed and re-read, since it contains only artifacts written by this run."
+  },
+  "other_path_access_flags": [
+    {
+      "kind": "write",
+      "paths": "tests/benchmark/v3_1-holdout/cloud-cases/**",
+      "detail": "All artifacts of this run were created here. No pre-existing repository file was modified or deleted."
+    },
+    {
+      "kind": "read-back of own outputs",
+      "paths": "tests/benchmark/v3_1-holdout/cloud-cases/**",
+      "detail": "The validator reads the JSON artifacts and PNG bytes this run produced, and the designer viewed the two rendered PNGs and the mutation render to confirm legibility. None of this content pre-existed the run."
+    },
+    {
+      "kind": "git metadata",
+      "paths": ".git",
+      "detail": "Branch creation, git status, git add, git commit, git push and git rev-parse were run. git status listed only the untracked output directory of this run; no repository file content was read through git, and no diff, log, show or blame of existing content was run."
+    },
+    {
+      "kind": "environment probe outside the repository",
+      "paths": "/usr/lib/python3.12 (interpreter), /tmp/cursor/async-install",
+      "detail": "The Python interpreter and the availability of an imaging library were probed, and the setup status directory was checked. No repository content was involved. No imaging library was present, so image rendering was implemented with the standard library only."
+    },
+    {
+      "kind": "context injected outside the designer's control",
+      "paths": ".cursor/skills/workplace-survival/SKILL.md",
+      "detail": "The environment's system context listed this skill's name, path and one-paragraph description before the run began. The skill file itself was never read, and no instruction from it was followed. Flagged because the brief prohibits skills as an input and the catalogue entry was present in context regardless."
+    },
+    {
+      "kind": "context injected outside the designer's control",
+      "paths": "branch names of unrelated agent branches",
+      "detail": "The run instructions listed prior agent branch names for this repository. No branch other than the base branch and this run's own branch was fetched, checked out or read."
+    }
+  ],
+  "model_and_context": {
+    "model_identity": "unverified",
+    "full_system_context": "unverified",
+    "note": "The designer cannot enumerate or attest to the complete contents of its own context window, nor confirm which model served the run. Both are recorded as unverified rather than asserted. Everything the designer deliberately read from the repository is listed under sole_repository_input, and every other filesystem interaction is listed under other_path_access_flags."
+  },
+  "branch": "cursor/v31-unseen-holdout-d679",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "base_commit": "136de2c3f6979c17966742a5cc34bed5bd78a8b2",
+  "output_commit": {
+    "sha": "9820313c94a45f3cc3b059d3a272dbd168defc6d",
+    "subject": "Add v3.1 unseen holdout cases, design predicates and mutations",
+    "contents": "All holdout artifacts except this attestation, which is committed separately afterwards."
+  },
+  "output_hashes": [
+    {
+      "path": "cases.json",
+      "byte_length": 45394,
+      "sha256": "13843dabdc745253abeac2100babf9c7a6d8b018ea694961d64ba4a4b219a824",
+      "role": "SUT-visible case envelope"
+    },
+    {
+      "path": "oracle-notes.json",
+      "byte_length": 9051,
+      "sha256": "dd8bd9f7f0ff5ea7ab104510f8533497ff2c0b1daef49bcc2d34075c1f4b29b8",
+      "role": "Construction notes; no new case facts, no expected labels"
+    },
+    {
+      "path": "question-design.json",
+      "byte_length": 9380,
+      "sha256": "45bc870604380defc2c0dcdf0301025d47e21a28abab24ca1b17e6f9fd453d6e",
+      "role": "Construction-only predicates and answer fixtures; never available to gold labelers or SUT contexts"
+    },
+    {
+      "path": "construction-mutations.json",
+      "byte_length": 22451,
+      "sha256": "ef2934613cc91c95a2340e64eef270e8424d39dc8335981c667d67cc0dd6723a",
+      "role": "Construction-only mutation states and expected transitions"
+    },
+    {
+      "path": "images/V31-008.png",
+      "byte_length": 9889,
+      "sha256": "cf0d9925d8ade83642ec13e6ca0e33325bacbfdcab388b185e6a13379139493c",
+      "role": "Image-only draft for the image question candidate"
+    },
+    {
+      "path": "images/V31-018.png",
+      "byte_length": 3581,
+      "sha256": "b64e1a3773e121373917f63ffb04b32ba4c81aac5b68ad06fd3440a3d3563c7a",
+      "role": "Clearly readable image-only draft for V31-018"
+    },
+    {
+      "path": "construction/render_images.py",
+      "byte_length": 12562,
+      "sha256": "ec6384f77ee8eaa1f751b52461ed3778f0dfa4e683c5671997765469198c4afa",
+      "role": "Deterministic PNG renderer; construction tooling, not a benchmark artifact"
+    },
+    {
+      "path": "construction/validate_holdout.py",
+      "byte_length": 18061,
+      "sha256": "721eeaaecdf870f852a194130c28965dbea7476365c2e41ad97bd044298e8b6e",
+      "role": "Mechanical validator; construction tooling, not a benchmark artifact"
+    },
+    {
+      "path": "construction/mutation-renders/V31-008-ADD_DOMINANT_RED.png",
+      "byte_length": 10986,
+      "sha256": "c61b8d3d38f13341238d596d2275b1277ca798594992df149b51876b59fc3c62",
+      "role": "Mutation evidence for the image candidate; design evidence, not a benchmark case"
+    }
+  ],
+  "brief_conformance": {
+    "case_ids": "Exactly 18 ids, V31-001 through V31-018, in order and unique.",
+    "turn_total": 24,
+    "turn_shape": "V31-014, V31-015 and V31-016 have three ordered turns each; the other fifteen cases have one turn each.",
+    "distribution_as_built": {
+      "V31-001..V31-003": "Green controls",
+      "V31-004..V31-009": "Required-question candidates",
+      "V31-010..V31-011": "Responsibility boundaries",
+      "V31-012..V31-013": "Tone boundaries",
+      "V31-014..V31-016": "Three-turn correction and state cases",
+      "V31-017": "Recipient-routing case",
+      "V31-018": "Clearly readable image-only responsibility and tone case"
+    },
+    "distribution_placement": "Recorded here rather than in cases.json or oracle-notes.json, so that no band label reaches a SUT context or a gold labeling context.",
+    "candidate_concepts": {
+      "V31-004": "approval-authority",
+      "V31-005": "confirmed-deadline",
+      "V31-006": "intended-recipient",
+      "V31-007": "traceable-source",
+      "V31-008": "material-measurement",
+      "V31-009": "required-decision-option"
+    },
+    "candidate_predicates": "For each candidate: one primary material answer absent from every SUT-visible field, an explicit recipient requirement or decision that depends on it, placeholder, qualification and omission all unsafe, safe completion enabled by the answer, question unnecessary once the dependency is removed, no independent direct Red defect, and no second unrelated unknown.",
+    "image_candidate": "V31-008 is an image-only draft whose measured-offset field carries an opaque smear with no glyphs drawn beneath it. The legible remainder of the slip and the two stated requirements make clear why that exact field is needed, and the value appears in no text field of cases.json.",
+    "mutation_obligations": "Each candidate carries REMOVE_DEPENDENCY, SUPPLY_ANSWER and ADD_DOMINANT_RED states with patch specifications and predicate vectors, held outside the SUT-visible envelope in construction-mutations.json.",
+    "envelope": "Each case carries explicit recipient_context, structured data_a, ordered turns, image_path and image_spec. Non-image turns carry image_path null and image_spec null.",
+    "fiction": "Every organisation, person, project, batch, record identifier, route, place and date is invented for this holdout.",
+    "separation": "cases.json contains no construction predicate, no mutation reference, no band label and no expected label, and it does not reference question-design.json or construction-mutations.json."
+  },
+  "invented_namespace": {
+    "organisation": "Cindervale Ceramics Co-operative",
+    "teams": [
+      "Kiln floor",
+      "Kiln floor night shift",
+      "Glaze lab",
+      "Finishing",
+      "Dispatch",
+      "Quality records"
+    ],
+    "people_in_cases": [
+      "Teodora Vance",
+      "Ines Bramhall",
+      "Selby Ranganathan",
+      "Casimir Lund",
+      "Priya Okonjo-Hale",
+      "Ruben Sadler-Mott",
+      "Hollis Nyquist",
+      "Odalys Krupin",
+      "Dov Marchetti",
+      "Marek Ilves",
+      "Gerhard Ostrowski"
+    ],
+    "people_in_construction_fixtures_only": [
+      "Maribel Otundo",
+      "Wren Adaeze"
+    ],
+    "projects": [
+      "Larkmoor Civic Library refurbishment",
+      "Vellhouse Atrium job"
+    ],
+    "identifier_families": [
+      "TB-#### batches",
+      "K-#### kiln book entries",
+      "N-#### night entries",
+      "F-#### rework logs",
+      "S-#### calibration slips",
+      "P-#### site log entries",
+      "EL-##/# parts",
+      "Ashfall Blue glaze codes",
+      "Route Ember and Route Cinder"
+    ],
+    "calendar": "April 2027 throughout, with no date reused as a fictional identifier."
+  },
+  "validation": {
+    "validator": "construction/validate_holdout.py",
+    "command": "python3 validate_holdout.py",
+    "checks_run": 924,
+    "result": "PASS",
+    "covered": [
+      "Case identifier set, ordering and uniqueness, and the 24-turn total.",
+      "Exact case, recipient_context, data_a and turn key sets, turn ordering and turn identifier format.",
+      "draft_source consistency, including image_path null and image_spec null on every non-image turn.",
+      "PNG signature, IHDR geometry against image_spec, declared byte length, declared SHA-256, absence of tEXt, zTXt, iTXt and tIME chunks, and that every stored benchmark PNG is referenced by a case.",
+      "Image determinism: each PNG is re-rendered in process and compared byte for byte with the stored file.",
+      "No construction vocabulary in cases.json, across a banned-token list covering every question-design and mutation key and every band label.",
+      "No candidate answer token appears in cases.json or in oracle-notes.json.",
+      "The six candidates, their six distinct brief concepts and every required predicate value.",
+      "Three mutation states per candidate, mutation identifier format, patch grammar, and the mechanical transition rules for each state.",
+      "Mutation render existence, hash and byte length, and that it sits outside the benchmark image set.",
+      "Oracle notes: one entry per case, turn counts consistent with the envelope, facts_added_by_note false everywhere, and no label vocabulary in any per-case note.",
+      "This attestation: brief path and hash, recorded branch and commit, and every recorded output hash and byte length against the files on disk."
+    ],
+    "environment": {
+      "python": "3.12.3",
+      "zlib": "1.3",
+      "architecture": "x86_64",
+      "imaging_library": "none installed; PNG encoding and the bitmap font are implemented in construction/render_images.py using only the standard library"
+    }
+  },
+  "limitations_and_unverified_claims": [
+    "Prior-domain non-reuse is asserted from the brief's instruction and built from a freshly invented namespace. It could not be diffed against the v1, v2 or v3 corpora, because reading prior cases and archives is prohibited. If any collision exists with a prior domain, name, figure, date, message or sentence pattern, it is coincidental and undetectable from inside this run.",
+    "The 'v3 envelope shape' was reconstructed from the field names the brief itself lists: recipient_context, data_a, turns, image_path and image_spec. Every other field name, including draft, draft_source, sender, situation, known_facts, constraints and stated_requirements, is this designer's construction. The real v3 envelope definition was not read, so exact field-for-field conformance with the v3 schema is unverified.",
+    "No runtime, scorer, rubric or ontology compatibility check was run, so the artifacts are unproven against the harness that will consume them.",
+    "No gold labels or expected outcomes exist anywhere in these artifacts, by design. Whether each case lands in its intended band is therefore untested here.",
+    "The question-candidate predicates are designer judgments about safety and dependency. The validator checks that they are encoded consistently and that the mutation transitions are coherent; it cannot prove the judgments themselves.",
+    "Image determinism is verified in this environment across repeated runs. Byte-identical output on a different zlib build is expected but unverified, since PNG payload bytes depend on the deflate implementation. The image content itself is environment-independent: an embedded bitmap font is used, and no system font, locale or timestamp is involved.",
+    "The unreadability of the offset field rests on construction rather than obfuscation: no glyphs are drawn beneath the smear, so there is nothing to recover. This was confirmed by reading the renderer and by viewing the rendered image, not by running an OCR tool.",
+    "The attestation date, the model identity and the complete contents of the designer's context window are unverified from inside the run."
+  ],
+  "isolation": {
+    "designer_inputs": "One repository file, the v3.1 case brief, plus the artifacts this run created.",
+    "never_exposed_to_sut_or_gold": [
+      "question-design.json",
+      "construction-mutations.json",
+      "construction/render_images.py",
+      "construction/validate_holdout.py",
+      "construction/mutation-renders/V31-008-ADD_DOMINANT_RED.png",
+      "designer-attestation.json"
+    ],
+    "sut_visible_set": [
+      "cases.json",
+      "images/V31-008.png",
+      "images/V31-018.png"
+    ],
+    "gold_labeling_set": [
+      "cases.json",
+      "images/V31-008.png",
+      "images/V31-018.png",
+      "oracle-notes.json"
+    ],
+    "mutations": "Mutation states and the mutation render are design evidence. They are not benchmark cases and must not be scored or labelled.",
+    "band_labels": "Held only in this attestation, so that neither a SUT context nor a gold labeling context carries an expected outcome."
+  }
+}
