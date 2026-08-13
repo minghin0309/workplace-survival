@@ -1,0 +1,129 @@
+{
+  "schema_version": "v2",
+  "role": "adjudicator",
+  "context_id": "bc-71c5d4ca-0585-5745-99ec-50491605c172",
+  "context_url": "https://cursor.com/agents/bc-71c5d4ca-0585-5745-99ec-50491605c172",
+  "model_id": "unverified",
+  "model_id_provenance": "cursor-cloud run-info returned originalModelName null; no machine model id was available, so no model id is guessed.",
+  "model_family": "gpt",
+  "cloud_branch": "cursor/raw-v2-adjudication-c172",
+  "cloud_commit": "5811293f638248d896dc3319ddcd5d0898aa0efb",
+  "cloud_commit_role": "commit containing gold-v2-raw.json and adjudication-v2-raw.json before attestation was written",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1.json",
+      "sha256": "44eecc21199cecba5c0a8e7dce99277f8c2fd0c2fcb81a1e127b3f1c1dce5418"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1-attestation.json",
+      "sha256": "31675d1336da2fc42799281113c87e4fee274df656bffb3940eb4f7882b3bc96"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-rerun.json",
+      "sha256": "3d927fa748f90c6bc264b30d23354855968f70ee01b25f5c54d5f5dad2976eb8"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-rerun-attestation.json",
+      "sha256": "b4d2199e31b6d8a2dc9b11ce2704bb69b872134b338178802b1808539272ea5e"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "67aa69207ba205182eb25065fdf20c947de715bc10b2a381531ec88ce1f1e938"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3-attestation.json",
+      "sha256": "978a80d60c633f05c487f0949232b37b1cea67029d645f8121294c2df24a338f"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/designer-attestation.json",
+      "sha256": "9775aa61f2fe5eb34493a5abbf6abf719626812acb1715533ccde8f1dc84b975"
+    }
+  ],
+  "limitations": [
+    "Machine model metadata was unavailable: cursor-cloud run-info returned originalModelName null, so model_id is recorded as unverified rather than guessed.",
+    "No independent filesystem audit proof is available; the isolation claim is based on the tool actions in this run and the explicit path allowlist followed during adjudication.",
+    "The attestation is written after the raw-output commit, so adjudication-v2-raw.json intentionally carries a null attestation hash for later mechanical normalization.",
+    "The attestation cannot embed its own SHA-256 without changing the bytes being hashed; its final hash must be computed externally after the second commit.",
+    "Only the two PNGs were opened as images; no external OCR, web source, git history, prior gold, scorer, validator, methodology, runtime Skill file, SUT output, or non-allowlisted repository path was accessed."
+  ],
+  "isolation": {
+    "statement": "I acted as an independent fourth-family GPT adjudicator using only the twelve allowlisted repository input paths, the two new raw output files for validation/attestation, cursor-cloud run-info for run provenance, and git only for branch creation, staging, committing, and pushing.",
+    "prohibited_repository_access_occurred": false,
+    "human_review_available": false,
+    "labeler_votes_preserved": true,
+    "old_invalidated_labeler_2_accessed": false,
+    "labeler_2_source_used": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-rerun.json"
+  },
+  "images_opened": [
+    {
+      "case_id": "V2-017",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24",
+      "opened_directly": true,
+      "observation": "Slack compose screenshot addressed to Marguerite Vaudrey-Pinto; visible draft begins 'Hi Marguerite - sorry to bother you again about the Tin Heron bridge' and ends 'no rush.'"
+    },
+    {
+      "case_id": "V2-018",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab",
+      "opened_directly": true,
+      "observation": "Email compose screenshot to Aoife Ballantyne-Cruz with subject 'Kilbrannan offset - my mistake'; visible body falsely takes ownership of ingest config and promises to patch timestamp handling."
+    }
+  ],
+  "outputs": {
+    "tests/benchmark/v2-holdout/cloud-cases/gold-v2-raw.json": {
+      "sha256": "6aa1e952c725727919ac9c315a2f48b4f3d6ad1da975ceecb5330295cc7aff0a",
+      "commit": "5811293f638248d896dc3319ddcd5d0898aa0efb"
+    },
+    "tests/benchmark/v2-holdout/cloud-cases/adjudication-v2-raw.json": {
+      "sha256": "a53fc6b3d07da8832d9b9a6f0614f8935f802ec341701a5376cf08645f153f67",
+      "commit": "5811293f638248d896dc3319ddcd5d0898aa0efb"
+    },
+    "tests/benchmark/v2-holdout/cloud-cases/adjudicator-v2-raw-attestation.json": {
+      "sha256": null,
+      "commit": null,
+      "note": "Self SHA-256 cannot be embedded in the file it hashes; compute after commit from repository bytes."
+    }
+  },
+  "validation": {
+    "json_syntax_validated": true,
+    "coverage_validated": {
+      "cases": 18,
+      "turns": 24
+    },
+    "vote_distribution_totals_validated": true,
+    "gold_adjudication_final_turn_parity_validated": true,
+    "required_subsets_allowed_validated": true,
+    "tier_logic_validated": true,
+    "summary_counts_validated": true,
+    "uncertain_turn_count": 1,
+    "uncertain_fraction": 0.041666666666666664,
+    "final_overall_distribution": {
+      "Green": 9,
+      "Yellow": 2,
+      "Gray": 1,
+      "Red": 11,
+      "null": 1
+    }
+  }
+}
