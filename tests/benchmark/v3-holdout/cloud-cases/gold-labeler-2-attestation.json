@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "case_set_id": "v3-holdout-cloud-cases",
+  "labeler_id": "gold-labeler-2",
+  "assignment": {
+    "case_ids": [
+      "V3-017",
+      "V3-018"
+    ],
+    "assigned_count": 2,
+    "labeled_count": 2,
+    "coverage_percent": 100
+  },
+  "blindness_attestation": {
+    "oracle_content_read": false,
+    "other_label_content_read": false,
+    "unassigned_image_attempted": false,
+    "statement": "Labels were authored from only the assigned V3-017 and V3-018 case records, the two exact assigned images, and the normative Workplace Survival skill files. No oracle-note content, prior gold-label content, other labeler output content, or unassigned image was read."
+  },
+  "exact_content_reads": [
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+      "scope": "Parsed locally; only top-level schema metadata and records V3-017 and V3-018 were emitted for inspection."
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "scope": "Entire assigned image."
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "scope": "Entire assigned image."
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "scope": "Entire normative file."
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "scope": "Entire normative file."
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "scope": "Entire normative file."
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "scope": "Entire non-normative validation examples file."
+    }
+  ],
+  "metadata_only_access": [
+    "Repository status, branch, and commit-log metadata.",
+    "Filename discovery found pre-existing gold-labeler-2 paths outside v3-holdout; their contents were not opened.",
+    "Commit-stat metadata exposed the existence and line count of oracle-notes.json; its contents were not opened.",
+    "Path-scoped commit-log metadata for tests/benchmark/v3-holdout/cloud-cases; no file contents were shown."
+  ],
+  "authored_outputs": [
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2.json",
+      "sha256": "eef04158c5678dc8132bc1eaf41c45ed24f5f366079e1c47d9499e5035d88096"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2-attestation.json",
+      "sha256": null,
+      "note": "Self-hash intentionally omitted."
+    }
+  ],
+  "validation": {
+    "status": "pending_post_commit",
+    "checks": []
+  },
+  "protocol_verdict": "PASS",
+  "protocol_notes": [
+    "V3-017 is an intake label because an operationally material flow-value token is visibly obscured; no OCR guess, rating, or revision was made.",
+    "V3-018 is independently labeled from its visible draft and assigned Data A.",
+    "No image path other than the two exact paths in the assignment was attempted."
+  ]
+}
