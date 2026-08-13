@@ -37,6 +37,7 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/blind/BLIND_CASE_BRIEF.md`
 - `tests/blind/BLIND_PLAN.md`
 - `tests/blind/GOLD_RUBRIC.md`
+- `tests/blind/REMEDIATION_TRIAGE.md`
 - `tests/blind/CLOUD_BLIND_RESULTS.md`
 - `tests/blind/cloud-holdout/adjudication-raw.json`
 - `tests/blind/cloud-holdout/adjudication.json`

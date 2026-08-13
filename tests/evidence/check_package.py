@@ -51,11 +51,11 @@ def main() -> None:
 
     cases = (ROOT / "tests/TEST_CASES.md").read_text(encoding="utf-8")
     case_ids = [int(value) for value in re.findall(r"^### TC-(\d+)", cases, re.M)]
-    require(case_ids == list(range(1, 112)), "functional case IDs are not contiguous")
+    require(case_ids == list(range(1, 115)), "functional case IDs are not contiguous")
     require(cases.count("```") % 2 == 0, "unbalanced Markdown code fences")
     require(len(list((ROOT / "tests/fixtures").glob("*.png"))) == 13, "fixture count mismatch")
 
-    print("PACKAGE-01 PASS: runtime=4 files; links/frontmatter/install paths valid; manifest complete; TC-01–TC-111 contiguous; 13 PNG fixtures")
+    print("PACKAGE-01 PASS: runtime=4 files; links/frontmatter/install paths valid; manifest complete; TC-01–TC-114 contiguous; 13 PNG fixtures")
 
 
 if __name__ == "__main__":

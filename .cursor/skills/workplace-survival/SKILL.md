@@ -38,6 +38,7 @@ This skill reviews communication against known information. It does not independ
 - Use the applicable fixed format in `FORMATS.md`; while required input is missing, use only the intake format.
 - An assistant revision does not replace Data B until the user adopts, modifies, or resubmits it.
 - Preserve Data B's language, register, purpose, and voice when revising it.
+- Preserve the user-identified recipient or audience; never redirect a revision to a source author, quoted speaker, or background participant.
 - Describe concrete communication risks; never claim that the manager will definitely become angry or criticize the user.
 - In limited-background mode, never claim that Data B matches the manager's original requirements.
 

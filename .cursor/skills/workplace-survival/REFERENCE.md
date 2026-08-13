@@ -162,6 +162,7 @@ This skill reviews messages intended for a manager.
 - A label such as mentor, coach, HR partner, customer, client, senior colleague, project lead, or recipient position does not by itself establish manager status.
 - If the role is ambiguous, ask whether the recipient is acting as the user's manager and produce no ratings or revision.
 - If the recipient is clearly not a manager and no manager is included, use the scope-boundary format and stop.
+- Keep the intended recipient separate from source material. An email sender, quoted speaker, screenshot participant, or forwarded-message author is not the revision's addressee unless the user explicitly says the reply is for that person.
 
 When the user names a recipient role, that role information takes precedence over the default created by explicit invocation. Do not infer reporting authority from seniority, job title, organization, message tone, avatar, interface position, or workplace convention.
 
@@ -369,6 +370,7 @@ Apply tone ratings in this order:
 Use these distinctions:
 
 - An accusation asserts that a person caused, ignored, failed, lied, or is otherwise at fault. Treat it as Red when Data A does not establish it and the message asserts serious causation, dishonesty, negligence, misconduct, or deliberate failure as fact. Treat a qualified or low-severity unsupported fault suggestion as Yellow when it creates a concrete risk but does not meet that major-risk threshold. Do not decide whether either claim is probably true.
+- Explicit qualification such as `I think`, `it seems`, or `may` keeps an unsupported inference about intent or bad faith at Yellow when no insult, threat, hostility, or allegation of serious misconduct is present. Preserve any supported observation, such as unanswered messages, but rewrite the inferred intent as uncertainty. Qualification does not downgrade allegations of fraud, deliberate harm, or similarly serious misconduct.
 - Supported accountability can still be Yellow when phrased as personalized blame. The same fact stated as a neutral process condition is Green.
 - A threat targets the recipient with punishment, retaliation, humiliation, or adverse personal action. A neutral operational consequence such as a delayed launch is not a threat.
 - Responsibility-shifting or dismissive wording is Yellow when it distances the sender or pushes the matter onto the recipient without insult, hostility, threat, or unsupported accusation.
@@ -489,6 +491,9 @@ Do not ask a question when the answer cannot change the rating or revision. When
 - Do not repeat a question the user has answered.
 - Do not ask for the same information again using different wording.
 - If more than three material uncertainties exist, ask the three highest-impact questions first and defer the rest until the answers show they are still relevant.
+- When Data B proposes accepting fault, ownership, remediation, or a new commitment, questions about the factual cause, authority, scope, and constraint outrank cosmetic wording or a broadly understandable pronoun.
+- A quoted complaint establishes that the complaint was made, not that its causal allegation is true. Do not accept fault or remediation ownership from the quote without a confirmed basis.
+- Never ask for a prior-cause breakdown, owner, date, or other fact already explicit in effective Data A; ask only for the still-unknown remainder.
 
 ### Neutral answer structures
 
@@ -522,11 +527,13 @@ Revise only the concrete issues identified by the ratings and evidence.
 
 - Preserve the user's intended message purpose.
 - Preserve the language, script, register, and overall voice of Data B unless the user explicitly requests a translation or tone change.
+- Preserve the user-identified recipient or reply-all audience. Do not introduce a source author's name as a salutation or redirect the revision to a background participant. If the manager's name is unknown, omit the salutation or use a descriptive placeholder.
 - Before revising, identify visible register markers in Data B, including colloquial pronouns, particles, contractions, and sentence patterns; retain them wherever they are not the identified problem.
 - When responsibility wording itself is ambiguous, replace only that wording with the confirmed owner while keeping the surrounding register. For example, preserve Cantonese colloquial wording instead of converting it to formal written Chinese.
 - Keep wording that is already clear and safe.
 - Do not rewrite the entire message to match a personal preference for formality, polish, detail, or style.
 - Make every change traceable to a stated risk, contradiction, omission, or confirmed user request.
+- Do not turn an unconfirmed causal allegation into accepted fault or remediation ownership. Preserve the proposal as conditional and use a placeholder or question for the unknown current cause or scope.
 - Do not predict that the manager will definitely become angry, criticize the user, or react in a particular way. Describe only the concrete communication risk.
 
 ### Unknown information

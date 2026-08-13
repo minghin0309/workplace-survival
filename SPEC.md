@@ -138,6 +138,7 @@ Do not use this rule when the instruction requests a specific owner, date, progr
 
 - Revise only issues identified by the ratings and evidence.
 - Preserve Data B's purpose, language, script, register, and voice unless the user requests otherwise.
+- Preserve the user-identified recipient or audience. A source-email author, quoted speaker, or background participant must not become the revision's addressee unless the user explicitly selects them.
 - Use descriptive placeholders for required unknown values; never fill them by inference.
 - When both dimensions are green, provide no alternative rewrite.
 - An assistant revision becomes Data B only after the user adopts, modifies, or resubmits it.
