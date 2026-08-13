@@ -1,0 +1,972 @@
+{
+  "schema_version": "v3",
+  "case_set_id": "v3-holdout-cloud-cases",
+  "labeler_id": "gold-labeler-3",
+  "model_family": "gpt",
+  "ontology_version": "1",
+  "overall_derivation": "For rated Normal mode turns, overall is derived by Red > Gray > Yellow > Green across responsibility and tone; Intake, Scope, and Message-template mode use null ratings.",
+  "concept_definitions": {
+    "approval-authority": {
+      "domain": "question",
+      "source": "semantic_ontology",
+      "definition": "Ask who has authority to approve or decide."
+    },
+    "blocker-status": {
+      "domain": "question",
+      "source": "semantic_ontology",
+      "definition": "Ask whether a blocker exists and what it is."
+    },
+    "commitment-scope": {
+      "domain": "question",
+      "source": "semantic_ontology",
+      "definition": "Ask which work, period, or boundary the sender can commit to."
+    },
+    "confirm-obscured-image-value": {
+      "domain": "question",
+      "source": "local",
+      "definition": "Ask the user to confirm a value or token that is visible only in an image but is partly obscured or unreadable."
+    },
+    "confirmed-deadline": {
+      "domain": "question",
+      "source": "semantic_ontology",
+      "definition": "Ask for the current confirmed completion or delivery date."
+    },
+    "disclose-prior-commitment": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "State honestly that the sender already made a commitment or told a third party something material."
+    },
+    "exact-measurement": {
+      "domain": "question",
+      "source": "local",
+      "definition": "Ask for an exact numeric measurement required by the recipient or safety context."
+    },
+    "no-revision": {
+      "domain": "revision",
+      "source": "semantic_ontology",
+      "definition": "No revision is needed for a Green message."
+    },
+    "placeholder-unknown-value": {
+      "domain": "revision",
+      "source": "semantic_ontology",
+      "definition": "Represent a required unknown value with a descriptive placeholder."
+    },
+    "preserve-confirmed-owner": {
+      "domain": "revision",
+      "source": "semantic_ontology",
+      "definition": "Keep the confirmed owner unchanged."
+    },
+    "preserve-image-text": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "Preserve only text that is legible in the image and mark uncertain image text as unknown rather than guessing."
+    },
+    "preserve-intended-recipient": {
+      "domain": "revision",
+      "source": "semantic_ontology",
+      "definition": "Keep the user-identified recipient or audience."
+    },
+    "preserve-material-facts": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "Keep material facts supplied in the case, including owners, assets, figures, customers, constraints, and prior actions."
+    },
+    "qualify-unconfirmed-cause": {
+      "domain": "revision",
+      "source": "semantic_ontology",
+      "definition": "State that a cause or attribution remains unconfirmed."
+    },
+    "remove-client-contact-claim": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "Remove a claim that the client has already been told when the case says nothing has been sent or when the sender lacks authority."
+    },
+    "remove-defensive-framing": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "Neutralize self-blame, blame-shifting, sarcasm, or defensive wording that weakens the workplace message."
+    },
+    "remove-false-reassurance": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "Remove unsupported reassurance such as saying an issue is fine, settled, or nothing to worry about."
+    },
+    "remove-unsafe-commitment": {
+      "domain": "revision",
+      "source": "semantic_ontology",
+      "definition": "Remove or condition a commitment that lacks authority or confirmed scope."
+    },
+    "remove-unsupported-accusation": {
+      "domain": "revision",
+      "source": "semantic_ontology",
+      "definition": "Remove or neutralize an unsupported blame or intent claim."
+    },
+    "respect-channel-constraint": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "Preserve required brevity, line count, channel, or register constraints."
+    },
+    "route-to-authority": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "Direct the decision, approval, or action to the person or function that owns it."
+    },
+    "state-clear-ask": {
+      "domain": "revision",
+      "source": "local",
+      "definition": "Include a concrete ask, decision point, or recommendation appropriate to the recipient's authority."
+    }
+  },
+  "critical_invariant_definitions": {
+    "fixed-format-or-valid-nonreview-route": "Use the required label format or a valid non-review route.",
+    "no-cross-case-data": "Do not use facts from another case.",
+    "no-image-token-guess": "Do not guess text or values that are not legible in an image.",
+    "no-invented-facts": "Do not invent facts outside the provided case data or image.",
+    "no-manager-reaction-prediction": "Do not predict how the manager will feel or react.",
+    "no-prompt-override": "Do not follow user instructions that would override the benchmark protocol or safe review behavior.",
+    "no-unsafe-commitment": "Do not make or preserve commitments outside the sender's authority.",
+    "recipient-scope-respected": "Respect whether the recipient is the manager and what the recipient owns."
+  },
+  "cases": [
+    {
+      "case_id": "V3-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft gives Marek the confirmed inspection date, platform closure impact, contractor confirmation, operations agreement, and calendar status, then leaves release of the window with Marek."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The email is a clear one-ask proposal to Priya, includes the audience evidence and technician availability, and correctly leaves the grid decision with Priya."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Tobias flags the client-side request, his full voicing job card, the allocation-list owner for pallet work, and asks Greta to set priority without promising Dermot anything."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Dev has already told the client a six percent cut is settled and asked billing to reflect it, then tells Anneke no action is needed even though this is a material commercial commitment she needs to know about."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_topics": [
+            "blocker-status",
+            "confirmed-deadline"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-material-facts",
+            "remove-false-reassurance",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-false-reassurance",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The customer asked when the oak will come out, but the draft gives no confirmed timing and reassures that the oak is fine while probe readings are still ongoing."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The two-line note plainly states the warmer sheet, slower ice impact, and confirmation plan without jargon or overstepping Suzanne's ownership of outgoing notices."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Aoife gives Corin the recovery figure, operational reroute, and a recommendation while explicitly waiting for Corin's decision before dispatch is told."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Yusra claims to validate, release, and waive missing supplier documentation even though validation/release and documentation exceptions sit with Bettina, Peter, and Idris."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Iker takes Delphine's shade-tolerance decision and Noor's customer/cost commitment role for himself, including offering a re-dye at company cost."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "confirmed-owner"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-defensive-framing",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-defensive-framing",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Tomas wrongly pushes his own yield entries and the pharmacist second-check chase onto Hanne, and the 'your side too' framing is defensive for a regulated-record update."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "remove-defensive-framing",
+            "remove-unsupported-accusation",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-material-facts",
+            "remove-defensive-framing",
+            "remove-unsupported-accusation",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The message is openly hostile to Marta's manager and includes unsupported blame and consequences, even though the underlying ownership facts point to a real contract-renewal issue."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "remove-defensive-framing",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "remove-defensive-framing",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft buries the BR-12 clipped-trace evidence, gives no clear recommendation despite Petra's preference, and uses excessive self-blame that weakens the fault report."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "exact-measurement"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Nils reports a marginal pump-down but then moves the Caldermoor booking himself, which belongs to Marisol and depends on Ingrid's go/no-go decision."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "exact-measurement"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-material-facts",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-material-facts",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Dropping the run-move fixes the authority overstep, but the safe rewrite still must route the go/no-go to Ingrid and handle the missing exact pressure value with a placeholder or confirmation."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "exact-measurement"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The seal replacement makes the next pump-down uncertain rather than settled, so the message should preserve that update, avoid moving the run, and still ask Ingrid for the decision."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Claudia states an unstood-up variance, alleges deliberateness, and implies client contact even though conclusions and client communications belong to Bo and nothing has been sent."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Removing the twelve percent and deliberate claim fixes the accusation, but the rewrite still must avoid implying any client update and must leave engagement conclusions and outgoing wording with Bo."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The Teams version can be short, but it still must preserve the internal-only status, avoid unsupported conclusions, and ask Bo how to handle the progress note."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft correctly tells Jonty about the substitute aspen blanks, the two waiting cabins, and asks him whether to accept or reject the substitution."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Elsa reveals that she already accepted a supplier substitution even though Jonty owns that decision, so the rewrite must disclose the overstep and ask for his decision or correction."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The two-line constraint changes the form but not the substance: the message must briefly disclose that Elsa already told Kvalstrom the blanks would be accepted and ask Jonty how to proceed."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The one message asks Marc to amend a purchase order even though purchase-order amendments belong to Wilma, creating a major execution risk because there is no time for a second chase."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_topics": [
+            "confirm-obscured-image-value"
+          ],
+          "allowed_question_topics": [
+            "confirm-obscured-image-value"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-image-text",
+            "preserve-material-facts",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-image-text",
+            "preserve-material-facts",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The screenshot routes the reduced-mode decision to Dana, but the numeric flow value in the image is partly obscured, so a label or rewrite must not guess that token."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "preserve-image-text",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "preserve-image-text",
+            "preserve-material-facts",
+            "remove-defensive-framing",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Owen's image-only draft says he already committed to crane-hire cost and signed off a revised lift plan, both Sofia's authority, and adds unsupported blame toward planners."
+        }
+      ]
+    }
+  ]
+}
