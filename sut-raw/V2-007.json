@@ -1,0 +1,25 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-007",
+  "generated_at_utc": "2026-08-13T10:35:37Z",
+  "provenance": {
+    "sut": "Workplace Survival",
+    "model": "GPT-5.6 Sol",
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "base_commit": "6e1c77d6da1fdd7a6592b54e3435ab413fd6b062",
+    "input_path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-007.json",
+    "input_sha256": "df73ed82dbfc06f847ef53c42684a52bf5df61a780b4fb127b46dc63ab3e4acb",
+    "runtime": {
+      ".cursor/skills/workplace-survival/SKILL.md": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66",
+      ".cursor/skills/workplace-survival/REFERENCE.md": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56",
+      ".cursor/skills/workplace-survival/FORMATS.md": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198",
+      ".cursor/skills/workplace-survival/EXAMPLES.md": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "output_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Delroy asked whether Rhys could pick up the patch-impact model.\n- The Q3 scoping document assigns the patch-impact model to Vesna Krajnc.\n- Rhys is committed to the Monday and Thursday scrim telemetry reports and the draft-priority board due 3 October; as of 12 September, the board has roughly eleven working days of effort remaining.\n- Building the model requires match-history API keys that Rhys does not have and cannot request without Delroy's sign-off.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says, \"happy to own the patch-impact model\" and \"Should be fine,\" but the current Q3 scoping document assigns the model to Vesna, Rhys lacks the required API keys and sign-off, and no reprioritisation of Rhys's existing commitments is confirmed.\n- Communication risk: Delroy could read this as unconditional acceptance of ownership and delivery despite unresolved reassignment, access, and workload priority, leading to incorrect execution expectations.\n\n### Tone\n\n- Rating: Green\n- Evidence: \"Sure - happy to\" is cooperative and the rest of the wording is neutral; it contains no blame, accusation, threat, hostility, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Did Delroy explicitly reassign the patch-impact model from Vesna to Rhys?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the draft's ownership statement is accurate.\n   - Neutral answer structure: The current owner is [Rhys / Vesna / other confirmed owner: ___].\n2. Question: What is the current status of Delroy's sign-off for the match-history API keys?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether Rhys can begin the work or whether access remains a blocker.\n   - Neutral answer structure: API-key sign-off is [approved / not approved / pending]; the next access step is [___].\n3. Question: What priority arrangement, if any, was agreed for the model relative to the scrim reports and draft-priority board?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether accepting the additional work conflicts with Rhys's existing commitments.\n   - Neutral answer structure: The model priority is [___]; the existing commitments are [unchanged / changed as follows: ___].\n\n## Minimal revision\n\nSure - happy to pick up the patch-impact model if we confirm it's being reassigned from Vesna to me. I'll need your sign-off to request the match-history API keys, and confirmation of how to prioritise it alongside the Monday and Thursday scrim reports and the draft board due 3 October."
+    }
+  ]
+}
