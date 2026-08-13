@@ -31,7 +31,7 @@
       "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
       "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png"
     ],
-    "attestation_commit": "not_self_referential: this file is added by the commit immediately following output_commit on the same branch"
+    "attestation_commit": "not_self_referential: this file was added in commit a447ce694a86670d93104c189cad144968233073 on the work branch and revised by the next commit on the same branch to disclose one further git metadata command"
   },
   "sole_repository_file_read": {
     "path": "tests/benchmark/v3-holdout/V3_CASE_BRIEF.md",
@@ -219,6 +219,7 @@
       "git add <the five output paths>",
       "git commit",
       "git status --porcelain",
+      "git log --oneline -2 --no-decorate (showed only this run's own two commits; no prior history was read)",
       "git push -u origin <work branch>"
     ],
     "non_repository_paths_used": [
