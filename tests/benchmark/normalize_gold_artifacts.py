@@ -145,6 +145,10 @@ def normalize_quality_tiers(cases: list[dict]) -> None:
 
 def main() -> None:
     CANONICAL.mkdir(parents=True, exist_ok=True)
+    for name in ("cases", "oracle-notes"):
+        source_path = CLOUD / f"{name}-envelope.json"
+        target_path = CLOUD / f"{name}.json"
+        target_path.write_bytes(source_path.read_bytes())
     generated = {
         role: canonical_attestation(role, config)
         for role, config in ATTESTATIONS.items()

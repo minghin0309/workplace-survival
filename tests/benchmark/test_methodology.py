@@ -565,6 +565,17 @@ class BenchmarkMethodologyTests(unittest.TestCase):
             }
         ]
         validate_benchmark.validate_cases(cases, notes)
+        self.assertEqual(
+            validate_benchmark.unwrap_document(
+                {
+                    "schema_version": "v2",
+                    "case_set_id": "test-set",
+                    "cases": cases,
+                },
+                "cases",
+            ),
+            cases,
+        )
 
     def test_adjudication_requires_sha256_and_exact_gold_linkage(self):
         with tempfile.TemporaryDirectory() as directory:

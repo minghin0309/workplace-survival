@@ -56,6 +56,19 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def unwrap_document(document: object, collection_key: str) -> list[dict]:
+    if isinstance(document, list):
+        return document
+    require(
+        isinstance(document, dict)
+        and set(document) == {"schema_version", "case_set_id", collection_key}
+        and document["schema_version"] == "v2"
+        and isinstance(document[collection_key], list),
+        f"{collection_key} envelope schema",
+    )
+    return document[collection_key]
+
+
 def validate_cases(cases: list[dict], notes: list[dict]) -> None:
     case_ids = [item["case_id"] for item in cases]
     require(len(case_ids) == len(set(case_ids)), "duplicate case IDs")
@@ -376,7 +389,8 @@ def validate_manifest(manifest: dict, seen: set[Path] | None = None) -> None:
     require(STAGE_ROLES[stage] <= roles, "required artifact roles missing")
     if stage == "gold":
         cases_entry = next(item for item in manifest["artifacts"] if item["role"] == "cases")
-        cases = json.loads(Path(cases_entry["path"]).read_text(encoding="utf-8"))
+        cases_document = json.loads(Path(cases_entry["path"]).read_text(encoding="utf-8"))
+        cases = unwrap_document(cases_document, "cases")
         expected_images = {
             f"image:{case['case_id']}:{turn['turn_index']}": turn["image_path"]
             for case in cases
@@ -406,8 +420,10 @@ def main() -> None:
             "usage: validate_benchmark.py <cases.json> <oracle-notes.json> "
             "<gold.json> <artifact-manifest.json>"
         )
-    cases = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
-    notes = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
+    cases_document = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+    notes_document = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
+    cases = unwrap_document(cases_document, "cases")
+    notes = unwrap_document(notes_document, "notes")
     gold = json.loads(Path(sys.argv[3]).read_text(encoding="utf-8"))
     manifest = json.loads(Path(sys.argv[4]).read_text(encoding="utf-8"))
     validate_cases(cases, notes)

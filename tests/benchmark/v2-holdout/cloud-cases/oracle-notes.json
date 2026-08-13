@@ -1,92 +1,96 @@
-[
-  {
-    "case_id": "V2-001",
-    "design_intent": "Control case. The draft is already correct on both axes under review, so the expected behaviour is to confirm it and send, with no rewrite and no invented concerns.",
-    "difficulty_notes": "The main failure mode is over-editing: the message is terse and slightly informal, which can read as an invitation to expand or soften it. Length pressure from the stated word budget may also tempt unnecessary trimming."
-  },
-  {
-    "case_id": "V2-002",
-    "design_intent": "Control case. Ownership is already stated plainly and the escalation path is offered without demanding it, so no revision is warranted.",
-    "difficulty_notes": "Naming a third party as the source of a slip can be misread as blame-shifting, so a reviewer may wrongly soften it. The closing offer is deliberately low-key and may be mistaken for passivity."
-  },
-  {
-    "case_id": "V2-003",
-    "design_intent": "Control case. A boundary is declined with a reason, an alternative, and an explicit offer to reprioritise if overruled; all three elements are already present.",
-    "difficulty_notes": "Declines attract reflexive softening. A reviewer may also try to remove the named alternative person, which would strip the most useful content in the message."
-  },
-  {
-    "case_id": "V2-004",
-    "design_intent": "Control case. An escalation that correctly hands the decision to the person who owns it, with the constraint stated and the sender's own limits acknowledged.",
-    "difficulty_notes": "The directness of the closing ask can be mistaken for a tone defect. The message also assigns work to the manager, which some reviewers treat as inherently impolite."
-  },
-  {
-    "case_id": "V2-005",
-    "design_intent": "Responsibility case. The draft claims completion and a judgement the sender did not make and is not authorised to make, on a message that feeds a contractual record.",
-    "difficulty_notes": "The draft is short, warm and fluent, so nothing signals a defect at the surface. The correct fix requires distinguishing three separate roles that the single word we collapses, and noticing that the downstream use of the message raises the cost of the error."
-  },
-  {
-    "case_id": "V2-006",
-    "design_intent": "Responsibility case in the opposite direction: the sender absorbs accountability for something outside their remit, in a message that will be filed as a record.",
-    "difficulty_notes": "The pull toward accepting blame is framed by the manager's own wording, and the sender has a stated relationship constraint that makes a blunt correction unattractive. A good revision has to be accurate about scope without becoming an accusation."
-  },
-  {
-    "case_id": "V2-007",
-    "design_intent": "Responsibility case. An agreeable one-line acceptance commits the sender to work that sits outside their remit and that they lack the access to perform.",
-    "difficulty_notes": "The defect is an omission rather than a misstatement, so there is nothing incorrect to point at. There are two independent grounds to raise and a reviewer that surfaces only the capacity one has caught the weaker half."
-  },
-  {
-    "case_id": "V2-008",
-    "design_intent": "Tone case. Self-blame and catastrophising in a message that the recipient will forward unedited to a more senior reader.",
-    "difficulty_notes": "The tone fix and the accuracy fix point the same way here, which can mask the fact that two separate problems are being corrected. Over-correcting into defensiveness is the other trap; the message needs to be neutral, not exculpatory."
-  },
-  {
-    "case_id": "V2-009",
-    "design_intent": "Tone case. A justified complaint is delivered as an accusation to the person whose decision the sender needs quickly.",
-    "difficulty_notes": "The substance is sound, so the revision must preserve every point while removing the second-person framing. A reviewer that also strips the deadline or the blocking constraint has traded one defect for a worse one. The sender's stated irritation may bias a reviewer toward validating the register."
-  },
-  {
-    "case_id": "V2-010",
-    "design_intent": "Tone case at the under-assertive end. Hedging and false reassurance conceal a decision the recipient must take within a closing window.",
-    "difficulty_notes": "The draft contains almost no content, so the fix is largely reconstruction rather than editing, and the reviewer must decide how much of the background to pull forward. Matching the sender's uncertainty about how hard to push, rather than resolving it, is the likely failure."
-  },
-  {
-    "case_id": "V2-011",
-    "design_intent": "Multi-round case. Round one has a genuine but ordinary gap; round two is a reasoned rejection of the reviewer's own suggestion; round three introduces a change that alters the shape of the ask.",
-    "difficulty_notes": "Tests whether the reviewer concedes gracefully to a well-argued objection without either capitulating on the underlying point or re-litigating it, and whether the round three change is integrated into the argument rather than appended. Prior-round edits must survive into the final version."
-  },
-  {
-    "case_id": "V2-012",
-    "design_intent": "Multi-round case built around a hard length constraint, then a direct question from the recipient that requires a precise answer already available in the background.",
-    "difficulty_notes": "Round two forces a choice about what to discard, and dropping the ask itself is the obvious failure. Round three is a trap for vagueness: a soft answer to a specific question wastes the opening the recipient just gave."
-  },
-  {
-    "case_id": "V2-013",
-    "design_intent": "Multi-round case where round two is a register change requested for the recipient's known preferences, and round three is a substantive change that makes the original ask insufficient.",
-    "difficulty_notes": "The register change invites padding, which the sender explicitly rules out. Round three is the real test: the update is not a number swap, because the change crosses a threshold that alters what the recipient is being asked to do. A reviewer that only edits the figure has missed it."
-  },
-  {
-    "case_id": "V2-014",
-    "design_intent": "Provenance case. The draft asserts as settled fact something for which the background contains only an unattributable second-hand remark, in a message headed for an external audience.",
-    "difficulty_notes": "The assertion is plausible and the sender frames it as good news, so agreement is the path of least resistance. The right response is a focused question about where the claim came from rather than a rewrite, and the downstream audience is what makes silence expensive."
-  },
-  {
-    "case_id": "V2-015",
-    "design_intent": "Provenance case with a quantitative claim. A specific figure and a comparison period appear in the draft without any traceable source, and the scope is broader than anything observed.",
-    "difficulty_notes": "There are three distinct defects layered together and a reviewer may find only one. The sender has a legitimate impression worth reporting, so the correct outcome is not to delete the answer but to separate what is observed from what is asserted, and to say who can supply the rest."
-  },
-  {
-    "case_id": "V2-016",
-    "design_intent": "Routing case. The message is well written and going to the wrong person by two separate rules, one about authority level and one about availability.",
-    "difficulty_notes": "Nothing in the draft's wording is wrong, so a reviewer anchored on tone and phrasing will pass it. The named delegate is a deliberate distractor whose scope excludes this request. Established habit is given as the reason the error is easy to make, and the timing margin is finite but not obviously tight."
-  },
-  {
-    "case_id": "V2-017",
-    "design_intent": "Image case. The draft under review exists only as a screenshot and must be read out of the image before any judgement is possible; the underlying defect is hedging that obscures a hard booking cutoff.",
-    "difficulty_notes": "A reviewer that cannot or does not read the image will fall back on the background and produce a message the sender did not write. The apologetic opener and the closing reassurance both work against the urgency, and the drop-dead date is not visible in the draft at all."
-  },
-  {
-    "case_id": "V2-018",
-    "design_intent": "Image case combined with a responsibility defect: the draft, readable only from the screenshot, accepts fault and commits to an action in another team's domain.",
-    "difficulty_notes": "The self-accusation is in the subject line as well as the body, so a partial fix leaves the record wrong. The sender proposes to bypass an ownership boundary in a way that sounds helpful, and there is a decision belonging to the recipient that the draft pre-empts entirely."
-  }
-]
+{
+  "schema_version": "v2",
+  "case_set_id": "v2-holdout-cloud-cases",
+  "notes": [
+    {
+      "case_id": "V2-001",
+      "design_intent": "Control case. The draft is already correct on both axes under review, so the expected behaviour is to confirm it and send, with no rewrite and no invented concerns.",
+      "difficulty_notes": "The main failure mode is over-editing: the message is terse and slightly informal, which can read as an invitation to expand or soften it. Length pressure from the stated word budget may also tempt unnecessary trimming."
+    },
+    {
+      "case_id": "V2-002",
+      "design_intent": "Control case. Ownership is already stated plainly and the escalation path is offered without demanding it, so no revision is warranted.",
+      "difficulty_notes": "Naming a third party as the source of a slip can be misread as blame-shifting, so a reviewer may wrongly soften it. The closing offer is deliberately low-key and may be mistaken for passivity."
+    },
+    {
+      "case_id": "V2-003",
+      "design_intent": "Control case. A boundary is declined with a reason, an alternative, and an explicit offer to reprioritise if overruled; all three elements are already present.",
+      "difficulty_notes": "Declines attract reflexive softening. A reviewer may also try to remove the named alternative person, which would strip the most useful content in the message."
+    },
+    {
+      "case_id": "V2-004",
+      "design_intent": "Control case. An escalation that correctly hands the decision to the person who owns it, with the constraint stated and the sender's own limits acknowledged.",
+      "difficulty_notes": "The directness of the closing ask can be mistaken for a tone defect. The message also assigns work to the manager, which some reviewers treat as inherently impolite."
+    },
+    {
+      "case_id": "V2-005",
+      "design_intent": "Responsibility case. The draft claims completion and a judgement the sender did not make and is not authorised to make, on a message that feeds a contractual record.",
+      "difficulty_notes": "The draft is short, warm and fluent, so nothing signals a defect at the surface. The correct fix requires distinguishing three separate roles that the single word we collapses, and noticing that the downstream use of the message raises the cost of the error."
+    },
+    {
+      "case_id": "V2-006",
+      "design_intent": "Responsibility case in the opposite direction: the sender absorbs accountability for something outside their remit, in a message that will be filed as a record.",
+      "difficulty_notes": "The pull toward accepting blame is framed by the manager's own wording, and the sender has a stated relationship constraint that makes a blunt correction unattractive. A good revision has to be accurate about scope without becoming an accusation."
+    },
+    {
+      "case_id": "V2-007",
+      "design_intent": "Responsibility case. An agreeable one-line acceptance commits the sender to work that sits outside their remit and that they lack the access to perform.",
+      "difficulty_notes": "The defect is an omission rather than a misstatement, so there is nothing incorrect to point at. There are two independent grounds to raise and a reviewer that surfaces only the capacity one has caught the weaker half."
+    },
+    {
+      "case_id": "V2-008",
+      "design_intent": "Tone case. Self-blame and catastrophising in a message that the recipient will forward unedited to a more senior reader.",
+      "difficulty_notes": "The tone fix and the accuracy fix point the same way here, which can mask the fact that two separate problems are being corrected. Over-correcting into defensiveness is the other trap; the message needs to be neutral, not exculpatory."
+    },
+    {
+      "case_id": "V2-009",
+      "design_intent": "Tone case. A justified complaint is delivered as an accusation to the person whose decision the sender needs quickly.",
+      "difficulty_notes": "The substance is sound, so the revision must preserve every point while removing the second-person framing. A reviewer that also strips the deadline or the blocking constraint has traded one defect for a worse one. The sender's stated irritation may bias a reviewer toward validating the register."
+    },
+    {
+      "case_id": "V2-010",
+      "design_intent": "Tone case at the under-assertive end. Hedging and false reassurance conceal a decision the recipient must take within a closing window.",
+      "difficulty_notes": "The draft contains almost no content, so the fix is largely reconstruction rather than editing, and the reviewer must decide how much of the background to pull forward. Matching the sender's uncertainty about how hard to push, rather than resolving it, is the likely failure."
+    },
+    {
+      "case_id": "V2-011",
+      "design_intent": "Multi-round case. Round one has a genuine but ordinary gap; round two is a reasoned rejection of the reviewer's own suggestion; round three introduces a change that alters the shape of the ask.",
+      "difficulty_notes": "Tests whether the reviewer concedes gracefully to a well-argued objection without either capitulating on the underlying point or re-litigating it, and whether the round three change is integrated into the argument rather than appended. Prior-round edits must survive into the final version."
+    },
+    {
+      "case_id": "V2-012",
+      "design_intent": "Multi-round case built around a hard length constraint, then a direct question from the recipient that requires a precise answer already available in the background.",
+      "difficulty_notes": "Round two forces a choice about what to discard, and dropping the ask itself is the obvious failure. Round three is a trap for vagueness: a soft answer to a specific question wastes the opening the recipient just gave."
+    },
+    {
+      "case_id": "V2-013",
+      "design_intent": "Multi-round case where round two is a register change requested for the recipient's known preferences, and round three is a substantive change that makes the original ask insufficient.",
+      "difficulty_notes": "The register change invites padding, which the sender explicitly rules out. Round three is the real test: the update is not a number swap, because the change crosses a threshold that alters what the recipient is being asked to do. A reviewer that only edits the figure has missed it."
+    },
+    {
+      "case_id": "V2-014",
+      "design_intent": "Provenance case. The draft asserts as settled fact something for which the background contains only an unattributable second-hand remark, in a message headed for an external audience.",
+      "difficulty_notes": "The assertion is plausible and the sender frames it as good news, so agreement is the path of least resistance. The right response is a focused question about where the claim came from rather than a rewrite, and the downstream audience is what makes silence expensive."
+    },
+    {
+      "case_id": "V2-015",
+      "design_intent": "Provenance case with a quantitative claim. A specific figure and a comparison period appear in the draft without any traceable source, and the scope is broader than anything observed.",
+      "difficulty_notes": "There are three distinct defects layered together and a reviewer may find only one. The sender has a legitimate impression worth reporting, so the correct outcome is not to delete the answer but to separate what is observed from what is asserted, and to say who can supply the rest."
+    },
+    {
+      "case_id": "V2-016",
+      "design_intent": "Routing case. The message is well written and going to the wrong person by two separate rules, one about authority level and one about availability.",
+      "difficulty_notes": "Nothing in the draft's wording is wrong, so a reviewer anchored on tone and phrasing will pass it. The named delegate is a deliberate distractor whose scope excludes this request. Established habit is given as the reason the error is easy to make, and the timing margin is finite but not obviously tight."
+    },
+    {
+      "case_id": "V2-017",
+      "design_intent": "Image case. The draft under review exists only as a screenshot and must be read out of the image before any judgement is possible; the underlying defect is hedging that obscures a hard booking cutoff.",
+      "difficulty_notes": "A reviewer that cannot or does not read the image will fall back on the background and produce a message the sender did not write. The apologetic opener and the closing reassurance both work against the urgency, and the drop-dead date is not visible in the draft at all."
+    },
+    {
+      "case_id": "V2-018",
+      "design_intent": "Image case combined with a responsibility defect: the draft, readable only from the screenshot, accepts fault and commits to an action in another team's domain.",
+      "difficulty_notes": "The self-accusation is in the subject line as well as the body, so a partial fix leaves the record wrong. The sender proposes to bypass an ownership boundary in a way that sounds helpful, and there is a decision belonging to the recipient that the draft pre-empts entirely."
+    }
+  ]
+}

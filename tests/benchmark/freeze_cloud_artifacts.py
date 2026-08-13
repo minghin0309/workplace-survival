@@ -89,7 +89,12 @@ def main() -> None:
         raise ValueError(f"missing required roles: {sorted(STAGE_ROLES[stage] - roles)}")
     if stage == "gold":
         cases_entry = next(item for item in artifacts if item["role"] == "cases")
-        cases = json.loads(Path(cases_entry["path"]).read_text(encoding="utf-8"))
+        cases_document = json.loads(Path(cases_entry["path"]).read_text(encoding="utf-8"))
+        cases = (
+            cases_document["cases"]
+            if isinstance(cases_document, dict)
+            else cases_document
+        )
         expected_images = {
             f"image:{case['case_id']}:{turn['turn_index']}": turn["image_path"]
             for case in cases

@@ -1,694 +1,698 @@
-[
-  {
-    "case_id": "V2-001",
-    "category": "green_control",
-    "recipient_context": "Tomasz Wielgus, operations lead at the North Ring depot and Ndidi's direct line manager. Reads the depot Slack channel between dispatch waves and has asked for short written status lines rather than meetings.",
-    "data_a": {
-      "organization": "Kestrel Freight Collective, a forty-rider cargo-bike delivery co-operative operating three depots.",
-      "sender": "Ndidi Abara, route planner, North Ring depot.",
-      "manager": "Tomasz Wielgus, operations lead, North Ring depot.",
-      "channel": "Depot Slack channel, before Friday standup.",
-      "situation_facts": [
-        "Ndidi owns the winter tyre changeover schedule for the North Ring depot's twenty-two trailers.",
-        "Eighteen of the twenty-two trailers were re-shod by 6 November.",
-        "The remaining four trailers are waiting on a back-ordered 20x4 tyre size.",
-        "The supplier, Rondel Tyres, confirmed a 14 November delivery date in writing on 5 November.",
-        "The four affected trailers are assigned to the low-mileage Sint-Amands loop, which does not require winter tyres until the first frost advisory.",
-        "No service disruption has occurred and none is forecast before 14 November.",
-        "Tomasz asked on 4 November for a status line before Friday standup."
-      ],
-      "ownership_map": {
-        "tyre changeover schedule": "Ndidi Abara",
-        "supplier ordering": "Ndidi Abara",
-        "frost advisory call": "Tomasz Wielgus"
+{
+  "schema_version": "v2",
+  "case_set_id": "v2-holdout-cloud-cases",
+  "cases": [
+    {
+      "case_id": "V2-001",
+      "category": "green_control",
+      "recipient_context": "Tomasz Wielgus, operations lead at the North Ring depot and Ndidi's direct line manager. Reads the depot Slack channel between dispatch waves and has asked for short written status lines rather than meetings.",
+      "data_a": {
+        "organization": "Kestrel Freight Collective, a forty-rider cargo-bike delivery co-operative operating three depots.",
+        "sender": "Ndidi Abara, route planner, North Ring depot.",
+        "manager": "Tomasz Wielgus, operations lead, North Ring depot.",
+        "channel": "Depot Slack channel, before Friday standup.",
+        "situation_facts": [
+          "Ndidi owns the winter tyre changeover schedule for the North Ring depot's twenty-two trailers.",
+          "Eighteen of the twenty-two trailers were re-shod by 6 November.",
+          "The remaining four trailers are waiting on a back-ordered 20x4 tyre size.",
+          "The supplier, Rondel Tyres, confirmed a 14 November delivery date in writing on 5 November.",
+          "The four affected trailers are assigned to the low-mileage Sint-Amands loop, which does not require winter tyres until the first frost advisory.",
+          "No service disruption has occurred and none is forecast before 14 November.",
+          "Tomasz asked on 4 November for a status line before Friday standup."
+        ],
+        "ownership_map": {
+          "tyre changeover schedule": "Ndidi Abara",
+          "supplier ordering": "Ndidi Abara",
+          "frost advisory call": "Tomasz Wielgus"
+        },
+        "constraints": [
+          "Tomasz has asked for updates under roughly eighty words."
+        ]
       },
-      "constraints": [
-        "Tomasz has asked for updates under roughly eighty words."
-      ]
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Quick status line for Tomasz before standup, does this read alright? \"Tomasz - winter tyre changeover, status before standup. Eighteen of twenty-two North Ring trailers are done. The last four are held on the 20x4 back-order; Rondel have confirmed 14 November in writing. Those four run the Sint-Amands loop, so there is no service impact in the meantime. I am holding the schedule and will confirm once they are fitted. - Ndidi\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Quick status line for Tomasz before standup, does this read alright? \"Tomasz - winter tyre changeover, status before standup. Eighteen of twenty-two North Ring trailers are done. The last four are held on the 20x4 back-order; Rondel have confirmed 14 November in writing. Those four run the Sint-Amands loop, so there is no service impact in the meantime. I am holding the schedule and will confirm once they are fitted. - Ndidi\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-002",
-    "category": "green_control",
-    "recipient_context": "Sunniva Reidal, studio director at Umber & Kiln and Perrin's direct manager. Handles contractor scheduling and prefers to be told about slips as soon as a date is confirmed, with the mitigation already attached.",
-    "data_a": {
-      "organization": "Umber & Kiln, a twelve-person production ceramics studio.",
-      "sender": "Perrin Vasquez-Holt, glaze technician.",
-      "manager": "Sunniva Reidal, studio director.",
-      "channel": "Email, Tuesday afternoon.",
-      "situation_facts": [
-        "The main kiln's pyrometer recalibration is performed by contracted technician Hollis Braun, not by studio staff.",
-        "The recalibration was booked for 19 March and Hollis moved it to 2 April on 14 March.",
-        "Perrin owns glaze mixing and the cone-six test tile programme.",
-        "The cone-six test tiles cannot be fired in the main kiln until the pyrometer is recalibrated because the temperature readings are drifting by an estimated fifteen degrees.",
-        "Perrin has already moved the current test tile batch to the small test kiln, which holds twelve tiles per firing instead of forty.",
-        "The reduced batch size adds roughly four days to the test programme but keeps it inside the 30 April client deadline.",
-        "Sunniva holds the contract with Hollis Braun and is the only person who can press for an earlier date."
-      ],
-      "ownership_map": {
-        "pyrometer recalibration": "Hollis Braun (contractor)",
-        "contractor relationship": "Sunniva Reidal",
-        "test tile programme": "Perrin Vasquez-Holt"
+    {
+      "case_id": "V2-002",
+      "category": "green_control",
+      "recipient_context": "Sunniva Reidal, studio director at Umber & Kiln and Perrin's direct manager. Handles contractor scheduling and prefers to be told about slips as soon as a date is confirmed, with the mitigation already attached.",
+      "data_a": {
+        "organization": "Umber & Kiln, a twelve-person production ceramics studio.",
+        "sender": "Perrin Vasquez-Holt, glaze technician.",
+        "manager": "Sunniva Reidal, studio director.",
+        "channel": "Email, Tuesday afternoon.",
+        "situation_facts": [
+          "The main kiln's pyrometer recalibration is performed by contracted technician Hollis Braun, not by studio staff.",
+          "The recalibration was booked for 19 March and Hollis moved it to 2 April on 14 March.",
+          "Perrin owns glaze mixing and the cone-six test tile programme.",
+          "The cone-six test tiles cannot be fired in the main kiln until the pyrometer is recalibrated because the temperature readings are drifting by an estimated fifteen degrees.",
+          "Perrin has already moved the current test tile batch to the small test kiln, which holds twelve tiles per firing instead of forty.",
+          "The reduced batch size adds roughly four days to the test programme but keeps it inside the 30 April client deadline.",
+          "Sunniva holds the contract with Hollis Braun and is the only person who can press for an earlier date."
+        ],
+        "ownership_map": {
+          "pyrometer recalibration": "Hollis Braun (contractor)",
+          "contractor relationship": "Sunniva Reidal",
+          "test tile programme": "Perrin Vasquez-Holt"
+        },
+        "constraints": []
       },
-      "constraints": []
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "About to send this to Sunniva. \"Sunniva - Hollis has pushed the pyrometer recalibration from 19 March to 2 April. That blocks cone-six tiles in the main kiln, so I have moved the current batch to the test kiln; twelve tiles per firing instead of forty. That adds about four days but still lands inside the 30 April client date. If you want the original slot back, the contract is yours to lean on - otherwise I am happy running on the test kiln. Perrin\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "About to send this to Sunniva. \"Sunniva - Hollis has pushed the pyrometer recalibration from 19 March to 2 April. That blocks cone-six tiles in the main kiln, so I have moved the current batch to the test kiln; twelve tiles per firing instead of forty. That adds about four days but still lands inside the 30 April client date. If you want the original slot back, the contract is yours to lean on - otherwise I am happy running on the test kiln. Perrin\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-003",
-    "category": "green_control",
-    "recipient_context": "Delphine Okonjo, engineering manager at Vireo Valley Water District and Halvard's direct manager. Assigns work verbally in corridor conversations and expects a written confirmation of what was and was not taken on.",
-    "data_a": {
-      "organization": "Vireo Valley Water District, a municipal water utility serving nine thousand connections.",
-      "sender": "Halvard Ionescu, SCADA analyst.",
-      "manager": "Delphine Okonjo, engineering manager.",
-      "channel": "Email, following a corridor conversation the same morning.",
-      "situation_facts": [
-        "Halvard is committed to the chlorine-residual alarm rework, which has a regulator-facing due date of 28 May.",
-        "The alarm rework has roughly three weeks of remaining effort.",
-        "Delphine asked Halvard this morning to also take the pump-station telemetry audit.",
-        "The telemetry audit has no fixed deadline and is an internal assurance exercise.",
-        "Wren Delacroix ran the telemetry audit in each of the previous two years and confirmed on Monday that she has capacity this quarter.",
-        "Taking both pieces of work would put the 28 May regulator date at risk.",
-        "Halvard has no other committed deliverables this quarter."
-      ],
-      "ownership_map": {
-        "chlorine-residual alarm rework": "Halvard Ionescu",
-        "pump-station telemetry audit (prior two years)": "Wren Delacroix",
-        "prioritisation between the two": "Delphine Okonjo"
+    {
+      "case_id": "V2-003",
+      "category": "green_control",
+      "recipient_context": "Delphine Okonjo, engineering manager at Vireo Valley Water District and Halvard's direct manager. Assigns work verbally in corridor conversations and expects a written confirmation of what was and was not taken on.",
+      "data_a": {
+        "organization": "Vireo Valley Water District, a municipal water utility serving nine thousand connections.",
+        "sender": "Halvard Ionescu, SCADA analyst.",
+        "manager": "Delphine Okonjo, engineering manager.",
+        "channel": "Email, following a corridor conversation the same morning.",
+        "situation_facts": [
+          "Halvard is committed to the chlorine-residual alarm rework, which has a regulator-facing due date of 28 May.",
+          "The alarm rework has roughly three weeks of remaining effort.",
+          "Delphine asked Halvard this morning to also take the pump-station telemetry audit.",
+          "The telemetry audit has no fixed deadline and is an internal assurance exercise.",
+          "Wren Delacroix ran the telemetry audit in each of the previous two years and confirmed on Monday that she has capacity this quarter.",
+          "Taking both pieces of work would put the 28 May regulator date at risk.",
+          "Halvard has no other committed deliverables this quarter."
+        ],
+        "ownership_map": {
+          "chlorine-residual alarm rework": "Halvard Ionescu",
+          "pump-station telemetry audit (prior two years)": "Wren Delacroix",
+          "prioritisation between the two": "Delphine Okonjo"
+        },
+        "constraints": []
       },
-      "constraints": []
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Following up our chat in writing so there is no ambiguity. Does this land right? \"Delphine - confirming where I landed on the telemetry audit. I have about three weeks left on the chlorine-residual alarm rework and that has the 28 May regulator date on it, so I would rather not take the audit on alongside it. Wren has run it the last two years and told me on Monday she has capacity this quarter, which seems like the cleaner route. If you would rather I took the audit, tell me and I will come back to you with what moves on the 28 May date. Halvard\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Following up our chat in writing so there is no ambiguity. Does this land right? \"Delphine - confirming where I landed on the telemetry audit. I have about three weeks left on the chlorine-residual alarm rework and that has the 28 May regulator date on it, so I would rather not take the audit on alongside it. Wren has run it the last two years and told me on Monday she has capacity this quarter, which seems like the cleaner route. If you would rather I took the audit, tell me and I will come back to you with what moves on the 28 May date. Halvard\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-004",
-    "category": "green_control",
-    "recipient_context": "Cassius Odame, delivery director at Lantern Row Localization and Mireille's direct manager. He personally owns the client relationship with the broadcaster and is the only person authorised to reopen contractual dates.",
-    "data_a": {
-      "organization": "Lantern Row Localization, a subtitling and dubbing vendor.",
-      "sender": "Mireille Tanaka-Byrne, subtitle QC lead.",
-      "manager": "Cassius Odame, delivery director.",
-      "channel": "Email, Thursday morning.",
-      "situation_facts": [
-        "The Bulgarian subtitle pass for the series Harrow Lane season two is blocked because the client has not delivered locked picture.",
-        "The contract allows ten working days from picture lock to delivery.",
-        "Picture lock was contractually due 14 January and has not arrived as of 22 January, six working days late.",
-        "The delivery date of 30 January is still the contractual date and has not been renegotiated.",
-        "Even if lock arrives today, ten working days runs to 5 February.",
-        "Mireille's QC team is fully staffed and idle on this title; two linguists are on standby.",
-        "The client relationship and all date renegotiation sit with Cassius Odame."
-      ],
-      "ownership_map": {
-        "subtitle QC execution": "Mireille Tanaka-Byrne",
-        "client relationship and contractual dates": "Cassius Odame"
+    {
+      "case_id": "V2-004",
+      "category": "green_control",
+      "recipient_context": "Cassius Odame, delivery director at Lantern Row Localization and Mireille's direct manager. He personally owns the client relationship with the broadcaster and is the only person authorised to reopen contractual dates.",
+      "data_a": {
+        "organization": "Lantern Row Localization, a subtitling and dubbing vendor.",
+        "sender": "Mireille Tanaka-Byrne, subtitle QC lead.",
+        "manager": "Cassius Odame, delivery director.",
+        "channel": "Email, Thursday morning.",
+        "situation_facts": [
+          "The Bulgarian subtitle pass for the series Harrow Lane season two is blocked because the client has not delivered locked picture.",
+          "The contract allows ten working days from picture lock to delivery.",
+          "Picture lock was contractually due 14 January and has not arrived as of 22 January, six working days late.",
+          "The delivery date of 30 January is still the contractual date and has not been renegotiated.",
+          "Even if lock arrives today, ten working days runs to 5 February.",
+          "Mireille's QC team is fully staffed and idle on this title; two linguists are on standby.",
+          "The client relationship and all date renegotiation sit with Cassius Odame."
+        ],
+        "ownership_map": {
+          "subtitle QC execution": "Mireille Tanaka-Byrne",
+          "client relationship and contractual dates": "Cassius Odame"
+        },
+        "constraints": []
       },
-      "constraints": []
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Escalating this one. Sanity check before it goes: \"Cassius - Harrow Lane season two Bulgarian is blocked on picture lock, which was due 14 January and is now six working days late. The ten working day clock starts at lock, so even if it landed today we deliver 5 February against a contractual 30 January. My team is staffed and idle on the title, so there is nothing further I can do from the QC side. The date conversation with the client is yours - can you pick it up today so we are not renegotiating after we have already missed? Mireille\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Escalating this one. Sanity check before it goes: \"Cassius - Harrow Lane season two Bulgarian is blocked on picture lock, which was due 14 January and is now six working days late. The ten working day clock starts at lock, so even if it landed today we deliver 5 February against a contractual 30 January. My team is staffed and idle on the title, so there is nothing further I can do from the QC side. The date conversation with the client is yours - can you pick it up today so we are not renegotiating after we have already missed? Mireille\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-005",
-    "category": "responsibility",
-    "recipient_context": "Bronwyn Achebe, drilling superintendent at Basalt Deep Ventures and Oleander's direct manager. She is compiling the daily well report and will copy whatever Oleander tells her straight into it.",
-    "data_a": {
-      "organization": "Basalt Deep Ventures, a geothermal drilling operator.",
-      "sender": "Oleander Fitch, junior mud engineer, well BDV-7.",
-      "manager": "Bronwyn Achebe, drilling superintendent.",
-      "channel": "Direct message, mid-afternoon.",
-      "situation_facts": [
-        "The casing-integrity log review on well BDV-7 was performed by contractor Hargrove Subsurface Ltd, with Ineke Sallenbach as reviewing engineer.",
-        "Oleander compiled the raw log data and produced the formatted export that Hargrove worked from.",
-        "Oleander did not interpret the logs and holds no interpretation qualification.",
-        "Sign-off authority for casing integrity sits with the wellsite geologist, Yusuf Okpara.",
-        "Hargrove delivered a preliminary verbal readout on 8 May saying nothing anomalous had been seen; the written report is expected 10 May.",
-        "Yusuf Okpara has not yet reviewed or signed anything.",
-        "Bronwyn asked in a message: is the casing review done?",
-        "Bronwyn's daily well report is submitted to the client each evening and is a contractual record."
-      ],
-      "ownership_map": {
-        "raw log compilation and export": "Oleander Fitch",
-        "log interpretation": "Ineke Sallenbach, Hargrove Subsurface Ltd",
-        "casing integrity sign-off": "Yusuf Okpara, wellsite geologist"
+    {
+      "case_id": "V2-005",
+      "category": "responsibility",
+      "recipient_context": "Bronwyn Achebe, drilling superintendent at Basalt Deep Ventures and Oleander's direct manager. She is compiling the daily well report and will copy whatever Oleander tells her straight into it.",
+      "data_a": {
+        "organization": "Basalt Deep Ventures, a geothermal drilling operator.",
+        "sender": "Oleander Fitch, junior mud engineer, well BDV-7.",
+        "manager": "Bronwyn Achebe, drilling superintendent.",
+        "channel": "Direct message, mid-afternoon.",
+        "situation_facts": [
+          "The casing-integrity log review on well BDV-7 was performed by contractor Hargrove Subsurface Ltd, with Ineke Sallenbach as reviewing engineer.",
+          "Oleander compiled the raw log data and produced the formatted export that Hargrove worked from.",
+          "Oleander did not interpret the logs and holds no interpretation qualification.",
+          "Sign-off authority for casing integrity sits with the wellsite geologist, Yusuf Okpara.",
+          "Hargrove delivered a preliminary verbal readout on 8 May saying nothing anomalous had been seen; the written report is expected 10 May.",
+          "Yusuf Okpara has not yet reviewed or signed anything.",
+          "Bronwyn asked in a message: is the casing review done?",
+          "Bronwyn's daily well report is submitted to the client each evening and is a contractual record."
+        ],
+        "ownership_map": {
+          "raw log compilation and export": "Oleander Fitch",
+          "log interpretation": "Ineke Sallenbach, Hargrove Subsurface Ltd",
+          "casing integrity sign-off": "Yusuf Okpara, wellsite geologist"
+        },
+        "constraints": []
       },
-      "constraints": []
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Bronwyn just pinged me asking if the casing review is done. Here is what I typed, is it fine to send? \"Hi Bronwyn - yes, we have finished the casing log review on BDV-7 and everything is within tolerance. I will get the summary over to you this afternoon.\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Bronwyn just pinged me asking if the casing review is done. Here is what I typed, is it fine to send? \"Hi Bronwyn - yes, we have finished the casing log review on BDV-7 and everything is within tolerance. I will get the summary over to you this afternoon.\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-006",
-    "category": "responsibility",
-    "recipient_context": "Ravi Templeman-Osei, collections manager at the Anvil Ridge Seed Archive and Juno's direct manager. His email asked Juno to explain what went wrong on her side, and his reply will be attached to the incident record.",
-    "data_a": {
-      "organization": "Anvil Ridge Seed Archive, a regional seed bank holding roughly eleven thousand accessions.",
-      "sender": "Juno Adeyemi-Park, curation officer.",
-      "manager": "Ravi Templeman-Osei, collections manager.",
-      "channel": "Email reply, next morning.",
-      "situation_facts": [
-        "On the night of 12 September, thirty germination trays in Bay 3 were left uncovered; the humidity log shows an eleven-hour exposure.",
-        "Bay 3 overnight closing sits on the volunteer cohort rota, coordinated by Fenwick Orsolya.",
-        "Juno's remit is accession records and the drying room schedule, and ends at the 17:00 handover.",
-        "The 12 September handover checklist was signed by Juno at 16:52 and countersigned by the volunteer on shift.",
-        "The affected accessions are all duplicates with backup material held at the Braemore vault; no unique material was lost.",
-        "Juno has twice raised in writing, on 4 June and 21 August, that the volunteer rota has no named closer on Thursdays.",
-        "Ravi emailed asking Juno to explain what went wrong on her side.",
-        "Juno's reply will be attached to the incident record and read by the trustees."
-      ],
-      "ownership_map": {
-        "accession records and drying room schedule": "Juno Adeyemi-Park",
-        "Bay 3 overnight closing rota": "Fenwick Orsolya, volunteer cohort coordinator",
-        "incident record and trustee reporting": "Ravi Templeman-Osei"
+    {
+      "case_id": "V2-006",
+      "category": "responsibility",
+      "recipient_context": "Ravi Templeman-Osei, collections manager at the Anvil Ridge Seed Archive and Juno's direct manager. His email asked Juno to explain what went wrong on her side, and his reply will be attached to the incident record.",
+      "data_a": {
+        "organization": "Anvil Ridge Seed Archive, a regional seed bank holding roughly eleven thousand accessions.",
+        "sender": "Juno Adeyemi-Park, curation officer.",
+        "manager": "Ravi Templeman-Osei, collections manager.",
+        "channel": "Email reply, next morning.",
+        "situation_facts": [
+          "On the night of 12 September, thirty germination trays in Bay 3 were left uncovered; the humidity log shows an eleven-hour exposure.",
+          "Bay 3 overnight closing sits on the volunteer cohort rota, coordinated by Fenwick Orsolya.",
+          "Juno's remit is accession records and the drying room schedule, and ends at the 17:00 handover.",
+          "The 12 September handover checklist was signed by Juno at 16:52 and countersigned by the volunteer on shift.",
+          "The affected accessions are all duplicates with backup material held at the Braemore vault; no unique material was lost.",
+          "Juno has twice raised in writing, on 4 June and 21 August, that the volunteer rota has no named closer on Thursdays.",
+          "Ravi emailed asking Juno to explain what went wrong on her side.",
+          "Juno's reply will be attached to the incident record and read by the trustees."
+        ],
+        "ownership_map": {
+          "accession records and drying room schedule": "Juno Adeyemi-Park",
+          "Bay 3 overnight closing rota": "Fenwick Orsolya, volunteer cohort coordinator",
+          "incident record and trustee reporting": "Ravi Templeman-Osei"
+        },
+        "constraints": [
+          "Juno wants to stay on good terms with Fenwick, who is a volunteer, not a member of staff."
+        ]
       },
-      "constraints": [
-        "Juno wants to stay on good terms with Fenwick, who is a volunteer, not a member of staff."
-      ]
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Ravi wants an explanation by lunchtime. I have written this but something about it is bothering me. \"Ravi - apologies for the Bay 3 incident. The trays were left uncovered overnight and I take full responsibility for that. I will make sure it does not happen again and I am sorry for the trouble it has caused. Juno\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Ravi wants an explanation by lunchtime. I have written this but something about it is bothering me. \"Ravi - apologies for the Bay 3 incident. The trays were left uncovered overnight and I take full responsibility for that. I will make sure it does not happen again and I am sorry for the trouble it has caused. Juno\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-007",
-    "category": "responsibility",
-    "recipient_context": "Delroy Fanshawe, head of performance at Static Meridian and Rhys's direct manager. He floated the extra work verbally in a one-to-one and asked Rhys to confirm in writing afterwards.",
-    "data_a": {
-      "organization": "Static Meridian, a competitive esports organisation fielding three rosters.",
-      "sender": "Rhys Okumu, analytics coordinator.",
-      "manager": "Delroy Fanshawe, head of performance.",
-      "channel": "Slack direct message following a one-to-one.",
-      "situation_facts": [
-        "Rhys's committed work is the twice-weekly scrim telemetry reports on Mondays and Thursdays, and the season nine draft-priority board due 3 October.",
-        "The draft-priority board has roughly eleven working days of effort remaining and today is 12 September.",
-        "The patch-impact model is assigned to data science contractor Vesna Krajnc in the Q3 scoping document.",
-        "Building the patch-impact model requires match-history API keys that Rhys does not have and cannot request without Delroy's sign-off.",
-        "Vesna Krajnc is contracted through 30 November and her current utilisation is sixty percent.",
-        "Delroy asked in the one-to-one whether Rhys could just pick up the patch model too.",
-        "Rhys has no visibility into why the model has not progressed on Vesna's side."
-      ],
-      "ownership_map": {
-        "scrim telemetry reports": "Rhys Okumu",
-        "draft-priority board": "Rhys Okumu",
-        "patch-impact model": "Vesna Krajnc (contractor), per Q3 scoping document",
-        "API key access approval": "Delroy Fanshawe"
+    {
+      "case_id": "V2-007",
+      "category": "responsibility",
+      "recipient_context": "Delroy Fanshawe, head of performance at Static Meridian and Rhys's direct manager. He floated the extra work verbally in a one-to-one and asked Rhys to confirm in writing afterwards.",
+      "data_a": {
+        "organization": "Static Meridian, a competitive esports organisation fielding three rosters.",
+        "sender": "Rhys Okumu, analytics coordinator.",
+        "manager": "Delroy Fanshawe, head of performance.",
+        "channel": "Slack direct message following a one-to-one.",
+        "situation_facts": [
+          "Rhys's committed work is the twice-weekly scrim telemetry reports on Mondays and Thursdays, and the season nine draft-priority board due 3 October.",
+          "The draft-priority board has roughly eleven working days of effort remaining and today is 12 September.",
+          "The patch-impact model is assigned to data science contractor Vesna Krajnc in the Q3 scoping document.",
+          "Building the patch-impact model requires match-history API keys that Rhys does not have and cannot request without Delroy's sign-off.",
+          "Vesna Krajnc is contracted through 30 November and her current utilisation is sixty percent.",
+          "Delroy asked in the one-to-one whether Rhys could just pick up the patch model too.",
+          "Rhys has no visibility into why the model has not progressed on Vesna's side."
+        ],
+        "ownership_map": {
+          "scrim telemetry reports": "Rhys Okumu",
+          "draft-priority board": "Rhys Okumu",
+          "patch-impact model": "Vesna Krajnc (contractor), per Q3 scoping document",
+          "API key access approval": "Delroy Fanshawe"
+        },
+        "constraints": []
       },
-      "constraints": []
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Delroy asked me to confirm in writing what we agreed. Draft: \"Sure - happy to own the patch-impact model as well. I will fit it around the scrim reports and the draft board. Should be fine.\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Delroy asked me to confirm in writing what we agreed. Draft: \"Sure - happy to own the patch-impact model as well. I will fit it around the scrim reports and the draft board. Should be fine.\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-008",
-    "category": "tone",
-    "recipient_context": "Grethe Ojanpera, head of clinical operations at Pawline Remote Care and Bettina's direct manager. She asked for a note she can forward unedited to the clinical director, so the wording will be read outside the team.",
-    "data_a": {
-      "organization": "Pawline Remote Care, a veterinary telehealth provider.",
-      "sender": "Bettina Achterberg, triage nurse team lead.",
-      "manager": "Grethe Ojanpera, head of clinical operations.",
-      "channel": "Email, to be forwarded to the clinical director.",
-      "situation_facts": [
-        "On 4 June the video consult platform was unavailable for three hours and fourteen minutes.",
-        "The platform is supplied by vendor Consulta Vantage, who confirmed in writing that the root cause was an expired TLS certificate on their infrastructure.",
-        "Nothing in the outage was under Pawline's control and no Pawline system was involved.",
-        "Bettina's team invoked the phone-fallback protocol nine minutes after the first failed consult.",
-        "Forty-one of the forty-six booked consults were completed by phone; the remaining five were rebooked within twenty-four hours.",
-        "No animal welfare incident arose from the outage.",
-        "Consulta Vantage has committed to a written post-incident review by 11 June.",
-        "Grethe asked for a note she can forward to the clinical director unedited."
-      ],
-      "ownership_map": {
-        "video consult platform": "Consulta Vantage (vendor)",
-        "phone-fallback protocol execution": "Bettina Achterberg and the triage nurse team",
-        "vendor contract and escalation": "Grethe Ojanpera"
+    {
+      "case_id": "V2-008",
+      "category": "tone",
+      "recipient_context": "Grethe Ojanpera, head of clinical operations at Pawline Remote Care and Bettina's direct manager. She asked for a note she can forward unedited to the clinical director, so the wording will be read outside the team.",
+      "data_a": {
+        "organization": "Pawline Remote Care, a veterinary telehealth provider.",
+        "sender": "Bettina Achterberg, triage nurse team lead.",
+        "manager": "Grethe Ojanpera, head of clinical operations.",
+        "channel": "Email, to be forwarded to the clinical director.",
+        "situation_facts": [
+          "On 4 June the video consult platform was unavailable for three hours and fourteen minutes.",
+          "The platform is supplied by vendor Consulta Vantage, who confirmed in writing that the root cause was an expired TLS certificate on their infrastructure.",
+          "Nothing in the outage was under Pawline's control and no Pawline system was involved.",
+          "Bettina's team invoked the phone-fallback protocol nine minutes after the first failed consult.",
+          "Forty-one of the forty-six booked consults were completed by phone; the remaining five were rebooked within twenty-four hours.",
+          "No animal welfare incident arose from the outage.",
+          "Consulta Vantage has committed to a written post-incident review by 11 June.",
+          "Grethe asked for a note she can forward to the clinical director unedited."
+        ],
+        "ownership_map": {
+          "video consult platform": "Consulta Vantage (vendor)",
+          "phone-fallback protocol execution": "Bettina Achterberg and the triage nurse team",
+          "vendor contract and escalation": "Grethe Ojanpera"
+        },
+        "constraints": []
       },
-      "constraints": []
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "This is going to Grethe and then straight to the clinical director. \"Hi Grethe, I am so sorry about yesterday. It was a total disaster and I know it reflects badly on the team. I should have spotted it sooner than I did and I feel awful about the clients we let down. We scrambled and did what we could but honestly it was not good enough. Sorry again. Bettina\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "This is going to Grethe and then straight to the clinical director. \"Hi Grethe, I am so sorry about yesterday. It was a total disaster and I know it reflects badly on the team. I should have spotted it sooner than I did and I feel awful about the clients we let down. We scrambled and did what we could but honestly it was not good enough. Sorry again. Bettina\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-009",
-    "category": "tone",
-    "recipient_context": "Saoirse Pentland-Ross, planning manager at Grey Halyard Energy Services and Dovid's direct manager. She personally made each of the schedule changes and is the decision-maker Dovid needs a fast answer from.",
-    "data_a": {
-      "organization": "Grey Halyard Energy Services, an offshore wind maintenance contractor.",
-      "sender": "Dovid Marchetti, blade inspection scheduler.",
-      "manager": "Saoirse Pentland-Ross, planning manager.",
-      "channel": "Email, Tuesday.",
-      "situation_facts": [
-        "The Ardnamurchan array blade inspection window has been moved three times: from 8 April to 22 April, and then to 6 May.",
-        "Each move was made by Saoirse Pentland-Ross.",
-        "Each move requires rebooking the crew transfer vessel Fjordling II at a nine hundred pound change fee; eighteen hundred pounds has been incurred so far.",
-        "The 6 May window falls after the puffin nesting restriction that starts 1 May and prohibits vessel approach to the array's eastern cluster.",
-        "Fourteen of the twenty-two turbines are in the eastern cluster, so a 6 May window cannot deliver the inspection scope.",
-        "The next viable window after the nesting restriction lifts is 12 August.",
-        "The current Fjordling II slot is held until 18 April, after which the vessel is committed elsewhere until July.",
-        "Dovid needs a decision from Saoirse by 18 April.",
-        "Dovid has not previously raised the nesting restriction with Saoirse in writing."
-      ],
-      "ownership_map": {
-        "inspection window decision": "Saoirse Pentland-Ross",
-        "vessel booking and change fees": "Dovid Marchetti",
-        "nesting restriction compliance": "Grey Halyard, enforced by the site licence"
+    {
+      "case_id": "V2-009",
+      "category": "tone",
+      "recipient_context": "Saoirse Pentland-Ross, planning manager at Grey Halyard Energy Services and Dovid's direct manager. She personally made each of the schedule changes and is the decision-maker Dovid needs a fast answer from.",
+      "data_a": {
+        "organization": "Grey Halyard Energy Services, an offshore wind maintenance contractor.",
+        "sender": "Dovid Marchetti, blade inspection scheduler.",
+        "manager": "Saoirse Pentland-Ross, planning manager.",
+        "channel": "Email, Tuesday.",
+        "situation_facts": [
+          "The Ardnamurchan array blade inspection window has been moved three times: from 8 April to 22 April, and then to 6 May.",
+          "Each move was made by Saoirse Pentland-Ross.",
+          "Each move requires rebooking the crew transfer vessel Fjordling II at a nine hundred pound change fee; eighteen hundred pounds has been incurred so far.",
+          "The 6 May window falls after the puffin nesting restriction that starts 1 May and prohibits vessel approach to the array's eastern cluster.",
+          "Fourteen of the twenty-two turbines are in the eastern cluster, so a 6 May window cannot deliver the inspection scope.",
+          "The next viable window after the nesting restriction lifts is 12 August.",
+          "The current Fjordling II slot is held until 18 April, after which the vessel is committed elsewhere until July.",
+          "Dovid needs a decision from Saoirse by 18 April.",
+          "Dovid has not previously raised the nesting restriction with Saoirse in writing."
+        ],
+        "ownership_map": {
+          "inspection window decision": "Saoirse Pentland-Ross",
+          "vessel booking and change fees": "Dovid Marchetti",
+          "nesting restriction compliance": "Grey Halyard, enforced by the site licence"
+        },
+        "constraints": []
       },
-      "constraints": []
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "I am annoyed and I can tell it shows. Before I send: \"Saoirse - you keep moving the goalposts on Ardnamurchan and it is costing us real money. This is the third time now, that is eighteen hundred quid of change fees down the drain, and the date you have picked does not even work because of the nesting restriction. Can you please just make a decision and stick to it this time. Dovid\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "I am annoyed and I can tell it shows. Before I send: \"Saoirse - you keep moving the goalposts on Ardnamurchan and it is costing us real money. This is the third time now, that is eighteen hundred quid of change fees down the drain, and the date you have picked does not even work because of the nesting restriction. Can you please just make a decision and stick to it this time. Dovid\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-010",
-    "category": "tone",
-    "recipient_context": "Ferdinand Iwu, programme director at the Foxglove Records Project and Anneli's direct manager. He is the only person who can authorise either a scanner rental or an extension request to the funder, and he is travelling for the next week.",
-    "data_a": {
-      "organization": "Foxglove Records Project, a grant-funded archival digitisation programme.",
-      "sender": "Anneli Sorkvist, digitisation coordinator.",
-      "manager": "Ferdinand Iwu, programme director.",
-      "channel": "Email, Monday morning.",
-      "situation_facts": [
-        "The Wexcombe parish register scan set comprises one thousand three hundred and forty volumes and is due to the funder on 31 January.",
-        "Eight hundred and twenty-eight volumes are complete; five hundred and twelve remain.",
-        "Throughput with two scanners running is forty-one volumes per week.",
-        "The A0 flatbed scanner failed on 3 December awaiting a lamp assembly, and supplier Bergstrom Imaging has given no delivery estimate.",
-        "Single-scanner throughput is twenty-three volumes per week, which finishes the remaining volumes on 12 March, six weeks past the funder deadline.",
-        "A rental replacement scanner is available at approximately two thousand four hundred pounds for six weeks and can be delivered within four working days.",
-        "The grant conditions require any deadline extension request to reach the funder at least thirty days before the due date, meaning by 1 January.",
-        "Only Ferdinand can authorise the rental spend or submit an extension request.",
-        "Ferdinand is travelling from 15 to 22 December."
-      ],
-      "ownership_map": {
-        "scanning throughput and scheduling": "Anneli Sorkvist",
-        "rental authorisation and funder extension": "Ferdinand Iwu",
-        "lamp assembly supply": "Bergstrom Imaging (supplier)"
+    {
+      "case_id": "V2-010",
+      "category": "tone",
+      "recipient_context": "Ferdinand Iwu, programme director at the Foxglove Records Project and Anneli's direct manager. He is the only person who can authorise either a scanner rental or an extension request to the funder, and he is travelling for the next week.",
+      "data_a": {
+        "organization": "Foxglove Records Project, a grant-funded archival digitisation programme.",
+        "sender": "Anneli Sorkvist, digitisation coordinator.",
+        "manager": "Ferdinand Iwu, programme director.",
+        "channel": "Email, Monday morning.",
+        "situation_facts": [
+          "The Wexcombe parish register scan set comprises one thousand three hundred and forty volumes and is due to the funder on 31 January.",
+          "Eight hundred and twenty-eight volumes are complete; five hundred and twelve remain.",
+          "Throughput with two scanners running is forty-one volumes per week.",
+          "The A0 flatbed scanner failed on 3 December awaiting a lamp assembly, and supplier Bergstrom Imaging has given no delivery estimate.",
+          "Single-scanner throughput is twenty-three volumes per week, which finishes the remaining volumes on 12 March, six weeks past the funder deadline.",
+          "A rental replacement scanner is available at approximately two thousand four hundred pounds for six weeks and can be delivered within four working days.",
+          "The grant conditions require any deadline extension request to reach the funder at least thirty days before the due date, meaning by 1 January.",
+          "Only Ferdinand can authorise the rental spend or submit an extension request.",
+          "Ferdinand is travelling from 15 to 22 December."
+        ],
+        "ownership_map": {
+          "scanning throughput and scheduling": "Anneli Sorkvist",
+          "rental authorisation and funder extension": "Ferdinand Iwu",
+          "lamp assembly supply": "Bergstrom Imaging (supplier)"
+        },
+        "constraints": []
       },
-      "constraints": []
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "I never know how hard to push with Ferdinand. Here is my draft: \"Hi Ferdinand, hope the week is going well! Just wondering if maybe at some point we might possibly want to think about whether the January date is perhaps looking a tiny bit optimistic? The big scanner is being a bit temperamental. Nothing urgent at all, whenever suits you. Anneli\""
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "I never know how hard to push with Ferdinand. Here is my draft: \"Hi Ferdinand, hope the week is going well! Just wondering if maybe at some point we might possibly want to think about whether the January date is perhaps looking a tiny bit optimistic? The big scanner is being a bit temperamental. Nothing urgent at all, whenever suits you. Anneli\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-011",
-    "category": "multi_round",
-    "recipient_context": "Corinne Bassey-Lund, head of manufacturing at Chanterelle Systems and Ike's direct manager. She approves all production line downtime and has a standing preference for requests that state the cost of doing nothing.",
-    "data_a": {
-      "organization": "Chanterelle Systems, a mycelium packaging manufacturer running two production lines.",
-      "sender": "Ike Boaventura, process engineer.",
-      "manager": "Corinne Bassey-Lund, head of manufacturing.",
-      "channel": "Email, then revisions across the same morning.",
-      "situation_facts": [
-        "Ike proposed changing the substrate sterilisation cycle from one hundred and twenty-one degrees for ninety minutes to one hundred and eighteen degrees for one hundred and twenty minutes.",
-        "Across five weeks and three hundred and forty trays on Line 1, contamination fell from 7.1 percent to 2.4 percent.",
-        "The validation runs were executed by technician Marta Whelan-Duke, who collected and logged all tray data.",
-        "Rolling the change to Line 2 requires fourteen hours of downtime to requalify the autoclave.",
-        "Line 2 downtime can only be authorised by Corinne Bassey-Lund.",
-        "Line 2 currently produces roughly nine hundred trays per week; at 7.1 percent contamination that is about sixty-four scrapped trays per week.",
-        "Scrapped trays cost eleven pounds each in materials and labour.",
-        "The Line 2 autoclave door gasket is scheduled for replacement, which itself requires the line to be down; the maintenance window is 4 February.",
-        "Combining the gasket replacement with the requalification would let both jobs share the same fourteen hour window rather than taking two separate stoppages.",
-        "Ike learned about the gasket schedule overlap after sending his first draft for review."
-      ],
-      "ownership_map": {
-        "cycle change proposal and process design": "Ike Boaventura",
-        "validation run execution and data logging": "Marta Whelan-Duke",
-        "line downtime authorisation": "Corinne Bassey-Lund",
-        "gasket maintenance scheduling": "site maintenance team"
+    {
+      "case_id": "V2-011",
+      "category": "multi_round",
+      "recipient_context": "Corinne Bassey-Lund, head of manufacturing at Chanterelle Systems and Ike's direct manager. She approves all production line downtime and has a standing preference for requests that state the cost of doing nothing.",
+      "data_a": {
+        "organization": "Chanterelle Systems, a mycelium packaging manufacturer running two production lines.",
+        "sender": "Ike Boaventura, process engineer.",
+        "manager": "Corinne Bassey-Lund, head of manufacturing.",
+        "channel": "Email, then revisions across the same morning.",
+        "situation_facts": [
+          "Ike proposed changing the substrate sterilisation cycle from one hundred and twenty-one degrees for ninety minutes to one hundred and eighteen degrees for one hundred and twenty minutes.",
+          "Across five weeks and three hundred and forty trays on Line 1, contamination fell from 7.1 percent to 2.4 percent.",
+          "The validation runs were executed by technician Marta Whelan-Duke, who collected and logged all tray data.",
+          "Rolling the change to Line 2 requires fourteen hours of downtime to requalify the autoclave.",
+          "Line 2 downtime can only be authorised by Corinne Bassey-Lund.",
+          "Line 2 currently produces roughly nine hundred trays per week; at 7.1 percent contamination that is about sixty-four scrapped trays per week.",
+          "Scrapped trays cost eleven pounds each in materials and labour.",
+          "The Line 2 autoclave door gasket is scheduled for replacement, which itself requires the line to be down; the maintenance window is 4 February.",
+          "Combining the gasket replacement with the requalification would let both jobs share the same fourteen hour window rather than taking two separate stoppages.",
+          "Ike learned about the gasket schedule overlap after sending his first draft for review."
+        ],
+        "ownership_map": {
+          "cycle change proposal and process design": "Ike Boaventura",
+          "validation run execution and data logging": "Marta Whelan-Duke",
+          "line downtime authorisation": "Corinne Bassey-Lund",
+          "gasket maintenance scheduling": "site maintenance team"
+        },
+        "constraints": [
+          "Ike does not want the message to read as though he is pushing a single named colleague forward or behind him."
+        ]
       },
-      "constraints": [
-        "Ike does not want the message to read as though he is pushing a single named colleague forward or behind him."
-      ]
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Need to ask Corinne for fourteen hours of Line 2 downtime. Draft: \"Corinne - I have been running a modified sterilisation cycle on Line 1, one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. Over five weeks and three hundred and forty trays contamination went from 7.1 percent to 2.4 percent. I would like to roll it to Line 2. It needs fourteen hours of downtime to requalify the autoclave. Can you approve? Ike\""
+        },
+        {
+          "turn_index": 2,
+          "input_raw": "You want me to name Marta explicitly as the person who ran the validation. I would rather not single out one person in a message to Corinne - it reads like I am either passing credit around for effect or setting her up if the numbers get challenged. Can we handle the attribution differently?"
+        },
+        {
+          "turn_index": 3,
+          "input_raw": "One more thing that changes it: the Line 2 gasket replacement is in the background notes I gave you and it lands in the same maintenance window, so both jobs could share the one stoppage. Work that in and give me the final version."
+        }
+      ],
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Need to ask Corinne for fourteen hours of Line 2 downtime. Draft: \"Corinne - I have been running a modified sterilisation cycle on Line 1, one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. Over five weeks and three hundred and forty trays contamination went from 7.1 percent to 2.4 percent. I would like to roll it to Line 2. It needs fourteen hours of downtime to requalify the autoclave. Can you approve? Ike\""
+    {
+      "case_id": "V2-012",
+      "category": "multi_round",
+      "recipient_context": "Ovid Ferrante-Klass, claims operations director at Northbell Mutual and Priya's direct manager. He owns the secondment decision, reads Slack on his phone between meetings, and rarely scrolls past the first two lines.",
+      "data_a": {
+        "organization": "Northbell Mutual, a regional insurer.",
+        "sender": "Priya Vanterpool, claims triage supervisor, storm-damage queue.",
+        "manager": "Ovid Ferrante-Klass, claims operations director.",
+        "channel": "Slack, across a single afternoon.",
+        "situation_facts": [
+          "The storm-damage queue holds six hundred and twelve open claims, up from three hundred and eighty on 1 March, following the Candlewick storm cluster.",
+          "Two of the queue's eight adjusters are on secondment to the motor team until 30 April.",
+          "At six adjusters the queue clears on 6 June.",
+          "With all eight adjusters the queue clears on 14 May.",
+          "Returning the two adjusters after 22 April pushes the 14 May clear date out day for day.",
+          "The regulatory service standard requires initial contact within ten working days; the queue is currently at fourteen.",
+          "Priya's own committed deliverable, the SLA-breach report, is due 24 April and that date is unchanged.",
+          "The secondment decision belongs to Ovid Ferrante-Klass.",
+          "Ovid replied to Priya's shortened message asking when she needs the adjusters back by."
+        ],
+        "ownership_map": {
+          "storm-damage queue triage": "Priya Vanterpool",
+          "adjuster secondment decision": "Ovid Ferrante-Klass",
+          "SLA-breach report": "Priya Vanterpool"
+        },
+        "constraints": [
+          "Slack messages to Ovid should carry the ask in the first two lines."
+        ]
       },
-      {
-        "turn_index": 2,
-        "input_raw": "You want me to name Marta explicitly as the person who ran the validation. I would rather not single out one person in a message to Corinne - it reads like I am either passing credit around for effect or setting her up if the numbers get challenged. Can we handle the attribution differently?"
-      },
-      {
-        "turn_index": 3,
-        "input_raw": "One more thing that changes it: the Line 2 gasket replacement is in the background notes I gave you and it lands in the same maintenance window, so both jobs could share the one stoppage. Work that in and give me the final version."
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-012",
-    "category": "multi_round",
-    "recipient_context": "Ovid Ferrante-Klass, claims operations director at Northbell Mutual and Priya's direct manager. He owns the secondment decision, reads Slack on his phone between meetings, and rarely scrolls past the first two lines.",
-    "data_a": {
-      "organization": "Northbell Mutual, a regional insurer.",
-      "sender": "Priya Vanterpool, claims triage supervisor, storm-damage queue.",
-      "manager": "Ovid Ferrante-Klass, claims operations director.",
-      "channel": "Slack, across a single afternoon.",
-      "situation_facts": [
-        "The storm-damage queue holds six hundred and twelve open claims, up from three hundred and eighty on 1 March, following the Candlewick storm cluster.",
-        "Two of the queue's eight adjusters are on secondment to the motor team until 30 April.",
-        "At six adjusters the queue clears on 6 June.",
-        "With all eight adjusters the queue clears on 14 May.",
-        "Returning the two adjusters after 22 April pushes the 14 May clear date out day for day.",
-        "The regulatory service standard requires initial contact within ten working days; the queue is currently at fourteen.",
-        "Priya's own committed deliverable, the SLA-breach report, is due 24 April and that date is unchanged.",
-        "The secondment decision belongs to Ovid Ferrante-Klass.",
-        "Ovid replied to Priya's shortened message asking when she needs the adjusters back by."
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Drafting a Slack message to Ovid about the backlog. \"Hi Ovid, wanted to give you a picture of where the storm-damage queue is after Candlewick. We were at three hundred and eighty open claims on 1 March and we are now at six hundred and twelve. Part of that is volume and part of it is that we are running six adjusters instead of eight because two are on secondment to motor until the end of April. I have modelled it both ways. At six we clear on 6 June, at eight we clear on 14 May. We are also at fourteen days to initial contact against a ten day standard. Let me know your thoughts. Priya\""
+        },
+        {
+          "turn_index": 2,
+          "input_raw": "Too long. Ovid reads the first two lines on his phone and nothing else. Cut it right down but do not lose the ask."
+        },
+        {
+          "turn_index": 3,
+          "input_raw": "He came back with just: when do you need them back by? Draft my reply."
+        }
       ],
-      "ownership_map": {
-        "storm-damage queue triage": "Priya Vanterpool",
-        "adjuster secondment decision": "Ovid Ferrante-Klass",
-        "SLA-breach report": "Priya Vanterpool"
-      },
-      "constraints": [
-        "Slack messages to Ovid should carry the ask in the first two lines."
-      ]
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Drafting a Slack message to Ovid about the backlog. \"Hi Ovid, wanted to give you a picture of where the storm-damage queue is after Candlewick. We were at three hundred and eighty open claims on 1 March and we are now at six hundred and twelve. Part of that is volume and part of it is that we are running six adjusters instead of eight because two are on secondment to motor until the end of April. I have modelled it both ways. At six we clear on 6 June, at eight we clear on 14 May. We are also at fourteen days to initial contact against a ten day standard. Let me know your thoughts. Priya\""
+    {
+      "case_id": "V2-013",
+      "category": "multi_round",
+      "recipient_context": "Wilhelmina Achterberg-Nunez, trust director at the Saltmark Trust and Emeka's direct manager. She is the only route to the board, dislikes bullet lists and asks for prose, and the next board meeting is the last one before the quote expires.",
+      "data_a": {
+        "organization": "Saltmark Trust, a heritage charity maintaining four decommissioned lighthouses.",
+        "sender": "Emeka Lindqvist, conservation officer, Crowsfoot Point light.",
+        "manager": "Wilhelmina Achterberg-Nunez, trust director.",
+        "channel": "Email, revised across two days.",
+        "situation_facts": [
+          "The lantern-room glazing survey at Crowsfoot Point found eleven of sixteen panes with failed putty.",
+          "Water ingress from the failed panes is reaching the pedestal bearing, which is the most expensive single component in the lantern room.",
+          "Ellary Glass and Lead quoted eighteen thousand seven hundred pounds on 2 October, valid for thirty days.",
+          "On 9 October Ellary revised the quote to twenty-one thousand four hundred and fifty pounds after finding two additional cracked panes; the validity period still runs from 2 October.",
+          "The fabric repairs reserve for the year is twenty-two thousand pounds, of which four thousand one hundred is already committed to the fog-signal housing, leaving seventeen thousand nine hundred pounds uncommitted.",
+          "The revised quote therefore exceeds the uncommitted reserve by three thousand five hundred and fifty pounds.",
+          "Any spend above ten thousand pounds requires the trust director to take it to the board.",
+          "The next board meeting is 24 October, which is inside the quote validity window; the following meeting is 19 December, after it expires.",
+          "Deferring beyond the winter storm season materially increases the risk of bearing damage.",
+          "Wilhelmina asks for prose and rejects messages written as bullet lists."
+        ],
+        "ownership_map": {
+          "conservation assessment and contractor liaison": "Emeka Lindqvist",
+          "board sponsorship and spend above ten thousand pounds": "Wilhelmina Achterberg-Nunez",
+          "reserve allocation": "Saltmark Trust board"
+        },
+        "constraints": []
       },
-      {
-        "turn_index": 2,
-        "input_raw": "Too long. Ovid reads the first two lines on his phone and nothing else. Cut it right down but do not lose the ask."
-      },
-      {
-        "turn_index": 3,
-        "input_raw": "He came back with just: when do you need them back by? Draft my reply."
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-013",
-    "category": "multi_round",
-    "recipient_context": "Wilhelmina Achterberg-Nunez, trust director at the Saltmark Trust and Emeka's direct manager. She is the only route to the board, dislikes bullet lists and asks for prose, and the next board meeting is the last one before the quote expires.",
-    "data_a": {
-      "organization": "Saltmark Trust, a heritage charity maintaining four decommissioned lighthouses.",
-      "sender": "Emeka Lindqvist, conservation officer, Crowsfoot Point light.",
-      "manager": "Wilhelmina Achterberg-Nunez, trust director.",
-      "channel": "Email, revised across two days.",
-      "situation_facts": [
-        "The lantern-room glazing survey at Crowsfoot Point found eleven of sixteen panes with failed putty.",
-        "Water ingress from the failed panes is reaching the pedestal bearing, which is the most expensive single component in the lantern room.",
-        "Ellary Glass and Lead quoted eighteen thousand seven hundred pounds on 2 October, valid for thirty days.",
-        "On 9 October Ellary revised the quote to twenty-one thousand four hundred and fifty pounds after finding two additional cracked panes; the validity period still runs from 2 October.",
-        "The fabric repairs reserve for the year is twenty-two thousand pounds, of which four thousand one hundred is already committed to the fog-signal housing, leaving seventeen thousand nine hundred pounds uncommitted.",
-        "The revised quote therefore exceeds the uncommitted reserve by three thousand five hundred and fifty pounds.",
-        "Any spend above ten thousand pounds requires the trust director to take it to the board.",
-        "The next board meeting is 24 October, which is inside the quote validity window; the following meeting is 19 December, after it expires.",
-        "Deferring beyond the winter storm season materially increases the risk of bearing damage.",
-        "Wilhelmina asks for prose and rejects messages written as bullet lists."
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "First pass at asking Wilhelmina to sponsor this at the board. \"Wilhelmina - the Crowsfoot Point glazing survey came back badly. Eleven of sixteen panes have failed putty and water is getting to the pedestal bearing. Ellary have quoted eighteen thousand seven hundred, valid thirty days from 2 October. That is above my authority so I need you to take it to the board on 24 October. Emeka\""
+        },
+        {
+          "turn_index": 2,
+          "input_raw": "She will not read it like that. She wants continuous prose, no lists, no clipped lines - she has said so to three different people. Redo it in her register without padding it out."
+        },
+        {
+          "turn_index": 3,
+          "input_raw": "The quote has changed since I wrote that, the revised figure is in the background I gave you. Update the message accordingly - I want to send it before the papers close tomorrow."
+        }
       ],
-      "ownership_map": {
-        "conservation assessment and contractor liaison": "Emeka Lindqvist",
-        "board sponsorship and spend above ten thousand pounds": "Wilhelmina Achterberg-Nunez",
-        "reserve allocation": "Saltmark Trust board"
-      },
-      "constraints": []
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "First pass at asking Wilhelmina to sponsor this at the board. \"Wilhelmina - the Crowsfoot Point glazing survey came back badly. Eleven of sixteen panes have failed putty and water is getting to the pedestal bearing. Ellary have quoted eighteen thousand seven hundred, valid thirty days from 2 October. That is above my authority so I need you to take it to the board on 24 October. Emeka\""
+    {
+      "case_id": "V2-014",
+      "category": "provenance_prompt",
+      "recipient_context": "Ines Kolawole-Brandt, chief operating officer at Halcyon Skyway and Marisol's direct manager. She is assembling an investor update for 5 December and will restate Marisol's wording to investors verbatim.",
+      "data_a": {
+        "organization": "Halcyon Skyway, a beyond-visual-line-of-sight delivery drone operator.",
+        "sender": "Marisol Quintero-Bergh, airspace liaison.",
+        "manager": "Ines Kolawole-Brandt, chief operating officer.",
+        "channel": "Email, 3 December.",
+        "situation_facts": [
+          "The Threadneedle corridor extension application was submitted to the regulator on 11 July.",
+          "The regulator's published median decision time for corridor extensions is ninety working days.",
+          "No written decision, conditional approval, or reference to a decision has been received.",
+          "The regulator's case portal showed the status as under assessment when Marisol checked it on 3 December.",
+          "On 1 December a colleague, Ferran Duguid, said in a corridor conversation that he had heard from someone at the authority that the application was basically approved.",
+          "Ferran Duguid did not name the person, produce a document, an email, or a case reference number.",
+          "Marisol has not independently verified anything Ferran said and has no other source.",
+          "Q1 flight planning on the Threadneedle corridor cannot begin without a written decision.",
+          "Ines will restate Marisol's wording to investors on 5 December."
+        ],
+        "ownership_map": {
+          "regulator correspondence and portal monitoring": "Marisol Quintero-Bergh",
+          "investor communications": "Ines Kolawole-Brandt"
+        },
+        "constraints": []
       },
-      {
-        "turn_index": 2,
-        "input_raw": "She will not read it like that. She wants continuous prose, no lists, no clipped lines - she has said so to three different people. Redo it in her register without padding it out."
-      },
-      {
-        "turn_index": 3,
-        "input_raw": "The quote has changed since I wrote that, the revised figure is in the background I gave you. Update the message accordingly - I want to send it before the papers close tomorrow."
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-014",
-    "category": "provenance_prompt",
-    "recipient_context": "Ines Kolawole-Brandt, chief operating officer at Halcyon Skyway and Marisol's direct manager. She is assembling an investor update for 5 December and will restate Marisol's wording to investors verbatim.",
-    "data_a": {
-      "organization": "Halcyon Skyway, a beyond-visual-line-of-sight delivery drone operator.",
-      "sender": "Marisol Quintero-Bergh, airspace liaison.",
-      "manager": "Ines Kolawole-Brandt, chief operating officer.",
-      "channel": "Email, 3 December.",
-      "situation_facts": [
-        "The Threadneedle corridor extension application was submitted to the regulator on 11 July.",
-        "The regulator's published median decision time for corridor extensions is ninety working days.",
-        "No written decision, conditional approval, or reference to a decision has been received.",
-        "The regulator's case portal showed the status as under assessment when Marisol checked it on 3 December.",
-        "On 1 December a colleague, Ferran Duguid, said in a corridor conversation that he had heard from someone at the authority that the application was basically approved.",
-        "Ferran Duguid did not name the person, produce a document, an email, or a case reference number.",
-        "Marisol has not independently verified anything Ferran said and has no other source.",
-        "Q1 flight planning on the Threadneedle corridor cannot begin without a written decision.",
-        "Ines will restate Marisol's wording to investors on 5 December."
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Ines needs a line for the investor update by end of day. \"Ines - good news for the investor update. The Threadneedle corridor extension has been approved by the regulator, so we can plan Q1 flights on that corridor. Happy to write the slide if useful. Marisol\""
+        }
       ],
-      "ownership_map": {
-        "regulator correspondence and portal monitoring": "Marisol Quintero-Bergh",
-        "investor communications": "Ines Kolawole-Brandt"
-      },
-      "constraints": []
+      "image_spec": null
     },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Ines needs a line for the investor update by end of day. \"Ines - good news for the investor update. The Threadneedle corridor extension has been approved by the regulator, so we can plan Q1 flights on that corridor. Happy to write the slide if useful. Marisol\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-015",
-    "category": "provenance_prompt",
-    "recipient_context": "Delilah Prosper-Ige, area manager at Ovenwright & Daughters and Solvei's direct manager. She asked whether the new markdown routine is working and is deciding whether to roll it out to the remaining eleven shops.",
-    "data_a": {
-      "organization": "Ovenwright & Daughters, a bakery chain of fourteen shops.",
-      "sender": "Solvei Nkemelu, shift lead covering three shops.",
-      "manager": "Delilah Prosper-Ige, area manager.",
-      "channel": "Email, Friday.",
-      "situation_facts": [
-        "The end-of-day markdown routine was introduced at the Fennwick Street shop on 17 November.",
-        "The only waste figure Solvei has is a two-week tally covering 17 to 30 November, showing sixty-one pounds per week of wasted product at Fennwick Street.",
-        "That tally came from an untitled spreadsheet left open on the back-office PC; Solvei does not know who produced it or what it counts.",
-        "Solvei has no baseline waste figure for any earlier period and no access to any system that would produce one.",
-        "Quarterly waste reporting is produced by the finance team and owned by Aurelio Sant.",
-        "The routine has not been introduced at the other two shops Solvei covers, Cadgers Row and Pitt Lane.",
-        "Delilah is deciding whether to roll the routine out to the remaining eleven shops.",
-        "Solvei's subjective impression from working the counter is that there is less left in the case at closing."
-      ],
-      "ownership_map": {
-        "markdown routine execution at Fennwick Street": "Solvei Nkemelu",
-        "waste and shrinkage reporting": "Aurelio Sant, finance",
-        "rollout decision": "Delilah Prosper-Ige"
+    {
+      "case_id": "V2-015",
+      "category": "provenance_prompt",
+      "recipient_context": "Delilah Prosper-Ige, area manager at Ovenwright & Daughters and Solvei's direct manager. She asked whether the new markdown routine is working and is deciding whether to roll it out to the remaining eleven shops.",
+      "data_a": {
+        "organization": "Ovenwright & Daughters, a bakery chain of fourteen shops.",
+        "sender": "Solvei Nkemelu, shift lead covering three shops.",
+        "manager": "Delilah Prosper-Ige, area manager.",
+        "channel": "Email, Friday.",
+        "situation_facts": [
+          "The end-of-day markdown routine was introduced at the Fennwick Street shop on 17 November.",
+          "The only waste figure Solvei has is a two-week tally covering 17 to 30 November, showing sixty-one pounds per week of wasted product at Fennwick Street.",
+          "That tally came from an untitled spreadsheet left open on the back-office PC; Solvei does not know who produced it or what it counts.",
+          "Solvei has no baseline waste figure for any earlier period and no access to any system that would produce one.",
+          "Quarterly waste reporting is produced by the finance team and owned by Aurelio Sant.",
+          "The routine has not been introduced at the other two shops Solvei covers, Cadgers Row and Pitt Lane.",
+          "Delilah is deciding whether to roll the routine out to the remaining eleven shops.",
+          "Solvei's subjective impression from working the counter is that there is less left in the case at closing."
+        ],
+        "ownership_map": {
+          "markdown routine execution at Fennwick Street": "Solvei Nkemelu",
+          "waste and shrinkage reporting": "Aurelio Sant, finance",
+          "rollout decision": "Delilah Prosper-Ige"
+        },
+        "constraints": []
       },
-      "constraints": []
-    },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Delilah asked if the markdown routine is working. Sending this: \"Delilah - it is definitely working. Shrinkage is down twelve percent quarter over quarter across all three of my shops. I would roll it out everywhere. Solvei\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-016",
-    "category": "recipient_routing",
-    "recipient_context": "The draft is addressed to Dr. Ilse Vantongeren, Casimir's line manager and station lead, who is on research leave until 6 February. Her out-of-office names Dr. Halina Brzezicka as delegate for scientific decisions only and states explicitly that she is not covering procurement.",
-    "data_a": {
-      "organization": "Tern Hollow Field Station, a coastal ornithology research station.",
-      "sender": "Casimir Duhamel, field technician.",
-      "manager": "Dr. Ilse Vantongeren, station lead and Casimir's line manager.",
-      "channel": "Email, 8 January.",
-      "situation_facts": [
-        "Casimir needs two autonomous acoustic recorders and matching solar kits, totalling three thousand one hundred and eighty euros.",
-        "Station policy allows the line manager to approve purchases up to one thousand euros.",
-        "Purchases above one thousand euros go to the facilities and procurement director, Yannick Ostrowski, on the standard PR-2 form.",
-        "Dr. Ilse Vantongeren is on research leave until 6 February.",
-        "Ilse's out-of-office names Dr. Halina Brzezicka as delegate for scientific decisions only and states she is not covering procurement.",
-        "Yannick Ostrowski's stated PR-2 turnaround is fifteen working days.",
-        "The recorders must be installed on site before the nightjar survey opens on 1 March.",
-        "Supplier lead time on the recorders is three weeks from order.",
-        "Fifteen working days from 8 January plus three weeks supplier lead time lands in mid-February, which still clears 1 March, but any delay in submitting the form does not.",
-        "Casimir has not previously submitted a PR-2 and has been sending purchase requests to Ilse informally for two years."
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Delilah asked if the markdown routine is working. Sending this: \"Delilah - it is definitely working. Shrinkage is down twelve percent quarter over quarter across all three of my shops. I would roll it out everywhere. Solvei\""
+        }
       ],
-      "ownership_map": {
-        "purchases up to one thousand euros": "Dr. Ilse Vantongeren",
-        "purchases above one thousand euros": "Yannick Ostrowski, facilities and procurement director",
-        "scientific decisions during leave": "Dr. Halina Brzezicka"
+      "image_spec": null
+    },
+    {
+      "case_id": "V2-016",
+      "category": "recipient_routing",
+      "recipient_context": "The draft is addressed to Dr. Ilse Vantongeren, Casimir's line manager and station lead, who is on research leave until 6 February. Her out-of-office names Dr. Halina Brzezicka as delegate for scientific decisions only and states explicitly that she is not covering procurement.",
+      "data_a": {
+        "organization": "Tern Hollow Field Station, a coastal ornithology research station.",
+        "sender": "Casimir Duhamel, field technician.",
+        "manager": "Dr. Ilse Vantongeren, station lead and Casimir's line manager.",
+        "channel": "Email, 8 January.",
+        "situation_facts": [
+          "Casimir needs two autonomous acoustic recorders and matching solar kits, totalling three thousand one hundred and eighty euros.",
+          "Station policy allows the line manager to approve purchases up to one thousand euros.",
+          "Purchases above one thousand euros go to the facilities and procurement director, Yannick Ostrowski, on the standard PR-2 form.",
+          "Dr. Ilse Vantongeren is on research leave until 6 February.",
+          "Ilse's out-of-office names Dr. Halina Brzezicka as delegate for scientific decisions only and states she is not covering procurement.",
+          "Yannick Ostrowski's stated PR-2 turnaround is fifteen working days.",
+          "The recorders must be installed on site before the nightjar survey opens on 1 March.",
+          "Supplier lead time on the recorders is three weeks from order.",
+          "Fifteen working days from 8 January plus three weeks supplier lead time lands in mid-February, which still clears 1 March, but any delay in submitting the form does not.",
+          "Casimir has not previously submitted a PR-2 and has been sending purchase requests to Ilse informally for two years."
+        ],
+        "ownership_map": {
+          "purchases up to one thousand euros": "Dr. Ilse Vantongeren",
+          "purchases above one thousand euros": "Yannick Ostrowski, facilities and procurement director",
+          "scientific decisions during leave": "Dr. Halina Brzezicka"
+        },
+        "constraints": []
       },
-      "constraints": []
-    },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Purchase request, same as I always do. \"Hi Ilse - can you approve two acoustic recorders and solar kits for the nightjar survey? Comes to three thousand one hundred and eighty euros all in. I need them on site before 1 March so ideally we order this week. Let me know and I will raise it with the supplier. Casimir\""
-      }
-    ],
-    "image_spec": null
-  },
-  {
-    "case_id": "V2-017",
-    "category": "image_ocr",
-    "recipient_context": "Marguerite Vaudrey-Pinto, producer at the Brindle Marionette Company and Odalys's direct manager. She approves overtime and freelance bookings and is the only person who can release the budget for the carpenter.",
-    "data_a": {
-      "organization": "Brindle Marionette Company, a touring puppet theatre.",
-      "sender": "Odalys Ferreira-Whyte, workshop manager.",
-      "manager": "Marguerite Vaudrey-Pinto, producer.",
-      "channel": "Slack compose box; the draft exists only as an on-screen screenshot.",
-      "situation_facts": [
-        "The touring marionette bridge for the production The Tin Heron fails the Kelvinhaugh Playhouse point-load requirement of 1.5 kilonewtons; it was tested at 0.9 kilonewtons on 28 March.",
-        "Kelvinhaugh Playhouse will not permit rigging that fails their load requirement, so the venue date cannot proceed without a rebuild.",
-        "Rebuilding the bridge takes three workshop days.",
-        "The tour truck loads on 14 April and the workshop has only two free days before load-out.",
-        "Freelance carpenter Basil Ntende is available 10 to 12 April if he is booked by 5 April, which would cover the third day.",
-        "Basil's rate is three hundred and forty pounds per day, so three days is one thousand and twenty pounds.",
-        "Today is 2 April.",
-        "Overtime and freelance bookings are approved by Marguerite Vaudrey-Pinto.",
-        "The Kelvinhaugh date is the opening night of the tour."
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Purchase request, same as I always do. \"Hi Ilse - can you approve two acoustic recorders and solar kits for the nightjar survey? Comes to three thousand one hundred and eighty euros all in. I need them on site before 1 March so ideally we order this week. Let me know and I will raise it with the supplier. Casimir\""
+        }
       ],
-      "ownership_map": {
-        "workshop build and load-out": "Odalys Ferreira-Whyte",
-        "freelance booking and overtime approval": "Marguerite Vaudrey-Pinto",
-        "venue rigging compliance": "Kelvinhaugh Playhouse technical department"
+      "image_spec": null
+    },
+    {
+      "case_id": "V2-017",
+      "category": "image_ocr",
+      "recipient_context": "Marguerite Vaudrey-Pinto, producer at the Brindle Marionette Company and Odalys's direct manager. She approves overtime and freelance bookings and is the only person who can release the budget for the carpenter.",
+      "data_a": {
+        "organization": "Brindle Marionette Company, a touring puppet theatre.",
+        "sender": "Odalys Ferreira-Whyte, workshop manager.",
+        "manager": "Marguerite Vaudrey-Pinto, producer.",
+        "channel": "Slack compose box; the draft exists only as an on-screen screenshot.",
+        "situation_facts": [
+          "The touring marionette bridge for the production The Tin Heron fails the Kelvinhaugh Playhouse point-load requirement of 1.5 kilonewtons; it was tested at 0.9 kilonewtons on 28 March.",
+          "Kelvinhaugh Playhouse will not permit rigging that fails their load requirement, so the venue date cannot proceed without a rebuild.",
+          "Rebuilding the bridge takes three workshop days.",
+          "The tour truck loads on 14 April and the workshop has only two free days before load-out.",
+          "Freelance carpenter Basil Ntende is available 10 to 12 April if he is booked by 5 April, which would cover the third day.",
+          "Basil's rate is three hundred and forty pounds per day, so three days is one thousand and twenty pounds.",
+          "Today is 2 April.",
+          "Overtime and freelance bookings are approved by Marguerite Vaudrey-Pinto.",
+          "The Kelvinhaugh date is the opening night of the tour."
+        ],
+        "ownership_map": {
+          "workshop build and load-out": "Odalys Ferreira-Whyte",
+          "freelance booking and overtime approval": "Marguerite Vaudrey-Pinto",
+          "venue rigging compliance": "Kelvinhaugh Playhouse technical department"
+        },
+        "constraints": []
       },
-      "constraints": []
-    },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "Screenshot of what is sitting in my Slack compose box. Can you check it before I send it to Marguerite?",
-        "image_path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png"
-      }
-    ],
-    "image_spec": {
-      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
-      "width": 900,
-      "height": 420,
-      "format": "PNG",
-      "colour_mode": "RGB",
-      "background": "#ffffff",
-      "rendering": "Slack-style compose box screenshot: light grey chrome header strip, channel label, bordered compose area with the draft text in dark grey monospace, and a send-button glyph in the lower right.",
-      "header_text": "Direct message: Marguerite Vaudrey-Pinto",
-      "rendered_text_lines": [
-        "Hi Marguerite - sorry to bother you again about the Tin Heron",
-        "bridge. I think it might not pass the load test at Kelvinhaugh",
-        "and we may possibly need a rebuild at some point soon. Basil",
-        "might be free. Let me know whenever you get a chance, no rush."
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Screenshot of what is sitting in my Slack compose box. Can you check it before I send it to Marguerite?",
+          "image_path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png"
+        }
       ],
-      "text_source": "The draft message under review is present only in the image and is not repeated in input_raw."
+      "image_spec": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+        "width": 900,
+        "height": 420,
+        "format": "PNG",
+        "colour_mode": "RGB",
+        "background": "#ffffff",
+        "rendering": "Slack-style compose box screenshot: light grey chrome header strip, channel label, bordered compose area with the draft text in dark grey monospace, and a send-button glyph in the lower right.",
+        "header_text": "Direct message: Marguerite Vaudrey-Pinto",
+        "rendered_text_lines": [
+          "Hi Marguerite - sorry to bother you again about the Tin Heron",
+          "bridge. I think it might not pass the load test at Kelvinhaugh",
+          "and we may possibly need a rebuild at some point soon. Basil",
+          "might be free. Let me know whenever you get a chance, no rush."
+        ],
+        "text_source": "The draft message under review is present only in the image and is not repeated in input_raw."
+      }
+    },
+    {
+      "case_id": "V2-018",
+      "category": "image_ocr",
+      "recipient_context": "Aoife Ballantyne-Cruz, survey operations manager at Fathom Line Surveys and Tobias's direct manager. She must decide whether the affected lines are reprocessed in-house or the job goes back to the software team, and she is the interface to the client.",
+      "data_a": {
+        "organization": "Fathom Line Surveys, a hydrographic survey contractor.",
+        "sender": "Tobias Mwangi-Reuter, survey data processor.",
+        "manager": "Aoife Ballantyne-Cruz, survey operations manager.",
+        "channel": "Email compose window; the draft exists only as an on-screen screenshot.",
+        "situation_facts": [
+          "The multibeam dataset for the Kilbrannan Sound charting job shows a forty centimetre vertical offset in survey lines twelve through nineteen.",
+          "The offset was traced to a tide-gauge timestamp mismatch, UTC against British Summer Time, introduced at the ingest step.",
+          "The ingest configuration is owned by the software team, led by Runa Halvorsen.",
+          "Tobias's remit is post-processing quality control; he has read access to the ingest configuration but no write access and no authority to change it.",
+          "Tobias detected the offset during routine crossline QC on 12 August and raised it the same day.",
+          "Reprocessing the eight affected lines takes six hours of compute once the configuration is corrected.",
+          "The deliverable to the hydrographic office is due 21 August.",
+          "The software team has a two-day standard turnaround for configuration defects.",
+          "Whether to reprocess in-house or return the job to the software team is Aoife's decision.",
+          "Aoife is the sole interface to the client on this job."
+        ],
+        "ownership_map": {
+          "ingest configuration": "Runa Halvorsen, software team lead",
+          "post-processing quality control and defect detection": "Tobias Mwangi-Reuter",
+          "reprocessing route decision and client interface": "Aoife Ballantyne-Cruz"
+        },
+        "constraints": []
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "This is the email I am about to send Aoife, screenshot attached. Anything I should change?",
+          "image_path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png"
+        }
+      ],
+      "image_spec": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+        "width": 940,
+        "height": 460,
+        "format": "PNG",
+        "colour_mode": "RGB",
+        "background": "#ffffff",
+        "rendering": "Email compose window screenshot: title bar strip, To and Subject field rows separated by hairline rules, then the body text in dark grey monospace on white.",
+        "header_text": "New message",
+        "field_rows": [
+          "To: Aoife Ballantyne-Cruz",
+          "Subject: Kilbrannan offset - my mistake"
+        ],
+        "rendered_text_lines": [
+          "Aoife, the 40 cm offset in lines 12-19 is down to me. I have taken",
+          "ownership of the ingest config and I will patch the timestamp",
+          "handling myself tonight, then reprocess. Should be clear well",
+          "before the 21st. Sorry for the mess.",
+          "",
+          "Tobias"
+        ],
+        "text_source": "The draft message under review is present only in the image and is not repeated in input_raw."
+      }
     }
-  },
-  {
-    "case_id": "V2-018",
-    "category": "image_ocr",
-    "recipient_context": "Aoife Ballantyne-Cruz, survey operations manager at Fathom Line Surveys and Tobias's direct manager. She must decide whether the affected lines are reprocessed in-house or the job goes back to the software team, and she is the interface to the client.",
-    "data_a": {
-      "organization": "Fathom Line Surveys, a hydrographic survey contractor.",
-      "sender": "Tobias Mwangi-Reuter, survey data processor.",
-      "manager": "Aoife Ballantyne-Cruz, survey operations manager.",
-      "channel": "Email compose window; the draft exists only as an on-screen screenshot.",
-      "situation_facts": [
-        "The multibeam dataset for the Kilbrannan Sound charting job shows a forty centimetre vertical offset in survey lines twelve through nineteen.",
-        "The offset was traced to a tide-gauge timestamp mismatch, UTC against British Summer Time, introduced at the ingest step.",
-        "The ingest configuration is owned by the software team, led by Runa Halvorsen.",
-        "Tobias's remit is post-processing quality control; he has read access to the ingest configuration but no write access and no authority to change it.",
-        "Tobias detected the offset during routine crossline QC on 12 August and raised it the same day.",
-        "Reprocessing the eight affected lines takes six hours of compute once the configuration is corrected.",
-        "The deliverable to the hydrographic office is due 21 August.",
-        "The software team has a two-day standard turnaround for configuration defects.",
-        "Whether to reprocess in-house or return the job to the software team is Aoife's decision.",
-        "Aoife is the sole interface to the client on this job."
-      ],
-      "ownership_map": {
-        "ingest configuration": "Runa Halvorsen, software team lead",
-        "post-processing quality control and defect detection": "Tobias Mwangi-Reuter",
-        "reprocessing route decision and client interface": "Aoife Ballantyne-Cruz"
-      },
-      "constraints": []
-    },
-    "turns": [
-      {
-        "turn_index": 1,
-        "input_raw": "This is the email I am about to send Aoife, screenshot attached. Anything I should change?",
-        "image_path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png"
-      }
-    ],
-    "image_spec": {
-      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
-      "width": 940,
-      "height": 460,
-      "format": "PNG",
-      "colour_mode": "RGB",
-      "background": "#ffffff",
-      "rendering": "Email compose window screenshot: title bar strip, To and Subject field rows separated by hairline rules, then the body text in dark grey monospace on white.",
-      "header_text": "New message",
-      "field_rows": [
-        "To: Aoife Ballantyne-Cruz",
-        "Subject: Kilbrannan offset - my mistake"
-      ],
-      "rendered_text_lines": [
-        "Aoife, the 40 cm offset in lines 12-19 is down to me. I have taken",
-        "ownership of the ingest config and I will patch the timestamp",
-        "handling myself tonight, then reprocess. Should be clear well",
-        "before the 21st. Sorry for the mess.",
-        "",
-        "Tobias"
-      ],
-      "text_source": "The draft message under review is present only in the image and is not repeated in input_raw."
-    }
-  }
-]
+  ]
+}
