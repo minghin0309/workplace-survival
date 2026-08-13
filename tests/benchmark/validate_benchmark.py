@@ -32,6 +32,7 @@ STAGE_ROLES = {
         "labeler-1-attestation",
         "labeler-2-attestation",
         "labeler-3-attestation",
+        "designer-attestation",
         "adjudicator-attestation",
     },
     "outputs": {"outputs", "generator-attestation"},
@@ -135,6 +136,16 @@ def validate_gold(gold: dict) -> None:
             and isinstance(document["limitations"], list),
             "attestation provenance",
         )
+        source = document.get("source_attestation")
+        if source is not None:
+            require(set(source) == {"path", "sha256"}, "source attestation schema")
+            source_path = Path(source["path"])
+            require(
+                source_path.is_file()
+                and re.fullmatch(r"[0-9a-f]{64}", source["sha256"]) is not None
+                and digest(source_path) == source["sha256"],
+                "source attestation hash",
+            )
         require(
             all("oracle-notes" not in str(value) for value in document["files_read"]),
             "gold labeler accessed oracle notes",
@@ -185,6 +196,88 @@ def validate_gold(gold: dict) -> None:
                 require(tier == "gold_uncertain", f"{case['case_id']}: uncertain gold")
             uncertain += int(tier == "gold_uncertain")
     require(total > 0 and uncertain / total <= 0.20, "gold uncertainty exceeds 20%")
+
+
+def validate_adjudication(adjudication: dict, gold: dict) -> None:
+    require(
+        set(adjudication)
+        == {
+            "schema_version",
+            "artifact",
+            "case_set_id",
+            "gold_output_path",
+            "adjudicator_attestation",
+            "source_hashes",
+            "adjudication_policy",
+            "summary",
+            "cases",
+        },
+        "adjudication schema",
+    )
+    require(
+        adjudication["schema_version"] == "v2"
+        and adjudication["artifact"] == "gold-adjudication"
+        and adjudication["case_set_id"] == gold["case_set_id"],
+        "adjudication identity",
+    )
+    attestation = adjudication["adjudicator_attestation"]
+    require(set(attestation) == {"path", "sha256"}, "adjudicator attestation schema")
+    attestation_path = Path(attestation["path"])
+    require(
+        attestation_path.is_file()
+        and digest(attestation_path) == attestation["sha256"],
+        "adjudicator attestation hash",
+    )
+    source_hashes = adjudication["source_hashes"]
+    require(isinstance(source_hashes, dict) and source_hashes, "adjudication sources")
+    for path_text, expected_hash in source_hashes.items():
+        path = Path(path_text)
+        require(
+            path.is_file()
+            and re.fullmatch(r"[0-9a-f]{64}", expected_hash) is not None
+            and digest(path) == expected_hash,
+            f"adjudication source changed: {path}",
+        )
+
+    gold_cases = {case["case_id"]: case["turn_labels"] for case in gold["cases"]}
+    adjudicated_cases = adjudication["cases"]
+    require(
+        [case["case_id"] for case in adjudicated_cases] == list(gold_cases),
+        "adjudication case coverage",
+    )
+    turn_count = uncertain_count = 0
+    for case in adjudicated_cases:
+        case_id = case["case_id"]
+        turn_adjudications = case["turn_adjudications"]
+        expected_turns = gold_cases[case_id]
+        require(len(turn_adjudications) == len(expected_turns), f"{case_id}: adjudication turn coverage")
+        for expected_index, (turn, expected_gold) in enumerate(
+            zip(turn_adjudications, expected_turns), start=1
+        ):
+            require(turn["turn_index"] == expected_index, f"{case_id}: adjudication turn order")
+            require(
+                set(turn["labeler_votes"]) == {"gold-labeler-1", "gold-labeler-2", "gold-labeler-3"},
+                f"{case_id}: labeler vote coverage",
+            )
+            for field in ("route", "responsibility", "tone", "overall"):
+                distribution = turn["categorical_vote_distribution"][field]
+                require(
+                    sum(distribution.values()) == 3,
+                    f"{case_id}: {field} vote distribution",
+                )
+            require(
+                turn["adjudicated_turn"] == expected_gold,
+                f"{case_id}: adjudicated gold linkage",
+            )
+            turn_count += 1
+            uncertain_count += int(expected_gold["gold_quality"]["tier"] == "gold_uncertain")
+    summary = adjudication["summary"]
+    require(
+        summary["turns"] == turn_count
+        and summary["uncertain_turn_count"] == uncertain_count
+        and summary["uncertain_fraction"] == uncertain_count / turn_count,
+        "adjudication summary",
+    )
 
 
 def validate_manifest(manifest: dict, seen: set[Path] | None = None) -> None:
@@ -314,6 +407,9 @@ def main() -> None:
     validate_manifest(manifest)
     gold_manifest = find_gold_manifest(manifest)
     by_role = {item["role"]: item for item in gold_manifest["artifacts"]}
+    adjudication_path = Path(by_role["adjudication"]["path"])
+    adjudication = json.loads(adjudication_path.read_text(encoding="utf-8"))
+    validate_adjudication(adjudication, gold)
     expected_paths = {
         "cases": Path(sys.argv[1]).resolve(),
         "oracle-notes": Path(sys.argv[2]).resolve(),

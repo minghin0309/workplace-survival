@@ -1,0 +1,34 @@
+{
+  "schema_version": "v2",
+  "role": "designer",
+  "context_id": "bc-40936f78-40fe-5055-b664-fa5adf60294f",
+  "model_id": "claude-opus-5",
+  "model_family": "claude",
+  "cloud_branch": "cursor/v2-cloud-cases-294f",
+  "cloud_commit": "a638d2b87ef17c36e394319e3e46b361eb6eb061",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/V2_CASE_BRIEF.md",
+      "sha256": "d5d78af54bbe39b266bf08b1fcda0d5027a30729e45efdd41f554e5deefa04f9"
+    }
+  ],
+  "limitations": [
+    "The designer could not check the case set against the rubric, the scorer, the ontology, or the skill under test, because reading them would break the blind. Category fit is asserted from the category names alone as given in the prompt.",
+    "Novelty against prior holdouts and repository fixtures is asserted by construction rather than verified, since prior case sets were not read. A reviewer with access to those files should diff domains, names and message wording before the set is used.",
+    "The intended difficulty of each case is the designer's judgement and has not been calibrated against any observed model behaviour.",
+    "The two PNGs are synthetic renderings of chat and mail chrome produced with Pillow, not captures of real client software. They use a monospace face at high contrast, so they are a weak test of OCR robustness under noise, skew, compression or low contrast.",
+    "The oracle-notes leakage check is a heuristic: it rejects digits and capitalised entity tokens drawn from the cases, so a paraphrased factual input expressed entirely in lowercase common words would not be caught automatically.",
+    "The image_spec for each image case records the rendered text, so anyone reading cases.json can see the draft without performing OCR. Harnesses that grade OCR ability should withhold image_spec.rendered_text_lines from the system under test.",
+    "Category balance is uneven by design of the supplied plan: recipient_routing has a single case and provenance_prompt and image_ocr have two each, so per-category scores from this set will be noisy.",
+    "All cases are written in British-English workplace register with a single sender-manager pair; the set does not exercise group recipients, non-native phrasing, or messages that are already hostile from the manager's side.",
+    "Timestamps in the attestation are wall-clock from the agent host and are not independently attested."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/designer-attestation.json",
+    "sha256": "9775aa61f2fe5eb34493a5abbf6abf719626812acb1715533ccde8f1dc84b975"
+  },
+  "normalization": {
+    "kind": "mechanical-schema-wrapper",
+    "semantic_decisions_changed": false
+  }
+}

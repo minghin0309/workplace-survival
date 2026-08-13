@@ -4,8 +4,8 @@
   "case_set_id": "v2-holdout-cloud-cases",
   "gold_output_path": "tests/benchmark/v2-holdout/cloud-cases/gold.json",
   "adjudicator_attestation": {
-    "path": "tests/benchmark/v2-holdout/cloud-cases/adjudicator-attestation.json",
-    "hash": "50d8217cdf8ece659e3381089d7bc1150bcff85c7b61efae99b10e9640c8b5dd"
+    "path": "tests/benchmark/v2-holdout/cloud-cases/attestations/adjudicator.json",
+    "sha256": "492d5862685970240e5bd7ab752539ce73e416f11a833c7605c984020979ee19"
   },
   "source_hashes": {
     "tests/benchmark/v2-holdout/cloud-cases/cases.json": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828",
@@ -399,7 +399,7 @@
             ],
             "rationale": "All three labelers agree the draft is a fully supported manager message: it preserves the relevant facts, ownership boundaries, recipient, and deadline/impact context without a concrete responsibility or tone issue. No revision is required.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -746,7 +746,7 @@
             ],
             "rationale": "All three labelers agree the draft is a fully supported manager message: it preserves the relevant facts, ownership boundaries, recipient, and deadline/impact context without a concrete responsibility or tone issue. No revision is required.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -1093,7 +1093,7 @@
             ],
             "rationale": "All three labelers agree the draft is a fully supported manager message: it preserves the relevant facts, ownership boundaries, recipient, and deadline/impact context without a concrete responsibility or tone issue. No revision is required.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -1437,7 +1437,7 @@
             ],
             "rationale": "All three labelers agree the draft is a fully supported manager message: it preserves the relevant facts, ownership boundaries, recipient, and deadline/impact context without a concrete responsibility or tone issue. No revision is required.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -1945,7 +1945,7 @@
             ],
             "rationale": "Unanimous Red responsibility/Green tone: the draft claims a completed, within-tolerance casing review even though Oleander only compiled/exported raw logs, Hargrove has only given a preliminary verbal readout, and Yusuf has not signed off. Because the wording would enter a contractual daily report, the factual overclaim is critical while the register is civil.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -2429,7 +2429,7 @@
             ],
             "rationale": "Unanimous Red responsibility/Green tone: Juno accepts full responsibility and prevention authority for an overnight rota failure outside her remit after a signed handover, in an incident-record reply. The response must correct ownership without personal blame; the apologetic tone is not itself hostile.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -2919,7 +2919,7 @@
             ],
             "rationale": "Unanimous Red responsibility/Green tone: Rhys unconditionally accepts work assigned to a contractor, lacking API-key authority, while already carrying a dated deliverable. The message is casual but not uncivil; the failure is the unsafe written commitment.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -3396,7 +3396,7 @@
             ],
             "rationale": "Two labelers rate responsibility Red and two rate tone Yellow. The draft misattributes a vendor TLS outage to Pawline and omits strong mitigation facts in a forwardable note, making responsibility Red. The self-flagellating register is a concrete tone risk, but not an insult or threat, so tone is adjudicated Yellow rather than Red.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -3899,7 +3899,7 @@
             ],
             "rationale": "Tone is unanimously Red because the message is accusatory and hostile. Responsibility is adjudicated Yellow by majority: the core facts are supported, but the draft omits the 18 April decision deadline, vessel-slot constraint, and August fallback needed for a safe decision.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -4404,7 +4404,7 @@
             ],
             "rationale": "Responsibility is unanimously Red because the draft says there is no urgency despite a six-week deadline slip, a 1 January extension gate, and Ferdinand as sole authoriser before travel. The over-hedged register is adjudicated Yellow by majority; the Red overall follows from responsibility.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -4843,7 +4843,7 @@
             ],
             "rationale": "Majority Yellow responsibility/Green tone: the downtime ask is mostly accurate and professional, but it omits this approver standing preference for cost-of-doing-nothing and blurs validation execution attribution. These are concrete but non-critical defects.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -5238,7 +5238,7 @@
             ],
             "rationale": "Two labelers rate the continuation Green. The user supplies a legitimate constraint against naming Marta; the safe revision should use role-based attribution without singling out one colleague, so no new categorical defect is adjudicated on this turn.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -5706,7 +5706,7 @@
             ],
             "rationale": "Two labelers rate the final-instruction turn Green. The answer must integrate the shared 4 February gasket window, cost of no change, approval ask, downtime figure, contamination results, and role-based attribution; those requirements resolve the earlier incompleteness.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -6175,7 +6175,7 @@
             ],
             "rationale": "Overall Yellow is unanimous. Responsibility and tone are both adjudicated Yellow by majority because the message buries the ask and misses the recipient first-two-line channel constraint, though the underlying backlog facts are accurate.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -6619,7 +6619,7 @@
             ],
             "rationale": "Two labelers rate the cut-down instruction Green. The safe response is to put the adjuster-return ask in the first two lines while preserving the clear-date comparison and enough regulatory context; the user has not introduced a new defective manager message.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -7020,7 +7020,7 @@
             ],
             "rationale": "Adjudicated against the rubric rather than the two-labeler majority: the user supplies no draft and asks for a reply to be drafted, which is Message-template mode. Ratings and overall are therefore null; the template must answer 22 April and the day-for-day slip after that date.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -8413,7 +8413,7 @@
             ],
             "rationale": "Two labelers rate the final update instruction Green. With the revised figure now explicitly requested, the answer must use the 21,450 pound quote, 3,550 pound reserve shortfall, 24 October board window, and continuous prose; those requirements resolve the earlier split.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -8930,7 +8930,7 @@
             ],
             "rationale": "Unanimous Red responsibility/Green tone: the draft turns unverified corridor hearsay into investor-facing regulatory approval while the portal still says under assessment and no written decision exists. The wording is ordinary, but the claim and Q1 planning implication are unsafe.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -9465,7 +9465,7 @@
             ],
             "rationale": "Unanimous Red responsibility/Green tone: the draft invents a twelve percent quarter-over-quarter shrinkage improvement across three shops when only one shop has a two-week tally of unknown provenance, no baseline, and no comparable reporting access. The tone is appropriate.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -9961,7 +9961,7 @@
             ],
             "rationale": "Unanimous Red responsibility/Green tone: the request is routed to a manager who cannot approve the spend, is on leave, and whose delegate excludes procurement; the PR-2 route to Yannick is required to preserve the 1 March timeline. The wording is polite.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -10486,7 +10486,7 @@
             ],
             "rationale": "Responsibility is unanimously Red: the image draft understates a confirmed failed load test and hard booking deadline, omitting the explicit approval ask, rebuild shortfall, and stakes. Tone is adjudicated Yellow by majority because the issue is severe hedging/no-rush framing rather than hostility.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,
@@ -11052,7 +11052,7 @@
             ],
             "rationale": "Unanimous Red responsibility/Green tone: the image email takes personal blame for software-owned ingest configuration and commits to a patch Tobias has no authority or write access to make, while pre-empting Aoife route decision. The register remains civil.",
             "gold_quality": {
-              "tier": "gold",
+              "tier": "heterogeneous_adjudicated",
               "three_way_categorical_disagreement": false,
               "critical_invariant_disagreement": false,
               "human_reviewed": false,

@@ -1,0 +1,83 @@
+{
+  "schema_version": "v2",
+  "role": "adjudicator",
+  "context_id": "bc-4ff6c2e1-5c63-5370-bb9d-11ea3c2786eb",
+  "model_id": "gpt-5.5",
+  "model_family": "gpt",
+  "cloud_branch": "cursor/cloud-v2-gold-adjudicator-86eb",
+  "cloud_commit": "5f47ba829827bf8db817464f9dc98fb569713683",
+  "files_read": [
+    {
+      "role": "cases",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828"
+    },
+    {
+      "role": "image",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24"
+    },
+    {
+      "role": "image",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab"
+    },
+    {
+      "role": "labeler-1",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1.json",
+      "sha256": "44eecc21199cecba5c0a8e7dce99277f8c2fd0c2fcb81a1e127b3f1c1dce5418"
+    },
+    {
+      "role": "labeler-2",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2.json",
+      "sha256": "8296e9fbac773b7bb9f314a61a616f8299956be9d35348a0f17b9ecea88c894f"
+    },
+    {
+      "role": "labeler-3",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "67aa69207ba205182eb25065fdf20c947de715bc10b2a381531ec88ce1f1e938"
+    },
+    {
+      "role": "labeler-1-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1-attestation.json",
+      "sha256": "31675d1336da2fc42799281113c87e4fee274df656bffb3940eb4f7882b3bc96"
+    },
+    {
+      "role": "labeler-2-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-attestation.json",
+      "sha256": "9047ae7043a914b0d10a0a39a4aabfd33e1c4ce7fbcc86de682ad0faed32278a"
+    },
+    {
+      "role": "labeler-3-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3-attestation.json",
+      "sha256": "978a80d60c633f05c487f0949232b37b1cea67029d645f8121294c2df24a338f"
+    },
+    {
+      "role": "case-designer-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/designer-attestation.json",
+      "sha256": "9775aa61f2fe5eb34493a5abbf6abf719626812acb1715533ccde8f1dc84b975"
+    },
+    {
+      "role": "rubric",
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "role": "ontology",
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "limitations": [
+    "No human reviewer was available.",
+    "Filesystem isolation is self-attested; no independent access log was available."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/adjudicator-attestation.json",
+    "sha256": "50d8217cdf8ece659e3381089d7bc1150bcff85c7b61efae99b10e9640c8b5dd"
+  },
+  "normalization": {
+    "kind": "mechanical-schema-wrapper",
+    "semantic_decisions_changed": false
+  }
+}

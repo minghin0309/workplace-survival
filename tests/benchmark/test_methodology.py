@@ -546,6 +546,85 @@ class BenchmarkMethodologyTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validate_benchmark.validate_gold(gold)
 
+    def test_adjudication_requires_sha256_and_exact_gold_linkage(self):
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory)
+            source = directory / "source.json"
+            source.write_text('{"source": true}\n')
+            attestation = directory / "adjudicator.json"
+            attestation.write_text('{"attestation": true}\n')
+            import hashlib
+
+            source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+            attestation_hash = hashlib.sha256(attestation.read_bytes()).hexdigest()
+            turn = {
+                "turn_index": 1,
+                "route": "Normal mode",
+                "ratings": {"responsibility": "Green", "tone": "Green"},
+                "overall": "Green",
+                "required_question_concepts": [],
+                "allowed_question_concepts": [],
+                "required_revision_concepts": ["no-revision"],
+                "allowed_revision_concepts": ["no-revision"],
+                "concept_definitions": {},
+                "critical_invariants": ["no-invented-facts"],
+                "rationale": "Supported.",
+                "gold_quality": {
+                    "tier": "heterogeneous_adjudicated",
+                    "three_way_categorical_disagreement": False,
+                    "critical_invariant_disagreement": False,
+                    "human_reviewed": False,
+                    "unresolved_adjudication": False,
+                },
+            }
+            gold = {
+                "case_set_id": "test-set",
+                "cases": [{"case_id": "B2-001", "turn_labels": [turn]}],
+            }
+            adjudication = {
+                "schema_version": "v2",
+                "artifact": "gold-adjudication",
+                "case_set_id": "test-set",
+                "gold_output_path": "gold.json",
+                "adjudicator_attestation": {
+                    "path": str(attestation),
+                    "sha256": attestation_hash,
+                },
+                "source_hashes": {str(source): source_hash},
+                "adjudication_policy": ["Preserve votes."],
+                "summary": {
+                    "turns": 1,
+                    "uncertain_turn_count": 0,
+                    "uncertain_fraction": 0.0,
+                },
+                "cases": [
+                    {
+                        "case_id": "B2-001",
+                        "turn_adjudications": [
+                            {
+                                "turn_index": 1,
+                                "labeler_votes": {
+                                    "gold-labeler-1": {},
+                                    "gold-labeler-2": {},
+                                    "gold-labeler-3": {},
+                                },
+                                "categorical_vote_distribution": {
+                                    field: {"Green": 3}
+                                    for field in ("route", "responsibility", "tone", "overall")
+                                },
+                                "adjudicated_turn": turn,
+                            }
+                        ],
+                    }
+                ],
+            }
+            validate_benchmark.validate_adjudication(adjudication, gold)
+            adjudication["adjudicator_attestation"]["hash"] = adjudication[
+                "adjudicator_attestation"
+            ].pop("sha256")
+            with self.assertRaisesRegex(ValueError, "adjudicator attestation schema"):
+                validate_benchmark.validate_adjudication(adjudication, gold)
+
 
 if __name__ == "__main__":
     unittest.main()

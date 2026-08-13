@@ -22,6 +22,7 @@ STAGE_ROLES = {
         "labeler-1-attestation",
         "labeler-2-attestation",
         "labeler-3-attestation",
+        "designer-attestation",
         "adjudicator-attestation",
     },
     "outputs": {"outputs", "generator-attestation"},
