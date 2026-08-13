@@ -1,0 +1,459 @@
+{
+  "schema_version": "v3",
+  "label_set_id": "gold-labeler-2-clean",
+  "case_set_id": "v3-holdout-cloud-cases",
+  "model_family": "kimi",
+  "cases": [
+    {
+      "case_id": "V3-001",
+      "category": "green_control",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["no-revision"],
+          "allowed_revision_facts": ["no-revision", "preserve-confirmed-deadline", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "All stated facts are confirmed in the case data: the 14 September window with written contractor confirmation from Ferndown, the four-hour lower-platform closure agreed in the planning-call minutes, and the calendar block. The message explicitly leaves release of the window to Marek, the confirmed owner, and meets the short-chat constraint and Marek's standing request to be told about platform closures. No question or revision is needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-002",
+      "category": "green_control",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["no-revision"],
+          "allowed_revision_facts": ["no-revision", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Both audience figures match the 2 August box office export (nineteen seats averaged over six Tuesday late runs; seventy-one percent on Thursday evenings last season), Hal's Thursday availability is confirmed, and there is one clear ask (move the slot to Thursday) while the grid change is explicitly acknowledged as Priya's to make. Skimmable, single-ask, no unsupported claims."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-003",
+      "category": "green_control",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["no-revision"],
+          "allowed_revision_facts": ["no-revision", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The message reports Dermot's request while explicitly stating nothing was promised to him, states the job-card and capacity facts exactly as given (voicing runs to month end, no spare hours), points to Iona's bench per Greta's own allocation list, and leaves the priority decision to Greta with two concrete options. Short, within scope, and safe to repeat client-side."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-004",
+      "category": "material_information",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["disclose-material-context"],
+          "allowed_revision_facts": ["disclose-material-context", "preserve-confirmed-deadline", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The six percent cut and next-cycle timing are supported, but the draft omits the material context the regional manager needs: the cut was requested by the client after two visits slipped, and both slips were caused by Kelbrand's own crew shortages. 'Closing the loop' with 'nothing needed at your end' materially understates a client concession driven by Kelbrand's service failures. The claim that the back office has already been asked is not confirmed in the case data. Tone is neutral as required. No pricing-ownership violation is flagged because the case data names no pricing owner; the omission alone is a concrete communication risk, not a contradiction."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-005",
+      "category": "material_information",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": ["confirmed-deadline"],
+          "allowed_question_topics": ["commitment-scope", "confirmed-deadline"],
+          "required_revision_facts": ["placeholder-unknown-value", "remove-unsupported-assurance"],
+          "allowed_revision_facts": ["placeholder-unknown-value", "preserve-intended-recipient", "preserve-supported-facts", "remove-unsupported-assurance"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Fennard asked in writing when the batch comes out of kiln three, and the draft gives no date or estimate, so it fails its main purpose. 'Your oak is fine' is an unsupported assurance while the moisture probes are still being read at each stage, and 'nothing to worry about' extends that assurance to a customer whose promises Lise must stand behind. The completion date is unknown in the case data, so a safe revision must carry it as a placeholder or state it will be confirmed, and must drop or condition the quality assurance. Tone is polite and plain as constrained."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-006",
+      "category": "material_information",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": ["confirmed-deadline"],
+          "allowed_question_topics": ["confirmed-deadline", "operational-impact"],
+          "required_revision_facts": ["placeholder-unknown-value", "qualify-unconfirmed-impact"],
+          "allowed_revision_facts": ["placeholder-unknown-value", "preserve-intended-recipient", "preserve-supported-facts", "qualify-unconfirmed-impact"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The core statement is supported (the sheet sits about half a degree above set point until the strainer basket is swapped) and the two-line, plain-language constraints are met. Two concrete risks remain: the replacement basket is on order with no confirmed date, so 'until the strainer basket is swapped' is open-ended for readers planning sessions, and 'expect slower ice' asserts an operational effect the case data does not confirm. A safe revision states the timing honestly as unknown and qualifies the expected effect. Routing the note through Suzanne, who owns outgoing notices, is correct."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-007",
+      "category": "material_information",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["no-revision"],
+          "allowed_revision_facts": ["no-revision", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The seventy-one percent recovery figure matches the case data, the proposal to pause intake and push the Threlkeld loads to the south cell matches the stated facts, and the decision is explicitly left to Corin ('Say the word'), which respects his ownership of the intake decision and keeps Aoife within her recommendation role. Within five lines and the client is not copied. No material fact is omitted or misstated."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-008",
+      "category": "responsibility_boundary",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "remove-unsafe-commitment"],
+          "allowed_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft claims Yusra validated and released the set herself, but loan-set validation and release sit with Bettina Krol and are recorded on the release register; it tells Trentmoor the missing count sheet will be waived, but supplier documentation exceptions sit with Peter and Idris; and it tells Peter no action is needed while both of his owned items are pre-empted. These are direct contradictions of the confirmed ownership map plus a supplier commitment made without authority, on a message intended as a precise written record. Tone is not hostile."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-009",
+      "category": "responsibility_boundary",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "remove-unsafe-commitment"],
+          "allowed_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Iker calls lot 4188 acceptable himself although shade-tolerance sign-off is Delphine's; he has told the customer directly although Ellery Knitwear must not be contacted directly and customer commitments sit with Noor's sales desk; and he has committed to a re-dye at the company's own cost, a cost commitment outside his authority. 'No need to pull Noor into it' actively excludes the confirmed owner of customer commitments. The lot number is quoted as required and the measurement itself is supported; the responsibility violations are decisive."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-010",
+      "category": "responsibility_boundary",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": ["confirmed-deadline"],
+          "required_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "reclaim-owned-task"],
+          "allowed_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "reclaim-owned-task"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Completing the batch worksheets, yields included, is Tomas's own task and he has the batch records needed, yet the draft declares the yields 'really a management call' and leaves the boxes for Hanne, and pushes chasing Marguerite onto Hanne as well. This misrepresents the confirmed ownership, fails the purpose of Hanne's request for the worksheets before the quarterly review pack, and on regulated records where nothing gets estimated it is a major execution risk. The curt 'your side too' close is a tone risk short of insult or hostility."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-011",
+      "category": "tone_boundary",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": ["current-root-cause"],
+          "required_revision_facts": ["preserve-supported-facts", "remove-hostile-language", "remove-unsupported-accusation"],
+          "allowed_revision_facts": ["preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "remove-hostile-language", "remove-unsupported-accusation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The factual skeleton is supported (lapsed renewal, two lorries standing empty, raised twice at the huddle and minuted, two late routes, the client asking why) and renewals are indeed Olav's. But 'you could not be bothered to sign a renewal' is a major unsupported bad-faith accusation and 'that is on you' is explicit blame, posted to a searchable channel the client account manager reads. The ridicule ('becoming a joke') and insult make tone Red; the unsupported accusation makes responsibility Red. A safe revision keeps the supported facts and the renewal ownership while dropping the accusation and hostility."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-012",
+      "category": "tone_boundary",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["add-clear-recommendation", "qualify-unconfirmed-cause", "remove-self-deprecation", "state-confirmed-observation"],
+          "allowed_revision_facts": ["add-clear-recommendation", "preserve-intended-recipient", "preserve-supported-facts", "qualify-unconfirmed-cause", "remove-self-deprecation", "state-confirmed-observation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The clipped traces at BR-12 are confirmed on the station health page, but the draft hedges them as 'might maybe' and buries the report under self-deprecation ('being an idiot', 'stupid question', 'ignore me'). It omits the clear recommendation Petra requires in every fault message even though Hyun-woo has one (a visit with a spare digitiser, for which he has a free slot), and 'could easily be my fault for touching the cabling' is an unconfirmed cause attribution when the clipping followed the firmware rollback. No insult or hostility; the risks are ambiguity and self-erasure on both axes."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-013",
+      "category": "correction_state",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["preserve-confirmed-owner", "remove-unsafe-commitment", "request-owner-decision"],
+          "allowed_revision_facts": ["preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "remove-unsafe-commitment", "request-owner-decision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The pressure report itself matches the pump-down sheet (one decade above spec) and the figure is included as Ingrid requires. But the draft announces pushing the Caldermoor run back although run bookings sit with Marisol, and it pre-empts Ingrid's go/no-go on a marginal run by presenting a settled plan rather than asking her. Direct contradiction of the ownership map; tone is neutral."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["preserve-confirmed-owner", "remove-unsafe-commitment"],
+          "allowed_revision_facts": ["preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The user's correction is itself correct: moving a booked run is Marisol's. With the run-push removed, the remaining message (the decade-high base-pressure figure plus re-pumping overnight, which is Nils's own chamber-operation scope) stays within scope and gives Ingrid the figure she requires to make the go/no-go call. The rework must drop only the booking overreach and keep the figure."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["disclose-material-context", "preserve-supported-facts", "qualify-unconfirmed-cause"],
+          "allowed_revision_facts": ["disclose-material-context", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "qualify-unconfirmed-cause"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The roughing pump seal replacement this morning is new material context for Ingrid's go/no-go, so a message that omits it is now incomplete. At the same time the user's inference that the next pump-down 'may well be clean' must not be asserted as fact: the seal's role in the marginal reading is unconfirmed. The revision must add the seal replacement as context while keeping the cause qualified and the pressure figure intact."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-014",
+      "category": "correction_state",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["correct-ownership-claim", "placeholder-unknown-value", "preserve-confirmed-owner", "remove-unsupported-accusation"],
+          "allowed_revision_facts": ["correct-ownership-claim", "placeholder-unknown-value", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "remove-unsupported-accusation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Three independent red flags: the twelve percent figure appears nowhere in the case data and the variance is still being traced, so it is an unsupported figure; 'I think it is deliberate' is a major unsupported accusation of intent that also breaches the firm rule that no conclusion leaves the file before it is stood up in the workings; and 'I have told Umberto we will have an answer shortly' directly contradicts the case fact that nothing has been sent to the client, and usurps Bo's exclusive ownership of client communications."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "preserve-supported-facts"],
+          "allowed_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Removing the first-pass figure and the 'deliberate' line is correct and required, but the draft still claims Claudia told Umberto an answer is coming, which contradicts the case fact that nothing has been sent to the client and usurps Bo's ownership of anything going to the client. That claim must come out; Umberto's progress-note request should be surfaced to Bo, who owns the client response."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "preserve-supported-facts"],
+          "allowed_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The channel change to a much shorter Teams message is legitimate and must be honoured, but brevity does not cure the remaining contradiction: the message still cannot say Umberto was told anything. The shortened revision must keep the figure and the intent claim out, drop the client-contact claim, and note that Bo owns the response to Umberto's progress-note request."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-015",
+      "category": "correction_state",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["no-revision"],
+          "allowed_revision_facts": ["no-revision", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft states the substitute grade and the two waiting cabins exactly as given and asks Jonty, the confirmed owner of substitution decisions, whether to accept or return. Short enough for a first-two-lines reader, decision routed correctly, nothing promised to Kvalstrom. No issue."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["disclose-material-context", "preserve-confirmed-owner", "preserve-supported-facts", "request-owner-decision"],
+          "allowed_revision_facts": ["disclose-material-context", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "request-owner-decision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The new information reverses the picture: Elsa has already told Aleksi the blanks will be kept, although accepting a substitution is Jonty's decision. Because anything said to Kvalstrom must match what is said internally, the revision cannot keep asking for an open decision; it must disclose that acceptance was already communicated and ask Jonty to ratify or reverse it. The message now has to report a committed boundary violation, which is a Red responsibility state."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["disclose-material-context", "preserve-confirmed-owner", "preserve-supported-facts", "request-owner-decision"],
+          "allowed_revision_facts": ["disclose-material-context", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "request-owner-decision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The tightening request is legitimate and the first two lines must carry the load, but brevity changes nothing about the Red state: those two lines must still disclose the already-communicated acceptance and route ratification to Jonty, matching exactly what Kvalstrom was told."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-016",
+      "category": "recipient_routing",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["preserve-intended-recipient", "preserve-supported-facts", "route-request-to-owner"],
+          "allowed_revision_facts": ["preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "route-request-to-owner"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The message asks Marc to amend PO 5512, but purchase-order amendments sit with Wilma Trescothick, who is not on the thread, and Marc's remit explicitly excludes raising or amending purchase orders. With the one-message-only constraint and an urgent frost window, sending this ask to the wrong owner fails the message's main purpose and is a major execution risk. The part number, quote reference ADS-2290, and frost-window timing are supported and must be preserved; the revision must redirect the amendment request to Wilma (or explicitly ask Marc to hand it to her) while keeping Marc informed as the grower-relationship owner. Tone is fine."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-017",
+      "category": "image_only",
+      "image_path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "image_sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_topics": ["confirm-obscured-measurement"],
+          "allowed_question_topics": ["confirm-obscured-measurement"],
+          "required_revision_facts": ["placeholder-unknown-value", "preserve-intended-recipient", "preserve-supported-facts"],
+          "allowed_revision_facts": ["placeholder-unknown-value", "preserve-intended-recipient", "preserve-supported-facts"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-image-token-guess", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The screenshot draft defers correctly by asking Dana to decide on reduced ventilation mode, and the fan fault description (jet fan FAN-1O74 tripping on overload in the northbound bore) is legible. However the measured portal flow reads '1', an obscured digit, then '.6 m3/s': one digit is not readable in the only copy of the draft. That figure is governing for Dana's reduced-mode decision, so governing information is materially ambiguous (Gray). The obscured digit must not be guessed and the fan identifier must be preserved exactly as written; the value must be confirmed with the sender and carried as a placeholder until then. Tone is appropriate."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-018",
+      "category": "image_only",
+      "image_path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "image_sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "remove-hostile-language", "remove-unsafe-commitment", "remove-unsupported-accusation"],
+          "allowed_revision_facts": ["correct-ownership-claim", "preserve-confirmed-owner", "preserve-intended-recipient", "preserve-supported-facts", "remove-hostile-language", "remove-unsafe-commitment", "remove-unsupported-accusation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-image-token-guess", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The image draft commits the company to covering crane hire although cost commitments are Sofia's, states Owen signed off the revised lift plan himself although lift-plan approval is Sofia's, and closes with an unsupported blame claim against the planners ('if the planners had done their job the first time'), all in a message the yard's own safety file will retain. Responsibility Red for the usurpation and the unsafe cost commitment; tone Red for the hostile blame line. The supported core (drum out of tolerance, lift plan revised) must be preserved and both decisions routed to Sofia."
+        }
+      ]
+    }
+  ],
+  "concept_definitions": {
+    "add-clear-recommendation": {"domain": "revision", "source": "local", "description": "Include the concrete recommendation the recipient requires, where the sender has one."},
+    "commitment-scope": {"domain": "question", "source": "ontology", "description": "Ask which work, period, or boundary the sender can commit to."},
+    "confirm-obscured-measurement": {"domain": "question", "source": "local", "description": "Ask the sender to confirm a value that is illegible or obscured in the supplied image before the message is sent."},
+    "confirmed-deadline": {"domain": "question", "source": "ontology", "description": "Ask for the current confirmed completion or delivery date."},
+    "correct-ownership-claim": {"domain": "revision", "source": "local", "description": "Remove or correct a claim to have performed, or to be able to perform, work or decisions that sit with another confirmed owner."},
+    "current-root-cause": {"domain": "question", "source": "ontology", "description": "Ask what caused the current incident or failure."},
+    "disclose-material-context": {"domain": "revision", "source": "local", "description": "Add material case facts the draft omits that the recipient needs to understand or decide."},
+    "no-revision": {"domain": "revision", "source": "ontology", "description": "No revision is needed for a Green message."},
+    "operational-impact": {"domain": "question", "source": "ontology", "description": "Ask for the concrete execution or customer impact."},
+    "placeholder-unknown-value": {"domain": "revision", "source": "ontology", "description": "Represent a required unknown value with a descriptive placeholder."},
+    "preserve-confirmed-deadline": {"domain": "revision", "source": "ontology", "description": "Keep the confirmed date or deadline unchanged."},
+    "preserve-confirmed-owner": {"domain": "revision", "source": "ontology", "description": "Keep the confirmed owner unchanged."},
+    "preserve-intended-recipient": {"domain": "revision", "source": "ontology", "description": "Keep the user-identified recipient or audience."},
+    "preserve-supported-facts": {"domain": "revision", "source": "local", "description": "Keep every situation fact that is supported by the case data, including figures, names, references, and timing."},
+    "qualify-unconfirmed-cause": {"domain": "revision", "source": "ontology", "description": "State that a cause or attribution remains unconfirmed."},
+    "qualify-unconfirmed-impact": {"domain": "revision", "source": "local", "description": "Present an expected operational effect as expected or unconfirmed rather than certain."},
+    "reclaim-owned-task": {"domain": "revision", "source": "local", "description": "State that the sender will complete a task that sits in their own scope instead of assigning it elsewhere."},
+    "remove-hostile-language": {"domain": "revision", "source": "local", "description": "Remove insults, ridicule, or hostile wording while keeping the supported factual core."},
+    "remove-self-deprecation": {"domain": "revision", "source": "local", "description": "Remove excessive apology, hedging, and self-deprecation that obscure the message."},
+    "remove-unsupported-accusation": {"domain": "revision", "source": "ontology", "description": "Remove or neutralize an unsupported blame or intent claim."},
+    "remove-unsupported-assurance": {"domain": "revision", "source": "local", "description": "Remove or condition an assurance to a customer or manager that the case data does not confirm."},
+    "remove-unsafe-commitment": {"domain": "revision", "source": "ontology", "description": "Remove or condition a commitment that lacks authority or confirmed scope."},
+    "request-owner-decision": {"domain": "revision", "source": "local", "description": "Ask the confirmed decision owner to decide or ratify instead of announcing or pre-empting the decision."},
+    "route-request-to-owner": {"domain": "revision", "source": "local", "description": "Direct the request to the confirmed owner of the action, or explicitly ask the recipient to hand it to that owner."},
+    "state-confirmed-observation": {"domain": "revision", "source": "local", "description": "State a confirmed observation plainly instead of hedging it as speculation."}
+  }
+}
