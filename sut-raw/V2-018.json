@@ -1,0 +1,23 @@
+{
+  "case_id": "V2-018",
+  "timestamp_utc": "2026-08-13T10:39:28Z",
+  "provenance": {
+    "sut": "Workplace Survival",
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "input": {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-018.json",
+      "sha256": "9c14268f8681d6600b35c4590099ea7c5fddc1e9cd322d63a2eb124a59e83351"
+    },
+    "image": {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab"
+    },
+    "runtime": {
+      ".cursor/skills/workplace-survival/SKILL.md": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66",
+      ".cursor/skills/workplace-survival/REFERENCE.md": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56",
+      ".cursor/skills/workplace-survival/FORMATS.md": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198",
+      ".cursor/skills/workplace-survival/EXAMPLES.md": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  },
+  "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Tobias is responsible for post-processing quality control and detected the 40 cm offset in lines 12–19 during routine crossline QC on 12 August.\n- The offset was caused by a UTC/British Summer Time tide-gauge timestamp mismatch introduced at ingest.\n- Runa Halvorsen's software team owns the ingest configuration. Tobias has read access but no write access or authority to change it.\n- Aoife decides whether the affected lines are reprocessed in-house or the job is returned to the software team. She is also the sole client interface.\n- Reprocessing the eight affected lines takes six hours of compute after the configuration is corrected; the deliverable is due 21 August.\n- Recognized Data B:\n\n  > Subject: Kilbrannan offset - my mistake\n  >\n  > Aoife, the 40 cm offset in lines 12-19 is down to me. I have taken\n  > ownership of the ingest config and I will patch the timestamp\n  > handling myself tonight, then reprocess. Should be clear well\n  > before the 21st. Sorry for the mess.\n  >\n  > Tobias\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says the offset \"is down to me,\" claims ownership of the ingest configuration, and commits to patching it personally tonight and then reprocessing. Data A establishes that the software team owns that configuration, Tobias lacks write access and authority to change it, and Aoife must decide the reprocessing route.\n- Communication risk: The message assigns the defect and configuration ownership to the wrong person, promises an unauthorized change, and bypasses Aoife's route decision; this could lead Aoife to rely on an action Tobias cannot perform.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is direct and apologetic, with no insult, threat, hostility, accusation, dismissiveness, or responsibility shifting toward the recipient.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSubject: Kilbrannan offset - ingest configuration issue\n\nAoife, I found the 40 cm offset in lines 12-19 during routine crossline QC. It is caused by a UTC/BST tide-gauge timestamp mismatch introduced at ingest. Runa's software team owns the ingest configuration, and I don't have write access to patch it. Once the configuration is corrected, reprocessing the eight affected lines will take six hours of compute. Please decide whether the affected lines should be reprocessed in-house or the job returned to the software team. The deliverable is due on the 21st.\n\nTobias"
+}
