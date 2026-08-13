@@ -1,0 +1,56 @@
+{
+  "labeler": "gold-labeler-3",
+  "file_kind": "clean_attestation",
+  "envelope_version": "v3.1",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "work_branch": "cursor/gold-labeler-3-v31-5898",
+  "artifacts": [
+    "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-3-clean.json",
+    "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-3-clean.attestation.json"
+  ],
+  "declared_repository_relative_source_reads": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/cases.json",
+      "sha256": "5bb06cb933b56f228a4af42336361c9bd4feed49157d389b1d9bbb1a16e1128a"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+      "sha256": "50b52b2b00f4b91107620fa0e365d63a920d9972326365c362d1754cc236d55c"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png",
+      "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "image_opening": {
+    "opened_directly": [
+      "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+      "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png"
+    ]
+  },
+  "extra_repository_relative_source_reads": [],
+  "extra_path_access_flag": "No additional repository-relative source content reads were made beyond the five declared source paths. Output artifact writes, git metadata operations, and staging/committing/pushing the two artifact paths were performed.",
+  "disallowed_lookup_attestation": {
+    "listing": false,
+    "search": false,
+    "glob": false,
+    "mcp": false,
+    "skill": false,
+    "external_or_pr_lookup": false,
+    "tests_or_oracle_tools": false,
+    "other_label_or_history_reads": false
+  },
+  "notes": [
+    "A first attempt to write the label artifact invoked python and failed because python was not installed; it did not create or read repository-relative content.",
+    "The label artifact was then written with python3 from inline data and committed before this attestation was written."
+  ]
+}
