@@ -4,6 +4,25 @@ Create a fresh synthetic holdout with 18 cases (`V31-001` through `V31-018`) and
 
 The case designer may read only this brief. Runtime, gold, rubrics, ontology, scorers, tests, prior cases, archive artifacts, and external sources are prohibited.
 
+## Aggregate novelty denylist
+
+Do not use or closely rename any of these prior benchmark domains:
+
+- cargo-bike delivery, freight depots, ceramics or pottery studios;
+- municipal water, geothermal drilling, seed banks, esports;
+- subtitling, dubbing, veterinary telehealth, insurance claims;
+- offshore wind, archive digitisation, mycelium packaging;
+- heritage trusts, lighthouses, drone operations, bakery retail;
+- ornithology, puppet or marionette theatre, hydrographic survey;
+- funicular rail, planetariums, organ restoration, solar carports;
+- timber kilns, curling ice, ground remediation, sterile services;
+- dye works, compounding pharmacies, snow clearance;
+- seismograph networks, mirror coating, forensic accounting;
+- sauna manufacturing, orchard frost systems, tunnel ventilation;
+- marine winches.
+
+Also avoid generic ceramics, pottery, kiln-production, glaze, clay, and co-operative variants, even when the organization structure differs.
+
 ## Distribution
 
 - V31-001–V31-003: Green controls;
