@@ -1,0 +1,51 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-016",
+  "timestamp": "2026-08-13T10:39:16Z",
+  "context": {
+    "sut": "Workplace Survival",
+    "execution": "V2-016 only",
+    "model": "GPT-5.6 Sol",
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "working_branch": "cursor/v2-016-workplace-sut-4cd7"
+  },
+  "output": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-016.json",
+    "commit": "e3d13c72af18049d08f38e6a92c74c04041f98af",
+    "sha256": "a0302d9b18143264f0c67d845deda63b7c7e12ea3659cca79d2425cb577255e5"
+  },
+  "reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-016.json",
+      "sha256": "443fd1aefbca38cf87d01a30308c27fbceffda16b0069ed2ee3000cf5b30b83d"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "limitations": [
+    "The SUT review used only the supplied case input and the four authorized Workplace Survival skill files.",
+    "No real-world facts were independently verified.",
+    "No benchmark expectations were read and no evaluation was performed."
+  ],
+  "isolation": {
+    "authorized_repo_content_reads_only": true,
+    "other_case_inputs_read": false,
+    "expectations_read": false,
+    "evaluation_performed": false,
+    "violations": []
+  }
+}
