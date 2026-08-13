@@ -1,0 +1,67 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-005",
+  "attested_at_utc": "2026-08-13T10:36:10Z",
+  "branch": "cursor/blind-v2-holdout-17a0",
+  "output_commit": "2285219bb17c569020b3ae14fca6e2ee01c065e8",
+  "model": {
+    "context": "GPT-5.6 Sol",
+    "requested": "GPT-5.6 Sol",
+    "machine": "GPT-5.6 Sol"
+  },
+  "files": [
+    {
+      "role": "sut_input",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-005.json",
+      "sha256": "91fd96c498860e7e67a857f26c164c132ad16327bd3dff79ef99e83f821003f0"
+    },
+    {
+      "role": "skill",
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "role": "skill_reference",
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "role": "skill_format",
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "role": "skill_examples",
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    },
+    {
+      "role": "sut_raw_output",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-005.json",
+      "sha256": "720daeb194f2c38ff49bf7914c7f5083cca425ed0f10cc55e85350ab23688a4e"
+    }
+  ],
+  "runtime_input_linkage": {
+    "input_case_id": "V2-005",
+    "input_schema_version": "v2",
+    "processed_turn_indexes": [
+      1
+    ],
+    "raw_output_case_id": "V2-005",
+    "raw_output_turn_count": 1
+  },
+  "isolation": {
+    "allowed_reads_only": true,
+    "expectations_read": false,
+    "other_cases_read": false,
+    "other_repository_content_read": false,
+    "score_produced": false,
+    "sequential_state": true,
+    "violations": []
+  },
+  "limitations": [
+    "The response was based only on the supplied V2-005 Data A, Data B, recipient context, and the four allowed Workplace Survival files.",
+    "No real-world facts or likely manager reaction were independently verified.",
+    "The case contained one turn, so no follow-up user state was available or inferred."
+  ]
+}
