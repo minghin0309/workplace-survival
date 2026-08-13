@@ -1,0 +1,202 @@
+{
+  "schema_version": "v3.1-designer-attestation",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "attempt": "v3.1 unseen holdout, attempt 2",
+  "branch": "cursor/blind-v31-holdout-attempt2-ae66",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "output_directory": "tests/benchmark/v3_1-holdout/cloud-cases/",
+  "isolation": {
+    "sources_read": [
+      "tests/benchmark/v3_1/V3_1_CASE_BRIEF.md"
+    ],
+    "sources_not_read": [
+      "attempt 1 artefacts of this holdout, including its rejection record",
+      "the holdout plan",
+      "any prior v1, v2, v3 or v3.1 case set or archive artefact",
+      "runtime or contract code",
+      "gold data, scorers, rubrics, ontology",
+      "tests",
+      "prior pull requests, issues or review history",
+      "any external source"
+    ],
+    "search_discipline": "No repository-wide read, list, search or glob was performed. Every file opened in this directory is a file this attempt authored.",
+    "incidental_path_exposure": {
+      "what": "Before writing, the designer checked whether the output directory already held tracked files, so that nothing would be silently overwritten. The check returned file names only, from the parent directory: GENERATION_ATTEMPT_1_REJECTION.md and V31_HOLDOUT_PLAN.md.",
+      "contents_read": false,
+      "effect_on_design": "None. Every name, fact, figure, date, reference, draft and image in this attempt was fixed before that check and no content of either file was opened.",
+      "clobber_result": "The cloud-cases directory did not exist on the base branch. Every file here is new; nothing was overwritten or merged with earlier output."
+    }
+  },
+  "domain": {
+    "chosen": "A fictional bespoke millinery workroom: two sites, an owner-side commercial desk, five named makers and coordinators, three client houses and three suppliers.",
+    "novelty_basis": "The domain matches no entry on the aggregate novelty denylist in the brief, and it is not a rename of one. It is not a ceramics, pottery, kiln-production, glaze or clay setting, and the organisation is a private atelier with a single commercial desk, not a member-owned structure.",
+    "near_miss_discipline": "Vocabulary that could pull the setting toward a ruled-out domain was refused outright even where the underlying subject differs, and that refusal is enforced mechanically rather than by eye. The refused terms are listed in tools/validate_holdout.py.",
+    "entities_fictional": true
+  },
+  "structure": {
+    "cases": 18,
+    "case_ids": "V31-001 through V31-018",
+    "turns": 24,
+    "single_turn_cases": 15,
+    "three_turn_cases": [
+      "V31-014",
+      "V31-015",
+      "V31-016"
+    ],
+    "distribution": {
+      "V31-001..V31-003": "controls, per the brief's first band",
+      "V31-004..V31-009": "the six question candidates",
+      "V31-010..V31-011": "responsibility boundaries",
+      "V31-012..V31-013": "tone boundaries",
+      "V31-014..V31-016": "three-turn correction and state cases",
+      "V31-017": "recipient routing",
+      "V31-018": "legible image-only responsibility and tone case"
+    },
+    "envelope_shape": "v3 shape as described in the brief: explicit recipient_context, structured data_a, ordered turns, optional image_path and image_spec. Non-image turns carry image_path null and image_spec null."
+  },
+  "question_candidate_contract": {
+    "candidates": [
+      {
+        "case_id": "V31-004",
+        "primary_concept": "approval authority"
+      },
+      {
+        "case_id": "V31-005",
+        "primary_concept": "confirmed deadline"
+      },
+      {
+        "case_id": "V31-006",
+        "primary_concept": "intended recipient"
+      },
+      {
+        "case_id": "V31-007",
+        "primary_concept": "traceable source"
+      },
+      {
+        "case_id": "V31-008",
+        "primary_concept": "material measurement"
+      },
+      {
+        "case_id": "V31-009",
+        "primary_concept": "required decision option"
+      }
+    ],
+    "six_distinct_concepts": true,
+    "per_candidate_guarantees": [
+      "exactly one primary material answer is absent from every SUT-visible field, including the pixels",
+      "an explicit recipient requirement or a decision the recipient must sign turns on that answer",
+      "the main purpose cannot be met by qualification, omission or a placeholder, and the reason is recorded per candidate",
+      "supplying the answer enables a complete, safe message",
+      "removing the dependency makes the question unnecessary",
+      "no independent direct Red contradiction, unsafe commitment, accusation, hostility, prompt injection or recipient-scope defect is present",
+      "no second unrelated unknown competes with the primary concept; every other figure, rule, date and reference the draft needs is present in the visible background",
+      "the answer is one the writer holds, so asking the question is productive"
+    ],
+    "image_only_candidate": {
+      "case_id": "V31-008",
+      "unreadable_value": "the crown circumference on the block-order docket",
+      "method": "The figure is never rendered. A deterministic ink blot occupies the value position, so no glyph exists in the file to recover.",
+      "value_absent_from_text_fields": true,
+      "background_justifies_the_value": "The same image states, legibly, that the supplier cuts each block to one exact circumference, rejects a range, will not work to a nearest-size instruction, and releases the Friday 08:00 cutting slot if the form is incomplete when they open it."
+    }
+  },
+  "mutation_obligations": {
+    "per_candidate": [
+      "REMOVE_DEPENDENCY",
+      "SUPPLY_ANSWER",
+      "ADD_DOMINANT_RED"
+    ],
+    "count": 18,
+    "location": "question-design.json, outside the SUT-visible envelope",
+    "transitions_checked_mechanically": true,
+    "transition_summary": {
+      "REMOVE_DEPENDENCY": "dependency_present true to false, question_required true to false, clean_question_candidate true to false",
+      "SUPPLY_ANSWER": "answer_absent true to false, question_required true to false, clean_question_candidate true to false",
+      "ADD_DOMINANT_RED": "direct_red_defects empty to non-empty, clean_question_candidate true to false, dependency and absence untouched"
+    },
+    "mutation_text_outside_envelope": true
+  },
+  "images": {
+    "renderer": "tools/generate_images.py",
+    "determinism_method": "Fixed layout, fixed font files, no random source, no timestamp chunk. The obliteration is pure arithmetic geometry, so it reproduces exactly.",
+    "font_files": [
+      "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+      "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+      "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
+    ],
+    "renderer_library": "Pillow 12.3.0",
+    "files": [
+      {
+        "case_id": "V31-008",
+        "path": "images/V31-008-block-order-docket.png",
+        "width": 1080,
+        "height": 730,
+        "bytes": 82602,
+        "sha256": "50b52b2b00f4b91107620fa0e365d63a920d9972326365c362d1754cc236d55c",
+        "legibility": "fully legible except the deliberately obliterated crown-circumference value"
+      },
+      {
+        "case_id": "V31-018",
+        "path": "images/V31-018-draft-note.png",
+        "width": 1080,
+        "height": 740,
+        "bytes": 75869,
+        "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa",
+        "legibility": "clearly readable throughout, no degraded region"
+      }
+    ],
+    "reproduction_command": "python3 tools/generate_images.py --check images"
+  },
+  "leakage_controls": {
+    "question_design_separation": "question-design.json is construction-only and is never given to the labelling stage or to any SUT context. It is the only file here that contains the absent answers.",
+    "checks_enforced": [
+      "each candidate's absent-answer tokens appear in no SUT-visible field, in no note and in no string rendered into the pixels",
+      "each answer fixture appears only in question-design.json",
+      "each mutation's inserted text appears nowhere in the envelope or the notes",
+      "mutated render lines appear in no shipped image",
+      "no construction predicate name, question-design key or vocabulary of judgement appears in cases.json",
+      "oracle-notes.json carries no vocabulary of judgement, adds no case fact, and its turn and image counts are cross-checked against the envelope"
+    ]
+  },
+  "validation": {
+    "command": "python3 tools/validate_holdout.py",
+    "total_checks": 540,
+    "failed": 0,
+    "coverage": [
+      "envelope schema, exact key sets, case and turn ordering, image wiring",
+      "18 cases and exactly 24 turns, with three turns on V31-014 to V31-016 and one on every other case",
+      "distribution by case id band, including the image-only candidate and the image-only V31-018",
+      "question-candidate contract, including the six distinct primary concepts named in the brief",
+      "three mutation state transitions per candidate",
+      "leakage in both directions between construction files and the envelope",
+      "aggregate novelty denylist across cases.json, oracle-notes.json, question-design.json and the rendered pixels",
+      "image determinism: two independent re-renders reproduce the committed bytes and the sha256 recorded in the envelope",
+      "attestation image hashes against the committed files"
+    ]
+  },
+  "declarations": [
+    "The designer read only tests/benchmark/v3_1/V3_1_CASE_BRIEF.md.",
+    "No name, fact, figure, date, reference, draft sentence, image or answer in this attempt was taken from attempt 1, from any earlier benchmark version, or from any external source.",
+    "Every organisation, person, client, supplier, job reference and figure is invented for this attempt.",
+    "All 18 cases and both images were authored in this attempt; nothing was carried over or adapted.",
+    "question-design.json was written for construction and validation only and must not be exposed to labelling or to a system under test."
+  ],
+  "residual_risk": [
+    {
+      "risk": "Non-reuse of attempt 1 cannot be verified mechanically from inside this attempt, because reading attempt 1 artefacts is prohibited by the protocol.",
+      "mitigation": "The suite was built in a domain the brief does not name, with invented surnames, invented supplier and client houses, an invented job-reference scheme carrying a distinctive year, and calendar dates that are internally consistent for that year. Collision with attempt 1 would therefore have to be coincidental rather than derived.",
+      "verifiable_by": "A reviewer who is permitted to read both attempts can diff them directly."
+    },
+    {
+      "risk": "The brief describes the v3 envelope shape but the shape itself could not be inspected, since prior case sets are prohibited reads.",
+      "mitigation": "The envelope implements every element the brief names explicitly, with one key set applied uniformly across all 18 cases and enforced by the validator, so a field rename by a harness is a mechanical change rather than a redesign."
+    },
+    {
+      "risk": "Image reproduction depends on the DejaVu font files and the Pillow version recorded above.",
+      "mitigation": "Both are recorded here, and tools/generate_images.py fails loudly rather than substituting a font if a file is absent."
+    }
+  ],
+  "protocol_violations_found": [],
+  "novelty_violations_found": []
+}
