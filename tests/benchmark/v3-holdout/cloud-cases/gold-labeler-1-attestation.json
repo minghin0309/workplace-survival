@@ -1,0 +1,109 @@
+{
+  "schema_version": "v3",
+  "labeler": "gold-labeler-1",
+  "model_family": "grok",
+  "context": "unverified",
+  "model": "unverified",
+  "branch": "cursor/blind-v3-holdout-gold-labeler-1-696c",
+  "base_branch": "cursor/blind-v3-holdout-17a0",
+  "base_commit": "e7151d866bc9a92dd879139bbaa9df40e78b88a7",
+  "output_commit": "afd564476f434cafb20a99799ff1b5dc877e512b",
+  "output_path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-1.json",
+  "output_hash": {
+    "algorithm": "sha256",
+    "value": "126e9ed20cfd39cf67f535617b022ea291e098385a7869e21eef17604ee51663"
+  },
+  "exact_five_reads": [
+    {
+      "requested_path": "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+      "opened_path": "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+      "sha256": "b453ec8a2ff60c16b9f2f1fcb7c163db81ed93687a621a28f801e8b774183946"
+    },
+    {
+      "requested_path": "images/V3-017.png",
+      "opened_path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d",
+      "workspace_root_images_path_status": "not_found"
+    },
+    {
+      "requested_path": "images/V3-018.png",
+      "opened_path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40",
+      "workspace_root_images_path_status": "not_found"
+    },
+    {
+      "requested_path": "tests/blind/GOLD_RUBRIC.md",
+      "opened_path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "requested_path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "opened_path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "images_opened": [
+    {
+      "case_id": "V3-017",
+      "requested_path": "images/V3-017.png",
+      "opened_path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "opened_directly": true,
+      "sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d",
+      "visible_text_used_for_label": "Rivet chat unsent draft to Dana Miyashiro; FAN-1O74 northbound bore tripping on overload; portal flow written as 1[block].6 m3/s; ask to put bore into reduced mode until fan is pulled and checked",
+      "unguessed_tokens": ["digit or character under the block between 1 and .6 in the portal flow reading"]
+    },
+    {
+      "case_id": "V3-018",
+      "requested_path": "images/V3-018.png",
+      "opened_path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "opened_directly": true,
+      "sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40",
+      "visible_text_used_for_label": "Mail unsent draft to Sofia Lindenberg; Kestrel Yard winch drum out of tolerance; lift plan changed; already told yard they will cover crane hire; signed off revised lift plan; blamed planners",
+      "unguessed_tokens": []
+    }
+  ],
+  "validation": {
+    "case_count": 18,
+    "turn_count": 24,
+    "enums_ok": true,
+    "overall_derivation_ok": true,
+    "max_required_questions_per_turn": 1,
+    "required_questions_cap": 3,
+    "required_subset_allowed_ok": true,
+    "concept_arrays_sorted_unique_ok": true,
+    "ontology_domains_ok": true,
+    "image_reads_ok": true,
+    "image_cases_include_no-image-token-guess": true
+  },
+  "limitations": [
+    "Context and model are unverified; no run-info, MCP, or external identity lookup was used.",
+    "PNG pixels were opened via the direct file reader, which returned a mediated image description rather than raw pixel inspection.",
+    "The V3-017 flow figure is only partly visible (block between 1 and .6); that character was not guessed.",
+    "Workspace-root images/V3-017.png and images/V3-018.png were not present; images were opened at the image_path values inside the allowed cases.json.",
+    "Labels are independent judgments from the five allowed sources plus the resolved image bytes; no other gold, scorer, oracle, methodology, or designer material was used."
+  ],
+  "isolation": {
+    "no_listing_search_glob": true,
+    "no_runtime_skill_spec_tests_plan_methodology_scorer_oracle": true,
+    "no_designer_attestation": true,
+    "no_other_labels_gold_outputs_history": true,
+    "no_pr_or_external": true,
+    "git_operations": [
+      "fetch origin cursor/blind-v3-holdout-17a0",
+      "checkout -B cursor/blind-v3-holdout-gold-labeler-1-696c",
+      "rev-parse / commit / push of this labeler branch only"
+    ],
+    "post_label_validation_reads": [
+      "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-1.json",
+      "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+      "tests/benchmark/SEMANTIC_ONTOLOGY.json"
+    ],
+    "protocol_violations": [
+      {
+        "flag": true,
+        "kind": "path_other_than_literal_requested_image_path",
+        "detail": "Requested reads were images/V3-017.png and images/V3-018.png. Direct open of those workspace-root paths failed (not found). Both PNGs were then opened at tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png and tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png, taken from image_path on V3-017 and V3-018 in the already-allowed cases.json. No directory listing, search, or glob was used. This is a protocol deviation from the literal five-path list and is flagged."
+      }
+    ]
+  }
+}
