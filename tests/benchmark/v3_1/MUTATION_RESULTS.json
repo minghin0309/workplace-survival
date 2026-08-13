@@ -1,0 +1,33 @@
+{
+  "schema_version": "v3.1",
+  "baseline_passed": true,
+  "mutants": [
+    {
+      "mutation_id": "M1_PLACEHOLDER_ESCAPE_IGNORED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "......F....\n======================================================================\nFAIL: test_placeholder_escape_rejects_candidate (test_question_candidate_contract.CandidateTests.test_placeholder_escape_rejects_candidate)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_1/test_question_candidate_contract.py\", line 53, in test_placeholder_escape_rejects_candidate\n    self.assertFalse(contract.requires_question(value))\nAssertionError: True is not false\n\n----------------------------------------------------------------------\nRan 11 tests in 0.001s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "mutation_id": "M2_DOMINANT_RED_IGNORED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": ".F.......E.\n======================================================================\nERROR: test_six_distinct_candidates_pass (test_question_candidate_contract.CandidateTests.test_six_distinct_candidates_pass)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_1/test_question_candidate_contract.py\", line 84, in test_six_distinct_candidates_pass\n    contract.validate_design(valid_design())\n  File \"/tmp/tmpiye655tu/M2_DOMINANT_RED_IGNORED.py\", line 125, in validate_design\n    validate_mutations(entry)\n  File \"/tmp/tmpiye655tu/M2_DOMINANT_RED_IGNORED.py\", line 114, in validate_mutations\n    require(not is_clean_candidate(dominant), \"dominant Red must reject candidate\")\n  File \"/tmp/tmpiye655tu/M2_DOMINANT_RED_IGNORED.py\", line 30, in require\n    raise ValueError(message)\nValueError: dominant Red must reject candidate\n\n======================================================================\nFAIL: test_dominant_red_rejects_clean_candidate (test_question_candidate_contract.CandidateTests.test_dominant_red_rejects_clean_candidate)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_1/test_question_candidate_contract.py\", line 81, in test_dominant_red_rejects_clean_candidate\n    self.assertFalse(contract.is_clean_candidate(value))\nAssertionError: True is not false\n\n----------------------------------------------------------------------\nRan 11 tests in 0.001s\n\nFAILED (failures=1, errors=1)\n"
+    },
+    {
+      "mutation_id": "M3_SUPPLIED_ANSWER_STILL_MISSING",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "==============================\nERROR: test_six_distinct_candidates_pass (test_question_candidate_contract.CandidateTests.test_six_distinct_candidates_pass)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_1/test_question_candidate_contract.py\", line 84, in test_six_distinct_candidates_pass\n    contract.validate_design(valid_design())\n  File \"/tmp/tmpiye655tu/M3_SUPPLIED_ANSWER_STILL_MISSING.py\", line 125, in validate_design\n    validate_mutations(entry)\n  File \"/tmp/tmpiye655tu/M3_SUPPLIED_ANSWER_STILL_MISSING.py\", line 108, in validate_mutations\n    require(not requires_question(answered), \"supplied answer must remove question\")\n  File \"/tmp/tmpiye655tu/M3_SUPPLIED_ANSWER_STILL_MISSING.py\", line 30, in require\n    raise ValueError(message)\nValueError: supplied answer must remove question\n\n======================================================================\nFAIL: test_supply_answer_enables_completion_without_question (test_question_candidate_contract.CandidateTests.test_supply_answer_enables_completion_without_question)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_1/test_question_candidate_contract.py\", line 74, in test_supply_answer_enables_completion_without_question\n    self.assertFalse(contract.requires_question(value))\nAssertionError: True is not false\n\n----------------------------------------------------------------------\nRan 11 tests in 0.001s\n\nFAILED (failures=1, errors=1)\n"
+    },
+    {
+      "mutation_id": "M4_DUPLICATE_CONCEPT_ALLOWED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "...F.......\n======================================================================\nFAIL: test_extra_duplicate_candidate_fails (test_question_candidate_contract.CandidateTests.test_extra_duplicate_candidate_fails)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_1/test_question_candidate_contract.py\", line 100, in test_extra_duplicate_candidate_fails\n    with self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 11 tests in 0.001s\n\nFAILED (failures=1)\n"
+    }
+  ],
+  "killed": 4,
+  "total": 4,
+  "mutation_score": 1.0
+}

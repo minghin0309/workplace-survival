@@ -299,6 +299,20 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - the complete invalid-coverage evidence chain is immutable.
 - Evidence: holdout plan/brief, cases/images, labels/adjudication, transcript audits, coverage report, result summary, and invalid-coverage manifest.
 
+#### T14.9 — v3.1 required-question case-design remediation
+
+- [x] Completed
+
+- Source requirement: Correct the benchmark-design cause of v3 `INVALID_COVERAGE` without changing frozen v3 cases or gold.
+- Owner files: `tests/benchmark/v3_1/`, `TASK.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - the invalid v3 holdout remains immutable and no case content is reused;
+  - six distinct question candidates are overprovisioned;
+  - placeholder, qualification, omission, and dominant-Red escape routes reject a candidate;
+  - removing dependency or supplying the answer removes question necessity;
+  - unit and mutation tests protect every construction transition.
+- Evidence: coverage triage, v3.1 case brief, executable contract, unit results, and mutation results.
+
 ## Task template
 
 Copy this block when adding work:
