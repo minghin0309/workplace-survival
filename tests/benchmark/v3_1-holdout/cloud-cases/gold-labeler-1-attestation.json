@@ -1,0 +1,74 @@
+{
+  "labeler_id": "gold-labeler-1",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "envelope_version": "v3.1",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "base_commit": "b98ddf3c8302cffcd98c56e768c5f1b99f35e164",
+  "working_branch": "cursor/v31-gold-labeler-1-72c3",
+  "context": "unverified",
+  "model": "unverified",
+  "run_info_note": "cursor-cloud run-info originalModelName was null, so context and model are unverified. bcId bc-685ac102-b127-54ff-8b90-2d02700d72c3 was used only for that null check.",
+  "reads": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/cases.json",
+      "sha256": "5bb06cb933b56f228a4af42336361c9bd4feed49157d389b1d9bbb1a16e1128a"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+      "sha256": "50b52b2b00f4b91107620fa0e365d63a920d9972326365c362d1754cc236d55c"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png",
+      "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "images": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+      "sha256": "50b52b2b00f4b91107620fa0e365d63a920d9972326365c362d1754cc236d55c",
+      "opened_directly": true,
+      "obscured_fields": ["crown circumference (cm)"],
+      "guessed_obscured_values": false
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png",
+      "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa",
+      "opened_directly": true,
+      "obscured_fields": [],
+      "guessed_obscured_values": false
+    }
+  ],
+  "output": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-1.json",
+    "sha256": "43e756af9749e963af9725802ed6cc1163c69fcb932088a7f91108f2250fa279",
+    "commit": "87d573d86e0e88343118a8640629850626807e16"
+  },
+  "validation": {
+    "case_count": 18,
+    "turn_count": 24,
+    "required_question_subset_of_allowed": true,
+    "required_revision_subset_of_allowed": true,
+    "overall_derivation": "Red > Gray > Yellow > Green",
+    "green_requires_no_revision": true,
+    "local_concepts_defined": true,
+    "image_token_guess": false
+  },
+  "other_access": [
+    "GetMcpTools and CallMcpTool on cursor-cloud run-info, only to record context/model; originalModelName was null so both are unverified.",
+    "git checkout -b cursor/v31-gold-labeler-1-72c3 from cursor/blind-v31-holdout-17a0; git add/commit of gold-labeler-1.json; later commit of this attestation; git push.",
+    "sha256sum of the five allowed read paths and of gold-labeler-1.json.",
+    "Python emit/validate of gold-labeler-1.json in memory; no additional repository reads.",
+    "SetActiveBranch for cursor/v31-gold-labeler-1-72c3.",
+    "Did not list, search, glob, or use fallback paths.",
+    "Did not read oracle, question-design, construction mutations, tools, prior attestation, brief, plan, contract/tests, runtime/Skill, other labels/gold/outputs, history, PR, or external sources.",
+    "workplace-survival skill was listed in the agent environment and was not read."
+  ]
+}
