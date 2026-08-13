@@ -1,0 +1,48 @@
+{
+  "schema_version": "v2",
+  "artifact_type": "sut_attestation",
+  "case_id": "V2-003",
+  "generated_at_utc": "2026-08-13T10:38:50Z",
+  "branch": "cursor/blind-v2-holdout-17a0",
+  "runtime_commit": "ce4c26339fc1e2ce660e7b92e1c01cd0b152f26f",
+  "output_commit": "47f25e2634a489015ad5caebab4a745049a33e4c",
+  "context": {
+    "requested_model": "gpt-5.6-sol-high-fast",
+    "machine_model": "unverified"
+  },
+  "reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-003.json",
+      "sha256": "623e775aaff1baeb8403b70b5b8e2622a3f14d722275274c5201d7d39da709a5"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "output": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-003.json",
+    "sha256": "74035f70128fe3d46a810d82e87b89ecff5217d1cae91453538f4b3cd053001d"
+  },
+  "limitations": [
+    "The machine-reported model identifier was unavailable and is recorded as unverified.",
+    "The SUT was executed only for the single supplied text turn; no scoring or benchmark-expectation files were used."
+  ],
+  "isolation": {
+    "status": "passed",
+    "statement": "Only the five authorized source files were read. No benchmark expectations, other cases, or other repository paths were read."
+  },
+  "violations": []
+}
