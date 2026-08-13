@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -109,6 +110,40 @@ def main() -> None:
         )
     for forbidden in ("sut-inputs", "sut-raw", "outputs-v3.json", "score-report-v3.json"):
         require(not (CLOUD / forbidden).exists(), f"SUT started despite invalid coverage: {forbidden}")
+    manifest_path = CLOUD / "invalid-coverage-manifest-v3.json"
+    if manifest_path.is_file():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        require(
+            set(manifest)
+            == {
+                "version",
+                "immutable",
+                "stage",
+                "sut_execution_authorized",
+                "frozen_at_utc",
+                "artifacts",
+            }
+            and manifest["version"] == "3"
+            and manifest["immutable"] is True
+            and manifest["stage"] == "invalid-coverage"
+            and manifest["sut_execution_authorized"] is False,
+            "invalid coverage manifest",
+        )
+        roles = set()
+        for item in manifest["artifacts"]:
+            require(
+                set(item) == {"role", "path", "sha256", "cloud_branch", "cloud_commit"}
+                and item["role"] not in roles
+                and re.fullmatch(r"[0-9a-f]{40}", item["cloud_commit"]) is not None,
+                "manifest artifact schema",
+            )
+            roles.add(item["role"])
+            path = ROOT / item["path"]
+            require(
+                path.is_file() and score_semantic_v3.digest(path) == item["sha256"],
+                f"manifest artifact changed: {path}",
+            )
+        require(len(roles) == 25, "manifest artifact coverage")
     print("validated v3 INVALID_COVERAGE before SUT execution")
 
 
