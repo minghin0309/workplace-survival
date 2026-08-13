@@ -1,0 +1,35 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-010",
+  "sut": "workplace-survival",
+  "turns": [
+    {
+      "turn_index": 1,
+      "output_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Wexcombe parish register scan set has 1,340 volumes due to the funder on 31 January; 828 are complete and 512 remain.\n- The A0 flatbed scanner failed on 3 December while awaiting a lamp assembly, and Bergstrom Imaging has provided no delivery estimate.\n- With one scanner, completion is projected for 12 March, six weeks after the funder deadline.\n- A replacement scanner can be delivered within four working days and costs approximately £2,400 for six weeks.\n- Any extension request must reach the funder by 1 January.\n- Ferdinand alone can authorise the rental or submit an extension request, and he will be travelling from 15 to 22 December.\n- Anneli owns scanning throughput and scheduling.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says the scanner is \"being a bit temperamental\" and that there is \"Nothing urgent at all,\" but Data A says it failed, the current projection is 12 March against a 31 January deadline, an extension must be requested by 1 January, and only Ferdinand can authorise either available response.\n- Communication risk: The message understates a confirmed failure and time-critical decision and does not clearly request rental authorisation or an extension, so Ferdinand may not take the action needed before the extension cutoff.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: The repeated hedging in \"Just wondering if maybe at some point we might possibly want to think about whether\" and \"perhaps looking a tiny bit optimistic,\" together with \"Nothing urgent at all,\" makes Anneli's stance and requested handoff materially unclear.\n- Communication risk: Ferdinand may read the message as a low-priority observation rather than a request for a prompt decision.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ferdinand, hope the week is going well! The A0 scanner failed on 3 December, and Bergstrom has not provided a delivery estimate. We have 512 volumes remaining; at single-scanner throughput, completion is projected for 12 March, six weeks after the 31 January funder deadline. A replacement scanner is available for approximately £2,400 for six weeks and can be delivered within four working days. As only you can authorise the rental or submit an extension request, and any extension request must reach the funder by 1 January, could you please confirm whether you authorise the rental or intend to submit an extension request? Anneli"
+    }
+  ],
+  "provenance": {
+    "input": {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-010.json",
+      "sha256": "17c740aa3b165e79578c40a5732032d62b1104fd47c98a524853a981983e0e95"
+    },
+    "skill": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  }
+}
