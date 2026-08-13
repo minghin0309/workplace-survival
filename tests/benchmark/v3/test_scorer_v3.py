@@ -132,6 +132,78 @@ class FailureEnvelopeTests(unittest.TestCase):
                 scorer.write_json_once(path, {"second": True})
             self.assertEqual(json.loads(path.read_text()), {"first": True})
 
+    def _successful_core(self) -> dict:
+        return {
+            "totals": {
+                "accepted_turns": 3,
+                "uncertain_turns": 0,
+                "route": 3,
+                "rated": {"responsibility": 3, "tone": 3, "overall": 3},
+                "rating_correct": {
+                    "responsibility": 3,
+                    "tone": 3,
+                    "overall": 3,
+                },
+                "required_questions": 3,
+                "required_questions_hit": 3,
+                "question_claims": 3,
+                "unsupported_question_claims": 0,
+                "required_revisions": 3,
+                "required_revisions_hit": 3,
+                "revision_claims": 3,
+                "unsupported_revision_claims": 0,
+                "critical_violations": 0,
+            },
+            "case_results": [{"case_id": "T-1", "passed": True}],
+            "gold_quality": {"synthetic": True},
+            "matcher": {"synthetic": True},
+        }
+
+    def test_success_writes_evaluated_thresholds(self):
+        with tempfile.TemporaryDirectory() as directory:
+            arguments, report = self._arguments(
+                Path(directory),
+                gold_fixture(question_cases=3, revision_cases=3),
+            )
+            with mock.patch.object(
+                scorer, "run_v2_core", return_value=self._successful_core()
+            ), mock.patch.object(
+                sys, "argv", ["score_semantic_v3.py", *arguments]
+            ):
+                scorer.main()
+            document = json.loads(report.read_text(encoding="utf-8"))
+            self.assertEqual(document["status"], "SCORED")
+            self.assertTrue(document["thresholds_passed"])
+            self.assertEqual(document["not_applicable_metrics"], [])
+            self.assertTrue(
+                all(
+                    value["status"] == "EVALUATED"
+                    for value in document["metrics"].values()
+                )
+            )
+
+    def test_required_zero_output_claim_metric_invalidates_scoring_input(self):
+        with tempfile.TemporaryDirectory() as directory:
+            arguments, report = self._arguments(
+                Path(directory),
+                gold_fixture(question_cases=3, revision_cases=3),
+            )
+            core = self._successful_core()
+            core["totals"]["question_claims"] = 0
+            with mock.patch.object(
+                scorer, "run_v2_core", return_value=core
+            ), mock.patch.object(
+                sys, "argv", ["score_semantic_v3.py", *arguments]
+            ):
+                scorer.main()
+            document = json.loads(report.read_text(encoding="utf-8"))
+            self.assertEqual(document["status"], "INVALID_SCORING_INPUT")
+            self.assertIsNone(document["thresholds_passed"])
+            self.assertIn(
+                "question_claim_support_precision",
+                document["not_applicable_metrics"],
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
