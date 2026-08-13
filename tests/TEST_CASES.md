@@ -2851,6 +2851,84 @@ Data B: Alex owns the report.
 - Treating an acting manager as automatically out of scope.
 - Asking for recipient-role confirmation despite the explicit manager role.
 
+## T14.2 — Blind remediation regressions
+
+### TC-112 — Qualified vendor-intent inference is Yellow, not Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this message to my manager.
+Data A: Marrowline missed three documented maintenance appointments this quarter. Its coordinator has not replied to two requests for a recovery plan. Data A does not establish the vendor's intent.
+Data B: Hi Elias, Marrowline have missed three maintenance appointments this quarter. Their coordinator has not replied to two recovery-plan requests. I think they're stalling us and we should discuss moving the work to a backup vendor.
+```
+
+**Expected**
+
+- Rates responsibility clarity green, tone yellow, and overall yellow.
+- Treats `I think they're stalling us` as a qualified unsupported intent inference, not a major accusation asserted as fact.
+- Preserves the supported missed-appointment and unanswered-request observations.
+- Minimally changes the inferred intent into uncertainty while preserving the request to discuss a backup vendor.
+
+**Forbidden**
+
+- Rating tone red without insult, threat, hostility, or a serious unqualified misconduct allegation.
+- Removing supported vendor-performance facts.
+- Claiming that bad faith is confirmed.
+
+### TC-113 — Causal basis outranks pronoun wording before accepting remediation ownership
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review this message to my manager.
+Data A: Redfern reports another catalog-sync failure. Of the three earlier failures, two were caused by Redfern's field mapping and one by our API. The cause of the current failure is unknown.
+Data B: Hi Nadia — Redfern are reporting another catalog-sync failure. I think we should take full ownership this time rather than pointing at their field mapping.
+```
+
+**Expected**
+
+- Rates responsibility clarity yellow, tone green, and overall yellow.
+- Prioritizes a question about the current failure's root cause before accepting fault or remediation ownership.
+- Does not ask for the prior-cause breakdown because Data A already provides it.
+- Uses the known prior-cause split as assessment context and keeps ownership conditional in the revision without requiring that background detail to be added to Data B.
+
+**Forbidden**
+
+- Asking only who `we` refers to while ignoring the unknown current cause.
+- Accepting fault or committing to the fix as established fact.
+- Re-asking which side caused the previous failures.
+
+### TC-114 — Revision preserves manager recipient instead of source-email author
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my proposed reply to my manager Avery.
+Data A: Marisol's source email says operations owns alert monitoring for 72 hours, then hands it to compliance. The emergency approval owner is not confirmed. A final clause about log retention is cropped and unknown. Marisol is the source author, not the intended recipient.
+Data B: We agree with everything and our team will own the monitoring.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity red, tone green, and overall red.
+- Asks about monitoring scope, emergency approval ownership, and the cropped retention condition.
+- Revises the message for Avery or uses no salutation while limiting agreement to confirmed points.
+
+**Forbidden**
+
+- Addressing the revision to Marisol.
+- Treating the source author as the intended recipient.
+- Accepting the unresolved emergency approval owner or cropped clause.
+- Expanding the monitoring commitment beyond the confirmed 72-hour boundary.
+
 ## T13.11 — Repeat and variation plan
 
 Run each selected case three times in independent evaluator contexts:
@@ -2890,3 +2968,4 @@ Different prose is allowed. Any difference in the compared fields, unsupported f
 - T13.7 prompt-like case data: TC-85–TC-92.
 - T13.8 material OCR and image-order boundaries: TC-93–TC-99.
 - T13.9 limited-background, multi-message, template, and recipient boundaries: TC-100–TC-111.
+- T14.2 blind remediation regressions: TC-112–TC-114.

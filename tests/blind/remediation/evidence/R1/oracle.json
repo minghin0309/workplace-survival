@@ -1,0 +1,28 @@
+{
+  "test_case": "TC-112",
+  "classification": "killed",
+  "failures": [
+    {
+      "assertion": "Tone must be Yellow, not Red.",
+      "evidence": "The output rates Tone Red (lines 19-23), even though the phrase is qualified as “I think” and the output identifies no insult, threat, hostility, or serious unqualified misconduct allegation."
+    },
+    {
+      "assertion": "Overall status must be Yellow.",
+      "evidence": "The output rates Overall Red and requires revision (lines 25-28), contrary to TC-112's expected Overall Yellow."
+    },
+    {
+      "assertion": "The qualified unsupported intent inference must not be treated as a major accusation asserted as fact.",
+      "evidence": "The output treats “I think they're stalling us” as sufficient for a Red tone rating and describes deliberate obstruction as though the qualified wording creates a severe escalation risk (lines 21-23)."
+    },
+    {
+      "assertion": "The minimal revision must change the inferred intent into uncertainty while preserving the backup-vendor discussion request.",
+      "evidence": "The revision preserves the backup-vendor discussion but deletes the intent inference entirely instead of recasting it as uncertainty (lines 34-36)."
+    }
+  ],
+  "passing_evidence": [
+    "Responsibility clarity is rated Green (lines 13-17).",
+    "The supported missed-appointment and unanswered-request facts are preserved in the revision (line 36).",
+    "The request to discuss moving work to a backup vendor is preserved (line 36).",
+    "The output does not claim that bad faith is confirmed."
+  ]
+}

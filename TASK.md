@@ -212,6 +212,34 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - failures are preserved before any product or test change.
 - Evidence: cloud agent branch, frozen artifacts, raw outputs, adjudication, score report, and method limitations.
 
+#### T14.3 — Blind defect remediation
+
+- [x] Completed
+
+- Source requirement: Confirmed product defects from the cloud blind diagnostic.
+- Owner files: `SPEC.md`, runtime Skill files, public regression cases, and `tests/blind/remediation/`.
+- Acceptance:
+  - all 18 diagnostic cases are re-triaged before product changes;
+  - benchmark/gold ambiguities do not become production rules;
+  - confirmed defects receive generalized rules and public regressions;
+  - existing functional and targeted suites do not regress;
+  - each remediation rule is protected by a killed mutant.
+- Evidence: triage, regression summary, remediation mutant diffs, raw outputs, and oracle results.
+
+#### T14.4 — Evidence-complete remediation acceptance
+
+- [x] Completed
+
+- Source requirement: Validate remediation runtime with the T13.10 evidence contract before merging to `main`.
+- Owner files: suite result files, `tests/evidence/`, remediation reports, `README.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - Functional TC-01–TC-114 and every active targeted suite are rerun;
+  - all 13 image cases are opened and hash-linked;
+  - every PASS has raw input/output, assertions, runtime commit, and exact result citation;
+  - package validation is reported separately from behavioral cases;
+  - summary-only remediation results are replaced by evidence-complete current results.
+- Evidence: remediation acceptance plan, full evidence JSON, package record, validator output, and updated acceptance report.
+
 ## Task template
 
 Copy this block when adding work:

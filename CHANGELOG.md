@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Blind defect remediation
+
+- Re-triaged 18 diagnostic cases into 3 confirmed product defects and 15 benchmark/gold ambiguities.
+- Fixed qualified intent-inference severity, causal-basis question priority, and intended-recipient preservation.
+- Added TC-112–TC-114 without encoding disputed gold behavior.
+- Passed the 114-case functional regression and targeted suites.
+- Killed all three remediation-specific mutants.
+- Completed evidence-backed acceptance: 139 behavioral cases and one separate package check passed.
+
 ### Cloud-isolated blind holdout — failed preregistered gate
 
 - Generated 30 unseen cases and four images in a clean cloud branch without prior holdout artifacts.

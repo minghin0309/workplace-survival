@@ -37,6 +37,17 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/blind/BLIND_CASE_BRIEF.md`
 - `tests/blind/BLIND_PLAN.md`
 - `tests/blind/GOLD_RUBRIC.md`
+- `tests/blind/REMEDIATION_TRIAGE.md`
+- `tests/blind/remediation/REMEDIATION_RESULTS.md`
+- `tests/blind/remediation/evidence/R1/mutant.diff`
+- `tests/blind/remediation/evidence/R1/oracle.json`
+- `tests/blind/remediation/evidence/R1/sut-output.txt`
+- `tests/blind/remediation/evidence/R2/mutant.diff`
+- `tests/blind/remediation/evidence/R2/oracle.json`
+- `tests/blind/remediation/evidence/R2/sut-output.txt`
+- `tests/blind/remediation/evidence/R3/mutant.diff`
+- `tests/blind/remediation/evidence/R3/oracle.json`
+- `tests/blind/remediation/evidence/R3/sut-output.txt`
 - `tests/blind/CLOUD_BLIND_RESULTS.md`
 - `tests/blind/cloud-holdout/adjudication-raw.json`
 - `tests/blind/cloud-holdout/adjudication.json`
@@ -201,6 +212,8 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/evidence/README.md`
 - `tests/evidence/check_package.py`
 - `tests/evidence/compare_consistency.py`
+- `tests/evidence/remediation-acceptance-plan.json`
+- `tests/evidence/remediation-acceptance-final.json`
 - `tests/evidence/t13-11-comparator-validation.json`
 - `tests/evidence/t13-11-plan.json`
 - `tests/evidence/t13-11-repeat.json`

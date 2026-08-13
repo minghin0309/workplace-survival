@@ -1,5 +1,22 @@
 # Workplace Survival Final Acceptance Results
 
+## Current remediation acceptance — 2026-08-13
+
+- Functional TC-01–TC-114: 114 passed, 0 failed.
+- Anti-hallucination AH-01–AH-06: 6 passed, 0 failed.
+- Interaction quality IQ-01–IQ-06: 6 passed, 0 failed.
+- Final-config explicit invocation FCI-01–FCI-03: 3 passed, 0 failed.
+- Auto-trigger AT-01–AT-10: 10 passed, 0 failed.
+- Total behavioral cases: 139 passed, 0 failed.
+- Automated package check: 1 passed, 0 failed, reported separately.
+- Attached-image cases: 13 passed, 0 failed.
+- Runtime commit: `a497598ed1fae67b434ae774cc6137ca38b980d5`.
+- Plan: `tests/evidence/remediation-acceptance-plan.json`.
+- Evidence: `tests/evidence/remediation-acceptance-final.json`.
+- Package record: `remediation-package-01-20260813`.
+
+AT and FCI remain deterministic routing-semantic evaluations rather than live dispatcher tests. The original cloud blind score is unchanged, and no fresh hidden holdout has measured post-remediation unseen-case accuracy.
+
 ## T13.12 outcome — 2026-08-12
 
 ### Behavioral case pass rate

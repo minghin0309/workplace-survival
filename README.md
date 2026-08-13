@@ -144,3 +144,5 @@ Automatic-trigger and final-configuration explicit-invocation cases were evaluat
 Targeted mutation testing killed 9 of 9 selected non-equivalent mutants. This confirms that the frozen tests detect those deliberate defects; it does not replace blind holdout or real-world accuracy testing. See `tests/mutation/MUTATION_RESULTS.md`.
 
 The cloud-isolated 30-case blind holdout failed every preregistered accuracy threshold and recorded one critical recipient-scope violation. Gold disagreement and exact-token scoring also contributed substantial uncertainty. See `tests/blind/CLOUD_BLIND_RESULTS.md`; do not interpret the public regression pass rate as unseen-case accuracy.
+
+Post-blind remediation fixed three confirmed generalized defects and added TC-112–TC-114. Evidence-complete remediation acceptance reports 139 behavioral cases passed plus one separate package check. Fifteen disputed benchmark/gold cases were deliberately not converted into product rules. The original blind score remains unchanged; no fresh hidden holdout has yet measured post-remediation accuracy.

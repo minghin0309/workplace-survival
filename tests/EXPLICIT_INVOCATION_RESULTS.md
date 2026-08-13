@@ -5,6 +5,7 @@
 - Canonical evidence requirements: `tests/evidence/README.md`.
 - T11.2 results are historical summary-only records from the disabled-model-invocation configuration.
 - The T13.10 environment-limited current-configuration record is stored in `tests/evidence/t13-10-validation.json`.
+- Remediation evidence-complete final-configuration records are stored in `tests/evidence/remediation-acceptance-final.json`.
 - FCI-01–FCI-03 and AT-10 are the applicable final-configuration semantic regressions.
 
 Representative T13.10 record: `t13.10-ei-ei01-notrun-20260812` (`NOT_RUN`, not counted as a pass).
@@ -50,3 +51,9 @@ The final published frontmatter omits `disable-model-invocation` to enable autom
 - Normal, Limited-background, and Message-template routing paths passed.
 - Final frontmatter at the recorded runtime commit contains the correct slug and omits `disable-model-invocation`.
 - Limitation: no live Cursor invocation dispatcher was available; the three cases use deterministic routing-semantic evaluation.
+
+## Remediation evidence-complete record index
+
+- Evidence file: `tests/evidence/remediation-acceptance-final.json`.
+- Records:
+  - `remediation-a497598-fci-01-20260813`, `remediation-a497598-fci-02-20260813`, `remediation-a497598-fci-03-20260813`
