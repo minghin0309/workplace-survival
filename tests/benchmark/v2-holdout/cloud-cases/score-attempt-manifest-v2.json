@@ -1,0 +1,47 @@
+{
+  "version": "2",
+  "immutable": true,
+  "stage": "score-attempt",
+  "parent_evaluation_manifest": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/evaluation-manifest-v2.json",
+    "sha256": "89c73ffb919541e8fbba0d55cc12e5c20b83af526a97bb216d35cbf4d1a40e16"
+  },
+  "frozen_at_utc": "2026-08-13T12:40:18.537189Z",
+  "artifacts": [
+    {
+      "role": "score-report",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/score-report-v2.json",
+      "sha256": "9d164bfff75c265acfda562720142aa51733c8cea30825fb80be61e39659ecaf",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "bbc0ba5c5db18bc4813fac6b1e88176d1a87ef3c"
+    },
+    {
+      "role": "triage",
+      "path": "tests/benchmark/v2-holdout/SCORE_TRIAGE.md",
+      "sha256": "7aa3d967755bbce7ad5eb9b2cf84b4c7030c5c649080ed8c09126cb559f4638b",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "bbc0ba5c5db18bc4813fac6b1e88176d1a87ef3c"
+    },
+    {
+      "role": "scorer",
+      "path": "tests/benchmark/score_semantic.py",
+      "sha256": "f437e4702fcb06f790fe4414b133ec360af0b620740bbd431b43971578429327",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "4033411a790ce357911397c095046a07546dac21"
+    },
+    {
+      "role": "validator",
+      "path": "tests/benchmark/validate_score_attempt.py",
+      "sha256": "9cf57ebc8be155380e7a148c0fd4bd97c91cdeed96a510724d2d2aba7d28084c",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "bbc0ba5c5db18bc4813fac6b1e88176d1a87ef3c"
+    },
+    {
+      "role": "freezer",
+      "path": "tests/benchmark/freeze_score_attempt.py",
+      "sha256": "164d59ed23102a351dfef5d7584429cd56afcc25283f1b4ecb72c5c31636430c",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "bbc0ba5c5db18bc4813fac6b1e88176d1a87ef3c"
+    }
+  ]
+}
