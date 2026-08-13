@@ -21,6 +21,12 @@
       "tests/benchmark/v3-holdout/cloud-cases/gold-v3-raw.json",
       "tests/benchmark/v3-holdout/cloud-cases/adjudication-v3-raw.json"
     ],
+    "output_correction_commit": {
+      "commit": "eed9ca11a755e6929a6dd86a0b1cfd6a10983bfd",
+      "path": "tests/benchmark/v3-holdout/cloud-cases/adjudication-v3-raw.json",
+      "reason": "the unused-ontology-concept coverage list had been written by hand and wrongly reported blocker-status and preserve-confirmed-deadline as unused; it is now derived from the ontology concept ids and the adjudicated concept arrays. No label, rating, concept set or invariant changed, and gold-v3-raw.json is byte-identical to the output commit.",
+      "hashes_in_this_attestation": "the adjudication hash and byte count recorded under outputs are those of this correction commit"
+    },
     "attestation_commit": "not_self_referential: this file cannot contain the hash or id of the commit that adds it; it is added by the next commit on the same work branch, immediately after the output commit named above",
     "git_commands_used": [
       "git status --short",
@@ -133,9 +139,9 @@
     },
     {
       "path": "tests/benchmark/v3-holdout/cloud-cases/adjudication-v3-raw.json",
-      "sha256": "08fa97cb6ed3f881b200bb151a26994cfd35894b359a5dd7c212db56fcf98cd3",
-      "bytes": 496549,
-      "committed_in": "5add12b6d5c0e51365e000fed857490e879fa265"
+      "sha256": "6769c1a8c46bbd42440a15928296edb96ebc96d92c3ba532c1ec01d18ce1dbb7",
+      "bytes": 496484,
+      "committed_in": "eed9ca11a755e6929a6dd86a0b1cfd6a10983bfd"
     }
   ],
   "images": [
