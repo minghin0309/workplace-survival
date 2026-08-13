@@ -1,0 +1,153 @@
+{
+  "schema_version": "v2",
+  "artifact": "gold-labeler-attestation",
+  "case_set_id": "v2-holdout-cloud-cases",
+  "labeler_id": "gold-labeler-1",
+  "labels_artifact": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1.json",
+  "context_id": "bc-33b3fdac-74ca-5732-a9b3-4bd69c53d71f",
+  "context_url": "https://cursor.com/agents/bc-33b3fdac-74ca-5732-a9b3-4bd69c53d71f",
+  "context_kind": "cursor-cloud-agent",
+  "context_name": "V2 gold Claude",
+  "model_id": "claude-opus-5",
+  "model_family": "anthropic-claude-opus",
+  "model_id_provenance": "Self-reported by the agent runtime. The cloud run-info API returned originalModelName as null for this run, so the model id could not be confirmed from run metadata.",
+  "cloud_branch": "cursor/v2-cloud-gold-labeler-1-d71f",
+  "cloud_commit": "24c91e5425fdd2b50b8dd728e329ef88a39474e4",
+  "cloud_commit_role": "commit that introduced gold-labeler-1.json (the label commit)",
+  "base_commit": "a638d2b87ef17c36e394319e3e46b361eb6eb061",
+  "repo_url": "https://github.com/minghin0309/workplace-survival",
+  "labelled_at_utc": "2026-08-13",
+  "isolation": {
+    "independent": true,
+    "statement": "Labels were produced in a single pass from the case inputs, the two case images, the blind gold rubric and the semantic ontology only. No Skill runtime or SKILL.md, no SPEC or other specification, no public tests or fixtures, no blind or mutation artifacts, no scorer or scoring scripts, no oracle notes, no designer attestation, no benchmark plan or methodology results, no other labeller's labels, and no frozen or normalized Skill output were read at any point.",
+    "other_labeler_outputs_seen": false,
+    "skill_outputs_seen": false,
+    "oracle_notes_seen": false
+  },
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "purpose": "case inputs under label",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "purpose": "case image for V2-017",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "purpose": "case image for V2-018",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "purpose": "labelling rubric",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "purpose": "canonical concept ids",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "files_deliberately_not_read": [
+    "the Skill runtime and SKILL.md",
+    "SPEC.md and other specification documents",
+    "public tests and test fixtures",
+    "blind and mutation artifacts, including scoring scripts and prior blind results",
+    "tests/benchmark/v2-holdout/cloud-cases/oracle-notes.json",
+    "tests/benchmark/v2-holdout/cloud-cases/designer-attestation.json",
+    "tests/benchmark/v2-holdout/cloud-cases/validate_cases.py",
+    "tests/benchmark/v2-holdout/cloud-cases/render_images.py",
+    "the benchmark plan, methodology results and scorer",
+    "any other labeller's labels",
+    "any frozen or normalized Skill outputs"
+  ],
+  "hashes_verified": {
+    "algorithm": "sha256",
+    "verified": true,
+    "verified_at_commit": "24c91e5425fdd2b50b8dd728e329ef88a39474e4",
+    "method": "sha256sum computed in the labelling workspace on the checked-out tree at the label commit, after re-fetching the pushed branch from origin.",
+    "inputs": {
+      "tests/benchmark/v2-holdout/cloud-cases/cases.json": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828",
+      "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24",
+      "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab",
+      "tests/blind/GOLD_RUBRIC.md": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479",
+      "tests/benchmark/SEMANTIC_ONTOLOGY.json": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    "output": {
+      "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1.json": "44eecc21199cecba5c0a8e7dce99277f8c2fd0c2fcb81a1e127b3f1c1dce5418"
+    },
+    "notes": "The five input hashes are the bytes the labels were produced from; the output hash pins the label artifact as committed at 24c91e5 and unmodified by this attestation."
+  },
+  "image_open_status": {
+    "images_expected": 2,
+    "images_opened": 2,
+    "all_opened": true,
+    "method": "Each PNG was opened and viewed directly as an image in the labelling context, not inferred from the image_spec block in cases.json or from any rendering script.",
+    "images": [
+      {
+        "case_id": "V2-017",
+        "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+        "opened": true,
+        "readable": true,
+        "bytes": 26265,
+        "declared_dimensions": "900x420 PNG RGB",
+        "rendered_text_matches_spec": true,
+        "observation": "Slack-style compose screenshot with the header 'Direct message: Marguerite Vaudrey-Pinto' and four body lines of monospace draft text, matching image_spec.rendered_text_lines exactly; no glyph required guessing."
+      },
+      {
+        "case_id": "V2-018",
+        "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+        "opened": true,
+        "readable": true,
+        "bytes": 32874,
+        "declared_dimensions": "940x460 PNG RGB",
+        "rendered_text_matches_spec": true,
+        "observation": "Email compose screenshot with header 'New message', the To and Subject rows including the subject 'Kilbrannan offset - my mistake', and the body and signature lines, matching image_spec.field_rows and image_spec.rendered_text_lines exactly; no glyph required guessing."
+      }
+    ]
+  },
+  "coverage": {
+    "cases_labelled": 18,
+    "turns_labelled": 24,
+    "turns_by_route": {
+      "Normal mode": 23,
+      "Message-template mode": 1,
+      "Limited-background mode": 0,
+      "Intake": 0,
+      "Scope": 0
+    },
+    "overall_distribution": {
+      "Green": 4,
+      "Yellow": 5,
+      "Red": 14,
+      "Gray": 0,
+      "null": 1
+    }
+  },
+  "self_checks": [
+    "Every concept list is sorted and free of duplicates.",
+    "Every required concept also appears in the matching allowed list.",
+    "Question lists carry only question-domain ontology ids or case-local question tokens; revision lists likewise for the revision domain.",
+    "Every non-ontology concept used in a turn has a definition in that turn's concept_definitions, and no ontology concept is redefined.",
+    "critical_invariants is non-empty on all 24 turns and draws only on the eight canonical rubric tokens.",
+    "overall equals the Red > Gray > Yellow > Green derivation on all 23 rated turns, and is null with null responsibility and tone on the single non-rated turn.",
+    "No turn carries more than three required question concepts.",
+    "Case ids and turn indices match cases.json one for one, in order."
+  ],
+  "limitations": [
+    "Both images were opened and read directly; the rendered text matched each case's image_spec exactly, so no inference was needed about unreadable glyphs.",
+    "Multi-round continuation turns (V2-011 turns 2 and 3, V2-012 turn 2, V2-013 turns 2 and 3) contain a revision instruction rather than a new message, and the rubric only permits null ratings on the Intake, Scope and Message-template routes. Ratings on those turns therefore carry forward the standing verdict on the user's own draft, because the Skill's intermediate output is not visible to a blind labeller.",
+    "V2-012 turn 3 is labelled Message-template mode because the user asks for a reply to be drafted and supplies no draft; a labeller who treats it as a continuation of the same Normal-mode review would instead carry Yellow ratings forward.",
+    "No turn carries a required question concept. Each case's background answers every fact that could change the route, the rating, or the safe revision, so on this set a clarifying question is permitted where listed but never obligatory.",
+    "V2-016 is labelled Normal mode rather than Scope: the addressee is the sender's actual line manager, and the defect is that she lacks the spending authority, which the rubric treats as a rating issue rather than a recipient-scope route.",
+    "remove-unsupported-accusation is used for unsupported self-blame in V2-006, V2-008 and V2-018; a stricter reading that limits the ontology concept to claims about other people would need case-local tokens there instead.",
+    "No case was labelled Gray. Where evidence is missing in the world (V2-014, V2-015) the message under review makes a claim that contradicts the supplied background, which the rubric places at Red, and Red outranks Gray in the derivation regardless.",
+    "Rating boundaries on two turns are the closest calls in the set: V2-013 turn 1 responsibility (Red for carrying a superseded quote to a board sponsor, defensible at Yellow if the revision is read as pre-dating the 9 October figure) and V2-010 turn 1 responsibility (Red because 'nothing urgent at all' contradicts the 1 January gate, defensible at Yellow if the omission is read as purely a tone failure).",
+    "Allowed concept lists are the labeller's judgement about what is semantically acceptable rather than an exhaustive enumeration of every phrasing a reasonable output might use; adjudication should treat a near-synonym of a listed concept as in-set.",
+    "The model id is self-reported and could not be confirmed from cloud run metadata, which returned a null model name for this run.",
+    "This attestation was written after the label commit and adds no changes to gold-labeler-1.json; the recorded output hash pins the label bytes it describes."
+  ]
+}
