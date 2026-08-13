@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Benchmark methodology v3 scorer hardening
+
+- Archived benchmark v2 permanently as `SCORER_ERROR` without rescoring.
+- Defined `NOT_APPLICABLE` zero-denominator semantics and preregistered minimum question/revision coverage gates.
+- Added atomic, non-overwriting success and failure envelopes for every v3 scorer invocation.
+- Added synthetic success, invalid-coverage, invalid-input, exception, and overwrite tests.
+- Passed 10 unit tests and killed all 3 targeted scorer mutants after rejecting an initial import-error false kill.
+- Confirmed no v2 holdout or runtime Skill files changed during v3 validation.
+
 ### Blind benchmark methodology v2
 
 - Separated explicit SUT-visible Data A from evaluator-only construction notes.

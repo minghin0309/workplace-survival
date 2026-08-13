@@ -270,6 +270,21 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - preregistered metrics and failures are preserved without modifying gold.
 - Evidence: frozen manifests, cases/images, labels/adjudication, raw outputs, matches, score report, and cloud attestations.
 
+#### T14.7 — Benchmark methodology v3 scorer hardening
+
+- [x] Completed
+
+- Source requirement: Preserve the v2 `SCORER_ERROR` outcome and prevent zero-denominator metrics or scorer exceptions from destroying formal evidence. No product behavior change.
+- Owner files: `tests/benchmark/v3/`, `TASK.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - v2 remains archived and is never rescored;
+  - zero denominators produce `NOT_APPLICABLE`, never 0, 1, or an exception;
+  - preregistered coverage gates reject holdouts without question and revision coverage before SUT execution;
+  - every scorer invocation writes one immutable success or failure envelope;
+  - unit and mutation tests kill zero-denominator, disabled-coverage, and missing-failure-envelope defects;
+  - validation uses synthetic fixtures and does not supply v2 artifacts to the v3 scorer.
+- Evidence: v3 methodology contract, unit results, mutation results, validation report, and empty runtime diff.
+
 ## Task template
 
 Copy this block when adding work:
