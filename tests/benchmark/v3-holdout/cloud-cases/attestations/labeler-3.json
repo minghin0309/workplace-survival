@@ -1,0 +1,21 @@
+{
+  "schema_version": "v3",
+  "role": "labeler-3",
+  "context_id": "bc-b7e9cb2b-4f3f-506e-a3e2-8a033b14708c",
+  "model_id": "unverified",
+  "model_family": "gpt",
+  "cloud_branch": "cursor/gold-labeler-3-v3-holdout-708c",
+  "cloud_commit": "0e5e6d8cd32370ee34d8a4e731564b565940c645",
+  "files_read": [],
+  "limitations": [
+    "No repository listing, glob, search, test suite, scorer, oracle, Skill, methodology, other labels, gold outputs, history, PR data, or external resource was consulted.",
+    "The V3-017 flow value was partly obscured in the image; the label intentionally treats that value as unknown rather than guessing.",
+    "The attestation cites the label-output commit rather than the final attestation commit because embedding the final commit hash inside the committed file would be self-referential.",
+    "Machine model identity was unavailable; no model ID was guessed.",
+    "Transcript audit disposition is frozen in gold-protocol-audits.json."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3-attestation.json",
+    "sha256": "bc9db2b15b136dfefd13bbc38c60473d25a1d5ebfbbab41d39bdbffec1422da3"
+  }
+}

@@ -1,0 +1,1730 @@
+{
+  "schema_version": "v3",
+  "labeler": "gold-labeler-1",
+  "model_family": "grok",
+  "cases": [
+    {
+      "case_id": "V3-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "no-revision": {
+              "domain": "revision",
+              "description": "No revision is needed for a Green message."
+            },
+            "preserve-confirmed-deadline": {
+              "domain": "revision",
+              "description": "Keep the confirmed 14 September window unchanged."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep Marek as the person who releases the window."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Marek Dolins as the addressee."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Marek is the depot manager and the named recipient. The draft reports the confirmed 14 September Car 2 haul-rope inspection, Ferndown's written confirmation, the four-hour lower-platform closure already agreed in the planning-call minutes, and Ilva's calendar block. It leaves release of the window to Marek. Tone is short and fitting for Rivet chat. Spare-car availability is unused background, not a contradiction. No rewrite."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "no-revision": {
+              "domain": "revision",
+              "description": "No revision is needed for a Green message."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep Priya as the person who changes the published show grid."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Priya Sundaresan as the addressee."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Priya is the programme lead and the person who changes the published grid. The draft cites the 2 August box-office export (nineteen-seat Tuesday average; seventy-one percent Thursday last season), notes Hal is free Thursdays, and makes one clear ask. Ownership and register are correct. No rewrite."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "no-revision": {
+              "domain": "revision",
+              "description": "No revision is needed for a Green message."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep Greta on job-card priority, Iona on pallet re-leathering, and Tobias on the Marlowe voicing card."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Greta Marchetti as the addressee."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Greta issues job cards and sets colliding priority. The draft reports Dermot's pallet ask, the month-end Marlowe voicing card with no spare hours, Iona's bench ownership, and that Dermot was promised nothing. It asks Greta to pass the work or slip voicing. Short, not blunt toward the client-side contact. No rewrite."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "include-crew-shortage-cause",
+            "include-slipped-visits",
+            "leave-commercial-decision-open",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-client-already-informed"
+          ],
+          "allowed_revision_concepts": [
+            "include-crew-shortage-cause",
+            "include-slipped-visits",
+            "leave-commercial-decision-open",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-client-already-informed"
+          ],
+          "concept_definitions": {
+            "approval-authority": {
+              "domain": "question",
+              "description": "Ask who can approve a retainer cut or billing-figure change."
+            },
+            "commitment-scope": {
+              "domain": "question",
+              "description": "Ask what commercial concession Dev may commit to Yusuf."
+            },
+            "include-crew-shortage-cause": {
+              "domain": "revision",
+              "description": "State that both slipped visits were caused by Kelbrand crew shortages, as noted in the site diary."
+            },
+            "include-slipped-visits": {
+              "domain": "revision",
+              "description": "State that Yusuf asked for the cut after two visits slipped."
+            },
+            "leave-commercial-decision-open": {
+              "domain": "revision",
+              "description": "Do not tell Anneke the retainer change is closed or that she has nothing to do."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Anneke Feldbusch as the addressee."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Remove the claim that the six percent cut is settled and already handed to billing as a finished decision."
+            },
+            "report-client-already-informed": {
+              "domain": "revision",
+              "description": "Report that Dev already told Yusuf the six percent cut would apply from the next cycle."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Anneke is the regional manager. Dev does not own billing; the back office will bill whatever figure it is handed. The draft treats a six percent retainer cut as settled, says Yusuf was told it is done, and tells Anneke nothing is needed, while omitting the two slipped visits and the crew-shortage cause. That is a major commercial over-commitment and a main-purpose failure. Tone is neutral. Asking who can approve a retainer cut could refine wording but is not required to rate or revise: report the request, the slips, the cause, and that Yusuf was already told, and leave the commercial decision open."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "omit-unsupported-reassurance",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-kiln-restored",
+            "report-moisture-still-unread"
+          ],
+          "allowed_revision_concepts": [
+            "omit-unsupported-reassurance",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-kiln-restored",
+            "report-moisture-still-unread"
+          ],
+          "concept_definitions": {
+            "confirmed-deadline": {
+              "domain": "question",
+              "description": "Ask when the quartersawn oak batch will actually come out of kiln three."
+            },
+            "omit-unsupported-reassurance": {
+              "domain": "revision",
+              "description": "Remove 'your oak is fine' and 'nothing to worry about'."
+            },
+            "operational-impact": {
+              "domain": "question",
+              "description": "Ask how long Fennard can hold the bench open."
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "description": "Use a placeholder for the kiln-out time until a confirmed date exists."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep customer promises with Lise, not Ruben."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Ottilie Brandt as the customer addressee of the checked reply."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Remove the implied firm promise that the batch will come out as soon as the cycle finishes."
+            },
+            "report-kiln-restored": {
+              "domain": "revision",
+              "description": "State in plain language that kiln three is running again after the heating-element swap."
+            },
+            "report-moisture-still-unread": {
+              "domain": "revision",
+              "description": "State that moisture readings on the oak batch are still being taken through the cycle."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Lise owns what the yard promises a customer; Fennard asked when the batch comes out. Moisture probes are still being read, so 'your oak is fine', 'nothing to worry about', and an open-ended out-date are unsupported customer commitments. Tone is too breezy for a buyer holding a bench. Ask for the confirmed out-date; until then use a placeholder and report only kiln-restored status plus unfinished moisture checks."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": [
+            "include-part-on-order",
+            "include-temperature-offset",
+            "plain-language-no-jargon",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "include-part-on-order",
+            "include-temperature-offset",
+            "placeholder-unknown-value",
+            "plain-language-no-jargon",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "concept_definitions": {
+            "confirmed-deadline": {
+              "domain": "question",
+              "description": "Ask when the replacement strainer basket will arrive or be fitted."
+            },
+            "include-part-on-order": {
+              "domain": "revision",
+              "description": "State that the replacement part is on order, not already on hand."
+            },
+            "include-temperature-offset": {
+              "domain": "revision",
+              "description": "State that the sheet is about half a degree warm."
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "description": "Use a placeholder if a swap time is required and still unknown."
+            },
+            "plain-language-no-jargon": {
+              "domain": "revision",
+              "description": "Replace plant terms such as set point and strainer basket with plain wording."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep this as the outgoing notice Suzanne would circulate."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Do not imply the swap time is known."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Suzanne owns outgoing notices; Farid owns the wording and the fault ticket. The two-line warning about slower ice is the right purpose, but it uses plant jargon, omits the half-degree offset, and says 'until the strainer basket is swapped' while the basket is only on order. That is a non-critical communication and timing risk, not a contradiction. A swap-date question is optional; a placeholder can stand if needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "include-south-cell-capacity",
+            "include-two-inbound-loads",
+            "keep-recommendation-not-decision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "include-south-cell-capacity",
+            "include-two-inbound-loads",
+            "keep-recommendation-not-decision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause"
+          ],
+          "concept_definitions": {
+            "current-root-cause": {
+              "domain": "question",
+              "description": "Ask what caused north-cell hydrocarbon recovery to fall to seventy-one percent."
+            },
+            "include-south-cell-capacity": {
+              "domain": "revision",
+              "description": "State that the south cell has room for the diverted loads."
+            },
+            "include-two-inbound-loads": {
+              "domain": "revision",
+              "description": "State that two inbound Threlkeld loads would move to the south cell."
+            },
+            "keep-recommendation-not-decision": {
+              "domain": "revision",
+              "description": "Keep pausing intake as Aoife's recommendation, not a decision she has taken."
+            },
+            "operational-impact": {
+              "domain": "question",
+              "description": "Ask what happens operationally if north-cell intake is not paused."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep the intake-pause decision with Corin."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Corin Halversen as the addressee."
+            },
+            "qualify-unconfirmed-cause": {
+              "domain": "revision",
+              "description": "Do not invent a reason for the seventy-one percent recovery figure."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Corin decides whether north-cell intake is paused; Aoife recommends. The draft correctly leaves the decision with Corin and offers to tell dispatch after he answers. It omits that two inbound Threlkeld loads would move and that the south cell has room, which Corin needs for the intake call. Tone is short enough for phone reading. Cause of the drop is unknown and must not be invented; asking it is optional."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "do-not-brief-theatre-cleared",
+            "leave-exception-to-peter-idris",
+            "leave-validation-to-bettina",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-wash-inspect-discrepancy-only"
+          ],
+          "allowed_revision_concepts": [
+            "do-not-brief-theatre-cleared",
+            "leave-exception-to-peter-idris",
+            "leave-validation-to-bettina",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-wash-inspect-discrepancy-only"
+          ],
+          "concept_definitions": {
+            "do-not-brief-theatre-cleared": {
+              "domain": "revision",
+              "description": "Do not tell Rosalie the set is released or good to go."
+            },
+            "leave-exception-to-peter-idris": {
+              "domain": "revision",
+              "description": "Leave the missing count-sheet exception to Peter with Idris; do not waive it with Trentmoor."
+            },
+            "leave-validation-to-bettina": {
+              "domain": "revision",
+              "description": "Leave loan-set validation and release with Bettina Krol."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep wash/inspect with Yusra, validation with Bettina, and supplier-document exceptions with Peter and Idris."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Peter Aszalos as the addressee."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Remove claims that Yusra validated, released, waived the count sheet, and cleared the set for theatre."
+            },
+            "report-wash-inspect-discrepancy-only": {
+              "domain": "revision",
+              "description": "Report only that Yusra washed and inspected the trays and logged the missing count sheet."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Yusra's scope is wash, inspect, and log the discrepancy. Validation and release sit with Bettina; supplier-document exceptions sit with Peter and Idris; theatre-list queries sit with Rosalie. The draft asserts Yusra validated and released the set, waived the missing count sheet with Trentmoor, and told Rosalie it is good to go, then tells Peter no action is needed. Direct ownership contradiction and unsafe release. Tone is otherwise plain."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "do-not-commit-redye-cost",
+            "do-not-contact-ellery",
+            "include-vessel-available",
+            "leave-tolerance-signoff-to-delphine",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-shade-measurement"
+          ],
+          "allowed_revision_concepts": [
+            "do-not-commit-redye-cost",
+            "do-not-contact-ellery",
+            "include-vessel-available",
+            "leave-tolerance-signoff-to-delphine",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-shade-measurement"
+          ],
+          "concept_definitions": {
+            "do-not-commit-redye-cost": {
+              "domain": "revision",
+              "description": "Do not promise Ellery a re-dye at the dyeworks' cost; that sits with Noor."
+            },
+            "do-not-contact-ellery": {
+              "domain": "revision",
+              "description": "Do not contact or copy Ellery Knitwear from this thread."
+            },
+            "include-vessel-available": {
+              "domain": "revision",
+              "description": "State that Iker has a vessel free if Delphine wants a re-dye cycle."
+            },
+            "leave-tolerance-signoff-to-delphine": {
+              "domain": "revision",
+              "description": "Leave shade-tolerance accept/reject on lot 4188 with Delphine."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep measurement with Iker, tolerance sign-off with Delphine, and cost/customer commitments with Noor."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Delphine Achterberg as the addressee and keep lot 4188 in the message."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Remove Iker calling the lot acceptable to ship and the already-made customer cost offer."
+            },
+            "report-shade-measurement": {
+              "domain": "revision",
+              "description": "Report that lot 4188 measured one shade band light against the standard."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Delphine signs off shade tolerance; Noor owns customer and cost commitments. Iker may report the spectrophotometer result and that a vessel is free. The draft has Iker accept lot 4188 for shipment, tell Ellery a re-dye is available at the dyeworks' cost, and keep Noor out. That contradicts both owners. Lot number is present as required. Tone is otherwise plain."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "complete-yields-from-records",
+            "do-not-delegate-yields-to-hanne",
+            "leave-second-check-to-pharmacist",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "complete-yields-from-records",
+            "do-not-delegate-yields-to-hanne",
+            "leave-second-check-to-pharmacist",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "complete-yields-from-records": {
+              "domain": "revision",
+              "description": "Tomas completes the three yield entries from the batch records he already has; nothing is estimated."
+            },
+            "do-not-delegate-yields-to-hanne": {
+              "domain": "revision",
+              "description": "Do not leave yield boxes for Hanne or call yields a management call."
+            },
+            "leave-second-check-to-pharmacist": {
+              "domain": "revision",
+              "description": "Leave second-check initials with Marguerite as the pharmacist on the suite rota; do not assign that chase to Hanne as her work."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep worksheet completion with Tomas, second checks with the rota pharmacist, and the quarterly pack with Hanne."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Hanne Oduya as the addressee."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Completing the three sterile-suite worksheets, yields included, is Tomas's task and he has the batch records. Second-check initials are Marguerite's. Hanne asked for the worksheets for the quarterly pack. The draft dumps yields on Hanne as a 'management call' and assigns chasing Marguerite to her. That inverts ownership. Wording is deflecting toward the superintendent. Yields must be taken from records, not guessed."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "leave-client-response-to-olav",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "professional-register",
+            "remove-unsupported-accusation",
+            "report-contract-lapsed",
+            "report-empty-lorries-late-routes",
+            "report-raised-in-huddle-minutes"
+          ],
+          "allowed_revision_concepts": [
+            "leave-client-response-to-olav",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "professional-register",
+            "remove-unsupported-accusation",
+            "report-contract-lapsed",
+            "report-empty-lorries-late-routes",
+            "report-raised-in-huddle-minutes"
+          ],
+          "concept_definitions": {
+            "leave-client-response-to-olav": {
+              "domain": "revision",
+              "description": "Leave the Fjordvei Roads reply with Olav; do not forecast that the client will walk."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep renewals and the client reply with Olav; keep route call-outs with Marta."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Olav Brenneman as the addressee."
+            },
+            "professional-register": {
+              "domain": "revision",
+              "description": "Use a searchable, client-visible channel register without insult or joke framing."
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "description": "Remove 'left to rot', 'becoming a joke', 'could not be bothered', and blame for a hypothetical client loss."
+            },
+            "report-contract-lapsed": {
+              "domain": "revision",
+              "description": "State that the western-route grit refill contract lapsed."
+            },
+            "report-empty-lorries-late-routes": {
+              "domain": "revision",
+              "description": "State that two lorries stood empty on the last call-out and two western routes finished late."
+            },
+            "report-raised-in-huddle-minutes": {
+              "domain": "revision",
+              "description": "State that Marta raised the lapsing contract twice at the operations huddle and Renske minuted both."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Olav owns renewals and the Fjordvei reply; the channel is searchable and client-visible. Supported facts are the lapsed contract, empty lorries, late routes, and two minuted huddle raises. The draft insults Olav, accuses him of not being bothered, inflates two raises to a third time, and blames him for a speculative walk. Tone is hostile. Rewrite to the supported facts and leave the client answer with him."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "drop-self-deprecation",
+            "include-free-visit-slot",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "recommend-spare-digitiser-visit",
+            "remove-unsupported-accusation",
+            "report-clipped-traces",
+            "report-firmware-rollback-timing"
+          ],
+          "allowed_revision_concepts": [
+            "drop-self-deprecation",
+            "include-free-visit-slot",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "recommend-spare-digitiser-visit",
+            "remove-unsupported-accusation",
+            "report-clipped-traces",
+            "report-firmware-rollback-timing"
+          ],
+          "concept_definitions": {
+            "drop-self-deprecation": {
+              "domain": "revision",
+              "description": "Remove apology-stacking and 'ignore me if it is a stupid question' hedging."
+            },
+            "include-free-visit-slot": {
+              "domain": "revision",
+              "description": "State that Hyun-woo has a free slot for a station visit."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep firmware decisions with Petra and station visits with Hyun-woo."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Petra Illovszky as the addressee."
+            },
+            "qualify-unconfirmed-cause": {
+              "domain": "revision",
+              "description": "Treat hardware versus firmware as unsettled; do not present cabling as the likely fault."
+            },
+            "recommend-spare-digitiser-visit": {
+              "domain": "revision",
+              "description": "Give the required clear recommendation: visit BR-12 with a spare digitiser."
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "description": "Remove the unsupported self-blame that touching the cabling caused the clipping."
+            },
+            "report-clipped-traces": {
+              "domain": "revision",
+              "description": "State that BR-12 has returned clipped traces, confirmed on the station health page."
+            },
+            "report-firmware-rollback-timing": {
+              "domain": "revision",
+              "description": "State that the clipping has been present since the digitiser firmware rollback."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Petra decides firmware and asked for a clear recommendation in every fault message. Confirmed facts are clipped BR-12 traces since the rollback, a proposed spare-digitiser visit, and a free slot. The draft buries the fault, omits the rollback and the recommendation, and blames cabling without evidence. That fails the message's purpose. Excessive self-deprecation is a concrete tone risk, not hostility."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["recorded-pressure-figure"],
+          "required_revision_concepts": [
+            "ask-go-no-go",
+            "leave-run-booking-to-marisol",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-decade-high-base-pressure"
+          ],
+          "allowed_revision_concepts": [
+            "ask-go-no-go",
+            "leave-run-booking-to-marisol",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "recorded-pressure-figure-placeholder",
+            "remove-unsafe-commitment",
+            "report-decade-high-base-pressure"
+          ],
+          "concept_definitions": {
+            "ask-go-no-go": {
+              "domain": "revision",
+              "description": "Ask Ingrid for go or no-go on the marginal pump-down / Caldermoor run."
+            },
+            "leave-run-booking-to-marisol": {
+              "domain": "revision",
+              "description": "Do not move the Caldermoor booking; run bookings sit with Marisol Cheng."
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "description": "If a raw pressure number is required and not in hand, keep a placeholder rather than inventing one."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep pump-down records with Nils, bookings with Marisol, and marginal go/no-go with Ingrid."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Ingrid Sandoval as the addressee; do not copy Caldermoor."
+            },
+            "recorded-pressure-figure": {
+              "domain": "question",
+              "description": "Ask for the numeric base-pressure reading from the pump-down sheet if Ingrid needs more than 'one decade above spec'."
+            },
+            "recorded-pressure-figure-placeholder": {
+              "domain": "revision",
+              "description": "Keep 'one decade above spec' or a placeholder; do not invent a torr/mbar value."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Remove Nils pushing the Caldermoor run back a couple of slots."
+            },
+            "report-decade-high-base-pressure": {
+              "domain": "revision",
+              "description": "State that the last pump-down held one decade above spec."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Ingrid gives go/no-go on a marginal pump-down; Marisol moves bookings; Nils owns the chamber and the sheet. The draft has Nils slip Caldermoor himself. That is an ownership contradiction. Re-pumping is within his scope if stated as his next action, not as a substitute for Ingrid's decision. The available pressure fact is one decade above spec; do not invent a raw number. Tone is plain."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["recorded-pressure-figure"],
+          "required_revision_concepts": [
+            "ask-go-no-go",
+            "leave-run-booking-to-marisol",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "report-decade-high-base-pressure"
+          ],
+          "allowed_revision_concepts": [
+            "ask-go-no-go",
+            "leave-run-booking-to-marisol",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "recorded-pressure-figure-placeholder",
+            "report-decade-high-base-pressure"
+          ],
+          "concept_definitions": {
+            "ask-go-no-go": {
+              "domain": "revision",
+              "description": "Ask Ingrid for go or no-go on the marginal pump-down / next booked run."
+            },
+            "leave-run-booking-to-marisol": {
+              "domain": "revision",
+              "description": "Keep any booking change with Marisol."
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "description": "If a raw pressure number is required and not in hand, keep a placeholder."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep pump-down records with Nils, bookings with Marisol, and go/no-go with Ingrid."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Ingrid Sandoval as the addressee."
+            },
+            "recorded-pressure-figure": {
+              "domain": "question",
+              "description": "Ask for the numeric base-pressure reading from the pump-down sheet if needed."
+            },
+            "recorded-pressure-figure-placeholder": {
+              "domain": "revision",
+              "description": "Keep 'one decade above spec' or a placeholder; do not invent a raw value."
+            },
+            "report-decade-high-base-pressure": {
+              "domain": "revision",
+              "description": "State that the last pump-down held one decade above spec."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The user withdrew the booking move. Remaining gaps are that Ingrid still must be asked for go/no-go and that the only confirmed pressure fact is one decade above spec. Re-pump overnight is Nils's work if included. No longer a direct contradiction; still a concrete decision-handoff gap."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["recorded-pressure-figure"],
+          "required_revision_concepts": [
+            "ask-go-no-go",
+            "include-seal-replacement",
+            "leave-run-booking-to-marisol",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-next-pump-down",
+            "report-decade-high-base-pressure"
+          ],
+          "allowed_revision_concepts": [
+            "ask-go-no-go",
+            "include-seal-replacement",
+            "leave-run-booking-to-marisol",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-next-pump-down",
+            "recorded-pressure-figure-placeholder",
+            "report-decade-high-base-pressure"
+          ],
+          "concept_definitions": {
+            "ask-go-no-go": {
+              "domain": "revision",
+              "description": "Ask Ingrid for go or no-go; do not treat the next pump-down as already clean."
+            },
+            "include-seal-replacement": {
+              "domain": "revision",
+              "description": "State that the roughing-pump seal was replaced this morning."
+            },
+            "leave-run-booking-to-marisol": {
+              "domain": "revision",
+              "description": "Keep any booking change with Marisol."
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "description": "If a raw pressure number is required and not in hand, keep a placeholder."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep go/no-go with Ingrid."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Ingrid Sandoval as the addressee."
+            },
+            "qualify-next-pump-down": {
+              "domain": "revision",
+              "description": "Treat 'may well be clean' as unconfirmed; do not drop the decade-high last reading."
+            },
+            "recorded-pressure-figure": {
+              "domain": "question",
+              "description": "Ask for the numeric base-pressure reading from the pump-down sheet if needed."
+            },
+            "recorded-pressure-figure-placeholder": {
+              "domain": "revision",
+              "description": "Keep 'one decade above spec' or a placeholder; do not invent a raw value."
+            },
+            "report-decade-high-base-pressure": {
+              "domain": "revision",
+              "description": "State that the last pump-down held one decade above spec."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The morning seal replacement is new material and must be in the note. It does not make the last decade-high pump-down go away and does not let Nils declare the next pump-down clean. Ingrid still decides. The prior message does not still stand unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-client-contact",
+            "no-engagement-conclusion",
+            "omit-unconfirmed-variance-figure",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "report-recon-unfinished"
+          ],
+          "allowed_revision_concepts": [
+            "no-client-contact",
+            "no-engagement-conclusion",
+            "omit-unconfirmed-variance-figure",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "report-recon-unfinished"
+          ],
+          "concept_definitions": {
+            "no-client-contact": {
+              "domain": "revision",
+              "description": "Do not claim or make contact with Umberto; nothing has been sent to the client."
+            },
+            "no-engagement-conclusion": {
+              "domain": "revision",
+              "description": "Do not state an engagement conclusion before the workings are stood up."
+            },
+            "omit-unconfirmed-variance-figure": {
+              "domain": "revision",
+              "description": "Do not keep a twelve percent variance figure; situation facts only confirm an unfinished trace."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep workings and the evidence index with Claudia; keep conclusions and client letters with Bo."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Bo Hjaltalin as the addressee; do not copy Umberto."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Remove the claim that Umberto was promised an answer shortly."
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "description": "Remove the claim that the variance is deliberate."
+            },
+            "report-recon-unfinished": {
+              "domain": "revision",
+              "description": "State that the stock reconciliation variance is not finished tracing."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Bo owns conclusions and client letters; nothing has been sent to the client; the variance is not finished tracing. The draft invents a twelve percent figure, calls it deliberate, and says Umberto was already promised an answer. That is an unsupported accusation, an unauthorized client commitment, and a contradiction of 'nothing sent'. Tone carries a major intent accusation."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-client-contact",
+            "no-engagement-conclusion",
+            "omit-unconfirmed-variance-figure",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-recon-unfinished"
+          ],
+          "allowed_revision_concepts": [
+            "no-client-contact",
+            "no-engagement-conclusion",
+            "omit-unconfirmed-variance-figure",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "report-recon-unfinished"
+          ],
+          "concept_definitions": {
+            "no-client-contact": {
+              "domain": "revision",
+              "description": "Do not claim or make contact with Umberto."
+            },
+            "no-engagement-conclusion": {
+              "domain": "revision",
+              "description": "Do not state an engagement conclusion."
+            },
+            "omit-unconfirmed-variance-figure": {
+              "domain": "revision",
+              "description": "Keep the twelve percent figure out, as the user instructed."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep client letters with Bo."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Bo Hjaltalin as the addressee."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Remove the remaining Umberto 'answer shortly' line."
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "description": "Keep the deliberate line out."
+            },
+            "report-recon-unfinished": {
+              "domain": "revision",
+              "description": "State that the recon is still being traced."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The user withdrew the twelve percent figure and the deliberate line. The remaining 'I have told Umberto we will have an answer shortly' is still an unauthorized client commitment and still conflicts with nothing having been sent. Responsibility stays Red. Tone is no longer accusatory once that line is out of scope."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-client-contact",
+            "no-engagement-conclusion",
+            "omit-unconfirmed-variance-figure",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-recon-unfinished",
+            "shorten-for-teams"
+          ],
+          "allowed_revision_concepts": [
+            "no-client-contact",
+            "no-engagement-conclusion",
+            "omit-unconfirmed-variance-figure",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "report-recon-unfinished",
+            "shorten-for-teams"
+          ],
+          "concept_definitions": {
+            "no-client-contact": {
+              "domain": "revision",
+              "description": "Do not claim or make contact with Umberto."
+            },
+            "no-engagement-conclusion": {
+              "domain": "revision",
+              "description": "Do not state an engagement conclusion."
+            },
+            "omit-unconfirmed-variance-figure": {
+              "domain": "revision",
+              "description": "Keep the twelve percent figure out."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep client letters with Bo."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Bo Hjaltalin as the addressee on Teams."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Remove the Umberto 'answer shortly' line."
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "description": "Keep the deliberate line out."
+            },
+            "report-recon-unfinished": {
+              "domain": "revision",
+              "description": "State briefly that the recon is still being traced."
+            },
+            "shorten-for-teams": {
+              "domain": "revision",
+              "description": "Fit the same constraints into a much shorter Teams message."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Channel change to Teams requires a shorter note but does not withdraw the Umberto commitment or restore a figure or a conclusion. Still report only that tracing is unfinished, and still keep the client off the thread."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "ask-substitution-decision",
+            "lead-with-decision-ask",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "report-cabins-waiting",
+            "report-substitute-grade"
+          ],
+          "allowed_revision_concepts": [
+            "ask-substitution-decision",
+            "lead-with-decision-ask",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "report-aleksi-waiting",
+            "report-cabins-waiting",
+            "report-substitute-grade"
+          ],
+          "concept_definitions": {
+            "ask-substitution-decision": {
+              "domain": "revision",
+              "description": "Ask Jonty whether to accept or reject the substitute aspen blanks."
+            },
+            "lead-with-decision-ask": {
+              "domain": "revision",
+              "description": "Put the accept/reject ask in the first two lines because Jonty stops there."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep supplier-substitution accept/reject with Jonty."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Jonty Kirkbride as the addressee."
+            },
+            "report-aleksi-waiting": {
+              "domain": "revision",
+              "description": "Optionally state that Aleksi is waiting to hear whether the blanks stay on site."
+            },
+            "report-cabins-waiting": {
+              "domain": "revision",
+              "description": "State that two cabins are part-built and waiting on bench blanks."
+            },
+            "report-substitute-grade": {
+              "domain": "revision",
+              "description": "State that Kvalstrom sent a substitute grade for the aspen blanks."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Jonty owns substitution accept/reject; Elsa correctly asks him and does not brief Kvalstrom in this draft. Facts (substitute grade; two cabins waiting) are supported. The accept/reject ask sits after the first two lines, and Jonty stops at two lines, so the decision can be missed. Tone is fine. Aleksi waiting is optional context."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-already-told-aleksi",
+            "report-cabins-waiting",
+            "report-substitute-grade"
+          ],
+          "allowed_revision_concepts": [
+            "ask-substitution-ratification",
+            "lead-with-decision-ask",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-already-told-aleksi",
+            "report-cabins-waiting",
+            "report-substitute-grade"
+          ],
+          "concept_definitions": {
+            "ask-substitution-ratification": {
+              "domain": "revision",
+              "description": "Ask Jonty to ratify or unwind the already-stated accept, which is still his decision."
+            },
+            "lead-with-decision-ask": {
+              "domain": "revision",
+              "description": "Keep the governing fact and ask in the first two lines."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep substitution accept/reject with Jonty even after Elsa spoke to Aleksi."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Jonty Kirkbride as the addressee."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Do not write as if the accept/reject choice is still open and unsaid to the supplier."
+            },
+            "report-already-told-aleksi": {
+              "domain": "revision",
+              "description": "State that Elsa already told Aleksi the blanks would be taken so the line kept moving."
+            },
+            "report-cabins-waiting": {
+              "domain": "revision",
+              "description": "State that two cabins are waiting on the blanks."
+            },
+            "report-substitute-grade": {
+              "domain": "revision",
+              "description": "State that Kvalstrom sent a substitute grade."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Elsa now says she already told Aleksi they would take the blanks. That is Jonty's decision, already committed externally, and anything said to Kvalstrom must match internally. The turn-1 ask 'whether to take them or send them back' is now a direct contradiction. Rewrite to report the substitute, the waiting cabins, and the already-made accept."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-already-told-aleksi",
+            "report-substitute-grade",
+            "two-line-limit"
+          ],
+          "allowed_revision_concepts": [
+            "ask-substitution-ratification",
+            "lead-with-decision-ask",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "report-already-told-aleksi",
+            "report-cabins-waiting",
+            "report-substitute-grade",
+            "two-line-limit"
+          ],
+          "concept_definitions": {
+            "ask-substitution-ratification": {
+              "domain": "revision",
+              "description": "Ask Jonty to ratify or unwind the already-stated accept."
+            },
+            "lead-with-decision-ask": {
+              "domain": "revision",
+              "description": "Put the already-told-Aleksi fact and the ask in the first two lines."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep substitution accept/reject with Jonty."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Jonty Kirkbride as the addressee."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Do not write as if the supplier has not already been told they would take the blanks."
+            },
+            "report-already-told-aleksi": {
+              "domain": "revision",
+              "description": "State in the two-line window that Elsa already told Aleksi they would take the blanks."
+            },
+            "report-cabins-waiting": {
+              "domain": "revision",
+              "description": "State that two cabins are waiting if it still fits."
+            },
+            "report-substitute-grade": {
+              "domain": "revision",
+              "description": "State that Kvalstrom sent a substitute grade."
+            },
+            "two-line-limit": {
+              "domain": "revision",
+              "description": "Keep the whole note to two lines."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Tightening to two lines does not clear the unauthorized accept already given to Aleksi. The two-line note must still say substitute grade plus already-told-Aleksi, and must still leave ratification with Jonty. Cabins-waiting may drop if it cannot fit."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "keep-visit-booking-with-ruth",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-po-and-quote-refs",
+            "redirect-po-amend-to-wilma",
+            "remove-unsafe-commitment",
+            "report-frost-window"
+          ],
+          "allowed_revision_concepts": [
+            "keep-visit-booking-with-ruth",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-po-and-quote-refs",
+            "redirect-po-amend-to-wilma",
+            "remove-unsafe-commitment",
+            "report-frost-window"
+          ],
+          "concept_definitions": {
+            "keep-visit-booking-with-ruth": {
+              "domain": "revision",
+              "description": "Keep booking the service visit with Ruth once the part is on order."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep PO amendments with Wilma; keep grower relationship and service delivery with Marc."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Marc Delahaye as the addressee of this one message; do not recast the mail as if Wilma were the To line."
+            },
+            "preserve-po-and-quote-refs": {
+              "domain": "revision",
+              "description": "Keep purchase order 5512 and quote ADS-2290 from Ardennes Drive Systems."
+            },
+            "redirect-po-amend-to-wilma": {
+              "domain": "revision",
+              "description": "State that Wilma Trescothick raises PO amendments and ask Marc to get the pinion onto PO 5512 through her."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Do not ask Marc to amend the purchase order himself."
+            },
+            "report-frost-window": {
+              "domain": "revision",
+              "description": "State that Pellworth need the fan running before the next frost window."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Marc is the service manager and a valid addressee for the grower/frost risk, but he does not raise or amend purchase orders; Wilma does. Asking him to amend PO 5512 is a direct ownership contradiction. One message only, grower not copied: keep Marc as recipient, move the PO action to Wilma, keep PO 5512 and ADS-2290, keep visit booking with Ruth."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_concepts": ["obscured-flow-reading"],
+          "allowed_question_concepts": [
+            "obscured-flow-reading",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "keep-reduced-mode-as-ask",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-visible-fan-id",
+            "report-fan-overload-trips"
+          ],
+          "allowed_revision_concepts": [
+            "keep-reduced-mode-as-ask",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-visible-fan-id",
+            "report-fan-overload-trips"
+          ],
+          "concept_definitions": {
+            "keep-reduced-mode-as-ask": {
+              "domain": "revision",
+              "description": "Keep reduced ventilation mode as a request to Dana, not as a mode Priit has set."
+            },
+            "obscured-flow-reading": {
+              "domain": "question",
+              "description": "Ask Priit to restate the portal flow figure; a cursor or block sits between the leading 1 and .6 m3/s in the screenshot."
+            },
+            "operational-impact": {
+              "domain": "question",
+              "description": "Ask what the trip and reduced flow mean for the northbound bore if mode is not reduced."
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "description": "Do not guess the obscured flow digit; use a placeholder until Priit restates the reading."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep jet-fan inspection with Priit and ventilation-mode decisions with Dana."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Dana Miyashiro as the addressee."
+            },
+            "preserve-visible-fan-id": {
+              "domain": "revision",
+              "description": "Keep the visible fan identifier FAN-1O74 as written in the screenshot; do not normalise O to 0."
+            },
+            "report-fan-overload-trips": {
+              "domain": "revision",
+              "description": "State that jet fan FAN-1O74 in the northbound bore keeps tripping on overload."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft exists only in the opened screenshot (Rivet chat, unsent, to Dana). Visible text: FAN-1O74 in the northbound bore keeps tripping on overload; portal flow is written as 1[block].6 m3/s; Priit asks Dana to put the bore into reduced mode until they pull and check the fan. Dana owns that mode decision, so the ask is correctly scoped. The flow digit under the block must not be guessed; ask Priit to restate it and placeholder the number. Tone is direct and short enough for a control-room screen."
+        }
+      ]
+    },
+    {
+      "case_id": "V3-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "leave-approvals-to-sofia",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "report-drum-out-of-tolerance",
+            "report-lift-plan-changed",
+            "report-unauthorized-crane-hire",
+            "report-unauthorized-lift-signoff"
+          ],
+          "allowed_revision_concepts": [
+            "leave-approvals-to-sofia",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "report-drum-out-of-tolerance",
+            "report-lift-plan-changed",
+            "report-unauthorized-crane-hire",
+            "report-unauthorized-lift-signoff"
+          ],
+          "concept_definitions": {
+            "leave-approvals-to-sofia": {
+              "domain": "revision",
+              "description": "Leave cost commitments and revised-lift-plan approval with Sofia."
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "description": "Keep overhaul and yard liaison with Owen; keep cost and lift-plan approval with Sofia."
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "description": "Keep Sofia Lindenberg as the addressee."
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "description": "Do not present crane-hire cover or Owen's lift-plan sign-off as authorized."
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "description": "Remove the line blaming planners for not doing their job the first time."
+            },
+            "report-drum-out-of-tolerance": {
+              "domain": "revision",
+              "description": "State that the Kestrel Yard winch drum came back out of tolerance."
+            },
+            "report-lift-plan-changed": {
+              "domain": "revision",
+              "description": "State that the lift plan was revised after the drum measurement."
+            },
+            "report-unauthorized-crane-hire": {
+              "domain": "revision",
+              "description": "Report that Owen already told the yard they will cover crane hire, which is a cost commitment he does not own."
+            },
+            "report-unauthorized-lift-signoff": {
+              "domain": "revision",
+              "description": "Report that Owen signed off the revised lift plan himself, which is Sofia's approval."
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft exists only in the opened screenshot (mail, unsent, to Sofia). Visible text: Kestrel Yard winch drum out of tolerance; lift plan changed; Owen already told the yard they will cover crane hire; he signed off the revised lift plan himself; he blames planners. Sofia owns cost commitments and lift-plan approval. Those two already-claimed actions are unsafe commitments; the planners line is an unsupported accusation and a tone risk. The yard safety file will keep whatever is sent, so the rewrite must report the drum and the unauthorised acts without repeating the blame or treating the approvals as valid."
+        }
+      ]
+    }
+  ]
+}

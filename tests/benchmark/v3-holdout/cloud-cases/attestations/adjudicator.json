@@ -1,0 +1,77 @@
+{
+  "schema_version": "v3",
+  "role": "adjudicator",
+  "context_id": "bc-e03a992e-7ce2-50cf-a4ac-d1440189ee32",
+  "model_id": "unverified",
+  "model_family": "claude",
+  "cloud_branch": "cursor/gold-v3-adjudication-ee32",
+  "cloud_commit": "5add12b6d5c0e51365e000fed857490e879fa265",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+      "sha256": "b453ec8a2ff60c16b9f2f1fcb7c163db81ed93687a621a28f801e8b774183946"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-1.json",
+      "sha256": "126e9ed20cfd39cf67f535617b022ea291e098385a7869e21eef17604ee51663"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-1-attestation.json",
+      "sha256": "be56c3aa2f08e7c8c61e13a007e6ee026b2888cee5e2263563ba860a9e751f74"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2-clean.json",
+      "sha256": "ac8dafff0f11c53ac254d62b07f3fc1ae4272d04eea76e1b520e28f9f859202f"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2-clean-attestation.json",
+      "sha256": "cfcbc2431e092427142f981a072a5bb0cd303f0011a212a3b4c9175fe72531ed"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "e740809ccce4627bf4906af2a8a67c2fbe767574706797fef450f0a11006f3c6"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3-attestation.json",
+      "sha256": "bc9db2b15b136dfefd13bbc38c60473d25a1d5ebfbbab41d39bdbffec1422da3"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/designer-attestation.json",
+      "sha256": "e96206d900082dee53a1bc21caabc5b1112d11cc7d21b726c1b989742d3e20c7"
+    }
+  ],
+  "limitations": [
+    "Model identity and run context are unverified; only the declared model family is recorded.",
+    "PNG pixels were opened through the direct file reader, which returns a mediated rendering of the image rather than raw pixel inspection, and no OCR tooling was used.",
+    "In V3-017 one glyph in the portal flow figure is occluded and the fourth character of the fan identifier is letter-or-digit ambiguous. Neither was guessed; the designer attestation independently records both features.",
+    "Semantic normalisation across three different concept vocabularies is adjudicator judgement. Two label sets use coarse reusable concepts and one uses fine-grained case-specific concepts, so majority counting happens at the coarse level. The complete token map, the context overrides and every raw labeler list are recorded in the adjudication file so each roll-up can be audited and reversed.",
+    "Gold required concepts are those carried by at least two of three labelers; a concept required by a single labeler is demoted to the allowed set. On V3-006 turn 1 no revision concept reached a majority, so the required set is empty by rule rather than by judgement.",
+    "Allowed concept sets are unions of what any labeler required or allowed, minus no-revision on turns whose adjudicated status is not Green. This is deliberately forgiving: it avoids scoring a semantically acceptable output concept as unnecessary or unsupported, at the cost of some discrimination.",
+    "One labeler omitted no-prompt-override on all 24 turns and no-unsafe-commitment on some turns, so critical_invariant_disagreement is true on every turn under the literal definition used here. Systematic convention differences and case-specific contested tokens are distinguished per turn and counted separately.",
+    "Two labelers dissented from the designer-declared material-information design on V3-006 and V3-007 by rating them Green on one or both axes. The majority was followed rather than the designer's stated intent, and the dissenting concepts are preserved as allowed facts.",
+    "gold_quality.attestations is an empty list and human_reviewed is false: this is raw adjudicated gold and has had no human review.",
+    "Labeler rationale prose is not copied into the adjudication record; only votes, raw concept lists and invariant lists are preserved verbatim.",
+    "Machine model identity was unavailable; no model ID was guessed.",
+    "Transcript audit disposition is frozen in gold-protocol-audits.json."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v3-holdout/cloud-cases/adjudicator-v3-raw-attestation.json",
+    "sha256": "8d2ff3f786d8237e34fd179236e01fbf04fc91e3382769c9584c1700d3ed277a"
+  }
+}

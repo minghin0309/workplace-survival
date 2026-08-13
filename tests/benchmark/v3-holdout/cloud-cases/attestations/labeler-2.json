@@ -1,0 +1,23 @@
+{
+  "schema_version": "v3",
+  "role": "labeler-2",
+  "context_id": "bc-b0b46ffc-6a40-57cc-9e19-fe203c39480a",
+  "model_id": "unverified",
+  "model_family": "kimi",
+  "cloud_branch": "cursor/gold-labeler-2-clean-v3-480a",
+  "cloud_commit": "c266f11ef135156d03918852cc4d1a67d935caa9",
+  "files_read": [],
+  "limitations": [
+    "Labels reflect independent judgment of the case envelope only; facts were never invented or externally verified, and missing governing information was rated Gray or carried as placeholders rather than assumed.",
+    "For V3-017 the obscured flow digit is genuinely unreadable in the only copy of the draft; the Gray rating and the required confirmation question follow from that ambiguity.",
+    "Image content was read from the rendered bitmaps only; no OCR tooling, image metadata, or generator artifacts were consulted.",
+    "Ratings for correction_state turns reflect the cumulative draft state at each turn, including corrections and new facts supplied by the user in later turns.",
+    "Concept strings use the canonical semantic ontology where applicable; locally defined concepts are declared in concept_definitions within the label file.",
+    "Machine model identity was unavailable; no model ID was guessed.",
+    "Transcript audit disposition is frozen in gold-protocol-audits.json."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2-clean-attestation.json",
+    "sha256": "cfcbc2431e092427142f981a072a5bb0cd303f0011a212a3b4c9175fe72531ed"
+  }
+}

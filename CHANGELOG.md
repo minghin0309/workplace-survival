@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3 unseen holdout
+
+- Generated 18 unseen cases, 24 turns, and two deterministic image-only drafts in an isolated cloud context.
+- Built audited Grok/Kimi/GPT gold with Claude-family adjudication and preserved all vote distributions.
+- Rejected an incomplete labeler attempt that read runtime Skill files.
+- Applied v3 coverage before SUT execution: revision and uncertainty gates passed, but required questions covered only 2 concepts across 2 cases.
+- Marked the holdout `INVALID_COVERAGE`, froze 25 evidence artifacts, and correctly prevented SUT execution and formal scoring.
+- Confirmed no Skill defect because the runtime was never executed.
+
 ### Benchmark methodology v3 scorer hardening
 
 - Archived benchmark v2 permanently as `SCORER_ERROR` without rescoring.

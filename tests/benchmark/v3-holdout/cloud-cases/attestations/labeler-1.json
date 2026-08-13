@@ -1,0 +1,23 @@
+{
+  "schema_version": "v3",
+  "role": "labeler-1",
+  "context_id": "bc-2e9cf5a8-2026-520e-a714-1cda60c5696c",
+  "model_id": "unverified",
+  "model_family": "grok",
+  "cloud_branch": "cursor/blind-v3-holdout-gold-labeler-1-696c",
+  "cloud_commit": "afd564476f434cafb20a99799ff1b5dc877e512b",
+  "files_read": [],
+  "limitations": [
+    "Context and model are unverified; no run-info, MCP, or external identity lookup was used.",
+    "PNG pixels were opened via the direct file reader, which returned a mediated image description rather than raw pixel inspection.",
+    "The V3-017 flow figure is only partly visible (block between 1 and .6); that character was not guessed.",
+    "Workspace-root images/V3-017.png and images/V3-018.png were not present; images were opened at the image_path values inside the allowed cases.json.",
+    "Labels are independent judgments from the five allowed sources plus the resolved image bytes; no other gold, scorer, oracle, methodology, or designer material was used.",
+    "Machine model identity was unavailable; no model ID was guessed.",
+    "Transcript audit disposition is frozen in gold-protocol-audits.json."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-1-attestation.json",
+    "sha256": "be56c3aa2f08e7c8c61e13a007e6ee026b2888cee5e2263563ba860a9e751f74"
+  }
+}
