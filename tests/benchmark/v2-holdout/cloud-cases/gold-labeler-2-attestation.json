@@ -1,0 +1,73 @@
+{
+  "schema_version": "v2",
+  "attestation_id": "gold-labeler-2-attestation",
+  "role": "labeler-2",
+  "labeler_id": "gold-labeler-2",
+  "model_family": "grok",
+  "model_name": "Cursor Grok 4.5",
+  "context_id": "bc-1ce294c2-e4d2-5d25-b8fe-40cb5279c94a",
+  "run_url": "https://cursor.com/agents/bc-1ce294c2-e4d2-5d25-b8fe-40cb5279c94a",
+  "branch": "cursor/v2-gold-labeler-2-c94a",
+  "labeled_at_utc": "2026-08-13T04:35:58Z",
+  "case_set_id": "v2-holdout-cloud-cases",
+  "case_count": 18,
+  "turn_count": 24,
+  "labels_path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2.json",
+  "labels_sha256": "8296e9fbac773b7bb9f314a61a616f8299956be9d35348a0f17b9ecea88c894f",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828",
+      "role": "v2_cases"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24",
+      "role": "holdout_image"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab",
+      "role": "holdout_image"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479",
+      "role": "gold_rubric"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+      "role": "semantic_ontology"
+    }
+  ],
+  "files_not_read": [
+    "tests/benchmark/v2-holdout/cloud-cases/oracle-notes.json",
+    "tests/benchmark/v2-holdout/V2_HOLDOUT_PLAN.md",
+    "tests/benchmark/v2-holdout/V2_CASE_BRIEF.md",
+    "tests/benchmark/score_semantic.py",
+    "tests/benchmark/validate_benchmark.py",
+    "tests/blind/score_blind.py",
+    ".cursor/skills/workplace-survival/",
+    "any Skill runtime outputs",
+    "any other gold-labeler labels or attestations",
+    "adjudication or evaluation artifacts",
+    "prior blind holdout gold labels"
+  ],
+  "isolation_claims": [
+    "Case content judgments used only cases.json, V2-017.png, V2-018.png, GOLD_RUBRIC.md, and SEMANTIC_ONTOLOGY.json.",
+    "Oracle notes, other labeler outputs, SUT outputs, scorer thresholds, and Skill runtime were not used to choose routes, ratings, concepts, or invariants.",
+    "Image drafts for V2-017 and V2-018 were read from the PNG pixels; image_spec text was not relied on as a substitute for opening the images."
+  ],
+  "limitations": [
+    "No machine filesystem access audit log was available; isolation is self-attested.",
+    "V2 list field names (required/allowed_*_concepts with concept_id and ontology description) follow BENCHMARK_METHODOLOGY.md semantic-concept shape; that methodology file was consulted only for schema naming, not for case answers.",
+    "Ontology coverage is coarse relative to some case-specific facts; required/allowed concept lists use closest registered concept IDs only."
+  ],
+  "field_conventions": {
+    "question_and_revision_lists": "sorted arrays of {concept_id, description} using SEMANTIC_ONTOLOGY.json definitions",
+    "critical_invariants": "sorted applicable GOLD_RUBRIC canonical tokens",
+    "overall_derivation": "Red > Gray > Yellow > Green from responsibility and tone",
+    "null_ratings": "only for Intake, Scope, or Message-template mode (none in this set)"
+  }
+}
