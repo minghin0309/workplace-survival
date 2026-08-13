@@ -10,7 +10,7 @@
   "git_context": {
     "base_branch": "cursor/blind-v3-holdout-17a0",
     "working_branch": "cursor/gold-labeler-3-v3-holdout-708c",
-    "label_output_commit": "7cb53c012590214b3c13f48b5b9d0341659404a7",
+    "label_output_commit": "0e5e6d8cd32370ee34d8a4e731564b565940c645",
     "label_output_path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3.json",
     "attestation_path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3-attestation.json"
   },
@@ -40,13 +40,13 @@
     }
   ],
   "output_hashes_sha256": {
-    "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3.json": "33b8e6b6f7dfabf1def9444d7e2fd9d288d049d7dacbfdfeb1326152e81eccaa"
+    "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3.json": "e740809ccce4627bf4906af2a8a67c2fbe767574706797fef450f0a11006f3c6"
   },
   "validation": {
     "expected_cases": 18,
     "expected_turns": 24,
-    "validation_status_at_attestation_write": "pending post-attestation validation",
-    "notes": "The label file was committed and pushed before validation in order to preserve the output hash and commit cited above."
+    "validation_status_at_attestation_write": "passed",
+    "notes": "A narrow JSON validation checked 18 cases, 24 turns, case turn-count parity with cases.json, required concept subsets, sorted unique concept arrays, defined concepts, valid routes/ratings, sequential turn indexes, and derived overall ratings."
   },
   "protocol_violations": [
     {
