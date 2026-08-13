@@ -1,0 +1,72 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-017",
+  "attested_at_utc": "2026-08-13T10:35:45Z",
+  "image_opened_directly": true,
+  "context": {
+    "sut": "Workplace Survival",
+    "execution_mode": "SUT",
+    "case_scope": "V2-017 only",
+    "data_b_source": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+    "scoring_performed": false
+  },
+  "model": {
+    "name": "GPT-5.6 Sol",
+    "role": "Cursor Cloud coding agent"
+  },
+  "git": {
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "base_commit": "6e1c77d6da1fdd7a6592b54e3435ab413fd6b062",
+    "output_branch": "cursor/workplace-survival-v2-017-3a47",
+    "output_commit": "655349bfda860d0da6e34cfd6c4ca7dc28603d2b"
+  },
+  "reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-017.json",
+      "sha256": "6ba28b392bd904b0be5271fc50876578716c550da460e1ea034614f8f8602801"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24",
+      "opened_directly": true
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "sut-raw/V2-017.json",
+      "sha256": "6991bfe77ce2f74ef8b8d3d01c8f6e2ccdeffe726023d757156e59cbc7f5e3fd",
+      "raw_response_sha256": "875d39e622c53113771c965e446b2e28c58c12bdf067cc6b8fb0fe48beb9c28d",
+      "commit": "655349bfda860d0da6e34cfd6c4ca7dc28603d2b"
+    }
+  ],
+  "limitations": [
+    "The review used only the supplied case JSON, directly opened PNG, and pinned Workplace Survival files.",
+    "The image text was assessed from the visible pixels; no facts outside the authorized inputs were verified.",
+    "No benchmark expectations were read and no scoring was performed."
+  ],
+  "isolation": {
+    "other_case_inputs_read": false,
+    "expectations_read": false,
+    "repository_content_search_performed": false,
+    "directory_listing_performed": false,
+    "repository_content_reads_limited_to_declared_reads": true,
+    "git_operations_limited_to_branching_committing_and_pushing": true
+  },
+  "violations": []
+}
