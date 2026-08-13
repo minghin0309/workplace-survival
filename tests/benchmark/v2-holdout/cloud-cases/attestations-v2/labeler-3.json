@@ -1,0 +1,40 @@
+{
+  "schema_version": "v2",
+  "role": "labeler-3",
+  "context_id": "bc-f40cbaca-7400-59c7-9772-52e73bf156bd",
+  "model_id": "unverified",
+  "model_id_provenance": "Cloud run metadata did not expose an exact machine model ID; no ID was guessed.",
+  "model_family": "kimi",
+  "model_family_provenance": "protocol-assigned; not machine-metadata-verified",
+  "cloud_branch": "cursor/v2-gold-labeler-3-56bd",
+  "cloud_commit": "c5fdaee38150e738bd4ca040c264fd5674ad0d8d",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json"
+    }
+  ],
+  "limitations": [
+    "The source attestation did not use the canonical limitations schema.",
+    "Machine model ID was unavailable from cloud run metadata; model_id is recorded as unverified and model_family is the protocol-assigned family."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3-attestation.json",
+    "sha256": "978a80d60c633f05c487f0949232b37b1cea67029d645f8121294c2df24a338f"
+  },
+  "normalization": {
+    "kind": "mechanical-schema-wrapper",
+    "semantic_decisions_changed": false
+  }
+}

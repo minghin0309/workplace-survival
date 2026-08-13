@@ -17,6 +17,28 @@ TURN_REQUIRED_KEYS = {"turn_index", "input_raw"}
 TURN_OPTIONAL_KEYS = {"image_path"}
 NOTE_KEYS = {"case_id", "design_intent", "difficulty_notes"}
 QUALITY_TIERS = {"human_reviewed", "heterogeneous_adjudicated", "gold_uncertain"}
+GOLD_TURN_KEYS = {
+    "turn_index",
+    "route",
+    "responsibility",
+    "tone",
+    "overall",
+    "required_question_concepts",
+    "allowed_question_concepts",
+    "required_revision_concepts",
+    "allowed_revision_concepts",
+    "concept_definitions",
+    "critical_invariants",
+    "rationale",
+    "gold_quality",
+}
+TURN_QUALITY_KEYS = {
+    "tier",
+    "three_way_categorical_disagreement",
+    "critical_invariant_disagreement",
+    "human_reviewed",
+    "unresolved_adjudication",
+}
 STAGE_ROLES = {
     "gold": {
         "cases",
@@ -189,6 +211,18 @@ def validate_gold(gold: dict) -> None:
             and isinstance(document["limitations"], list),
             "attestation provenance",
         )
+        if document["model_id"] == "unverified":
+            require(
+                any(
+                    "model" in limitation.lower()
+                    and (
+                        "unavailable" in limitation.lower()
+                        or "unverified" in limitation.lower()
+                    )
+                    for limitation in document["limitations"]
+                ),
+                "unverified model provenance not disclosed",
+            )
         source = document.get("source_attestation")
         if source is not None:
             require(set(source) == {"path", "sha256"}, "source attestation schema")
@@ -219,9 +253,45 @@ def validate_gold(gold: dict) -> None:
     )
     uncertain = total = 0
     for case in gold["cases"]:
-        for turn in case["turn_labels"]:
+        for expected_index, turn in enumerate(case["turn_labels"], start=1):
             total += 1
+            require(set(turn) == GOLD_TURN_KEYS, f"{case['case_id']}: gold turn schema")
+            require(turn["turn_index"] == expected_index, f"{case['case_id']}: gold turn order")
+            for field in ("responsibility", "tone", "overall"):
+                require(
+                    turn[field] in {"Green", "Yellow", "Red", "Gray", None},
+                    f"{case['case_id']}: {field}",
+                )
+            dimensions = (turn["responsibility"], turn["tone"])
+            if dimensions == (None, None):
+                require(turn["overall"] is None, f"{case['case_id']}: null overall")
+            else:
+                require(
+                    None not in dimensions
+                    and turn["overall"]
+                    == max(dimensions, key={"Green": 0, "Yellow": 1, "Gray": 2, "Red": 3}.get),
+                    f"{case['case_id']}: overall derivation",
+                )
+            for required_field, allowed_field in (
+                ("required_question_concepts", "allowed_question_concepts"),
+                ("required_revision_concepts", "allowed_revision_concepts"),
+            ):
+                required = turn[required_field]
+                allowed = turn[allowed_field]
+                require(
+                    isinstance(required, list)
+                    and isinstance(allowed, list)
+                    and required == sorted(set(required))
+                    and allowed == sorted(set(allowed))
+                    and all(isinstance(value, str) for value in required + allowed)
+                    and set(required) <= set(allowed),
+                    f"{case['case_id']}: concept schema",
+                )
             turn_quality = turn["gold_quality"]
+            require(
+                set(turn_quality) == TURN_QUALITY_KEYS,
+                f"{case['case_id']}: turn quality schema",
+            )
             tier = turn_quality["tier"]
             require(tier in QUALITY_TIERS, f"{case['case_id']}: quality tier")
             require(
