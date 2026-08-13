@@ -1,0 +1,50 @@
+{
+  "attestation_id": "gold-labeler-2-clean-attestation",
+  "label_set_id": "gold-labeler-2-clean",
+  "output_file": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2-clean.json",
+  "output_commit": "c266f11ef135156d03918852cc4d1a67d935caa9",
+  "output_sha256": "ac8dafff0f11c53ac254d62b07f3fc1ae4272d04eea76e1b520e28f9f859202f",
+  "base_branch": "cursor/blind-v3-holdout-17a0",
+  "work_branch": "cursor/gold-labeler-2-clean-v3-480a",
+  "reads_exact_five_only": [
+    "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+    "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+    "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+    "tests/blind/GOLD_RUBRIC.md",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json"
+  ],
+  "no_other_repository_paths_read": true,
+  "no_listing_search_or_glob_used": true,
+  "no_fallback_paths_used": true,
+  "isolation": "Labeling was performed independently from the five permitted inputs only. No Skill or runtime files, specs, tests, plans, methodology, scorer, oracle, designer attestation, other labelers' gold or outputs, history, pull requests, or external sources were read or consulted. No prior labels for this case set were seen.",
+  "images_opened": {
+    "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png": {
+      "opened": true,
+      "sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d",
+      "note": "Draft text exists only in the image. The measured portal flow value contains one obscured digit ('1', obscured digit, '.6 m3/s'); the digit was not guessed and the fan identifier FAN-1O74 was preserved exactly as rendered."
+    },
+    "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png": {
+      "opened": true,
+      "sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40",
+      "note": "Draft text exists only in the image; content was read from the image directly and not retyped or verified against any other source."
+    }
+  },
+  "coverage": {
+    "cases_labeled": 18,
+    "case_ids": ["V3-001", "V3-002", "V3-003", "V3-004", "V3-005", "V3-006", "V3-007", "V3-008", "V3-009", "V3-010", "V3-011", "V3-012", "V3-013", "V3-014", "V3-015", "V3-016", "V3-017", "V3-018"],
+    "turns_labeled": 24,
+    "complete": true
+  },
+  "model_family": "kimi",
+  "model_identity_verified": false,
+  "run_context": null,
+  "run_context_note": "The declaring task specifies model_family kimi; no runtime model identity or run context was independently verified, so run_context is null and model identity is unverified.",
+  "limitations": [
+    "Labels reflect independent judgment of the case envelope only; facts were never invented or externally verified, and missing governing information was rated Gray or carried as placeholders rather than assumed.",
+    "For V3-017 the obscured flow digit is genuinely unreadable in the only copy of the draft; the Gray rating and the required confirmation question follow from that ambiguity.",
+    "Image content was read from the rendered bitmaps only; no OCR tooling, image metadata, or generator artifacts were consulted.",
+    "Ratings for correction_state turns reflect the cumulative draft state at each turn, including corrections and new facts supplied by the user in later turns.",
+    "Concept strings use the canonical semantic ontology where applicable; locally defined concepts are declared in concept_definitions within the label file."
+  ],
+  "violations": []
+}
