@@ -38,6 +38,16 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/blind/BLIND_PLAN.md`
 - `tests/blind/GOLD_RUBRIC.md`
 - `tests/blind/REMEDIATION_TRIAGE.md`
+- `tests/blind/remediation/REMEDIATION_RESULTS.md`
+- `tests/blind/remediation/evidence/R1/mutant.diff`
+- `tests/blind/remediation/evidence/R1/oracle.json`
+- `tests/blind/remediation/evidence/R1/sut-output.txt`
+- `tests/blind/remediation/evidence/R2/mutant.diff`
+- `tests/blind/remediation/evidence/R2/oracle.json`
+- `tests/blind/remediation/evidence/R2/sut-output.txt`
+- `tests/blind/remediation/evidence/R3/mutant.diff`
+- `tests/blind/remediation/evidence/R3/oracle.json`
+- `tests/blind/remediation/evidence/R3/sut-output.txt`
 - `tests/blind/CLOUD_BLIND_RESULTS.md`
 - `tests/blind/cloud-holdout/adjudication-raw.json`
 - `tests/blind/cloud-holdout/adjudication.json`

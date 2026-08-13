@@ -1,0 +1,9 @@
+{
+  "test_case": "TC-113",
+  "classification": "FAIL",
+  "rationale": "The response gives the required yellow responsibility, green tone, and yellow overall ratings, uses the known prior-cause split, and keeps remediation ownership conditional in the revision. However, its only confirmation question asks who “we” refers to. It does not prioritize or ask about establishing the unknown current failure's root cause, directly matching the forbidden behavior of asking only who “we” refers to while ignoring the unknown current cause.",
+  "failed_assertions": [
+    "Prioritizes a question about the current failure's root cause before accepting fault or remediation ownership.",
+    "Does not ask only who “we” refers to while ignoring the unknown current cause."
+  ]
+}

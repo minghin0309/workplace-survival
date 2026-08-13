@@ -212,6 +212,20 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - failures are preserved before any product or test change.
 - Evidence: cloud agent branch, frozen artifacts, raw outputs, adjudication, score report, and method limitations.
 
+#### T14.3 — Blind defect remediation
+
+- [x] Completed
+
+- Source requirement: Confirmed product defects from the cloud blind diagnostic.
+- Owner files: `SPEC.md`, runtime Skill files, public regression cases, and `tests/blind/remediation/`.
+- Acceptance:
+  - all 18 diagnostic cases are re-triaged before product changes;
+  - benchmark/gold ambiguities do not become production rules;
+  - confirmed defects receive generalized rules and public regressions;
+  - existing functional and targeted suites do not regress;
+  - each remediation rule is protected by a killed mutant.
+- Evidence: triage, regression summary, remediation mutant diffs, raw outputs, and oracle results.
+
 ## Task template
 
 Copy this block when adding work:

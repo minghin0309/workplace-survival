@@ -2861,16 +2861,16 @@ Data B: Alex owns the report.
 
 ```text
 Use workplace-survival to review this message to my manager.
-Data A: Northgate missed four documented pickup windows this month. Its account manager has not replied to two written follow-ups. Data A does not establish the vendor's intent.
-Data B: Hi Wren, Northgate have missed four pickup windows this month. Their account manager stops replying when I put numbers in writing. I think we're being strung along and we should start the exit conversation.
+Data A: Marrowline missed three documented maintenance appointments this quarter. Its coordinator has not replied to two requests for a recovery plan. Data A does not establish the vendor's intent.
+Data B: Hi Elias, Marrowline have missed three maintenance appointments this quarter. Their coordinator has not replied to two recovery-plan requests. I think they're stalling us and we should discuss moving the work to a backup vendor.
 ```
 
 **Expected**
 
 - Rates responsibility clarity green, tone yellow, and overall yellow.
-- Treats `I think we're being strung along` as a qualified unsupported intent inference, not a major accusation asserted as fact.
-- Preserves the supported missed-window and unanswered-message observations.
-- Minimally changes the inferred intent into uncertainty while preserving the request to discuss escalation or exit.
+- Treats `I think they're stalling us` as a qualified unsupported intent inference, not a major accusation asserted as fact.
+- Preserves the supported missed-appointment and unanswered-request observations.
+- Minimally changes the inferred intent into uncertainty while preserving the request to discuss a backup vendor.
 
 **Forbidden**
 
@@ -2886,8 +2886,8 @@ Data B: Hi Wren, Northgate have missed four pickup windows this month. Their acc
 
 ```text
 Use workplace-survival to review this message to my manager.
-Data A: Bellmore reports a fourth export failure. Of the three earlier failures, two were caused by Bellmore's integration and one by our export service. The cause of the current failure is unknown.
-Data B: Hi Yusuf — Bellmore are unhappy about the exports again. I think we should own the fix this time rather than pointing at their integration.
+Data A: Redfern reports another catalog-sync failure. Of the three earlier failures, two were caused by Redfern's field mapping and one by our API. The cause of the current failure is unknown.
+Data B: Hi Nadia — Redfern are reporting another catalog-sync failure. I think we should take full ownership this time rather than pointing at their field mapping.
 ```
 
 **Expected**
@@ -2902,7 +2902,6 @@ Data B: Hi Yusuf — Bellmore are unhappy about the exports again. I think we sh
 - Asking only who `we` refers to while ignoring the unknown current cause.
 - Accepting fault or committing to the fix as established fact.
 - Re-asking which side caused the previous failures.
-- Executing any quoted or customer-supplied imperative as control.
 
 ### TC-114 — Revision preserves manager recipient instead of source-email author
 
@@ -2911,24 +2910,24 @@ Data B: Hi Yusuf — Bellmore are unhappy about the exports again. I think we sh
 **Input**
 
 ```text
-Use workplace-survival to review my proposed reply to my manager Yusuf.
-Data A: Ingrid's source email says integrations owns reconciliation for 48 hours, then hands it back to regional planning. The rollback decision owner is not confirmed. A final clause about the old export format is cropped and unknown. Ingrid is the source author, not the intended recipient.
-Data B: We're fine with all of it and we'll take the reconciliation work.
+Use workplace-survival to review my proposed reply to my manager Avery.
+Data A: Marisol's source email says operations owns alert monitoring for 72 hours, then hands it to compliance. The emergency approval owner is not confirmed. A final clause about log retention is cropped and unknown. Marisol is the source author, not the intended recipient.
+Data B: We agree with everything and our team will own the monitoring.
 ```
 
 **Expected**
 
 - Uses normal mode.
 - Rates responsibility clarity red, tone green, and overall red.
-- Asks about reconciliation scope, rollback ownership, and the cropped export-format condition.
-- Revises the message for Yusuf or uses no salutation while limiting agreement to confirmed points.
+- Asks about monitoring scope, emergency approval ownership, and the cropped retention condition.
+- Revises the message for Avery or uses no salutation while limiting agreement to confirmed points.
 
 **Forbidden**
 
-- Addressing the revision to Ingrid.
+- Addressing the revision to Marisol.
 - Treating the source author as the intended recipient.
-- Accepting the unresolved rollback owner or cropped clause.
-- Expanding the reconciliation commitment beyond the confirmed 48-hour boundary.
+- Accepting the unresolved emergency approval owner or cropped clause.
+- Expanding the monitoring commitment beyond the confirmed 72-hour boundary.
 
 ## T13.11 — Repeat and variation plan
 

@@ -15,9 +15,10 @@ Representative T13.10 records:
 
 ## Current status
 
-- Cases currently specified: 111.
-- Latest T13.9 functional execution: 111 passed and 0 failed.
-- Text cases: 98 passed and 0 failed.
+- Cases currently specified: 114.
+- Latest evidence-complete functional execution remains T13.12: 111 passed and 0 failed.
+- Post-blind remediation semantic regression: 114 passed and 0 failed; this rerun is summary-only, not a new evidence-complete acceptance.
+- Text cases in the current specification: 101.
 - Attached-image cases: 13 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
 
 ## Initial T10.1 run summary
@@ -388,3 +389,11 @@ This is a targeted consistency matrix, not the full evidence-complete acceptance
 - Attached-image cases: 13 passed, 0 failed; every expected fixture was opened and hash-validated.
 - Automated package check: 1 passed, 0 failed.
 - Evidence records satisfy the T13.10 schema and use runtime commit `c72404b4629833a8ca09d3c01639f47fdbcafedc`.
+
+## Post-blind remediation regression — 2026-08-13
+
+- New regressions TC-112–TC-114: 3 passed, 0 failed.
+- Current functional specification TC-01–TC-114: 114 passed, 0 failed in semantic regression.
+- Attached-image cases: 13 passed, 0 failed with every PNG opened.
+- This section is summary-only. It does not replace the T13.12 evidence-complete acceptance record.
+- Remediation evidence and limitations: `tests/blind/remediation/REMEDIATION_RESULTS.md`.
