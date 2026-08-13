@@ -1,0 +1,20 @@
+{
+  "schema_version": "v2",
+  "artifact": "sut-raw-output",
+  "case_id": "V2-002",
+  "generator_context_id": "unverified",
+  "requested_model_id": "gpt-5.6-sol-high-fast",
+  "machine_model_id": "unverified",
+  "runtime_commit": "6e1c77d6da1fdd7a6592b54e3435ab413fd6b062",
+  "input": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-002.json",
+    "sha256": "6c30a6f64e9726bdfa7dddec10884bf10826e256c7d4180dfc4cc1f3ceb62424"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "timestamp_utc": "2026-08-13T10:35:26Z",
+      "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Hollis Braun, a contractor rather than studio staff, owns the main kiln's pyrometer recalibration and moved it from 19 March to 2 April on 14 March.\n- Perrin owns the cone-six test tile programme and has moved the current batch to the small test kiln because the main kiln cannot be used for those tiles until recalibration.\n- The small test kiln holds twelve tiles per firing instead of forty, adding roughly four days while keeping the programme inside the 30 April client deadline.\n- Sunniva holds the contract with Hollis and is the only person who can press for an earlier date.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message identifies Hollis's date change, the resulting main-kiln block, Perrin's test-kiln mitigation, its capacity and schedule effects, and Sunniva's option to pursue the contractor.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"the contract is yours to lean on\" frames the contractor handoff as Sunniva's problem rather than neutrally identifying her option to press Hollis.\n- Communication risk: The responsibility-shifting phrasing may distract from the otherwise factual slip and mitigation update.\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSunniva - Hollis has pushed the pyrometer recalibration from 19 March to 2 April. That blocks cone-six tiles in the main kiln, so I have moved the current batch to the test kiln; twelve tiles per firing instead of forty. That adds about four days but still lands inside the 30 April client date. If you would like to press Hollis for an earlier date, that remains an option; otherwise I am happy running on the test kiln. Perrin"
+    }
+  ]
+}
