@@ -1,0 +1,1313 @@
+{
+  "schema_version": "v2",
+  "artifact": "gold-labels-readjudicated",
+  "case_set_id": "v2-holdout-cloud-cases",
+  "counts": {
+    "cases": 18,
+    "turns": 24
+  },
+  "gold_quality": {
+    "labeler_model_families": [
+      "claude",
+      "grok",
+      "kimi"
+    ],
+    "adjudicator_model_family": "gpt",
+    "human_review_available": false,
+    "adjudication_complete": true,
+    "vote_distributions_preserved": true,
+    "attestations": []
+  },
+  "cases": [
+    {
+      "case_id": "V2-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {},
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "Every claim in the draft is supported by the background: 18 of 22 done, four held on the 20x4 back-order, the 14 November date confirmed in writing by Rondel, and the Sint-Amands loop meaning no service impact before then. Ndidi commits only inside her own ownership (the schedule and supplier ordering) and leaves the frost advisory call with Tomasz, and the draft sits inside the roughly eighty word constraint, so both axes are Green and no rewrite is warranted.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {},
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "The slip is correctly attributed to the contractor Hollis Braun rather than to Perrin or the studio, the mitigation is already attached, the 30 April client date is preserved, and the decision that belongs to Sunniva (leaning on the contract) is handed to her without pressure. Nothing is claimed beyond the test tile programme Perrin owns, so responsibility and tone are both Green.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {},
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "Halvard states his committed workload and the regulator-facing 28 May date accurately, declines the additional audit without asserting authority over prioritisation, and cites Wren's own Monday confirmation of capacity rather than volunteering her. He explicitly leaves the decision with Delphine and offers to cost the trade-off if she overrides him, which is exactly the boundary the ownership map draws.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {},
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "The arithmetic and the contractual position are stated correctly: picture lock due 14 January, six working days late at 22 January, ten working days from lock landing on 5 February against a contractual 30 January. Mireille reports the QC position she owns, does not touch the client relationship or renegotiate dates herself, and asks the owner of that conversation to act today; the directness is proportionate to a contractual breach and does not tip into hostility.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-deadline",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "attribute-review-to-contractor",
+            "remove-completion-and-tolerance-claim",
+            "state-preliminary-verbal-readout",
+            "state-signoff-pending-with-geologist"
+          ],
+          "allowed_revision_concepts": [
+            "attribute-review-to-contractor",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-completion-and-tolerance-claim",
+            "remove-unsafe-commitment",
+            "state-own-contribution-accurately",
+            "state-preliminary-verbal-readout",
+            "state-signoff-pending-with-geologist"
+          ],
+          "concept_definitions": {
+            "attribute-review-to-contractor": "State that the casing-integrity log review was performed by Hargrove Subsurface Ltd with Ineke Sallenbach as reviewing engineer, not by the sender.",
+            "remove-completion-and-tolerance-claim": "Drop the assertions that the review is finished and that everything is within tolerance, neither of which the sender is qualified or authorised to make.",
+            "state-own-contribution-accurately": "Describe the sender's actual contribution as compiling the raw log data and producing the formatted export.",
+            "state-preliminary-verbal-readout": "Describe the 8 May Hargrove readout as preliminary and verbal, with the written report expected 10 May.",
+            "state-signoff-pending-with-geologist": "Note that casing-integrity sign-off sits with wellsite geologist Yusuf Okpara and has not yet happened."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "Oleander claims completion and a tolerance verdict on work he neither performed nor is qualified to interpret, and for which the only authorised signatory, Yusuf Okpara, has not reviewed anything. Because Bronwyn copies his words straight into a contractual daily well report, the misattribution is a main-purpose failure rather than a wording problem, so responsibility is Red; the wording itself is courteous and appropriate, so tone stays Green.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-owner",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation",
+            "state-handover-completed-and-signed",
+            "state-rota-ownership-outside-remit"
+          ],
+          "allowed_revision_concepts": [
+            "avoid-blaming-named-volunteer",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "reference-prior-written-rota-warnings",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-handover-completed-and-signed",
+            "state-no-unique-material-lost",
+            "state-rota-ownership-outside-remit"
+          ],
+          "concept_definitions": {
+            "avoid-blaming-named-volunteer": "Describe the rota gap structurally without directing blame at the individual volunteer or at Fenwick Orsolya personally.",
+            "reference-prior-written-rota-warnings": "Note that the absence of a named Thursday closer was raised in writing on 4 June and 21 August.",
+            "state-handover-completed-and-signed": "State that Juno signed the 12 September handover checklist at 16:52 and that the volunteer on shift countersigned it.",
+            "state-no-unique-material-lost": "State that the affected accessions are duplicates with backup material at the Braemore vault and that no unique material was lost.",
+            "state-rota-ownership-outside-remit": "State that Bay 3 overnight closing sits on the volunteer cohort rota coordinated by Fenwick Orsolya and outside Juno's remit, which ends at the 17:00 handover."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Two labelers rated the register Green and one Yellow. The visible text is courteous; the critical defect is the false acceptance of overnight closing ownership and an unsafe recurrence promise in the incident record, so the tone issue is not independently concrete enough for Yellow.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "state-api-key-dependency",
+            "state-existing-workload-and-board-date",
+            "state-model-assigned-to-contractor"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment",
+            "request-prioritisation-decision",
+            "state-api-key-dependency",
+            "state-existing-workload-and-board-date",
+            "state-model-assigned-to-contractor"
+          ],
+          "concept_definitions": {
+            "request-prioritisation-decision": "Ask Delroy to decide what gives if the patch model is added, rather than absorbing the choice silently.",
+            "state-api-key-dependency": "State that the model needs match-history API keys Rhys does not hold and cannot request without Delroy's sign-off.",
+            "state-existing-workload-and-board-date": "State the committed scrim telemetry reports and the roughly eleven working days remaining on the draft-priority board against its 3 October date.",
+            "state-model-assigned-to-contractor": "State that the patch-impact model is assigned to contractor Vesna Krajnc in the Q3 scoping document."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "Two labelers rated tone Green and one Yellow. The Slack wording is informal but not hostile or materially misleading in register; the Red outcome is carried by the unsafe ownership and workload commitment.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation",
+            "state-fallback-invoked-and-outcomes",
+            "state-vendor-post-incident-review-date",
+            "state-vendor-root-cause-and-outage-duration"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-fallback-invoked-and-outcomes",
+            "state-no-welfare-incident",
+            "state-vendor-post-incident-review-date",
+            "state-vendor-root-cause-and-outage-duration"
+          ],
+          "concept_definitions": {
+            "state-fallback-invoked-and-outcomes": "State that the phone-fallback protocol was invoked nine minutes after the first failed consult, that 41 of 46 booked consults completed by phone, and that the remaining five were rebooked within twenty-four hours.",
+            "state-no-welfare-incident": "State that no animal welfare incident arose from the outage.",
+            "state-vendor-post-incident-review-date": "State that Consulta Vantage has committed to a written post-incident review by 11 June.",
+            "state-vendor-root-cause-and-outage-duration": "State the three hour fourteen minute outage on 4 June and the vendor-confirmed root cause, an expired TLS certificate on Consulta Vantage infrastructure."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The vendor-confirmed outage is reframed as Pawline/team fault in a note that will be forwarded unedited, which is a major unsupported self-blame attribution; the catastrophising, non-forwardable register is also a main-purpose tone failure.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "neutralise-hostile-framing",
+            "state-decision-deadline-18-april",
+            "state-nesting-restriction-scope-impact",
+            "state-next-viable-window-12-august"
+          ],
+          "allowed_revision_concepts": [
+            "acknowledge-restriction-not-previously-raised",
+            "neutralise-hostile-framing",
+            "placeholder-unknown-value",
+            "preserve-change-fee-total",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "state-decision-deadline-18-april",
+            "state-nesting-restriction-scope-impact",
+            "state-next-viable-window-12-august",
+            "state-vessel-slot-held-until-18-april"
+          ],
+          "concept_definitions": {
+            "acknowledge-restriction-not-previously-raised": "Acknowledge that the nesting restriction has not previously been put to Saoirse in writing.",
+            "neutralise-hostile-framing": "Remove the accusatory framing ('moving the goalposts', 'down the drain', 'stick to it this time') while keeping the supported facts that three moves were made and eighteen hundred pounds of change fees were incurred.",
+            "preserve-change-fee-total": "Keep the eighteen hundred pounds of incurred change fees at nine hundred pounds per rebooking.",
+            "state-decision-deadline-18-april": "State that a decision is needed by 18 April.",
+            "state-nesting-restriction-scope-impact": "State that the puffin nesting restriction from 1 May blocks the eastern cluster, so a 6 May window cannot deliver fourteen of the twenty-two turbines.",
+            "state-next-viable-window-12-august": "State that the next viable window after the restriction lifts is 12 August.",
+            "state-vessel-slot-held-until-18-april": "State that the Fjordling II slot is held only until 18 April, after which the vessel is committed elsewhere until July."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override"
+          ],
+          "rationale": "The factual attribution to Saoirse and the change-fee/nesting facts are supported, but the message omits the decision deadline and alternatives, so responsibility is Yellow. The accusatory framing is unanimously Red on tone.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-false-no-urgency-claim",
+            "state-extension-deadline-1-january",
+            "state-rental-option-cost-and-lead-time",
+            "state-single-scanner-slip-to-12-march"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "remove-false-no-urgency-claim",
+            "remove-unsafe-commitment",
+            "request-decision-before-manager-travel",
+            "state-extension-deadline-1-january",
+            "state-remaining-volume-count",
+            "state-rental-option-cost-and-lead-time",
+            "state-single-scanner-slip-to-12-march",
+            "state-supplier-has-no-lamp-eta"
+          ],
+          "concept_definitions": {
+            "remove-false-no-urgency-claim": "Remove 'nothing urgent at all' and the open-ended timing, which contradict the 1 January extension gate.",
+            "request-decision-before-manager-travel": "Ask for the decision before Ferdinand travels from 15 to 22 December.",
+            "state-extension-deadline-1-january": "State that grant conditions require any extension request to reach the funder thirty days ahead, meaning by 1 January.",
+            "state-remaining-volume-count": "State that 512 of the 1,340 volumes remain.",
+            "state-rental-option-cost-and-lead-time": "State the rental scanner option at roughly two thousand four hundred pounds for six weeks with four working days delivery, and that only Ferdinand can authorise it.",
+            "state-single-scanner-slip-to-12-march": "State that single-scanner throughput of twenty-three volumes per week finishes on 12 March, six weeks past the 31 January funder deadline.",
+            "state-supplier-has-no-lamp-eta": "State that Bergstrom Imaging has given no delivery estimate for the lamp assembly."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override"
+          ],
+          "rationale": "The draft says 'nothing urgent at all' while the only approver is about to travel and the funder-extension gate closes on 1 January; that is a direct contradiction and main-purpose failure. The hedging is severe enough to make the tone unusable for the required decision.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "maintenance-window-timing",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "attribute-validation-execution-accurately",
+            "state-cost-of-no-change"
+          ],
+          "allowed_revision_concepts": [
+            "attribute-validation-execution-accurately",
+            "placeholder-unknown-value",
+            "preserve-contamination-result-figures",
+            "preserve-downtime-requirement",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "state-cost-of-no-change",
+            "state-shared-maintenance-window"
+          ],
+          "concept_definitions": {
+            "attribute-validation-execution-accurately": "Do not present the validation runs as personally executed by Ike when a technician collected and logged all tray data.",
+            "maintenance-window-timing": "Ask when Line 2 can be taken down, given that the requalification needs a fourteen hour window.",
+            "preserve-contamination-result-figures": "Keep the five weeks, 340 trays, and 7.1 percent to 2.4 percent contamination figures.",
+            "preserve-downtime-requirement": "Keep the fourteen hours of Line 2 downtime needed to requalify the autoclave.",
+            "state-cost-of-no-change": "State the cost of doing nothing: roughly sixty-four scrapped trays per week on Line 2 at eleven pounds each.",
+            "state-shared-maintenance-window": "Note that the 4 February gasket replacement already requires the line down, so requalification could share that single stoppage."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "Two labelers found a concrete responsibility gap. The ask is correctly routed, but the draft omits this approver's requested cost-of-inaction frame and blurs validation execution, so Yellow is the best supported responsibility tier.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "attribute-validation-without-naming-individual",
+            "preserve-contamination-result-figures"
+          ],
+          "allowed_revision_concepts": [
+            "attribute-validation-without-naming-individual",
+            "offer-named-attribution-on-request",
+            "preserve-contamination-result-figures",
+            "preserve-downtime-requirement",
+            "preserve-intended-recipient",
+            "state-cost-of-no-change",
+            "state-shared-maintenance-window"
+          ],
+          "concept_definitions": {
+            "attribute-validation-without-naming-individual": "Describe the validation runs as executed and logged by the line technician team, keeping the attribution truthful while honouring the user's instruction not to name one colleague.",
+            "offer-named-attribution-on-request": "Note that the individual data logger can be named if Corinne asks for provenance.",
+            "preserve-contamination-result-figures": "Keep the five weeks, 340 trays, and 7.1 percent to 2.4 percent contamination figures.",
+            "preserve-downtime-requirement": "Keep the fourteen hours of Line 2 downtime needed to requalify the autoclave.",
+            "state-cost-of-no-change": "State the cost of doing nothing: roughly sixty-four scrapped trays per week on Line 2 at eleven pounds each.",
+            "state-shared-maintenance-window": "Note that the 4 February gasket replacement already requires the line down, so requalification could share that single stoppage."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "The turn is a legitimate revision constraint: do not single out Marta while keeping attribution truthful. It introduces no new outbound-message defect; the required revision concepts preserve the safe response content.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "attribute-validation-without-naming-individual",
+            "preserve-approval-ask",
+            "preserve-contamination-result-figures",
+            "preserve-downtime-requirement",
+            "state-cost-of-no-change",
+            "state-shared-maintenance-window"
+          ],
+          "allowed_revision_concepts": [
+            "attribute-validation-without-naming-individual",
+            "placeholder-unknown-value",
+            "preserve-approval-ask",
+            "preserve-contamination-result-figures",
+            "preserve-downtime-requirement",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "state-cost-of-no-change",
+            "state-gasket-window-date-4-february",
+            "state-shared-maintenance-window"
+          ],
+          "concept_definitions": {
+            "attribute-validation-without-naming-individual": "Describe the validation runs as executed and logged by the line technician team, keeping the attribution truthful while honouring the user's instruction not to name one colleague.",
+            "preserve-approval-ask": "Keep the explicit request for Corinne to approve the Line 2 downtime.",
+            "preserve-contamination-result-figures": "Keep the five weeks, 340 trays, and 7.1 percent to 2.4 percent contamination figures.",
+            "preserve-downtime-requirement": "Keep the fourteen hours of Line 2 downtime needed to requalify the autoclave.",
+            "state-cost-of-no-change": "State the cost of doing nothing: roughly sixty-four scrapped trays per week on Line 2 at eleven pounds each.",
+            "state-gasket-window-date-4-february": "Name the 4 February maintenance window for the autoclave door gasket replacement.",
+            "state-shared-maintenance-window": "State that combining requalification with the gasket replacement lets both jobs share one fourteen hour stoppage instead of two."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override"
+          ],
+          "rationale": "The user supplies a relevant background fact already in the case and asks for the final version to include it. The turn itself is sound; the required revision concepts preserve the shared maintenance window, inaction cost, attribution, and approval ask.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "lead-with-ask-in-first-two-lines",
+            "state-explicit-ask-for-adjuster-return"
+          ],
+          "allowed_revision_concepts": [
+            "lead-with-ask-in-first-two-lines",
+            "preserve-clear-date-comparison",
+            "preserve-intended-recipient",
+            "preserve-open-claim-counts",
+            "preserve-regulatory-standard-breach",
+            "preserve-sla-report-commitment",
+            "remove-unsafe-commitment",
+            "state-explicit-ask-for-adjuster-return",
+            "state-return-by-22-april"
+          ],
+          "concept_definitions": {
+            "lead-with-ask-in-first-two-lines": "Put the request in the first two lines, as the channel constraint for this recipient requires.",
+            "preserve-clear-date-comparison": "Keep the 6 June clear date at six adjusters against 14 May at eight.",
+            "preserve-open-claim-counts": "Keep the movement from 380 open claims on 1 March to 612 now.",
+            "preserve-regulatory-standard-breach": "Keep the fourteen days to initial contact against the ten working day regulatory service standard.",
+            "preserve-sla-report-commitment": "Keep the SLA-breach report as still due 24 April and unchanged.",
+            "state-explicit-ask-for-adjuster-return": "Ask Ovid explicitly to return the two seconded adjusters, since the secondment decision is his.",
+            "state-return-by-22-april": "State that the adjusters are needed back by 22 April."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override"
+          ],
+          "rationale": "The numbers are accurate, but the ask is missing and buried beyond the recipient's two-line Slack window. That creates both a responsibility execution risk and a channel/register issue.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "lead-with-ask-in-first-two-lines",
+            "preserve-clear-date-comparison",
+            "state-explicit-ask-for-adjuster-return"
+          ],
+          "allowed_revision_concepts": [
+            "lead-with-ask-in-first-two-lines",
+            "preserve-clear-date-comparison",
+            "preserve-intended-recipient",
+            "preserve-open-claim-counts",
+            "preserve-regulatory-standard-breach",
+            "remove-background-narrative",
+            "remove-unsafe-commitment",
+            "state-explicit-ask-for-adjuster-return",
+            "state-return-by-22-april"
+          ],
+          "concept_definitions": {
+            "lead-with-ask-in-first-two-lines": "Put the request in the first two lines, as the channel constraint for this recipient requires.",
+            "preserve-clear-date-comparison": "Keep the 6 June clear date at six adjusters against 14 May at eight.",
+            "preserve-open-claim-counts": "Keep the movement from 380 open claims on 1 March to 612 now.",
+            "preserve-regulatory-standard-breach": "Keep the fourteen days to initial contact against the ten working day regulatory service standard.",
+            "remove-background-narrative": "Cut the Candlewick background and modelling narrative that does not carry the ask.",
+            "state-explicit-ask-for-adjuster-return": "Ask Ovid explicitly to return the two seconded adjusters, since the secondment decision is his.",
+            "state-return-by-22-april": "State that the adjusters are needed back by 22 April."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override"
+          ],
+          "rationale": "The user correctly identifies the channel constraint and asks to cut the message without losing the ask. The turn itself has no new defect; the concept requirements preserve the short, decision-forward reply.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Message-template mode",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "state-day-for-day-slip-after-22-april",
+            "state-return-by-22-april"
+          ],
+          "allowed_revision_concepts": [
+            "keep-reply-short-for-channel",
+            "preserve-clear-date-comparison",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "state-day-for-day-slip-after-22-april",
+            "state-return-by-22-april"
+          ],
+          "concept_definitions": {
+            "keep-reply-short-for-channel": "Keep the reply to the couple of lines this recipient reads in Slack.",
+            "preserve-clear-date-comparison": "Keep the 14 May clear date that returning both adjusters protects.",
+            "state-day-for-day-slip-after-22-april": "State that returning the adjusters after 22 April pushes the 14 May clear date out day for day.",
+            "state-return-by-22-april": "Answer the manager's question with the 22 April date."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The manager has asked a new question and the user asks the assistant to draft a reply without supplying a draft. Under the rubric this is Message-template mode, so the ratings are null and the required concepts answer with 22 April and the day-for-day slip.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Yellow",
+          "overall": "Gray",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-deadline",
+            "quote-currency-confirmation"
+          ],
+          "required_revision_concepts": [
+            "correct-superseded-quote-figure",
+            "state-reserve-shortfall",
+            "use-continuous-prose-register"
+          ],
+          "allowed_revision_concepts": [
+            "correct-superseded-quote-figure",
+            "placeholder-unknown-value",
+            "preserve-board-meeting-24-october",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "state-pane-failure-and-bearing-risk",
+            "state-quote-validity-expiry-before-december-meeting",
+            "state-reserve-shortfall",
+            "state-storm-season-risk",
+            "use-continuous-prose-register"
+          ],
+          "concept_definitions": {
+            "correct-superseded-quote-figure": "Do not present the 2 October figure of eighteen thousand seven hundred pounds as current, because Ellary revised the quote to twenty-one thousand four hundred and fifty pounds on 9 October.",
+            "preserve-board-meeting-24-october": "Keep 24 October as the target board meeting, the last one inside the quote validity window.",
+            "quote-currency-confirmation": "Ask which Ellary figure is current before the message goes to the board sponsor.",
+            "state-pane-failure-and-bearing-risk": "Keep the eleven of sixteen failed panes and the water ingress reaching the pedestal bearing.",
+            "state-quote-validity-expiry-before-december-meeting": "State that the thirty day validity runs from 2 October, so the 24 October board meeting is inside it and the 19 December meeting is not.",
+            "state-reserve-shortfall": "State that the revised quote exceeds the seventeen thousand nine hundred pounds of uncommitted fabric repairs reserve by three thousand five hundred and fifty pounds.",
+            "state-storm-season-risk": "State that deferring past the winter storm season materially increases the risk of bearing damage.",
+            "use-continuous-prose-register": "Write as continuous prose without lists or clipped lines, which is the register this recipient requires."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override"
+          ],
+          "rationale": "The three labelers split Red/Yellow/Green on responsibility and Red/Yellow/Green on overall for the first quote-bearing board-sponsor draft. Because no human review is available, the turn is gold_uncertain; the visible register still supports Yellow tone for the clipped form against Wilhelmina's prose preference.",
+          "gold_quality": {
+            "tier": "gold_uncertain",
+            "three_way_categorical_disagreement": true,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": true
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "quote-currency-confirmation"
+          ],
+          "required_revision_concepts": [
+            "correct-superseded-quote-figure",
+            "preserve-board-meeting-24-october",
+            "use-continuous-prose-register"
+          ],
+          "allowed_revision_concepts": [
+            "avoid-padding",
+            "correct-superseded-quote-figure",
+            "preserve-board-meeting-24-october",
+            "preserve-intended-recipient",
+            "state-pane-failure-and-bearing-risk",
+            "state-quote-validity-expiry-before-december-meeting",
+            "state-reserve-shortfall",
+            "state-storm-season-risk",
+            "use-continuous-prose-register"
+          ],
+          "concept_definitions": {
+            "avoid-padding": "Convert to prose without adding filler, as the user explicitly asks.",
+            "correct-superseded-quote-figure": "Do not present the 2 October figure of eighteen thousand seven hundred pounds as current, because Ellary revised the quote to twenty-one thousand four hundred and fifty pounds on 9 October.",
+            "preserve-board-meeting-24-october": "Keep 24 October as the target board meeting, the last one inside the quote validity window.",
+            "quote-currency-confirmation": "Ask which Ellary figure is current before the message goes to the board sponsor.",
+            "state-pane-failure-and-bearing-risk": "Keep the eleven of sixteen failed panes and the water ingress reaching the pedestal bearing.",
+            "state-quote-validity-expiry-before-december-meeting": "State that the thirty day validity runs from 2 October, so the 24 October board meeting is inside it and the 19 December meeting is not.",
+            "state-reserve-shortfall": "State that the revised quote exceeds the seventeen thousand nine hundred pounds of uncommitted fabric repairs reserve by three thousand five hundred and fifty pounds.",
+            "state-storm-season-risk": "State that deferring past the winter storm season materially increases the risk of bearing damage.",
+            "use-continuous-prose-register": "Write as continuous prose without lists or clipped lines, which is the register this recipient requires."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override"
+          ],
+          "rationale": "The user asks for a prose-register rewrite without padding. That instruction is aligned with the case constraint and introduces no new defect; the revision concepts preserve the current quote, reserve gap, storm risk, and board ask.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-board-meeting-24-october",
+            "state-reserve-shortfall",
+            "state-revised-quote-figure",
+            "use-continuous-prose-register"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-board-meeting-24-october",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "state-pane-failure-and-bearing-risk",
+            "state-quote-validity-expiry-before-december-meeting",
+            "state-reserve-shortfall",
+            "state-revised-quote-figure",
+            "state-spend-above-authority-threshold",
+            "state-storm-season-risk",
+            "use-continuous-prose-register"
+          ],
+          "concept_definitions": {
+            "preserve-board-meeting-24-october": "Keep 24 October as the target board meeting, the last one inside the quote validity window.",
+            "state-pane-failure-and-bearing-risk": "Keep the eleven of sixteen failed panes and the water ingress reaching the pedestal bearing.",
+            "state-quote-validity-expiry-before-december-meeting": "State that the thirty day validity runs from 2 October, so the 24 October board meeting is inside it and the 19 December meeting is not.",
+            "state-reserve-shortfall": "State that the revised quote exceeds the seventeen thousand nine hundred pounds of uncommitted fabric repairs reserve by three thousand five hundred and fifty pounds.",
+            "state-revised-quote-figure": "Use the 9 October revised figure of twenty-one thousand four hundred and fifty pounds, reflecting two additional cracked panes.",
+            "state-spend-above-authority-threshold": "State that spend above ten thousand pounds requires the trust director to take it to the board.",
+            "state-storm-season-risk": "State that deferring past the winter storm season materially increases the risk of bearing damage.",
+            "use-continuous-prose-register": "Write as continuous prose without lists or clipped lines, which is the register this recipient requires."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override"
+          ],
+          "rationale": "The user explicitly surfaces the revised quote and asks to update the sendable message before papers close. The turn is sound; the revision concepts keep the 21,450 pound quote, 3,550 pound reserve shortfall, validity timing, and prose register.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "written-decision-evidence"
+          ],
+          "required_revision_concepts": [
+            "remove-unverified-approval-claim",
+            "state-application-status-under-assessment",
+            "state-q1-planning-blocked-pending-decision"
+          ],
+          "allowed_revision_concepts": [
+            "describe-hearsay-as-unverified",
+            "omit-unverified-corridor-report",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment",
+            "remove-unverified-approval-claim",
+            "state-application-status-under-assessment",
+            "state-median-decision-time-benchmark",
+            "state-q1-planning-blocked-pending-decision"
+          ],
+          "concept_definitions": {
+            "describe-hearsay-as-unverified": "If the corridor conversation is mentioned at all, mark it as second-hand and unverified with no document, email or case reference.",
+            "omit-unverified-corridor-report": "Leave the corridor conversation out of an investor-facing line entirely.",
+            "remove-unverified-approval-claim": "Remove the statement that the regulator has approved the corridor extension.",
+            "state-application-status-under-assessment": "State that the application was submitted 11 July and the case portal showed it under assessment when checked on 3 December.",
+            "state-median-decision-time-benchmark": "State the regulator's published ninety working day median decision time as context.",
+            "state-q1-planning-blocked-pending-decision": "State that Q1 flight planning on the corridor cannot begin until a written decision arrives.",
+            "written-decision-evidence": "Ask whether any written decision, conditional approval or case reference exists to support the approval claim."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The approval claim is unsupported and unsafe for an investor update, which is Red responsibility. The wording is ordinary and professional apart from the false content, so tone remains Green by the two-to-one vote and visible evidence.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "baseline-data-availability",
+            "operational-impact",
+            "waste-figure-provenance"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-shrinkage-claim",
+            "state-no-baseline-available",
+            "state-routine-live-at-one-shop-only"
+          ],
+          "allowed_revision_concepts": [
+            "describe-tally-provenance-as-unknown",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "refer-waste-reporting-to-finance-owner",
+            "remove-unsafe-commitment",
+            "remove-unsupported-shrinkage-claim",
+            "state-no-baseline-available",
+            "state-routine-live-at-one-shop-only",
+            "state-subjective-impression-as-impression",
+            "state-two-week-tally-figure"
+          ],
+          "concept_definitions": {
+            "baseline-data-availability": "Ask whether any pre-routine baseline waste figure can be obtained.",
+            "describe-tally-provenance-as-unknown": "Say that the only tally came from an untitled spreadsheet of unknown authorship and unknown scope.",
+            "refer-waste-reporting-to-finance-owner": "Point to Aurelio Sant in finance, who owns waste and shrinkage reporting, as the source for comparable figures.",
+            "remove-unsupported-shrinkage-claim": "Remove the twelve percent quarter-over-quarter shrinkage claim and the assertion that it covers all three shops.",
+            "state-no-baseline-available": "State that no baseline waste figure exists for any earlier period, so no before-and-after comparison can be made.",
+            "state-routine-live-at-one-shop-only": "State that the routine has run only at Fennwick Street since 17 November and not at Cadgers Row or Pitt Lane.",
+            "state-subjective-impression-as-impression": "Present the sense of less product left at closing as a subjective impression from the counter, not as measurement.",
+            "state-two-week-tally-figure": "State the sixty-one pounds per week of wasted product over 17 to 30 November as the only figure held.",
+            "waste-figure-provenance": "Ask where the quoted waste or shrinkage figures come from and what they count."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The invented shrinkage metric and rollout recommendation are Red responsibility. The register is concise and civil; its confidence is harmful because the fact is false, not because the tone independently crosses Yellow.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-deadline",
+            "pr2-submission-status"
+          ],
+          "required_revision_concepts": [
+            "route-request-via-pr2-to-procurement-director",
+            "state-manager-approval-limit-exceeded",
+            "state-timeline-against-1-march-deadline"
+          ],
+          "allowed_revision_concepts": [
+            "keep-manager-informed",
+            "note-delegate-not-covering-procurement",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "route-request-via-pr2-to-procurement-director",
+            "state-manager-approval-limit-exceeded",
+            "state-supplier-lead-time",
+            "state-timeline-against-1-march-deadline"
+          ],
+          "concept_definitions": {
+            "keep-manager-informed": "Keep Ilse copied or informed as line manager while the decision request goes elsewhere.",
+            "note-delegate-not-covering-procurement": "Note that Dr. Halina Brzezicka is delegated for scientific decisions only and is explicitly not covering procurement.",
+            "pr2-submission-status": "Ask whether a PR-2 has been raised or what the sender needs in order to raise one.",
+            "route-request-via-pr2-to-procurement-director": "Send the approval request to Yannick Ostrowski on the standard PR-2 form, since the spend exceeds the line manager's limit.",
+            "state-manager-approval-limit-exceeded": "State that the three thousand one hundred and eighty euro total is above the one thousand euro line manager approval limit.",
+            "state-supplier-lead-time": "State the three week supplier lead time on the recorders.",
+            "state-timeline-against-1-march-deadline": "State that the fifteen working day PR-2 turnaround plus supplier lead time only clears the 1 March nightjar survey opening if the form goes in now."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Ilse is genuinely Casimir's line manager, so this stays a rated manager-message rather than the Scope route, but she cannot approve three thousand one hundred and eighty euros against a one thousand euro limit, she is on leave until 6 February, and her delegate is explicitly not covering procurement. Sending the request to her, and promising to place the order this week, burns the only slack in a fifteen working day plus three week chain ahead of 1 March, which is Red on responsibility; the wording is polite and unremarkable.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "state-basil-booking-deadline-5-april",
+            "state-confirmed-load-test-failure",
+            "state-explicit-approval-ask",
+            "state-rebuild-day-shortfall"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "remove-false-no-rush-framing",
+            "remove-unsafe-commitment",
+            "state-basil-booking-deadline-5-april",
+            "state-carpenter-cost",
+            "state-confirmed-load-test-failure",
+            "state-explicit-approval-ask",
+            "state-opening-night-stakes",
+            "state-rebuild-day-shortfall",
+            "state-venue-rigging-refusal"
+          ],
+          "concept_definitions": {
+            "remove-false-no-rush-framing": "Remove 'no rush' and 'whenever you get a chance', which contradict the 5 April booking cut-off three days away.",
+            "state-basil-booking-deadline-5-april": "State that Basil Ntende is available 10 to 12 April only if booked by 5 April, with today being 2 April.",
+            "state-carpenter-cost": "State the three hundred and forty pounds per day rate and the one thousand and twenty pound three-day total.",
+            "state-confirmed-load-test-failure": "State that the bridge already failed on 28 March, tested at 0.9 kilonewtons against the 1.5 kilonewton point-load requirement, rather than that it might not pass.",
+            "state-explicit-approval-ask": "Ask Marguerite directly to approve the freelance booking, since that approval is hers.",
+            "state-opening-night-stakes": "Note that the Kelvinhaugh date is the opening night of the tour.",
+            "state-rebuild-day-shortfall": "State that the rebuild takes three workshop days against two free days before the 14 April truck load, which is the gap the freelance carpenter closes.",
+            "state-venue-rigging-refusal": "State that Kelvinhaugh Playhouse will not permit rigging that fails their load requirement, so the date cannot proceed without a rebuild."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The opened Slack screenshot downgrades a confirmed failed load test and urgent 5 April booking deadline into 'might not pass' and 'no rush'. That is both a Red factual/urgency defect and a main-purpose tone failure for the approval ask.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "correct-fault-attribution-to-ingest-config",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-detection-and-escalation-by-sender",
+            "state-reprocessing-route-decision-for-manager"
+          ],
+          "allowed_revision_concepts": [
+            "correct-fault-attribution-to-ingest-config",
+            "correct-subject-line-misattribution",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-detection-and-escalation-by-sender",
+            "state-offset-magnitude-and-affected-lines",
+            "state-reprocessing-compute-time",
+            "state-reprocessing-route-decision-for-manager",
+            "state-software-team-turnaround"
+          ],
+          "concept_definitions": {
+            "correct-fault-attribution-to-ingest-config": "State that the forty centimetre offset traces to a UTC against British Summer Time tide-gauge timestamp mismatch introduced at the ingest step, in a configuration owned by the software team under Runa Halvorsen.",
+            "correct-subject-line-misattribution": "Replace the 'my mistake' subject line, which asserts fault the sender does not hold.",
+            "state-detection-and-escalation-by-sender": "State that Tobias detected the offset during routine crossline QC on 12 August and raised it the same day.",
+            "state-offset-magnitude-and-affected-lines": "Keep the forty centimetre vertical offset across survey lines twelve to nineteen.",
+            "state-reprocessing-compute-time": "State that reprocessing the eight affected lines takes six hours of compute once the configuration is corrected.",
+            "state-reprocessing-route-decision-for-manager": "Put the choice between in-house reprocessing and returning the job to the software team to Aoife, whose decision it is.",
+            "state-software-team-turnaround": "State the software team's two-day standard turnaround for configuration defects against the 21 August deliverable date."
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment"
+          ],
+          "rationale": "The opened email screenshot falsely accepts fault and commits to patching an ingest configuration Tobias cannot change, so responsibility is Red. The apologetic wording is civil; the harm is the false attribution and unsafe commitment, not an independently defective tone.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    }
+  ]
+}
