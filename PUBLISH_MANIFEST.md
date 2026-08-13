@@ -34,6 +34,14 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/AUTO_TRIGGER_CASES.md`
 - `tests/AUTO_TRIGGER_RESULTS.md`
 - `tests/FINAL_ACCEPTANCE_RESULTS.md`
+- `tests/benchmark/BENCHMARK_METHODOLOGY.md`
+- `tests/benchmark/HUMAN_REVIEW_TEMPLATE.md`
+- `tests/benchmark/METHODOLOGY_RESULTS.md`
+- `tests/benchmark/SEMANTIC_ONTOLOGY.json`
+- `tests/benchmark/freeze_cloud_artifacts.py`
+- `tests/benchmark/score_semantic.py`
+- `tests/benchmark/test_methodology.py`
+- `tests/benchmark/validate_benchmark.py`
 - `tests/blind/BLIND_CASE_BRIEF.md`
 - `tests/blind/BLIND_PLAN.md`
 - `tests/blind/GOLD_RUBRIC.md`

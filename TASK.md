@@ -240,6 +240,21 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - summary-only remediation results are replaced by evidence-complete current results.
 - Evidence: remediation acceptance plan, full evidence JSON, package record, validator output, and updated acceptance report.
 
+#### T14.5 — Blind benchmark methodology v2
+
+- [x] Completed
+
+- Source requirement: Separate benchmark/scoring defects from product behavior before a new hidden holdout.
+- Owner files: `tests/benchmark/`, `TASK.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - SUT-visible Data A is explicit and evaluator-only notes cannot affect gold;
+  - question and revision claims use ontology/semantic matching rather than exact token equality;
+  - gold disagreement, adjudication, uncertainty, and optional human review are represented;
+  - cloud cases, images, gold, outputs, and evaluations are content-addressed and immutable;
+  - scorer rejects unsupported claims, missing required concepts, changed artifacts, and excessive gold uncertainty;
+  - methodology tests and negative gates pass without changing runtime Skill files.
+- Evidence: methodology contract, ontology, validators/scorer, synthetic fixtures, unit results, and runtime diff check.
+
 ## Task template
 
 Copy this block when adding work:
