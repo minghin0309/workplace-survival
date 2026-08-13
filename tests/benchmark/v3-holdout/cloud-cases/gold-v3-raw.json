@@ -1,0 +1,2863 @@
+{
+  "schema_version": "v3",
+  "artifact_type": "adjudicated_gold_raw",
+  "gold_id": "gold-v3-raw",
+  "case_set_id": "v3-holdout-cloud-cases",
+  "ontology_version": "1",
+  "rubric": "tests/blind/GOLD_RUBRIC.md",
+  "semantic_ontology": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+  "overall_derivation": "For rated routes, overall is derived across responsibility and tone with fixed priority Red > Gray > Yellow > Green. Every turn in this case set is a rated Normal mode turn, so no null ratings occur.",
+  "field_naming": "Per-turn field names follow tests/blind/GOLD_RUBRIC.md. Values in the four concept arrays are canonical concept strings; each string is defined in the same turn's concept_definitions, with the originating labeler tokens listed as labeler_token_aliases.",
+  "case_count": 18,
+  "turn_count": 24,
+  "gold_quality": {
+    "adjudication_model": "three independent heterogeneous-family labelers adjudicated by a fourth family",
+    "labeler_families": [
+      "grok",
+      "kimi",
+      "gpt"
+    ],
+    "labeler_label_sets": [
+      {
+        "label_set": "gold-labeler-1",
+        "model_family": "grok",
+        "file": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-1.json"
+      },
+      {
+        "label_set": "gold-labeler-2-clean",
+        "model_family": "kimi",
+        "file": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2-clean.json"
+      },
+      {
+        "label_set": "gold-labeler-3",
+        "model_family": "gpt",
+        "file": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-3.json"
+      }
+    ],
+    "adjudicator_family": "claude",
+    "adjudicator_label_set": "gold-v3-raw",
+    "adjudication_record": "tests/benchmark/v3-holdout/cloud-cases/adjudication-v3-raw.json",
+    "human_reviewed": false,
+    "attestations": [],
+    "tier_counts": {
+      "heterogeneous_adjudicated": 24
+    },
+    "gold_uncertain_turns": [],
+    "tier_rule": "a turn is gold_uncertain when any categorical field carries three distinct labeler values or when a substantive critical-invariant disagreement cannot be resolved by majority; otherwise it is heterogeneous_adjudicated"
+  },
+  "cases": [
+    {
+      "case_id": "V3-001",
+      "category": "green_control",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts"
+          ],
+          "concept_definitions": {
+            "no-revision": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "No revision is needed for a Green message.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-deadline": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed date or deadline unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three labeler families. Marek is the named manager and owns release of the maintenance window; the draft carries the confirmed 14 September window, Ferndown's written confirmation, the agreed four-hour lower-platform closure and Ilva's calendar block, and it leaves the release with Marek within the short-chat constraint. Green on both axes, so no rewrite is required.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-002",
+      "category": "green_control",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts"
+          ],
+          "concept_definitions": {
+            "no-revision": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "No revision is needed for a Green message.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green. The draft reports the 2 August box-office figures as given, adds Hal's confirmed Thursday availability, makes one clear ask and leaves the published grid change with Priya. No rewrite is required.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-003",
+      "category": "green_control",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts"
+          ],
+          "concept_definitions": {
+            "no-revision": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "No revision is needed for a Green message.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green. Tobias reports Dermot's request while stating that nothing was promised to him, gives the month-end voicing card with no spare hours, points to Iona's bench per Greta's own allocation list, and leaves priority with Greta. No rewrite is required.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-004",
+      "category": "material_information",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "disclose-material-context",
+            "disclose-prior-commitment",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "disclose-material-context",
+            "disclose-prior-commitment",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "approval-authority": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask who has authority to approve or decide.",
+              "labeler_token_aliases": []
+            },
+            "commitment-scope": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask which work, period, or boundary the sender can commit to.",
+              "labeler_token_aliases": []
+            },
+            "disclose-material-context": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Add material case facts the draft omits that the recipient needs in order to understand or decide.",
+              "labeler_token_aliases": [
+                "include-crew-shortage-cause",
+                "include-slipped-visits"
+              ]
+            },
+            "disclose-prior-commitment": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "State plainly that the sender has already committed something or already told a third party something material.",
+              "labeler_token_aliases": [
+                "report-client-already-informed"
+              ]
+            },
+            "preserve-confirmed-deadline": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed date or deadline unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "leave-commercial-decision-open"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Red two to one, with grok and gpt for Red and kimi for Yellow. Dev owns neither billing nor the commercial concession, yet the draft presents a six percent retainer cut as settled, reports the client already told, and tells Anneke nothing is needed from her, while omitting the two slipped visits and the crew-shortage cause. Treating an unowned commercial commitment as closed is a main-purpose failure rather than a non-critical omission, so Red carries. Tone is neutral and safe to forward, unanimously Green. The case names no owner for the retainer decision, so asking who can approve it is acceptable but not required.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-005",
+      "category": "material_information",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_topics": [
+            "blocker-status",
+            "commitment-scope",
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-material-facts",
+            "remove-false-reassurance"
+          ],
+          "allowed_revision_facts": [
+            "disclose-material-context",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-false-reassurance",
+            "remove-unsafe-commitment",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "blocker-status": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask whether a blocker exists and what it is.",
+              "labeler_token_aliases": []
+            },
+            "commitment-scope": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask which work, period, or boundary the sender can commit to.",
+              "labeler_token_aliases": []
+            },
+            "confirmed-deadline": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the current confirmed completion or delivery date.",
+              "labeler_token_aliases": []
+            },
+            "disclose-material-context": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Add material case facts the draft omits that the recipient needs in order to understand or decide.",
+              "labeler_token_aliases": [
+                "report-moisture-still-unread"
+              ]
+            },
+            "operational-impact": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the concrete execution or customer impact.",
+              "labeler_token_aliases": []
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Represent a required unknown value with a descriptive placeholder.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-kiln-restored"
+              ]
+            },
+            "remove-false-reassurance": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Remove or condition reassurance the case data does not support, such as saying a matter is fine, settled, or nothing to worry about.",
+              "labeler_token_aliases": [
+                "omit-unsupported-reassurance",
+                "remove-unsupported-assurance"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": []
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Red two to one, with grok and kimi for Red and gpt for Yellow, and tone Green two to one, with kimi and gpt for Green and grok for Yellow. Fennard asked in writing when the batch leaves kiln three, moisture probes are still being read at each stage, and what the yard promises a customer is Lise's. 'Your oak is fine' and 'nothing to worry about', in a reply that goes straight to the buyer, are unsupported customer assurances rather than a mere gap, so Red carries. The plain wording suits a non-technical buyer, so tone stays Green. All three labelers require the confirmed out-date question, a placeholder for the unknown timing, and removal of the reassurance.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-006",
+      "category": "material_information",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_facts": [],
+          "allowed_revision_facts": [
+            "disclose-material-context",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "qualify-unconfirmed-impact",
+            "remove-unsafe-commitment",
+            "respect-channel-constraint"
+          ],
+          "concept_definitions": {
+            "confirmed-deadline": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the current confirmed completion or delivery date.",
+              "labeler_token_aliases": []
+            },
+            "disclose-material-context": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Add material case facts the draft omits that the recipient needs in order to understand or decide.",
+              "labeler_token_aliases": [
+                "include-part-on-order",
+                "include-temperature-offset"
+              ]
+            },
+            "operational-impact": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the concrete execution or customer impact.",
+              "labeler_token_aliases": []
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Represent a required unknown value with a descriptive placeholder.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts"
+              ]
+            },
+            "qualify-unconfirmed-impact": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Present an expected operational effect as expected or unconfirmed rather than certain.",
+              "labeler_token_aliases": []
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": []
+            },
+            "respect-channel-constraint": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Hold the required channel, length, line count, register or plain-language constraint.",
+              "labeler_token_aliases": [
+                "plain-language-no-jargon"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Yellow two to one, with grok and kimi for Yellow and gpt for Green, and tone Green two to one. The two-line note serves its purpose in plain words, but the replacement basket is only on order and the half-degree offset is left out, so 'until the strainer basket is swapped' and 'expect slower ice' carry concrete but non-critical timing and impact risk. No revision concept reached a two-of-three majority: grok requires the missing facts and plainer wording, kimi requires an unknown-timing placeholder and a qualified impact, and gpt requires no rewrite, so the required set is empty and those concepts are carried as allowed. Because the adjudicated rating is not Green, no-revision is excluded from the allowed set.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-007",
+      "category": "material_information",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "disclose-material-context",
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "route-to-authority"
+          ],
+          "concept_definitions": {
+            "current-root-cause": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask what caused the current incident or failure.",
+              "labeler_token_aliases": []
+            },
+            "disclose-material-context": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Add material case facts the draft omits that the recipient needs in order to understand or decide.",
+              "labeler_token_aliases": [
+                "include-south-cell-capacity",
+                "include-two-inbound-loads"
+              ]
+            },
+            "no-revision": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "No revision is needed for a Green message.",
+              "labeler_token_aliases": []
+            },
+            "operational-impact": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the concrete execution or customer impact.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts"
+              ]
+            },
+            "qualify-unconfirmed-cause": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "State that a cause or attribution remains unconfirmed.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "keep-recommendation-not-decision"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Green two to one, with kimi and gpt for Green and grok for Yellow, so no rewrite is required. The draft gives Corin the recovery figure, the proposed diversion and an explicit handover of the intake decision, within five lines and with the client off the thread. The dissent is substantive: the draft omits that two Threlkeld loads would move and that the south cell has room, and the seventy-one percent figure carries no stated source, so adding those supported facts is allowed. The cause of the drop is unknown and must not be invented.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-008",
+      "category": "responsibility_boundary",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "approval-authority": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask who has authority to approve or decide.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-wash-inspect-discrepancy-only"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim",
+                "do-not-brief-theatre-cleared"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim",
+                "leave-exception-to-peter-idris",
+                "leave-validation-to-bettina"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red responsibility and Green tone. Yusra's scope is washing, inspecting and logging the discrepancy; loan-set validation and release are Bettina's and the supplier documentation exception is Peter's with Idris. The draft claims validation and release, waives the count sheet with Trentmoor, tells the surgical coordinator the set is good to go, and tells Peter no action is needed. Remove the unowned commitments, route validation and the exception back to their owners, keep the confirmed owners and report only the wash, the inspection and the logged discrepancy.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-009",
+      "category": "responsibility_boundary",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "disclose-material-context",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "approval-authority": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask who has authority to approve or decide.",
+              "labeler_token_aliases": []
+            },
+            "commitment-scope": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask which work, period, or boundary the sender can commit to.",
+              "labeler_token_aliases": []
+            },
+            "disclose-material-context": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Add material case facts the draft omits that the recipient needs in order to understand or decide.",
+              "labeler_token_aliases": [
+                "include-vessel-available"
+              ]
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-shade-measurement"
+              ]
+            },
+            "remove-client-contact-claim": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Remove a claim that the client or external party has already been told, and keep that party off a thread they are not on.",
+              "labeler_token_aliases": [
+                "do-not-contact-ellery"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim",
+                "do-not-commit-redye-cost"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim",
+                "leave-tolerance-signoff-to-delphine"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red responsibility and Green tone. Iker may report the spectrophotometer result on lot 4188 and that a vessel is free; he may not accept the shade for shipment, promise Ellery a re-dye at the dyeworks' cost, or keep Noor out. Remove the unowned commitments, leave tolerance sign-off with Delphine and cost and customer contact with Noor, and keep the lot number Delphine requires.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-010",
+      "category": "responsibility_boundary",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "confirmed-deadline",
+            "confirmed-owner"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "reclaim-owned-task",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "reclaim-owned-task",
+            "remove-defensive-framing",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "confirmed-deadline": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the current confirmed completion or delivery date.",
+              "labeler_token_aliases": []
+            },
+            "confirmed-owner": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask who currently owns the work or decision.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts"
+              ]
+            },
+            "reclaim-owned-task": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "State that the sender will complete work that sits in their own scope instead of assigning it elsewhere.",
+              "labeler_token_aliases": [
+                "complete-yields-from-records",
+                "do-not-delegate-yields-to-hanne"
+              ]
+            },
+            "remove-defensive-framing": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Neutralise self-blame, apology stacking, blame-shifting and other defensive framing that obscures the message.",
+              "labeler_token_aliases": []
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim",
+                "leave-second-check-to-pharmacist"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red responsibility and Yellow tone. Completing the three worksheets including yields is Tomas's own task and he holds the batch records; second-check initials belong to the pharmacist on the suite rota. The draft reassigns the yields to Hanne as a management call and pushes the Marguerite chase to her, inverting confirmed ownership on regulated records where nothing may be estimated. Tomas must reclaim his own task and the recorded owners stand; the deflecting close is a concrete tone risk short of hostility.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-011",
+      "category": "tone_boundary",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "remove-hostile-language",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-defensive-framing",
+            "remove-hostile-language",
+            "remove-unsupported-accusation",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "current-root-cause": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask what caused the current incident or failure.",
+              "labeler_token_aliases": []
+            },
+            "operational-impact": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the concrete execution or customer impact.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-contract-lapsed",
+                "report-empty-lorries-late-routes",
+                "report-raised-in-huddle-minutes"
+              ]
+            },
+            "remove-defensive-framing": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Neutralise self-blame, apology stacking, blame-shifting and other defensive framing that obscures the message.",
+              "labeler_token_aliases": []
+            },
+            "remove-hostile-language": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Remove insult, ridicule and hostile framing while keeping the supported factual core, and hold the register the channel requires.",
+              "labeler_token_aliases": [
+                "professional-register"
+              ]
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or neutralize an unsupported blame or intent claim.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "leave-client-response-to-olav"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Tone Red and overall Red unanimous; responsibility Red two to one, with grok and kimi for Red and gpt for Yellow. The channel is searchable and the client account manager reads it. 'Left to rot', 'becoming a joke' and 'could not be bothered' are hostility plus a major unsupported bad-faith accusation, and blaming Olav for a client loss that has not happened is an unsupported consequence claim, which carries responsibility to Red as well. The supported skeleton stands: the lapsed contract, two lorries standing empty, two late western routes and two minuted huddle raises. The accusation and the hostile framing go, and the Fjordvei reply stays with Olav.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-012",
+      "category": "tone_boundary",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "remove-defensive-framing",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "disclose-material-context",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "remove-defensive-framing",
+            "remove-unsupported-accusation",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "current-root-cause": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask what caused the current incident or failure.",
+              "labeler_token_aliases": []
+            },
+            "disclose-material-context": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Add material case facts the draft omits that the recipient needs in order to understand or decide.",
+              "labeler_token_aliases": [
+                "include-free-visit-slot"
+              ]
+            },
+            "operational-impact": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the concrete execution or customer impact.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-clipped-traces",
+                "report-firmware-rollback-timing",
+                "state-confirmed-observation"
+              ]
+            },
+            "qualify-unconfirmed-cause": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "State that a cause or attribution remains unconfirmed.",
+              "labeler_token_aliases": []
+            },
+            "remove-defensive-framing": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Neutralise self-blame, apology stacking, blame-shifting and other defensive framing that obscures the message.",
+              "labeler_token_aliases": [
+                "drop-self-deprecation",
+                "remove-self-deprecation"
+              ]
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or neutralize an unsupported blame or intent claim.",
+              "labeler_token_aliases": []
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": [
+                "add-clear-recommendation",
+                "recommend-spare-digitiser-visit"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Yellow two to one, with kimi and gpt for Yellow and grok for Red, and tone Yellow unanimous. Petra asks for a clear recommendation in every fault message and the draft omits it, hedges confirmed clipped traces as 'might maybe', and volunteers cabling as the likely cause. That is concrete ambiguity and self-erasure rather than a direct contradiction, so Yellow carries on both axes. The rewrite states the confirmed observation, keeps the cause unconfirmed, drops the self-deprecation and gives the spare-digitiser recommendation.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-013",
+      "category": "correction_state",
+      "turn_count": 3,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "exact-measurement"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "exact-measurement": {
+              "domain": "question",
+              "source": "local",
+              "definition": "Ask for the exact numeric measurement the recipient or the safety context requires when only a coarse description of the reading is in hand.",
+              "labeler_token_aliases": [
+                "recorded-pressure-figure"
+              ]
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Represent a required unknown value with a descriptive placeholder.",
+              "labeler_token_aliases": [
+                "recorded-pressure-figure-placeholder"
+              ]
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-decade-high-base-pressure"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "ask-go-no-go",
+                "leave-run-booking-to-marisol",
+                "request-owner-decision"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": [
+                "ask-go-no-go",
+                "request-owner-decision"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red responsibility and Green tone. Moving a booked run is Marisol's and the go or no-go on a marginal pump-down is Ingrid's, yet the draft has Nils slip the Caldermoor run himself and presents a settled plan instead of asking. Remove the unowned booking change, put the decision to Ingrid, keep the owners and report the decade-high pump-down; the raw pressure value is not in hand, so it may only be placeholdered.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "exact-measurement"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "exact-measurement": {
+              "domain": "question",
+              "source": "local",
+              "definition": "Ask for the exact numeric measurement the recipient or the safety context requires when only a coarse description of the reading is in hand.",
+              "labeler_token_aliases": [
+                "recorded-pressure-figure"
+              ]
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Represent a required unknown value with a descriptive placeholder.",
+              "labeler_token_aliases": [
+                "recorded-pressure-figure-placeholder"
+              ]
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-decade-high-base-pressure"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "ask-go-no-go",
+                "leave-run-booking-to-marisol"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": [
+                "ask-go-no-go"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Yellow two to one, with grok and gpt for Yellow and kimi for Green, and tone Green unanimous. The user withdrew the booking move, which was the contradiction, but the reworked note still has to put the go or no-go to Ingrid rather than presenting overnight re-pumping as the whole answer, so a concrete decision-handoff gap remains. Re-pumping itself is within Nils's own scope and the decade-high reading stays in.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "exact-measurement"
+          ],
+          "required_revision_facts": [
+            "disclose-material-context",
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "disclose-material-context",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "qualify-unconfirmed-cause",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "disclose-material-context": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Add material case facts the draft omits that the recipient needs in order to understand or decide.",
+              "labeler_token_aliases": [
+                "include-seal-replacement"
+              ]
+            },
+            "exact-measurement": {
+              "domain": "question",
+              "source": "local",
+              "definition": "Ask for the exact numeric measurement the recipient or the safety context requires when only a coarse description of the reading is in hand.",
+              "labeler_token_aliases": [
+                "recorded-pressure-figure"
+              ]
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Represent a required unknown value with a descriptive placeholder.",
+              "labeler_token_aliases": [
+                "recorded-pressure-figure-placeholder"
+              ]
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-decade-high-base-pressure"
+              ]
+            },
+            "qualify-unconfirmed-cause": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "State that a cause or attribution remains unconfirmed.",
+              "labeler_token_aliases": [
+                "qualify-next-pump-down"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "ask-go-no-go",
+                "leave-run-booking-to-marisol"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": [
+                "ask-go-no-go"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Yellow responsibility and Green tone. The roughing-pump seal replacement this morning is new material context and must be added, but it does not retire the decade-high reading and does not let Nils declare the next pump-down clean, so the earlier message does not stand unchanged: keep the cause unconfirmed and still ask Ingrid to decide.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-014",
+      "category": "correction_state",
+      "turn_count": 3,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "omit-unsupported-figure",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority",
+            "state-clear-ask",
+            "withhold-unsupported-conclusion"
+          ],
+          "concept_definitions": {
+            "current-root-cause": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask what caused the current incident or failure.",
+              "labeler_token_aliases": []
+            },
+            "omit-unsupported-figure": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave out a figure the case data does not support.",
+              "labeler_token_aliases": [
+                "omit-unconfirmed-variance-figure"
+              ]
+            },
+            "operational-impact": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the concrete execution or customer impact.",
+              "labeler_token_aliases": []
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Represent a required unknown value with a descriptive placeholder.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-recon-unfinished"
+              ]
+            },
+            "remove-client-contact-claim": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Remove a claim that the client or external party has already been told, and keep that party off a thread they are not on.",
+              "labeler_token_aliases": [
+                "no-client-contact"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim"
+              ]
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or neutralize an unsupported blame or intent claim.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            },
+            "withhold-unsupported-conclusion": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Do not state a conclusion before it is stood up in the supporting work.",
+              "labeler_token_aliases": [
+                "no-engagement-conclusion"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Red unanimous; tone Red two to one, with grok and gpt for Red and kimi for Green. Nothing has been sent to the client, the variance is still being traced, and conclusions and client letters are Bo's. 'I think it is deliberate' is a major unsupported intent accusation about the client's staff and sets the register of the note, so tone Red carries alongside responsibility Red. The twelve percent figure is unsupported, the claimed contact with Umberto must come out, and the report is limited to unfinished tracing.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "omit-unsupported-figure",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority",
+            "state-clear-ask",
+            "withhold-unsupported-conclusion"
+          ],
+          "concept_definitions": {
+            "current-root-cause": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask what caused the current incident or failure.",
+              "labeler_token_aliases": []
+            },
+            "omit-unsupported-figure": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave out a figure the case data does not support.",
+              "labeler_token_aliases": [
+                "omit-unconfirmed-variance-figure"
+              ]
+            },
+            "operational-impact": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the concrete execution or customer impact.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-recon-unfinished"
+              ]
+            },
+            "remove-client-contact-claim": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Remove a claim that the client or external party has already been told, and keep that party off a thread they are not on.",
+              "labeler_token_aliases": [
+                "no-client-contact"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim"
+              ]
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or neutralize an unsupported blame or intent claim.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            },
+            "withhold-unsupported-conclusion": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Do not state a conclusion before it is stood up in the supporting work.",
+              "labeler_token_aliases": [
+                "no-engagement-conclusion"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red responsibility and Green tone. With the figure and the intent claim withdrawn by the user, the remaining 'I have told Umberto we will have an answer shortly' is still an unauthorised client commitment and still contradicts nothing having been sent, so Red stands. Route the client response to Bo and report only that the reconciliation is still being traced.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "respect-channel-constraint",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "omit-unsupported-figure",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-client-contact-claim",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask",
+            "withhold-unsupported-conclusion"
+          ],
+          "concept_definitions": {
+            "omit-unsupported-figure": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave out a figure the case data does not support.",
+              "labeler_token_aliases": [
+                "omit-unconfirmed-variance-figure"
+              ]
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-recon-unfinished"
+              ]
+            },
+            "remove-client-contact-claim": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Remove a claim that the client or external party has already been told, and keep that party off a thread they are not on.",
+              "labeler_token_aliases": [
+                "no-client-contact"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim"
+              ]
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or neutralize an unsupported blame or intent claim.",
+              "labeler_token_aliases": []
+            },
+            "respect-channel-constraint": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Hold the required channel, length, line count, register or plain-language constraint.",
+              "labeler_token_aliases": [
+                "shorten-for-teams"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            },
+            "withhold-unsupported-conclusion": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Do not state a conclusion before it is stood up in the supporting work.",
+              "labeler_token_aliases": [
+                "no-engagement-conclusion"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Red two to one, with grok and kimi for Red and gpt for Yellow, and tone Green unanimous. The move to Teams justifies a much shorter note but withdraws nothing: the claimed client contact is still in the draft, so the same unauthorised commitment persists and Red carries. Keep the brevity constraint, keep Umberto off the internal thread, and leave the response with Bo.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-015",
+      "category": "correction_state",
+      "turn_count": 3,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "disclose-material-context",
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "disclose-material-context": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Add material case facts the draft omits that the recipient needs in order to understand or decide.",
+              "labeler_token_aliases": [
+                "report-aleksi-waiting"
+              ]
+            },
+            "no-revision": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "No revision is needed for a Green message.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-cabins-waiting",
+                "report-substitute-grade"
+              ]
+            },
+            "respect-channel-constraint": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Hold the required channel, length, line count, register or plain-language constraint.",
+              "labeler_token_aliases": [
+                "lead-with-decision-ask"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "ask-substitution-decision"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": [
+                "ask-substitution-decision",
+                "lead-with-decision-ask"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Green two to one, with kimi and gpt for Green and grok for Yellow, so no rewrite is required. Elsa states the substitute grade and the two waiting cabins and asks Jonty, who owns substitutions, to decide, with nothing promised to Kvalstrom. The dissent is that the accept-or-reject ask sits past the first two lines Jonty reads, so leading with the decision ask is allowed rather than required.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "approval-authority": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask who has authority to approve or decide.",
+              "labeler_token_aliases": []
+            },
+            "commitment-scope": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask which work, period, or boundary the sender can commit to.",
+              "labeler_token_aliases": []
+            },
+            "disclose-prior-commitment": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "State plainly that the sender has already committed something or already told a third party something material.",
+              "labeler_token_aliases": [
+                "disclose-material-context",
+                "report-already-told-aleksi"
+              ]
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-cabins-waiting",
+                "report-substitute-grade"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": []
+            },
+            "respect-channel-constraint": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Hold the required channel, length, line count, register or plain-language constraint.",
+              "labeler_token_aliases": [
+                "lead-with-decision-ask"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "ask-substitution-ratification",
+                "request-owner-decision"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": [
+                "ask-substitution-ratification",
+                "lead-with-decision-ask",
+                "request-owner-decision"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red responsibility and Green tone. Elsa has already told Aleksi the blanks would be taken, which is Jonty's decision and is now committed externally, and anything said to Kvalstrom has to match what is said internally. The rewrite discloses the prior commitment, keeps the substitute grade and the waiting cabins, drops the pretence that the choice is still open, and asks Jonty to ratify or unwind it.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "allowed_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "respect-channel-constraint",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "approval-authority": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask who has authority to approve or decide.",
+              "labeler_token_aliases": []
+            },
+            "commitment-scope": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask which work, period, or boundary the sender can commit to.",
+              "labeler_token_aliases": []
+            },
+            "disclose-prior-commitment": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "State plainly that the sender has already committed something or already told a third party something material.",
+              "labeler_token_aliases": [
+                "disclose-material-context",
+                "report-already-told-aleksi"
+              ]
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-cabins-waiting",
+                "report-substitute-grade"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": []
+            },
+            "respect-channel-constraint": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Hold the required channel, length, line count, register or plain-language constraint.",
+              "labeler_token_aliases": [
+                "lead-with-decision-ask",
+                "two-line-limit"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "ask-substitution-ratification",
+                "request-owner-decision"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": [
+                "ask-substitution-ratification",
+                "lead-with-decision-ask",
+                "request-owner-decision"
+              ]
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red responsibility and Green tone. Tightening to two lines does not clear the unauthorised acceptance: the two-line note must still disclose that Aleksi was already told, keep the substitute grade, hold the two-line limit and leave ratification with Jonty.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-016",
+      "category": "recipient_routing",
+      "turn_count": 1,
+      "image_paths": [],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority"
+          ],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "approval-authority": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask who has authority to approve or decide.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": [
+                "keep-visit-booking-with-ruth"
+              ]
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-po-and-quote-refs",
+                "preserve-supported-facts",
+                "report-frost-window"
+              ]
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "redirect-po-amend-to-wilma",
+                "route-request-to-owner"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red responsibility and Green tone. Marc is a valid recipient for the grower relationship and the frost-window risk but explicitly does not raise or amend purchase orders; Wilma does, and she is not on the thread. With one message available and no time to chase again, asking Marc to amend PO 5512 fails the message's purpose. Keep Marc as the addressee, route the amendment to Wilma, and keep PO 5512, quote ADS-2290 and the frost-window timing.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-017",
+      "category": "image_only",
+      "turn_count": 1,
+      "image_paths": [
+        "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png"
+      ],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_topics": [
+            "confirm-obscured-image-value"
+          ],
+          "allowed_question_topics": [
+            "confirm-obscured-image-value",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-image-text",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-image-text",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "confirm-obscured-image-value": {
+              "domain": "question",
+              "source": "local",
+              "definition": "Ask the sender to restate a value or token that exists only inside a supplied image and is occluded, illegible, or glyph-ambiguous.",
+              "labeler_token_aliases": [
+                "confirm-obscured-measurement",
+                "obscured-flow-reading"
+              ]
+            },
+            "operational-impact": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask for the concrete execution or customer impact.",
+              "labeler_token_aliases": []
+            },
+            "placeholder-unknown-value": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Represent a required unknown value with a descriptive placeholder.",
+              "labeler_token_aliases": []
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-image-text": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Preserve image text exactly as rendered, including glyph-ambiguous tokens, and mark unreadable image text as unknown rather than normalising or guessing it.",
+              "labeler_token_aliases": [
+                "preserve-visible-fan-id"
+              ]
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-fan-overload-trips"
+              ]
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "keep-reduced-mode-as-ask"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Gray two to one, with kimi and gpt for Gray and grok for Yellow, and tone Green unanimous. The draft exists only in the screenshot. The request to put the northbound bore into reduced mode is correctly addressed to Dana, who owns that decision, but the portal flow figure that governs it is rendered as a leading 1, an occluded glyph, then .6 m3/s, so governing information is materially unreadable rather than merely thin and Gray carries. All three labelers require asking the sender to restate the value. The occluded glyph must not be guessed and must be placeholdered, and the fan identifier must be kept exactly as rendered, including its letter-or-digit ambiguous character, rather than silently normalised.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V3-018",
+      "category": "image_only",
+      "turn_count": 1,
+      "image_paths": [
+        "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png"
+      ],
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "preserve-confirmed-owner",
+            "preserve-material-facts",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority"
+          ],
+          "allowed_revision_facts": [
+            "disclose-prior-commitment",
+            "preserve-confirmed-owner",
+            "preserve-image-text",
+            "preserve-intended-recipient",
+            "preserve-material-facts",
+            "remove-defensive-framing",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "route-to-authority",
+            "state-clear-ask"
+          ],
+          "concept_definitions": {
+            "approval-authority": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask who has authority to approve or decide.",
+              "labeler_token_aliases": []
+            },
+            "commitment-scope": {
+              "domain": "question",
+              "source": "semantic_ontology",
+              "definition": "Ask which work, period, or boundary the sender can commit to.",
+              "labeler_token_aliases": []
+            },
+            "disclose-prior-commitment": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "State plainly that the sender has already committed something or already told a third party something material.",
+              "labeler_token_aliases": [
+                "report-unauthorized-crane-hire",
+                "report-unauthorized-lift-signoff"
+              ]
+            },
+            "preserve-confirmed-owner": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the confirmed owner unchanged.",
+              "labeler_token_aliases": []
+            },
+            "preserve-image-text": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Preserve image text exactly as rendered, including glyph-ambiguous tokens, and mark unreadable image text as unknown rather than normalising or guessing it.",
+              "labeler_token_aliases": []
+            },
+            "preserve-intended-recipient": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Keep the user-identified recipient or audience.",
+              "labeler_token_aliases": []
+            },
+            "preserve-material-facts": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Keep the material facts the case supports, including figures, references, owners, dates, prior actions and constraints, and state confirmed observations plainly rather than hedging them.",
+              "labeler_token_aliases": [
+                "preserve-supported-facts",
+                "report-drum-out-of-tolerance",
+                "report-lift-plan-changed"
+              ]
+            },
+            "remove-defensive-framing": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Neutralise self-blame, apology stacking, blame-shifting and other defensive framing that obscures the message.",
+              "labeler_token_aliases": []
+            },
+            "remove-hostile-language": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Remove insult, ridicule and hostile framing while keeping the supported factual core, and hold the register the channel requires.",
+              "labeler_token_aliases": []
+            },
+            "remove-unsafe-commitment": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or condition a commitment that lacks authority or confirmed scope.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim"
+              ]
+            },
+            "remove-unsupported-accusation": {
+              "domain": "revision",
+              "source": "semantic_ontology",
+              "definition": "Remove or neutralize an unsupported blame or intent claim.",
+              "labeler_token_aliases": []
+            },
+            "route-to-authority": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Leave the decision, approval or action with the person or function that owns it, and ask that owner to decide or ratify instead of announcing or pre-empting the decision.",
+              "labeler_token_aliases": [
+                "correct-ownership-claim",
+                "leave-approvals-to-sofia"
+              ]
+            },
+            "state-clear-ask": {
+              "domain": "revision",
+              "source": "local",
+              "definition": "Include the concrete ask, decision point or recommendation the recipient's authority calls for.",
+              "labeler_token_aliases": []
+            }
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Responsibility Red unanimous; tone Red two to one, with kimi and gpt for Red and grok for Yellow. The image-only draft records that Owen already told the yard the crane hire would be covered and that he signed off the revised lift plan himself, both of which are Sofia's, and it closes by blaming the planners. Because the yard's safety file will retain whatever is sent, that closing line reads as hostility rather than a mere risk, so tone Red carries. The rewrite reports the out-of-tolerance drum and the revised lift plan, discloses the two unauthorised acts without endorsing them, removes the accusation and routes both approvals to Sofia.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": true,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    }
+  ]
+}
