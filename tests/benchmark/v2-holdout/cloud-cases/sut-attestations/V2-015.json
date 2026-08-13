@@ -1,0 +1,57 @@
+{
+  "schema_version": "v1",
+  "case_id": "V2-015",
+  "attested_at_utc": "2026-08-13T10:36:15Z",
+  "context": {
+    "execution_mode": "SUT",
+    "skill": "workplace-survival",
+    "case_scope": "V2-015 only",
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "base_commit": "6e1c77d6da1fdd7a6592b54e3435ab413fd6b062",
+    "agent_role": "subagent"
+  },
+  "model": {
+    "name": "gpt-5.6-sol"
+  },
+  "branch": "cursor/v2-015-sut-2a28",
+  "output_commit": "074bc6005743012e3026a4d787f766812ff36d19",
+  "files": {
+    "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-015.json": {
+      "sha256": "c154bf8bbedf5d083d97f12d935962f2c17c344e53dd3835f29360f3bcc80212",
+      "role": "SUT input"
+    },
+    ".cursor/skills/workplace-survival/SKILL.md": {
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66",
+      "role": "skill instructions"
+    },
+    ".cursor/skills/workplace-survival/REFERENCE.md": {
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56",
+      "role": "skill reference"
+    },
+    ".cursor/skills/workplace-survival/FORMATS.md": {
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198",
+      "role": "skill formats"
+    },
+    ".cursor/skills/workplace-survival/EXAMPLES.md": {
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77",
+      "role": "skill examples"
+    },
+    "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-015.json": {
+      "sha256": "607a19426d2521046c38b0757c6e043aacafafa4cccf4c86f5c7318c1e0bdd45",
+      "role": "raw SUT output"
+    }
+  },
+  "output": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-015.json",
+    "sha256": "607a19426d2521046c38b0757c6e043aacafafa4cccf4c86f5c7318c1e0bdd45",
+    "scored": false
+  },
+  "isolation": {
+    "authorized_reads_only": true,
+    "other_benchmark_artifacts_accessed": false,
+    "directory_listing_or_search_performed": false,
+    "non_git_network_access": false,
+    "hashes_verified_before_execution": true,
+    "violations": []
+  }
+}
