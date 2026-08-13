@@ -228,7 +228,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.4 — Evidence-complete remediation acceptance
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Validate remediation runtime with the T13.10 evidence contract before merging to `main`.
 - Owner files: suite result files, `tests/evidence/`, remediation reports, `README.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.

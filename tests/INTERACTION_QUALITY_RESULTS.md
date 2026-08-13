@@ -6,6 +6,7 @@
 - Runs before T13.10 are historical summary-only results.
 - The T13.10 representative interaction-quality record is stored in `tests/evidence/t13-10-validation.json`.
 - T13.12 evidence-complete records are stored in `tests/evidence/t13-12-final.json`.
+- Remediation evidence-complete records are stored in `tests/evidence/remediation-acceptance-final.json`.
 
 Representative T13.10 record: `t13.10-iq-iq01-20260812`.
 
@@ -36,7 +37,7 @@ Representative T13.10 record: `t13.10-iq-iq01-20260812`.
 
 ## Existing functional-suite audit
 
-The 111 functional cases also verify question limits, neutral answer structures, resolved-question handling, green-message behavior, minimal revision, risk wording, one-target short acknowledgements, paired Tone controls, responsibility boundaries, prompt-like data isolation, material OCR/order confirmation, limited-background internal issues, case splitting, and recipient scope. In the latest T13.9 regression, all 111 functional cases passed, including 13 attached-image executions.
+The current 114 functional cases include the three blind-remediation boundaries. In the evidence-complete remediation acceptance, all 114 functional cases and all 6 targeted interaction-quality cases passed.
 
 ## T10.3 conclusion
 
@@ -90,3 +91,9 @@ All targeted interaction-quality cases were rerun after the post-T11.5 changes a
 - Response rounds: 10.
 - Required assertions: 18 of 18 passed.
 - All records satisfy the T13.10 evidence schema.
+
+## Remediation evidence-complete record index
+
+- Evidence file: `tests/evidence/remediation-acceptance-final.json`.
+- Records:
+  - `remediation-a497598-iq-01-20260813`, `remediation-a497598-iq-02-20260813`, `remediation-a497598-iq-03-20260813`, `remediation-a497598-iq-04-20260813`, `remediation-a497598-iq-05-20260813`, `remediation-a497598-iq-06-20260813`

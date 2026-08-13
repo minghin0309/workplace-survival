@@ -26,8 +26,10 @@ See `tests/blind/REMEDIATION_TRIAGE.md`.
 - Interaction quality IQ-01–IQ-06: 6 passed, 0 failed.
 - Auto-trigger AT-01–AT-10: 10 passed, 0 failed in deterministic routing evaluation.
 - Final-config explicit invocation FCI-01–FCI-03: 3 passed, 0 failed in deterministic routing evaluation.
+- Total behavioral cases: 139 passed, 0 failed.
+- Automated package check: 1 passed, 0 failed, reported separately.
 
-The complete-suite rerun above is a semantic regression summary, not a new T13.10 evidence-complete final acceptance run. The existing T13.12 evidence remains the last full raw-evidence acceptance.
+All 140 records satisfy the T13.10 evidence schema and are stored in `tests/evidence/remediation-acceptance-final.json`. Runtime commit: `a497598ed1fae67b434ae774cc6137ca38b980d5`.
 
 ## Remediation mutation checks
 
@@ -44,3 +46,9 @@ Raw mutant diffs, SUT outputs, and oracle failures are stored under `tests/blind
 - The original cloud blind score remains unchanged.
 - No fresh hidden holdout was run after remediation.
 - Auto-trigger and explicit-invocation checks remain deterministic semantic tests rather than live dispatcher executions.
+
+## Remediation evidence-complete record index
+
+- Evidence file: `tests/evidence/remediation-acceptance-final.json`.
+- Records:
+  - `remediation-package-01-20260813`

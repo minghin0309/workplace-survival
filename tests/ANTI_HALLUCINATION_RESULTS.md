@@ -6,6 +6,7 @@
 - Runs before T13.10 are historical summary-only results.
 - The T13.10 representative anti-hallucination record is stored in `tests/evidence/t13-10-validation.json`.
 - T13.12 evidence-complete records are stored in `tests/evidence/t13-12-final.json`.
+- Remediation evidence-complete records are stored in `tests/evidence/remediation-acceptance-final.json`.
 
 Representative T13.10 record: `t13.10-ah-ah01-20260812`.
 
@@ -16,8 +17,8 @@ Representative T13.10 record: `t13.10-ah-ah01-20260812`.
 - Targeted cases passed: 6.
 - Targeted cases failed: 0.
 - Unsupported or fabricated facts found: 0.
-- Functional cases reviewed: 111.
-- Total functional and targeted cases: 117.
+- Functional cases reviewed: 114.
+- Total functional and targeted cases: 120.
 
 ## Targeted results
 
@@ -41,7 +42,7 @@ Representative T13.10 record: `t13.10-ah-ah01-20260812`.
 
 ## Existing functional-suite audit
 
-The 111 functional cases include explicit forbidden-behavior checks covering unknown dates, owners, progress, commitments, manager intent, image content outside the visible input, Data B self-verification, cross-case data reuse, unsupported expansion of short acknowledgements, automatic promotion of embedded content to Data A, unsafe mixed-input classification, stale or silently replaced Data A, unsupported accusation boundaries, unknown-value Red/Gray handling, acknowledgement-target expansion, prompt-like case data, material OCR/order inference, multi-matter isolation, and recipient-role assumptions. In the latest T13.9 regression, all 111 functional cases passed, including 13 attached-image executions, with no fabricated fact reported.
+The current 114 functional cases include the three blind-remediation boundaries. In the evidence-complete remediation acceptance, all 114 functional cases and all 6 targeted anti-hallucination cases passed, with zero unsupported facts.
 
 ## T10.2 conclusion
 
@@ -113,3 +114,9 @@ All targeted anti-hallucination cases were rerun after the post-T11.5 changes an
 - Response rounds: 7.
 - Unsupported or fabricated facts: 0.
 - All records satisfy the T13.10 evidence schema.
+
+## Remediation evidence-complete record index
+
+- Evidence file: `tests/evidence/remediation-acceptance-final.json`.
+- Records:
+  - `remediation-a497598-ah-01-20260813`, `remediation-a497598-ah-02-20260813`, `remediation-a497598-ah-03-20260813`, `remediation-a497598-ah-04-20260813`, `remediation-a497598-ah-05-20260813`, `remediation-a497598-ah-06-20260813`

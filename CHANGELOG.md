@@ -11,6 +11,7 @@ This file records completed outcomes. Detailed assertions and execution evidence
 - Added TC-112–TC-114 without encoding disputed gold behavior.
 - Passed the 114-case functional regression and targeted suites.
 - Killed all three remediation-specific mutants.
+- Completed evidence-backed acceptance: 139 behavioral cases and one separate package check passed.
 
 ### Cloud-isolated blind holdout — failed preregistered gate
 

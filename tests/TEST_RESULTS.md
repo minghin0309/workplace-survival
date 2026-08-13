@@ -6,6 +6,7 @@
 - Runs recorded before T13.10 are historical summary-only results, not evidence-complete executions.
 - T13.10 representative functional records are stored in `tests/evidence/t13-10-validation.json`.
 - T13.12 evidence-complete records are stored in `tests/evidence/t13-12-final.json`.
+- Remediation evidence-complete records are stored in `tests/evidence/remediation-acceptance-final.json`.
 
 Representative T13.10 records:
 
@@ -16,8 +17,7 @@ Representative T13.10 records:
 ## Current status
 
 - Cases currently specified: 114.
-- Latest evidence-complete functional execution remains T13.12: 111 passed and 0 failed.
-- Post-blind remediation semantic regression: 114 passed and 0 failed; this rerun is summary-only, not a new evidence-complete acceptance.
+- Latest evidence-complete functional execution: TC-01–TC-114, 114 passed and 0 failed.
 - Text cases in the current specification: 101.
 - Attached-image cases: 13 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
 
@@ -395,5 +395,25 @@ This is a targeted consistency matrix, not the full evidence-complete acceptance
 - New regressions TC-112–TC-114: 3 passed, 0 failed.
 - Current functional specification TC-01–TC-114: 114 passed, 0 failed in semantic regression.
 - Attached-image cases: 13 passed, 0 failed with every PNG opened.
-- This section is summary-only. It does not replace the T13.12 evidence-complete acceptance record.
+- Evidence-complete runtime commit: `a497598ed1fae67b434ae774cc6137ca38b980d5`.
 - Remediation evidence and limitations: `tests/blind/remediation/REMEDIATION_RESULTS.md`.
+
+## Remediation evidence-complete record index
+
+- Evidence file: `tests/evidence/remediation-acceptance-final.json`.
+- Records:
+  - `remediation-tc-01-20260813`, `remediation-tc-02-20260813`, `remediation-tc-03-20260813`, `remediation-tc-04-20260813`, `remediation-tc-05-20260813`, `remediation-tc-06-20260813`, `remediation-tc-07-20260813`, `remediation-tc-08-20260813`
+  - `remediation-tc-09-20260813`, `remediation-tc-10-20260813`, `remediation-tc-11-20260813`, `remediation-tc-12-20260813`, `remediation-tc-13-20260813`, `remediation-tc-14-20260813`, `remediation-tc-15-20260813`, `remediation-tc-16-20260813`
+  - `remediation-tc-17-20260813`, `remediation-tc-18-20260813`, `remediation-tc-19-20260813`, `remediation-tc-20-20260813`, `remediation-tc-21-20260813`, `remediation-tc-22-20260813`, `remediation-tc-23-20260813`, `remediation-tc-24-20260813`
+  - `remediation-tc-25-20260813`, `remediation-tc-26-20260813`, `remediation-tc-27-20260813`, `remediation-tc-28-20260813`, `remediation-tc-29-20260813`, `remediation-tc-30-20260813`, `remediation-tc-31-20260813`, `remediation-tc-32-20260813`
+  - `remediation-tc-33-20260813`, `remediation-tc-34-20260813`, `remediation-tc-35-20260813`, `remediation-tc-36-20260813`, `remediation-tc-37-20260813`, `remediation-tc-38-20260813`, `remediation-tc-39-20260813`, `remediation-tc-40-20260813`
+  - `remediation-tc-41-20260813`, `remediation-tc-42-20260813`, `remediation-tc-43-20260813`, `remediation-tc-44-20260813`, `remediation-tc-45-20260813`, `remediation-tc-46-20260813`, `remediation-tc-47-20260813`, `remediation-acceptance-f3-tc-48-20260813`
+  - `remediation-acceptance-f3-tc-49-20260813`, `remediation-acceptance-f3-tc-50-20260813`, `remediation-acceptance-f3-tc-51-20260813`, `remediation-acceptance-f3-tc-52-20260813`, `remediation-acceptance-f3-tc-53-20260813`, `remediation-acceptance-f3-tc-54-20260813`, `remediation-acceptance-f3-tc-55-20260813`, `remediation-acceptance-f3-tc-56-20260813`
+  - `remediation-acceptance-f3-tc-57-20260813`, `remediation-acceptance-f3-tc-58-20260813`, `remediation-acceptance-f3-tc-59-20260813`, `remediation-acceptance-f3-tc-60-20260813`, `remediation-acceptance-f3-tc-61-20260813`, `remediation-acceptance-f3-tc-62-20260813`, `remediation-acceptance-f3-tc-63-20260813`, `remediation-acceptance-f3-tc-64-20260813`
+  - `remediation-acceptance-f3-tc-65-20260813`, `remediation-acceptance-f3-tc-66-20260813`, `remediation-acceptance-f3-tc-67-20260813`, `remediation-acceptance-f3-tc-68-20260813`, `remediation-acceptance-f3-tc-69-20260813`, `remediation-acceptance-f3-tc-70-20260813`, `remediation-acceptance-f3-tc-71-20260813`, `remediation-f4-tc-72-20260813`
+  - `remediation-f4-tc-73-20260813`, `remediation-f4-tc-74-20260813`, `remediation-f4-tc-75-20260813`, `remediation-f4-tc-76-20260813`, `remediation-f4-tc-77-20260813`, `remediation-f4-tc-78-20260813`, `remediation-f4-tc-79-20260813`, `remediation-f4-tc-80-20260813`
+  - `remediation-f4-tc-81-20260813`, `remediation-f4-tc-82-20260813`, `remediation-f4-tc-83-20260813`, `remediation-f4-tc-84-20260813`, `remediation-f4-tc-85-20260813`, `remediation-f4-tc-86-20260813`, `remediation-f4-tc-87-20260813`, `remediation-f4-tc-88-20260813`
+  - `remediation-f4-tc-89-20260813`, `remediation-f4-tc-90-20260813`, `remediation-f4-tc-91-20260813`, `remediation-f4-tc-92-20260813`, `remediation-f5-tc-93-20260813`, `remediation-f5-tc-94-20260813`, `remediation-f5-tc-95-20260813`, `remediation-f5-tc-96-20260813`
+  - `remediation-f5-tc-97-20260813`, `remediation-f5-tc-98-20260813`, `remediation-f5-tc-99-20260813`, `remediation-f5-tc-100-20260813`, `remediation-f5-tc-101-20260813`, `remediation-f5-tc-102-20260813`, `remediation-f5-tc-103-20260813`, `remediation-f5-tc-104-20260813`
+  - `remediation-f5-tc-105-20260813`, `remediation-f5-tc-106-20260813`, `remediation-f5-tc-107-20260813`, `remediation-f5-tc-108-20260813`, `remediation-f5-tc-109-20260813`, `remediation-f5-tc-110-20260813`, `remediation-f5-tc-111-20260813`, `remediation-f5-tc-112-20260813`
+  - `remediation-f5-tc-113-20260813`, `remediation-f5-tc-114-20260813`, `remediation-package-01-20260813`

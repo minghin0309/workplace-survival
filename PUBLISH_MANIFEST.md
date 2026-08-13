@@ -213,6 +213,7 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/evidence/check_package.py`
 - `tests/evidence/compare_consistency.py`
 - `tests/evidence/remediation-acceptance-plan.json`
+- `tests/evidence/remediation-acceptance-final.json`
 - `tests/evidence/t13-11-comparator-validation.json`
 - `tests/evidence/t13-11-plan.json`
 - `tests/evidence/t13-11-repeat.json`

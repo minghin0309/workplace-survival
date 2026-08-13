@@ -5,6 +5,7 @@
 - Canonical evidence requirements: `tests/evidence/README.md`.
 - Runs before T13.10 are historical summary-only results.
 - The T13.10 routing-semantic record is stored in `tests/evidence/t13-10-validation.json`.
+- Remediation evidence-complete routing records are stored in `tests/evidence/remediation-acceptance-final.json`.
 - A live probabilistic dispatcher run is not available in this environment.
 
 Representative T13.10 record: `t13.10-at-at01-20260812`.
@@ -65,3 +66,10 @@ All four target scenarios triggered, all five excluded scenarios remained exclud
 - False triggers: 0.
 - Missed triggers: 0.
 - Limitation: no live probabilistic dispatcher was available; these results validate frontmatter-routing semantics, not production trigger variance.
+
+## Remediation evidence-complete record index
+
+- Evidence file: `tests/evidence/remediation-acceptance-final.json`.
+- Records:
+  - `remediation-auto-at-01-20260813`, `remediation-auto-at-02-20260813`, `remediation-auto-at-03-20260813`, `remediation-auto-at-04-20260813`, `remediation-auto-at-05-20260813`, `remediation-auto-at-06-20260813`, `remediation-auto-at-07-20260813`, `remediation-auto-at-08-20260813`
+  - `remediation-auto-at-09-20260813`, `remediation-auto-at-10-20260813`
