@@ -1,0 +1,800 @@
+{
+  "labeler_id": "gold-labeler-3",
+  "envelope_version": "v3.1",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "case_count": 18,
+  "turn_count": 24,
+  "definitions": {
+    "routes": {
+      "Intake": "Material input, role, case, image, or classification information is required before rating.",
+      "Limited-background mode": "Only after explicit confirmation to proceed without background.",
+      "Message-template mode": "Explicit manager-template request without a supplied draft.",
+      "Normal mode": "Manager scope, identifiable message, and usable background.",
+      "Scope": "Recipient is explicitly not a manager and no manager is included."
+    },
+    "ratings": {
+      "Gray": "Governing information is materially missing, conflicting, or ambiguous.",
+      "Green": "No concrete issue.",
+      "Red": "Direct contradiction, main-purpose failure, major execution risk, explicit insult, threat, hostility, or major unsupported accusation.",
+      "Yellow": "Concrete non-critical ambiguity or communication risk."
+    },
+    "concepts": {
+      "approval-authority": "Ask who has authority to approve or decide.",
+      "blocker-status": "Ask whether a blocker exists and what it is.",
+      "commitment-scope": "Ask which work, period, or boundary the sender can commit to.",
+      "confirmed-deadline": "Ask for the current confirmed completion or delivery date.",
+      "confirmed-owner": "Ask who currently owns the work or decision.",
+      "current-root-cause": "Ask what caused the current incident or failure.",
+      "no-revision": "No revision is needed for a Green message.",
+      "operational-impact": "Ask for the concrete execution or customer impact.",
+      "placeholder-unknown-value": "Represent a required unknown value with a descriptive placeholder.",
+      "preserve-confirmed-deadline": "Keep the confirmed date or deadline unchanged.",
+      "preserve-confirmed-owner": "Keep the confirmed owner unchanged.",
+      "preserve-intended-recipient": "Keep the user-identified recipient or audience.",
+      "qualify-unconfirmed-cause": "State that a cause or attribution remains unconfirmed.",
+      "recipient-manager-role": "Ask whether the named recipient is acting as the user's manager.",
+      "remove-unsafe-commitment": "Remove or condition a commitment that lacks authority or confirmed scope.",
+      "remove-unsupported-accusation": "Remove or neutralize an unsupported blame or intent claim."
+    }
+  },
+  "labels": [
+    {
+      "case_id": "V31-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft gives Marit a factual status update, preserves the known schedule and courier reference, and correctly says no decision is needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft asks the manager to choose between two authorised cover options, gives the operational tradeoff, and keeps the decision with Marit."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The message distinguishes what can be finished from what cannot, proposes an internal sequence, and leaves any client date to the manager."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [
+            "approval-authority"
+          ],
+          "allowed_question_topics": [
+            "approval-authority"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The request is properly routed to Marit, but the release depends on naming the person who authorised the 310 pound variation; if that name is not supplied, it should remain a placeholder or be queried."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_topics": [
+            "confirmed-deadline"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Cranthorpe requires one exact date and two-hour window, but the draft asks Marit to book without giving those values, creating a main-purpose failure."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_topics": [
+            "confirmed-owner"
+          ],
+          "allowed_question_topics": [
+            "confirmed-owner"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft correctly keeps client correspondence with Marit, but the Ashvale contact is mandatory and not named; the safe revision should query or placeholder that contact."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "blocker-status"
+          ],
+          "allowed_question_topics": [
+            "blocker-status"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The variance response will be rejected unless it carries the goods-in source-record reference, and the draft flags the need without supplying a usable reference."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "blocker-status"
+          ],
+          "allowed_question_topics": [
+            "blocker-status"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The image shows the crown circumference is obliterated, while Menkes requires one exact size and will not cut from a range or guess."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "commitment-scope"
+          ],
+          "allowed_question_topics": [
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Marit is asked to authorise a recovery route, but the required named route is absent and cannot be authorised as 'the one I settled on'."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft commits Ilva, Callum, the surcharge waiver, and Marit's signature without the authority or confirmations the background requires."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The sender takes over supplier approvals, scheduling rules, client explanation, and future penalties despite those being outside their authority or not yet determined."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft insults Petra, attributes bad intent, and threatens to stop covering unless the manager changes apprentice duties."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The message needs to raise the schedule impact factually, but instead uses sarcasm and an unsupported accusation that no one bothered to tell the sender."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "At this turn the progress update is addressed to Marit, uses concrete figures, and makes no authority overreach."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The correction supplies the new bench figures and Thursday trimming for the three re-blocked crowns; a safe revision should preserve those facts."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The final correction changes only the Cranthorpe slot and reference, so the safe revision keeps the prior 11/3 production facts and uses Friday 10 October at 15:30, CR-90177."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft says the coordinator has committed Quillsmere to covering courier cost even though courier costs are a commercial decision outside their authority."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The lot number correction to SB-LOT-7749 must be kept, but the courier-cost commitment still has to be removed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The final instruction supplies the correct lot and removes the unauthorised courier-cost line; the safe revision should ask only for Solberg to confirm the replacement date for SB-LOT-7749."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "At this turn the shortfall warning is concise, manager-scoped, and contains no tone or authority problem."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The update narrows the shortfall to four and gives the unchanged cause; a safe revision should preserve that correction without adding unsupported delivery promises."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_facts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The final facts resolve the shortfall: all 16 pieces go in one delivery during Marchmont's Thursday 16 October, 07:30 to 09:30 window."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The supplier-account instruction may be manager-routed, but the draft asks to circulate client fitting figures and price to a broad channel that is not allowed to receive that data."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_facts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The image draft claims unauthorised write-off and credit-note commitments, assigns Saturday shifts without agreement, promises a rush-charge absorption, and insults Dane."
+        }
+      ]
+    }
+  ]
+}

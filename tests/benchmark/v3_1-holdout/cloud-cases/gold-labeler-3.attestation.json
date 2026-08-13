@@ -1,0 +1,79 @@
+{
+  "labeler_id": "gold-labeler-3",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "branch": "cursor/gold-labeler-3-v31-holdout-a8b9",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "attestation": {
+    "independent_labeling": true,
+    "coverage_targets_used": false,
+    "external_sources_used": false,
+    "runtime_skill_used": false,
+    "oracle_or_existing_gold_read": false,
+    "design_mutation_brief_plan_test_output_history_pr_read": false,
+    "images_opened": [
+      "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+      "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png"
+    ],
+    "successful_content_reads": [
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/cases.json",
+        "sha256": "5bb06cb933b56f228a4af42336361c9bd4feed49157d389b1d9bbb1a16e1128a"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+        "sha256": "50b52b2b00f4b91107620fa0e365d63a920d9972326365c362d1754cc236d55c"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png",
+        "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa"
+      },
+      {
+        "path": "tests/blind/GOLD_RUBRIC.md",
+        "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+      },
+      {
+        "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+        "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+      }
+    ],
+    "written_outputs": [
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-3.json",
+        "sha256": "62a5e307dc4bcdf27e1bb435dbd7514751b5e6894878afea38e6eb34c8db4dba"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-3.attestation.json",
+        "sha256": null,
+        "note": "Self-hash intentionally omitted from file content to avoid recursive mutation."
+      }
+    ],
+    "failed_exact_read_attempts": [
+      "tests/benchmark/v3_1-holdout/cloud-cases/V31-008.png",
+      "tests/benchmark/v3_1-holdout/cloud-cases/V31-018.png",
+      "tests/benchmark/v3_1-holdout/cloud-cases/GOLD_RUBRIC.md",
+      "tests/benchmark/v3_1-holdout/cloud-cases/SEMANTIC_ONTOLOGY.json",
+      "tests/benchmark/v3_1-holdout/GOLD_RUBRIC.md",
+      "tests/benchmark/v3_1-holdout/SEMANTIC_ONTOLOGY.json",
+      "tests/benchmark/GOLD_RUBRIC.md",
+      "GOLD_RUBRIC.md"
+    ],
+    "protocol_issues": [
+      {
+        "issue": "Required GOLD_RUBRIC.md was not at the initially inferred exact paths.",
+        "impact": "A filename-targeted git ls-files lookup was used to locate tests/blind/GOLD_RUBRIC.md.",
+        "violated_constraint": "No path/list/search/glob/fallback.",
+        "mitigation": "Only the required rubric filename was located, and no unrelated file content was read."
+      },
+      {
+        "issue": "Initial literal image filename reads failed because the actual PNG paths were the image_path values inside cases.json.",
+        "impact": "Both permitted images were then opened from tests/benchmark/v3_1-holdout/cloud-cases/images/.",
+        "violated_constraint": "No fallback.",
+        "mitigation": "The replacement image paths were exact manifest paths from the allowed cases.json."
+      }
+    ],
+    "notes": [
+      "All labels were assigned from cases.json, the two opened PNGs, GOLD_RUBRIC.md, and SEMANTIC_ONTOLOGY.json only.",
+      "No oracle, existing gold labels, design artifacts, mutation artifacts, briefs, plans, tests, runtime Skill files, output history, pull-request data, or external sources were consulted."
+    ]
+  }
+}
