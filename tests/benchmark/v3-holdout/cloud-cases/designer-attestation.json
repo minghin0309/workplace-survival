@@ -1,0 +1,254 @@
+{
+  "schema_version": "v3",
+  "artifact_type": "designer_attestation",
+  "case_set_id": "v3-holdout-cloud-cases",
+  "designer": "Cursor cloud agent (blind case designer role)",
+  "generated_at_utc": "2026-08-13T13:14:26Z",
+  "cloud_context": {
+    "run_id": "bc-c754fd78-d593-5672-8209-b43b2396d463",
+    "run_url": "https://cursor.com/agents/bc-c754fd78-d593-5672-8209-b43b2396d463",
+    "run_name": "Generate unseen v3 cases",
+    "repo_url": "https://github.com/minghin0309/workplace-survival",
+    "source": "internal",
+    "owning_user_name": "Ming Hin Ng",
+    "created_at_ms": 1786625866039,
+    "metadata_source": "cursor-cloud run-info MCP tool (cloud metadata, not repository content)"
+  },
+  "model_metadata": {
+    "original_model_name": null,
+    "verification_status": "unverified",
+    "reason": "Cloud run metadata reported originalModelName as null and no other trustworthy in-run source of model identity exists, so the generating model is recorded as unverified rather than asserted.",
+    "branch_name_in_metadata": null
+  },
+  "git": {
+    "base_branch": "cursor/blind-v3-holdout-17a0",
+    "base_commit": "47fc01a903ff3a2395b68ba4a6eda6a81440087e",
+    "work_branch": "cursor/v3-holdout-cloud-cases-d463",
+    "output_commit": "b7507a2de1277be12e3a3badc221827f658bd3da",
+    "output_commit_contents": [
+      "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+      "tests/benchmark/v3-holdout/cloud-cases/oracle-notes.json",
+      "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png"
+    ],
+    "attestation_commit": "not_self_referential: this file is added by the commit immediately following output_commit on the same branch"
+  },
+  "sole_repository_file_read": {
+    "path": "tests/benchmark/v3-holdout/V3_CASE_BRIEF.md",
+    "sha256": "f630ab0549e8df8cebee44f691353cd33933ad63c93f7b4527f1f8e1b677d37c",
+    "bytes": 3844
+  },
+  "generated_artifacts": [
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+      "sha256": "b453ec8a2ff60c16b9f2f1fcb7c163db81ed93687a621a28f801e8b774183946",
+      "bytes": 34085
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/oracle-notes.json",
+      "sha256": "a4d9fa913e2040d4114d57d0359e29ed0d38df79b208740909918667a8e9959c",
+      "bytes": 7385
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d",
+      "bytes": 44264
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40",
+      "bytes": 53957
+    }
+  ],
+  "generation_method": {
+    "text": "Case and note JSON emitted by a single-purpose script held outside the repository at /tmp/v3gen/generate_cases.py; all case content authored from the brief alone.",
+    "images": "Deterministic local raster rendering at /tmp/v3gen/render_images.py using Pillow 12.3.0 and Pillow's bundled default scalable font. No repository renderer, font, template or asset file was opened.",
+    "pillow_provenance": "Pillow 12.3.0 installed into the sandbox from the Python package index during this run; it is not vendored in the repository and was not read from it.",
+    "determinism_evidence": "generate_cases.py and render_images.py were re-run and all four artifacts hashed byte-identical to the first run.",
+    "image_geometry": {
+      "width": 1080,
+      "height": 720,
+      "format": "png",
+      "font_size": 34,
+      "background": "#f5f3ee",
+      "foreground": "#14161a"
+    }
+  },
+  "coverage_summary": {
+    "case_count": 18,
+    "case_ids": [
+      "V3-001",
+      "V3-002",
+      "V3-003",
+      "V3-004",
+      "V3-005",
+      "V3-006",
+      "V3-007",
+      "V3-008",
+      "V3-009",
+      "V3-010",
+      "V3-011",
+      "V3-012",
+      "V3-013",
+      "V3-014",
+      "V3-015",
+      "V3-016",
+      "V3-017",
+      "V3-018"
+    ],
+    "total_turns": 24,
+    "three_turn_cases": [
+      "V3-013",
+      "V3-014",
+      "V3-015"
+    ],
+    "one_turn_cases": [
+      "V3-001",
+      "V3-002",
+      "V3-003",
+      "V3-004",
+      "V3-005",
+      "V3-006",
+      "V3-007",
+      "V3-008",
+      "V3-009",
+      "V3-010",
+      "V3-011",
+      "V3-012",
+      "V3-016",
+      "V3-017",
+      "V3-018"
+    ],
+    "distribution": {
+      "green_control": [
+        "V3-001",
+        "V3-002",
+        "V3-003"
+      ],
+      "material_information": [
+        "V3-004",
+        "V3-005",
+        "V3-006",
+        "V3-007"
+      ],
+      "responsibility_boundary": [
+        "V3-008",
+        "V3-009",
+        "V3-010"
+      ],
+      "tone_boundary": [
+        "V3-011",
+        "V3-012"
+      ],
+      "correction_state": [
+        "V3-013",
+        "V3-014",
+        "V3-015"
+      ],
+      "recipient_routing": [
+        "V3-016"
+      ],
+      "image_only": [
+        "V3-017",
+        "V3-018"
+      ]
+    },
+    "material_information_omissions": {
+      "V3-004": "decision authority to make the commitment (genuinely absent from every visible field, including the ownership map)",
+      "V3-005": "confirmed completion time the customer has asked for",
+      "V3-006": "intended onward recipient of the note being circulated",
+      "V3-007": "traceable source for the quantitative claim in the draft"
+    },
+    "image_inventory": {
+      "V3-017": "draft rendered in pixels only; one glyph occluded and one letter/digit-ambiguous reference token, so a material token needs confirmation before sending",
+      "V3-018": "draft rendered in pixels only and fully legible; exercises responsibility boundaries and closing tone"
+    }
+  },
+  "validation": {
+    "validator": "/tmp/v3gen/validate.py (outside the repository)",
+    "assertions_run": 749,
+    "result": "all passed",
+    "covered": [
+      "both JSON documents parse and carry only the envelope keys defined in the brief",
+      "18 case ids V3-001..V3-018, unique and in order",
+      "24 turns total, one-based and contiguous, exactly three cases with three turns",
+      "non-image turns carry image_path null; image_spec null on all non-image cases",
+      "category distribution matches the brief block by block",
+      "four material-information cases, each screened against a concept vocabulary so the omitted fact is absent rather than contradicted or recoverable, and the four omitted concepts are distinct",
+      "PNG magic bytes and IHDR dimensions match the declared image_spec for both images; each image path occurs exactly once in cases.json and only on its own case",
+      "no rendered draft line is recoverable from case-visible text and both image turns only request review",
+      "oracle notes contain only case_id, design_intent and difficulty_notes, carry no figures, no case-specific proper nouns and no expected-answer, rating or label vocabulary",
+      "banned prior-domain vocabulary absent from every field of both documents",
+      "generator, renderer and validator reference no repository path other than the brief and the five declared outputs"
+    ]
+  },
+  "read_isolation": {
+    "repository_files_read": [
+      {
+        "path": "tests/benchmark/v3-holdout/V3_CASE_BRIEF.md",
+        "purpose": "the sole permitted input"
+      },
+      {
+        "path": "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+        "purpose": "re-read of this run's own output during validation"
+      },
+      {
+        "path": "tests/benchmark/v3-holdout/cloud-cases/oracle-notes.json",
+        "purpose": "re-read of this run's own output during validation"
+      },
+      {
+        "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+        "purpose": "re-read of this run's own output during validation"
+      },
+      {
+        "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+        "purpose": "re-read of this run's own output during validation"
+      }
+    ],
+    "repository_files_written": [
+      "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+      "tests/benchmark/v3-holdout/cloud-cases/oracle-notes.json",
+      "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "tests/benchmark/v3-holdout/cloud-cases/designer-attestation.json"
+    ],
+    "git_metadata_commands_used": [
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git checkout -b",
+      "git add <the five output paths>",
+      "git commit",
+      "git status --porcelain",
+      "git push -u origin <work branch>"
+    ],
+    "non_repository_paths_used": [
+      "/tmp/v3gen/generate_cases.py",
+      "/tmp/v3gen/render_images.py",
+      "/tmp/v3gen/validate.py",
+      "/tmp/v3gen/write_attestation.py",
+      "/tmp/v3gen/hashes_before.txt",
+      "/tmp/v3gen/hashes_after.txt",
+      "/tmp/cursor/async-install/install-user.status (environment setup probe)"
+    ],
+    "not_accessed": [
+      "no directory listing, glob or content search was run anywhere in the repository",
+      "no commit history, diff or log content was inspected",
+      "no Skill, specification, scorer, ontology, rubric or plan file",
+      "no prior benchmark case set, gold file, output or report",
+      "no test or fixture file outside the five declared outputs",
+      "no pull request, issue or code review content",
+      "no external website, dataset or documentation source"
+    ]
+  },
+  "no_prohibited_read_statement": "No repository content was accessed other than tests/benchmark/v3-holdout/V3_CASE_BRIEF.md and the artifacts this run itself generated under tests/benchmark/v3-holdout/cloud-cases/. The repository was never listed, globbed or searched, and no history, Skill, specification, test, benchmark, plan, scorer, ontology, rubric, prior case, prior output, pull request or external source was consulted. Every name, organization, figure, date and sentence in the case set was invented for this run from the brief alone.",
+  "limitations": [
+    "Model identity is unverified: cloud metadata returned a null model name, so no model attribution is asserted.",
+    "This file cannot contain its own hash, and the commit that adds it cannot be named inside it; the artifact commit is recorded and the attestation commit is the next commit on the work branch.",
+    "Read isolation is attested by construction and supported by a static check that the generator, renderer and validator reference no other repository path; it cannot be cryptographically proven from inside the run.",
+    "Genuine absence of each material fact is enforced by concept-vocabulary screening, which is a strong but not exhaustive proxy for unrecoverability by a determined reader.",
+    "Determinism was demonstrated by byte-identical regeneration inside this environment (CPython 3 with Pillow 12.3.0). A different Pillow version could rasterize the same text to different pixels, so the pixel-level hashes are environment-bound even though the rendered content is fixed by the renderer script.",
+    "Image legibility, including which token is deliberately unreadable in V3-017, was confirmed by direct visual inspection of the rendered PNGs; no OCR engine was available in this environment, so no automated text-recovery check was run.",
+    "The set intentionally carries no expected outputs, gold answers, ratings or scoring rubric, so it cannot be scored without a separately authored scorer.",
+    "Difficulty calibration is a designer judgement recorded in the oracle notes and has not been measured against any system under test."
+  ]
+}
