@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### v3.1 required-question case-design remediation
+
+- Preserved the first v3 holdout unchanged as `INVALID_COVERAGE`.
+- Triaged why direct Red defects, placeholder-safe gaps, and safely qualified provenance claims failed to yield required-question gold.
+- Added a v3.1 brief with six distinct overprovisioned question candidates.
+- Added mechanical dependency-removal, answer-supply, and dominant-Red design mutations.
+- Passed 11 unit tests and killed all 4 non-equivalent case-design mutants.
+- Removed an equivalent minimum-count mutant instead of counting a false mutation kill.
+
 ### Fresh benchmark v3 unseen holdout
 
 - Generated 18 unseen cases, 24 turns, and two deterministic image-only drafts in an isolated cloud context.
