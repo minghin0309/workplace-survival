@@ -1,0 +1,50 @@
+{
+  "schema_version": "v3",
+  "artifact": "gold-protocol-audits",
+  "contexts": [
+    {
+      "role": "case-designer",
+      "context_id": "bc-c754fd78-d593-5672-8209-b43b2396d463",
+      "status": "PASS_WITH_DISCLOSED_HARNESS_CONTEXT",
+      "prohibited_content_access": false
+    },
+    {
+      "role": "gold-labeler-1",
+      "context_id": "bc-2e9cf5a8-2026-520e-a714-1cda60c5696c",
+      "status": "PASS_WITH_PATH_DEVIATION",
+      "prohibited_content_access": false
+    },
+    {
+      "role": "gold-labeler-2",
+      "context_id": "bc-b0b46ffc-6a40-57cc-9e19-fe203c39480a",
+      "status": "PASS",
+      "prohibited_content_access": false
+    },
+    {
+      "role": "gold-labeler-3",
+      "context_id": "bc-b7e9cb2b-4f3f-506e-a3e2-8a033b14708c",
+      "status": "PASS_WITH_PATH_DEVIATION",
+      "prohibited_content_access": false
+    },
+    {
+      "role": "gold-adjudicator",
+      "context_id": "bc-e03a992e-7ce2-50cf-a4ac-d1440189ee32",
+      "status": "PASS_WITH_HISTORY_METADATA_DEVIATION",
+      "prohibited_content_access": false
+    }
+  ],
+  "rejected_attempts": [
+    {
+      "role": "gold-labeler-2",
+      "context_id": "bc-d6b1b002-df26-5b0b-963d-a6658a5238f5",
+      "reason": "Read runtime Skill files and labeled only 2 of 18 cases.",
+      "artifacts_accepted": false
+    }
+  ],
+  "limitations": [
+    "Audits are based on transcript/tool logs rather than an independent filesystem monitor.",
+    "Two accepted labelers attempted nonexistent shorthand image paths that returned no content before opening the case-declared paths.",
+    "The adjudicator read commit subject metadata for required label files but no historical file content.",
+    "Harness-supplied one-line Skill metadata was disclosed by the case designer and adjudicator."
+  ]
+}

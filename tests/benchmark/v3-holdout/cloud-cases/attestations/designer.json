@@ -1,0 +1,27 @@
+{
+  "schema_version": "v3",
+  "role": "designer",
+  "context_id": "bc-c754fd78-d593-5672-8209-b43b2396d463",
+  "model_id": "unverified",
+  "model_family": "claude",
+  "cloud_branch": "cursor/v3-holdout-cloud-cases-d463",
+  "cloud_commit": "b7507a2de1277be12e3a3badc221827f658bd3da",
+  "files_read": [],
+  "limitations": [
+    "Model identity is unverified: cloud metadata returned a null model name, so no model attribution is asserted.",
+    "This file cannot contain its own hash, and the commit that adds it cannot be named inside it; the artifact commit is recorded and the attestation commit is the next commit on the work branch.",
+    "Read isolation is attested by construction and supported by a static check that the generator, renderer and validator reference no other repository path; it cannot be cryptographically proven from inside the run.",
+    "Genuine absence of each material fact is enforced by concept-vocabulary screening, which is a strong but not exhaustive proxy for unrecoverability by a determined reader.",
+    "Determinism was demonstrated by byte-identical regeneration inside this environment (CPython 3 with Pillow 12.3.0). A different Pillow version could rasterize the same text to different pixels, so the pixel-level hashes are environment-bound even though the rendered content is fixed by the renderer script.",
+    "Image legibility, including which token is deliberately unreadable in V3-017, was confirmed by direct visual inspection of the rendered PNGs; no OCR engine was available in this environment, so no automated text-recovery check was run.",
+    "The set intentionally carries no expected outputs, gold answers, ratings or scoring rubric, so it cannot be scored without a separately authored scorer.",
+    "Difficulty calibration is a designer judgement recorded in the oracle notes and has not been measured against any system under test.",
+    "Blindness is complete with respect to reads but not with respect to harness-supplied context: one repository Skill path and its one-sentence description were injected into the system prompt before the task started, as recorded under read_isolation.unsolicited_context_disclosure. No body content of that file was available and none was read.",
+    "Machine model identity was unavailable; no model ID was guessed.",
+    "Transcript audit disposition is frozen in gold-protocol-audits.json."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v3-holdout/cloud-cases/designer-attestation.json",
+    "sha256": "e96206d900082dee53a1bc21caabc5b1112d11cc7d21b726c1b989742d3e20c7"
+  }
+}
