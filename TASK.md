@@ -272,7 +272,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.7 — Benchmark methodology v3 scorer hardening
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Preserve the v2 `SCORER_ERROR` outcome and prevent zero-denominator metrics or scorer exceptions from destroying formal evidence. No product behavior change.
 - Owner files: `tests/benchmark/v3/`, `TASK.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.
