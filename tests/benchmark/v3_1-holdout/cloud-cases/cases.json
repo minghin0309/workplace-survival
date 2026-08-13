@@ -1,0 +1,775 @@
+{
+  "envelope_version": "v3.1",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "case_count": 18,
+  "turn_count": 24,
+  "fictional_entities": true,
+  "notice": "All organisations, people, jobs, suppliers, clients, references and figures below are fictional.",
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "End-of-day update to the workroom manager on the Ashvale Bridal House crown run, job QM-2031-0461.",
+        "known_facts": [
+          "All 12 crowns on QM-2031-0461 are blocked and steamed as of Tuesday 7 October.",
+          "Callum Ostrey holds the trimming slot on Wednesday 8 October, 09:00 to 16:00.",
+          "The coordinator has put the internal check at 09:00 on Thursday 9 October.",
+          "Cranthorpe Courier collection is booked for Friday 10 October at 11:00 under reference CR-88214.",
+          "Nothing on this job needs a decision from the workroom manager."
+        ],
+        "constraints": [
+          "The coordinator schedules internal checks and books collections on jobs already released to finishing.",
+          "Ashvale Bridal House have been told nothing beyond the agreed Friday collection."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-001-T1",
+          "user_message": "Please look over this before I send it to Marit.",
+          "draft_message": "Marit - end of day on QM-2031-0461 for Ashvale. All 12 crowns are blocked and steamed. Callum has them for trimming on Wednesday, 09:00 to 16:00, I have put the internal check at 09:00 on Thursday, and the Cranthorpe collection is booked for Friday at 11:00, reference CR-88214. Nothing needed from you on this one. If the Thursday check moves anything I will tell you the same day.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "Cover is needed for the finishing bench while an apprentice is at a booked training day, and the choice between the two workable options belongs to the workroom manager.",
+        "known_facts": [
+          "Petra Somyk's block-work training day is Monday 13 October, 09:00 to 17:00, already agreed and paid for.",
+          "Option 1: Ilva Renaudin covers finishing 09:00 to 13:00 and the Marchmont Enclosure sample slips to Tuesday 14 October.",
+          "Option 2: the coordinator covers finishing and the Ardhu Lane stock count moves to Wednesday 15 October, with nothing else affected.",
+          "The Marchmont sample has a week of float; the stock count has none after Wednesday 15 October.",
+          "Ilva Renaudin is owed two working days' notice of any change to her bench hours."
+        ],
+        "constraints": [
+          "Re-allocating another maker's bench hours is the workroom manager's decision.",
+          "Moving the Ardhu Lane stock count is the workroom manager's decision.",
+          "The coordinator may cover the finishing bench personally without approval."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-002-T1",
+          "user_message": "Can you check this before it goes to Marit?",
+          "draft_message": "Marit - Petra's block-work training day is Monday 13 October, 09:00 to 17:00, so I need your call on cover, because both workable options move something else. Option 1: Ilva covers finishing 09:00 to 13:00 and the Marchmont sample slips to Tuesday 14 October. Option 2: I cover finishing myself and the Ardhu Lane stock count moves to Wednesday 15 October, with nothing else affected. Both work from my side. I would take Option 1, because the sample has a week of float and the stock count has none, but it is your call. If you can tell me by Friday 10 October I can give Ilva the two days' notice she is owed.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom and Ardhu Lane annexe",
+        "situation": "The workroom cannot finish the whole Marchmont Enclosure top-up by the date the client asked for, and the coordinator is telling the workroom manager where it actually stands.",
+        "known_facts": [
+          "Marchmont Enclosure asked for 14 finished pieces by Thursday 9 October at 16:00.",
+          "Nine narrow-brim pieces need one steam cycle each; the five wide-brim pieces need two cycles each.",
+          "One press in the Ardhu Lane annexe is free before Thursday; the second press is committed to QM-2031-0461 until Thursday at 12:00.",
+          "Friday 10 October morning is clear on both presses.",
+          "The coordinator has given Marchmont Enclosure no date of any kind."
+        ],
+        "constraints": [
+          "Dates given to Marchmont Enclosure are given by the workroom manager or the commercial lead, not by the coordinator.",
+          "Re-sequencing the workroom's own finishing order is the coordinator's decision."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-003-T1",
+          "user_message": "Review this for me before I send it to Marit, please.",
+          "draft_message": "Marit - on the Marchmont top-up: I can finish 9 of the 14 by Thursday at 16:00, not all 14. The five outstanding are the wide-brim pieces, which need two steam cycles each, and only one annexe press is free before Thursday. My plan is the nine narrow-brim pieces first, then the five wide-brim on Friday morning when both presses are clear. If you would rather I flip that order, tell me by Wednesday at 12:00 and I will re-sequence. I have given Marchmont no date - that one is yours to give.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "Ferrowhite Trimmings are holding reserved petersham for job QM-2031-0447 and will release it only against a request that names the individual who authorised the price variation.",
+        "known_facts": [
+          "The reserved stock is 40 m of 38 mm petersham in shade FW-Slate.",
+          "The price variation on the reserved stock is 310 pounds.",
+          "Ferrowhite release reserved stock only on a request naming the individual who authorised a variation above 250 pounds; their trade desk rejects a request that names no individual.",
+          "The reservation lapses on Thursday 9 October at 16:00.",
+          "The variation is already signed off inside the workroom and the entry on the sign-off sheet is initialled.",
+          "The coordinator has seen the initialled entry on the sign-off sheet.",
+          "Finishing on QM-2031-0447 starts on Friday 10 October and needs the petersham.",
+          "Every other field on the Ferrowhite release form is complete: account QT-4471, quantity, width and shade."
+        ],
+        "constraints": [
+          "Release requests to the Ferrowhite trade desk are sent by the workroom manager.",
+          "The coordinator cannot authorise a price variation.",
+          "Finishing cannot start on substitute trim; the shade is matched to the commission."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-004-T1",
+          "user_message": "Check this before I send it to Marit.",
+          "draft_message": "Marit - can you send Ferrowhite the release request for the 40 m of 38 mm petersham in FW-Slate on QM-2031-0447 before the reservation lapses at 16:00 today? Their trade desk will not release reserved stock unless the request names the person who authorised the 310 pound variation, and the variation is already signed off on our sheet. Account QT-4471, quantity, width and shade are all filled in on their form. Finishing needs the petersham on Friday morning.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Ardhu Lane annexe",
+        "situation": "The finished Marchmont Enclosure pieces on job QM-2031-0512 are packed and the collection has to be booked with Cranthorpe Courier by the workroom manager.",
+        "known_facts": [
+          "The nine finished pieces on QM-2031-0512 are trimmed, checked and packed as nine hat boxes in two crates.",
+          "Cranthorpe Courier accept a booking only against one exact collection date and one two-hour window; they hold no open bookings.",
+          "Marchmont Enclosure goods-in accept a delivery only inside the single window their goods-in desk confirmed to the coordinator by telephone on Monday 6 October.",
+          "Marchmont Enclosure turn away deliveries outside the confirmed window and charge a re-presentation fee.",
+          "The coordinator took that goods-in call and noted the confirmed window on the annexe board.",
+          "The packed crates can stand in the annexe for as long as needed; storage is not a constraint.",
+          "Cranthorpe's booking desk closes at 17:00 each day."
+        ],
+        "constraints": [
+          "Courier bookings on client jobs are placed by the workroom manager.",
+          "The coordinator does not hold a Cranthorpe booking account."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-005-T1",
+          "user_message": "Have a look at this before I send it to Marit.",
+          "draft_message": "Marit - please book Cranthorpe for the Marchmont collection on QM-2031-0512. The nine pieces are trimmed, checked and packed: nine boxes in two crates. Cranthorpe need an exact date and a two-hour window at the point of booking, and Marchmont's goods-in will only take the delivery inside the window their desk confirmed to me on Monday. Their booking desk shuts at 17:00.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "An adjustment note on job QM-2031-0498 has to reach Ashvale Bridal House before their fitting, and Ashvale accept fitting notes only when addressed to a single named contact.",
+        "known_facts": [
+          "The adjustment is finished: the crown was eased by 6 mm at the left temple and the brim wire was re-set.",
+          "The piece is boxed and ready for Ashvale's fitting on Tuesday 14 October at 10:30.",
+          "Ashvale return fitting notes sent to their general enquiries address unread.",
+          "Ashvale record one named contact per commission on the job card, and the recorded contact differs from commission to commission.",
+          "The job card for QM-2031-0498 is in the Bellhouse Yard office and the coordinator has read it.",
+          "The fitting cannot go ahead without the adjustment note in the named contact's hands."
+        ],
+        "constraints": [
+          "Messages to client staff go out from the workroom manager's account.",
+          "The coordinator does not correspond with Ashvale Bridal House directly."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-006-T1",
+          "user_message": "Please check this over before I send it to Marit.",
+          "draft_message": "Marit - could you send the adjustment note for QM-2031-0498 across to Ashvale's named contact for that commission before their fitting on Tuesday at 10:30? Ashvale return anything sent to their general enquiries address, so it has to go to the one contact recorded on the job card. The note itself: crown eased by 6 mm at the left temple, brim wire re-set, piece boxed and ready.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "Thurlow & Vane's quality desk has queried a shade difference across six brims on job QM-2031-0524, and their process requires any batch-variance statement to cite the source record it comes from.",
+        "known_facts": [
+          "Six brims on QM-2031-0524 read a half tone lighter than the approved swatch.",
+          "The difference is a batch variance in the straw taken in from Solberg Straw & Sinamay, not a finishing fault.",
+          "The variance was written into the workroom's goods-in log at intake, and the coordinator checked that entry this morning.",
+          "The Thurlow & Vane variance form has a mandatory source-record field.",
+          "Their quality desk rejects a form filled in with 'internal records' or any wording that carries no record reference.",
+          "Their cut-off for the response is Friday 10 October at 12:00.",
+          "A rejected form puts the six brims back on the workroom as a finishing fault."
+        ],
+        "constraints": [
+          "Responses to a client quality desk are sent by the workroom manager.",
+          "The coordinator keeps the goods-in log."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-007-T1",
+          "user_message": "Look this over before I send it to Marit.",
+          "draft_message": "Marit - please put this to Thurlow & Vane's quality desk before their Friday 12:00 cut-off: the shade difference across the six brims on QM-2031-0524 is a recorded batch variance in the straw we took in from Solberg, not a finishing fault. Their variance form will not accept the statement without the source record reference behind it, and they bounce anything that just says 'internal records'.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Ardhu Lane annexe",
+        "situation": "The coordinator has written a note asking the workroom manager to place a block order with Menkes Blockworks for job QM-2031-0533. The draft is attached as an image.",
+        "known_facts": [
+          "Menkes Blockworks cut each dome block to one exact crown circumference and reject an order that gives a range.",
+          "The cutting slot held for QM-2031-0533 is Friday 10 October at 08:00 and is released to another order if the form is incomplete when Menkes open it.",
+          "The commission is for Marchmont Enclosure and cannot be cut until the block exists.",
+          "The docket the coordinator wrote the order figures on sat in the annexe press room and the ink ran.",
+          "The client's measurement card is held in the Bellhouse Yard office and the coordinator took that measurement personally at the fitting."
+        ],
+        "constraints": [
+          "Supplier block orders are placed by the workroom manager.",
+          "The coordinator takes and records client head measurements at fitting.",
+          "Menkes will not cut to a nearest-size instruction."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-008-T1",
+          "user_message": "Attached is the note I want to send Marit. Please check it before it goes.",
+          "draft_message": null,
+          "image_path": "images/V31-008-block-order-docket.png",
+          "image_spec": {
+            "format": "png",
+            "width": 1080,
+            "height": 730,
+            "color_mode": "RGB",
+            "background_hex": "#f7f4ec",
+            "font_family": "DejaVu Sans",
+            "deterministic": true,
+            "sha256": "50b52b2b00f4b91107620fa0e365d63a920d9972326365c362d1754cc236d55c"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "A shortfall on the Ashvale Bridal House delivery for Thursday needs the workroom manager's authorisation on job QM-2031-0541.",
+        "known_facts": [
+          "Four of the sixteen pieces on QM-2031-0541 cannot be finished for Thursday 9 October because the 22 mm grosgrain has not arrived.",
+          "The workroom escalation procedure sets out three permitted recovery routes for a shortfall and requires the message to request one of them by name.",
+          "The workroom manager can authorise a named permitted route; she cannot sign off a shortfall that names none, and 'whichever works' is not something she can authorise.",
+          "The coordinator settled on one of the three permitted routes yesterday afternoon after going through the alternates list and the delivery dates.",
+          "Ashvale need the named route in writing before 11:00 on Wednesday 8 October; after that their own production schedule stands as it is.",
+          "Every other figure on the shortfall is settled: four pieces of sixteen, one cause, one delivery date."
+        ],
+        "constraints": [
+          "Shortfall recovery is authorised by the workroom manager.",
+          "The coordinator does not write to Ashvale about a shortfall until a route is authorised."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-009-T1",
+          "user_message": "Check this before I send it to Marit, please.",
+          "draft_message": "Marit - we will be four short of the sixteen for Ashvale on Thursday; the 22 mm grosgrain has not landed. Can you authorise the recovery route I settled on yesterday, so I can put it to Ashvale before 11:00 this morning? They need the route named in writing, and the procedure will not let you sign off a shortfall without a named route.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Ardhu Lane annexe",
+        "situation": "Twenty-two crowns on job QM-2031-0468 have to be re-blocked after a press fault, and the coordinator has drafted an update to the workroom manager.",
+        "known_facts": [
+          "The press fault in the Ardhu Lane annexe flattened the crowns on 22 pieces for Ashvale Bridal House.",
+          "Re-blocking 22 crowns takes about two full days of one blocker's bench time.",
+          "Ilva Renaudin's bench hours next week are already committed to the Marchmont Enclosure sample.",
+          "Callum Ostrey is not on the Saturday rota and has not been asked about Saturday.",
+          "The rush surcharge on QM-2031-0468 is 480 pounds and appears on Ashvale's order.",
+          "The revised delivery note for QM-2031-0468 has not been drawn up."
+        ],
+        "constraints": [
+          "Waiving a surcharge is a decision for the commercial lead or the workroom manager.",
+          "Weekend shifts and any re-allocation of another maker's hours are agreed by the workroom manager.",
+          "The coordinator does not commit the workroom manager's signature."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-010-T1",
+          "user_message": "Quick check on this before it goes to Marit.",
+          "draft_message": "Marit - just so you are in the loop: I have told Ashvale that Ilva will re-block all 22 crowns by Thursday, that Callum is covering the Ardhu Lane annexe on Saturday to make that work, that we are waiving the 480 pound rush surcharge on this one, and that you will sign the revised delivery note tomorrow. All handled, nothing for you to do.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "The Thurlow & Vane delivery on job QM-2031-0503 was two days late and the coordinator is writing to the workroom manager about it.",
+        "known_facts": [
+          "The delivery on QM-2031-0503 missed its date by two days.",
+          "The order was released to the workroom late by the commercial desk.",
+          "Supplier approvals sit with Dane Krivec's commercial desk.",
+          "The workroom scheduling rules are owned by the workroom manager.",
+          "Thurlow & Vane have asked for a written explanation and nothing has been sent to them yet."
+        ],
+        "constraints": [
+          "Supplier approvals are the commercial lead's function, not the coordinator's.",
+          "The workroom manager owns the scheduling rules and the written explanation to the client.",
+          "The coordinator's hours are set by the workroom manager and are not the coordinator's to pledge."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-011-T1",
+          "user_message": "Read this over before I send it to Marit.",
+          "draft_message": "Marit - the missed Thurlow delivery is on me, so I will own the whole thing end to end. I am taking supplier approvals off Dane from now on, I will rewrite the workroom scheduling rules this week, and I have told Thurlow that any future slip comes out of my own hours. You do not need to look at this again.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Ardhu Lane annexe",
+        "situation": "Crowns pressed by a second-year apprentice have needed re-blocking, and the coordinator is raising it with the workroom manager.",
+        "known_facts": [
+          "Petra Somyk is a second-year apprentice and has been on the steam press for three weeks.",
+          "Four crowns Petra pressed in the last fortnight had to be re-blocked.",
+          "Petra has not had the second-stage press briefing the workroom's training plan requires.",
+          "The coordinator has not raised any of this with Petra.",
+          "No piece has left the workroom with a fault from the press."
+        ],
+        "constraints": [
+          "Apprentice supervision and any change to apprentice duties are the workroom manager's decision.",
+          "Concerns about a colleague's work go to the workroom manager as observation, not as complaint."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-012-T1",
+          "user_message": "Check this before I send it to Marit.",
+          "draft_message": "Marit - I have had enough of Petra. She is careless, she clearly could not care less that the rest of us redo her crowns, and she has been dragging this workroom down since the day she arrived. Either she is off the presses by Monday or I stop covering for her. Your choice.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Ardhu Lane annexe",
+        "situation": "A client date on job QM-2031-0519 moved and the coordinator heard about it from the client's side rather than from the workroom.",
+        "known_facts": [
+          "The Marchmont Enclosure date on QM-2031-0519 moved forward to Wednesday 15 October.",
+          "The coordinator heard about the change from the client's assistant, not from the workroom.",
+          "The workroom manager agreed the new date with Marchmont on Monday 6 October.",
+          "The new date adds two steam cycles to an annexe schedule with one free press.",
+          "Nobody has yet worked out which pieces the two extra cycles displace."
+        ],
+        "constraints": [
+          "Client dates are agreed by the workroom manager.",
+          "Schedule impact is put to the workroom manager in writing.",
+          "The coordinator sets the order of work inside the annexe."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-013-T1",
+          "user_message": "I want to send this to Marit today. Check it first.",
+          "draft_message": "Marit - so, once again, nobody bothered to tell me a client date had moved. It must be lovely agreeing Wednesday dates from the office while the people who actually block the hats find out from the client's assistant. If you want it Wednesday, come down to the annexe and do the steaming yourself.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "A progress message on the Ashvale Bridal House top-up, job QM-2031-0555, is corrected twice before it is sent.",
+        "known_facts": [
+          "Fourteen crowns on QM-2031-0555 went into steaming on Monday 6 October.",
+          "Callum Ostrey holds the trimming slot on Wednesday 8 October.",
+          "Cranthorpe Courier hold collection slots on QM-2031-0555 and re-book on request.",
+          "The workroom manager uses the figures in this message on her client call at 08:30 the next morning."
+        ],
+        "constraints": [
+          "The coordinator books collections on this job.",
+          "Figures given to the workroom manager have to match the bench."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-014-T1",
+          "user_message": "Check this before I send it to Marit.",
+          "draft_message": "Marit - the Ashvale top-up on QM-2031-0555 is on track: all 14 crowns are through steaming and they go to Callum for trimming on Wednesday. The Cranthorpe collection stays Friday 10 October at 11:00.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-014-T2",
+          "user_message": "Hold on, a correction before anything else happens to it: only 11 crowns are through steaming. Three cracked at the brim edge on the second cycle and have to be re-blocked. Re-blocking is Wednesday, so trimming for those three moves to Thursday. Please redo the message with 11 through steaming and 3 re-blocking.",
+          "draft_message": null,
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-014-T3",
+          "user_message": "One more change and then it can go. Cranthorpe cannot do Friday at 11:00. The slot is now Friday 10 October at 15:30, reference CR-90177. Keep everything else from the last version.",
+          "draft_message": null,
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "A request to the workroom manager about a replacement straw batch on job QM-2031-0561 is corrected twice before it is sent.",
+        "known_facts": [
+          "Solberg Straw & Sinamay supplied two lots of straw for QM-2031-0561.",
+          "A shade variance was found across the brims cut from the second lot.",
+          "Solberg replace a varying lot on request and confirm a replacement date.",
+          "Courier costs on a replacement batch are a commercial decision at Quillsmere."
+        ],
+        "constraints": [
+          "The coordinator does not commit the workroom to absorbing a cost.",
+          "Messages to Solberg go out from the workroom manager."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-015-T1",
+          "user_message": "Check this before I send it to Marit.",
+          "draft_message": "Marit - please tell Solberg that the shade variance on the brims came from lot SB-LOT-7742, and that we will cover the courier cost on the replacement batch. I have said we can absorb it.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-015-T2",
+          "user_message": "Two things to fix before this goes anywhere. The lot number is wrong: it is SB-LOT-7749, not SB-LOT-7742. 7742 was the previous run and has nothing to do with this. Use 7749 everywhere.",
+          "draft_message": null,
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-015-T3",
+          "user_message": "Also drop the courier cost line completely. I do not have the authority to absorb costs, I have said nothing of the kind to Solberg, and it should never have been in there. All I need from the message is Solberg confirming the replacement date for SB-LOT-7749.",
+          "draft_message": null,
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Ardhu Lane annexe",
+        "situation": "A shortfall warning on the Marchmont Enclosure order, job QM-2031-0570, is corrected twice before it is sent.",
+        "known_facts": [
+          "Sixteen pieces are due to Marchmont Enclosure on QM-2031-0570.",
+          "The crin for the brim edges had not arrived when the coordinator first wrote the message.",
+          "Marchmont Enclosure's goods-in desk sets the acceptance window for each delivery.",
+          "The workroom manager speaks to Marchmont Enclosure each morning."
+        ],
+        "constraints": [
+          "Delivery windows are set by the client's goods-in desk.",
+          "The coordinator reports a shortfall to the workroom manager as soon as it is known."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-016-T1",
+          "user_message": "Check this before I send it to Marit.",
+          "draft_message": "Marit - heads up before tomorrow: we are going to be 6 pieces short on the Marchmont order for Thursday. I would rather you had it from me now than on Wednesday night.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-016-T2",
+          "user_message": "Update the numbers: it is 4 short, not 6. Two of the six came good after a second steam cycle. The reason for the remaining four is the same, the crin for the brim edges has not landed.",
+          "draft_message": null,
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-016-T3",
+          "user_message": "Last change. Ferrowhite have confirmed the crin lands Wednesday 15 October at 12:00, and Marchmont's goods-in have moved their acceptance window to Thursday 16 October, 07:30 to 09:30. That means all 16 go in one delivery after all. Please redraft it as the full 16 pieces, one delivery, Thursday 16 October, 07:30 to 09:30, and drop the shortfall.",
+          "draft_message": null,
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Bellhouse Yard workroom",
+        "situation": "The coordinator has drafted a message in the workroom manager's thread covering the replacement petersham on job QM-2031-0447 and a client's commission sheet.",
+        "known_facts": [
+          "The replacement petersham on QM-2031-0447 is invoiced by Ferrowhite Trimmings against account QT-4471.",
+          "The original petersham line on that invoice has to be credited.",
+          "The full workroom channel includes Teodor Balke, the Saturday casual staff and both annexe apprentices.",
+          "Mrs Havelock's commission sheet on QM-2031-0492 holds her fitting figures and her commission price.",
+          "Ashvale Bridal House keep client fitting figures and commission prices to the named workroom staff on the job."
+        ],
+        "constraints": [
+          "Client fitting figures and commission prices are not circulated beyond the staff working that job.",
+          "Supplier instructions go to the Ferrowhite trade desk from the workroom manager's account.",
+          "The workroom channel is not a client-data channel."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-017-T1",
+          "user_message": "Check this before I send it to Marit.",
+          "draft_message": "Marit - sending this to you. Dear Ferrowhite trade desk, please invoice us for the replacement petersham on QM-2031-0447 and credit the original line; our account is QT-4471. Also, could you post this into the full workroom channel so everybody has it, along with Mrs Havelock's commission sheet - crown 57.5 cm, nape drop 4 cm, 1,240 pounds - so Teodor and the Saturday casuals can see what we are dealing with.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "recipient_context": {
+        "recipient_name": "Marit Osgarde",
+        "recipient_role": "workroom manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal workroom message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "workroom coordinator",
+        "organization": "Quillsmere Millinery Workroom",
+        "site": "Ardhu Lane annexe",
+        "situation": "The coordinator has drafted a note to the workroom manager about the Menkes Blockworks write-off on job QM-2031-0546. The draft is attached as an image.",
+        "known_facts": [
+          "The block order on QM-2031-0546 was cut to the wrong specification and Menkes Blockworks have raised the cost with the commercial desk.",
+          "A credit note on a supplier order is not the coordinator's to sign.",
+          "Saturday shifts are agreed by the workroom manager; Ilva Renaudin and Callum Ostrey have not been asked about Saturday.",
+          "The rush charge on Ashvale Bridal House's pieces is a commercial decision.",
+          "Dane Krivec is the commercial lead and is not the coordinator's line manager."
+        ],
+        "constraints": [
+          "Write-offs and credit notes are outside the coordinator's authority.",
+          "Anything about another desk's part in a fault goes to the workroom manager as fact, not as complaint.",
+          "The coordinator does not commit other makers to a weekend shift."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-018-T1",
+          "user_message": "This is the note I want to send Marit; the text is in the attached image. Please review it.",
+          "draft_message": null,
+          "image_path": "images/V31-018-draft-note.png",
+          "image_spec": {
+            "format": "png",
+            "width": 1080,
+            "height": 740,
+            "color_mode": "RGB",
+            "background_hex": "#faf9f5",
+            "font_family": "DejaVu Sans",
+            "deterministic": true,
+            "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa"
+          }
+        }
+      ]
+    }
+  ]
+}
