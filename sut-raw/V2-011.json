@@ -1,0 +1,50 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-011",
+  "generated_at_utc": "2026-08-13T10:38:56Z",
+  "provenance": {
+    "sut": "Workplace Survival",
+    "model": "GPT-5.6 Sol",
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "base_commit": "ce4c26339fc1e2ce660e7b92e1c01cd0b152f26f",
+    "input": {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-011.json",
+      "sha256": "220152b30bed37987add95a75e0bf064899062fb97c86062cdb1edb0814e146e"
+    },
+    "runtime": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  "responses": [
+    {
+      "turn_index": 1,
+      "generated_at_utc": "2026-08-13T10:38:56Z",
+      "response_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ike Boaventura proposed the cycle change; Marta Whelan-Duke executed the validation runs and logged the tray data.\n- On Line 1, contamination fell from 7.1 percent to 2.4 percent across five weeks and three hundred and forty trays.\n- Rolling the change to Line 2 requires fourteen hours of autoclave requalification downtime, which only Corinne Bassey-Lund can authorise.\n- At current Line 2 volume and contamination, roughly sixty-four trays are scrapped per week at eleven pounds each in materials and labour.\n- Corinne has a standing preference for requests that state the cost of doing nothing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says, “I have been running a modified sterilisation cycle,” but Data A identifies Marta as the person who executed the validation runs and Ike as the process designer. It also omits the known cost of leaving Line 2 unchanged despite Corinne’s standing preference.\n- Communication risk: The wording misattributes execution of the validation and leaves out decision-relevant cost information.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral, factual, and makes a direct approval request without blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCorinne —\n\nI proposed a modified sterilisation cycle on Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. Marta Whelan-Duke ran the validation over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent.\n\nI would like to roll it out to Line 2. At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour. Requalifying the autoclave requires fourteen hours of downtime. Can you approve the downtime?\n\nIke"
+    },
+    {
+      "turn_index": 2,
+      "generated_at_utc": "2026-08-13T10:38:56Z",
+      "response_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ike Boaventura proposed the cycle change; Marta Whelan-Duke executed the validation runs and logged the tray data.\n- Ike does not want the message to single out a named colleague in a way that could look like strategic credit-sharing or blame-setting.\n- The current Data B remains the original draft; the requested attribution change is guidance for its revision.\n- On Line 1, contamination fell from 7.1 percent to 2.4 percent across five weeks and three hundred and forty trays.\n- Rolling the change to Line 2 requires fourteen hours of autoclave requalification downtime, which only Corinne Bassey-Lund can authorise.\n- At current Line 2 volume and contamination, roughly sixty-four trays are scrapped per week at eleven pounds each in materials and labour.\n- Corinne has a standing preference for requests that state the cost of doing nothing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft still says, “I have been running a modified sterilisation cycle,” which attributes the validation execution to Ike even though Data A separates Ike’s process-design role from Marta’s execution role. The executor can be described without naming her.\n- Communication risk: If sent unchanged, the message would misstate who executed the validation.\n\n### Tone\n\n- Rating: Green\n- Evidence: The current draft remains neutral, factual, and free of blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCorinne —\n\nI proposed a modified sterilisation cycle for Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. The cycle was validated over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent.\n\nI would like to roll it out to Line 2. At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour. Requalifying the autoclave requires fourteen hours of downtime. Can you approve the downtime?\n\nIke"
+    },
+    {
+      "turn_index": 3,
+      "generated_at_utc": "2026-08-13T10:38:56Z",
+      "response_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ike Boaventura proposed the cycle change; Marta Whelan-Duke executed the validation runs and logged the tray data.\n- Ike does not want the message to single out a named colleague in a way that could look like strategic credit-sharing or blame-setting.\n- The current Data B remains the original draft; the user has requested a further revision rather than adopting or resubmitting an assistant revision.\n- On Line 1, contamination fell from 7.1 percent to 2.4 percent across five weeks and three hundred and forty trays.\n- Rolling the change to Line 2 requires fourteen hours of autoclave requalification downtime, which only Corinne Bassey-Lund can authorise.\n- Line 2 scraps roughly sixty-four trays per week at the current contamination rate, at eleven pounds each in materials and labour.\n- The Line 2 autoclave door gasket replacement is scheduled for 4 February and also requires downtime. Combining it with requalification lets both jobs share one fourteen-hour window instead of two stoppages.\n- Corinne has a standing preference for requests that state the cost of doing nothing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft still says, “I have been running a modified sterilisation cycle,” which conflicts with the known division between Ike’s process-design role and Marta’s validation-execution role. It also does not yet state the confirmed shared-window opportunity.\n- Communication risk: If sent unchanged, the message would misattribute the validation and omit scheduling information material to the downtime decision.\n\n### Tone\n\n- Rating: Green\n- Evidence: The current draft remains neutral, factual, and free of blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCorinne —\n\nI proposed a modified sterilisation cycle for Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. The cycle was validated over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent.\n\nI would like to roll it out to Line 2. At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour. Requalifying the autoclave requires fourteen hours of downtime. The autoclave door gasket replacement is already scheduled for 4 February, so both jobs can share that fourteen-hour window instead of requiring two separate stoppages.\n\nCan you approve fourteen hours of Line 2 downtime on 4 February for both the gasket replacement and autoclave requalification?\n\nIke"
+    }
+  ]
+}
