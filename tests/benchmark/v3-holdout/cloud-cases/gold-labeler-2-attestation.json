@@ -24,11 +24,13 @@
     },
     {
       "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
-      "scope": "Entire assigned image."
+      "scope": "Entire assigned image; reread during validation for SHA-256.",
+      "sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d"
     },
     {
       "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
-      "scope": "Entire assigned image."
+      "scope": "Entire assigned image; reread during validation for SHA-256.",
+      "sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40"
     },
     {
       "path": ".cursor/skills/workplace-survival/SKILL.md",
@@ -45,6 +47,14 @@
     {
       "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
       "scope": "Entire non-normative validation examples file."
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2.json",
+      "scope": "Entire authored output during post-commit validation."
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/gold-labeler-2-attestation.json",
+      "scope": "Entire authored output during post-commit validation and attestation update."
     }
   ],
   "metadata_only_access": [
@@ -65,8 +75,19 @@
     }
   ],
   "validation": {
-    "status": "pending_post_commit",
-    "checks": []
+    "status": "passed",
+    "checks": [
+      "Both authored outputs parse as JSON.",
+      "Assigned IDs are exactly V3-017 and V3-018 in assignment order.",
+      "Label IDs are unique and exactly cover both assigned IDs.",
+      "V3-017 has intake routing and no prohibited ratings.",
+      "V3-018 has Red responsibility, Red tone, and Red overall labels.",
+      "Recorded label SHA-256 matches the authored label bytes.",
+      "Attested coverage is 2/2 (100%).",
+      "git diff --check passed for the initial labeling commit.",
+      "Local and remote initial labeling commit hashes matched after push."
+    ],
+    "initial_labeling_commit": "4c20a7bd1b6117c5717a2fc53900c8054db9ee04"
   },
   "protocol_verdict": "PASS",
   "protocol_notes": [
