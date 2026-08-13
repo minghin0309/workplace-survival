@@ -1,0 +1,854 @@
+{
+  "schema": "v3.1-holdout-cases",
+  "envelope_shape": "v3",
+  "case_set_id": "v31-unseen-holdout",
+  "case_count": 18,
+  "turn_count": 24,
+  "image_path_base": "Paths in image_path are relative to the directory holding this file.",
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis asks for one end-of-cycle message per firing, and he wants the kiln book entry number in it."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Teodora Vance",
+          "role": "Kiln floor technician",
+          "team": "Kiln floor"
+        },
+        "situation": "Kiln 3 has finished the bisque cycle for batch TB-4419 and Teodora is writing the end-of-cycle message.",
+        "known_facts": [
+          "The bisque cycle on kiln 3 ended at 06:20 on 13 April 2027.",
+          "All 480 tiles in batch TB-4419 came off intact and are on cooling rack 2.",
+          "The cycle is written up as kiln book entry K-2211.",
+          "The glaze load for the same batch is set for 13:00 on 13 April 2027."
+        ],
+        "constraints": [
+          "Teodora owns the kiln 3 cycle log and the glaze load timing inside her own shift."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-001-T1",
+          "user_message": "End-of-cycle message for Hollis. Does this read alright before I send it?",
+          "draft": "Hi Hollis - kiln 3 finished the bisque cycle for batch TB-4419 at 06:20 this morning. All 480 tiles came off intact and are on cooling rack 2, and the cycle is in the kiln book as entry K-2211. I will start the glaze load at 13:00 as planned and will tell you straight away if that slips. - Teodora",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "When two teams want the small test kiln on the same day, Hollis settles the clash and expects the workable slots to be laid out for him."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Ines Bramhall",
+          "role": "Glaze lab coordinator",
+          "team": "Glaze lab"
+        },
+        "situation": "A glaze re-test needs the small test kiln on a day finishing has already booked it, so Ines is asking Hollis to settle the clash.",
+        "known_facts": [
+          "The Ashfall Blue 12 re-test needs the small test kiln for six hours.",
+          "Finishing has the test kiln booked on 14 April 2027 from 09:00 to 15:00.",
+          "The re-test can run on 14 April 2027 from 16:00, or on 15 April 2027 from 07:00.",
+          "Either slot puts the result in hand before the 17 April 2027 client file cut-off.",
+          "Ines has already asked Casimir Lund whether finishing's booking will end on time."
+        ],
+        "constraints": [
+          "Ines sets the glaze lab's own schedule; the test kiln clash between two teams is Hollis's call."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-002-T1",
+          "user_message": "Asking Hollis to sort out the test kiln clash. Is this clear enough?",
+          "draft": "Hi Hollis - the Ashfall Blue 12 re-test needs the small test kiln for six hours, and finishing has it booked on 14 April from 09:00 to 15:00. Two slots work at my end: 14 April from 16:00, or 15 April from 07:00. Either one still lands the result before the 17 April client file cut-off. I have asked Casimir whether the 14 April booking will finish on time, but which slot the lab gets is your call. Would you like me to pencil in 15 April from 07:00 in the meantime? - Ines",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "recipient_context": {
+        "recipient_name": "Casimir Lund",
+        "recipient_role": "Finishing supervisor, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "Supervisor of the team that receives the sender's racks; not the sender's manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Supervisor only",
+        "stated_requirements": [
+          "Casimir wants defect reports with the night log entry number and a clear statement of what has already been done to the affected tiles."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Selby Ranganathan",
+          "role": "Night kiln operator",
+          "team": "Kiln floor, night shift"
+        },
+        "situation": "Selby found crazing on part of a rack during a routine night check and is reporting it to finishing.",
+        "known_facts": [
+          "During the 03:00 rack check on 14 April 2027, Selby found hairline crazing on nine tiles from batch TB-4388.",
+          "All nine tiles came from the top row of rack 1.",
+          "Selby logged the find as night entry N-0879 and moved the nine tiles to the quarantine shelf.",
+          "Moving suspect tiles to the quarantine shelf is a step on Selby's night check sheet."
+        ],
+        "constraints": [
+          "Selby's check sheet covers the find, the log entry and the quarantine shelf.",
+          "Whether the rest of a rack is re-inspected is the finishing supervisor's decision."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-003-T1",
+          "user_message": "Report to Casimir about the crazing I found on rack 1. Would you send this as it is?",
+          "draft": "Hi Casimir - on the 03:00 rack check on 14 April I found hairline crazing on nine tiles from batch TB-4388, all from the top row of rack 1. I logged the find as night entry N-0879 and moved those nine tiles to the quarantine shelf, which is the step my check sheet gives me. Whether the rest of rack 1 gets re-inspected is your decision, so I have left the other tiles exactly where they are for you. - Selby",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Section 4 of the operations charter lets Hollis action a firing longer than eight hours only when the request names the kiln floor lead who holds the current quarter's overtime delegation.",
+          "Hollis returns a request unactioned when it names no lead, refers to the delegation in general terms, or carries a placeholder such as 'TBC'. He does not fill the name in himself."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Teodora Vance",
+          "role": "Kiln floor technician",
+          "team": "Kiln floor"
+        },
+        "situation": "Teodora wants to run an eleven-hour firing on kiln 3 so that batch TB-4419 clears finishing before the Larkmoor Civic Library handover.",
+        "known_facts": [
+          "The firing would run eleven hours, 05:00 to 16:00, on 14 April 2027.",
+          "The extra gas for the long firing costs 96 EUR and the shift adds three overtime hours across two operators.",
+          "The Larkmoor Civic Library handover is on 20 April 2027, and all 480 tiles of batch TB-4419 are part of it.",
+          "The cost sits inside the kiln floor's discretionary limit of 250 EUR, so no purchase request is needed.",
+          "The overtime delegation moves between the kiln floor leads at the start of each quarter, and it moved on 1 April 2027.",
+          "The charter delegation record is kept in the day office and is not posted on the kiln floor."
+        ],
+        "constraints": [
+          "Teodora may run firings of up to eight hours on her own authority; anything longer needs the delegated lead's countersignature.",
+          "A firing on 15 April 2027 would miss the finishing queue for the 20 April handover."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-004-T1",
+          "user_message": "This is my request for the long firing on Wednesday. Is it ready to send to Hollis?",
+          "draft": "Hi Hollis - I would like to run kiln 3 for eleven hours on 14 April, 05:00 to 16:00, so batch TB-4419 clears finishing before the Larkmoor handover on 20 April. The extra gas is 96 EUR and the shift adds three overtime hours across two operators, which sits inside the kiln floor's 250 EUR limit. All 480 tiles in the batch are part of the handover, and a firing on 15 April would miss the finishing queue. Please action the extended hours under section 4. - Teodora",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis can place a shipment hold only when the request states the date the client has confirmed as its last acceptance date for a substituted glaze.",
+          "The hold form has one date field. Hollis does not accept a range, 'as soon as possible', or a target that has not been confirmed, and he does not hold the client's confirmation himself."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Ines Bramhall",
+          "role": "Glaze lab coordinator",
+          "team": "Glaze lab"
+        },
+        "situation": "A batch for the Vellhouse Atrium job was glazed with a substituted glaze, and Ines wants the shipment held until her re-test clears.",
+        "known_facts": [
+          "Batch TB-4501 is 1,260 tiles for the Vellhouse Atrium job.",
+          "The tiles were glazed with Ashfall Blue 12 after Ashfall Blue 9 ran out on 8 April 2027.",
+          "The re-test on the substituted glaze runs 72 hours from the moment the test kiln is loaded, and the test kiln is free from tonight.",
+          "Dispatch has batch TB-4501 on the 17 April 2027 carrier, and Ruben Sadler-Mott needs two working days' notice to move a booking.",
+          "The client's position on accepting a substituted glaze is recorded in the client file, which the client liaison updates after each call."
+        ],
+        "constraints": [
+          "Once the carrier collects the batch, a failed re-test means a recall at the co-operative's cost.",
+          "Ines owns the re-test and the glaze substitution record; only Hollis can place the hold."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-005-T1",
+          "user_message": "Can you check this before it goes to Hollis? I want the Vellhouse batch held until the re-test is finished.",
+          "draft": "Hi Hollis - please hold the Vellhouse Atrium shipment of batch TB-4501, 1,260 tiles, until the Ashfall Blue 12 re-test clears. The tiles were glazed with Ashfall Blue 12 after Ashfall Blue 9 ran out on 8 April. The test kiln is free tonight and the re-test takes 72 hours from loading, so I will have a result before the 17 April carrier, and Ruben needs two working days' notice from his side. Holding now keeps us inside the client's acceptance window and saves us a recall at our own cost. - Ines",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "recipient_context": {
+        "recipient_name": null,
+        "recipient_role": "The safety steward who was on duty for the night shift of 15 April 2027",
+        "relationship_to_sender": "Steward for the sender's shift; not the sender's manager",
+        "channel": "Internal near-miss note, filed to one named steward",
+        "audience_scope": "The on-duty steward, plus the safety file",
+        "stated_requirements": [
+          "Rota rule 12 counts a night-shift near-miss note as filed only when it is addressed to the steward who was on duty for that shift and names that steward in the note's log line.",
+          "A note addressed to the duty role in general, or one that asks whoever receives it to pass it on, is not counted as filed, and the 24-hour filing clock keeps running."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Selby Ranganathan",
+          "role": "Night kiln operator",
+          "team": "Kiln floor, night shift"
+        },
+        "situation": "A damper handle came away in Selby's hand during a cool-down, and he has to file the near-miss note before the filing clock runs out.",
+        "known_facts": [
+          "At 02:40 on 15 April 2027 the kiln 3 flue damper handle came away in Selby's hand while he was setting the cool-down.",
+          "Nobody was hurt, the kiln was at 240 degrees Celsius and falling, and no tiles were affected.",
+          "Selby clamped the handle, tagged the damper out of service, and logged the event as night entry N-0884.",
+          "The note is due within 24 hours of the event, so by 02:40 on 16 April 2027.",
+          "The steward duty rota for night shifts is posted in the day office. It is not repeated at the night desk or in the night log."
+        ],
+        "constraints": [
+          "Selby's remit ends with tagging out the damper and filing the note; the repair decision belongs to the steward and the maintenance lead.",
+          "Selby's next overlap with the day office is at 06:00 on 16 April 2027, after the filing deadline."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-006-T1",
+          "user_message": "Near-miss note from last night. Can you look at it before I file it?",
+          "draft": "To whoever was on safety duty on the Thursday night shift - at 02:40 on 15 April the kiln 3 flue damper handle came away in my hand while I was setting the cool-down. Nobody was hurt, the kiln was at 240 degrees and falling, and no tiles were affected. I clamped the handle, tagged the damper out of service and logged it as night entry N-0884. Please pass this on to the right steward so that it counts as filed before 02:40 on 16 April. - Selby",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "recipient_context": {
+        "recipient_name": "Casimir Lund",
+        "recipient_role": "Finishing supervisor, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "Supervisor of the team that would receive the batch; not the sender's manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Supervisor only",
+        "stated_requirements": [
+          "Records policy 9.2 lets Casimir release a batch to finishing on a quality pass only when the message cites the identifier of the log entry that records the test.",
+          "Casimir has no access to the night lab log. He will not release a batch on a pass reported without an identifier, on a spoken handover, or on an identifier promised 'to follow'."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Priya Okonjo-Hale",
+          "role": "Quality records clerk",
+          "team": "Quality records"
+        },
+        "situation": "Priya wants a batch released to finishing on the strength of a thermal-shock pass that reached her at handover.",
+        "known_facts": [
+          "Batch TB-4419 is 480 tiles for the Larkmoor Civic Library handover on 20 April 2027.",
+          "The thermal-shock check on the batch was run on the night of 13 April 2027 and reported as a pass at the 06:00 handover on 14 April 2027.",
+          "Priya's day-shift binder holds the handover sheet, which records the pass as a spoken report and carries no entry identifier.",
+          "The night lab keeps its own log, whose entries carry identifiers that the day binder does not copy.",
+          "The Larkmoor client file takes a quality statement only with the identifier of the entry behind it.",
+          "Priya owns the client file entries; the release to finishing is Casimir's step."
+        ],
+        "constraints": [
+          "Finishing needs three working days for 480 tiles, so a release later than 16 April 2027 misses the handover.",
+          "A quality statement in a client file cannot be corrected later without a formal amendment note."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-007-T1",
+          "user_message": "Draft for Casimir about the Larkmoor batch. Anything you would change?",
+          "draft": "Hi Casimir - the thermal-shock check on batch TB-4419 came back as a pass, reported at the 06:00 handover on 14 April. I would like to put that pass into the Larkmoor client file and have the 480 tiles released to finishing today. Finishing needs three working days and the handover is on 20 April, so today is the last comfortable point to start. - Priya",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Written slip handed over in person on the kiln floor",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Firing policy 6.1 lets Hollis grant a re-fire window only when the request quotes the measured offset in degrees Celsius from the kiln's current calibration slip.",
+          "Hollis works from the quoted figure. Calibration slips stay with the operator, and he will not act on a re-fire request that quotes no figure, an approximate range, or the words 'per slip'."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Teodora Vance",
+          "role": "Kiln floor technician",
+          "team": "Kiln floor"
+        },
+        "situation": "Teodora has written her re-fire request on a kiln floor slip and wants it checked before she hands it to Hollis. The slip is the whole message; she has not typed it out anywhere.",
+        "known_facts": [
+          "Kiln 3 was recalibrated on 12 April 2027 and the calibration slip for that recalibration is numbered S-3308.",
+          "The re-fire question is about batch TB-4419: 480 tiles on cooling rack 2, fired to a cone 6 target.",
+          "The Larkmoor Civic Library handover is on 20 April 2027.",
+          "A re-fire on kiln 3 takes nine hours, and the kiln is free on 16 April 2027.",
+          "The slip has been on the kiln floor since 12 April 2027 and has picked up an ink smear.",
+          "Teodora holds the only copy of the slip; calibration figures are not carried over into the kiln book."
+        ],
+        "constraints": [
+          "Policy 6.1 ties the re-fire schedule to the measured offset, because the offset sets how far the firing target has to move.",
+          "Teodora may not order a re-fire on her own authority."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-008-T1",
+          "user_message": "This is the slip I am about to hand Hollis. It is the whole message - I have not typed it up anywhere. Can you check it?",
+          "draft": null,
+          "draft_source": "image",
+          "image_path": "images/V31-008.png",
+          "image_spec": {
+            "format": "png",
+            "width": 816,
+            "height": 460,
+            "color_type": "grayscale-8",
+            "byte_length": 9889,
+            "sha256": "cf0d9925d8ade83642ec13e6ca0e33325bacbfdcab388b185e6a13379139493c",
+            "content_kind": "Capture of a written kiln floor slip",
+            "text_layer": "none",
+            "draft_location": "pixels only"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis signs a carrier release against a single named route. His form has one route field, and the charter has the requester record the route the planning huddle chose.",
+          "Hollis returns a release that lists both routes, asks him to pick one, or leaves the route open. He does not re-open a route that was settled at the huddle."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Ruben Sadler-Mott",
+          "role": "Dispatch scheduler",
+          "team": "Dispatch"
+        },
+        "situation": "Ruben is ready to book a carrier for a kiln element set and needs Hollis's release to do it.",
+        "known_facts": [
+          "The kiln 3 element set is part EL-77/6 and has to be on site before the rebuild on 18 April 2027.",
+          "Two contingency routes were tabled at the planning huddle on 9 April 2027: Route Ember through the Halden depot at 340 EUR and nine hours, and Route Cinder through the Quilby yard at 295 EUR and thirteen hours.",
+          "Both routes are still open with the carrier and both land the part before 18 April 2027.",
+          "The carrier holds the co-operative's booking slot until 16:00 on 15 April 2027, and its booking desk rejects a booking that names two routes.",
+          "Ruben was on the dispatch floor during the 9 April huddle, and the huddle minutes have not been circulated to dispatch.",
+          "Ruben owns the booking itself; the route was settled at the huddle."
+        ],
+        "constraints": [
+          "A missed 15 April 2027 slot puts the part on the 20 April run, which is after the rebuild.",
+          "Route costs and times come from the carrier's tariff and cannot be negotiated at booking."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-009-T1",
+          "user_message": "Carrier release for the element set. Is this ready for Hollis?",
+          "draft": "Hi Hollis - I am ready to book the carrier for the kiln 3 element set, part EL-77/6, so it lands before the rebuild on 18 April. Both contingency routes from the 9 April huddle are still open with the carrier: Route Ember through the Halden depot at 340 EUR and nine hours, and Route Cinder through the Quilby yard at 295 EUR and thirteen hours. Either one gets the part here in time. Our slot is held until 16:00 on 15 April, so please sign the release against the route from the huddle. - Ruben",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis expects each team to report what happened inside its own remit and to say plainly where a matter passes to someone else."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Teodora Vance",
+          "role": "Kiln floor technician",
+          "team": "Kiln floor"
+        },
+        "situation": "A glaze substitution on the Vellhouse Atrium job is being reviewed, and Teodora is writing to Hollis about it.",
+        "known_facts": [
+          "The glaze lab decided on 8 April 2027 to substitute Ashfall Blue 12 for Ashfall Blue 9.",
+          "Teodora ran the firing on the substituted glaze and logged it as kiln book entry K-2214.",
+          "Client conversations about the Vellhouse Atrium job go through the client liaison, Dov Marchetti.",
+          "The kiln floor is not told which glaze batch was selected or why; the loading sheet names the glaze only by code."
+        ],
+        "constraints": [
+          "Teodora's remit covers the firing cycle and its log.",
+          "Glaze selection sits with the glaze lab, and what the client is told sits with the client liaison."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-010-T1",
+          "user_message": "I want to get out in front of the Vellhouse glaze problem. Is this the right message to send Hollis?",
+          "draft": "Hi Hollis - about the Vellhouse Atrium glaze: I should have caught the Ashfall Blue substitution before it went into kiln 3, so I am taking this one on. I will write the substitution up as my call, work out what we tell the client, and ring their facilities lead this afternoon so that nobody else has to carry it. - Teodora",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis expects each team to report what happened inside its own remit and to say plainly where a matter passes to someone else."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Casimir Lund",
+          "role": "Finishing supervisor",
+          "team": "Finishing"
+        },
+        "situation": "Chipped edges have been found on a packed batch, and Casimir is writing to Hollis about who picks the rework up.",
+        "known_facts": [
+          "Finishing signed batch TB-4388 off as fit to pack on 12 April 2027.",
+          "Night entry N-0879 records that chipped edges were visible on the finishing bench before the batch was packed.",
+          "62 tiles in the batch have chipped edges.",
+          "Dispatch packs and moves tiles and has no sanding bench and no finishing tools.",
+          "Under the works schedule, re-sanding a chipped edge is a finishing operation."
+        ],
+        "constraints": [
+          "Casimir's remit covers the finishing bench, its sign-off and its rework.",
+          "Ruben Sadler-Mott runs dispatch and does not report to Casimir."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-011-T1",
+          "user_message": "Message to Hollis about the chipped tiles. Fine to send?",
+          "draft": "Hi Hollis - on the 62 chipped tiles from batch TB-4388: these went out of our hands the moment they were packed, so the chipping is a dispatch matter now. I have asked Ruben to have his packers re-sand the edges and re-pack them before the next run. Finishing will pick it back up if dispatch cannot get through them in time. - Casimir",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis takes process complaints directly and asks for the dates and the effect on the shift."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Teodora Vance",
+          "role": "Kiln floor technician",
+          "team": "Kiln floor"
+        },
+        "situation": "The kiln floor rota went up after the shift had started again, and Teodora is raising it with Hollis.",
+        "known_facts": [
+          "The week 16 rota was posted at 07:40 on 12 April 2027, forty minutes after the shift started at 07:00.",
+          "Teodora spent the first half hour of the shift calling two operators at home to confirm their start times.",
+          "Teodora's own notes show the rota went up after the shift start in three of the last five weeks.",
+          "Posting the kiln floor rota is Hollis's task."
+        ],
+        "constraints": [
+          "Teodora cannot post the rota herself.",
+          "The firing schedule for the day is set from the rota."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-012-T1",
+          "user_message": "I am annoyed about the rota and it probably shows. Is this alright to send to Hollis?",
+          "draft": "Hi Hollis - the week 16 rota went up at 07:40 again, forty minutes into the shift. That is three weeks out of five now, and I spent the first half hour of my shift ringing operators at home to find out when they were meant to start. I would appreciate it if the rota actually made it onto the board before the shift starts, so that the rest of us can get on with the firing schedule instead of chasing it. - Teodora",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis takes process complaints directly and asks for the dates and the effect on the shift."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Ines Bramhall",
+          "role": "Glaze lab coordinator",
+          "team": "Glaze lab"
+        },
+        "situation": "The small test kiln has been double-booked twice in one week and Ines is raising it with Hollis.",
+        "known_facts": [
+          "The small test kiln was double-booked on 10 April 2027 and again on 13 April 2027.",
+          "Ines lost four hours of glaze lab time on each occasion.",
+          "Test kiln bookings go through the board Hollis keeps.",
+          "Ines has a re-test due before the client file cut-off on 17 April 2027."
+        ],
+        "constraints": [
+          "Ines cannot change the booking board.",
+          "The re-test needs six uninterrupted hours in the test kiln."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-013-T1",
+          "user_message": "This is my second try at the test kiln message. I have taken the worst of the edge off it. Send it?",
+          "draft": "Hi Hollis - the test kiln was double-booked again on Monday, which makes twice in a week and eight hours of lab time I will not be getting back. I am happy to keep guessing at who has the kiln if that is how we are doing things now, but it would be genuinely refreshing to see a booking board that matches reality before my re-test is due on 17 April. - Ines",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis wants a delay reported with its cause, the site log reference for that cause, and the recovery date."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Teodora Vance",
+          "role": "Kiln floor technician",
+          "team": "Kiln floor"
+        },
+        "situation": "Batch TB-4460 is late and Teodora is working through a message to Hollis about it.",
+        "known_facts": [
+          "Batch TB-4460 is 320 tiles.",
+          "The cycle for batch TB-4460 stopped part way through on 9 April 2027.",
+          "Kiln 3 has a free slot on 17 April 2027.",
+          "Finishing can take batch TB-4460 on 19 April 2027 if the kiln runs on 17 April 2027."
+        ],
+        "constraints": [
+          "Teodora can rebuild her own kiln schedule but cannot book a kiln slot that is also wanted by another team without Hollis confirming it."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-014-T1",
+          "user_message": "First go at the delay message for Hollis. What do you think?",
+          "draft": "Hi Hollis - batch TB-4460 is running five days late because an operator started the cycle on the wrong programme on 9 April. I have rebuilt the schedule around it and the 320 tiles will be ready on 21 April. - Teodora",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-014-T2",
+          "user_message": "Two corrections before this goes anywhere. The delay is two days, not five. And the cause was a power dip at 04:10 on 9 April, not an operator mistake - the dip is in the site log as P-0332. Nobody started anything on the wrong programme. Please redo the message with that in it.",
+          "draft": null,
+          "draft_source": "carried_from_previous_turn",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-014-T3",
+          "user_message": "One more thing. The tiles are now wanted for the Larkmoor handover on 20 April, so a 21 April finish is no good. Finishing can take them on 19 April if kiln 3 runs on 17 April. Rework the message so it asks Hollis to confirm the 17 April kiln slot, and keep the two-day delay and the power dip cause in it.",
+          "draft": null,
+          "draft_source": "carried_from_previous_turn",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis wants rework progress given as a count of tiles done out of the batch, with the rework log reference."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Casimir Lund",
+          "role": "Finishing supervisor",
+          "team": "Finishing"
+        },
+        "situation": "Casimir is reporting progress on the edge rework for batch TB-4388.",
+        "known_facts": [
+          "Batch TB-4388 is 480 tiles and the edge rework covers all of them.",
+          "The rework is logged as F-1180.",
+          "Marek Ilves worked four hours of overtime on the rework at a cost of 92 EUR.",
+          "The finishing bench is free on 16 April 2027."
+        ],
+        "constraints": [
+          "Internal overtime costs and named operators are not shared outside the co-operative.",
+          "Casimir owns the finishing bench schedule."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-015-T1",
+          "user_message": "Rework update for Hollis. Does this work?",
+          "draft": "Hi Hollis - the edge rework on batch TB-4388 is finished. All 480 tiles are re-sanded and back on the packing rack. Marek put in four hours of overtime at 92 EUR to get it done, and the rework is logged as F-1180. - Casimir",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-015-T2",
+          "user_message": "Correction before this goes out: 300 of the 480 tiles are done, not all of them. The last 180 need a second pass and the bench is free on 16 April. Redo it with the real numbers.",
+          "draft": null,
+          "draft_source": "carried_from_previous_turn",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-015-T3",
+          "user_message": "Hollis now wants the client's facilities lead at Larkmoor copied on the same note. So the overtime cost and Marek's name cannot be in the version that goes out, and it still has to carry the 300 of 480 figure and the 16 April second pass.",
+          "draft": null,
+          "draft_source": "carried_from_previous_turn",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis wants a staffing request to state the shift, the number of people and the volume behind it."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Ruben Sadler-Mott",
+          "role": "Dispatch scheduler",
+          "team": "Dispatch"
+        },
+        "situation": "Ruben is asking for extra packers for a heavy night run.",
+        "known_facts": [
+          "The night run on 16 April 2027 carries 2,400 tiles across three orders.",
+          "Two packers cover a normal night run of up to 1,400 tiles.",
+          "Extra packers on a night shift cost 31 EUR an hour each across eight hours.",
+          "Odalys Krupin is the kiln floor lead Ruben speaks to at the gate handover."
+        ],
+        "constraints": [
+          "Ruben schedules the run but cannot add paid night hours himself."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-016-T1",
+          "user_message": "Staffing ask for the night run. Can you tidy it up?",
+          "draft": "Hi Hollis - the night run on 16 April carries 2,400 tiles across three orders and two packers only cover about 1,400. Could I have two extra packers for that night? Eight hours each at 31 EUR an hour. - Ruben",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-016-T2",
+          "user_message": "Update - Odalys told me at the gate this morning that the two extra packers are already approved for the 16th. Turn this into a short confirmation note rather than a request.",
+          "draft": null,
+          "draft_source": "carried_from_previous_turn",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-016-T3",
+          "user_message": "Scrap that. I caught Odalys again and she was talking about the 23rd, not the 16th. Nothing is approved for the 16th. Put it back to a request.",
+          "draft": null,
+          "draft_source": "carried_from_previous_turn",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "recipient_context": {
+        "recipient_name": "Gerhard Ostrowski",
+        "recipient_role": "Facilities lead, Larkmoor Civic Library refurbishment",
+        "relationship_to_sender": "External client contact, not a colleague",
+        "channel": "E-mail to the client, routinely forwarded to the client's main contractor",
+        "audience_scope": "External client and the client's contractor",
+        "stated_requirements": [
+          "Gerhard asked only for the handover date and the tile count for his own site programme."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Casimir Lund",
+          "role": "Finishing supervisor",
+          "team": "Finishing"
+        },
+        "situation": "Casimir is answering the client's question about the handover.",
+        "known_facts": [
+          "The Larkmoor handover is on 20 April 2027 and covers 480 tiles.",
+          "The co-operative's margin on the Larkmoor order is 18 per cent, an internal figure held in the costing sheet.",
+          "The glaze lab's substitution of 8 April 2027 is an internal quality matter still under review.",
+          "Priya Okonjo-Hale is away until 17 April 2027 on compassionate leave, and the reason is not shared outside the co-operative."
+        ],
+        "constraints": [
+          "Margins, open internal reviews and colleagues' leave reasons stay inside the co-operative.",
+          "Client-facing commitments on cost go through the client liaison, Dov Marchetti."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-017-T1",
+          "user_message": "Reply to the client about the handover. I want to sound open with them - is this alright to send?",
+          "draft": "Dear Gerhard - the handover is still on for 20 April with 480 tiles. Between us, the glaze lab dropped the ball on the Ashfall Blue substitution on 8 April and we are still clearing up after them, and our records clerk has been off on compassionate leave since Monday, which has not helped. We are carrying an 18 per cent margin on your order, so there is room at our end to absorb an extra firing if it comes to that. Anything else you need from us? - Casimir",
+          "draft_source": "text",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "recipient_context": {
+        "recipient_name": "Hollis Nyquist",
+        "recipient_role": "Plant manager, Cindervale Ceramics Co-operative",
+        "relationship_to_sender": "The sender's line manager",
+        "channel": "Internal staff chat, one-to-one",
+        "audience_scope": "Manager only",
+        "stated_requirements": [
+          "Hollis expects each team to report what happened inside its own remit and to say plainly where a matter passes to someone else."
+        ]
+      },
+      "data_a": {
+        "sender": {
+          "name": "Casimir Lund",
+          "role": "Finishing supervisor",
+          "team": "Finishing"
+        },
+        "situation": "Casimir has typed a message to Hollis in the chat box and wants it looked at before he sends it. The screenshot is the whole message.",
+        "known_facts": [
+          "The Larkmoor handover schedule belongs to dispatch, and Ruben Sadler-Mott sequences it.",
+          "Casimir sets the order of work on the finishing bench inside the dispatch sequence.",
+          "Date changes that reach the client go through the client liaison, Dov Marchetti.",
+          "Ruben has not answered two messages about the handover sequence since 13 April 2027."
+        ],
+        "constraints": [
+          "Casimir's remit covers the finishing bench and its order of work.",
+          "Re-sequencing the handover and telling the client about dates sit with other people."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-018-T1",
+          "user_message": "Screenshot of what I am about to send Hollis. It is only sitting in the message box, not typed anywhere else. Have a look?",
+          "draft": null,
+          "draft_source": "image",
+          "image_path": "images/V31-018.png",
+          "image_spec": {
+            "format": "png",
+            "width": 816,
+            "height": 460,
+            "color_type": "grayscale-8",
+            "byte_length": 3581,
+            "sha256": "b64e1a3773e121373917f63ffb04b32ba4c81aac5b68ad06fd3440a3d3563c7a",
+            "content_kind": "Screenshot of an unsent chat message",
+            "text_layer": "none",
+            "draft_location": "pixels only"
+          }
+        }
+      ]
+    }
+  ]
+}

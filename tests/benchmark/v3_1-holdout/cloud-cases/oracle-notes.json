@@ -1,0 +1,244 @@
+{
+  "schema": "v3.1-holdout-oracle-notes",
+  "case_set_id": "v31-unseen-holdout",
+  "purpose": "Construction notes for the holdout envelope. These notes add no case facts and record no expected labels.",
+  "construction_provenance": {
+    "sole_input": "tests/benchmark/v3_1/V3_1_CASE_BRIEF.md",
+    "authored_from": "The brief only. No runtime, gold, rubric, ontology, scorer, test, prior case, archive artifact or external source was read.",
+    "entities": "Every organisation, person, project, batch, record identifier, route and date is fictional and invented for this holdout.",
+    "image_drafts": "Where a draft is an image, the draft text exists only in the image pixels. It is not repeated in any text field of cases.json.",
+    "non_image_turns": "Every turn whose draft is not an image carries image_path null and image_spec null.",
+    "image_path_convention": "image_path values are relative to the directory holding cases.json.",
+    "image_determinism": "Both PNGs are produced by construction/render_images.py, which uses only the Python standard library and an embedded bitmap font, so repeated runs write identical bytes. Each image_spec records the byte length and the SHA-256 of the file it describes.",
+    "separation": "Construction predicates and answer mutations live in question-design.json and construction-mutations.json. Neither file is part of a gold labeling context or a SUT context, and neither is referenced from cases.json."
+  },
+  "notes_discipline": [
+    "No note states or implies an expected outcome for any case.",
+    "No note adds a fact that is absent from the SUT-visible envelope.",
+    "Notes are written per structural class, so they do not distinguish one case's design from another's."
+  ],
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The recipient's stated expectations and the sender's background are given in full inside the envelope.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-002",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The recipient's stated expectations and the sender's background are given in full inside the envelope.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-003",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The recipient is a peer supervisor rather than the sender's manager, which is stated in recipient_context.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-004",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The recipient's stated expectations and the sender's background are given in full inside the envelope.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-005",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The recipient's stated expectations and the sender's background are given in full inside the envelope.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-006",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. recipient_context carries a null recipient_name because the envelope describes the recipient by role only.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-007",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The recipient is a peer supervisor rather than the sender's manager, which is stated in recipient_context.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-008",
+      "turn_count": 1,
+      "draft_medium": "image",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].image_path"
+      ],
+      "structural_note": "Single turn whose draft exists only in the referenced PNG. turns[0].draft is null and the image is described by image_spec.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-009",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The recipient's stated expectations and the sender's background are given in full inside the envelope.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-010",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. data_a states which team holds each piece of the work described.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-011",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. data_a states which team holds each piece of the work described.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-012",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The sender's own view of the draft is stated in the turn's user_message.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-013",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. The sender's own view of the draft is stated in the turn's user_message.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-014",
+      "turn_count": 3,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft",
+        "turns[1].user_message",
+        "turns[2].user_message"
+      ],
+      "structural_note": "Three ordered turns. Turn 1 carries the text draft; turns 2 and 3 carry the sender's corrections and set draft_source to carried_from_previous_turn.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-015",
+      "turn_count": 3,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft",
+        "turns[1].user_message",
+        "turns[2].user_message"
+      ],
+      "structural_note": "Three ordered turns. Turn 1 carries the text draft; turns 2 and 3 carry the sender's corrections and set draft_source to carried_from_previous_turn.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-016",
+      "turn_count": 3,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft",
+        "turns[1].user_message",
+        "turns[2].user_message"
+      ],
+      "structural_note": "Three ordered turns. Turn 1 carries the text draft; turns 2 and 3 carry the sender's corrections and set draft_source to carried_from_previous_turn.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-017",
+      "turn_count": 1,
+      "draft_medium": "text",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].draft"
+      ],
+      "structural_note": "Single turn with a text draft. recipient_context states that the recipient sits outside the co-operative and that the channel is routinely forwarded.",
+      "facts_added_by_note": false
+    },
+    {
+      "case_id": "V31-018",
+      "turn_count": 1,
+      "draft_medium": "image",
+      "review_surface": [
+        "recipient_context",
+        "data_a",
+        "turns[0].image_path"
+      ],
+      "structural_note": "Single turn whose draft exists only in the referenced PNG. turns[0].draft is null and the image is described by image_spec.",
+      "facts_added_by_note": false
+    }
+  ]
+}

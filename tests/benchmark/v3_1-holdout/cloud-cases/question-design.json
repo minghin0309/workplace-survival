@@ -1,0 +1,154 @@
+{
+  "schema": "v3.1-holdout-question-design",
+  "case_set_id": "v31-unseen-holdout",
+  "visibility": "construction only; never exposed to gold labelers or to any SUT context",
+  "candidate_count": 6,
+  "candidate_ids": [
+    "V31-004",
+    "V31-005",
+    "V31-006",
+    "V31-007",
+    "V31-008",
+    "V31-009"
+  ],
+  "entries": [
+    {
+      "case_id": "V31-004",
+      "missing_concept": "approval-authority",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The April to June overtime delegation is held by kiln floor lead Maribel Otundo under charter delegation record D-2027-Q2-07.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "dependency_locus": "recipient_context.stated_requirements[0] and [1]: section 4 requires the delegated lead to be named, and the recipient neither supplies the name nor accepts a placeholder.",
+      "why_not_placeholder": "Requirement [1] states that a request carrying a placeholder such as 'TBC' is returned unactioned.",
+      "why_not_qualification": "Requirement [1] states that referring to the delegation in general terms is returned unactioned.",
+      "why_not_omission": "Without the extended hours the batch misses the finishing queue for the 20 April handover, so dropping the ask abandons the purpose of the message.",
+      "single_unknown_check": "Hours, dates, gas cost, overtime hours, tile count, spend limit and the handover date are all present in data_a.",
+      "answer_tokens_forbidden_in_cases": [
+        "Maribel Otundo",
+        "D-2027-Q2-07"
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "missing_concept": "confirmed-deadline",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The client confirmed 24 April 2027 as the last date on which it will accept the substituted glaze, recorded as client file confirmation C-1174.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "dependency_locus": "recipient_context.stated_requirements[0] and [1]: the hold cannot be placed without the client-confirmed acceptance date, and the recipient does not hold that confirmation.",
+      "why_not_placeholder": "The hold form has a single date field and an unconfirmed target is not accepted.",
+      "why_not_qualification": "Requirement [1] rules out ranges and 'as soon as possible'.",
+      "why_not_omission": "Dropping the hold ask leaves 1,260 tiles on the 17 April carrier with an open re-test, which is the risk the message exists to stop.",
+      "single_unknown_check": "Batch size, glaze codes, substitution date, re-test duration, kiln availability, carrier date and notice period are all present in data_a.",
+      "answer_tokens_forbidden_in_cases": [
+        "24 April",
+        "C-1174"
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "missing_concept": "intended-recipient",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The safety steward on duty for the night shift of 15 April 2027 was Wren Adaeze, shown on rota line R-419.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "dependency_locus": "recipient_context.stated_requirements[0] and [1]: rule 12 counts the note as filed only when the on-duty steward is named, and a pass-it-on note does not count.",
+      "why_not_placeholder": "A named-role placeholder is exactly the form rule 12 rejects.",
+      "why_not_qualification": "Addressing the duty role in general is ruled out by requirement [1].",
+      "why_not_omission": "Not filing leaves a safety near miss unfiled past the 24-hour deadline.",
+      "single_unknown_check": "Time, kiln state, injury status, remedial action, log entry, deadline and rota location are all present in data_a.",
+      "recipient_scope_note": "The content of the note is correctly scoped to a safety steward and the safety file. What is absent is the identity of the person who held that role on that shift, which is a missing material answer rather than a recipient-scope defect in the draft.",
+      "answer_tokens_forbidden_in_cases": [
+        "Wren Adaeze",
+        "R-419"
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "missing_concept": "traceable-source",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The thermal-shock pass for batch TB-4419 is recorded in the night lab log as entry TS-2027-0413-06.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "dependency_locus": "recipient_context.stated_requirements[0] and [1]: policy 9.2 makes the release conditional on citing the log entry identifier, and the recipient cannot look it up.",
+      "why_not_placeholder": "An identifier promised 'to follow' is explicitly rejected in requirement [1].",
+      "why_not_qualification": "A pass reported on a spoken handover is explicitly rejected in requirement [1].",
+      "why_not_omission": "Dropping the release ask misses the 16 April start that the 20 April handover needs.",
+      "single_unknown_check": "Tile count, handover date, test date, handover-sheet content, client file rule, finishing lead time and remit split are all present in data_a.",
+      "answer_tokens_forbidden_in_cases": [
+        "TS-2027-0413-06"
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "missing_concept": "material-measurement",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "Calibration slip S-3308 records a measured offset of minus 14 degrees Celsius for kiln 3.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "dependency_locus": "recipient_context.stated_requirements[0] and [1]: policy 6.1 makes the re-fire window conditional on the quoted measured offset, and the recipient never sees the slip.",
+      "why_not_placeholder": "Requirement [1] rejects the words 'per slip'.",
+      "why_not_qualification": "Requirement [1] rejects an approximate range.",
+      "why_not_omission": "Without the re-fire window the batch cannot be brought back to target before the 20 April handover.",
+      "single_unknown_check": "Slip number, recalibration date, batch, tile count, rack, cone target, re-fire duration, kiln availability and handover date are all legible in the image or present in data_a.",
+      "image_only_draft": true,
+      "image_unreadable_value": "The offset field on the slip carries an opaque ink smear. No glyphs are drawn beneath the smear, so the value is not recoverable from the pixels at any zoom level.",
+      "image_background_justification": "The slip's legible lines and the two stated requirements make clear that this exact field is the value the re-fire decision turns on: the label 'Measured offset:' and its unit 'C' remain legible on either side of the smear, and slip S-3308 is named on the line above.",
+      "answer_tokens_forbidden_in_cases": [
+        "minus 14",
+        "14 degrees",
+        "measured offset of"
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "missing_concept": "required-decision-option",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The planning huddle of 9 April 2027 chose Route Cinder through the Quilby yard, recorded as huddle minute M-0417.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "dependency_locus": "recipient_context.stated_requirements[0] and [1]: the release is signed against one recorded route, and the recipient will not re-open a route already settled at the huddle.",
+      "why_not_placeholder": "An open route field is returned under requirement [1], and the carrier desk rejects a two-route booking.",
+      "why_not_qualification": "Listing both routes and saying either would do is the exact form requirement [1] returns.",
+      "why_not_omission": "Not asking for the release loses the 16:00 slot on 15 April and puts the part on the 20 April run, after the rebuild.",
+      "single_unknown_check": "Part number, rebuild date, both route names, both costs, both durations, slot expiry and carrier rules are all present in data_a. The option set is visible; only the recorded selection is absent.",
+      "answer_tokens_forbidden_in_cases": [
+        "M-0417",
+        "huddle chose Route Cinder",
+        "Route Cinder was chosen",
+        "selected Route Cinder"
+      ]
+    }
+  ]
+}
