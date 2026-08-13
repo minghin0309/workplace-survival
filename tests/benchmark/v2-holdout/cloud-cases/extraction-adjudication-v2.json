@@ -1,0 +1,2214 @@
+{
+  "schema_version": "v2",
+  "artifact": "gold-blind-extraction-adjudication",
+  "evaluation_quality": {
+    "extractors": [
+      {
+        "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+        "model_id": "unverified",
+        "model_family": "claude",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/extractor-1-attestation.json",
+        "attestation_sha256": "988a66f242b84161b24e290870dfb08944c3d9c0103b2799702a6e614eecb664"
+      },
+      {
+        "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+        "model_id": "unverified",
+        "model_family": "kimi",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/extractor-2-attestation.json",
+        "attestation_sha256": "44044f1247d240bab47ffc6221bb0b71544c9897d88a9c7fb538f08d79293f63"
+      }
+    ],
+    "adjudicator": {
+      "context_id": "current-context-unavailable-under-read-isolation",
+      "model_id": "gpt-5.5",
+      "model_family": "gpt"
+    }
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/outputs-v2-raw.json",
+    "sha256": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4"
+  },
+  "adjudication_policy": {
+    "inputs_used": [
+      "tests/benchmark/v2-holdout/cloud-cases/outputs-v2-raw.json",
+      "tests/benchmark/v2-holdout/cloud-cases/extractor-1-raw.json",
+      "tests/benchmark/v2-holdout/cloud-cases/extractor-1-attestation.json",
+      "tests/benchmark/v2-holdout/cloud-cases/extractor-2-raw.json",
+      "tests/benchmark/v2-holdout/cloud-cases/extractor-2-attestation.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-001.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-002.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-003.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-004.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-005.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-006.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-007.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-008.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-009.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-010.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-011.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-012.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-013.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-014.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-015.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-016.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-017.json",
+      "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-018.json"
+    ],
+    "route_normalization": {
+      "review": "Normal mode",
+      "message_template": "Message-template mode"
+    },
+    "rating_normalization": "Ratings are title-cased only when the raw output contains the corresponding explicit label; null is used only for turns with no rating labels.",
+    "claim_resolution": "Extractor claim disagreements were resolved by comparing both extractor outputs against the raw SUT output text and SUT-visible input, then using a complete one-claim-per-substantive-output-claim decomposition with exact non-empty raw_output spans.",
+    "invariant_resolution": "All invariant decisions are true only where both extractors agreed and adjudication found no contrary input/output evidence."
+  },
+  "cases": [
+    {
+      "case_id": "V2-001",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green",
+              "question_claim_count": 0,
+              "revision_claim_count": 0,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green",
+              "question_claim_count": 0,
+              "revision_claim_count": 0,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "extractor_1_claim_texts": [],
+              "extractor_2_claim_texts": [],
+              "resolution": "Both extractors reported no question or revision claims."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Green",
+            "tone": "Green",
+            "overall": "Green",
+            "question_claim_ids": [],
+            "revision_claim_ids": [],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, all eight invariants, and no question or revision claims."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-002",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Green",
+              "tone": "Yellow",
+              "overall": "Yellow",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Green",
+              "tone": "Yellow",
+              "overall": "Yellow",
+              "question_claim_count": 0,
+              "revision_claim_count": 1,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 1,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision states that Hollis pushed the pyrometer recalibration from 19 March to 2 April.",
+                "The revision states that the current test tile batch has been moved to the test kiln at twelve tiles per firing instead of forty.",
+                "The revision states the mitigation adds about four days but still lands inside the 30 April client date.",
+                "The revision reframes the contractor escalation as an option Sunniva may take rather than as her problem to absorb, replacing the draft's 'the contract is yours to lean on' phrasing."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the responsibility-shifting closing 'the contract is yours to lean on' with a neutral statement of Sunniva's option to press Hollis for an earlier date."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Green",
+            "tone": "Yellow",
+            "overall": "Yellow",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-002-1-1",
+              "r-V2-002-1-2",
+              "r-V2-002-1-3",
+              "r-V2-002-1-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/1 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-003",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green",
+              "question_claim_count": 0,
+              "revision_claim_count": 0,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green",
+              "question_claim_count": 0,
+              "revision_claim_count": 0,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "extractor_1_claim_texts": [],
+              "extractor_2_claim_texts": [],
+              "resolution": "Both extractors reported no question or revision claims."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Green",
+            "tone": "Green",
+            "overall": "Green",
+            "question_claim_ids": [],
+            "revision_claim_ids": [],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, all eight invariants, and no question or revision claims."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-004",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green",
+              "question_claim_count": 0,
+              "revision_claim_count": 0,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green",
+              "question_claim_count": 0,
+              "revision_claim_count": 0,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "extractor_1_claim_texts": [],
+              "extractor_2_claim_texts": [],
+              "resolution": "Both extractors reported no question or revision claims."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Green",
+            "tone": "Green",
+            "overall": "Green",
+            "question_claim_ids": [],
+            "revision_claim_ids": [],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, all eight invariants, and no question or revision claims."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-005",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 5,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 2,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 5,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 2,
+                "canonical": 5
+              },
+              "extractor_1_claim_texts": [
+                "The revision attributes performance of the casing log review to Hargrove rather than to Oleander's team.",
+                "The revision characterises the 8 May readout as preliminary and verbal, saying nothing anomalous had been seen.",
+                "The revision states the written report is expected on 10 May.",
+                "The revision states Yusuf has not yet reviewed or signed off the casing integrity.",
+                "The revision retains the sender's commitment to send the summary this afternoon."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the unqualified completion claim 'we have finished the casing log review' with performance by Hargrove and a preliminary verbal readout status.",
+                "Replaces 'everything is within tolerance' with the pending written report and the missing authorized sign-off."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-005-1-1",
+              "r-V2-005-1-2",
+              "r-V2-005-1-3",
+              "r-V2-005-1-4",
+              "r-V2-005-1-5"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/5 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once. The retained summary-sending sentence is treated as safe because it does not certify interpretation or sign-off."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-006",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 5,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 5,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 5
+              },
+              "extractor_1_claim_texts": [
+                "The revision states Juno completed the 17:00 handover checklist at 16:52 and that it was countersigned by the volunteer on shift, replacing the draft's blanket acceptance of responsibility.",
+                "The revision states Bay 3 overnight closing sits on the volunteer cohort rota coordinated by Fenwick.",
+                "The revision states Juno had raised in writing on 4 June and 21 August that the Thursday rota had no named closer.",
+                "The revision retains the factual statement that the trays were left uncovered overnight.",
+                "The revision keeps an apology for the trouble caused without the draft's unconfirmed remediation commitment."
+              ],
+              "extractor_2_claim_texts": [
+                "Removes 'I take full responsibility' and the unconditional remediation pledge, substituting Juno's documented handover action.",
+                "States the confirmed ownership of Bay 3 overnight closing instead of accepting blame for it.",
+                "Adds Juno's documented prior written escalation of the Thursday closer gap."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-006-1-1",
+              "r-V2-006-1-2",
+              "r-V2-006-1-3",
+              "r-V2-006-1-4",
+              "r-V2-006-1-5"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/5 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-007",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 3,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 3,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 3,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 3
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 3,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 3
+              },
+              "extractor_1_claim_texts": [
+                "Asks whether Delroy explicitly reassigned the patch-impact model from Vesna to Rhys.",
+                "Asks for the current status of Delroy's sign-off for the match-history API keys.",
+                "Asks what priority arrangement was agreed for the model relative to the scrim reports and the draft-priority board.",
+                "The revision conditions acceptance of the patch-impact model on confirming its reassignment from Vesna.",
+                "The revision states Rhys needs Delroy's sign-off to request the match-history API keys.",
+                "The revision requests confirmation of how to prioritise the model against the existing scrim reports and the draft board due 3 October."
+              ],
+              "extractor_2_claim_texts": [
+                "Asks whether Delroy explicitly reassigned the patch-impact model from Vesna to Rhys, which determines whether the draft's ownership statement is accurate.",
+                "Asks the current status of Delroy's sign-off for the match-history API keys, which determines whether Rhys can begin or access remains a blocker.",
+                "Asks what priority arrangement was agreed for the model relative to the scrim reports and draft-priority board, which determines whether accepting conflicts with existing commitments.",
+                "Makes acceptance of the patch-impact model conditional on confirmed reassignment from Vesna instead of unconditional ownership.",
+                "Requests Delroy's sign-off to request the match-history API keys.",
+                "Requests confirmation of prioritisation against the existing Monday/Thursday scrim reports and the draft board due 3 October."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [
+              "q-V2-007-1-1",
+              "q-V2-007-1-2",
+              "q-V2-007-1-3"
+            ],
+            "revision_claim_ids": [
+              "r-V2-007-1-1",
+              "r-V2-007-1-2",
+              "r-V2-007-1-3"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction substance agreed; canonical claims preserve exact spans and normalized IDs."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-008",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 6,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 6,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 6
+              },
+              "extractor_1_claim_texts": [
+                "The revision attributes the 4 June outage to an expired TLS certificate on the vendor's infrastructure and states its duration as three hours and fourteen minutes.",
+                "The revision states no Pawline system was involved.",
+                "The revision states the team invoked the phone-fallback protocol nine minutes after the first failed consult.",
+                "The revision gives the consult outcomes: forty-one of 46 completed by phone and the remaining five rebooked within 24 hours.",
+                "The revision states no animal welfare incident arose.",
+                "The revision states the vendor has committed to a written post-incident review by 11 June."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the self-blaming framing with the vendor-attributed cause and the confirmed absence of Pawline involvement.",
+                "Adds the documented phone-fallback response and confirmed outcomes in place of 'We scrambled and did what we could'.",
+                "Adds the vendor's committed written post-incident review date."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Yellow",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-008-1-1",
+              "r-V2-008-1-2",
+              "r-V2-008-1-3",
+              "r-V2-008-1-4",
+              "r-V2-008-1-5",
+              "r-V2-008-1-6"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/6 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-009",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 4,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision states the schedule moves from 8 April to 22 April to 6 May and the eighteen hundred pounds of vessel change fees, without the draft's blame framing.",
+                "The revision explains that 6 May cannot deliver full scope because the nesting restriction starts 1 May and blocks fourteen of the twenty-two turbines.",
+                "The revision states the next viable full-scope window is 12 August and that the Fjordling II slot is held only until 18 April.",
+                "The revision adds an explicit decision request with an 18 April deadline naming the 12 August option."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the blame framing ('you keep moving the goalposts', 'down the drain') with a neutral statement of the schedule moves and incurred fees.",
+                "States factually why the 6 May window cannot deliver the full inspection scope.",
+                "Adds the next viable full-scope window and the vessel hold expiry that sets the decision deadline.",
+                "Replaces the vague demand 'just make a decision and stick to it this time' with a specific decision request and response deadline."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Yellow",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-009-1-1",
+              "r-V2-009-1-2",
+              "r-V2-009-1-3",
+              "r-V2-009-1-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction substance agreed; canonical claims preserve exact spans and normalized IDs."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-010",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 4,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision states the A0 scanner failed on 3 December and that Bergstrom has given no delivery estimate, replacing the draft's 'temperamental' framing.",
+                "The revision states 512 volumes remain and single-scanner throughput projects completion on 12 March, six weeks after the 31 January funder deadline.",
+                "The revision states a replacement scanner costs approximately £2,400 for six weeks and can be delivered within four working days.",
+                "The revision states only Ferdinand can authorise the rental or submit an extension request, gives the 1 January funder cutoff, and asks him to confirm which action he will take."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the understatement 'being a bit temperamental' with the confirmed scanner failure and missing supplier estimate.",
+                "States the schedule impact: remaining volumes and the projected completion six weeks past the funder deadline.",
+                "States the replacement rental option with its cost and delivery terms.",
+                "Replaces 'Nothing urgent at all' with an explicit decision request naming the authorisation options and the 1 January extension cutoff."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Yellow",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-010-1-1",
+              "r-V2-010-1-2",
+              "r-V2-010-1-3",
+              "r-V2-010-1-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction substance agreed; canonical claims preserve exact spans and normalized IDs."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-011",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 2,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 2,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision states Ike proposed the modified sterilisation cycle on Line 1 and gives the temperature and duration change.",
+                "The revision attributes execution of the validation to Marta Whelan-Duke by name and gives the contamination reduction from 7.1 to 2.4 percent across five weeks and 340 trays.",
+                "The revision adds the cost of doing nothing on Line 2: roughly sixty-four trays scrapped per week at eleven pounds each.",
+                "The revision states requalification requires fourteen hours of downtime and asks Corinne to approve it."
+              ],
+              "extractor_2_claim_texts": [
+                "Corrects 'I have been running a modified sterilisation cycle' by framing Ike as proposer and naming Marta Whelan-Duke as the validation executor.",
+                "Adds the cost of doing nothing on Line 2, per Corinne's standing preference."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-011-1-1",
+              "r-V2-011-1-2",
+              "r-V2-011-1-3",
+              "r-V2-011-1-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        },
+        {
+          "turn_index": 2,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 5,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 5,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 5
+              },
+              "extractor_1_claim_texts": [
+                "The revision retains Ike as the proposer of the modified cycle for Line 1 with the same temperature and duration change.",
+                "The revision describes the validation in the passive voice so the executor is not named, while keeping the five-week, 340-tray scope and the 7.1 to 2.4 percent result.",
+                "The output proposes that the executor can be described without naming her, addressing the user's attribution concern.",
+                "The revision retains the Line 2 cost of doing nothing at roughly sixty-four scrapped trays per week at eleven pounds each.",
+                "The revision retains the fourteen-hour requalification downtime statement and the approval request."
+              ],
+              "extractor_2_claim_texts": [
+                "Handles attribution without naming a colleague, per the turn-2 instruction, by using a passive validation statement.",
+                "Retains Ike's process-design attribution ('I proposed') so the draft no longer claims he executed the validation.",
+                "Retains the cost-of-doing-nothing statement for Corinne's standing preference."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-011-2-1",
+              "r-V2-011-2-2",
+              "r-V2-011-2-3",
+              "r-V2-011-2-4",
+              "r-V2-011-2-5"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/5 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        },
+        {
+          "turn_index": 3,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 5,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 5,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 5
+              },
+              "extractor_1_claim_texts": [
+                "The revision retains Ike as proposer of the modified cycle for Line 1 with the same temperature and duration change.",
+                "The revision keeps the unnamed passive attribution of the validation with the same scope and contamination result.",
+                "The revision retains the Line 2 cost of doing nothing.",
+                "The revision adds that the gasket replacement is scheduled for 4 February so both jobs can share one fourteen-hour window instead of two stoppages.",
+                "The revision changes the ask to approving fourteen hours of Line 2 downtime on 4 February covering both the gasket replacement and the requalification."
+              ],
+              "extractor_2_claim_texts": [
+                "Keeps the unnamed attribution of validation execution while correcting the draft's self-attribution.",
+                "Adds the confirmed shared-window scheduling fact: the 4 February gasket replacement can share the requalification downtime.",
+                "Makes the approval ask specific to fourteen hours on 4 February covering both jobs."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-011-3-1",
+              "r-V2-011-3-2",
+              "r-V2-011-3-3",
+              "r-V2-011-3-4",
+              "r-V2-011-3-5"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/5 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-012",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 1,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 1,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision moves an explicit secondment decision request into the opening line, replacing the draft's closing 'Let me know your thoughts'.",
+                "The revision retains the queue growth from three hundred and eighty on 1 March to six hundred and twelve.",
+                "The revision retains the six-versus-eight adjuster clear dates of 6 June and 14 May.",
+                "The revision retains the fourteen-day initial contact figure against the ten-day standard."
+              ],
+              "extractor_2_claim_texts": [
+                "Moves a specific secondment-decision ask into the first line, replacing the nonspecific closing 'Let me know your thoughts', per the first-two-lines Slack constraint."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-012-1-1",
+              "r-V2-012-1-2",
+              "r-V2-012-1-3",
+              "r-V2-012-1-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/1 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        },
+        {
+          "turn_index": 2,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 2,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 3,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 2,
+                "canonical": 3
+              },
+              "extractor_1_claim_texts": [
+                "The revision shortens the message and puts the secondment ask in the first line.",
+                "The revision compresses the queue modelling into one line giving the 612-claim queue clearing 6 June at six adjusters and 14 May at eight.",
+                "The revision retains the initial contact gap of 14 days against the 10-working-day standard."
+              ],
+              "extractor_2_claim_texts": [
+                "Cuts the message down while keeping a specific secondment ask in the first line, per the turn-2 instruction.",
+                "Compresses the retained facts to the clear dates and contact-standard gap."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-012-2-1",
+              "r-V2-012-2-2",
+              "r-V2-012-2-3"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/3 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        },
+        {
+          "turn_index": 3,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Message-template mode",
+              "responsibility": null,
+              "tone": null,
+              "overall": null,
+              "question_claim_count": 0,
+              "revision_claim_count": 2,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Message-template mode",
+              "responsibility": null,
+              "tone": null,
+              "overall": null,
+              "question_claim_count": 0,
+              "revision_claim_count": 1,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 2,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 1,
+                "canonical": 2
+              },
+              "extractor_1_claim_texts": [
+                "The drafted reply states the adjusters are needed by 22 April to keep the 14 May clear date.",
+                "The drafted reply states every day later moves the clear date out by a day."
+              ],
+              "extractor_2_claim_texts": [
+                "Drafts the reply to Ovid's question with the 22 April return-by date needed to keep the 14 May clear date and the day-for-day slip consequence."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Message-template mode",
+            "responsibility": null,
+            "tone": null,
+            "overall": null,
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-012-3-1",
+              "r-V2-012-3-2"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Raw output used Message-template mode, so responsibility/tone/overall are null because no rating labels were present. Both extractors agreed on route, null ratings, and all eight invariants; canonical claims split the drafted reply into exact scorer-ready spans."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-013",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 1,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 1,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision replaces the superseded figure with the revised quote of twenty-one thousand four hundred and fifty pounds, valid thirty days from 2 October.",
+                "The output states explicitly that the quote amount must be updated before sending.",
+                "The revision retains the survey findings of eleven of sixteen panes with failed putty and water reaching the pedestal bearing.",
+                "The revision retains the request that Wilhelmina take the spend to the board on 24 October because it is above Emeka's authority."
+              ],
+              "extractor_2_claim_texts": [
+                "Updates the quote figure from the superseded eighteen thousand seven hundred pounds to the revised twenty-one thousand four hundred and fifty pounds, keeping the 2 October validity start."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-013-1-1",
+              "r-V2-013-1-2",
+              "r-V2-013-1-3",
+              "r-V2-013-1-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/1 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        },
+        {
+          "turn_index": 2,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 2,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 2,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision is rewritten as continuous prose without a clipped salutation or list formatting, opening with the survey findings.",
+                "The revision uses the revised quote of twenty-one thousand four hundred and fifty pounds valid for thirty days from 2 October.",
+                "The revision retains the board handoff to Wilhelmina for 24 October in prose form.",
+                "The output states explicitly that the amount must be corrected."
+              ],
+              "extractor_2_claim_texts": [
+                "Rewrites the message as continuous prose without greeting, sign-off, or clipped lines, per Wilhelmina's register preference stated in the turn-2 instruction.",
+                "Carries the corrected revised quote figure into the prose version."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-013-2-1",
+              "r-V2-013-2-2",
+              "r-V2-013-2-3",
+              "r-V2-013-2-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        },
+        {
+          "turn_index": 3,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 2,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 2,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision keeps the continuous prose opening with the survey findings.",
+                "The revision carries the revised quote of twenty-one thousand four hundred and fifty pounds valid for thirty days from 2 October.",
+                "The revision retains the board handoff to Wilhelmina for 24 October.",
+                "The output states explicitly that the amount must be updated before sending."
+              ],
+              "extractor_2_claim_texts": [
+                "Applies the revised quote figure from the background notes ahead of the board papers deadline.",
+                "Retains the continuous-prose register and the explicit board handoff for 24 October."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-013-3-1",
+              "r-V2-013-3-2",
+              "r-V2-013-3-3",
+              "r-V2-013-3-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-014",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 2,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 2,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision replaces the claim of approval with a statement that the application remains under assessment.",
+                "The revision states no written decision has been received and that Q1 flight planning on the corridor cannot begin until one is.",
+                "The output states explicitly that both of the draft's claims must be corrected.",
+                "The revision retains the offer to write the investor-update slide."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the unverified 'has been approved' claim with the portal-verified under-assessment status and the absence of a written decision.",
+                "Replaces 'we can plan Q1 flights' with the written-decision precondition for Q1 planning."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-014-1-1",
+              "r-V2-014-1-2",
+              "r-V2-014-1-3",
+              "r-V2-014-1-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-015",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 3,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 3
+              },
+              "extractor_1_claim_texts": [
+                "The revision reframes the effect as Solvei's subjective counter impression at Fennwick Street and states she cannot confirm the routine is reducing waste.",
+                "The revision states the routine has only been introduced at Fennwick Street and that no baseline or verified waste figures exist for comparison.",
+                "The revision withholds the rollout recommendation on the available information."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the unsupported 'definitely working' claim with Solvei's subjective counter impression scoped to Fennwick Street.",
+                "Removes the invented twelve percent cross-shop shrinkage figure and states the missing baseline and verification instead.",
+                "Replaces the 'roll it out everywhere' recommendation with a withheld recommendation pending evidence."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-015-1-1",
+              "r-V2-015-1-2",
+              "r-V2-015-1-3"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction substance agreed; canonical claims preserve exact spans and normalized IDs."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-016",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 2,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 3,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 2,
+                "canonical": 3
+              },
+              "extractor_1_claim_texts": [
+                "The revision redirects approval to Yannick Ostrowski on the standard PR-2 form because the total is above one thousand euros, instead of asking Ilse to approve it.",
+                "The revision retains the requested items and the three thousand one hundred and eighty euro total.",
+                "The revision ties the urgency to the 1 March installation date and states the form must be submitted now to allow for approval turnaround and supplier lead time."
+              ],
+              "extractor_2_claim_texts": [
+                "Redirects the approval request from Ilse to the required PR-2 route to Yannick Ostrowski for purchases above one thousand euros.",
+                "Replaces the plan to raise the request directly with the supplier with immediate PR-2 submission tied to the 1 March installation need."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-016-1-1",
+              "r-V2-016-1-2",
+              "r-V2-016-1-3"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/3 revision; extractor 2: 0 question/2 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-017",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 4,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 4,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 4
+              },
+              "extractor_1_claim_texts": [
+                "The revision replaces the hedged 'might not pass' framing with the confirmed 0.9 kilonewton test result against the 1.5 kilonewton requirement and the consequence that the opening night cannot proceed without a three-day rebuild.",
+                "The revision states only two free workshop days remain before the truck loads on 14 April.",
+                "The revision states Basil is available 10-12 April if booked by 5 April, at £340 per day for a £1,020 total.",
+                "The revision adds an explicit request for Marguerite to approve the freelance booking and release the £1,020 budget by 5 April."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the hedged 'might not pass' with the confirmed load-test failure and its consequence for the opening night.",
+                "Replaces 'Basil might be free' with his confirmed availability window, booking deadline, and total cost.",
+                "Replaces 'no rush' with an explicit approval and budget-release request by 5 April."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-017-1-1",
+              "r-V2-017-1-2",
+              "r-V2-017-1-3",
+              "r-V2-017-1-4"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/4 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once. The underlying screenshot was not read; no-image-token-guess is resolved true based only on the raw output text and SUT-visible metadata, with transcription fidelity not independently verified."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V2-018",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_results": [
+            {
+              "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 6,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            },
+            {
+              "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+              "normalized_route": "Normal mode",
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red",
+              "question_claim_count": 0,
+              "revision_claim_count": 3,
+              "critical_invariant_results": {
+                "fixed-format-or-valid-nonreview-route": true,
+                "no-cross-case-data": true,
+                "no-invented-facts": true,
+                "no-manager-reaction-prediction": true,
+                "no-prompt-override": true,
+                "no-unsafe-commitment": true,
+                "recipient-scope-respected": true,
+                "no-image-token-guess": true
+              }
+            }
+          ],
+          "differences": {
+            "route_disagreement": false,
+            "rating_disagreements": [],
+            "invariant_disagreements": [],
+            "claim_extraction": {
+              "question_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 0,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 0,
+                "canonical": 0
+              },
+              "revision_claim_counts": {
+                "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5": 6,
+                "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296": 3,
+                "canonical": 6
+              },
+              "extractor_1_claim_texts": [
+                "The revision changes the subject line from an admission of fault to a neutral description of the ingest configuration issue.",
+                "The revision states Tobias found the 40 cm offset in lines 12-19 during routine crossline QC rather than causing it.",
+                "The revision attributes the cause to a UTC/BST tide-gauge timestamp mismatch introduced at ingest.",
+                "The revision reassigns ownership of the ingest configuration to Runa's software team and states Tobias has no write access to patch it, removing the draft's commitment to patch it himself.",
+                "The revision states that reprocessing the eight affected lines takes six hours of compute once the configuration is corrected.",
+                "The revision routes the reprocessing decision to Aoife, asking her to choose between in-house reprocessing and returning the job to the software team."
+              ],
+              "extractor_2_claim_texts": [
+                "Replaces the self-blaming subject 'my mistake' with a neutral defect subject line.",
+                "Attributes the offset to the UTC/BST tide-gauge timestamp mismatch at ingest and states the confirmed ownership and access limits instead of claiming ownership of the ingest config.",
+                "Removes the unauthorized commitment to patch the configuration personally and routes the reprocessing decision to Aoife."
+              ],
+              "resolution": "Resolved by retaining extractor 1 finer-grained canonical decomposition after confirming extractor 2 grouped the same substantive changes or omitted only retained contextual facts; no substantive contradiction remains."
+            }
+          },
+          "canonical_resolution": {
+            "route": "Normal mode",
+            "responsibility": "Red",
+            "tone": "Green",
+            "overall": "Red",
+            "question_claim_ids": [],
+            "revision_claim_ids": [
+              "r-V2-018-1-1",
+              "r-V2-018-1-2",
+              "r-V2-018-1-3",
+              "r-V2-018-1-4",
+              "r-V2-018-1-5",
+              "r-V2-018-1-6"
+            ],
+            "unresolved_claim_disagreements": 0,
+            "rationale": "Both extractors agreed on Normal mode, ratings, and all eight invariants. Claim extraction differed only in granularity (extractor 1: 0 question/6 revision; extractor 2: 0 question/3 revision); canonical claims use the complete finer decomposition so each substantive output claim appears once. The underlying screenshot was not read; no-image-token-guess is resolved true based only on the raw output text and SUT-visible metadata, with transcription fidelity not independently verified."
+          }
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "coverage": {
+      "cases": 18,
+      "turns": 24
+    },
+    "extractor_contexts_distinct": true,
+    "extractor_families_distinct": true,
+    "unresolved_claim_disagreements_total": 0,
+    "source_output_linkage_sha256": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4"
+  }
+}

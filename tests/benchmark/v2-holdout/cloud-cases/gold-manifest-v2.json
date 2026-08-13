@@ -1,0 +1,173 @@
+{
+  "version": "2",
+  "immutable": true,
+  "stage": "gold",
+  "parent_manifest": {
+    "path": null,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "frozen_at_utc": "2026-08-13T08:34:20.947011Z",
+  "artifacts": [
+    {
+      "role": "cases",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828",
+      "cloud_branch": "cursor/v2-cloud-cases-294f",
+      "cloud_commit": "a638d2b87ef17c36e394319e3e46b361eb6eb061"
+    },
+    {
+      "role": "oracle-notes",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/oracle-notes.json",
+      "sha256": "6c169c344caa52cb41d251f805a613ffa9ea58d7b69dcd9797ea7e2524903099",
+      "cloud_branch": "cursor/v2-cloud-cases-294f",
+      "cloud_commit": "a638d2b87ef17c36e394319e3e46b361eb6eb061"
+    },
+    {
+      "role": "gold",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-v2.json",
+      "sha256": "63245c97c837721862769598c42e2fd47d4c2f87ee1b0624763800d8b32dc05d",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "df0b54fcb7c57cbd27f4e814f49d5321c3b60f18"
+    },
+    {
+      "role": "adjudication",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/adjudication-v2.json",
+      "sha256": "224c73e55790d1f93940982fa3bfa209e421dffaab07f769a7dc67e87d508140",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "df0b54fcb7c57cbd27f4e814f49d5321c3b60f18"
+    },
+    {
+      "role": "ontology",
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+      "cloud_branch": "cursor/blind-benchmark-methodology-17a0",
+      "cloud_commit": "366f637a8873a3750dcc9b45c1a62364b25fe0fe"
+    },
+    {
+      "role": "scorer",
+      "path": "tests/benchmark/score_semantic.py",
+      "sha256": "f437e4702fcb06f790fe4414b133ec360af0b620740bbd431b43971578429327",
+      "cloud_branch": "cursor/blind-benchmark-methodology-17a0",
+      "cloud_commit": "366f637a8873a3750dcc9b45c1a62364b25fe0fe"
+    },
+    {
+      "role": "validator",
+      "path": "tests/benchmark/validate_benchmark.py",
+      "sha256": "16fba6e6256a1ffce6d1c6b5373f206c72011b1b17256f0ab6e2ae3389a9378c",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "c688a88bd017458c419331320a24af69ecb0e881"
+    },
+    {
+      "role": "runtime-manifest",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/runtime-manifest.json",
+      "sha256": "5e20f19c44d0a3527131a9948af560360b7d234b0ab3b545c25018c32f45b355",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "4faea28b9b7f9a1b31d20c424ce8350170a0207e"
+    },
+    {
+      "role": "labeler-1",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1.json",
+      "sha256": "44eecc21199cecba5c0a8e7dce99277f8c2fd0c2fcb81a1e127b3f1c1dce5418",
+      "cloud_branch": "cursor/v2-cloud-gold-labeler-1-d71f",
+      "cloud_commit": "24c91e5425fdd2b50b8dd728e329ef88a39474e4"
+    },
+    {
+      "role": "labeler-2",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-rerun.json",
+      "sha256": "3d927fa748f90c6bc264b30d23354855968f70ee01b25f5c54d5f5dad2976eb8",
+      "cloud_branch": "cursor/gold-labeler-2-rerun-7d45",
+      "cloud_commit": "30bc76b0f569d57a373d91c25bbf4cf14ec176fb"
+    },
+    {
+      "role": "labeler-3",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "67aa69207ba205182eb25065fdf20c947de715bc10b2a381531ec88ce1f1e938",
+      "cloud_branch": "cursor/v2-gold-labeler-3-56bd",
+      "cloud_commit": "c5fdaee38150e738bd4ca040c264fd5674ad0d8d"
+    },
+    {
+      "role": "labeler-1-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/attestations-v2/labeler-1.json",
+      "sha256": "7b4a5a5edb9f200fd8f26137a2e365782b6c55acec83d64f37d766f6de292dfb",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "df0b54fcb7c57cbd27f4e814f49d5321c3b60f18"
+    },
+    {
+      "role": "labeler-2-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/attestations-v2/labeler-2.json",
+      "sha256": "0392ce0bca131fb12488b2dfbb51c88ce6a5f81b05d7d529df85b1f4b02615fc",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "df0b54fcb7c57cbd27f4e814f49d5321c3b60f18"
+    },
+    {
+      "role": "labeler-3-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/attestations-v2/labeler-3.json",
+      "sha256": "ab1363ba7af364f5a39b27abc72a0fb9301d9fe97edc84f2696f412ac561e24a",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "df0b54fcb7c57cbd27f4e814f49d5321c3b60f18"
+    },
+    {
+      "role": "designer-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/attestations-v2/designer.json",
+      "sha256": "d2e9a276dd76466a0a47ef34f4dec54cdc61f7bc14853107cdd27cbbe9f408ca",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "df0b54fcb7c57cbd27f4e814f49d5321c3b60f18"
+    },
+    {
+      "role": "adjudicator-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/attestations-v2/adjudicator.json",
+      "sha256": "be9fe817f60589ff3c5dde0a70713147886e5aa1f1d945260ff77cf544d6dd12",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "df0b54fcb7c57cbd27f4e814f49d5321c3b60f18"
+    },
+    {
+      "role": "image:V2-017:1",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24",
+      "cloud_branch": "cursor/v2-cloud-cases-294f",
+      "cloud_commit": "a638d2b87ef17c36e394319e3e46b361eb6eb061"
+    },
+    {
+      "role": "image:V2-018:1",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab",
+      "cloud_branch": "cursor/v2-cloud-cases-294f",
+      "cloud_commit": "a638d2b87ef17c36e394319e3e46b361eb6eb061"
+    },
+    {
+      "role": "raw-gold",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-v2-raw.json",
+      "sha256": "6aa1e952c725727919ac9c315a2f48b4f3d6ad1da975ceecb5330295cc7aff0a",
+      "cloud_branch": "cursor/raw-v2-adjudication-c172",
+      "cloud_commit": "5811293f638248d896dc3319ddcd5d0898aa0efb"
+    },
+    {
+      "role": "raw-adjudication",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/adjudication-v2-raw.json",
+      "sha256": "a53fc6b3d07da8832d9b9a6f0614f8935f802ec341701a5376cf08645f153f67",
+      "cloud_branch": "cursor/raw-v2-adjudication-c172",
+      "cloud_commit": "5811293f638248d896dc3319ddcd5d0898aa0efb"
+    },
+    {
+      "role": "raw-adjudicator-evidence",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/adjudicator-v2-raw-attestation.json",
+      "sha256": "e60097cd981bb1e464a9b1cea1e050e26c9a6c0a2457cf9b90662178d9bde79b",
+      "cloud_branch": "cursor/raw-v2-adjudication-c172",
+      "cloud_commit": "e3a7236054bb2a787ceaaf67d5c7043ba601bb66"
+    },
+    {
+      "role": "protocol-audit",
+      "path": "tests/benchmark/v2-holdout/PROTOCOL_AUDIT_RESULTS.md",
+      "sha256": "189789ad8c4030a4c0fc5fbdef41e5aca9dedb41ee58461103c751fd662501d2",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "df0b54fcb7c57cbd27f4e814f49d5321c3b60f18"
+    },
+    {
+      "role": "invalidation-registry",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/invalidated-manifests.json",
+      "sha256": "18eaf1e60ea9413ea683db3d8490ad20024920f49a59d372f822957b5e24ea96",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "6ea6493d9b4d8bbe900ba156f8ab35116c3bdf1d"
+    }
+  ]
+}

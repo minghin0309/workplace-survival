@@ -1,0 +1,40 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-012",
+  "sut": "Workplace Survival",
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Drafting a Slack message to Ovid about the backlog. \"Hi Ovid, wanted to give you a picture of where the storm-damage queue is after Candlewick. We were at three hundred and eighty open claims on 1 March and we are now at six hundred and twelve. Part of that is volume and part of it is that we are running six adjusters instead of eight because two are on secondment to motor until the end of April. I have modelled it both ways. At six we clear on 6 June, at eight we clear on 14 May. We are also at fourteen days to initial contact against a ten day standard. Let me know your thoughts. Priya\"",
+      "output_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The storm-damage queue has 612 open claims, up from 380 on 1 March after Candlewick.\n- Two of the eight adjusters are seconded to motor until 30 April. At six adjusters the queue clears on 6 June; at eight it clears on 14 May, and returning the two after 22 April moves the 14 May date out day for day.\n- Initial contact is currently at 14 days against a 10-working-day standard.\n- Ovid owns the adjuster secondment decision, and the ask in a Slack message to him should be in the first two lines.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft ends with the nonspecific ask “Let me know your thoughts” instead of putting a clear secondment decision in the first two lines, as the known Slack constraint requires.\n- Communication risk: Ovid may not see the ask on his phone or know which decision Priya needs, so the secondment decision may not be made.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual and contains no blame, hostility, threat, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ovid, could you decide whether to bring the two seconded adjusters back to storm-damage early? I wanted to give you a picture of where the storm-damage queue is after Candlewick. We were at three hundred and eighty open claims on 1 March and we are now at six hundred and twelve. Part of that is volume and part of it is that we are running six adjusters instead of eight because two are on secondment to motor until the end of April. I have modelled it both ways. At six we clear on 6 June, at eight we clear on 14 May. We are also at fourteen days to initial contact against a ten day standard. Priya",
+      "timestamp_utc": "2026-08-13T10:36:05Z",
+      "provenance": {
+        "case_input": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-012.json",
+        "skill": ".cursor/skills/workplace-survival/SKILL.md",
+        "state": "Initial review using case Data A and turn 1 Data B"
+      }
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Too long. Ovid reads the first two lines on his phone and nothing else. Cut it right down but do not lose the ask.",
+      "output_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The storm-damage queue has 612 open claims, up from 380 on 1 March after Candlewick.\n- Two of the eight adjusters are seconded to motor until 30 April. At six adjusters the queue clears on 6 June; at eight it clears on 14 May, and returning the two after 22 April moves the 14 May date out day for day.\n- Initial contact is currently at 14 days against a 10-working-day standard.\n- Ovid owns the adjuster secondment decision.\n- The user wants the message cut down substantially while retaining the secondment ask in the first two lines for Ovid’s phone-reading constraint.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current Data B still places the nonspecific ask “Let me know your thoughts” at the end rather than presenting a clear secondment decision in the first two lines.\n- Communication risk: Ovid may not see the ask or know which decision Priya needs, so the secondment decision may not be made.\n\n### Tone\n\n- Rating: Green\n- Evidence: The current Data B is neutral and factual and contains no blame, hostility, threat, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ovid — can we bring the two motor-seconded adjusters back to storm-damage early?\n\nAt six adjusters, the 612-claim queue clears 6 June; at eight, 14 May. Initial contact is at 14 days against the 10-working-day standard.",
+      "timestamp_utc": "2026-08-13T10:36:05Z",
+      "provenance": {
+        "case_input": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-012.json",
+        "skill": ".cursor/skills/workplace-survival/SKILL.md",
+        "state": "Follow-up review retaining effective Data A and current Data B while revising the prior proposed message to satisfy turn 2"
+      }
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "He came back with just: when do you need them back by? Draft my reply.",
+      "output_raw": "## Message template\n\nBy 22 April to keep the 14 May clear date. Every day later moves that clear date out by a day.\n\n## Information to fill\n\n- None",
+      "timestamp_utc": "2026-08-13T10:36:05Z",
+      "provenance": {
+        "case_input": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-012.json",
+        "skill": ".cursor/skills/workplace-survival/SKILL.md",
+        "state": "Message-template mode using effective Data A and Ovid's turn 3 reply"
+      }
+    }
+  ]
+}

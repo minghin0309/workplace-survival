@@ -1,0 +1,35 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-017",
+  "recipient_context": "Marguerite Vaudrey-Pinto, producer at the Brindle Marionette Company and Odalys's direct manager. She approves overtime and freelance bookings and is the only person who can release the budget for the carpenter.",
+  "data_a": {
+    "organization": "Brindle Marionette Company, a touring puppet theatre.",
+    "sender": "Odalys Ferreira-Whyte, workshop manager.",
+    "manager": "Marguerite Vaudrey-Pinto, producer.",
+    "channel": "Slack compose box; the draft exists only as an on-screen screenshot.",
+    "situation_facts": [
+      "The touring marionette bridge for the production The Tin Heron fails the Kelvinhaugh Playhouse point-load requirement of 1.5 kilonewtons; it was tested at 0.9 kilonewtons on 28 March.",
+      "Kelvinhaugh Playhouse will not permit rigging that fails their load requirement, so the venue date cannot proceed without a rebuild.",
+      "Rebuilding the bridge takes three workshop days.",
+      "The tour truck loads on 14 April and the workshop has only two free days before load-out.",
+      "Freelance carpenter Basil Ntende is available 10 to 12 April if he is booked by 5 April, which would cover the third day.",
+      "Basil's rate is three hundred and forty pounds per day, so three days is one thousand and twenty pounds.",
+      "Today is 2 April.",
+      "Overtime and freelance bookings are approved by Marguerite Vaudrey-Pinto.",
+      "The Kelvinhaugh date is the opening night of the tour."
+    ],
+    "ownership_map": {
+      "workshop build and load-out": "Odalys Ferreira-Whyte",
+      "freelance booking and overtime approval": "Marguerite Vaudrey-Pinto",
+      "venue rigging compliance": "Kelvinhaugh Playhouse technical department"
+    },
+    "constraints": []
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Screenshot of what is sitting in my Slack compose box. Can you check it before I send it to Marguerite?",
+      "image_path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png"
+    }
+  ]
+}

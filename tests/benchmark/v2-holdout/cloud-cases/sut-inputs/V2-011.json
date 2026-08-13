@@ -1,0 +1,46 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-011",
+  "recipient_context": "Corinne Bassey-Lund, head of manufacturing at Chanterelle Systems and Ike's direct manager. She approves all production line downtime and has a standing preference for requests that state the cost of doing nothing.",
+  "data_a": {
+    "organization": "Chanterelle Systems, a mycelium packaging manufacturer running two production lines.",
+    "sender": "Ike Boaventura, process engineer.",
+    "manager": "Corinne Bassey-Lund, head of manufacturing.",
+    "channel": "Email, then revisions across the same morning.",
+    "situation_facts": [
+      "Ike proposed changing the substrate sterilisation cycle from one hundred and twenty-one degrees for ninety minutes to one hundred and eighteen degrees for one hundred and twenty minutes.",
+      "Across five weeks and three hundred and forty trays on Line 1, contamination fell from 7.1 percent to 2.4 percent.",
+      "The validation runs were executed by technician Marta Whelan-Duke, who collected and logged all tray data.",
+      "Rolling the change to Line 2 requires fourteen hours of downtime to requalify the autoclave.",
+      "Line 2 downtime can only be authorised by Corinne Bassey-Lund.",
+      "Line 2 currently produces roughly nine hundred trays per week; at 7.1 percent contamination that is about sixty-four scrapped trays per week.",
+      "Scrapped trays cost eleven pounds each in materials and labour.",
+      "The Line 2 autoclave door gasket is scheduled for replacement, which itself requires the line to be down; the maintenance window is 4 February.",
+      "Combining the gasket replacement with the requalification would let both jobs share the same fourteen hour window rather than taking two separate stoppages.",
+      "Ike learned about the gasket schedule overlap after sending his first draft for review."
+    ],
+    "ownership_map": {
+      "cycle change proposal and process design": "Ike Boaventura",
+      "validation run execution and data logging": "Marta Whelan-Duke",
+      "line downtime authorisation": "Corinne Bassey-Lund",
+      "gasket maintenance scheduling": "site maintenance team"
+    },
+    "constraints": [
+      "Ike does not want the message to read as though he is pushing a single named colleague forward or behind him."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Need to ask Corinne for fourteen hours of Line 2 downtime. Draft: \"Corinne - I have been running a modified sterilisation cycle on Line 1, one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. Over five weeks and three hundred and forty trays contamination went from 7.1 percent to 2.4 percent. I would like to roll it to Line 2. It needs fourteen hours of downtime to requalify the autoclave. Can you approve? Ike\""
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "You want me to name Marta explicitly as the person who ran the validation. I would rather not single out one person in a message to Corinne - it reads like I am either passing credit around for effect or setting her up if the numbers get challenged. Can we handle the attribution differently?"
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "One more thing that changes it: the Line 2 gasket replacement is in the background notes I gave you and it lands in the same maintenance window, so both jobs could share the one stoppage. Work that in and give me the final version."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "v2",
+  "role": "labeler-2",
+  "context_id": "bc-1ce294c2-e4d2-5d25-b8fe-40cb5279c94a",
+  "model_id": "cursor-grok-4.5",
+  "model_family": "grok",
+  "cloud_branch": "cursor/v2-gold-labeler-2-c94a",
+  "cloud_commit": "bcdd71d8ecaaa52e8b43d1ca8aaa569c3223a312",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828",
+      "role": "v2_cases"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24",
+      "role": "holdout_image"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab",
+      "role": "holdout_image"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479",
+      "role": "gold_rubric"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+      "role": "semantic_ontology"
+    }
+  ],
+  "limitations": [
+    "No machine filesystem access audit log was available; isolation is self-attested.",
+    "V2 list field names (required/allowed_*_concepts with concept_id and ontology description) follow BENCHMARK_METHODOLOGY.md semantic-concept shape; that methodology file was consulted only for schema naming, not for case answers.",
+    "Ontology coverage is coarse relative to some case-specific facts; required/allowed concept lists use closest registered concept IDs only."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-attestation.json",
+    "sha256": "9047ae7043a914b0d10a0a39a4aabfd33e1c4ce7fbcc86de682ad0faed32278a"
+  },
+  "normalization": {
+    "kind": "mechanical-schema-wrapper",
+    "semantic_decisions_changed": false
+  }
+}

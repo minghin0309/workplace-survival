@@ -1,0 +1,49 @@
+{
+  "schema_version": "v2",
+  "role": "labeler-2",
+  "context_id": "bc-ad97cf43-3536-51e5-8449-36f664077d45",
+  "model_id": "unverified",
+  "model_id_provenance": "Cloud run metadata did not expose an exact machine model ID; no ID was guessed.",
+  "model_family": "grok",
+  "model_family_provenance": "protocol-assigned; not machine-metadata-verified",
+  "cloud_branch": "cursor/gold-labeler-2-rerun-7d45",
+  "cloud_commit": "30bc76b0f569d57a373d91c25bbf4cf14ec176fb",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "limitations": [
+    "No filesystem audit proof is available; isolation is attested from this run's intended tool use, not from an independent machine-verified access log.",
+    "Machine model ID is unverified: cursor-cloud run-info returned originalModelName null, so model_id is recorded as unverified rather than guessed.",
+    "context_id is the bcId from cursor-cloud run-info (bc-ad97cf43-3536-51e5-8449-36f664077d45). That metadata is run-identity metadata, not a filesystem audit of repository reads.",
+    "Direct Read of both PNGs returned environment image descriptions rather than a pixel-level OCR transcript; draft text used for labeling is the text visible in those opened images.",
+    "Machine model ID was unavailable from cloud run metadata; model_id is recorded as unverified and model_family is the protocol-assigned family.",
+    "A transcript-level allowlist audit passed before acceptance."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-rerun-attestation.json",
+    "sha256": "b4d2199e31b6d8a2dc9b11ce2704bb69b872134b338178802b1808539272ea5e"
+  },
+  "normalization": {
+    "kind": "mechanical-schema-wrapper",
+    "semantic_decisions_changed": false
+  }
+}

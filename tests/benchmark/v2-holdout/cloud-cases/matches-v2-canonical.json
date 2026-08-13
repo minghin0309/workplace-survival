@@ -1,0 +1,878 @@
+{
+  "schema_version": "v2",
+  "artifact": "semantic-matches",
+  "extraction_snapshot": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/extractions-manifest-v2.json",
+    "sha256": "cc5dd4dd8dd80fd8ea6477c52941206c55d213067cfed2f5a2b3d1cdf424d419"
+  },
+  "matcher": {
+    "context_id": "bc-49280770-7415-5b2a-abb9-65f7bb13a6c0",
+    "model_id": "unverified",
+    "model_family": "gpt",
+    "gold_access": true
+  },
+  "source_hashes": {
+    "tests/benchmark/v2-holdout/cloud-cases/extractions-manifest-v2.json": "cc5dd4dd8dd80fd8ea6477c52941206c55d213067cfed2f5a2b3d1cdf424d419",
+    "tests/benchmark/v2-holdout/cloud-cases/evaluations-v2-canonical.json": "61c5aa0791ab3138fa597f13d59330668f4ecc3d24bc651115e728a468189764",
+    "tests/benchmark/v2-holdout/cloud-cases/outputs-v2-raw.json": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4",
+    "tests/benchmark/v2-holdout/cloud-cases/gold-v2.json": "63245c97c837721862769598c42e2fd47d4c2f87ee1b0624763800d8b32dc05d",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+  },
+  "cases": [
+    {
+      "case_id": "V2-001",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V2-002",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-002-1-1",
+              "concept_id": "preserve-confirmed-deadline",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-confirmed-deadline'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-002-1-2",
+              "concept_id": null,
+              "confidence": 0.22,
+              "rationale": "The claim is preserved as unsupported because no single allowed turn-local gold concept expresses it.",
+              "match_type": "unsupported"
+            },
+            {
+              "claim_id": "r-V2-002-1-3",
+              "concept_id": "preserve-confirmed-deadline",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-confirmed-deadline'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-002-1-4",
+              "concept_id": "preserve-confirmed-owner",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-confirmed-owner'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-003",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V2-004",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V2-005",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-005-1-1",
+              "concept_id": "attribute-review-to-contractor",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'attribute-review-to-contractor'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-005-1-2",
+              "concept_id": "state-preliminary-verbal-readout",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-preliminary-verbal-readout'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-005-1-3",
+              "concept_id": "state-preliminary-verbal-readout",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-preliminary-verbal-readout'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-005-1-4",
+              "concept_id": "state-signoff-pending-with-geologist",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-signoff-pending-with-geologist'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-005-1-5",
+              "concept_id": null,
+              "confidence": 0.22,
+              "rationale": "The claim is preserved as unsupported because no single allowed turn-local gold concept expresses it.",
+              "match_type": "unsupported"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-006",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-006-1-1",
+              "concept_id": "state-handover-completed-and-signed",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-handover-completed-and-signed'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-006-1-2",
+              "concept_id": "state-rota-ownership-outside-remit",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-rota-ownership-outside-remit'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-006-1-3",
+              "concept_id": "reference-prior-written-rota-warnings",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'reference-prior-written-rota-warnings'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-006-1-4",
+              "concept_id": null,
+              "confidence": 0.22,
+              "rationale": "The claim is preserved as unsupported because no single allowed turn-local gold concept expresses it.",
+              "match_type": "unsupported"
+            },
+            {
+              "claim_id": "r-V2-006-1-5",
+              "concept_id": "remove-unsafe-commitment",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'remove-unsafe-commitment'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-007",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V2-007-1-1",
+              "concept_id": "commitment-scope",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'commitment-scope'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "q-V2-007-1-2",
+              "concept_id": "approval-authority",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'approval-authority'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "q-V2-007-1-3",
+              "concept_id": "commitment-scope",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'commitment-scope'.",
+              "match_type": "semantic"
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-007-1-1",
+              "concept_id": "state-model-assigned-to-contractor",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-model-assigned-to-contractor'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-007-1-2",
+              "concept_id": "state-api-key-dependency",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-api-key-dependency'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-007-1-3",
+              "concept_id": "request-prioritisation-decision",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'request-prioritisation-decision'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-008",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-008-1-1",
+              "concept_id": "state-vendor-root-cause-and-outage-duration",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-vendor-root-cause-and-outage-duration'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-008-1-2",
+              "concept_id": "remove-unsupported-accusation",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'remove-unsupported-accusation'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-008-1-3",
+              "concept_id": "state-fallback-invoked-and-outcomes",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-fallback-invoked-and-outcomes'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-008-1-4",
+              "concept_id": "state-fallback-invoked-and-outcomes",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-fallback-invoked-and-outcomes'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-008-1-5",
+              "concept_id": "state-no-welfare-incident",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-no-welfare-incident'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-008-1-6",
+              "concept_id": "state-vendor-post-incident-review-date",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-vendor-post-incident-review-date'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-009",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-009-1-1",
+              "concept_id": "preserve-change-fee-total",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-change-fee-total'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-009-1-2",
+              "concept_id": "state-nesting-restriction-scope-impact",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-nesting-restriction-scope-impact'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-009-1-3",
+              "concept_id": "state-next-viable-window-12-august",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-next-viable-window-12-august'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-009-1-4",
+              "concept_id": "state-decision-deadline-18-april",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-decision-deadline-18-april'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-010",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-010-1-1",
+              "concept_id": "state-supplier-has-no-lamp-eta",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-supplier-has-no-lamp-eta'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-010-1-2",
+              "concept_id": "state-single-scanner-slip-to-12-march",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-single-scanner-slip-to-12-march'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-010-1-3",
+              "concept_id": "state-rental-option-cost-and-lead-time",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-rental-option-cost-and-lead-time'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-010-1-4",
+              "concept_id": "state-extension-deadline-1-january",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-extension-deadline-1-january'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-011",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-011-1-1",
+              "concept_id": null,
+              "confidence": 0.22,
+              "rationale": "The claim is preserved as unsupported because no single allowed turn-local gold concept expresses it.",
+              "match_type": "unsupported"
+            },
+            {
+              "claim_id": "r-V2-011-1-2",
+              "concept_id": "attribute-validation-execution-accurately",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'attribute-validation-execution-accurately'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-011-1-3",
+              "concept_id": "state-cost-of-no-change",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-cost-of-no-change'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-011-1-4",
+              "concept_id": "preserve-downtime-requirement",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-downtime-requirement'.",
+              "match_type": "semantic"
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-011-2-1",
+              "concept_id": null,
+              "confidence": 0.22,
+              "rationale": "The claim is preserved as unsupported because no single allowed turn-local gold concept expresses it.",
+              "match_type": "unsupported"
+            },
+            {
+              "claim_id": "r-V2-011-2-2",
+              "concept_id": "attribute-validation-without-naming-individual",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'attribute-validation-without-naming-individual'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-011-2-3",
+              "concept_id": "attribute-validation-without-naming-individual",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'attribute-validation-without-naming-individual'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-011-2-4",
+              "concept_id": "state-cost-of-no-change",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-cost-of-no-change'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-011-2-5",
+              "concept_id": "preserve-downtime-requirement",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-downtime-requirement'.",
+              "match_type": "semantic"
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-011-3-1",
+              "concept_id": null,
+              "confidence": 0.22,
+              "rationale": "The claim is preserved as unsupported because no single allowed turn-local gold concept expresses it.",
+              "match_type": "unsupported"
+            },
+            {
+              "claim_id": "r-V2-011-3-2",
+              "concept_id": "attribute-validation-without-naming-individual",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'attribute-validation-without-naming-individual'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-011-3-3",
+              "concept_id": "state-cost-of-no-change",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-cost-of-no-change'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-011-3-4",
+              "concept_id": "state-gasket-window-date-4-february",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-gasket-window-date-4-february'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-011-3-5",
+              "concept_id": "preserve-approval-ask",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-approval-ask'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-012",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-012-1-1",
+              "concept_id": "state-explicit-ask-for-adjuster-return",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-explicit-ask-for-adjuster-return'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-012-1-2",
+              "concept_id": "preserve-open-claim-counts",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-open-claim-counts'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-012-1-3",
+              "concept_id": "preserve-clear-date-comparison",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-clear-date-comparison'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-012-1-4",
+              "concept_id": "preserve-regulatory-standard-breach",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-regulatory-standard-breach'.",
+              "match_type": "semantic"
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-012-2-1",
+              "concept_id": "lead-with-ask-in-first-two-lines",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'lead-with-ask-in-first-two-lines'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-012-2-2",
+              "concept_id": "preserve-clear-date-comparison",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-clear-date-comparison'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-012-2-3",
+              "concept_id": "preserve-regulatory-standard-breach",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-regulatory-standard-breach'.",
+              "match_type": "semantic"
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-012-3-1",
+              "concept_id": "state-return-by-22-april",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-return-by-22-april'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-012-3-2",
+              "concept_id": "state-day-for-day-slip-after-22-april",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-day-for-day-slip-after-22-april'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-013",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-013-1-1",
+              "concept_id": "correct-superseded-quote-figure",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'correct-superseded-quote-figure'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-1-2",
+              "concept_id": "correct-superseded-quote-figure",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'correct-superseded-quote-figure'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-1-3",
+              "concept_id": "state-pane-failure-and-bearing-risk",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-pane-failure-and-bearing-risk'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-1-4",
+              "concept_id": "preserve-board-meeting-24-october",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-board-meeting-24-october'.",
+              "match_type": "semantic"
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-013-2-1",
+              "concept_id": "use-continuous-prose-register",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'use-continuous-prose-register'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-2-2",
+              "concept_id": "correct-superseded-quote-figure",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'correct-superseded-quote-figure'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-2-3",
+              "concept_id": "preserve-board-meeting-24-october",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-board-meeting-24-october'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-2-4",
+              "concept_id": "correct-superseded-quote-figure",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'correct-superseded-quote-figure'.",
+              "match_type": "semantic"
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-013-3-1",
+              "concept_id": "use-continuous-prose-register",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'use-continuous-prose-register'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-3-2",
+              "concept_id": "state-revised-quote-figure",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-revised-quote-figure'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-3-3",
+              "concept_id": "preserve-board-meeting-24-october",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'preserve-board-meeting-24-october'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-013-3-4",
+              "concept_id": "state-revised-quote-figure",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-revised-quote-figure'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-014",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-014-1-1",
+              "concept_id": "state-application-status-under-assessment",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-application-status-under-assessment'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-014-1-2",
+              "concept_id": "state-q1-planning-blocked-pending-decision",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-q1-planning-blocked-pending-decision'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-014-1-3",
+              "concept_id": "remove-unverified-approval-claim",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'remove-unverified-approval-claim'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-014-1-4",
+              "concept_id": null,
+              "confidence": 0.22,
+              "rationale": "The claim is preserved as unsupported because no single allowed turn-local gold concept expresses it.",
+              "match_type": "unsupported"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-015",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-015-1-1",
+              "concept_id": "state-subjective-impression-as-impression",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-subjective-impression-as-impression'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-015-1-2",
+              "concept_id": "state-no-baseline-available",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-no-baseline-available'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-015-1-3",
+              "concept_id": "remove-unsafe-commitment",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'remove-unsafe-commitment'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-016",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-016-1-1",
+              "concept_id": "route-request-via-pr2-to-procurement-director",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'route-request-via-pr2-to-procurement-director'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-016-1-2",
+              "concept_id": "state-manager-approval-limit-exceeded",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-manager-approval-limit-exceeded'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-016-1-3",
+              "concept_id": "state-timeline-against-1-march-deadline",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-timeline-against-1-march-deadline'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-017",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-017-1-1",
+              "concept_id": "state-confirmed-load-test-failure",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-confirmed-load-test-failure'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-017-1-2",
+              "concept_id": "state-rebuild-day-shortfall",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-rebuild-day-shortfall'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-017-1-3",
+              "concept_id": "state-basil-booking-deadline-5-april",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-basil-booking-deadline-5-april'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-017-1-4",
+              "concept_id": "state-explicit-approval-ask",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-explicit-approval-ask'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V2-018",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V2-018-1-1",
+              "concept_id": "correct-subject-line-misattribution",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'correct-subject-line-misattribution'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-018-1-2",
+              "concept_id": "state-detection-and-escalation-by-sender",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-detection-and-escalation-by-sender'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-018-1-3",
+              "concept_id": "correct-fault-attribution-to-ingest-config",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'correct-fault-attribution-to-ingest-config'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-018-1-4",
+              "concept_id": "correct-fault-attribution-to-ingest-config",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'correct-fault-attribution-to-ingest-config'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-018-1-5",
+              "concept_id": "state-reprocessing-compute-time",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-reprocessing-compute-time'.",
+              "match_type": "semantic"
+            },
+            {
+              "claim_id": "r-V2-018-1-6",
+              "concept_id": "state-reprocessing-route-decision-for-manager",
+              "confidence": 0.9,
+              "rationale": "The claim semantically expresses the allowed gold concept 'state-reprocessing-route-decision-for-manager'.",
+              "match_type": "semantic"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

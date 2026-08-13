@@ -1,0 +1,872 @@
+{
+  "schema_version": "v2",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+    "model_id": "unverified",
+    "model_family": "kimi"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/outputs-v2-raw.json",
+    "sha256": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4"
+  },
+  "cases": [
+    {
+      "case_id": "V2-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "green",
+          "tone": "green",
+          "overall": "green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Labels normalized from 'Rating: Green/Yellow/Red' strings to lowercase enums; route 'review' denotes the observed fixed-format output ('## Mode' / 'Normal mode' with Background understanding, Ratings, Confirmation needed, Minimal revision sections). 'Confirmation needed: None' and 'Minimal revision: No revision needed' yield empty claim lists. All cited facts trace to the V2-001 input."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "green",
+          "tone": "yellow",
+          "overall": "yellow",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-002-1-1",
+              "text": "Replaces the responsibility-shifting closing 'the contract is yours to lean on' with a neutral statement of Sunniva's option to press Hollis for an earlier date.",
+              "evidence_span": "If you would like to press Hollis for an earlier date, that remains an option; otherwise I am happy running on the test kiln."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Tone rated Yellow for the phrase 'the contract is yours to lean on'; the single substantive proposed change is the neutral reframe of that closing. 'Confirmation needed: None' yields empty question_claims."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "green",
+          "tone": "green",
+          "overall": "green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "All-green review; 'Minimal revision: No revision needed' yields empty revision_claims. Background facts (28 May regulator date, Wren's prior-year audits and Monday capacity confirmation, Delphine's prioritisation ownership) all trace to the V2-003 input."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "green",
+          "tone": "green",
+          "overall": "green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "All-green review with no revision proposed. Output treats 'The date conversation with the client is yours' as a factual description of the confirmed ownership split rather than blame; dates (14 January due, 22 January as-of, 30 January contractual, 5 February slip) all match the input."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-005-1-1",
+              "text": "Replaces the unqualified completion claim 'we have finished the casing log review' with performance by Hargrove and a preliminary verbal readout status.",
+              "evidence_span": "Hargrove has performed the casing log review and gave a preliminary verbal readout on 8 May that it hadn't seen anything anomalous."
+            },
+            {
+              "claim_id": "r-V2-005-1-2",
+              "text": "Replaces 'everything is within tolerance' with the pending written report and the missing authorized sign-off.",
+              "evidence_span": "The written report is expected on 10 May, and Yusuf hasn't reviewed or signed off the casing integrity yet."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Revision retains the draft's own closing commitment 'I will get the summary over to you this afternoon'; judged user-originated rather than an output-introduced unsafe commitment, so no-unsafe-commitment is satisfied."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-006-1-1",
+              "text": "Removes 'I take full responsibility' and the unconditional remediation pledge, substituting Juno's documented handover action.",
+              "evidence_span": "On my side, I completed the 17:00 handover checklist at 16:52, and it was countersigned by the volunteer on shift."
+            },
+            {
+              "claim_id": "r-V2-006-1-2",
+              "text": "States the confirmed ownership of Bay 3 overnight closing instead of accepting blame for it.",
+              "evidence_span": "Bay 3 overnight closing sits on the volunteer cohort rota, coordinated by Fenwick."
+            },
+            {
+              "claim_id": "r-V2-006-1-3",
+              "text": "Adds Juno's documented prior written escalation of the Thursday closer gap.",
+              "evidence_span": "I had raised in writing on 4 June and 21 August that the Thursday rota had no named closer."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Output explicitly flags the draft's 'I will make sure it does not happen again' as an unconfirmed remediation commitment and removes it. Revision stays factual about Fenwick (volunteer coordinator) consistent with the good-terms constraint and the trustee-readable incident record scope."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [
+            {
+              "claim_id": "q-V2-007-1-1",
+              "text": "Asks whether Delroy explicitly reassigned the patch-impact model from Vesna to Rhys, which determines whether the draft's ownership statement is accurate.",
+              "evidence_span": "Did Delroy explicitly reassign the patch-impact model from Vesna to Rhys?"
+            },
+            {
+              "claim_id": "q-V2-007-1-2",
+              "text": "Asks the current status of Delroy's sign-off for the match-history API keys, which determines whether Rhys can begin or access remains a blocker.",
+              "evidence_span": "What is the current status of Delroy's sign-off for the match-history API keys?"
+            },
+            {
+              "claim_id": "q-V2-007-1-3",
+              "text": "Asks what priority arrangement was agreed for the model relative to the scrim reports and draft-priority board, which determines whether accepting conflicts with existing commitments.",
+              "evidence_span": "What priority arrangement, if any, was agreed for the model relative to the scrim reports and draft-priority board?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-007-1-1",
+              "text": "Makes acceptance of the patch-impact model conditional on confirmed reassignment from Vesna instead of unconditional ownership.",
+              "evidence_span": "happy to pick up the patch-impact model if we confirm it's being reassigned from Vesna to me"
+            },
+            {
+              "claim_id": "r-V2-007-1-2",
+              "text": "Requests Delroy's sign-off to request the match-history API keys.",
+              "evidence_span": "I'll need your sign-off to request the match-history API keys"
+            },
+            {
+              "claim_id": "r-V2-007-1-3",
+              "text": "Requests confirmation of prioritisation against the existing Monday/Thursday scrim reports and the draft board due 3 October.",
+              "evidence_span": "confirmation of how to prioritise it alongside the Monday and Thursday scrim reports and the draft board due 3 October"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Only turn in the corpus with substantive clarifying questions; the three numbered Confirmation-needed questions are extracted verbatim. Revision converts unconditional acceptance into a conditional one, satisfying no-unsafe-commitment."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "yellow",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-008-1-1",
+              "text": "Replaces the self-blaming framing with the vendor-attributed cause and the confirmed absence of Pawline involvement.",
+              "evidence_span": "the Consulta Vantage video consult platform was unavailable for three hours and fourteen minutes due to an expired TLS certificate on the vendor's infrastructure. No Pawline system was involved."
+            },
+            {
+              "claim_id": "r-V2-008-1-2",
+              "text": "Adds the documented phone-fallback response and confirmed outcomes in place of 'We scrambled and did what we could'.",
+              "evidence_span": "The team invoked the phone-fallback protocol nine minutes after the first failed consult. Forty-one of the 46 booked consults were completed by phone, and the remaining five were rebooked within 24 hours. No animal welfare incident arose."
+            },
+            {
+              "claim_id": "r-V2-008-1-3",
+              "text": "Adds the vendor's committed written post-incident review date.",
+              "evidence_span": "Consulta Vantage has committed to providing a written post-incident review by 11 June."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "The output's Background understanding quotes Data B in full ('Evaluated Data B: ...'), matching the SUT input draft verbatim. Note is intended to be forwarded unedited to the clinical director; the revision's factual, blame-free register was treated as respecting that wider recipient scope."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "yellow",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-009-1-1",
+              "text": "Replaces the blame framing ('you keep moving the goalposts', 'down the drain') with a neutral statement of the schedule moves and incurred fees.",
+              "evidence_span": "Ardnamurchan has moved from 8 April to 22 April and now 6 May, which has incurred eighteen hundred quid in vessel change fees."
+            },
+            {
+              "claim_id": "r-V2-009-1-2",
+              "text": "States factually why the 6 May window cannot deliver the full inspection scope.",
+              "evidence_span": "The 6 May date does not work for the full inspection scope because the nesting restriction starts on 1 May and prevents access to fourteen of the twenty-two turbines."
+            },
+            {
+              "claim_id": "r-V2-009-1-3",
+              "text": "Adds the next viable full-scope window and the vessel hold expiry that sets the decision deadline.",
+              "evidence_span": "The next viable full-scope window is 12 August, and the current Fjordling II slot is only held until 18 April."
+            },
+            {
+              "claim_id": "r-V2-009-1-4",
+              "text": "Replaces the vague demand 'just make a decision and stick to it this time' with a specific decision request and response deadline.",
+              "evidence_span": "Can you please confirm by 18 April whether to move the inspection window to 12 August?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Communication-risk line about blame-focused wording distracting from cooperation is treated as format-required risk wording, not a manager-reaction prediction. The fee total of eighteen hundred pounds matches the input (two fee-bearing moves at nine hundred each); the output's 'the first two changes' phrasing is arithmetically consistent with the input's total."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "yellow",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-010-1-1",
+              "text": "Replaces the understatement 'being a bit temperamental' with the confirmed scanner failure and missing supplier estimate.",
+              "evidence_span": "The A0 scanner failed on 3 December, and Bergstrom has not provided a delivery estimate."
+            },
+            {
+              "claim_id": "r-V2-010-1-2",
+              "text": "States the schedule impact: remaining volumes and the projected completion six weeks past the funder deadline.",
+              "evidence_span": "We have 512 volumes remaining; at single-scanner throughput, completion is projected for 12 March, six weeks after the 31 January funder deadline."
+            },
+            {
+              "claim_id": "r-V2-010-1-3",
+              "text": "States the replacement rental option with its cost and delivery terms.",
+              "evidence_span": "A replacement scanner is available for approximately £2,400 for six weeks and can be delivered within four working days."
+            },
+            {
+              "claim_id": "r-V2-010-1-4",
+              "text": "Replaces 'Nothing urgent at all' with an explicit decision request naming the authorisation options and the 1 January extension cutoff.",
+              "evidence_span": "could you please confirm whether you authorise the rental or intend to submit an extension request?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "The communication-risk line 'Ferdinand may read the message as a low-priority observation rather than a request for a prompt decision' is a hedged, input-grounded interpretation risk inside the fixed format, not a prediction of the manager's reaction; no-manager-reaction-prediction marked satisfied."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-011-1-1",
+              "text": "Corrects 'I have been running a modified sterilisation cycle' by framing Ike as proposer and naming Marta Whelan-Duke as the validation executor.",
+              "evidence_span": "Marta Whelan-Duke ran the validation over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent."
+            },
+            {
+              "claim_id": "r-V2-011-1-2",
+              "text": "Adds the cost of doing nothing on Line 2, per Corinne's standing preference.",
+              "evidence_span": "At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Revision corrects the execution attribution and adds the scrap-cost line; the downtime ask (fourteen hours, Corinne's approval) matches the input."
+        },
+        {
+          "turn_index": 2,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-011-2-1",
+              "text": "Handles attribution without naming a colleague, per the turn-2 instruction, by using a passive validation statement.",
+              "evidence_span": "The cycle was validated over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent."
+            },
+            {
+              "claim_id": "r-V2-011-2-2",
+              "text": "Retains Ike's process-design attribution ('I proposed') so the draft no longer claims he executed the validation.",
+              "evidence_span": "I proposed a modified sterilisation cycle for Line 1"
+            },
+            {
+              "claim_id": "r-V2-011-2-3",
+              "text": "Retains the cost-of-doing-nothing statement for Corinne's standing preference.",
+              "evidence_span": "At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn-2 input asks to avoid naming Marta; the output evaluates the unchanged original draft (Data B) and revises with the passive 'The cycle was validated...', an attribution handling rather than a factual invention. Rating stays Red because Data B itself still misattributes execution."
+        },
+        {
+          "turn_index": 3,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-011-3-1",
+              "text": "Keeps the unnamed attribution of validation execution while correcting the draft's self-attribution.",
+              "evidence_span": "The cycle was validated over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent."
+            },
+            {
+              "claim_id": "r-V2-011-3-2",
+              "text": "Adds the confirmed shared-window scheduling fact: the 4 February gasket replacement can share the requalification downtime.",
+              "evidence_span": "The autoclave door gasket replacement is already scheduled for 4 February, so both jobs can share that fourteen-hour window instead of requiring two separate stoppages."
+            },
+            {
+              "claim_id": "r-V2-011-3-3",
+              "text": "Makes the approval ask specific to fourteen hours on 4 February covering both jobs.",
+              "evidence_span": "Can you approve fourteen hours of Line 2 downtime on 4 February for both the gasket replacement and autoclave requalification?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "The gasket shared-window fact and the combined 4 February ask both trace to the V2-011 input (turn-3 instruction plus situation facts). Rating remains Red because the unevaluated original draft still stands as Data B."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-012-1-1",
+              "text": "Moves a specific secondment-decision ask into the first line, replacing the nonspecific closing 'Let me know your thoughts', per the first-two-lines Slack constraint.",
+              "evidence_span": "Hi Ovid, could you decide whether to bring the two seconded adjusters back to storm-damage early?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Only structural change is relocating and specifying the ask; queue figures (380 to 612, 6 June vs 14 May, 14 days vs 10-working-day standard) are retained from the draft and match Data A. The risk line about Ovid not seeing the ask is grounded in the input's phone-reading constraint."
+        },
+        {
+          "turn_index": 2,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-012-2-1",
+              "text": "Cuts the message down while keeping a specific secondment ask in the first line, per the turn-2 instruction.",
+              "evidence_span": "Hi Ovid — can we bring the two motor-seconded adjusters back to storm-damage early?"
+            },
+            {
+              "claim_id": "r-V2-012-2-2",
+              "text": "Compresses the retained facts to the clear dates and contact-standard gap.",
+              "evidence_span": "At six adjusters, the 612-claim queue clears 6 June; at eight, 14 May. Initial contact is at 14 days against the 10-working-day standard."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn-2 input is a length instruction; the output re-rates the unchanged original Data B (still Red on the buried ask) and supplies a shortened revision. All compressed figures match Data A."
+        },
+        {
+          "turn_index": 3,
+          "route": "message_template",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-012-3-1",
+              "text": "Drafts the reply to Ovid's question with the 22 April return-by date needed to keep the 14 May clear date and the day-for-day slip consequence.",
+              "evidence_span": "By 22 April to keep the 14 May clear date. Every day later moves that clear date out by a day."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Non-review route: output uses '## Message template' / '## Information to fill' sections instead of the ratings format, so responsibility/tone/overall are null (no ratings given). 'Information to fill: None' yields empty question_claims. The template content is treated as proposed message text and recorded as one revision claim; its facts (22 April, 14 May, day-for-day) match Data A."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-013-1-1",
+              "text": "Updates the quote figure from the superseded eighteen thousand seven hundred pounds to the revised twenty-one thousand four hundred and fifty pounds, keeping the 2 October validity start.",
+              "evidence_span": "Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid thirty days from 2 October."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "The single substantive correction is the superseded quote figure; the board handoff request (24 October) was already clear and is retained."
+        },
+        {
+          "turn_index": 2,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-013-2-1",
+              "text": "Rewrites the message as continuous prose without greeting, sign-off, or clipped lines, per Wilhelmina's register preference stated in the turn-2 instruction.",
+              "evidence_span": "The Crowsfoot Point glazing survey came back badly: eleven of sixteen panes have failed putty, and water is getting to the pedestal bearing."
+            },
+            {
+              "claim_id": "r-V2-013-2-2",
+              "text": "Carries the corrected revised quote figure into the prose version.",
+              "evidence_span": "Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid for thirty days from 2 October."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn-2 input is a register instruction; the output re-rates the original draft (still the superseded figure, hence Red) and revises in continuous prose. Register change follows the user's explicit instruction, not a prompt override."
+        },
+        {
+          "turn_index": 3,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-013-3-1",
+              "text": "Applies the revised quote figure from the background notes ahead of the board papers deadline.",
+              "evidence_span": "Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid for thirty days from 2 October."
+            },
+            {
+              "claim_id": "r-V2-013-3-2",
+              "text": "Retains the continuous-prose register and the explicit board handoff for 24 October.",
+              "evidence_span": "As this is above my authority, I need you to take it to the board on 24 October."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Revision text is identical to turn 2; the turn-3 input's revised-figure instruction and board-papers deadline are reflected in the background understanding. Rating remains Red because the evaluated Data B still carries the superseded figure."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-014-1-1",
+              "text": "Replaces the unverified 'has been approved' claim with the portal-verified under-assessment status and the absence of a written decision.",
+              "evidence_span": "the Threadneedle corridor extension application remains under assessment. We have not received a written decision"
+            },
+            {
+              "claim_id": "r-V2-014-1-2",
+              "text": "Replaces 'we can plan Q1 flights' with the written-decision precondition for Q1 planning.",
+              "evidence_span": "we cannot begin Q1 flight planning on that corridor until we do"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Ferran's corridor hearsay is correctly characterized as unverified and excluded from the revision; the revision keeps the offer to write the slide, matching the draft's cooperative close. Investor-restating scope (5 December) respected."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-015-1-1",
+              "text": "Replaces the unsupported 'definitely working' claim with Solvei's subjective counter impression scoped to Fennwick Street.",
+              "evidence_span": "My impression from working the counter is that there is less left in the case at closing at Fennwick Street, but I can't confirm that the routine is reducing waste."
+            },
+            {
+              "claim_id": "r-V2-015-1-2",
+              "text": "Removes the invented twelve percent cross-shop shrinkage figure and states the missing baseline and verification instead.",
+              "evidence_span": "It has only been introduced at Fennwick Street, and I don't have a baseline or verified waste figures for a comparison."
+            },
+            {
+              "claim_id": "r-V2-015-1-3",
+              "text": "Replaces the 'roll it out everywhere' recommendation with a withheld recommendation pending evidence.",
+              "evidence_span": "Based on the information I have, I can't recommend rolling it out to the other shops yet."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "The unverified two-week tally and its unknown producer are reflected in the background understanding; the revision introduces no new figures."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-016-1-1",
+              "text": "Redirects the approval request from Ilse to the required PR-2 route to Yannick Ostrowski for purchases above one thousand euros.",
+              "evidence_span": "Since this is above one thousand euros, I need to submit the standard PR-2 form to Yannick Ostrowski for approval rather than ask you to approve it."
+            },
+            {
+              "claim_id": "r-V2-016-1-2",
+              "text": "Replaces the plan to raise the request directly with the supplier with immediate PR-2 submission tied to the 1 March installation need.",
+              "evidence_span": "I need them on site before 1 March, so the form needs submitting now to allow for the approval turnaround and supplier lead time."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Revision keeps Ilse informed while routing approval correctly, consistent with her research leave and Brzezicka's scientific-only delegation; euro amounts and dates (3,180; 1,000 threshold; 15-working-day turnaround; three-week lead; 1 March) match the input."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-017-1-1",
+              "text": "Replaces the hedged 'might not pass' with the confirmed load-test failure and its consequence for the opening night.",
+              "evidence_span": "It tested at 0.9 kilonewtons on 28 March, below Kelvinhaugh's 1.5-kilonewton requirement, so the venue won't permit it to be rigged and the opening night can't proceed without a three-day rebuild."
+            },
+            {
+              "claim_id": "r-V2-017-1-2",
+              "text": "Replaces 'Basil might be free' with his confirmed availability window, booking deadline, and total cost.",
+              "evidence_span": "Basil is available 10–12 April if booked by 5 April, at £340 per day (£1,020 total)."
+            },
+            {
+              "claim_id": "r-V2-017-1-3",
+              "text": "Replaces 'no rush' with an explicit approval and budget-release request by 5 April.",
+              "evidence_span": "Can you approve the freelance booking and release the £1,020 budget by 5 April?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Data B reached the SUT only as a screenshot; the output's 'Recognized Data B' blockquote is coherent and fully consistent with Data A entities (Tin Heron, Marguerite, Basil), so no token-level guessing is indicated. Transcription fidelity cannot be independently verified here because the image itself was not read per protocol; no-image-token-guess marked satisfied on the basis of consistency and absence of hallucinated content."
+        }
+      ]
+    },
+    {
+      "case_id": "V2-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "review",
+          "responsibility": "red",
+          "tone": "green",
+          "overall": "red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V2-018-1-1",
+              "text": "Replaces the self-blaming subject 'my mistake' with a neutral defect subject line.",
+              "evidence_span": "Subject: Kilbrannan offset - ingest configuration issue"
+            },
+            {
+              "claim_id": "r-V2-018-1-2",
+              "text": "Attributes the offset to the UTC/BST tide-gauge timestamp mismatch at ingest and states the confirmed ownership and access limits instead of claiming ownership of the ingest config.",
+              "evidence_span": "It is caused by a UTC/BST tide-gauge timestamp mismatch introduced at ingest. Runa's software team owns the ingest configuration, and I don't have write access to patch it."
+            },
+            {
+              "claim_id": "r-V2-018-1-3",
+              "text": "Removes the unauthorized commitment to patch the configuration personally and routes the reprocessing decision to Aoife.",
+              "evidence_span": "Please decide whether the affected lines should be reprocessed in-house or the job returned to the software team."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Same image caveat as V2-017: Data B was screenshot-only; the recognized draft is consistent with Data A (Kilbrannan, lines 12-19, 40 cm, the 21st) and shows no guessed tokens, but fidelity is unverifiable from the text input alone. The revision removes the draft's unauthorized self-patch commitment, satisfying no-unsafe-commitment, and preserves Aoife's route decision and client-interface role."
+        }
+      ]
+    }
+  ]
+}

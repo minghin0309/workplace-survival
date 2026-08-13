@@ -1,0 +1,24 @@
+{
+  "schema_version": "v2",
+  "artifact_type": "sut_raw",
+  "case_id": "V2-003",
+  "generated_at_utc": "2026-08-13T10:38:37Z",
+  "context": {
+    "requested_model": "gpt-5.6-sol-high-fast",
+    "machine_model": "unverified"
+  },
+  "runtime": {
+    "branch": "cursor/blind-v2-holdout-17a0",
+    "commit": "ce4c26339fc1e2ce660e7b92e1c01cd0b152f26f"
+  },
+  "input": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-003.json",
+    "sha256": "623e775aaff1baeb8403b70b5b8e2622a3f14d722275274c5201d7d39da709a5"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "raw_skill_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Halvard is committed to the chlorine-residual alarm rework, which has about three weeks of effort remaining and a regulator-facing due date of 28 May.\n- Delphine asked Halvard to also take the pump-station telemetry audit; the audit has no fixed deadline and is an internal assurance exercise.\n- Wren ran the telemetry audit in each of the previous two years and confirmed on Monday that she has capacity this quarter.\n- Taking both pieces of work would put the 28 May regulator date at risk.\n- Delphine owns prioritisation between the two pieces of work.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message confirms that Halvard would rather not take the telemetry audit alongside the alarm rework, explains the 28 May risk, identifies Wren as an available alternative, and asks Delphine to decide if Halvard should take the audit instead, in which case he will identify what moves on the 28 May date.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual while stating Halvard's preference and leaving the prioritisation decision with Delphine.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+    }
+  ]
+}

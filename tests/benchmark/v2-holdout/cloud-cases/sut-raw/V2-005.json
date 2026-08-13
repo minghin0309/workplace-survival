@@ -1,0 +1,23 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-005",
+  "generated_at_utc": "2026-08-13T10:35:28Z",
+  "model": {
+    "context": "GPT-5.6 Sol",
+    "requested": "GPT-5.6 Sol",
+    "machine": "GPT-5.6 Sol"
+  },
+  "runtime": {
+    "environment": "Cursor Cloud",
+    "branch": "cursor/blind-v2-holdout-17a0",
+    "input_path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-005.json",
+    "input_sha256": "91fd96c498860e7e67a857f26c164c132ad16327bd3dff79ef99e83f821003f0",
+    "turn_count": 1
+  },
+  "responses": [
+    {
+      "turn_index": 1,
+      "response_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Oleander compiled the raw log data and formatted export but did not interpret the logs and has no interpretation qualification.\n- Hargrove Subsurface Ltd performed the casing-integrity log review, with Ineke Sallenbach as reviewing engineer. Hargrove's preliminary verbal readout on 8 May said nothing anomalous had been seen; its written report is expected on 10 May.\n- Yusuf Okpara holds casing-integrity sign-off authority and has not reviewed or signed anything.\n- Bronwyn asked whether the casing review is done and will copy the answer into the contractual daily well report.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says \"we have finished the casing log review\" and \"everything is within tolerance,\" but Data A establishes only Hargrove's preliminary verbal readout that nothing anomalous had been seen; the written report is still expected on 10 May, and Yusuf has not reviewed or signed off.\n- Communication risk: Bronwyn could record an unqualified completion and tolerance conclusion in the contractual daily well report before the written report and authorized sign-off exist.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual in tone, with no hostility, accusation, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Bronwyn - Hargrove has performed the casing log review and gave a preliminary verbal readout on 8 May that it hadn't seen anything anomalous. The written report is expected on 10 May, and Yusuf hasn't reviewed or signed off the casing integrity yet. I will get the summary over to you this afternoon."
+    }
+  ]
+}

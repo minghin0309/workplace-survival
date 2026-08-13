@@ -1,0 +1,44 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-012",
+  "recipient_context": "Ovid Ferrante-Klass, claims operations director at Northbell Mutual and Priya's direct manager. He owns the secondment decision, reads Slack on his phone between meetings, and rarely scrolls past the first two lines.",
+  "data_a": {
+    "organization": "Northbell Mutual, a regional insurer.",
+    "sender": "Priya Vanterpool, claims triage supervisor, storm-damage queue.",
+    "manager": "Ovid Ferrante-Klass, claims operations director.",
+    "channel": "Slack, across a single afternoon.",
+    "situation_facts": [
+      "The storm-damage queue holds six hundred and twelve open claims, up from three hundred and eighty on 1 March, following the Candlewick storm cluster.",
+      "Two of the queue's eight adjusters are on secondment to the motor team until 30 April.",
+      "At six adjusters the queue clears on 6 June.",
+      "With all eight adjusters the queue clears on 14 May.",
+      "Returning the two adjusters after 22 April pushes the 14 May clear date out day for day.",
+      "The regulatory service standard requires initial contact within ten working days; the queue is currently at fourteen.",
+      "Priya's own committed deliverable, the SLA-breach report, is due 24 April and that date is unchanged.",
+      "The secondment decision belongs to Ovid Ferrante-Klass.",
+      "Ovid replied to Priya's shortened message asking when she needs the adjusters back by."
+    ],
+    "ownership_map": {
+      "storm-damage queue triage": "Priya Vanterpool",
+      "adjuster secondment decision": "Ovid Ferrante-Klass",
+      "SLA-breach report": "Priya Vanterpool"
+    },
+    "constraints": [
+      "Slack messages to Ovid should carry the ask in the first two lines."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Drafting a Slack message to Ovid about the backlog. \"Hi Ovid, wanted to give you a picture of where the storm-damage queue is after Candlewick. We were at three hundred and eighty open claims on 1 March and we are now at six hundred and twelve. Part of that is volume and part of it is that we are running six adjusters instead of eight because two are on secondment to motor until the end of April. I have modelled it both ways. At six we clear on 6 June, at eight we clear on 14 May. We are also at fourteen days to initial contact against a ten day standard. Let me know your thoughts. Priya\""
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Too long. Ovid reads the first two lines on his phone and nothing else. Cut it right down but do not lose the ask."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "He came back with just: when do you need them back by? Draft my reply."
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "schema_version": "v2",
+  "artifact": "sut-raw-outputs",
+  "parent_gold_manifest": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/gold-manifest-v2.json",
+    "sha256": "0806da52e7414c1f30cb83fba3b257e630079102c9c50813ccf3dcad21796084"
+  },
+  "runtime": {
+    "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  "requested_model_id": "gpt-5.6-sol-high-fast",
+  "machine_model_id": "unverified",
+  "counts": {
+    "cases": 18,
+    "turns": 24
+  },
+  "cases": [
+    {
+      "case_id": "V2-001",
+      "generator_context_id": "bc-0d4027c2-e23b-5219-91e7-4cb52e7d3086",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-001.json",
+        "sha256": "84a11d742f17f3cde561c0b30406bfca7b2c9f71368416bd77fbe3946a3adec3"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-001.json",
+        "raw_sha256": "482ea525df8a884f161fc250c18163b7cc92d875af32565e37d1295d7251ee0e",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-001.json",
+        "attestation_sha256": "ee8aa7e5d8849fcef19b0d693e5f35e8feaaa8f7ca13a736f9709eb23aec8b16",
+        "branch": "cursor/v2-001-workplace-survival-3086",
+        "output_commit": "b8bbacd7e056650b6f40683c0e45aebcc73bd1c9"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:35:21Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ndidi owns the winter tyre changeover schedule and supplier ordering for the North Ring depot's twenty-two trailers.\n- Eighteen trailers were re-shod by 6 November; four await back-ordered 20x4 tyres that Rondel Tyres confirmed for delivery on 14 November.\n- The four affected trailers run the Sint-Amands loop; no service disruption has occurred or is forecast before 14 November.\n- Tomasz requested a short status line before Friday standup, under roughly eighty words.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message reports eighteen of twenty-two trailers completed, identifies the remaining four and the 20x4 back-order, gives Rondel's confirmed 14 November date, states the affected loop and service impact, and says Ndidi is holding the schedule and will confirm fitting.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and concise, with no blame, hostility, threat, disrespect, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turn_outputs/0/raw_output"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-002",
+      "generator_context_id": "bc-270e98eb-d6ee-5632-959c-0ce22ee89109",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-002.json",
+        "sha256": "6c30a6f64e9726bdfa7dddec10884bf10826e256c7d4180dfc4cc1f3ceb62424"
+      },
+      "source": {
+        "raw_path": "sut-raw/V2-002.json",
+        "raw_sha256": "a6195c059587b1b71725b161149fc6069833a0c406d6d646c187089a237f03d5",
+        "attestation_path": "sut-attestations/V2-002.json",
+        "attestation_sha256": "84a25c670fb1fac3c10acf60829b9638509928a98914d4685e657b8edb8ddde1",
+        "branch": "cursor/workplace-survival-v2-002-9109",
+        "output_commit": "ffdd6143037daacb7eb9926e5735fcf0d7a1ab0f"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Raw artifact recorded execution HEAD instead of the frozen runtime commit; frozen runtime file hashes matched.",
+          "Context ID was left unverified in the raw artifact and was recovered from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:35:26Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Hollis Braun, a contractor rather than studio staff, owns the main kiln's pyrometer recalibration and moved it from 19 March to 2 April on 14 March.\n- Perrin owns the cone-six test tile programme and has moved the current batch to the small test kiln because the main kiln cannot be used for those tiles until recalibration.\n- The small test kiln holds twelve tiles per firing instead of forty, adding roughly four days while keeping the programme inside the 30 April client deadline.\n- Sunniva holds the contract with Hollis and is the only person who can press for an earlier date.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message identifies Hollis's date change, the resulting main-kiln block, Perrin's test-kiln mitigation, its capacity and schedule effects, and Sunniva's option to pursue the contractor.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"the contract is yours to lean on\" frames the contractor handoff as Sunniva's problem rather than neutrally identifying her option to press Hollis.\n- Communication risk: The responsibility-shifting phrasing may distract from the otherwise factual slip and mitigation update.\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSunniva - Hollis has pushed the pyrometer recalibration from 19 March to 2 April. That blocks cone-six tiles in the main kiln, so I have moved the current batch to the test kiln; twelve tiles per firing instead of forty. That adds about four days but still lands inside the 30 April client date. If you would like to press Hollis for an earlier date, that remains an option; otherwise I am happy running on the test kiln. Perrin",
+          "source_json_pointer": "/turns/0/raw_output"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-003",
+      "generator_context_id": "bc-4e03300f-ce28-585f-bc15-8fa681730f05",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-003.json",
+        "sha256": "623e775aaff1baeb8403b70b5b8e2622a3f14d722275274c5201d7d39da709a5"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-003.json",
+        "raw_sha256": "74035f70128fe3d46a810d82e87b89ecff5217d1cae91453538f4b3cd053001d",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-003.json",
+        "attestation_sha256": "84972ccb1149658a9c74a4abd1dd78eff7074fd6445d1c868c47acf0f1fe4ec7",
+        "branch": "cursor/blind-v2-holdout-17a0",
+        "output_commit": "47f25e2634a489015ad5caebab4a745049a33e4c"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Raw artifact recorded execution HEAD instead of the frozen runtime commit; frozen runtime file hashes matched."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:38:37Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Halvard is committed to the chlorine-residual alarm rework, which has about three weeks of effort remaining and a regulator-facing due date of 28 May.\n- Delphine asked Halvard to also take the pump-station telemetry audit; the audit has no fixed deadline and is an internal assurance exercise.\n- Wren ran the telemetry audit in each of the previous two years and confirmed on Monday that she has capacity this quarter.\n- Taking both pieces of work would put the 28 May regulator date at risk.\n- Delphine owns prioritisation between the two pieces of work.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message confirms that Halvard would rather not take the telemetry audit alongside the alarm rework, explains the 28 May risk, identifies Wren as an available alternative, and asks Delphine to decide if Halvard should take the audit instead, in which case he will identify what moves on the 28 May date.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual while stating Halvard's preference and leaving the prioritisation decision with Delphine.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/raw_skill_output"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-004",
+      "generator_context_id": "bc-1f32f8fe-0dc9-5646-a836-3bd610fe4994",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-004.json",
+        "sha256": "a2958eb4470271334c58d8728ce06bf4f6ed102aea710729298236622d217bf8"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-004.json",
+        "raw_sha256": "2640a92525cf9ae77857d0022fd03db536a92838e632ecc993c11559630755e2",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-004.json",
+        "attestation_sha256": "98c2dfb6b00031fc6951404c91943019722a30097ffd69ed1ac29b51a5a762ff",
+        "branch": "cursor/v2-004-sut-4994",
+        "output_commit": "6d1daa05fec6fd19f5caca92b1d01bc4b8ebc135"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Used git status and rev-parse --show-toplevel despite the narrower git command list.",
+          "Attestation overstated that no repository state probe occurred; commands exposed only branch/root metadata and no benchmark content."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Bulgarian subtitle pass for Harrow Lane season two is blocked because locked picture, contractually due 14 January, had not arrived as of 22 January and was six working days late.\n- The contract allows ten working days from picture lock. The contractual delivery date remains 30 January, but lock arriving on 22 January would move delivery to 5 February.\n- Mireille's QC team is fully staffed and idle on the title, with two linguists on standby.\n- Mireille owns subtitle QC execution; Cassius owns the client relationship and all contractual-date renegotiation.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies the picture-lock blocker and resulting schedule impact, states that no further QC-side action is available, and asks Cassius to take the client date conversation today. This matches the confirmed ownership split between Mireille's QC execution and Cassius's client relationship and date renegotiation.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is factual and operational. \"There is nothing further I can do from the QC side\" and \"The date conversation with the client is yours\" directly describe the confirmed handoff without insult, accusation, hostility, or personalized blame.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/outputs/0/assistant_response"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-005",
+      "generator_context_id": "bc-8f720dd6-d99a-5f1b-9207-f13089e72313",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-005.json",
+        "sha256": "91fd96c498860e7e67a857f26c164c132ad16327bd3dff79ef99e83f821003f0"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-005.json",
+        "raw_sha256": "720daeb194f2c38ff49bf7914c7f5083cca425ed0f10cc55e85350ab23688a4e",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-005.json",
+        "attestation_sha256": "36db1d71f2ed02c8f30b9d5cfefd5d90b67a4bcedaf7ec4cffaf855a8829685f",
+        "branch": "cursor/blind-v2-holdout-17a0",
+        "output_commit": "2285219bb17c569020b3ae14fca6e2ee01c065e8"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Machine model ID was self-described but unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:35:28Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Oleander compiled the raw log data and formatted export but did not interpret the logs and has no interpretation qualification.\n- Hargrove Subsurface Ltd performed the casing-integrity log review, with Ineke Sallenbach as reviewing engineer. Hargrove's preliminary verbal readout on 8 May said nothing anomalous had been seen; its written report is expected on 10 May.\n- Yusuf Okpara holds casing-integrity sign-off authority and has not reviewed or signed anything.\n- Bronwyn asked whether the casing review is done and will copy the answer into the contractual daily well report.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says \"we have finished the casing log review\" and \"everything is within tolerance,\" but Data A establishes only Hargrove's preliminary verbal readout that nothing anomalous had been seen; the written report is still expected on 10 May, and Yusuf has not reviewed or signed off.\n- Communication risk: Bronwyn could record an unqualified completion and tolerance conclusion in the contractual daily well report before the written report and authorized sign-off exist.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual in tone, with no hostility, accusation, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Bronwyn - Hargrove has performed the casing log review and gave a preliminary verbal readout on 8 May that it hadn't seen anything anomalous. The written report is expected on 10 May, and Yusuf hasn't reviewed or signed off the casing integrity yet. I will get the summary over to you this afternoon.",
+          "source_json_pointer": "/responses/0/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-006",
+      "generator_context_id": "bc-d6fa06ec-e823-5d43-ac2f-05168557bff7",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-006.json",
+        "sha256": "fbca0e7ab108ee346f2cc9dd23cbced72db28dbd21c3b16229d59a7be1e46ca5"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-006.json",
+        "raw_sha256": "75c929ad636c18668b64ae51acc48fb12213cf5ca5318e09484c4baa0d01b414",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-006.json",
+        "attestation_sha256": "323a23f326eb235cb6c4f32ee4a4d0bf539fbb825da1d278780979b9e874b7c2",
+        "branch": "cursor/blind-v2-holdout-17a0",
+        "output_commit": "e5570af68e9dc51255046b6b32ece009da8d8d47"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Concurrent direct-branch pushes required pull --rebase; no foreign file content was read."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:38:54Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ravi Templeman-Osei is Juno Adeyemi-Park's direct manager and asked Juno to explain what went wrong on her side.\n- Bay 3 overnight closing sits on the volunteer cohort rota, coordinated by Fenwick Orsolya; Juno's remit is accession records and the drying room schedule and ends at the 17:00 handover.\n- Juno signed the 12 September handover checklist at 16:52, and the volunteer on shift countersigned it.\n- Juno raised in writing on 4 June and 21 August that the volunteer rota had no named closer on Thursdays.\n- The affected accessions are duplicates with backup material at the Braemore vault; no unique material was lost.\n- The reply will be attached to the incident record and read by the trustees.\n- Juno wants to stay on good terms with Fenwick, who is a volunteer.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says \"I take full responsibility\" and \"I will make sure it does not happen again,\" but Data A assigns Bay 3 overnight closing to the volunteer cohort rota coordinated by Fenwick and shows that Juno completed her 17:00 handover. Those claims must be replaced with the confirmed division of responsibility and Juno's documented actions.\n- Communication risk: The incident record could incorrectly assign Juno responsibility for overnight closing and an unconfirmed remediation commitment.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is factual and apologetic and contains no hostility, accusation, threat, disrespect, or blame toward Ravi or Fenwick.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nRavi - apologies for the Bay 3 incident. The trays were left uncovered overnight. On my side, I completed the 17:00 handover checklist at 16:52, and it was countersigned by the volunteer on shift. Bay 3 overnight closing sits on the volunteer cohort rota, coordinated by Fenwick. I had raised in writing on 4 June and 21 August that the Thursday rota had no named closer. I am sorry for the trouble it has caused. Juno",
+          "source_json_pointer": "/responses/0/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-007",
+      "generator_context_id": "bc-59cbc61d-9cf4-5182-af05-01b78c0672c0",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-007.json",
+        "sha256": "df73ed82dbfc06f847ef53c42684a52bf5df61a780b4fb127b46dc63ab3e4acb"
+      },
+      "source": {
+        "raw_path": "sut-raw/V2-007.json",
+        "raw_sha256": "71cf6be7e3fc40a0125284662f5110f9b9258510a11ec759159ec1886d91181f",
+        "attestation_path": "sut-attestations/V2-007.json",
+        "attestation_sha256": "962ac3d8d3b9e6ec9e5082b591e4fa7e761e88686b72044f6f977d878240ff89",
+        "branch": "cursor/v2-007-workplace-survival-72c0",
+        "output_commit": "3230ba2d5e00906592c0875e784c19f1a4692de6"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Used date, hash, and JSON verification commands required to produce and verify evidence.",
+          "One audit classified those non-git verification commands as a violation; review overruled it because they touched only allowlisted inputs or authored outputs and exposed no prohibited content.",
+          "Machine model ID was unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:35:37Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Delroy asked whether Rhys could pick up the patch-impact model.\n- The Q3 scoping document assigns the patch-impact model to Vesna Krajnc.\n- Rhys is committed to the Monday and Thursday scrim telemetry reports and the draft-priority board due 3 October; as of 12 September, the board has roughly eleven working days of effort remaining.\n- Building the model requires match-history API keys that Rhys does not have and cannot request without Delroy's sign-off.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says, \"happy to own the patch-impact model\" and \"Should be fine,\" but the current Q3 scoping document assigns the model to Vesna, Rhys lacks the required API keys and sign-off, and no reprioritisation of Rhys's existing commitments is confirmed.\n- Communication risk: Delroy could read this as unconditional acceptance of ownership and delivery despite unresolved reassignment, access, and workload priority, leading to incorrect execution expectations.\n\n### Tone\n\n- Rating: Green\n- Evidence: \"Sure - happy to\" is cooperative and the rest of the wording is neutral; it contains no blame, accusation, threat, hostility, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Did Delroy explicitly reassign the patch-impact model from Vesna to Rhys?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the draft's ownership statement is accurate.\n   - Neutral answer structure: The current owner is [Rhys / Vesna / other confirmed owner: ___].\n2. Question: What is the current status of Delroy's sign-off for the match-history API keys?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether Rhys can begin the work or whether access remains a blocker.\n   - Neutral answer structure: API-key sign-off is [approved / not approved / pending]; the next access step is [___].\n3. Question: What priority arrangement, if any, was agreed for the model relative to the scrim reports and draft-priority board?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether accepting the additional work conflicts with Rhys's existing commitments.\n   - Neutral answer structure: The model priority is [___]; the existing commitments are [unchanged / changed as follows: ___].\n\n## Minimal revision\n\nSure - happy to pick up the patch-impact model if we confirm it's being reassigned from Vesna to me. I'll need your sign-off to request the match-history API keys, and confirmation of how to prioritise it alongside the Monday and Thursday scrim reports and the draft board due 3 October.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-008",
+      "generator_context_id": "bc-6d8a4a2c-ff2d-5f42-8a5a-c752a0e33da4",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-008.json",
+        "sha256": "5ef2c0fff089dc1244c8d7feb34d31a7b05d47bbfb1aaededc00f5a7c557200d"
+      },
+      "source": {
+        "raw_path": "sut-raw/V2-008.json",
+        "raw_sha256": "e606b5db31a94e842169f24aca15797378333bdcc9a246dcba8f66b52e8a18ff",
+        "attestation_path": "sut-attestations/V2-008.json",
+        "attestation_sha256": "06e2591eda7f0b4a21ea7262570259320ca39fcdd1470afc6d336630f7d778da",
+        "branch": "cursor/workplace-survival-v2-008-3da4",
+        "output_commit": "27d8efd8bf15ce34673c09c677ab09bc90ed3627"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Machine model ID was unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Grethe Ojanpera is Bettina Achterberg's direct manager, and the note must be suitable for Grethe to forward unedited to the clinical director.\n- On 4 June, Consulta Vantage's video consult platform was unavailable for three hours and fourteen minutes because of an expired TLS certificate on the vendor's infrastructure; nothing in the outage was under Pawline's control, and no Pawline system was involved.\n- Bettina and the triage nurse team invoked the phone-fallback protocol nine minutes after the first failed consult. Forty-one of 46 booked consults were completed by phone; the other five were rebooked within 24 hours, and no animal welfare incident arose.\n- Consulta Vantage committed to a written post-incident review by 11 June.\n- Evaluated Data B: Hi Grethe, I am so sorry about yesterday. It was a total disaster and I know it reflects badly on the team. I should have spotted it sooner than I did and I feel awful about the clients we let down. We scrambled and did what we could but honestly it was not good enough. Sorry again. Bettina\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: \u201cI should have spotted it sooner\u201d assigns Bettina responsibility for detecting an outage that Data A attributes to an expired certificate on Consulta Vantage's infrastructure and states was outside Pawline's control. \u201cThe clients we let down\u201d and \u201cit was not good enough\u201d also omit the confirmed fallback response and outcomes.\n- Communication risk: If forwarded unedited, the note could incorrectly attribute the vendor-controlled failure to Bettina and the Pawline team and leave the clinical director without the confirmed response and impact information.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \u201ca total disaster,\u201d \u201cit reflects badly on the team,\u201d \u201cI feel awful,\u201d and \u201chonestly it was not good enough\u201d use emotive, self-blaming language instead of the confirmed incident facts.\n- Communication risk: The wording can read as an unsupported admission of team failure and obscure the vendor cause and the team's documented response.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Grethe,\n\nOn 4 June, the Consulta Vantage video consult platform was unavailable for three hours and fourteen minutes due to an expired TLS certificate on the vendor's infrastructure. No Pawline system was involved. The team invoked the phone-fallback protocol nine minutes after the first failed consult. Forty-one of the 46 booked consults were completed by phone, and the remaining five were rebooked within 24 hours. No animal welfare incident arose. Consulta Vantage has committed to providing a written post-incident review by 11 June.\n\nBettina",
+          "source_json_pointer": "/responses/0/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-009",
+      "generator_context_id": "bc-4db0bae0-e7ac-57f7-8f61-716bcec7f6f5",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-009.json",
+        "sha256": "b52d76ca883b01c61955ae92c87cd5d739fe55b9c6f3a2e5d6cc68f361a02c0b"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-009.json",
+        "raw_sha256": "e2500825c5cdb4795c811638ef990bf4ffde348280a0257cd58d4982491812fe",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-009.json",
+        "attestation_sha256": "3ececad20324842772921c4bb3ea0c9393bb3d2afe708ff94eed31f06124d58f",
+        "branch": "cursor/workplace-v2-009-f6f5",
+        "output_commit": "1115e1d83d5d96fbf4ba638ef863e18a1a826795"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Machine model ID was unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:35:50Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saoirse Pentland-Ross is Dovid's direct manager and owns the inspection-window decision.\n- The Ardnamurchan inspection window moved from 8 April to 22 April and then to 6 May; Saoirse made each change, and the first two changes incurred eighteen hundred pounds in vessel change fees.\n- The nesting restriction starts on 1 May and prevents vessel access to the eastern cluster, so the 6 May window cannot cover fourteen of the twenty-two turbines or deliver the full inspection scope.\n- The next viable full-scope window is 12 August.\n- The current Fjordling II slot is held until 18 April, after which the vessel is committed elsewhere until July; Dovid needs Saoirse's decision by 18 April.\n- Dovid has not previously raised the nesting restriction with Saoirse in writing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B asks Saoirse to \"make a decision\" but does not identify the required inspection-window decision or state the 18 April deadline. Data A establishes that the vessel hold expires on 18 April and that Dovid needs her decision by then.\n- Communication risk: Saoirse may not know the exact decision or response deadline, so the vessel hold could expire before Dovid can act.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"you keep moving the goalposts,\" \"eighteen hundred quid of change fees down the drain,\" and \"just make a decision and stick to it this time\" personalize blame and make the request dismissive. Data A supports the schedule-change and fee facts, so this is not an unsupported major accusation.\n- Communication risk: The blame-focused wording may distract from the urgent scheduling and compliance decision and make cooperation less clear.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSaoirse - Ardnamurchan has moved from 8 April to 22 April and now 6 May, which has incurred eighteen hundred quid in vessel change fees. The 6 May date does not work for the full inspection scope because the nesting restriction starts on 1 May and prevents access to fourteen of the twenty-two turbines. The next viable full-scope window is 12 August, and the current Fjordling II slot is only held until 18 April. Can you please confirm by 18 April whether to move the inspection window to 12 August? Dovid",
+          "source_json_pointer": "/responses/0/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-010",
+      "generator_context_id": "bc-6976ef70-8811-504f-a249-9cf4c1557be6",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-010.json",
+        "sha256": "17c740aa3b165e79578c40a5732032d62b1104fd47c98a524853a981983e0e95"
+      },
+      "source": {
+        "raw_path": "sut-raw/V2-010.json",
+        "raw_sha256": "521c77e6c7d65d604ee176f9af0be127f9a770f55be55af6c185a8e12a6a2307",
+        "attestation_path": "sut-attestations/V2-010.json",
+        "attestation_sha256": "5e7f1cfa76e3406ab6cf9d1c17f680fafe0d26be75016d16bc50e9b232023b71",
+        "branch": "cursor/v2-010-sut-7be6",
+        "output_commit": "3b259b7e8f0e9962fb86cf55590a3a68550c7fa6"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Machine model ID was unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Wexcombe parish register scan set has 1,340 volumes due to the funder on 31 January; 828 are complete and 512 remain.\n- The A0 flatbed scanner failed on 3 December while awaiting a lamp assembly, and Bergstrom Imaging has provided no delivery estimate.\n- With one scanner, completion is projected for 12 March, six weeks after the funder deadline.\n- A replacement scanner can be delivered within four working days and costs approximately \u00a32,400 for six weeks.\n- Any extension request must reach the funder by 1 January.\n- Ferdinand alone can authorise the rental or submit an extension request, and he will be travelling from 15 to 22 December.\n- Anneli owns scanning throughput and scheduling.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says the scanner is \"being a bit temperamental\" and that there is \"Nothing urgent at all,\" but Data A says it failed, the current projection is 12 March against a 31 January deadline, an extension must be requested by 1 January, and only Ferdinand can authorise either available response.\n- Communication risk: The message understates a confirmed failure and time-critical decision and does not clearly request rental authorisation or an extension, so Ferdinand may not take the action needed before the extension cutoff.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: The repeated hedging in \"Just wondering if maybe at some point we might possibly want to think about whether\" and \"perhaps looking a tiny bit optimistic,\" together with \"Nothing urgent at all,\" makes Anneli's stance and requested handoff materially unclear.\n- Communication risk: Ferdinand may read the message as a low-priority observation rather than a request for a prompt decision.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ferdinand, hope the week is going well! The A0 scanner failed on 3 December, and Bergstrom has not provided a delivery estimate. We have 512 volumes remaining; at single-scanner throughput, completion is projected for 12 March, six weeks after the 31 January funder deadline. A replacement scanner is available for approximately \u00a32,400 for six weeks and can be delivered within four working days. As only you can authorise the rental or submit an extension request, and any extension request must reach the funder by 1 January, could you please confirm whether you authorise the rental or intend to submit an extension request? Anneli",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-011",
+      "generator_context_id": "bc-e86df41f-53bb-5dc2-8b7c-257f5e210067",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-011.json",
+        "sha256": "220152b30bed37987add95a75e0bf064899062fb97c86062cdb1edb0814e146e"
+      },
+      "source": {
+        "raw_path": "sut-raw/V2-011.json",
+        "raw_sha256": "f9bb6a0ba51a77d3c633bf61a26367d35500e69d8c274ae53b345891a40aeda6",
+        "attestation_path": "sut-attestations/V2-011.json",
+        "attestation_sha256": "28aef290d019e25243d05cc8a874541ddf0c98868518c24271f9eb6388927753",
+        "branch": "cursor/blind-v2-holdout-17a0",
+        "output_commit": "a9cfbc601751d31427823700e952530797b9cc8b"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Used git diff --quiet only on its two authored output paths.",
+          "Concurrent direct-branch pushes required pull --rebase; no prohibited content entered context."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:38:56Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ike Boaventura proposed the cycle change; Marta Whelan-Duke executed the validation runs and logged the tray data.\n- On Line 1, contamination fell from 7.1 percent to 2.4 percent across five weeks and three hundred and forty trays.\n- Rolling the change to Line 2 requires fourteen hours of autoclave requalification downtime, which only Corinne Bassey-Lund can authorise.\n- At current Line 2 volume and contamination, roughly sixty-four trays are scrapped per week at eleven pounds each in materials and labour.\n- Corinne has a standing preference for requests that state the cost of doing nothing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says, \u201cI have been running a modified sterilisation cycle,\u201d but Data A identifies Marta as the person who executed the validation runs and Ike as the process designer. It also omits the known cost of leaving Line 2 unchanged despite Corinne\u2019s standing preference.\n- Communication risk: The wording misattributes execution of the validation and leaves out decision-relevant cost information.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral, factual, and makes a direct approval request without blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCorinne \u2014\n\nI proposed a modified sterilisation cycle on Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. Marta Whelan-Duke ran the validation over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent.\n\nI would like to roll it out to Line 2. At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour. Requalifying the autoclave requires fourteen hours of downtime. Can you approve the downtime?\n\nIke",
+          "source_json_pointer": "/responses/0/response_raw"
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": "2026-08-13T10:38:56Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ike Boaventura proposed the cycle change; Marta Whelan-Duke executed the validation runs and logged the tray data.\n- Ike does not want the message to single out a named colleague in a way that could look like strategic credit-sharing or blame-setting.\n- The current Data B remains the original draft; the requested attribution change is guidance for its revision.\n- On Line 1, contamination fell from 7.1 percent to 2.4 percent across five weeks and three hundred and forty trays.\n- Rolling the change to Line 2 requires fourteen hours of autoclave requalification downtime, which only Corinne Bassey-Lund can authorise.\n- At current Line 2 volume and contamination, roughly sixty-four trays are scrapped per week at eleven pounds each in materials and labour.\n- Corinne has a standing preference for requests that state the cost of doing nothing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft still says, \u201cI have been running a modified sterilisation cycle,\u201d which attributes the validation execution to Ike even though Data A separates Ike\u2019s process-design role from Marta\u2019s execution role. The executor can be described without naming her.\n- Communication risk: If sent unchanged, the message would misstate who executed the validation.\n\n### Tone\n\n- Rating: Green\n- Evidence: The current draft remains neutral, factual, and free of blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCorinne \u2014\n\nI proposed a modified sterilisation cycle for Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. The cycle was validated over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent.\n\nI would like to roll it out to Line 2. At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour. Requalifying the autoclave requires fourteen hours of downtime. Can you approve the downtime?\n\nIke",
+          "source_json_pointer": "/responses/1/response_raw"
+        },
+        {
+          "turn_index": 3,
+          "executed_at_utc": "2026-08-13T10:38:56Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ike Boaventura proposed the cycle change; Marta Whelan-Duke executed the validation runs and logged the tray data.\n- Ike does not want the message to single out a named colleague in a way that could look like strategic credit-sharing or blame-setting.\n- The current Data B remains the original draft; the user has requested a further revision rather than adopting or resubmitting an assistant revision.\n- On Line 1, contamination fell from 7.1 percent to 2.4 percent across five weeks and three hundred and forty trays.\n- Rolling the change to Line 2 requires fourteen hours of autoclave requalification downtime, which only Corinne Bassey-Lund can authorise.\n- Line 2 scraps roughly sixty-four trays per week at the current contamination rate, at eleven pounds each in materials and labour.\n- The Line 2 autoclave door gasket replacement is scheduled for 4 February and also requires downtime. Combining it with requalification lets both jobs share one fourteen-hour window instead of two stoppages.\n- Corinne has a standing preference for requests that state the cost of doing nothing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft still says, \u201cI have been running a modified sterilisation cycle,\u201d which conflicts with the known division between Ike\u2019s process-design role and Marta\u2019s validation-execution role. It also does not yet state the confirmed shared-window opportunity.\n- Communication risk: If sent unchanged, the message would misattribute the validation and omit scheduling information material to the downtime decision.\n\n### Tone\n\n- Rating: Green\n- Evidence: The current draft remains neutral, factual, and free of blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCorinne \u2014\n\nI proposed a modified sterilisation cycle for Line 1: one hundred and eighteen degrees for one hundred and twenty minutes instead of one hundred and twenty-one for ninety. The cycle was validated over five weeks and three hundred and forty trays, and contamination fell from 7.1 percent to 2.4 percent.\n\nI would like to roll it out to Line 2. At the current contamination rate, Line 2 scraps roughly sixty-four trays per week at eleven pounds each in materials and labour. Requalifying the autoclave requires fourteen hours of downtime. The autoclave door gasket replacement is already scheduled for 4 February, so both jobs can share that fourteen-hour window instead of requiring two separate stoppages.\n\nCan you approve fourteen hours of Line 2 downtime on 4 February for both the gasket replacement and autoclave requalification?\n\nIke",
+          "source_json_pointer": "/responses/2/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-012",
+      "generator_context_id": "bc-072bedeb-2b30-5b1c-a3d9-ce2531184ca0",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-012.json",
+        "sha256": "374ec9b90e108dd03697843d3e7e6cefd9992d615714df3bbfb2e3fd1c35b2ee"
+      },
+      "source": {
+        "raw_path": "sut-raw/V2-012.json",
+        "raw_sha256": "d93eb8ff30c100faeb555d7e56a9ba562a11ca296a1b4bb03bb3e2f02a47da95",
+        "attestation_path": "sut-attestations/V2-012.json",
+        "attestation_sha256": "10caa1476a3b8484002a10b6036dc9f30e99430dd56e793cb573b39522253a96",
+        "branch": "cursor/sut-v2-012-4ca0",
+        "output_commit": "ba3fafb42c19c257d7f421df6cb353b9b3a27ce8"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:36:05Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The storm-damage queue has 612 open claims, up from 380 on 1 March after Candlewick.\n- Two of the eight adjusters are seconded to motor until 30 April. At six adjusters the queue clears on 6 June; at eight it clears on 14 May, and returning the two after 22 April moves the 14 May date out day for day.\n- Initial contact is currently at 14 days against a 10-working-day standard.\n- Ovid owns the adjuster secondment decision, and the ask in a Slack message to him should be in the first two lines.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft ends with the nonspecific ask \u201cLet me know your thoughts\u201d instead of putting a clear secondment decision in the first two lines, as the known Slack constraint requires.\n- Communication risk: Ovid may not see the ask on his phone or know which decision Priya needs, so the secondment decision may not be made.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual and contains no blame, hostility, threat, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ovid, could you decide whether to bring the two seconded adjusters back to storm-damage early? I wanted to give you a picture of where the storm-damage queue is after Candlewick. We were at three hundred and eighty open claims on 1 March and we are now at six hundred and twelve. Part of that is volume and part of it is that we are running six adjusters instead of eight because two are on secondment to motor until the end of April. I have modelled it both ways. At six we clear on 6 June, at eight we clear on 14 May. We are also at fourteen days to initial contact against a ten day standard. Priya",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": "2026-08-13T10:36:05Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The storm-damage queue has 612 open claims, up from 380 on 1 March after Candlewick.\n- Two of the eight adjusters are seconded to motor until 30 April. At six adjusters the queue clears on 6 June; at eight it clears on 14 May, and returning the two after 22 April moves the 14 May date out day for day.\n- Initial contact is currently at 14 days against a 10-working-day standard.\n- Ovid owns the adjuster secondment decision.\n- The user wants the message cut down substantially while retaining the secondment ask in the first two lines for Ovid\u2019s phone-reading constraint.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current Data B still places the nonspecific ask \u201cLet me know your thoughts\u201d at the end rather than presenting a clear secondment decision in the first two lines.\n- Communication risk: Ovid may not see the ask or know which decision Priya needs, so the secondment decision may not be made.\n\n### Tone\n\n- Rating: Green\n- Evidence: The current Data B is neutral and factual and contains no blame, hostility, threat, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ovid \u2014 can we bring the two motor-seconded adjusters back to storm-damage early?\n\nAt six adjusters, the 612-claim queue clears 6 June; at eight, 14 May. Initial contact is at 14 days against the 10-working-day standard.",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "executed_at_utc": "2026-08-13T10:36:05Z",
+          "raw_output": "## Message template\n\nBy 22 April to keep the 14 May clear date. Every day later moves that clear date out by a day.\n\n## Information to fill\n\n- None",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-013",
+      "generator_context_id": "bc-9c7b3f7f-bb63-5d6c-a58c-f11dea53d4ae",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-013.json",
+        "sha256": "750eb8e2cd9c1b077deae93a54d70b8b9573cc7038c095119022a7f4f36d6fc5"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-013.json",
+        "raw_sha256": "1f00e6663a4d94b2749dbf47f837175a0870dc8d225b284d3395db8b11b66a5f",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-013.json",
+        "attestation_sha256": "11a70a7195c5e50a3b7c95330ef69eb7226854135e462f182d52eb68c2cb4e6a",
+        "branch": "cursor/v2-013-sut-d4ae",
+        "output_commit": "12d1a62210a515137399859587e93598a7283f2f"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Attestation used a Git blob SHA-1 rather than a raw file SHA-256; canonical aggregation recomputes SHA-256 from preserved bytes.",
+          "Machine model ID was unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:35Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Emeka is writing to his direct manager, Wilhelmina, to ask her to sponsor the Crowsfoot Point glazing spend at the board.\n- The survey found failed putty in eleven of sixteen panes, with water reaching the pedestal bearing.\n- Ellary's original 2 October quote was eighteen thousand seven hundred pounds. On 9 October, Ellary revised it to twenty-one thousand four hundred and fifty pounds after finding two additional cracked panes; the thirty-day validity period still runs from 2 October.\n- The revised quote exceeds the seventeen thousand nine hundred pounds of uncommitted reserve by three thousand five hundred and fifty pounds.\n- Spend above ten thousand pounds requires Wilhelmina to take it to the board. The 24 October meeting is within the quote-validity window; the following meeting is not.\n- Emeka owns the conservation assessment and contractor liaison; Wilhelmina owns board sponsorship for this spend.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says Ellary quoted eighteen thousand seven hundred pounds, but the current quote in Data A is twenty-one thousand four hundred and fifty pounds. The draft otherwise clearly asks Wilhelmina to take the spend to the board on 24 October.\n- Communication risk: The outdated figure could cause Wilhelmina to present the wrong funding request to the board. The quote amount must be updated before sending.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is direct and factual and contains no hostility, blame, threat, disrespect, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nWilhelmina - the Crowsfoot Point glazing survey came back badly. Eleven of sixteen panes have failed putty and water is getting to the pedestal bearing. Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid thirty days from 2 October. That is above my authority so I need you to take it to the board on 24 October. Emeka",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": "2026-08-13T10:35Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Emeka is writing to his direct manager, Wilhelmina, to ask her to sponsor the Crowsfoot Point glazing spend at the board.\n- The survey found failed putty in eleven of sixteen panes, with water reaching the pedestal bearing.\n- Ellary's original 2 October quote was eighteen thousand seven hundred pounds. On 9 October, Ellary revised it to twenty-one thousand four hundred and fifty pounds after finding two additional cracked panes; the thirty-day validity period still runs from 2 October.\n- Spend above ten thousand pounds requires Wilhelmina to take it to the board, and the 24 October meeting is within the quote-validity window.\n- Wilhelmina wants continuous prose without bullet lists or clipped lines, and Emeka asked for no padding.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft still gives the superseded quote of eighteen thousand seven hundred pounds instead of the current twenty-one thousand four hundred and fifty pounds. Its requested handoff to Wilhelmina for the 24 October board meeting is clear.\n- Communication risk: The outdated figure could cause Wilhelmina to present the wrong funding request to the board. The amount must be corrected.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is factual and direct. No hostility, accusation, threat, disrespect, or responsibility shifting is present.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nThe Crowsfoot Point glazing survey came back badly: eleven of sixteen panes have failed putty, and water is getting to the pedestal bearing. Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid for thirty days from 2 October. As this is above my authority, I need you to take it to the board on 24 October.",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "executed_at_utc": "2026-08-13T10:35Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Emeka is writing to his direct manager, Wilhelmina, to ask her to sponsor the Crowsfoot Point glazing spend at the board.\n- The survey found failed putty in eleven of sixteen panes, with water reaching the pedestal bearing.\n- Ellary's original 2 October quote was eighteen thousand seven hundred pounds. On 9 October, Ellary revised it to twenty-one thousand four hundred and fifty pounds after finding two additional cracked panes; the thirty-day validity period still runs from 2 October.\n- Spend above ten thousand pounds requires Wilhelmina to take it to the board, and the 24 October meeting is within the quote-validity window.\n- Wilhelmina wants continuous prose without bullet lists or clipped lines. Emeka wants to send the message before the board papers close tomorrow.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft says eighteen thousand seven hundred pounds, while effective Data A confirms that the revised figure is twenty-one thousand four hundred and fifty pounds. The requested board handoff and meeting date are otherwise clear.\n- Communication risk: Sending the superseded amount could cause the wrong funding request to go into the board papers. The amount must be updated before sending.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is factual and direct and contains no hostility, accusation, threat, disrespect, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nThe Crowsfoot Point glazing survey came back badly: eleven of sixteen panes have failed putty, and water is getting to the pedestal bearing. Ellary have revised their quote to twenty-one thousand four hundred and fifty pounds, valid for thirty days from 2 October. As this is above my authority, I need you to take it to the board on 24 October.",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-014",
+      "generator_context_id": "bc-2df288ac-11c9-5f32-b7d2-834a0d314048",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-014.json",
+        "sha256": "0ebc2ff0869692a91b8c4dd86b42808ce3afd668c7a49e10b5f5bd586120a718"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-014.json",
+        "raw_sha256": "2d52547c9d40702cd965e01889fef12ccfc9f5748b5d620ca2abfd5d026cdb8d",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-014.json",
+        "attestation_sha256": "3963e62bb46c0466d8ccba5beeba71d76caf9983e9fd579b124eb7dc9079ec6f",
+        "branch": "cursor/blind-v2-holdout-17a0",
+        "output_commit": "af1ce0d3d4b0164a07ba5e0147b6651aee6f2a24"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Concurrent direct-branch pushes required pull; no prohibited content entered context."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:38:43Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Threadneedle corridor extension application was submitted on 11 July.\n- No written decision, conditional approval, or reference to a decision has been received, and the regulator's portal showed the application as under assessment on 3 December.\n- Ferran's report that the application was \"basically approved\" is unverified and unsupported by a named source, document, email, or case reference.\n- Q1 flight planning on the Threadneedle corridor cannot begin without a written decision.\n- Ines will restate Marisol's wording to investors on 5 December.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says the extension \"has been approved\" and \"we can plan Q1 flights,\" but Data A confirms that no written decision has been received, the portal still shows under assessment, and Q1 planning cannot begin without a written decision.\n- Communication risk: The wording could cause Ines to tell investors that approval has been granted and that Q1 planning can begin when neither statement is supported; both claims must be corrected.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and cooperative, including a conditional offer to help with the slide.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nInes - the Threadneedle corridor extension application remains under assessment. We have not received a written decision, and we cannot begin Q1 flight planning on that corridor until we do. Happy to write the slide if useful. Marisol",
+          "source_json_pointer": "/output"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-015",
+      "generator_context_id": "bc-4c195c4d-ce54-5486-8b0a-776295ae2a28",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-015.json",
+        "sha256": "c154bf8bbedf5d083d97f12d935962f2c17c344e53dd3835f29360f3bcc80212"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-015.json",
+        "raw_sha256": "5a87fde69a55e9905a7c51a1b4331032203bb1aa65fc99bef570f6908b6ca93d",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-015.json",
+        "attestation_sha256": "abea087409ea3f5a45e6aea697947ed10d440739582959d6050c2fec7ba214c4",
+        "branch": "cursor/v2-015-sut-2a28",
+        "output_commit": "42ef26711d9f2372c603430a48bd57bd989e28ce"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Raw artifact used schema version v1 and was normalized mechanically.",
+          "Machine model ID was unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:35:43Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Delilah Prosper-Ige is Solvei Nkemelu's direct manager. She asked whether the markdown routine is working and is deciding whether to roll it out to the remaining eleven shops.\n- The routine was introduced only at Fennwick Street on 17 November; it has not been introduced at Cadgers Row or Pitt Lane.\n- The only available waste figure is an unverified two-week tally for Fennwick Street from an untitled spreadsheet whose producer and scope are unknown.\n- Solvei has no earlier baseline waste figure and no access to a system that would provide one. Aurelio Sant in finance owns quarterly waste reporting.\n- Solvei's subjective impression from working the counter is that there is less left in the case at closing.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says the routine is \"definitely working\" and that \"Shrinkage is down twelve percent quarter over quarter across all three of my shops,\" but Data A provides no baseline or verified quarter-over-quarter comparison, and the routine has been introduced at only one of the three shops. The recommendation to \"roll it out everywhere\" is therefore presented as supported by claims that conflict with the known information.\n- Communication risk: Delilah could make the rollout decision using an unsupported percentage and an incorrect claim that the routine has been tested across all three shops.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is direct and neutral; it contains no hostility, accusation, threat, disrespect, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nDelilah - My impression from working the counter is that there is less left in the case at closing at Fennwick Street, but I can't confirm that the routine is reducing waste. It has only been introduced at Fennwick Street, and I don't have a baseline or verified waste figures for a comparison. Based on the information I have, I can't recommend rolling it out to the other shops yet. Solvei",
+          "source_json_pointer": "/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-016",
+      "generator_context_id": "bc-ab1594a1-c849-5a1d-9c35-7cb77df74cd7",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-016.json",
+        "sha256": "443fd1aefbca38cf87d01a30308c27fbceffda16b0069ed2ee3000cf5b30b83d"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-016.json",
+        "raw_sha256": "a0302d9b18143264f0c67d845deda63b7c7e12ea3659cca79d2425cb577255e5",
+        "attestation_path": "tests/benchmark/v2-holdout/cloud-cases/sut-attestations/V2-016.json",
+        "attestation_sha256": "b41525e67c3afc4b3c613f825921580b4c61ad5e3646519439eff976afebc003",
+        "branch": "cursor/v2-016-workplace-sut-4cd7",
+        "output_commit": "e3d13c72af18049d08f38e6a92c74c04041f98af"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Raw attestation named GPT-5.6 Sol without machine-verifiable model metadata; canonical machine_model_id is unverified."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:38:49Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Casimir Duhamel is writing by email on 8 January to Dr. Ilse Vantongeren, his line manager and station lead.\n- The two acoustic recorders and matching solar kits total \u20ac3,180. Station policy sends purchases above \u20ac1,000 to Yannick Ostrowski, facilities and procurement director, on the standard PR-2 form.\n- Ilse is on research leave until 6 February. Dr. Halina Brzezicka is delegated scientific decisions only and is explicitly not covering procurement.\n- The equipment must be installed before 1 March. The stated 15-working-day PR-2 turnaround plus the three-week supplier lead time still clears that date only if the form is submitted without delay.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Ilse to approve the \u20ac3,180 purchase, but Data A states that purchases above \u20ac1,000 go to Yannick Ostrowski on a PR-2 form. The draft also proposes raising the request directly with the supplier instead of identifying the required PR-2 approval step.\n- Communication risk: The request is directed to someone who cannot approve this amount and omits the required procurement route, which could delay submission and jeopardize installation before 1 March.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and direct; it contains no blame, hostility, threat, disrespect, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Ilse - I need two acoustic recorders and solar kits for the nightjar survey. Comes to three thousand one hundred and eighty euros all in. Since this is above one thousand euros, I need to submit the standard PR-2 form to Yannick Ostrowski for approval rather than ask you to approve it. I need them on site before 1 March, so the form needs submitting now to allow for the approval turnaround and supplier lead time. Casimir",
+          "source_json_pointer": "/response"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-017",
+      "generator_context_id": "bc-482ad990-481d-52a6-800b-c6a8c0853a47",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-017.json",
+        "sha256": "6ba28b392bd904b0be5271fc50876578716c550da460e1ea034614f8f8602801"
+      },
+      "source": {
+        "raw_path": "sut-raw/V2-017.json",
+        "raw_sha256": "6991bfe77ce2f74ef8b8d3d01c8f6e2ccdeffe726023d757156e59cbc7f5e3fd",
+        "attestation_path": "sut-attestations/V2-017.json",
+        "attestation_sha256": "40246633cb26fc4efc1f65f5a3df27180ba1f6cf77c37553b9723682e6b6792f",
+        "branch": "cursor/workplace-survival-v2-017-3a47",
+        "output_commit": "655349bfda860d0da6e34cfd6c4ca7dc28603d2b"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Used git diff only on its authored output paths.",
+          "Machine model ID was unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:35:29Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Marguerite Vaudrey-Pinto is Odalys Ferreira-Whyte's direct manager and approves freelance bookings; she is the only person who can release the carpenter budget.\n- The Tin Heron bridge tested at 0.9 kilonewtons on 28 March, below Kelvinhaugh Playhouse's 1.5-kilonewton point-load requirement. The venue will not permit the bridge to be rigged, so the opening night cannot proceed without a rebuild.\n- The rebuild requires three workshop days, but only two free days remain before the tour truck loads on 14 April.\n- Basil Ntende is available 10\u201312 April if booked by 5 April. His rate is \u00a3340 per day, totaling \u00a31,020 for three days. Today is 2 April.\n- Recognized Data B:\n\n  > Hi Marguerite - sorry to bother you again about the Tin Heron\n  > bridge. I think it might not pass the load test at Kelvinhaugh\n  > and we may possibly need a rebuild at some point soon. Basil\n  > might be free. Let me know whenever you get a chance, no rush.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says the bridge \"might not pass,\" a rebuild \"may possibly\" be needed, Basil \"might be free,\" and there is \"no rush.\" Data A confirms that the bridge already failed, the rebuild is required for the opening night to proceed, Basil is available, and he must be booked by 5 April. Data B also does not ask Marguerite to approve the booking or release the \u00a31,020 budget.\n- Communication risk: Marguerite may not recognize that a booking and budget decision is required by 5 April, which can leave the rebuild without its third workshop day and prevent the opening night from proceeding.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is polite and contains no hostility, accusation, threat, disrespect, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Marguerite - sorry to bother you again about the Tin Heron bridge. It tested at 0.9 kilonewtons on 28 March, below Kelvinhaugh's 1.5-kilonewton requirement, so the venue won't permit it to be rigged and the opening night can't proceed without a three-day rebuild. We only have two free workshop days before the truck loads on 14 April. Basil is available 10\u201312 April if booked by 5 April, at \u00a3340 per day (\u00a31,020 total). Can you approve the freelance booking and release the \u00a31,020 budget by 5 April?",
+          "source_json_pointer": "/raw_response"
+        }
+      ]
+    },
+    {
+      "case_id": "V2-018",
+      "generator_context_id": "bc-f9e8c49f-7cf2-5aad-81ea-004f3bc90f56",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-018.json",
+        "sha256": "9c14268f8681d6600b35c4590099ea7c5fddc1e9cd322d63a2eb124a59e83351"
+      },
+      "source": {
+        "raw_path": "sut-raw/V2-018.json",
+        "raw_sha256": "ecfdb8526b7c43327057297ca763e9a9b30c582155a31a225f31c2fb7f46e92f",
+        "attestation_path": "sut-attestations/V2-018.json",
+        "attestation_sha256": "6bbdea3ef3667e36153bd607e2dfef7f2f11578ae8a07f4dbce6125c26b68a20",
+        "branch": "cursor/workplace-survival-v2-018-0f56",
+        "output_commit": "ff7eae194dde3bfb894dc3f5de82acb4c69a06ff"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Raw artifacts omitted schema_version and were normalized mechanically.",
+          "Machine model ID was unavailable from cloud run metadata."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-13T10:39:28Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Tobias is responsible for post-processing quality control and detected the 40 cm offset in lines 12\u201319 during routine crossline QC on 12 August.\n- The offset was caused by a UTC/British Summer Time tide-gauge timestamp mismatch introduced at ingest.\n- Runa Halvorsen's software team owns the ingest configuration. Tobias has read access but no write access or authority to change it.\n- Aoife decides whether the affected lines are reprocessed in-house or the job is returned to the software team. She is also the sole client interface.\n- Reprocessing the eight affected lines takes six hours of compute after the configuration is corrected; the deliverable is due 21 August.\n- Recognized Data B:\n\n  > Subject: Kilbrannan offset - my mistake\n  >\n  > Aoife, the 40 cm offset in lines 12-19 is down to me. I have taken\n  > ownership of the ingest config and I will patch the timestamp\n  > handling myself tonight, then reprocess. Should be clear well\n  > before the 21st. Sorry for the mess.\n  >\n  > Tobias\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says the offset \"is down to me,\" claims ownership of the ingest configuration, and commits to patching it personally tonight and then reprocessing. Data A establishes that the software team owns that configuration, Tobias lacks write access and authority to change it, and Aoife must decide the reprocessing route.\n- Communication risk: The message assigns the defect and configuration ownership to the wrong person, promises an unauthorized change, and bypasses Aoife's route decision; this could lead Aoife to rely on an action Tobias cannot perform.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is direct and apologetic, with no insult, threat, hostility, accusation, dismissiveness, or responsibility shifting toward the recipient.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSubject: Kilbrannan offset - ingest configuration issue\n\nAoife, I found the 40 cm offset in lines 12-19 during routine crossline QC. It is caused by a UTC/BST tide-gauge timestamp mismatch introduced at ingest. Runa's software team owns the ingest configuration, and I don't have write access to patch it. Once the configuration is corrected, reprocessing the eight affected lines will take six hours of compute. Please decide whether the affected lines should be reprocessed in-house or the job returned to the software team. The deliverable is due on the 21st.\n\nTobias",
+          "source_json_pointer": "/raw_output"
+        }
+      ]
+    }
+  ]
+}

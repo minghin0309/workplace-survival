@@ -13,9 +13,32 @@ CASE_KEYS = {
     "turns",
     "image_spec",
 }
-TURN_KEYS = {"turn_index", "input_raw", "image_path"}
+TURN_REQUIRED_KEYS = {"turn_index", "input_raw"}
+TURN_OPTIONAL_KEYS = {"image_path"}
 NOTE_KEYS = {"case_id", "design_intent", "difficulty_notes"}
 QUALITY_TIERS = {"human_reviewed", "heterogeneous_adjudicated", "gold_uncertain"}
+GOLD_TURN_KEYS = {
+    "turn_index",
+    "route",
+    "responsibility",
+    "tone",
+    "overall",
+    "required_question_concepts",
+    "allowed_question_concepts",
+    "required_revision_concepts",
+    "allowed_revision_concepts",
+    "concept_definitions",
+    "critical_invariants",
+    "rationale",
+    "gold_quality",
+}
+TURN_QUALITY_KEYS = {
+    "tier",
+    "three_way_categorical_disagreement",
+    "critical_invariant_disagreement",
+    "human_reviewed",
+    "unresolved_adjudication",
+}
 STAGE_ROLES = {
     "gold": {
         "cases",
@@ -32,6 +55,7 @@ STAGE_ROLES = {
         "labeler-1-attestation",
         "labeler-2-attestation",
         "labeler-3-attestation",
+        "designer-attestation",
         "adjudicator-attestation",
     },
     "outputs": {"outputs", "generator-attestation"},
@@ -54,6 +78,51 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def unwrap_document(document: object, collection_key: str) -> list[dict]:
+    if isinstance(document, list):
+        return document
+    require(
+        isinstance(document, dict)
+        and set(document) == {"schema_version", "case_set_id", collection_key}
+        and document["schema_version"] == "v2"
+        and isinstance(document[collection_key], list),
+        f"{collection_key} envelope schema",
+    )
+    return document[collection_key]
+
+
+def validate_not_invalidated(manifest_path: Path) -> None:
+    registry_path = manifest_path.parent / "invalidated-manifests.json"
+    if not registry_path.is_file():
+        return
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    require(
+        set(registry) == {"schema_version", "manifests"}
+        and registry["schema_version"] == "v2"
+        and isinstance(registry["manifests"], list),
+        "manifest invalidation registry schema",
+    )
+    manifest_hash = digest(manifest_path)
+    for item in registry["manifests"]:
+        require(
+            set(item)
+            == {
+                "path",
+                "sha256",
+                "status",
+                "reason",
+                "evidence_context_id",
+            }
+            and item["status"] == "INVALID_PROTOCOL"
+            and re.fullmatch(r"[0-9a-f]{64}", item["sha256"]) is not None
+            and isinstance(item["reason"], str)
+            and bool(item["reason"]),
+            "manifest invalidation entry schema",
+        )
+        if item["sha256"] == manifest_hash:
+            raise ValueError(f"manifest invalidated: {item['reason']}")
+
+
 def validate_cases(cases: list[dict], notes: list[dict]) -> None:
     case_ids = [item["case_id"] for item in cases]
     require(len(case_ids) == len(set(case_ids)), "duplicate case IDs")
@@ -62,10 +131,17 @@ def validate_cases(cases: list[dict], notes: list[dict]) -> None:
         require(set(case) == CASE_KEYS, f"{case['case_id']}: case schema")
         require("case_designer_notes" not in case, f"{case['case_id']}: leaked designer notes")
         require(isinstance(case["recipient_context"], str), f"{case['case_id']}: recipient context")
-        require(isinstance(case["data_a"], str), f"{case['case_id']}: Data A")
+        require(
+            isinstance(case["data_a"], (str, dict)) and bool(case["data_a"]),
+            f"{case['case_id']}: Data A",
+        )
         require(isinstance(case["turns"], list) and case["turns"], f"{case['case_id']}: turns")
         for index, turn in enumerate(case["turns"], start=1):
-            require(set(turn) == TURN_KEYS, f"{case['case_id']}: turn schema")
+            require(
+                TURN_REQUIRED_KEYS <= set(turn)
+                and set(turn) <= TURN_REQUIRED_KEYS | TURN_OPTIONAL_KEYS,
+                f"{case['case_id']}: turn schema",
+            )
             require(turn["turn_index"] == index, f"{case['case_id']}: turn order")
             require(isinstance(turn["input_raw"], str) and turn["input_raw"], f"{case['case_id']}: input")
         require(set(note) == NOTE_KEYS, f"{case['case_id']}: oracle-note schema")
@@ -135,6 +211,28 @@ def validate_gold(gold: dict) -> None:
             and isinstance(document["limitations"], list),
             "attestation provenance",
         )
+        if document["model_id"] == "unverified":
+            require(
+                any(
+                    "model" in limitation.lower()
+                    and (
+                        "unavailable" in limitation.lower()
+                        or "unverified" in limitation.lower()
+                    )
+                    for limitation in document["limitations"]
+                ),
+                "unverified model provenance not disclosed",
+            )
+        source = document.get("source_attestation")
+        if source is not None:
+            require(set(source) == {"path", "sha256"}, "source attestation schema")
+            source_path = Path(source["path"])
+            require(
+                source_path.is_file()
+                and re.fullmatch(r"[0-9a-f]{64}", source["sha256"]) is not None
+                and digest(source_path) == source["sha256"],
+                "source attestation hash",
+            )
         require(
             all("oracle-notes" not in str(value) for value in document["files_read"]),
             "gold labeler accessed oracle notes",
@@ -155,9 +253,45 @@ def validate_gold(gold: dict) -> None:
     )
     uncertain = total = 0
     for case in gold["cases"]:
-        for turn in case["turn_labels"]:
+        for expected_index, turn in enumerate(case["turn_labels"], start=1):
             total += 1
+            require(set(turn) == GOLD_TURN_KEYS, f"{case['case_id']}: gold turn schema")
+            require(turn["turn_index"] == expected_index, f"{case['case_id']}: gold turn order")
+            for field in ("responsibility", "tone", "overall"):
+                require(
+                    turn[field] in {"Green", "Yellow", "Red", "Gray", None},
+                    f"{case['case_id']}: {field}",
+                )
+            dimensions = (turn["responsibility"], turn["tone"])
+            if dimensions == (None, None):
+                require(turn["overall"] is None, f"{case['case_id']}: null overall")
+            else:
+                require(
+                    None not in dimensions
+                    and turn["overall"]
+                    == max(dimensions, key={"Green": 0, "Yellow": 1, "Gray": 2, "Red": 3}.get),
+                    f"{case['case_id']}: overall derivation",
+                )
+            for required_field, allowed_field in (
+                ("required_question_concepts", "allowed_question_concepts"),
+                ("required_revision_concepts", "allowed_revision_concepts"),
+            ):
+                required = turn[required_field]
+                allowed = turn[allowed_field]
+                require(
+                    isinstance(required, list)
+                    and isinstance(allowed, list)
+                    and required == sorted(set(required))
+                    and allowed == sorted(set(allowed))
+                    and all(isinstance(value, str) for value in required + allowed)
+                    and set(required) <= set(allowed),
+                    f"{case['case_id']}: concept schema",
+                )
             turn_quality = turn["gold_quality"]
+            require(
+                set(turn_quality) == TURN_QUALITY_KEYS,
+                f"{case['case_id']}: turn quality schema",
+            )
             tier = turn_quality["tier"]
             require(tier in QUALITY_TIERS, f"{case['case_id']}: quality tier")
             require(
@@ -185,6 +319,97 @@ def validate_gold(gold: dict) -> None:
                 require(tier == "gold_uncertain", f"{case['case_id']}: uncertain gold")
             uncertain += int(tier == "gold_uncertain")
     require(total > 0 and uncertain / total <= 0.20, "gold uncertainty exceeds 20%")
+
+
+def validate_adjudication(adjudication: dict, gold: dict) -> None:
+    require(
+        set(adjudication)
+        == {
+            "schema_version",
+            "artifact",
+            "case_set_id",
+            "gold_output_path",
+            "adjudicator_attestation",
+            "source_hashes",
+            "adjudication_policy",
+            "summary",
+            "cases",
+        },
+        "adjudication schema",
+    )
+    require(
+        adjudication["schema_version"] == "v2"
+        and adjudication["artifact"] == "gold-adjudication"
+        and adjudication["case_set_id"] == gold["case_set_id"],
+        "adjudication identity",
+    )
+    attestation = adjudication["adjudicator_attestation"]
+    require(set(attestation) == {"path", "sha256"}, "adjudicator attestation schema")
+    attestation_path = Path(attestation["path"])
+    require(
+        attestation_path.is_file()
+        and digest(attestation_path) == attestation["sha256"],
+        "adjudicator attestation hash",
+    )
+    source_hashes = adjudication["source_hashes"]
+    require(isinstance(source_hashes, dict) and source_hashes, "adjudication sources")
+    for path_text, expected_hash in source_hashes.items():
+        path = Path(path_text)
+        require(
+            path.is_file()
+            and re.fullmatch(r"[0-9a-f]{64}", expected_hash) is not None
+            and digest(path) == expected_hash,
+            f"adjudication source changed: {path}",
+        )
+
+    gold_cases = {case["case_id"]: case["turn_labels"] for case in gold["cases"]}
+    adjudicated_cases = adjudication["cases"]
+    require(
+        [case["case_id"] for case in adjudicated_cases] == list(gold_cases),
+        "adjudication case coverage",
+    )
+    turn_count = uncertain_count = 0
+    for case in adjudicated_cases:
+        case_id = case["case_id"]
+        turn_adjudications = case["turn_adjudications"]
+        expected_turns = gold_cases[case_id]
+        require(len(turn_adjudications) == len(expected_turns), f"{case_id}: adjudication turn coverage")
+        for expected_index, (turn, expected_gold) in enumerate(
+            zip(turn_adjudications, expected_turns), start=1
+        ):
+            require(turn["turn_index"] == expected_index, f"{case_id}: adjudication turn order")
+            require(
+                turn["labeler_model_families"] == ["claude", "grok", "kimi"],
+                f"{case_id}: adjudication model families",
+            )
+            labeler_votes = turn["labeler_votes"]
+            require(
+                isinstance(labeler_votes, list)
+                and len(labeler_votes) == 3
+                and len({vote["labeler_id"] for vote in labeler_votes}) == 3
+                and {vote["model_family"] for vote in labeler_votes}
+                == {"claude", "grok", "kimi"},
+                f"{case_id}: labeler vote coverage",
+            )
+            for field in ("route", "responsibility", "tone", "overall"):
+                distribution = turn["categorical_vote_distribution"][field]
+                require(
+                    sum(distribution.values()) == 3,
+                    f"{case_id}: {field} vote distribution",
+                )
+            require(
+                turn["adjudicated_turn"] == expected_gold,
+                f"{case_id}: adjudicated gold linkage",
+            )
+            turn_count += 1
+            uncertain_count += int(expected_gold["gold_quality"]["tier"] == "gold_uncertain")
+    summary = adjudication["summary"]
+    require(
+        summary["turns"] == turn_count
+        and summary["uncertain_turn_count"] == uncertain_count
+        and summary["uncertain_fraction"] == uncertain_count / turn_count,
+        "adjudication summary",
+    )
 
 
 def validate_manifest(manifest: dict, seen: set[Path] | None = None) -> None:
@@ -256,11 +481,12 @@ def validate_manifest(manifest: dict, seen: set[Path] | None = None) -> None:
                 ),
                 f"{entry['role']}: attestation content",
             )
-            require(
-                document["cloud_branch"] == entry["cloud_branch"]
-                and document["cloud_commit"] == entry["cloud_commit"],
-                f"{entry['role']}: attestation provenance mismatch",
-            )
+            if "source_attestation" not in document:
+                require(
+                    document["cloud_branch"] == entry["cloud_branch"]
+                    and document["cloud_commit"] == entry["cloud_commit"],
+                    f"{entry['role']}: attestation provenance mismatch",
+                )
             if entry["role"] in {"generator-attestation", "evaluator-attestation"}:
                 require(
                     all(
@@ -275,12 +501,13 @@ def validate_manifest(manifest: dict, seen: set[Path] | None = None) -> None:
     require(STAGE_ROLES[stage] <= roles, "required artifact roles missing")
     if stage == "gold":
         cases_entry = next(item for item in manifest["artifacts"] if item["role"] == "cases")
-        cases = json.loads(Path(cases_entry["path"]).read_text(encoding="utf-8"))
+        cases_document = json.loads(Path(cases_entry["path"]).read_text(encoding="utf-8"))
+        cases = unwrap_document(cases_document, "cases")
         expected_images = {
             f"image:{case['case_id']}:{turn['turn_index']}": turn["image_path"]
             for case in cases
             for turn in case["turns"]
-            if turn["image_path"] is not None
+            if turn.get("image_path") is not None
         }
         actual_images = {
             item["role"]: item["path"]
@@ -305,15 +532,22 @@ def main() -> None:
             "usage: validate_benchmark.py <cases.json> <oracle-notes.json> "
             "<gold.json> <artifact-manifest.json>"
         )
-    cases = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
-    notes = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
+    cases_document = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+    notes_document = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
+    cases = unwrap_document(cases_document, "cases")
+    notes = unwrap_document(notes_document, "notes")
     gold = json.loads(Path(sys.argv[3]).read_text(encoding="utf-8"))
-    manifest = json.loads(Path(sys.argv[4]).read_text(encoding="utf-8"))
+    manifest_path = Path(sys.argv[4])
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    validate_not_invalidated(manifest_path)
     validate_cases(cases, notes)
     validate_gold(gold)
     validate_manifest(manifest)
     gold_manifest = find_gold_manifest(manifest)
     by_role = {item["role"]: item for item in gold_manifest["artifacts"]}
+    adjudication_path = Path(by_role["adjudication"]["path"])
+    adjudication = json.loads(adjudication_path.read_text(encoding="utf-8"))
+    validate_adjudication(adjudication, gold)
     expected_paths = {
         "cases": Path(sys.argv[1]).resolve(),
         "oracle-notes": Path(sys.argv[2]).resolve(),

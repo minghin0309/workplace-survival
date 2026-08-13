@@ -1,0 +1,76 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-011",
+  "attested_at_utc": "2026-08-13T10:39:41Z",
+  "context": {
+    "execution": "multi-turn sequential",
+    "turn_count": 3,
+    "single_context": true,
+    "retained_prior_assistant_responses": true,
+    "retained_effective_data_a": true,
+    "scoring_performed": false
+  },
+  "model": {
+    "name": "GPT-5.6 Sol",
+    "sut": "Workplace Survival"
+  },
+  "git": {
+    "branch": "cursor/blind-v2-holdout-17a0",
+    "checkout_commit_at_start": "ce4c26339fc1e2ce660e7b92e1c01cd0b152f26f",
+    "output_parent_commit": "e5570af68e9dc51255046b6b32ece009da8d8d47",
+    "output_commit": "a9cfbc601751d31427823700e952530797b9cc8b"
+  },
+  "reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-011.json",
+      "sha256": "220152b30bed37987add95a75e0bf064899062fb97c86062cdb1edb0814e146e",
+      "purpose": "SUT input"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66",
+      "purpose": "frozen SUT runtime"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56",
+      "purpose": "frozen SUT runtime"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198",
+      "purpose": "frozen SUT runtime"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77",
+      "purpose": "frozen SUT runtime"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "sut-raw/V2-011.json",
+      "sha256": "f9bb6a0ba51a77d3c633bf61a26367d35500e69d8c274ae53b345891a40aeda6",
+      "commit": "a9cfbc601751d31427823700e952530797b9cc8b"
+    }
+  ],
+  "limitations": [
+    "The review used only the supplied case data and frozen runtime; it did not independently verify real-world facts or predict the manager's reaction.",
+    "The fixture contains a chronology-sensitive gasket-overlap fact. It was not used in the first two revisions and was activated when the user raised it in turn 3.",
+    "The first push was rejected because the specified remote branch had advanced. The exact branch was rebased without inspecting additional case or expectation files, changing the output commit's parent from the checkout commit to the recorded output parent."
+  ],
+  "isolation": {
+    "allowed_case_reads_only": true,
+    "expectation_files_accessed": false,
+    "search_or_listing_performed": false,
+    "other_case_inputs_accessed": false,
+    "all_three_turns_processed_in_one_context": true,
+    "prior_assistant_response_retained": true,
+    "effective_data_a_retained": true,
+    "output_files_read_only_for_validation_and_hashing": true
+  },
+  "violation": {
+    "detected": false,
+    "details": "No access, listing, search, expectation read, scoring, or cross-case contamination occurred outside the authorized input, frozen runtime, generated outputs, and restricted Git operations."
+  }
+}

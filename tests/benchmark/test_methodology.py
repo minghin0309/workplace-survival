@@ -429,6 +429,59 @@ class BenchmarkMethodologyTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validate_benchmark.validate_gold(gold)
 
+    def test_canonical_wrapper_separates_artifact_and_source_provenance(self):
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory)
+            manifest = self._valid_gold_manifest(directory)
+            entry = next(
+                item
+                for item in manifest["artifacts"]
+                if item["role"] == "labeler-1-attestation"
+            )
+            path = Path(entry["path"])
+            document = json.loads(path.read_text())
+            source = directory / "raw-attestation.json"
+            source.write_text('{"raw": true}\n')
+            import hashlib
+
+            document["source_attestation"] = {
+                "path": str(source),
+                "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+            }
+            document["cloud_branch"] = "cursor/source-agent"
+            document["cloud_commit"] = "b" * 40
+            path.write_text(json.dumps(document) + "\n")
+            entry["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+            validate_benchmark.validate_manifest(manifest)
+
+    def test_invalidated_manifest_is_rejected_by_hash(self):
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory)
+            manifest_path = directory / "gold-manifest.json"
+            manifest_path.write_text('{"immutable": true}\n')
+            import hashlib
+
+            manifest_hash = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+            (directory / "invalidated-manifests.json").write_text(
+                json.dumps(
+                    {
+                        "schema_version": "v2",
+                        "manifests": [
+                            {
+                                "path": str(manifest_path),
+                                "sha256": manifest_hash,
+                                "status": "INVALID_PROTOCOL",
+                                "reason": "Prohibited file access.",
+                                "evidence_context_id": "context-1",
+                            }
+                        ],
+                    }
+                )
+                + "\n"
+            )
+            with self.assertRaisesRegex(ValueError, "manifest invalidated"):
+                validate_benchmark.validate_not_invalidated(manifest_path)
+
     def test_attestation_family_mismatch_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             directory = Path(directory)
@@ -545,6 +598,127 @@ class BenchmarkMethodologyTests(unittest.TestCase):
             }
             with self.assertRaises(ValueError):
                 validate_benchmark.validate_gold(gold)
+
+    def test_structured_data_a_and_omitted_optional_image_path_are_valid(self):
+        cases = [
+            {
+                "case_id": "B2-001",
+                "category": "green_control",
+                "recipient_context": "Direct manager.",
+                "data_a": {"facts": ["Confirmed fact."]},
+                "turns": [{"turn_index": 1, "input_raw": "Review this draft."}],
+                "image_spec": None,
+            }
+        ]
+        notes = [
+            {
+                "case_id": "B2-001",
+                "design_intent": "Control.",
+                "difficulty_notes": "None.",
+            }
+        ]
+        validate_benchmark.validate_cases(cases, notes)
+        self.assertEqual(
+            validate_benchmark.unwrap_document(
+                {
+                    "schema_version": "v2",
+                    "case_set_id": "test-set",
+                    "cases": cases,
+                },
+                "cases",
+            ),
+            cases,
+        )
+
+    def test_adjudication_requires_sha256_and_exact_gold_linkage(self):
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory)
+            source = directory / "source.json"
+            source.write_text('{"source": true}\n')
+            attestation = directory / "adjudicator.json"
+            attestation.write_text('{"attestation": true}\n')
+            import hashlib
+
+            source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+            attestation_hash = hashlib.sha256(attestation.read_bytes()).hexdigest()
+            turn = {
+                "turn_index": 1,
+                "route": "Normal mode",
+                "responsibility": "Green",
+                "tone": "Green",
+                "overall": "Green",
+                "required_question_concepts": [],
+                "allowed_question_concepts": [],
+                "required_revision_concepts": ["no-revision"],
+                "allowed_revision_concepts": ["no-revision"],
+                "concept_definitions": {},
+                "critical_invariants": ["no-invented-facts"],
+                "rationale": "Supported.",
+                "gold_quality": {
+                    "tier": "heterogeneous_adjudicated",
+                    "three_way_categorical_disagreement": False,
+                    "critical_invariant_disagreement": False,
+                    "human_reviewed": False,
+                    "unresolved_adjudication": False,
+                },
+            }
+            gold = {
+                "case_set_id": "test-set",
+                "cases": [{"case_id": "B2-001", "turn_labels": [turn]}],
+            }
+            adjudication = {
+                "schema_version": "v2",
+                "artifact": "gold-adjudication",
+                "case_set_id": "test-set",
+                "gold_output_path": "gold.json",
+                "adjudicator_attestation": {
+                    "path": str(attestation),
+                    "sha256": attestation_hash,
+                },
+                "source_hashes": {str(source): source_hash},
+                "adjudication_policy": ["Preserve votes."],
+                "summary": {
+                    "turns": 1,
+                    "uncertain_turn_count": 0,
+                    "uncertain_fraction": 0.0,
+                },
+                "cases": [
+                    {
+                        "case_id": "B2-001",
+                        "turn_adjudications": [
+                            {
+                                "turn_index": 1,
+                                "labeler_model_families": ["claude", "grok", "kimi"],
+                                "labeler_votes": [
+                                    {
+                                        "labeler_id": "gold-labeler-1",
+                                        "model_family": "claude",
+                                    },
+                                    {
+                                        "labeler_id": "gold-labeler-2",
+                                        "model_family": "grok",
+                                    },
+                                    {
+                                        "labeler_id": "gold-labeler-3",
+                                        "model_family": "kimi",
+                                    },
+                                ],
+                                "categorical_vote_distribution": {
+                                    field: {"Green": 3}
+                                    for field in ("route", "responsibility", "tone", "overall")
+                                },
+                                "adjudicated_turn": turn,
+                            }
+                        ],
+                    }
+                ],
+            }
+            validate_benchmark.validate_adjudication(adjudication, gold)
+            adjudication["adjudicator_attestation"]["hash"] = adjudication[
+                "adjudicator_attestation"
+            ].pop("sha256")
+            with self.assertRaisesRegex(ValueError, "adjudicator attestation schema"):
+                validate_benchmark.validate_adjudication(adjudication, gold)
 
 
 if __name__ == "__main__":

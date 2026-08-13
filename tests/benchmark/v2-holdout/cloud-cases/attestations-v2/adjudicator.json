@@ -1,0 +1,78 @@
+{
+  "schema_version": "v2",
+  "role": "adjudicator",
+  "context_id": "bc-71c5d4ca-0585-5745-99ec-50491605c172",
+  "model_id": "unverified",
+  "model_id_provenance": "Cloud run metadata did not expose an exact machine model ID; no ID was guessed.",
+  "model_family": "gpt",
+  "model_family_provenance": "protocol-assigned; not machine-metadata-verified",
+  "cloud_branch": "cursor/raw-v2-adjudication-c172",
+  "cloud_commit": "5811293f638248d896dc3319ddcd5d0898aa0efb",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1.json",
+      "sha256": "44eecc21199cecba5c0a8e7dce99277f8c2fd0c2fcb81a1e127b3f1c1dce5418"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1-attestation.json",
+      "sha256": "31675d1336da2fc42799281113c87e4fee274df656bffb3940eb4f7882b3bc96"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-rerun.json",
+      "sha256": "3d927fa748f90c6bc264b30d23354855968f70ee01b25f5c54d5f5dad2976eb8"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-rerun-attestation.json",
+      "sha256": "b4d2199e31b6d8a2dc9b11ce2704bb69b872134b338178802b1808539272ea5e"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "67aa69207ba205182eb25065fdf20c947de715bc10b2a381531ec88ce1f1e938"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3-attestation.json",
+      "sha256": "978a80d60c633f05c487f0949232b37b1cea67029d645f8121294c2df24a338f"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/designer-attestation.json",
+      "sha256": "9775aa61f2fe5eb34493a5abbf6abf719626812acb1715533ccde8f1dc84b975"
+    }
+  ],
+  "limitations": [
+    "Machine model metadata was unavailable: cursor-cloud run-info returned originalModelName null, so model_id is recorded as unverified rather than guessed.",
+    "No independent filesystem audit proof is available; the isolation claim is based on the tool actions in this run and the explicit path allowlist followed during adjudication.",
+    "The attestation is written after the raw-output commit, so adjudication-v2-raw.json intentionally carries a null attestation hash for later mechanical normalization.",
+    "The attestation cannot embed its own SHA-256 without changing the bytes being hashed; its final hash must be computed externally after the second commit.",
+    "Only the two PNGs were opened as images; no external OCR, web source, git history, prior gold, scorer, validator, methodology, runtime Skill file, SUT output, or non-allowlisted repository path was accessed.",
+    "Machine model ID was unavailable from cloud run metadata; model_id is recorded as unverified and model_family is the protocol-assigned family.",
+    "A transcript-level allowlist audit passed before acceptance."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/adjudicator-v2-raw-attestation.json",
+    "sha256": "e60097cd981bb1e464a9b1cea1e050e26c9a6c0a2457cf9b90662178d9bde79b"
+  },
+  "normalization": {
+    "kind": "mechanical-schema-wrapper",
+    "semantic_decisions_changed": false
+  }
+}

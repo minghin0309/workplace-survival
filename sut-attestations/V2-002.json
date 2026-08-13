@@ -1,0 +1,50 @@
+{
+  "schema_version": "v2",
+  "artifact": "sut-attestation",
+  "case_id": "V2-002",
+  "timestamp_utc": "2026-08-13T10:35:51Z",
+  "generator_context_id": "unverified",
+  "requested_model_id": "gpt-5.6-sol-high-fast",
+  "machine_model_id": "unverified",
+  "runtime_commit": "6e1c77d6da1fdd7a6592b54e3435ab413fd6b062",
+  "branch": "cursor/workplace-survival-v2-002-9109",
+  "output_commit": "ffdd6143037daacb7eb9926e5735fcf0d7a1ab0f",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-002.json",
+      "sha256": "6c30a6f64e9726bdfa7dddec10884bf10826e256c7d4180dfc4cc1f3ceb62424"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "output": {
+    "path": "sut-raw/V2-002.json",
+    "sha256": "a6195c059587b1b71725b161149fc6069833a0c406d6d646c187089a237f03d5"
+  },
+  "limitations": [
+    "The authorized case input did not provide a generator_context_id, so it is recorded as unverified.",
+    "The machine model identifier could not be independently verified and is recorded as unverified."
+  ],
+  "isolation": {
+    "authorized_case_only": true,
+    "sequential_turn_state_preserved": true,
+    "scoring_performed": false,
+    "prohibited_repository_material_read": false,
+    "notes": "Only the case input and four named Workplace Survival runtime files were read. No directory listing, search, glob, gold, rubric, ontology, scorer, plan, methodology, oracle, unrelated input or output, history, diff, or pull-request material was accessed."
+  },
+  "protocol_violation": false
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-008",
+  "recipient_context": "Grethe Ojanpera, head of clinical operations at Pawline Remote Care and Bettina's direct manager. She asked for a note she can forward unedited to the clinical director, so the wording will be read outside the team.",
+  "data_a": {
+    "organization": "Pawline Remote Care, a veterinary telehealth provider.",
+    "sender": "Bettina Achterberg, triage nurse team lead.",
+    "manager": "Grethe Ojanpera, head of clinical operations.",
+    "channel": "Email, to be forwarded to the clinical director.",
+    "situation_facts": [
+      "On 4 June the video consult platform was unavailable for three hours and fourteen minutes.",
+      "The platform is supplied by vendor Consulta Vantage, who confirmed in writing that the root cause was an expired TLS certificate on their infrastructure.",
+      "Nothing in the outage was under Pawline's control and no Pawline system was involved.",
+      "Bettina's team invoked the phone-fallback protocol nine minutes after the first failed consult.",
+      "Forty-one of the forty-six booked consults were completed by phone; the remaining five were rebooked within twenty-four hours.",
+      "No animal welfare incident arose from the outage.",
+      "Consulta Vantage has committed to a written post-incident review by 11 June.",
+      "Grethe asked for a note she can forward to the clinical director unedited."
+    ],
+    "ownership_map": {
+      "video consult platform": "Consulta Vantage (vendor)",
+      "phone-fallback protocol execution": "Bettina Achterberg and the triage nurse team",
+      "vendor contract and escalation": "Grethe Ojanpera"
+    },
+    "constraints": []
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "This is going to Grethe and then straight to the clinical director. \"Hi Grethe, I am so sorry about yesterday. It was a total disaster and I know it reflects badly on the team. I should have spotted it sooner than I did and I feel awful about the clients we let down. We scrambled and did what we could but honestly it was not good enough. Sorry again. Bettina\""
+    }
+  ]
+}

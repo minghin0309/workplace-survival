@@ -1,0 +1,52 @@
+{
+  "schema_version": "v2",
+  "role": "matcher",
+  "context_id": "bc-49280770-7415-5b2a-abb9-65f7bb13a6c0",
+  "model_id": "unverified",
+  "model_family": "gpt",
+  "cloud_branch": "cursor/post-freeze-semantic-matcher-a6c0",
+  "cloud_commit": "51a3c4df3628167586989cfd47780ed156d36dcf",
+  "gold_access": true,
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/extractions-manifest-v2.json",
+      "sha256": "cc5dd4dd8dd80fd8ea6477c52941206c55d213067cfed2f5a2b3d1cdf424d419"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/evaluations-v2-canonical.json",
+      "sha256": "61c5aa0791ab3138fa597f13d59330668f4ecc3d24bc651115e728a468189764"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/outputs-v2-raw.json",
+      "sha256": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-v2.json",
+      "sha256": "63245c97c837721862769598c42e2fd47d4c2f87ee1b0624763800d8b32dc05d"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "output": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/matches-v2-canonical.json",
+    "sha256": "b487fa6a62d99915ba60cc1a5000e643cefbd012d19877039df756720e48e19b"
+  },
+  "source_attestation": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/matcher-attestation-v2-clean.json",
+    "sha256": "b03e2524db556d1911b6d433620f3d48e570d4579c966b873cc5fe6b6a698f84"
+  },
+  "limitations": [
+    "Repository content access was isolated to the exact five specified input paths.",
+    "No scorer, validator, test, plan, methodology, oracle, case-input, raw-extractor, runtime, prior-match, attestation, score, report, history, diff, PR, or external-source content was read.",
+    "Model metadata was unavailable, so model_id is unverified.",
+    "Semantic decisions use the frozen canonical evaluations and turn-local allowed gold concept lists; unsupported claims retain null concepts.",
+    "Machine model ID was unavailable from cloud run metadata; no ID was guessed.",
+    "The isolated-branch checkout deviation is recorded in matcher-protocol-audits.json."
+  ],
+  "normalization": {
+    "kind": "mechanical-provenance-wrapper",
+    "match_decisions_changed": false
+  }
+}

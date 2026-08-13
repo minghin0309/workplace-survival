@@ -1,0 +1,153 @@
+{
+  "schema_version": "v2",
+  "case_set_id": "v2-holdout-cloud-cases",
+  "attested_at_utc": "2026-08-13T04:30:00Z",
+  "designer": {
+    "kind": "cursor_cloud_agent",
+    "cloud_agent_id": "bc-40936f78-40fe-5055-b664-fa5adf60294f",
+    "cloud_agent_name": "Cloud-generate benchmark v2 cases",
+    "cloud_agent_url": "https://cursor.com/agents/bc-40936f78-40fe-5055-b664-fa5adf60294f",
+    "model": "Opus 5",
+    "model_reported_by": "agent system prompt; the run-info API returned originalModelName: null",
+    "repository": "https://github.com/minghin0309/workplace-survival",
+    "branch": "cursor/v2-cloud-cases-294f",
+    "base_branch_at_start": "cursor/blind-v2-holdout-17a0",
+    "base_commit_at_start": "6795d79"
+  },
+  "isolation": {
+    "claim": "The case set was authored from the case brief and the distribution given in the task prompt alone. No other repository content was read.",
+    "repository_files_read": [
+      {
+        "path": "tests/benchmark/v2-holdout/V2_CASE_BRIEF.md",
+        "sha256": "d5d78af54bbe39b266bf08b1fcda0d5027a30729e45efdd41f554e5deefa04f9"
+      }
+    ],
+    "repository_files_deliberately_not_read": [
+      "tests/benchmark/v2-holdout/V2_HOLDOUT_PLAN.md",
+      ".cursor/skills/workplace-survival/SKILL.md and any other runtime or skill source",
+      "SPEC or specification documents",
+      "public benchmark tests and fixtures",
+      "mutation-testing and blind-run artifacts",
+      "the ontology, the rubric, and the scorer",
+      "the project plan and history files",
+      "pull requests, issues, and prior holdout case sets"
+    ],
+    "directory_listings_performed": [
+      "tests/benchmark/v2-holdout/ (names only, to confirm the target path; no file contents opened)"
+    ],
+    "external_sources_used": "none; no web search or fetch was performed",
+    "prior_context_carried_in": "The categories and their counts, the schema field names, the minimum turn total, and the output paths were supplied verbatim in the task prompt. No case content, wording, domain, or name was supplied from outside this run."
+  },
+  "generation": {
+    "cases": 18,
+    "case_ids": "V2-001 through V2-018, contiguous",
+    "turns_total": 24,
+    "turns_minimum_required": 21,
+    "category_distribution": {
+      "green_control": 4,
+      "responsibility": 3,
+      "tone": 3,
+      "multi_round": 3,
+      "provenance_prompt": 2,
+      "recipient_routing": 1,
+      "image_ocr": 2
+    },
+    "multi_round_turn_counts": {
+      "V2-011": 3,
+      "V2-012": 3,
+      "V2-013": 3
+    },
+    "domains_used": [
+      "cargo-bike delivery co-operative",
+      "production ceramics studio",
+      "municipal water utility",
+      "subtitling and dubbing vendor",
+      "geothermal drilling",
+      "regional seed bank",
+      "esports organisation",
+      "veterinary telehealth",
+      "offshore wind maintenance",
+      "archival digitisation programme",
+      "mycelium packaging manufacturing",
+      "regional insurance claims",
+      "lighthouse heritage trust",
+      "delivery drone airspace operations",
+      "bakery chain retail",
+      "ornithology field station",
+      "touring puppet theatre",
+      "hydrographic survey"
+    ],
+    "synthetic": true,
+    "content_provenance": "All organisations, people, places, dates, figures and message text are invented for this case set."
+  },
+  "invariants_asserted": [
+    "Every case carries exactly the fields case_id, category, recipient_context, data_a, turns and image_spec, and no others.",
+    "No case contains case_designer_notes.",
+    "Every fact available to the system under test is carried in data_a; turns contain only the draft under review and the sender's instructions to the reviewer.",
+    "Facts introduced by a later turn of a multi-round case are present in that case's data_a, so no turn supplies a fact the system under test could not already see.",
+    "For the two image cases the draft text appears only in the PNG and in image_spec.rendered_text_lines, never in input_raw.",
+    "oracle-notes.json records contain exactly case_id, design_intent and difficulty_notes.",
+    "Oracle notes contain no factual rating inputs: they carry no digits and no organisation, person, place or artefact name drawn from any case.",
+    "turn_index is one-based and contiguous within every case.",
+    "image_spec is null for all twelve non-image categories and an object for both image_ocr cases."
+  ],
+  "validation": {
+    "validator": "tests/benchmark/v2-holdout/cloud-cases/validate_cases.py",
+    "result": "pass",
+    "checks": [
+      "cases.json and oracle-notes.json parse as JSON",
+      "eighteen cases with ids V2-001..V2-018 in order",
+      "exact per-case key set and absence of case_designer_notes",
+      "data_a is an object carrying organization, sender, manager and at least five situation_facts",
+      "category distribution matches the required 4/3/3/3/2/1/2 split",
+      "twenty-four turns in total against a minimum of twenty-one, with contiguous one-based turn_index",
+      "multi_round cases carry at least three turns",
+      "image_ocr cases reference an existing PNG whose magic bytes, Pillow verify, format and pixel dimensions match image_spec",
+      "non image_ocr cases have image_spec null and no image_path",
+      "oracle notes have the exact three-key schema, contain no digits, and leak no case entity names"
+    ],
+    "png_verification": "PNG signature bytes checked, Image.verify() passed, format PNG, mode RGB, dimensions equal to image_spec for both files",
+    "renderer": "tests/benchmark/v2-holdout/cloud-cases/render_images.py using Pillow, deterministic from the image_spec entries in cases.json"
+  },
+  "limitations": [
+    "The designer could not check the case set against the rubric, the scorer, the ontology, or the skill under test, because reading them would break the blind. Category fit is asserted from the category names alone as given in the prompt.",
+    "Novelty against prior holdouts and repository fixtures is asserted by construction rather than verified, since prior case sets were not read. A reviewer with access to those files should diff domains, names and message wording before the set is used.",
+    "The intended difficulty of each case is the designer's judgement and has not been calibrated against any observed model behaviour.",
+    "The two PNGs are synthetic renderings of chat and mail chrome produced with Pillow, not captures of real client software. They use a monospace face at high contrast, so they are a weak test of OCR robustness under noise, skew, compression or low contrast.",
+    "The oracle-notes leakage check is a heuristic: it rejects digits and capitalised entity tokens drawn from the cases, so a paraphrased factual input expressed entirely in lowercase common words would not be caught automatically.",
+    "The image_spec for each image case records the rendered text, so anyone reading cases.json can see the draft without performing OCR. Harnesses that grade OCR ability should withhold image_spec.rendered_text_lines from the system under test.",
+    "Category balance is uneven by design of the supplied plan: recipient_routing has a single case and provenance_prompt and image_ocr have two each, so per-category scores from this set will be noisy.",
+    "All cases are written in British-English workplace register with a single sender-manager pair; the set does not exercise group recipients, non-native phrasing, or messages that are already hostile from the manager's side.",
+    "Timestamps in the attestation are wall-clock from the agent host and are not independently attested."
+  ],
+  "artifact_hashes": {
+    "algorithm": "sha256",
+    "files": {
+      "tests/benchmark/v2-holdout/cloud-cases/cases.json": {
+        "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828",
+        "bytes": 47025
+      },
+      "tests/benchmark/v2-holdout/cloud-cases/oracle-notes.json": {
+        "sha256": "6c169c344caa52cb41d251f805a613ffa9ea58d7b69dcd9797ea7e2524903099",
+        "bytes": 9148
+      },
+      "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png": {
+        "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24",
+        "bytes": 26265
+      },
+      "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png": {
+        "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab",
+        "bytes": 32874
+      },
+      "tests/benchmark/v2-holdout/cloud-cases/render_images.py": {
+        "sha256": "9d540341e371142971d8a45ecabbb81bd44f28c3e1874e5f3979f00d23ba0840",
+        "bytes": 3176
+      },
+      "tests/benchmark/v2-holdout/cloud-cases/validate_cases.py": {
+        "sha256": "1ef1e5c594067df0565619dad5cafc0d308aac16b7e3a738ec1c6ea02c11f4b2",
+        "bytes": 7657
+      }
+    },
+    "note": "Hashes cover the files as committed on branch cursor/v2-cloud-cases-294f. designer-attestation.json is excluded because it carries these hashes."
+  }
+}
