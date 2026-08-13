@@ -59,14 +59,6 @@ STAGE_ROLES = {
         "adjudicator-attestation",
     },
     "outputs": {"outputs", "generator-attestation"},
-    "extractions": {
-        "extractor-1",
-        "extractor-2",
-        "extractor-1-attestation",
-        "extractor-2-attestation",
-        "evaluations",
-        "evaluator-attestation",
-    },
     "evaluations": {
         "evaluations",
         "matches",
@@ -74,11 +66,7 @@ STAGE_ROLES = {
         "matcher-attestation",
     },
 }
-PREVIOUS_STAGE = {
-    "outputs": "gold",
-    "extractions": "outputs",
-    "evaluations": "extractions",
-}
+PREVIOUS_STAGE = {"outputs": "gold", "evaluations": "outputs"}
 
 
 def require(condition: bool, message: str) -> None:
@@ -530,13 +518,8 @@ def validate_manifest(manifest: dict, seen: set[Path] | None = None) -> None:
 
 
 def find_gold_manifest(manifest: dict) -> dict:
-    return find_stage_manifest(manifest, "gold")
-
-
-def find_stage_manifest(manifest: dict, stage: str) -> dict:
     current = manifest
-    while current["stage"] != stage:
-        require(current["parent_manifest"]["path"] is not None, f"{stage} manifest missing")
+    while current["stage"] != "gold":
         current = json.loads(
             Path(current["parent_manifest"]["path"]).read_text(encoding="utf-8")
         )

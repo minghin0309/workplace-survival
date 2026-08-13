@@ -26,14 +26,6 @@ STAGE_ROLES = {
         "adjudicator-attestation",
     },
     "outputs": {"outputs", "generator-attestation"},
-    "extractions": {
-        "extractor-1",
-        "extractor-2",
-        "extractor-1-attestation",
-        "extractor-2-attestation",
-        "evaluations",
-        "evaluator-attestation",
-    },
     "evaluations": {
         "evaluations",
         "matches",

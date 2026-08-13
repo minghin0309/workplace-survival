@@ -129,7 +129,9 @@ def main() -> None:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     validate_benchmark.validate_manifest(manifest)
     require(manifest["stage"] == "evaluations", "scoring requires evaluation-stage manifest")
-    outputs_manifest = validate_benchmark.find_stage_manifest(manifest, "outputs")
+    outputs_manifest = json.loads(
+        Path(manifest["parent_manifest"]["path"]).read_text(encoding="utf-8")
+    )
     gold_manifest = validate_benchmark.find_gold_manifest(manifest)
     evaluation_roles = {item["role"]: Path(item["path"]).resolve() for item in manifest["artifacts"]}
     output_roles = {

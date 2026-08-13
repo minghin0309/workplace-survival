@@ -1,9 +1,16 @@
 import hashlib
 import json
+import re
+import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "tests/benchmark"))
+
+import validate_benchmark
+
+
 CLOUD = ROOT / "tests/benchmark/v2-holdout/cloud-cases"
 INVARIANTS = {
     "fixed-format-or-valid-nonreview-route",
@@ -23,6 +30,22 @@ ROUTES = {
     "Scope",
 }
 RATINGS = {"Green", "Yellow", "Red", "Gray", None}
+SNAPSHOT_ROLES = {
+    "extractor-1",
+    "extractor-2",
+    "extractor-1-attestation",
+    "extractor-2-attestation",
+    "evaluations",
+    "evaluator-attestation",
+    "extraction-adjudication",
+    "extractor-1-source-evidence",
+    "extractor-2-source-evidence",
+    "evaluator-source-evidence",
+    "protocol-audits",
+    "normalizer",
+    "validator",
+    "freezer",
+}
 
 
 def digest(path: Path) -> str:
@@ -207,6 +230,48 @@ def main() -> None:
     )
     evaluator_attestation = CLOUD / "extraction-attestations/evaluator.json"
     require(evaluator_attestation.is_file(), "canonical evaluator attestation missing")
+    snapshot_path = CLOUD / "extractions-manifest-v2.json"
+    if snapshot_path.is_file():
+        snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
+        require(
+            set(snapshot)
+            == {
+                "version",
+                "immutable",
+                "stage",
+                "parent_outputs_manifest",
+                "frozen_at_utc",
+                "artifacts",
+            }
+            and snapshot["version"] == "2"
+            and snapshot["immutable"] is True
+            and snapshot["stage"] == "extraction-snapshot",
+            "extraction snapshot schema",
+        )
+        parent = snapshot["parent_outputs_manifest"]
+        parent_path = ROOT / parent["path"]
+        require(
+            parent_path.is_file() and digest(parent_path) == parent["sha256"],
+            "extraction parent changed",
+        )
+        validate_benchmark.validate_manifest(
+            json.loads(parent_path.read_text(encoding="utf-8"))
+        )
+        roles = set()
+        for item in snapshot["artifacts"]:
+            require(
+                set(item) == {"role", "path", "sha256", "cloud_branch", "cloud_commit"}
+                and item["role"] not in roles
+                and re.fullmatch(r"[0-9a-f]{40}", item["cloud_commit"]) is not None,
+                "extraction snapshot artifact schema",
+            )
+            roles.add(item["role"])
+            path = ROOT / item["path"]
+            require(
+                path.is_file() and digest(path) == item["sha256"],
+                f"extraction artifact changed: {path}",
+            )
+        require(roles == SNAPSHOT_ROLES, "extraction snapshot roles")
     print("validated two blind extractors and 24 adjudicated turn evaluations")
 
 
