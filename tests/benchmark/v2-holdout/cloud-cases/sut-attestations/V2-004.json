@@ -1,0 +1,50 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-004",
+  "context": {
+    "execution_environment": "Cursor Cloud Agent",
+    "sut": "Workplace Survival",
+    "runtime": "frozen",
+    "base_branch": "cursor/blind-v2-holdout-17a0"
+  },
+  "model": {
+    "name": "GPT-5.6 Sol"
+  },
+  "branch": "cursor/v2-004-sut-4994",
+  "output_commit": "6d1daa05fec6fd19f5caca92b1d01bc4b8ebc135",
+  "reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-004.json",
+      "sha256": "a2958eb4470271334c58d8728ce06bf4f6ed102aea710729298236622d217bf8"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "output": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-004.json",
+    "sha256": "2640a92525cf9ae77857d0022fd03db536a92838e632ecc993c11559630755e2"
+  },
+  "isolation": {
+    "compliant": true,
+    "case_scope": "V2-004 only",
+    "read_scope": "Only the specified SUT input and four frozen runtime files were read.",
+    "other_repo_files_read": false,
+    "repository_list_or_search_performed": false,
+    "expectations_accessed": false,
+    "violation": null
+  }
+}
