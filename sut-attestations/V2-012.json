@@ -1,0 +1,65 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-012",
+  "attested_at_utc": "2026-08-13T10:36:26Z",
+  "context": {
+    "execution_environment": "Cursor Cloud",
+    "execution_role": "SUT subagent under a parent agent",
+    "task_scope": "Workplace Survival as SUT for multi-turn V2-012 only",
+    "model": "GPT-5.6 Sol"
+  },
+  "git": {
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "working_branch": "cursor/sut-v2-012-4ca0",
+    "output_commit": "ba3fafb42c19c257d7f421df6cb353b9b3a27ce8"
+  },
+  "authorized_reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-012.json",
+      "sha256": "374ec9b90e108dd03697843d3e7e6cefd9992d615714df3bbfb2e3fd1c35b2ee"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "hash_verification": {
+    "performed": true,
+    "all_authorized_read_hashes_matched": true
+  },
+  "isolation": {
+    "turns_processed_sequentially": [
+      1,
+      2,
+      3
+    ],
+    "conversation_state_preserved_between_turns": true,
+    "evaluation_performed": false,
+    "expectation_artifacts_accessed": false,
+    "repository_listing_or_search_performed": false,
+    "external_sources_accessed": false,
+    "non_git_repository_access_beyond_authorized_reads_and_requested_outputs": false,
+    "git_access_limited_to_branching_staging_committing_pushing_and_commit_metadata": true
+  },
+  "limitations": [
+    "The SUT used only the supplied V2-012 case input and the four authorized Workplace Survival skill documents.",
+    "No expected output, benchmark evaluator, other case, test, or unrelated repository content was accessed.",
+    "The outputs were generated without evaluation or comparison against expectations."
+  ],
+  "violation": {
+    "flagged": false,
+    "details": null
+  }
+}
