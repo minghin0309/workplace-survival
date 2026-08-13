@@ -30,6 +30,9 @@ MUTATIONS = {
 def run_tests(module_path: Path) -> subprocess.CompletedProcess:
     environment = os.environ.copy()
     environment["V3_SCORER_MODULE_PATH"] = str(module_path)
+    environment["PYTHONPATH"] = os.pathsep.join(
+        filter(None, (str(ROOT.parent), environment.get("PYTHONPATH")))
+    )
     return subprocess.run(
         [sys.executable, "-m", "unittest", str(TESTS)],
         cwd=ROOT,
@@ -56,6 +59,8 @@ def main() -> None:
             mutant_path = directory / f"{mutation_id}.py"
             mutant_path.write_text(source.replace(old, new), encoding="utf-8")
             result = run_tests(mutant_path)
+            if "ImportError" in result.stderr or "ModuleNotFoundError" in result.stderr:
+                raise RuntimeError(f"{mutation_id}: invalid mutation harness import failure")
             outcomes.append(
                 {
                     "mutation_id": mutation_id,
