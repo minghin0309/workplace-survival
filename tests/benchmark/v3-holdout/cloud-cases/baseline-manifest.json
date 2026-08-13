@@ -1,0 +1,63 @@
+{
+  "schema_version": "v3",
+  "artifact": "holdout-baseline",
+  "methodology": {
+    "path": "tests/benchmark/v3/BENCHMARK_METHODOLOGY_V3.md",
+    "sha256": "2e3a5f3c8fc698e4ca7797c90d5c6c8d197f9419b7e67dd7ee836f9d5505fd8a"
+  },
+  "scorer": {
+    "path": "tests/benchmark/v3/score_semantic_v3.py",
+    "sha256": "9877d0e914960262c676616ba4eeff4d24bd831c7ca1228dcdf943dd4e252e61"
+  },
+  "plan": {
+    "path": "tests/benchmark/v3-holdout/V3_HOLDOUT_PLAN.md",
+    "sha256": "fb8242a5398625ef9019e82cfd0daa9f04cf92dc979383dff4ecc11a3186f7c9"
+  },
+  "case_brief": {
+    "path": "tests/benchmark/v3-holdout/V3_CASE_BRIEF.md",
+    "sha256": "f630ab0549e8df8cebee44f691353cd33933ad63c93f7b4527f1f8e1b677d37c"
+  },
+  "cases": {
+    "path": "tests/benchmark/v3-holdout/cloud-cases/cases.json",
+    "sha256": "b453ec8a2ff60c16b9f2f1fcb7c163db81ed93687a621a28f801e8b774183946"
+  },
+  "oracle_notes": {
+    "path": "tests/benchmark/v3-holdout/cloud-cases/oracle-notes.json",
+    "sha256": "a4d9fa913e2040d4114d57d0359e29ed0d38df79b208740909918667a8e9959c"
+  },
+  "images": [
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png",
+      "sha256": "b70767e40df6d5d2c23923e31bbf94037ef43080632ae6e45240d4f6c9c7a44d"
+    },
+    {
+      "path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png",
+      "sha256": "721c287c88fa9d292e233d1eccde25944f7cabe4fdbf253bbda96b9b4924af40"
+    }
+  ],
+  "designer_attestation": {
+    "path": "tests/benchmark/v3-holdout/cloud-cases/designer-attestation.json",
+    "sha256": "e96206d900082dee53a1bc21caabc5b1112d11cc7d21b726c1b989742d3e20c7"
+  },
+  "runtime": {
+    "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  }
+}
