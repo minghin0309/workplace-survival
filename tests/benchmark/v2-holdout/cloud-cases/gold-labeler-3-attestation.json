@@ -1,0 +1,48 @@
+{
+  "schema_version": "v2",
+  "case_set_id": "v2-holdout-cloud-cases",
+  "labeler_id": "gold-labeler-3",
+  "attested_at": "2026-08-13",
+  "labels_file": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3.json",
+  "statements": [
+    "I labeled all 18 cases and all 24 turns of the v2-holdout cloud case set blind, before seeing any Skill output.",
+    "Inputs read: tests/benchmark/v2-holdout/cloud-cases/cases.json, tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png, tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png, tests/blind/GOLD_RUBRIC.md, tests/benchmark/SEMANTIC_ONTOLOGY.json.",
+    "Inputs not read: runtime code, test suites, prior benchmark artifacts, oracle notes (oracle-notes.json), holdout plans (V2_HOLDOUT_PLAN.md), scoring code (score_semantic.py, validate_cases.py), designer attestation, and every other labeler's labels or outputs.",
+    "Every turn uses the exact v2 gold fields from the GOLD_RUBRIC: turn_index, route, responsibility, tone, overall, required_question_topics, allowed_question_topics, required_revision_facts, allowed_revision_facts, critical_invariants, rationale.",
+    "Question-topic and revision-fact lists use sorted canonical concept tokens from SEMANTIC_ONTOLOGY.json; every required topic/fact also appears in the corresponding allowed list.",
+    "Critical invariants use the canonical GOLD_RUBRIC tokens; no-image-token-guess is applied to the two image_ocr turns and no-unsafe-commitment to turns with unauthorisable or unsupported commitments.",
+    "All 24 turns route as Normal mode (manager recipient, identifiable message, usable background), so no null ratings are used; each overall status follows the fixed derivation Red > Gray > Yellow > Green."
+  ],
+  "counts": {
+    "cases": 18,
+    "turns": 24,
+    "routes": {
+      "Normal mode": 24,
+      "Limited-background mode": 0,
+      "Message-template mode": 0,
+      "Intake": 0,
+      "Scope": 0
+    },
+    "responsibility": {
+      "Green": 14,
+      "Yellow": 1,
+      "Red": 9,
+      "Gray": 0,
+      "null": 0
+    },
+    "tone": {
+      "Green": 19,
+      "Yellow": 4,
+      "Red": 1,
+      "Gray": 0,
+      "null": 0
+    },
+    "overall": {
+      "Green": 12,
+      "Yellow": 2,
+      "Red": 10,
+      "Gray": 0,
+      "null": 0
+    }
+  }
+}
