@@ -1,0 +1,169 @@
+{
+  "artifact": "cloud-isolated blind holdout case set",
+  "generated_at_utc": "2026-08-12T13:43:00Z",
+  "designer": {
+    "cloud_agent_id": "bc-84bd13fe-2da1-5c87-9475-9ff572992c7c",
+    "cloud_agent_url": "https://cursor.com/agents/bc-84bd13fe-2da1-5c87-9475-9ff572992c7c",
+    "cloud_agent_name": "Cloud-isolated holdout designer",
+    "model": "Claude Opus 5",
+    "model_id_source": "Runtime system prompt. The cloud run-info API returned originalModelName: null, so no API-reported model string is available.",
+    "isolation_mode": "cloud agent, separate VM and separate context from any implementation or scoring agent",
+    "branch": "cursor/blind-cloud-holdout-2c7c"
+  },
+  "files_read": [
+    "tests/blind/BLIND_CASE_BRIEF.md"
+  ],
+  "files_written": [
+    "tests/blind/cloud-holdout/cases.json",
+    "tests/blind/cloud-holdout/designer-attestation.json",
+    "tests/blind/cloud-holdout/images/BH-027.png",
+    "tests/blind/cloud-holdout/images/BH-028.png",
+    "tests/blind/cloud-holdout/images/BH-029.png",
+    "tests/blind/cloud-holdout/images/BH-030.png"
+  ],
+  "non_repository_files_used": [
+    "/tmp/gen_bh_images.py (image renderer, authored in this run, kept outside the repository)",
+    "/tmp/validate_cases.py (structural validator, authored in this run, kept outside the repository)"
+  ],
+  "prohibited_sources_not_accessed": {
+    "statement": "No file listed below was opened, read, searched, or otherwise inspected during this run. The only repository file whose contents were read is tests/blind/BLIND_CASE_BRIEF.md.",
+    "items": [
+      "any repository file other than tests/blind/BLIND_CASE_BRIEF.md",
+      "git history, git log, git show, git diff of prior commits, and prior branch contents",
+      "the runtime skill (.cursor/skills/workplace-survival/SKILL.md) and any other skill file",
+      "any SPEC or specification document",
+      "public test suites and their fixtures",
+      "mutation-testing files and mutants",
+      "tests/blind/BLIND_PLAN.md",
+      "tests/blind/GOLD_RUBRIC.md",
+      "tests/blind/score_blind.py",
+      "tests/blind/blind_common.py",
+      "tests/blind/freeze_holdout.py",
+      "tests/blind/freeze_outputs.py",
+      "tests/blind/normalize_outputs.py",
+      "pull requests, issues, review comments",
+      "transcripts, outputs, or notes from any previous agent run",
+      "the web, package documentation, or any external source of case material"
+    ],
+    "incidental_metadata_observed": [
+      "Directory listing of tests/blind/ (file names only, no contents). This was produced by the same command that created the holdout output directory and confirmed the brief's path. The names of the plan, rubric, scorer, and helper modules were therefore visible; none of them were opened.",
+      "Directory listing of /usr/share/fonts/truetype/ and /usr/share/fonts/truetype/dejavu/ to select fonts for image rendering.",
+      "git status and git rev-parse --abbrev-ref HEAD, which reported the checked-out branch name only. No commit contents or history were displayed."
+    ],
+    "self_authored_reads": "The four PNGs under tests/blind/cloud-holdout/images/ were opened for visual inspection after this run rendered them. They are this run's own output, not pre-existing repository content."
+  },
+  "counts": {
+    "cases": 30,
+    "case_id_range": "BH-001 through BH-030, contiguous with no gaps or duplicates",
+    "turns_total": 36,
+    "by_category": {
+      "straightforward_safe": 6,
+      "responsibility": 5,
+      "tone": 5,
+      "multi_round": 4,
+      "quoted_input": 3,
+      "recipient_routing": 3,
+      "image_ocr": 4
+    },
+    "by_turn_count": {
+      "one_turn_cases": 26,
+      "two_turn_cases": 2,
+      "three_turn_cases": 2
+    },
+    "image_cases": 4,
+    "image_case_ids": ["BH-027", "BH-028", "BH-029", "BH-030"]
+  },
+  "category_naming": {
+    "note": "The brief names the seven buckets in prose rather than as identifiers. The following snake_case identifiers were assigned, one per prose bucket, in the brief's own order.",
+    "mapping": {
+      "straightforward_safe": "straightforward, safe messages",
+      "responsibility": "responsibility, ownership, timing, handoff, or omission",
+      "tone": "tone, blame, directness, hostility, or operational wording",
+      "multi_round": "multi-round cases involving corrections, revised drafts, or case state",
+      "quoted_input": "quotation, forwarding, mixed input, or instruction-like text inside a message",
+      "recipient_routing": "recipient role, template requests, or routing",
+      "image_ocr": "image cases involving realistic visual uncertainty"
+    }
+  },
+  "images": {
+    "path_convention": "Case turns and image_spec entries use paths relative to the holdout directory, in the form images/BH-0xx.png.",
+    "hash_algorithm": "sha256",
+    "files": [
+      {
+        "case_id": "BH-027",
+        "path": "images/BH-027.png",
+        "sha256": "5b1650dede0ec8121381426d1c30c2ee701c2ee7026bdf9749f0f10946d5757f",
+        "bytes": 492816,
+        "dimensions_px": [1360, 980],
+        "mode": "RGB",
+        "nonrecoverable_element": "A window-reflection glare band saturates the middle third of the screen, erasing the body of the 08:52 message, the date divider text, and one message timestamp."
+      },
+      {
+        "case_id": "BH-028",
+        "path": "images/BH-028.png",
+        "sha256": "3e086b5e2eef763f0220dad9e0c5ebc5be721f444387081ee28c947422073274",
+        "bytes": 322389,
+        "dimensions_px": [830, 689],
+        "mode": "RGB",
+        "nonrecoverable_element": "Hard crop on three sides: the subject line is sliced horizontally, the recipient list ends in '+6 others', several body lines are cut mid-word at the right edge, and the message ends mid-sentence before the clause stating how long the old export format runs in parallel."
+      },
+      {
+        "case_id": "BH-029",
+        "path": "images/BH-029.png",
+        "sha256": "3654fa5fe210391e471e179fe19124b20411e2663069be4880d9b7ef423cef39",
+        "bytes": 325539,
+        "dimensions_px": [1100, 700],
+        "mode": "RGB",
+        "nonrecoverable_element": "The headline 'accounts double-charged' figure is blurred and then put through a lossy downscale/upscale round trip; the trailing digits are smeared into an unresolvable mass while the surrounding tiles stay legible."
+      },
+      {
+        "case_id": "BH-030",
+        "path": "images/BH-030.png",
+        "sha256": "cffd701fc1ada900927f6da60cf948dee9cacb0b927a7234f10786cd5e523dc0",
+        "bytes": 880065,
+        "dimensions_px": [1280, 900],
+        "mode": "RGB",
+        "nonrecoverable_element": "Global defocus plus a sticky note that physically covers the owner-initials column for two actions; the note's own text trails off in question marks and one owner cell was written on the board as a bare question mark."
+      }
+    ],
+    "rendering": "All four fixtures were drawn from scratch with Pillow 12.3.0 in this run. No photograph, screenshot, or third-party asset was used, and no real person, customer, or company appears in them.",
+    "uncertainty_property": "In each fixture the missing information is destroyed in the pixel data, not merely hard to read. It cannot be restored by upscaling, denoising, contrast adjustment, or any OCR pass, because the source text was never written into the surviving pixels or was saturated/removed before the file was encoded."
+  },
+  "validation": {
+    "performed_by": "/tmp/validate_cases.py, run against the committed files",
+    "checks_passed": [
+      "cases.json parses as a JSON array of exactly 30 objects",
+      "case_id values are exactly BH-001 through BH-030 in ascending order",
+      "every case carries exactly the six brief-specified top-level keys",
+      "category counts match the brief distribution exactly (6/5/5/4/3/3/4)",
+      "the four image cases are exactly BH-027, BH-028, BH-029, BH-030",
+      "the multi_round category holds exactly four cases, each with more than one turn",
+      "every non-multi_round case has exactly one turn",
+      "turns carry exactly turn_index, input_raw, image_path and are numbered 1..n with no gaps, duplicates, or reordering",
+      "input_raw is a non-empty string on every turn",
+      "image_spec is null on all 26 non-image cases and a complete object on all four image cases",
+      "image_path is null on every non-image turn and matches the case's image_spec.output_png_path on every image turn",
+      "image paths are relative to the holdout directory in the form images/BH-0xx.png",
+      "each image_spec declares output_png_path, fixture_type, rendered_size_px, depicted_content, capture_conditions, deliberate_uncertainty, render_method",
+      "declared rendered_size_px matches the actual decoded PNG dimensions for all four fixtures",
+      "PNG integrity: correct 8-byte signature, IHDR first and IEND last, CRC verified on every chunk, and full pixel decode without error",
+      "case_designer_notes contain no rating, mode, question, revision, expected behaviour, or scoring vocabulary"
+    ]
+  },
+  "content_declarations": {
+    "no_gold_labels": "This run produced no gold labels, expected outputs, expected modes, expected questions, expected revisions, scoring keys, or pass/fail thresholds. case_designer_notes state only factual setup, including ground-truth facts about the situation that the drafted message may or may not reflect.",
+    "no_internal_rule_references": "No case text or note refers to the assistant's internal rules, categories of behaviour, or decision procedure.",
+    "novelty": "All names, organisations, domains, ticket ids, dates, and phrasings are invented for this run. Domains use the reserved .example suffix. No supplied test suite was available to copy from, since the brief was the only file read.",
+    "data_safety": "No personal, confidential, or real customer data. All people and companies are fictional; any resemblance is unintended."
+  },
+  "limitations": [
+    "Category identifiers had to be invented. The brief describes the seven buckets in prose and does not supply canonical identifiers, and the naming files could not be consulted under the isolation rule. If the harness expects different identifier strings, the mapping block above gives the one-to-one correspondence to the brief's prose and renaming is a mechanical substitution.",
+    "Turn-count shape was a judgement call. The brief fixes neither a turn count nor a maximum, so single-turn cases were used everywhere except the four multi_round cases, which use two or three turns.",
+    "The image_spec object shape was invented for the same reason: the brief requires 'a complete synthetic fixture description and output PNG path' without prescribing field names.",
+    "Difficulty is uncalibrated. With no access to the existing suite, plan, or rubric, there is no way to check that these 30 cases sit at a comparable difficulty to the public cases, or to guarantee that a given case does not coincidentally resemble an existing one. Overlap with the public suite is possible by chance, though nothing was copied.",
+    "The brief's distribution buckets overlap in principle. A case can carry, for example, both a tone problem and an omission; each case was filed under the bucket describing its dominant feature, so the categorisation is a designer judgement rather than a partition.",
+    "Fixture realism is bounded by the renderer. The four PNGs are Pillow-drawn approximations of a chat client, a mail client, a dashboard tile, and a whiteboard photo. The degradation (glare, crop, resample smear, defocus) is genuine and irreversible, but the underlying interface chrome is simplified compared with a real screenshot.",
+    "Image legibility was verified by this designer's own visual inspection of the rendered files, not by an independent OCR engine, since none was installed in this environment. The nonrecoverability claim rests on the render method, where the affected pixels are saturated, cropped away, or blurred past the glyph stroke width, rather than on a measured OCR failure.",
+    "The directory listing of tests/blind/ exposed the file names of the plan, rubric, and scorer to this run. Contents were not read, but strict name-level blindness was not preserved."
+  ]
+}

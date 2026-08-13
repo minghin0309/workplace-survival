@@ -1,0 +1,23 @@
+{
+  "case_id": "BH-019",
+  "turns": [
+    {
+      "turn_index": 1,
+      "executed_at_utc": "2026-08-12T14:50:50Z",
+      "raw_output": "## Information needed\n\n- Missing: Data A\n- Next step: Provide the relevant background for this message, including any expectations, ownership, or incident facts that should be used to assess it.",
+      "image_artifacts": []
+    },
+    {
+      "turn_index": 2,
+      "executed_at_utc": "2026-08-12T14:50:51Z",
+      "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Anneke already knows there was an outage and was on the bridge call.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message states what happened during failover, how long the replica lag lasted, and that the sender did not page Anneke because they thought the situation was under control. This does not conflict with the confirmed background that Anneke knew about the outage and was on the bridge call.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, including the sender's direct acknowledgement that they did not page Anneke.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+      "image_artifacts": []
+    },
+    {
+      "turn_index": 3,
+      "executed_at_utc": "2026-08-12T14:50:52Z",
+      "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Anneke already knows there was an outage.\n- Anneke joined the bridge about twenty minutes in, after the failover had already happened.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The message states what happened during failover, how long the replica lag lasted, and that the sender did not page Anneke because they thought the situation was under control. Anneke joining the bridge about twenty minutes in does not conflict with those statements.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording remains neutral and factual, including the sender's direct acknowledgement that they did not page Anneke.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+      "image_artifacts": []
+    }
+  ]
+}

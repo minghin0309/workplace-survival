@@ -1,0 +1,143 @@
+{
+  "labeler": {
+    "context_id": "bc-4c9c22e5-d3b2-5e0b-a377-7172f525dc39",
+    "model_id": "claude-opus-5-thinking-high",
+    "model_family": "claude",
+    "display_name": "Claude Opus 5"
+  },
+  "artifact": "tests/blind/cloud-holdout/gold-labeler-1.json",
+  "labelled_at_utc": "2026-08-12T14:05:00Z",
+  "isolation": "Cloud-isolated run on a dedicated branch. Labels were produced from the frozen case file and the four referenced images only, with no access to any Skill output.",
+  "files_read": [
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "purpose": "Label schema, route definitions, rating scale, question and revision rules, canonical invariant tokens."
+    },
+    {
+      "path": "tests/blind/cloud-holdout/case-freeze.json",
+      "purpose": "Frozen hashes for the case file and the four images."
+    },
+    {
+      "path": "tests/blind/cloud-holdout/cases.json",
+      "purpose": "The 30 frozen cases and 36 turns under label."
+    },
+    {
+      "path": "tests/blind/cloud-holdout/images/BH-027.png",
+      "purpose": "Image evidence for case BH-027; opened and inspected."
+    },
+    {
+      "path": "tests/blind/cloud-holdout/images/BH-028.png",
+      "purpose": "Image evidence for case BH-028; opened and inspected."
+    },
+    {
+      "path": "tests/blind/cloud-holdout/images/BH-029.png",
+      "purpose": "Image evidence for case BH-029; opened and inspected."
+    },
+    {
+      "path": "tests/blind/cloud-holdout/images/BH-030.png",
+      "purpose": "Image evidence for case BH-030; opened and inspected."
+    }
+  ],
+  "files_written": [
+    "tests/blind/cloud-holdout/gold-labeler-1.json",
+    "tests/blind/cloud-holdout/gold-labeler-1-attestation.json"
+  ],
+  "not_read": [
+    "Skill runtime and SKILL.md, and any Skill output or transcript",
+    "SPEC or any specification document",
+    "public tests, fixtures and expected-output files",
+    "mutation-testing files and results",
+    "the blind-test plan and the blind scorer",
+    "the designer raw or notes file behind designer_attestation_sha256",
+    "any other labeler's labels, including gold-labeler-2 and any human labels",
+    "other branches, pull requests, diffs or repository history"
+  ],
+  "hashes_verified": {
+    "method": "sha256sum over the frozen files, compared byte-for-byte with tests/blind/cloud-holdout/case-freeze.json",
+    "result": "all five match",
+    "entries": [
+      {
+        "file": "cases.json",
+        "expected": "e3326ae81b10af8a0dcf40eb3074cbd4ebd527939c7eb40b68b4bb26840db815",
+        "observed": "e3326ae81b10af8a0dcf40eb3074cbd4ebd527939c7eb40b68b4bb26840db815",
+        "match": true
+      },
+      {
+        "file": "images/BH-027.png",
+        "expected": "5b1650dede0ec8121381426d1c30c2ee701c2ee7026bdf9749f0f10946d5757f",
+        "observed": "5b1650dede0ec8121381426d1c30c2ee701c2ee7026bdf9749f0f10946d5757f",
+        "match": true
+      },
+      {
+        "file": "images/BH-028.png",
+        "expected": "3e086b5e2eef763f0220dad9e0c5ebc5be721f444387081ee28c947422073274",
+        "observed": "3e086b5e2eef763f0220dad9e0c5ebc5be721f444387081ee28c947422073274",
+        "match": true
+      },
+      {
+        "file": "images/BH-029.png",
+        "expected": "3654fa5fe210391e471e179fe19124b20411e2663069be4880d9b7ef423cef39",
+        "observed": "3654fa5fe210391e471e179fe19124b20411e2663069be4880d9b7ef423cef39",
+        "match": true
+      },
+      {
+        "file": "images/BH-030.png",
+        "expected": "cffd701fc1ada900927f6da60cf948dee9cacb0b927a7234f10786cd5e523dc0",
+        "observed": "cffd701fc1ada900927f6da60cf948dee9cacb0b927a7234f10786cd5e523dc0",
+        "match": true
+      }
+    ],
+    "designer_attestation_sha256": "not verified; the designer raw file was deliberately not read to preserve blindness"
+  },
+  "coverage": {
+    "cases": 30,
+    "turns": 36,
+    "routes": {
+      "Normal mode": 34,
+      "Intake": 1,
+      "Message-template mode": 1,
+      "Limited-background mode": 0,
+      "Scope": 0
+    },
+    "overall_on_rated_turns": {
+      "Green": 7,
+      "Yellow": 14,
+      "Gray": 3,
+      "Red": 10
+    }
+  },
+  "validation": {
+    "checks_run": [
+      "case_id set and order match cases.json",
+      "turn_index lists are 1-based and match cases.json per case",
+      "field set and order match the rubric schema exactly",
+      "route values are drawn from the five rubric routes",
+      "responsibility, tone and overall are Green, Yellow, Red, Gray or null",
+      "null ratings on Intake, Scope and Message-template mode; non-null on rated routes",
+      "overall equals the Red > Gray > Yellow > Green derivation from responsibility and tone",
+      "at most three required question topics per turn",
+      "every required question topic appears in the allowed question list",
+      "every required revision fact appears in the allowed revision list",
+      "topic, fact and invariant lists are sorted and duplicate free",
+      "critical invariants use only the eight canonical tokens and are never empty",
+      "no required revision facts on turns rated Green overall",
+      "every turn carries a non-empty rationale"
+    ],
+    "result": "all checks pass"
+  },
+  "interpretation_notes": [
+    "Recipient context: recipient_description was treated as scenario context available to the reviewer alongside the turn text, since several cases are only ratable with it and BH-017 turn three restates it consistently rather than contradicting it.",
+    "Ground truth: case_designer_notes were treated as the true state of the world for deciding whether an omission or claim in a draft is materially wrong, while question topics and placeholders capture what a reviewer who cannot see those notes must ask for rather than assert.",
+    "Gray was reserved for turns where the governing content is genuinely unrecoverable (BH-027 glare, BH-028 crop, BH-030 occluded owner column) rather than used for any case with an unstated detail.",
+    "BH-029 is Red rather than Gray because the legible refunds tile (zero, queue not yet opened) directly contradicts the sender's stated intent; the unreadable headline count is handled separately as a placeholder.",
+    "Question and fact tokens are canonical shorthand, not required wording; the allowed lists are intended to admit any semantically equivalent phrasing of the same topic or fact."
+  ],
+  "limitations": [
+    "Single-labeler judgement produced without discussion; boundary calls between Yellow and Red on the responsibility cases (BH-007, BH-009) and between tone Yellow and Red (BH-012, BH-015, BH-016) are the most likely points of honest disagreement with a second labeler.",
+    "Route assignment for BH-026 (Intake rather than a rated Normal review) and for the four image cases (rated Normal with Gray rather than Intake) reflects a reading of the rubric alone, since no specification, plan or scorer was consulted.",
+    "Allowed lists are best-effort enumerations of semantically acceptable topics and facts; they may omit acceptable variants that a reviewer could reasonably raise, so an output token outside a list should be re-read against the rubric before being scored as unnecessary or unsupported.",
+    "For the six green control cases and BH-018 turn two the allowed question lists are deliberately empty, encoding the judgement that no question on those turns can change route, rating or a safe revision.",
+    "Image reading was done from the frozen PNGs as rendered; no enhancement, upscaling or OCR tooling was applied, and no attempt was made to recover glare-saturated, cropped or occluded regions.",
+    "No cross-checking against any other labeler, Skill output, or historical label was possible or attempted by design."
+  ]
+}

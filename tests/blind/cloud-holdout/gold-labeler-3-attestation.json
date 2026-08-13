@@ -1,0 +1,36 @@
+{
+  "attestation_id": "gold-labeler-3-attestation",
+  "labeler": "gold-labeler-3",
+  "model_id": "kimi-k3-high",
+  "model_family": "kimi",
+  "display_name": "Kimi K3",
+  "context_id": "bc-4ce87a0e-0dd7-59dc-bcb0-cba1aebe0f89",
+  "attested_at_utc": "2026-08-12T14:25:00Z",
+  "labels_file": "gold-labeler-3.json",
+  "statements": [
+    "I read only the permitted inputs: tests/blind/cloud-holdout/cases.json, tests/blind/cloud-holdout/case-freeze.json, the four referenced PNG images (BH-027.png, BH-028.png, BH-029.png, BH-030.png), and tests/blind/GOLD_RUBRIC.md.",
+    "I did not read any runtime code, spec documents, public tests, mutation artifacts, plans, scorer code, history files, pull requests, other labelers' labels, or any model outputs.",
+    "I verified the SHA-256 of cases.json and of all four images against case-freeze.json before labeling; every hash matched.",
+    "I opened and inspected all four images and treated illegible or occluded regions as unrecoverable rather than guessing their content.",
+    "All labels were produced independently from the case material and the gold rubric only; no information was carried between cases.",
+    "I labeled all 30 cases and all 36 turns; turn_index values are 1-based; overall ratings follow the fixed Red > Gray > Yellow > Green derivation for rated routes, with null ratings only on the Message-template route."
+  ],
+  "hashes_verified": {
+    "cases.json": "e3326ae81b10af8a0dcf40eb3074cbd4ebd527939c7eb40b68b4bb26840db815",
+    "images/BH-027.png": "5b1650dede0ec8121381426d1c30c2ee701c2ee7026bdf9749f0f10946d5757f",
+    "images/BH-028.png": "3e086b5e2eef763f0220dad9e0c5ebc5be721f444387081ee28c947422073274",
+    "images/BH-029.png": "3654fa5fe210391e471e179fe19124b20411e2663069be4880d9b7ef423cef39",
+    "images/BH-030.png": "cffd701fc1ada900927f6da60cf948dee9cacb0b927a7234f10786cd5e523dc0"
+  },
+  "counts": {
+    "cases": 30,
+    "turns": 36,
+    "overall": {
+      "Green": 20,
+      "Yellow": 7,
+      "Red": 6,
+      "Gray": 2,
+      "null": 1
+    }
+  }
+}

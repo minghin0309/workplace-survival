@@ -142,3 +142,5 @@ See `tests/FINAL_ACCEPTANCE_RESULTS.md` and `tests/evidence/t13-12-final.json`.
 Automatic-trigger and final-configuration explicit-invocation cases were evaluated deterministically against the current frontmatter. A live probabilistic Cursor dispatcher was not available, so production routing variance is not claimed.
 
 Targeted mutation testing killed 9 of 9 selected non-equivalent mutants. This confirms that the frozen tests detect those deliberate defects; it does not replace blind holdout or real-world accuracy testing. See `tests/mutation/MUTATION_RESULTS.md`.
+
+The cloud-isolated 30-case blind holdout failed every preregistered accuracy threshold and recorded one critical recipient-scope violation. Gold disagreement and exact-token scoring also contributed substantial uncertainty. See `tests/blind/CLOUD_BLIND_RESULTS.md`; do not interpret the public regression pass rate as unseen-case accuracy.

@@ -197,6 +197,21 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - no mutant is merged into the baseline runtime.
 - Evidence: mutation plan, raw outputs, mutant diffs, and final mutation report.
 
+#### T14.2 — Cloud-isolated blind holdout testing
+
+- [x] Completed
+
+- Source requirement: Independent accuracy follow-up after mutation testing; no product behavior change during scoring.
+- Owner files: `tests/blind/`, `TASK.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - unseen cases are generated in a cloud branch without prior holdout artifacts;
+  - heterogeneous gold labels are frozen before Skill output generation;
+  - Skill output generators cannot read gold labels or scoring thresholds;
+  - cases, gold, runtime, raw outputs, and images are hash-linked;
+  - critical invariant, route, rating, question, and revision metrics are reported;
+  - failures are preserved before any product or test change.
+- Evidence: cloud agent branch, frozen artifacts, raw outputs, adjudication, score report, and method limitations.
+
 ## Task template
 
 Copy this block when adding work:

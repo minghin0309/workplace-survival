@@ -1,0 +1,187 @@
+{
+  "attestation_id": "adjudicator-attestation",
+  "adjudicator": {
+    "context_id": "bc-33be6448-3287-5b47-bb00-ceef131682b1",
+    "model_id": "gpt-5.5-high",
+    "model_family": "gpt",
+    "display_name": "GPT-5.5"
+  },
+  "attested_at_utc": "2026-08-12T14:41:22Z",
+  "branch": "cursor/cloud-holdout-adjudicator-82b1",
+  "labels_file": "tests/blind/cloud-holdout/gold.json",
+  "adjudication_file": "tests/blind/cloud-holdout/adjudication.json",
+  "files_written": [
+    "tests/blind/cloud-holdout/adjudication.json",
+    "tests/blind/cloud-holdout/gold.json",
+    "tests/blind/cloud-holdout/adjudicator-attestation.json"
+  ],
+  "files_read": [
+    "tests/blind/GOLD_RUBRIC.md",
+    "tests/blind/cloud-holdout/cases.json",
+    "tests/blind/cloud-holdout/case-freeze.json",
+    "tests/blind/cloud-holdout/images/BH-027.png",
+    "tests/blind/cloud-holdout/images/BH-028.png",
+    "tests/blind/cloud-holdout/images/BH-029.png",
+    "tests/blind/cloud-holdout/images/BH-030.png",
+    "tests/blind/cloud-holdout/gold-labeler-1.json",
+    "tests/blind/cloud-holdout/gold-labeler-1-attestation.json",
+    "tests/blind/cloud-holdout/gold-labeler-2.json",
+    "tests/blind/cloud-holdout/gold-labeler-2-attestation.json",
+    "tests/blind/cloud-holdout/gold-labeler-3.json",
+    "tests/blind/cloud-holdout/gold-labeler-3-attestation.json"
+  ],
+  "statements": [
+    "I read only the permitted repository inputs listed in files_read: the frozen cases, freeze file, four PNGs, three gold-labeler files, their attestations, and GOLD_RUBRIC.md.",
+    "I did not read runtime code, SPEC documents, public tests, mutation files, blind plan, blind scorer, Git history or PRs, the designer raw file, Skill outputs, or Skill files.",
+    "I verified the SHA-256 hashes of cases.json and all four PNGs against case-freeze.json; every hash matched.",
+    "I opened and inspected all four PNGs and treated glare-saturated, cropped, blurred, or occluded content as unrecoverable unless visible in the image itself.",
+    "I compared every rubric turn-label field across all 36 turns, preserved exact unanimous values, and adjudicated every non-unanimous scalar, list, invariant, and rationale field.",
+    "The final gold labels use 1-based turn_index values, sorted duplicate-free lists, required-subset allowed lists, canonical nonempty invariants, and rubric-derived overall ratings."
+  ],
+  "hashes_verified": {
+    "method": "sha256 over cases.json and the four PNGs, compared with case-freeze.json",
+    "entries": [
+      {
+        "file": "cases.json",
+        "expected": "e3326ae81b10af8a0dcf40eb3074cbd4ebd527939c7eb40b68b4bb26840db815",
+        "observed": "e3326ae81b10af8a0dcf40eb3074cbd4ebd527939c7eb40b68b4bb26840db815",
+        "match": true
+      },
+      {
+        "file": "images/BH-027.png",
+        "expected": "5b1650dede0ec8121381426d1c30c2ee701c2ee7026bdf9749f0f10946d5757f",
+        "observed": "5b1650dede0ec8121381426d1c30c2ee701c2ee7026bdf9749f0f10946d5757f",
+        "match": true
+      },
+      {
+        "file": "images/BH-028.png",
+        "expected": "3e086b5e2eef763f0220dad9e0c5ebc5be721f444387081ee28c947422073274",
+        "observed": "3e086b5e2eef763f0220dad9e0c5ebc5be721f444387081ee28c947422073274",
+        "match": true
+      },
+      {
+        "file": "images/BH-029.png",
+        "expected": "3654fa5fe210391e471e179fe19124b20411e2663069be4880d9b7ef423cef39",
+        "observed": "3654fa5fe210391e471e179fe19124b20411e2663069be4880d9b7ef423cef39",
+        "match": true
+      },
+      {
+        "file": "images/BH-030.png",
+        "expected": "cffd701fc1ada900927f6da60cf948dee9cacb0b927a7234f10786cd5e523dc0",
+        "observed": "cffd701fc1ada900927f6da60cf948dee9cacb0b927a7234f10786cd5e523dc0",
+        "match": true
+      }
+    ],
+    "all_match": true
+  },
+  "images_opened": [
+    "tests/blind/cloud-holdout/images/BH-027.png",
+    "tests/blind/cloud-holdout/images/BH-028.png",
+    "tests/blind/cloud-holdout/images/BH-029.png",
+    "tests/blind/cloud-holdout/images/BH-030.png"
+  ],
+  "disagreement_summary": {
+    "turns_compared": 36,
+    "rubric_turn_fields_compared_per_turn": [
+      "turn_index",
+      "route",
+      "responsibility",
+      "tone",
+      "overall",
+      "required_question_topics",
+      "allowed_question_topics",
+      "required_revision_facts",
+      "allowed_revision_facts",
+      "critical_invariants",
+      "rationale"
+    ],
+    "total_field_comparisons": 396,
+    "unanimous_field_comparisons": 154,
+    "disagreement_field_comparisons": 242,
+    "disagreements_by_field": {
+      "turn_index": 0,
+      "route": 1,
+      "responsibility": 22,
+      "tone": 6,
+      "overall": 19,
+      "required_question_topics": 28,
+      "allowed_question_topics": 30,
+      "required_revision_facts": 28,
+      "allowed_revision_facts": 36,
+      "critical_invariants": 36,
+      "rationale": 36
+    },
+    "disagreements_by_distinct_value_count": {
+      "3-distinct-values": 178,
+      "2-distinct-values": 64
+    },
+    "list_field_disagreements": 158,
+    "rationale_disagreements": 36,
+    "two_to_one_or_two_value_disagreements": 64,
+    "three_way_disagreements": 178
+  },
+  "final_distributions": {
+    "route": {
+      "Normal mode": 34,
+      "Message-template mode": 1,
+      "Intake": 1,
+      "Limited-background mode": 0,
+      "Scope": 0
+    },
+    "responsibility": {
+      "Green": 9,
+      "Yellow": 15,
+      "Red": 8,
+      "Gray": 2,
+      "null": 2
+    },
+    "tone": {
+      "Green": 26,
+      "Yellow": 5,
+      "Red": 3,
+      "Gray": 0,
+      "null": 2
+    },
+    "overall": {
+      "Green": 9,
+      "Yellow": 12,
+      "Red": 11,
+      "Gray": 2,
+      "null": 2
+    }
+  },
+  "validation": {
+    "result": "pass",
+    "errors": [],
+    "checks": [
+      "gold.json top-level value is an array of case labels",
+      "30 case labels match cases.json order and case IDs",
+      "36 turn labels match cases.json with 1-based turn_index values",
+      "turn label keys exactly match rubric fields",
+      "route and rating values are from the rubric enumerations",
+      "null ratings appear only on non-review routes; rated routes are non-null",
+      "overall derives from responsibility/tone using Red > Gray > Yellow > Green",
+      "topic, fact, and invariant lists are sorted and duplicate-free",
+      "required question topics are subsets of allowed question topics",
+      "required revision facts are subsets of allowed revision facts",
+      "required question topics are capped at three per turn",
+      "critical invariants are nonempty and canonical",
+      "every rationale is nonempty",
+      "cases.json and all four PNG hashes match case-freeze.json",
+      "field comparisons cover every rubric turn-label field on all 36 turns",
+      "minimum-content checks pass: >=8 required question topics, >=12 required revision facts, >=20 rated turns"
+    ],
+    "minimum_content_counts": {
+      "required_question_topics_total": 46,
+      "required_question_topics_unique": 45,
+      "required_revision_facts_total": 60,
+      "required_revision_facts_unique": 56,
+      "rated_turns": 34
+    }
+  },
+  "labeler_attestation_files_observed": [
+    "gold-labeler-1-attestation",
+    "gold-labeler-2-attestation",
+    "gold-labeler-3-attestation"
+  ]
+}

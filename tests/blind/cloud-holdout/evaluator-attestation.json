@@ -1,0 +1,142 @@
+{
+  "attested_at_utc": "2026-08-12T15:12:57Z",
+  "artifact": "tests/blind/cloud-holdout/evaluations.json",
+  "evaluator": {
+    "context_id": "bc-cda9ceda-1bc4-5069-abf9-ca25263d7dfe",
+    "model_id": "claude-opus-5-thinking-high",
+    "model_family": "claude",
+    "display_name": "Claude Opus 5",
+    "isolation": "Separate cloud agent context with no access to the generator context or to gold labelling contexts.",
+    "gold_access": false,
+    "filesystem_access_audit_available": false
+  },
+  "files_read": [
+    {
+      "path": "tests/blind/cloud-holdout/cases.json",
+      "sha256": "e3326ae81b10af8a0dcf40eb3074cbd4ebd527939c7eb40b68b4bb26840db815",
+      "purpose": "Case inputs, recipient descriptions and image specs."
+    },
+    {
+      "path": "tests/blind/cloud-holdout/outputs.json",
+      "sha256": "881102581a239cf71a537524f5769c1fd139a16cccc469786617279da1511569",
+      "purpose": "Frozen Skill outputs under evaluation."
+    },
+    {
+      "path": "tests/blind/cloud-holdout/outputs-freeze.json",
+      "sha256": "32be9109c9a83a7155bf7d990302337f15ff61f892e78558f753c48e8bec0894",
+      "purpose": "Freeze record used to verify the outputs hash."
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479",
+      "purpose": "Route, rating, question, revision and invariant definitions."
+    }
+  ],
+  "prohibited_files_not_accessed": [
+    {
+      "path": "tests/blind/BLIND_PLAN.md",
+      "category": "blind plan"
+    },
+    {
+      "path": "tests/blind/score_blind.py",
+      "category": "blind scorer"
+    },
+    {
+      "path": "tests/blind/blind_common.py",
+      "category": "blind scorer helper"
+    },
+    {
+      "path": "tests/blind/normalize_outputs.py",
+      "category": "blind pipeline helper"
+    },
+    {
+      "path": "tests/blind/freeze_outputs.py",
+      "category": "blind pipeline helper"
+    },
+    {
+      "path": "tests/blind/freeze_holdout.py",
+      "category": "freeze manifest generator"
+    },
+    {
+      "path": "tests/blind/BLIND_CASE_BRIEF.md",
+      "category": "case brief"
+    },
+    {
+      "path": "tests/blind/cloud-holdout/designer-attestation.json",
+      "category": "case designer attestation"
+    },
+    {
+      "path": "tests/blind/cloud-holdout/images/*.png",
+      "category": "holdout images; legibility taken from image_spec in cases.json"
+    },
+    {
+      "path": "gold labels for this holdout (any path)",
+      "category": "gold"
+    },
+    {
+      "path": "labeler records (any path)",
+      "category": "labelers"
+    },
+    {
+      "path": "adjudication records (any path)",
+      "category": "adjudication"
+    },
+    {
+      "path": "freeze manifest listing (any path)",
+      "category": "freeze-manifest"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/** (SKILL.md, REFERENCE.md, FORMATS.md, EXAMPLES.md)",
+      "category": "runtime"
+    },
+    {
+      "path": "/tmp/workplace-survival-cloud-runtime/**",
+      "category": "runtime"
+    },
+    {
+      "path": "SPEC (any path)",
+      "category": "SPEC"
+    },
+    {
+      "path": "public test suites (any path)",
+      "category": "public tests"
+    },
+    {
+      "path": "mutation test files and mutation manifests (any path)",
+      "category": "mutation files"
+    },
+    {
+      "path": "pass thresholds / gate configuration (any path)",
+      "category": "thresholds"
+    },
+    {
+      "path": "Git history, diffs, tags and pull requests",
+      "category": "Git history/PRs"
+    }
+  ],
+  "hash_verification": {
+    "outputs_path": "tests/blind/cloud-holdout/outputs.json",
+    "expected_outputs_sha256": "881102581a239cf71a537524f5769c1fd139a16cccc469786617279da1511569",
+    "recomputed_outputs_sha256": "881102581a239cf71a537524f5769c1fd139a16cccc469786617279da1511569",
+    "outputs_match": true,
+    "freeze_manifest_sha256_in_outputs": "478b78944fe5b605a2bfce99b06119f1489d955947541ffacb8e0149bf1b82f2",
+    "holdout_manifest_sha256_in_freeze": "478b78944fe5b605a2bfce99b06119f1489d955947541ffacb8e0149bf1b82f2",
+    "manifest_reference_match": true,
+    "per_turn_raw_output_sha256_recomputed": 36,
+    "per_turn_raw_output_sha256_all_match": true
+  },
+  "coverage": {
+    "cases_evaluated": 30,
+    "turns_evaluated": 36
+  },
+  "method_disclosures": [
+    "Evaluation labels describe what each frozen output actually did: the route it took, the ratings it stated, the question topics it actually raised and the semantic facts its rewrite actually carries. No expected answers were consulted.",
+    "Ratings are null on Intake, Scope and Message-template routes; on rated routes the recorded overall equals the Red>Gray>Yellow>Green derivation from the recorded responsibility and tone, and each output's own stated overall was checked against that derivation.",
+    "critical_invariants carries all eight canonical keys on every turn, with true meaning the invariant held on that turn, including turns where it is vacuously satisfied.",
+    "fixed-format-or-valid-nonreview-route was judged as output well-formedness: the fixed review sections, or a complete Information-needed or Message-template block. Whether a non-review route was the correct choice for the case is recorded in the route field and rationale instead, so that route disagreements are not double-counted as critical failures.",
+    "Holdout images were not opened. Judgements about what is and is not legible rely on the image_spec visual_conditions and legibility_notes in cases.json.",
+    "Directory names under tests/blind were listed (names only, no file contents) so that prohibited paths could be enumerated precisely in this attestation.",
+    "Git was used only for branch creation, staging, commit and push on this branch. No log, diff, show, blame, tag or pull request inspection was performed.",
+    "No filesystem access log was available in this environment, so this attestation is self-reported rather than machine-audited."
+  ]
+}
