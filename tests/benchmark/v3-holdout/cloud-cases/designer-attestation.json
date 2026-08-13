@@ -231,6 +231,12 @@
       "/tmp/v3gen/hashes_after.txt",
       "/tmp/cursor/async-install/install-user.status (environment setup probe)"
     ],
+    "unsolicited_context_disclosure": {
+      "item": ".cursor/skills/workplace-survival/SKILL.md",
+      "what_was_surfaced": "The agent harness listed this repository path together with its short description in the system prompt before the task began, without any action by this run.",
+      "what_was_not_done": "The file was never opened, listed, searched or read, and none of its body content was available to this run.",
+      "why_recorded": "For a blind holdout set the distinction matters: the surfaced description names the same subject the brief already specifies (reviewing workplace messages to a manager for responsibility clarity and tone), so it added no case material, but it was context this run did not choose to receive."
+    },
     "not_accessed": [
       "no directory listing, glob or content search was run anywhere in the repository",
       "no commit history, diff or log content was inspected",
@@ -250,6 +256,7 @@
     "Determinism was demonstrated by byte-identical regeneration inside this environment (CPython 3 with Pillow 12.3.0). A different Pillow version could rasterize the same text to different pixels, so the pixel-level hashes are environment-bound even though the rendered content is fixed by the renderer script.",
     "Image legibility, including which token is deliberately unreadable in V3-017, was confirmed by direct visual inspection of the rendered PNGs; no OCR engine was available in this environment, so no automated text-recovery check was run.",
     "The set intentionally carries no expected outputs, gold answers, ratings or scoring rubric, so it cannot be scored without a separately authored scorer.",
-    "Difficulty calibration is a designer judgement recorded in the oracle notes and has not been measured against any system under test."
+    "Difficulty calibration is a designer judgement recorded in the oracle notes and has not been measured against any system under test.",
+    "Blindness is complete with respect to reads but not with respect to harness-supplied context: one repository Skill path and its one-sentence description were injected into the system prompt before the task started, as recorded under read_isolation.unsolicited_context_disclosure. No body content of that file was available and none was read."
   ]
 }
