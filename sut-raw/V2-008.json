@@ -1,0 +1,19 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-008",
+  "sut": "workplace-survival",
+  "base_branch": "cursor/blind-v2-holdout-17a0",
+  "responses": [
+    {
+      "turn_index": 1,
+      "response_raw": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Grethe Ojanpera is Bettina Achterberg's direct manager, and the note must be suitable for Grethe to forward unedited to the clinical director.\n- On 4 June, Consulta Vantage's video consult platform was unavailable for three hours and fourteen minutes because of an expired TLS certificate on the vendor's infrastructure; nothing in the outage was under Pawline's control, and no Pawline system was involved.\n- Bettina and the triage nurse team invoked the phone-fallback protocol nine minutes after the first failed consult. Forty-one of 46 booked consults were completed by phone; the other five were rebooked within 24 hours, and no animal welfare incident arose.\n- Consulta Vantage committed to a written post-incident review by 11 June.\n- Evaluated Data B: Hi Grethe, I am so sorry about yesterday. It was a total disaster and I know it reflects badly on the team. I should have spotted it sooner than I did and I feel awful about the clients we let down. We scrambled and did what we could but honestly it was not good enough. Sorry again. Bettina\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: “I should have spotted it sooner” assigns Bettina responsibility for detecting an outage that Data A attributes to an expired certificate on Consulta Vantage's infrastructure and states was outside Pawline's control. “The clients we let down” and “it was not good enough” also omit the confirmed fallback response and outcomes.\n- Communication risk: If forwarded unedited, the note could incorrectly attribute the vendor-controlled failure to Bettina and the Pawline team and leave the clinical director without the confirmed response and impact information.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: “a total disaster,” “it reflects badly on the team,” “I feel awful,” and “honestly it was not good enough” use emotive, self-blaming language instead of the confirmed incident facts.\n- Communication risk: The wording can read as an unsupported admission of team failure and obscure the vendor cause and the team's documented response.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nHi Grethe,\n\nOn 4 June, the Consulta Vantage video consult platform was unavailable for three hours and fourteen minutes due to an expired TLS certificate on the vendor's infrastructure. No Pawline system was involved. The team invoked the phone-fallback protocol nine minutes after the first failed consult. Forty-one of the 46 booked consults were completed by phone, and the remaining five were rebooked within 24 hours. No animal welfare incident arose. Consulta Vantage has committed to providing a written post-incident review by 11 June.\n\nBettina"
+    }
+  ],
+  "provenance": {
+    "execution": "Workplace Survival skill applied sequentially to the single supplied turn",
+    "model": "GPT-5.6 Sol",
+    "context": "Cursor Cloud autonomous coding agent",
+    "input_file": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-008.json",
+    "input_sha256": "5ef2c0fff089dc1244c8d7feb34d31a7b05d47bbfb1aaededc00f5a7c557200d"
+  }
+}
