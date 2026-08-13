@@ -1,0 +1,55 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-007",
+  "attested_at_utc": "2026-08-13T10:35:59Z",
+  "context": {
+    "sut": "Workplace Survival",
+    "execution": "V2-007 only",
+    "turn_count": 1,
+    "model": "GPT-5.6 Sol",
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "base_commit": "6e1c77d6da1fdd7a6592b54e3435ab413fd6b062",
+    "branch": "cursor/v2-007-workplace-survival-72c0",
+    "output_commit": "3230ba2d5e00906592c0875e784c19f1a4692de6"
+  },
+  "reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-007.json",
+      "sha256": "df73ed82dbfc06f847ef53c42684a52bf5df61a780b4fb127b46dc63ab3e4acb"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "sut-raw/V2-007.json",
+      "sha256": "71cf6be7e3fc40a0125284662f5110f9b9258510a11ec759159ec1886d91181f"
+    },
+    {
+      "path": "sut-raw/V2-007.json#turns[0].output_raw",
+      "sha256": "9255487618140e68b92297595d569fc8c785cee875ff459395a0d29f39c89107"
+    }
+  ],
+  "isolation": {
+    "case_scope": "V2-007 only",
+    "read_scope": "Only the specified V2-007 SUT input and four frozen Workplace Survival runtime files were read as source material.",
+    "search_or_listing_performed": false,
+    "other_benchmark_artifacts_read": false,
+    "evaluation_performed": false,
+    "violations": []
+  }
+}
