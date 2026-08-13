@@ -1,0 +1,83 @@
+{
+  "schema_version": "v2",
+  "artifact": "formal-score-attempt",
+  "status": "SCORER_ERROR",
+  "executed_at_utc": "2026-08-13T12:38:47Z",
+  "formal_attempt_count": 1,
+  "rerun_performed": false,
+  "command": [
+    "python3",
+    "tests/benchmark/score_semantic.py",
+    "tests/benchmark/v2-holdout/cloud-cases/evaluation-manifest-v2.json",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+    "tests/benchmark/v2-holdout/cloud-cases/gold-v2.json",
+    "tests/benchmark/v2-holdout/cloud-cases/outputs-v2-raw.json",
+    "tests/benchmark/v2-holdout/cloud-cases/evaluations-v2-canonical.json",
+    "tests/benchmark/v2-holdout/cloud-cases/matches-v2-canonical.json",
+    "tests/benchmark/v2-holdout/cloud-cases/score-report-v2.json"
+  ],
+  "exit_code": 1,
+  "error": {
+    "type": "ValueError",
+    "message": "metric denominator must be nonzero",
+    "location": "tests/benchmark/score_semantic.py:451",
+    "metric_being_constructed": "required_question_concept_recall"
+  },
+  "frozen_inputs": {
+    "evaluation_manifest_sha256": "89c73ffb919541e8fbba0d55cc12e5c20b83af526a97bb216d35cbf4d1a40e16",
+    "ontology_sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+    "gold_sha256": "63245c97c837721862769598c42e2fd47d4c2f87ee1b0624763800d8b32dc05d",
+    "outputs_sha256": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4",
+    "evaluations_sha256": "61c5aa0791ab3138fa597f13d59330668f4ecc3d24bc651115e728a468189764",
+    "matches_sha256": "b487fa6a62d99915ba60cc1a5000e643cefbd012d19877039df756720e48e19b",
+    "scorer_sha256": "f437e4702fcb06f790fe4414b133ec360af0b620740bbd431b43971578429327"
+  },
+  "denominator_facts": {
+    "turns": 24,
+    "required_question_concepts": 0,
+    "required_revision_concepts": 72,
+    "gold_uncertain_turns": 1,
+    "gold_uncertain_rate": 0.041666666666666664
+  },
+  "metrics": null,
+  "case_results": null,
+  "unscored_case_ids": [
+    "V2-001",
+    "V2-002",
+    "V2-003",
+    "V2-004",
+    "V2-005",
+    "V2-006",
+    "V2-007",
+    "V2-008",
+    "V2-009",
+    "V2-010",
+    "V2-011",
+    "V2-012",
+    "V2-013",
+    "V2-014",
+    "V2-015",
+    "V2-016",
+    "V2-017",
+    "V2-018"
+  ],
+  "thresholds": [
+    {"metric": "route_accuracy", "requirement": ">= 0.95", "status": "NOT_EVALUATED"},
+    {"metric": "responsibility_accuracy", "requirement": ">= 0.90", "status": "NOT_EVALUATED"},
+    {"metric": "tone_accuracy", "requirement": ">= 0.90", "status": "NOT_EVALUATED"},
+    {"metric": "overall_accuracy", "requirement": ">= 0.90", "status": "NOT_EVALUATED"},
+    {"metric": "required_question_concept_recall", "requirement": ">= 0.90", "status": "UNDEFINED_ZERO_DENOMINATOR"},
+    {"metric": "question_claim_support_precision", "requirement": "= 1.00", "status": "NOT_EVALUATED"},
+    {"metric": "required_revision_concept_recall", "requirement": ">= 0.90", "status": "NOT_EVALUATED"},
+    {"metric": "revision_claim_support_precision", "requirement": "= 1.00", "status": "NOT_EVALUATED"},
+    {"metric": "critical_invariant_violations", "requirement": "= 0", "status": "NOT_EVALUATED"},
+    {"metric": "gold_uncertain_rate", "requirement": "<= 0.20", "status": "PRE_SCORE_GATE_PASS", "observed": 0.041666666666666664}
+  ],
+  "limitations": [
+    "The frozen scorer aborted before writing metrics or case-level results.",
+    "No metric other than the independently validated gold uncertainty gate is reported as a formal score.",
+    "No scorer, gold, ontology, evaluation, match, or output artifact was changed after the attempt.",
+    "The scorer was not rerun.",
+    "Unsupported semantic claims remain frozen evidence but are not formal case failures without a completed score report."
+  ]
+}
