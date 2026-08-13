@@ -1,0 +1,908 @@
+{
+  "labeler": "gold-labeler-3",
+  "file_kind": "clean_gold_labels",
+  "envelope_version": "v3.1",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "case_count": 18,
+  "turn_count": 24,
+  "source_paths": [
+    "tests/benchmark/v3_1-holdout/cloud-cases/cases.json",
+    "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+    "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png",
+    "tests/blind/GOLD_RUBRIC.md",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json"
+  ],
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft accurately reports the blocked/steamed count, trimming slot, internal check, courier booking, reference, and that no manager decision is needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft correctly asks the manager to choose between the two authority-owned cover options, preserves the timing and notice constraint, and states the coordinator's recommendation without over-committing."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "no-revision"
+          ],
+          "allowed_revision_facts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft gives the manager the true capacity shortfall, names the nine/five split and press constraint, keeps client-date authority with the manager, and uses neutral operational tone."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "approval-authority"
+          ],
+          "allowed_question_topics": [
+            "approval-authority"
+          ],
+          "required_revision_facts": [
+            "include-authorizer-name-or-placeholder",
+            "preserve-ferrowhite-release-request",
+            "preserve-petersham-order-details",
+            "preserve-reservation-deadline"
+          ],
+          "allowed_revision_facts": [
+            "include-account-reference",
+            "include-authorizer-name-or-placeholder",
+            "preserve-ferrowhite-release-request",
+            "preserve-friday-finishing-need",
+            "preserve-petersham-order-details",
+            "preserve-reservation-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Ferrowhite will reject a release request unless it names the individual who approved the 310 pound variation, but the draft only says the variation was signed off. The missing authorizer is a main-purpose execution failure even though the tone is appropriate."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_topics": [
+            "confirmed-deadline"
+          ],
+          "required_revision_facts": [
+            "include-collection-date-or-placeholder",
+            "include-goods-in-window-or-placeholder",
+            "preserve-packed-crate-count",
+            "preserve-workroom-manager-booking-owner"
+          ],
+          "allowed_revision_facts": [
+            "include-collection-date-or-placeholder",
+            "include-goods-in-window-or-placeholder",
+            "preserve-booking-desk-close",
+            "preserve-packed-crate-count",
+            "preserve-workroom-manager-booking-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Cranthorpe requires an exact collection date and two-hour window, and Marchmont accepts delivery only in the confirmed window. The draft asks Marit to book without stating those booking values, creating a major execution risk."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "confirmed-owner"
+          ],
+          "allowed_question_topics": [
+            "confirmed-owner"
+          ],
+          "required_revision_facts": [
+            "include-named-ashvale-contact-or-placeholder",
+            "preserve-adjustment-details",
+            "preserve-fitting-deadline",
+            "preserve-manager-client-message-owner"
+          ],
+          "allowed_revision_facts": [
+            "include-named-ashvale-contact-or-placeholder",
+            "preserve-adjustment-details",
+            "preserve-boxed-ready-status",
+            "preserve-fitting-deadline",
+            "preserve-manager-client-message-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Ashvale returns notes sent to general enquiries and the fitting cannot proceed unless the note reaches the one named contact. The draft does not provide that contact name or a placeholder for Marit to fill."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "source-record-reference"
+          ],
+          "allowed_question_topics": [
+            "source-record-reference"
+          ],
+          "required_revision_facts": [
+            "include-goods-in-source-record-or-placeholder",
+            "preserve-friday-quality-cutoff",
+            "preserve-not-finishing-fault",
+            "preserve-solberg-batch-variance"
+          ],
+          "allowed_revision_facts": [
+            "include-goods-in-source-record-or-placeholder",
+            "preserve-friday-quality-cutoff",
+            "preserve-not-finishing-fault",
+            "preserve-six-brim-scope",
+            "preserve-solberg-batch-variance"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Thurlow & Vane's form has a mandatory source-record field and rejects generic internal-record wording. The draft explains the batch variance but still omits the specific goods-in source record reference."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "block-crown-circumference"
+          ],
+          "allowed_question_topics": [
+            "block-crown-circumference"
+          ],
+          "required_revision_facts": [
+            "include-exact-crown-circumference-or-placeholder",
+            "preserve-cutting-slot",
+            "preserve-menkes-exact-size-rule",
+            "preserve-order-details"
+          ],
+          "allowed_revision_facts": [
+            "include-exact-crown-circumference-or-placeholder",
+            "preserve-cutting-slot",
+            "preserve-menkes-exact-size-rule",
+            "preserve-order-details",
+            "preserve-size-source-location"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The image draft shows the crown circumference value is obscured by run ink. Menkes rejects missing, ranged, or nearest-size instructions, so the manager cannot place a valid block order without the exact circumference from the measurement card or a clear placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "commitment-scope"
+          ],
+          "allowed_question_topics": [
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "include-named-recovery-route-or-placeholder",
+            "preserve-ashvale-deadline",
+            "preserve-shortfall-count",
+            "preserve-workroom-manager-authorization-owner"
+          ],
+          "allowed_revision_facts": [
+            "include-cause-22mm-grosgrain",
+            "include-named-recovery-route-or-placeholder",
+            "preserve-ashvale-deadline",
+            "preserve-shortfall-count",
+            "preserve-workroom-manager-authorization-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The shortfall procedure requires one permitted recovery route by name, and the manager cannot authorize an unnamed route. The draft says the coordinator settled on a route but never names it."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_facts": [
+            "remove-unsafe-commitment",
+            "request-manager-decision-on-weekend-or-reallocation",
+            "request-surcharge-decision",
+            "state-ashvale-not-yet-committed",
+            "state-revised-delivery-note-not-drawn"
+          ],
+          "allowed_revision_facts": [
+            "preserve-press-fault-and-22-crowns",
+            "preserve-two-day-reblock-effort",
+            "remove-unsafe-commitment",
+            "request-manager-decision-on-weekend-or-reallocation",
+            "request-surcharge-decision",
+            "state-ashvale-not-yet-committed",
+            "state-revised-delivery-note-not-drawn"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft claims the coordinator already committed Ilva, Callum, a surcharge waiver, Ashvale messaging, and Marit's signature, all outside the coordinator's authority or not yet agreed. The dismissive 'nothing for you to do' adds tone risk."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope",
+            "current-root-cause"
+          ],
+          "required_revision_facts": [
+            "remove-unsafe-commitment",
+            "restore-commercial-desk-supplier-approval-owner",
+            "restore-manager-scheduling-owner",
+            "state-client-explanation-not-yet-sent"
+          ],
+          "allowed_revision_facts": [
+            "preserve-two-day-late-delivery",
+            "remove-unsafe-commitment",
+            "restore-commercial-desk-supplier-approval-owner",
+            "restore-manager-scheduling-owner",
+            "state-client-explanation-not-yet-sent",
+            "state-order-released-late-by-commercial-desk"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft takes unilateral responsibility and commits to taking supplier approvals from Dane, rewriting scheduling rules, and pledging the coordinator's own hours to Thurlow, contradicting the ownership constraints. The closing also discourages manager review."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-four-reblocked-crowns",
+            "state-missing-second-stage-briefing",
+            "state-no-fault-left-workroom"
+          ],
+          "allowed_revision_facts": [
+            "preserve-apprentice-status",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-four-reblocked-crowns",
+            "state-missing-second-stage-briefing",
+            "state-no-fault-left-workroom",
+            "state-not-raised-with-petra"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft insults Petra, asserts unsupported intent and character judgments, and threatens to stop covering unless duties change. Apprentice supervision belongs to the manager, so the message needs neutral observations instead of accusations and ultimatums."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-date-moved-forward",
+            "state-schedule-impact-not-yet-worked-out"
+          ],
+          "allowed_revision_facts": [
+            "preserve-one-free-press",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-date-moved-forward",
+            "state-heard-from-client-assistant",
+            "state-schedule-impact-not-yet-worked-out",
+            "state-two-extra-steam-cycles"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft is sarcastic and hostile toward the manager, makes a blame-focused complaint, and tells the manager to do the steaming. It should instead report the moved date and unresolved annexe schedule impact neutrally."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [
+            "operational-impact"
+          ],
+          "allowed_question_topics": [
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "correct-steaming-count-or-placeholder",
+            "correct-trimming-status-or-placeholder",
+            "preserve-ashvale-job",
+            "preserve-client-call-risk"
+          ],
+          "allowed_revision_facts": [
+            "correct-collection-slot-or-placeholder",
+            "correct-steaming-count-or-placeholder",
+            "correct-trimming-status-or-placeholder",
+            "preserve-ashvale-job",
+            "preserve-client-call-risk"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft states all 14 crowns are through steaming even though the bench-confirmed figures are material for Marit's client call and are not safely established by the initial facts. It needs confirmed bench counts before sending."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "correct-steaming-count-to-11",
+            "state-3-reblocking",
+            "state-thursday-trimming-for-3",
+            "state-wednesday-reblocking"
+          ],
+          "allowed_revision_facts": [
+            "correct-steaming-count-to-11",
+            "preserve-callum-trimming-slot-for-ready-crowns",
+            "state-3-reblocking",
+            "state-thursday-trimming-for-3",
+            "state-wednesday-reblocking"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The correction requires replacing the prior all-14-through statement with 11 through steaming and three cracked crowns re-blocking Wednesday, with trimming for those three on Thursday."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "correct-collection-reference-to-cr-90177",
+            "correct-collection-slot-to-friday-1530",
+            "preserve-11-through-3-reblocking",
+            "preserve-thursday-trimming-for-3"
+          ],
+          "allowed_revision_facts": [
+            "correct-collection-reference-to-cr-90177",
+            "correct-collection-slot-to-friday-1530",
+            "preserve-11-through-3-reblocking",
+            "preserve-thursday-trimming-for-3",
+            "preserve-wednesday-reblocking"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The final correction makes the prior Friday 11:00 collection wrong; the safe message must keep the 11/3 bench update and change collection to Friday 10 October at 15:30, reference CR-90177."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority"
+          ],
+          "required_revision_facts": [
+            "remove-unsafe-commitment",
+            "request-solberg-replacement-date",
+            "use-correct-lot-or-placeholder"
+          ],
+          "allowed_revision_facts": [
+            "remove-unsafe-commitment",
+            "request-solberg-replacement-date",
+            "state-shade-variance",
+            "use-correct-lot-or-placeholder"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft commits Quillsmere to covering courier cost even though the coordinator lacks cost authority, and the lot number is not safely established in the initial draft. It should ask for replacement-date confirmation without a cost commitment."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority"
+          ],
+          "required_revision_facts": [
+            "remove-unsafe-commitment",
+            "request-solberg-replacement-date",
+            "use-lot-sb-lot-7749"
+          ],
+          "allowed_revision_facts": [
+            "remove-unsafe-commitment",
+            "request-solberg-replacement-date",
+            "state-shade-variance",
+            "use-lot-sb-lot-7749"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The second turn requires replacing SB-LOT-7742 with SB-LOT-7749 everywhere. The courier-cost commitment remains unsafe because cost absorption is not the coordinator's authority."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "remove-courier-cost-line",
+            "request-solberg-replacement-date",
+            "use-lot-sb-lot-7749"
+          ],
+          "allowed_revision_facts": [
+            "remove-courier-cost-line",
+            "request-solberg-replacement-date",
+            "state-no-cost-commitment-made",
+            "use-lot-sb-lot-7749"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The final version must use SB-LOT-7749 and drop the courier-cost line completely; the only needed action is Marit asking Solberg to confirm the replacement date."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "operational-impact"
+          ],
+          "required_revision_facts": [
+            "correct-shortfall-count-or-placeholder",
+            "preserve-crin-blocker",
+            "preserve-marchmont-order"
+          ],
+          "allowed_revision_facts": [
+            "correct-shortfall-count-or-placeholder",
+            "preserve-crin-blocker",
+            "preserve-marchmont-order"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft reports a six-piece shortfall, but the holdout corrections show that figure is not reliable for the final manager message. A shortfall count must match the latest known bench status."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "correct-shortfall-count-to-4",
+            "preserve-crin-not-landed",
+            "state-two-pieces-came-good"
+          ],
+          "allowed_revision_facts": [
+            "correct-shortfall-count-to-4",
+            "preserve-crin-not-landed",
+            "preserve-marchmont-order",
+            "state-two-pieces-came-good"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "This correction changes the shortfall from six to four and adds that two pieces came good after a second steam cycle. Any revised message must remove the old six-piece figure."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "drop-shortfall",
+            "state-all-16-one-delivery",
+            "state-delivery-window-thursday-0730-0930",
+            "state-ferrowhite-crin-landing"
+          ],
+          "allowed_revision_facts": [
+            "drop-shortfall",
+            "state-all-16-one-delivery",
+            "state-delivery-window-thursday-0730-0930",
+            "state-ferrowhite-crin-landing",
+            "state-marchmont-goods-in-moved-window"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The last correction eliminates the shortfall: Ferrowhite lands the crin Wednesday at 12:00 and Marchmont moved goods-in to Thursday 16 October, 07:30 to 09:30, so all 16 should be sent in one delivery."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [],
+          "required_revision_facts": [
+            "preserve-ferrowhite-invoice-credit-request",
+            "preserve-qt-4471-account",
+            "remove-client-data-circulation",
+            "remove-full-workroom-channel-post"
+          ],
+          "allowed_revision_facts": [
+            "preserve-ferrowhite-invoice-credit-request",
+            "preserve-qt-4471-account",
+            "remove-client-data-circulation",
+            "remove-full-workroom-channel-post",
+            "state-commission-sheet-restricted"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The supplier invoice/credit request can go to Marit, but the draft also asks her to post client fitting figures and commission price into the full workroom channel, including people outside the job. That violates the stated client-data scope."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_topics": [],
+          "allowed_question_topics": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_facts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "request-credit-note-or-writeoff-decision",
+            "request-rush-charge-decision",
+            "request-saturday-shift-decision"
+          ],
+          "allowed_revision_facts": [
+            "preserve-menkes-wrong-spec-fact",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "request-credit-note-or-writeoff-decision",
+            "request-rush-charge-decision",
+            "request-saturday-shift-decision",
+            "state-dane-is-commercial-lead"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The image draft says the coordinator already promised a write-off, will sign a credit note, assigned Ilva and Callum to Saturday, and told Ashvale the rush charge would be absorbed, all outside authority. It also insults Dane as useless, so both responsibility and tone are red."
+        }
+      ]
+    }
+  ]
+}
