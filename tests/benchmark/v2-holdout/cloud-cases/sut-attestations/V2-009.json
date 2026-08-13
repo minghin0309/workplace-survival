@@ -1,0 +1,57 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-009",
+  "attested_at": "2026-08-13T10:36:24Z",
+  "output": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-009.json",
+    "commit": "1115e1d83d5d96fbf4ba638ef863e18a1a826795",
+    "sha256": "e2500825c5cdb4795c811638ef990bf4ffde348280a0257cd58d4982491812fe"
+  },
+  "execution": {
+    "base_branch": "cursor/blind-v2-holdout-17a0",
+    "base_commit": "6e1c77d6da1fdd7a6592b54e3435ab413fd6b062",
+    "branch": "cursor/workplace-v2-009-f6f5",
+    "model": "GPT-5.6 Sol",
+    "state_handling": "Sequential; one turn; no prior case state",
+    "scoring_performed": false
+  },
+  "reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-009.json",
+      "purpose": "SUT input",
+      "sha256": "b52d76ca883b01c61955ae92c87cd5d739fe55b9c6f3a2e5d6cc68f361a02c0b"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "purpose": "Frozen runtime",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "purpose": "Frozen runtime",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "purpose": "Frozen runtime",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "purpose": "Frozen runtime",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "isolation": {
+    "case_ids_executed": [
+      "V2-009"
+    ],
+    "only_authorized_sut_input_read": true,
+    "only_frozen_runtime_files_read": true,
+    "repository_listing_or_search_performed": false,
+    "benchmark_expectations_accessed": false,
+    "other_case_inputs_or_outputs_accessed": false,
+    "external_sources_accessed": false
+  },
+  "violations": []
+}
