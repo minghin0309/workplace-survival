@@ -1,0 +1,134 @@
+{
+  "schema_version": "v2",
+  "artifact": "adjudicator-attestation",
+  "case_set_id": "v2-holdout-cloud-cases",
+  "role": "gold-adjudicator",
+  "adjudicator_model_family": "gpt",
+  "human_review_available": false,
+  "adjudicated_at_utc": "2026-08-13T04:55:00Z",
+  "repository": {
+    "path": "/workspace",
+    "branch": "cursor/cloud-v2-gold-adjudicator-86eb",
+    "base_head_before_adjudication": "aad09ea3519816f1513338b0c1b1a6c145fee494"
+  },
+  "scope": {
+    "cases": 18,
+    "turns": 24,
+    "schema_written": "v2 gold.json with per-turn gold_quality; adjudication.json with preserved vote distributions",
+    "labeler_model_families": [
+      "claude",
+      "grok",
+      "kimi"
+    ]
+  },
+  "files_read": [
+    {
+      "role": "cases",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828"
+    },
+    {
+      "role": "image",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24"
+    },
+    {
+      "role": "image",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab"
+    },
+    {
+      "role": "labeler-1",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1.json",
+      "sha256": "44eecc21199cecba5c0a8e7dce99277f8c2fd0c2fcb81a1e127b3f1c1dce5418"
+    },
+    {
+      "role": "labeler-2",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2.json",
+      "sha256": "8296e9fbac773b7bb9f314a61a616f8299956be9d35348a0f17b9ecea88c894f"
+    },
+    {
+      "role": "labeler-3",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "67aa69207ba205182eb25065fdf20c947de715bc10b2a381531ec88ce1f1e938"
+    },
+    {
+      "role": "labeler-1-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-1-attestation.json",
+      "sha256": "31675d1336da2fc42799281113c87e4fee274df656bffb3940eb4f7882b3bc96"
+    },
+    {
+      "role": "labeler-2-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-attestation.json",
+      "sha256": "9047ae7043a914b0d10a0a39a4aabfd33e1c4ce7fbcc86de682ad0faed32278a"
+    },
+    {
+      "role": "labeler-3-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-3-attestation.json",
+      "sha256": "978a80d60c633f05c487f0949232b37b1cea67029d645f8121294c2df24a338f"
+    },
+    {
+      "role": "case-designer-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/designer-attestation.json",
+      "sha256": "9775aa61f2fe5eb34493a5abbf6abf719626812acb1715533ccde8f1dc84b975"
+    },
+    {
+      "role": "rubric",
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "role": "ontology",
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "images_opened": [
+    {
+      "case_id": "V2-017",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24",
+      "opened_directly": true,
+      "observed_text": [
+        "Direct message: Marguerite Vaudrey-Pinto",
+        "Hi Marguerite - sorry to bother you again about the Tin Heron",
+        "bridge. I think it might not pass the load test at Kelvinhaugh",
+        "and we may possibly need a rebuild at some point soon. Basil",
+        "might be free. Let me know whenever you get a chance, no rush."
+      ]
+    },
+    {
+      "case_id": "V2-018",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab",
+      "opened_directly": true,
+      "observed_text": [
+        "New message",
+        "To: Aoife Ballantyne-Cruz",
+        "Subject: Kilbrannan offset - my mistake",
+        "Aoife, the 40 cm offset in lines 12-19 is down to me. I have taken",
+        "ownership of the ingest config and I will patch the timestamp",
+        "handling myself tonight, then reprocess. Should be clear well",
+        "before the 21st. Sorry for the mess.",
+        "Tobias"
+      ]
+    }
+  ],
+  "isolation": {
+    "statement": "Adjudication used only cases.json, the two case PNGs, gold-labeler-1/2/3.json, their attestations, designer-attestation.json, GOLD_RUBRIC.md, and SEMANTIC_ONTOLOGY.json.",
+    "not_read": [
+      "Skill runtime, SKILL.md, source implementation, or runtime outputs",
+      "tests, validators, rendering scripts, scorers, or scoring output",
+      "oracle notes, prior blind artifacts, benchmark plans, methodology artifacts, history, PRs, and external services"
+    ],
+    "runtime_tests_executed": false,
+    "web_or_pr_sources_used": false
+  },
+  "adjudication_policy": [
+    "Normalize labeler concepts by concept_id and semantic equivalence before comparing lists.",
+    "Preserve unanimous categorical decisions.",
+    "For two-to-one categorical splits, adjudicate using GOLD_RUBRIC and cases.json facts.",
+    "For three-way categorical disagreement or unresolved substantive critical-invariant disagreement, mark tier gold_uncertain because no human review is available.",
+    "Raw invariant-set differences caused by broad versus narrow inclusion are recorded but not treated as substantive unresolved invariant conflicts unless they change a critical safety requirement."
+  ]
+}
