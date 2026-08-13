@@ -285,6 +285,20 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - validation uses synthetic fixtures and does not supply v2 artifacts to the v3 scorer.
 - Evidence: v3 methodology contract, unit results, mutation results, validation report, and empty runtime diff.
 
+#### T14.8 — Fresh benchmark v3 unseen holdout
+
+- [x] Completed
+
+- Source requirement: Exercise methodology v3 on a fresh unseen case set and enforce coverage before SUT execution.
+- Owner files: `tests/benchmark/v3-holdout/`, `TASK.md`, and `CHANGELOG.md`.
+- Acceptance:
+  - cases and images are generated in an isolated cloud context without prior benchmark content;
+  - three independent gold families and a fourth-family adjudicator preserve all votes;
+  - v3 question/revision coverage gates execute before SUT;
+  - invalid coverage prevents SUT, extraction, matching, and formal scoring;
+  - the complete invalid-coverage evidence chain is immutable.
+- Evidence: holdout plan/brief, cases/images, labels/adjudication, transcript audits, coverage report, result summary, and invalid-coverage manifest.
+
 ## Task template
 
 Copy this block when adding work:
