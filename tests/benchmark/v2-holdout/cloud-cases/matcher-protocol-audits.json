@@ -1,0 +1,29 @@
+{
+  "schema_version": "v2",
+  "artifact": "semantic-matcher-transcript-audits",
+  "attempts": [
+    {
+      "context_id": "bc-a7e247e5-fa91-5658-93c2-07e4b6f21742",
+      "status": "REJECTED_PROTOCOL",
+      "reason": "Attempted three non-allowlisted repository-root paths before reading the correct files.",
+      "artifacts_accepted": false
+    },
+    {
+      "context_id": "bc-49280770-7415-5b2a-abb9-65f7bb13a6c0",
+      "status": "ACCEPTED_WITH_PROCEDURAL_DEVIATION",
+      "reason": "Read exactly the five allowlisted files; git checkout -b created the isolated output branch but exposed no prohibited content.",
+      "artifacts_accepted": true,
+      "gold_access": true,
+      "prohibited_content_access": false,
+      "cases": 18,
+      "turns": 24,
+      "claims": 89,
+      "unsupported_claims": 7
+    }
+  ],
+  "limitations": [
+    "Audit is transcript/tool-log based rather than an independent filesystem access monitor.",
+    "Machine model ID was unavailable from cloud run metadata.",
+    "Semantic correctness is validated structurally and by recorded rationale/confidence; formal benchmark scoring occurs only after evaluation freeze."
+  ]
+}
