@@ -1,0 +1,48 @@
+{
+  "schema_version": "v2",
+  "artifact": "extraction-transcript-audits",
+  "contexts": [
+    {
+      "role": "extractor-1",
+      "context_id": "bc-7896a9d2-dc62-5494-8f72-df88bbf0f6a5",
+      "model_family": "claude",
+      "model_id": "unverified",
+      "verdict": "PASS",
+      "gold_access": false,
+      "prohibited_content_access": false,
+      "procedural_deviations": []
+    },
+    {
+      "role": "extractor-2",
+      "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+      "model_family": "kimi",
+      "model_id": "unverified",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "gold_access": false,
+      "prohibited_content_access": false,
+      "procedural_deviations": [
+        "Used additional branch-status/fetch recovery commands after a shell reset; no prohibited repository content was read.",
+        "Used cursor-cloud run-info for context metadata while the raw attestation overclaimed that no external source was accessed.",
+        "A local base-branch commit was moved to the dedicated feature branch before push; the remote base branch was not modified."
+      ]
+    },
+    {
+      "role": "evaluator",
+      "context_id": "bc-a9b8eb81-9224-509c-9ff8-641592ef875e",
+      "model_family": "gpt",
+      "model_id": "unverified",
+      "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+      "gold_access": false,
+      "prohibited_content_access": false,
+      "procedural_deviations": [
+        "Raw evaluator metadata used a placeholder context ID and self-identified model ID; canonical metadata uses the cloud context ID and unverified machine model ID.",
+        "Claim granularity differed on 17 turns; adjudication retained a complete exact-span decomposition and recorded zero unresolved disagreements."
+      ]
+    }
+  ],
+  "limitations": [
+    "Audits use cloud transcripts and tool logs rather than an independent filesystem access monitor.",
+    "The allowlisted output aggregate embeds parent-manifest and prior audit metadata strings; no referenced artifact was opened.",
+    "Image transcriptions were present in raw Skill outputs; extractors did not open image files."
+  ]
+}

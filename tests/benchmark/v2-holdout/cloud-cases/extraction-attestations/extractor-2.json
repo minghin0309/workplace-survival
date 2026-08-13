@@ -1,0 +1,104 @@
+{
+  "schema_version": "v2",
+  "role": "extractor-2",
+  "context_id": "bc-78dd5451-c6ec-52d5-b206-4ae4dcd21296",
+  "model_id": "unverified",
+  "model_family": "kimi",
+  "cloud_branch": "cursor/blind-extractor-2-1296",
+  "cloud_commit": "ffd6d7ec6d5cf80611945153e47d17a73843548c",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/outputs-v2-raw.json",
+      "sha256": "7755df7128e99f97245f7c62bb41f7ade80f9bd17e5fd177738076f3741dace4"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-001.json",
+      "sha256": "84a11d742f17f3cde561c0b30406bfca7b2c9f71368416bd77fbe3946a3adec3"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-002.json",
+      "sha256": "6c30a6f64e9726bdfa7dddec10884bf10826e256c7d4180dfc4cc1f3ceb62424"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-003.json",
+      "sha256": "623e775aaff1baeb8403b70b5b8e2622a3f14d722275274c5201d7d39da709a5"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-004.json",
+      "sha256": "a2958eb4470271334c58d8728ce06bf4f6ed102aea710729298236622d217bf8"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-005.json",
+      "sha256": "91fd96c498860e7e67a857f26c164c132ad16327bd3dff79ef99e83f821003f0"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-006.json",
+      "sha256": "fbca0e7ab108ee346f2cc9dd23cbced72db28dbd21c3b16229d59a7be1e46ca5"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-007.json",
+      "sha256": "df73ed82dbfc06f847ef53c42684a52bf5df61a780b4fb127b46dc63ab3e4acb"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-008.json",
+      "sha256": "5ef2c0fff089dc1244c8d7feb34d31a7b05d47bbfb1aaededc00f5a7c557200d"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-009.json",
+      "sha256": "b52d76ca883b01c61955ae92c87cd5d739fe55b9c6f3a2e5d6cc68f361a02c0b"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-010.json",
+      "sha256": "17c740aa3b165e79578c40a5732032d62b1104fd47c98a524853a981983e0e95"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-011.json",
+      "sha256": "220152b30bed37987add95a75e0bf064899062fb97c86062cdb1edb0814e146e"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-012.json",
+      "sha256": "374ec9b90e108dd03697843d3e7e6cefd9992d615714df3bbfb2e3fd1c35b2ee"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-013.json",
+      "sha256": "750eb8e2cd9c1b077deae93a54d70b8b9573cc7038c095119022a7f4f36d6fc5"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-014.json",
+      "sha256": "0ebc2ff0869692a91b8c4dd86b42808ce3afd668c7a49e10b5f5bd586120a718"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-015.json",
+      "sha256": "c154bf8bbedf5d083d97f12d935962f2c17c344e53dd3835f29360f3bcc80212"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-016.json",
+      "sha256": "443fd1aefbca38cf87d01a30308c27fbceffda16b0069ed2ee3000cf5b30b83d"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-017.json",
+      "sha256": "6ba28b392bd904b0be5271fc50876578716c550da460e1ea034614f8f8602801"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-018.json",
+      "sha256": "9c14268f8681d6600b35c4590099ea7c5fddc1e9cd322d63a2eb124a59e83351"
+    }
+  ],
+  "limitations": [
+    "model_id is unverified: the run metadata reports originalModelName=null, so no machine-verifiable model identity exists for this extraction context.",
+    "For V2-017 and V2-018, Data B reached the SUT only as a screenshot image; per protocol the extractor did not read the images. The outputs' recognized Data B transcriptions were evaluated for internal consistency against Data A only; transcription fidelity to the image pixels cannot be independently verified. no-image-token-guess was marked satisfied on consistency grounds, as noted per turn.",
+    "no-manager-reaction-prediction judgments treat the fixed-format 'Communication risk' lines (hedged, input-grounded statements such as 'may read the message as...') as format-required risk assessments rather than reaction predictions; the affected turns carry extraction_notes flagging this interpretation.",
+    "Procedural note: git status and git checkout were used in addition to the narrow git command list (branch/add/commit/push/rev-parse) for branch management; they exposed only branch/repository metadata and no benchmark content. After a shell session reset, the initial extraction commit briefly landed on the local base branch; the local base pointer was restored to 521eb34d8611b225937e612bc25dfacc00bbc235 (matching origin) and the commit retained solely on the feature branch. No force-push, amend, or history rewrite of any remote branch was performed.",
+    "All eight critical invariants evaluated to satisfied (true) on all 24 turns; this reflects the extractor's independent turn-by-turn factual comparison against the SUT inputs, documented in per-turn extraction_notes, not a blanket assumption.",
+    "Machine model ID was unavailable from cloud run metadata; no ID was guessed.",
+    "Transcript audit disposition is recorded in extraction-protocol-audits.json."
+  ],
+  "source_attestation": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/extractor-2-attestation.json",
+    "sha256": "44044f1247d240bab47ffc6221bb0b71544c9897d88a9c7fb538f08d79293f63"
+  },
+  "normalization": {
+    "kind": "mechanical-provenance-wrapper",
+    "extraction_decisions_changed": false
+  }
+}
