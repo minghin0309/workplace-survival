@@ -546,6 +546,26 @@ class BenchmarkMethodologyTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validate_benchmark.validate_gold(gold)
 
+    def test_structured_data_a_and_omitted_optional_image_path_are_valid(self):
+        cases = [
+            {
+                "case_id": "B2-001",
+                "category": "green_control",
+                "recipient_context": "Direct manager.",
+                "data_a": {"facts": ["Confirmed fact."]},
+                "turns": [{"turn_index": 1, "input_raw": "Review this draft."}],
+                "image_spec": None,
+            }
+        ]
+        notes = [
+            {
+                "case_id": "B2-001",
+                "design_intent": "Control.",
+                "difficulty_notes": "None.",
+            }
+        ]
+        validate_benchmark.validate_cases(cases, notes)
+
     def test_adjudication_requires_sha256_and_exact_gold_linkage(self):
         with tempfile.TemporaryDirectory() as directory:
             directory = Path(directory)

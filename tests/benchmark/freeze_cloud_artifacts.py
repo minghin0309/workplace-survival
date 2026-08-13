@@ -94,7 +94,7 @@ def main() -> None:
             f"image:{case['case_id']}:{turn['turn_index']}": turn["image_path"]
             for case in cases
             for turn in case["turns"]
-            if turn["image_path"] is not None
+            if turn.get("image_path") is not None
         }
         actual_images = {
             item["role"]: item["path"]

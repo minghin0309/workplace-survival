@@ -13,7 +13,8 @@ CASE_KEYS = {
     "turns",
     "image_spec",
 }
-TURN_KEYS = {"turn_index", "input_raw", "image_path"}
+TURN_REQUIRED_KEYS = {"turn_index", "input_raw"}
+TURN_OPTIONAL_KEYS = {"image_path"}
 NOTE_KEYS = {"case_id", "design_intent", "difficulty_notes"}
 QUALITY_TIERS = {"human_reviewed", "heterogeneous_adjudicated", "gold_uncertain"}
 STAGE_ROLES = {
@@ -63,10 +64,17 @@ def validate_cases(cases: list[dict], notes: list[dict]) -> None:
         require(set(case) == CASE_KEYS, f"{case['case_id']}: case schema")
         require("case_designer_notes" not in case, f"{case['case_id']}: leaked designer notes")
         require(isinstance(case["recipient_context"], str), f"{case['case_id']}: recipient context")
-        require(isinstance(case["data_a"], str), f"{case['case_id']}: Data A")
+        require(
+            isinstance(case["data_a"], (str, dict)) and bool(case["data_a"]),
+            f"{case['case_id']}: Data A",
+        )
         require(isinstance(case["turns"], list) and case["turns"], f"{case['case_id']}: turns")
         for index, turn in enumerate(case["turns"], start=1):
-            require(set(turn) == TURN_KEYS, f"{case['case_id']}: turn schema")
+            require(
+                TURN_REQUIRED_KEYS <= set(turn)
+                and set(turn) <= TURN_REQUIRED_KEYS | TURN_OPTIONAL_KEYS,
+                f"{case['case_id']}: turn schema",
+            )
             require(turn["turn_index"] == index, f"{case['case_id']}: turn order")
             require(isinstance(turn["input_raw"], str) and turn["input_raw"], f"{case['case_id']}: input")
         require(set(note) == NOTE_KEYS, f"{case['case_id']}: oracle-note schema")
@@ -373,7 +381,7 @@ def validate_manifest(manifest: dict, seen: set[Path] | None = None) -> None:
             f"image:{case['case_id']}:{turn['turn_index']}": turn["image_path"]
             for case in cases
             for turn in case["turns"]
-            if turn["image_path"] is not None
+            if turn.get("image_path") is not None
         }
         actual_images = {
             item["role"]: item["path"]
