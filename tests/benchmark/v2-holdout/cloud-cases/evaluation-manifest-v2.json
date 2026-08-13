@@ -1,0 +1,110 @@
+{
+  "version": "2",
+  "immutable": true,
+  "stage": "evaluations",
+  "parent_manifest": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/outputs-manifest-v2.json",
+    "sha256": "5a9807579303a0002c0c2c0833d7b9f56fe57594895584e14b7cac0c3918d2e2"
+  },
+  "frozen_at_utc": "2026-08-13T12:28:28.308851Z",
+  "artifacts": [
+    {
+      "role": "evaluations",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/evaluations-v2-canonical.json",
+      "sha256": "61c5aa0791ab3138fa597f13d59330668f4ecc3d24bc651115e728a468189764",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "a2ef57c445035e89bcb60551eca0b50147f11a12"
+    },
+    {
+      "role": "matches",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/matches-v2-canonical.json",
+      "sha256": "b487fa6a62d99915ba60cc1a5000e643cefbd012d19877039df756720e48e19b",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "9ecb8f5da4a56ca9732a7088f8ded8c3c153c290"
+    },
+    {
+      "role": "evaluator-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/extraction-attestations/evaluator.json",
+      "sha256": "aa8d8c5f77938e38f146227b229038d3546092a7cce29648a440ff252c8ba1b3",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "a2ef57c445035e89bcb60551eca0b50147f11a12"
+    },
+    {
+      "role": "matcher-attestation",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/matcher-attestation-v2-canonical.json",
+      "sha256": "1f9cc8a819f6e18d4d7a31c6879e96673d9068dabcb68a8b5565725be01b3119",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "9ecb8f5da4a56ca9732a7088f8ded8c3c153c290"
+    },
+    {
+      "role": "extraction-snapshot",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/extractions-manifest-v2.json",
+      "sha256": "cc5dd4dd8dd80fd8ea6477c52941206c55d213067cfed2f5a2b3d1cdf424d419",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "23994b27fadf1f53f0425cdfafd36b2255f9c4f6"
+    },
+    {
+      "role": "extraction-adjudication",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/extraction-adjudication-v2.json",
+      "sha256": "3dfed821bc6ef8f416ac6abdf3385aa57e2881facefe2555b54daebdbf97a645",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "abf36adc048fca0192a4ad45cd2867c5f855163a"
+    },
+    {
+      "role": "extraction-audits",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/extraction-protocol-audits.json",
+      "sha256": "b68c298f71ce498484203772f8009368c4fa026df3bafe42a5ab961f9325e614",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "a2ef57c445035e89bcb60551eca0b50147f11a12"
+    },
+    {
+      "role": "matcher-audits",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/matcher-protocol-audits.json",
+      "sha256": "fb31a47bd64d7d3a325508b51c21c134cc8a129860041b91f14971af450bdc91",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "9ecb8f5da4a56ca9732a7088f8ded8c3c153c290"
+    },
+    {
+      "role": "matcher-source-evidence",
+      "path": "tests/benchmark/v2-holdout/cloud-cases/matcher-attestation-v2-clean.json",
+      "sha256": "b03e2524db556d1911b6d433620f3d48e570d4579c966b873cc5fe6b6a698f84",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "a7c5b3ed16872e6ca83da883f12e6eba79bc2665"
+    },
+    {
+      "role": "extraction-normalizer",
+      "path": "tests/benchmark/normalize_extractions.py",
+      "sha256": "96e729a67afbb6d394ce31490f5c73baf60c7f630bab3a46108345e1a49e3c67",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "a2ef57c445035e89bcb60551eca0b50147f11a12"
+    },
+    {
+      "role": "match-normalizer",
+      "path": "tests/benchmark/normalize_matches.py",
+      "sha256": "d225f0b963878d924e90d4ac37a4406c6aeca14ec8c54ecf1bdeff01f187a886",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "9ecb8f5da4a56ca9732a7088f8ded8c3c153c290"
+    },
+    {
+      "role": "extraction-validator",
+      "path": "tests/benchmark/validate_extractions.py",
+      "sha256": "84001704062738ae8bc62e76ba71ac39b2b83931f6df2876a7bee49d133adce1",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "4033411a790ce357911397c095046a07546dac21"
+    },
+    {
+      "role": "match-validator",
+      "path": "tests/benchmark/validate_matches.py",
+      "sha256": "ecc196853fdb406657a6517ee600b307b7396ae1ac8b53b4ce4b1e05ce94fcf4",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "9ecb8f5da4a56ca9732a7088f8ded8c3c153c290"
+    },
+    {
+      "role": "evaluation-freezer",
+      "path": "tests/benchmark/freeze_evaluations.py",
+      "sha256": "55eb2f78ac11f536186c6e9e354203de76e59960c9469a2642865705dabcb3ed",
+      "cloud_branch": "cursor/blind-v2-holdout-17a0",
+      "cloud_commit": "268a3674216fb01c13b39aa360ad57141a938538"
+    }
+  ]
+}
