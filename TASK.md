@@ -255,6 +255,21 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - methodology tests and negative gates pass without changing runtime Skill files.
 - Evidence: methodology contract, ontology, validators/scorer, synthetic fixtures, unit results, and runtime diff check.
 
+#### T14.6 — Fresh benchmark v2 cloud holdout
+
+- [ ] Completed
+
+- Source requirement: Measure post-remediation unseen-case performance with methodology v2.
+- Owner files: `tests/benchmark/v2-holdout/`, benchmark result summaries, `TASK.md`, `CHANGELOG.md`, `README.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - runtime is frozen at `main@9d48b04`;
+  - unseen cases contain explicit SUT-visible Data A and separate oracle notes;
+  - heterogeneous gold and cloud artifacts satisfy methodology v2;
+  - each case uses an independent cloud SUT context;
+  - dual extraction and semantic matching precede scoring;
+  - preregistered metrics and failures are preserved without modifying gold.
+- Evidence: frozen manifests, cases/images, labels/adjudication, raw outputs, matches, score report, and cloud attestations.
+
 ## Task template
 
 Copy this block when adding work:

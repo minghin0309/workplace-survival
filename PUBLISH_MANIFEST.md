@@ -42,6 +42,8 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/score_semantic.py`
 - `tests/benchmark/test_methodology.py`
 - `tests/benchmark/validate_benchmark.py`
+- `tests/benchmark/v2-holdout/V2_CASE_BRIEF.md`
+- `tests/benchmark/v2-holdout/V2_HOLDOUT_PLAN.md`
 - `tests/blind/BLIND_CASE_BRIEF.md`
 - `tests/blind/BLIND_PLAN.md`
 - `tests/blind/GOLD_RUBRIC.md`
