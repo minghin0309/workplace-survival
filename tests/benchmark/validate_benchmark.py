@@ -379,7 +379,16 @@ def validate_adjudication(adjudication: dict, gold: dict) -> None:
         ):
             require(turn["turn_index"] == expected_index, f"{case_id}: adjudication turn order")
             require(
-                set(turn["labeler_votes"]) == {"gold-labeler-1", "gold-labeler-2", "gold-labeler-3"},
+                turn["labeler_model_families"] == ["claude", "grok", "kimi"],
+                f"{case_id}: adjudication model families",
+            )
+            labeler_votes = turn["labeler_votes"]
+            require(
+                isinstance(labeler_votes, list)
+                and len(labeler_votes) == 3
+                and len({vote["labeler_id"] for vote in labeler_votes}) == 3
+                and {vote["model_family"] for vote in labeler_votes}
+                == {"claude", "grok", "kimi"},
                 f"{case_id}: labeler vote coverage",
             )
             for field in ("route", "responsibility", "tone", "overall"):

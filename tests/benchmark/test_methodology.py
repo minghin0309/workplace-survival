@@ -644,7 +644,8 @@ class BenchmarkMethodologyTests(unittest.TestCase):
             turn = {
                 "turn_index": 1,
                 "route": "Normal mode",
-                "ratings": {"responsibility": "Green", "tone": "Green"},
+                "responsibility": "Green",
+                "tone": "Green",
                 "overall": "Green",
                 "required_question_concepts": [],
                 "allowed_question_concepts": [],
@@ -687,11 +688,21 @@ class BenchmarkMethodologyTests(unittest.TestCase):
                         "turn_adjudications": [
                             {
                                 "turn_index": 1,
-                                "labeler_votes": {
-                                    "gold-labeler-1": {},
-                                    "gold-labeler-2": {},
-                                    "gold-labeler-3": {},
-                                },
+                                "labeler_model_families": ["claude", "grok", "kimi"],
+                                "labeler_votes": [
+                                    {
+                                        "labeler_id": "gold-labeler-1",
+                                        "model_family": "claude",
+                                    },
+                                    {
+                                        "labeler_id": "gold-labeler-2",
+                                        "model_family": "grok",
+                                    },
+                                    {
+                                        "labeler_id": "gold-labeler-3",
+                                        "model_family": "kimi",
+                                    },
+                                ],
                                 "categorical_vote_distribution": {
                                     field: {"Green": 3}
                                     for field in ("route", "responsibility", "tone", "overall")
