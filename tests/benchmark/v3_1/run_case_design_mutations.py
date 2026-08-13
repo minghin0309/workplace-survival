@@ -24,9 +24,9 @@ MUTATIONS = {
         'mutated["answer_absent"] = False',
         'mutated["answer_absent"] = True',
     ),
-    "M4_OVERPROVISIONING_DISABLED": (
-        "MIN_CANDIDATES = 6",
-        "MIN_CANDIDATES = 3",
+    "M4_DUPLICATE_CONCEPT_ALLOWED": (
+        'require(len(concepts) == len(set(concepts)), "duplicate candidate concept")',
+        'require(True, "duplicate candidate concept")',
     ),
 }
 

@@ -93,6 +93,13 @@ class CandidateTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             contract.validate_design(values)
 
+    def test_extra_duplicate_candidate_fails(self):
+        values = valid_design()
+        duplicate = candidate(10, values[0]["missing_concept"])
+        values.append(duplicate)
+        with self.assertRaises(ValueError):
+            contract.validate_design(values)
+
 
 if __name__ == "__main__":
     unittest.main()
