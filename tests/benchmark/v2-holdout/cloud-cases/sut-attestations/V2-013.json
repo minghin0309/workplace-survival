@@ -1,0 +1,65 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-013",
+  "attested_at_utc": "2026-08-13T10:36:07Z",
+  "branch": "cursor/v2-013-sut-d4ae",
+  "base_branch": "cursor/blind-v2-holdout-17a0",
+  "output_commit": "12d1a62210a515137399859587e93598a7283f2f",
+  "context": {
+    "execution_environment": "Cursor Cloud",
+    "agent_role": "subagent",
+    "request_scope": "Workplace Survival SUT execution for multi-turn V2-013 only",
+    "turn_handling": "All three turns were processed sequentially with prior conversation context and currently effective Data A retained.",
+    "scoring_performed": false
+  },
+  "model": {
+    "name": "GPT-5.6 Sol"
+  },
+  "reads": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-013.json",
+      "algorithm": "sha256",
+      "hash": "750eb8e2cd9c1b077deae93a54d70b8b9573cc7038c095119022a7f4f36d6fc5"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "algorithm": "sha256",
+      "hash": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "algorithm": "sha256",
+      "hash": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "algorithm": "sha256",
+      "hash": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "algorithm": "sha256",
+      "hash": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-013.json",
+      "commit": "12d1a62210a515137399859587e93598a7283f2f",
+      "hash_algorithm": "git-blob-sha1",
+      "hash": "bdbd30227eb6d99ccfc1a60e6d26024848eed74a"
+    }
+  ],
+  "limitations": [
+    "The supplied SHA-256 read hashes were recorded from the task specification but were not independently recomputed because shell operations were restricted to Git.",
+    "The output hash is the Git blob SHA-1 available through the permitted Git operations, not a raw-file SHA-256."
+  ],
+  "isolation": {
+    "only_authorized_case_processed": true,
+    "other_benchmark_artifacts_read": false,
+    "repository_search_performed": false,
+    "additional_repo_files_read": false,
+    "subagents_spawned": false
+  },
+  "violation": false
+}
