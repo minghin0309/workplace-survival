@@ -1,0 +1,675 @@
+{
+  "schema_version": "v3",
+  "case_set_id": "v3-holdout-cloud-cases",
+  "cases": [
+    {
+      "case_id": "V3-001",
+      "category": "green_control",
+      "recipient_context": "Marek Dolins is Ilva's direct line manager and runs the funicular depot. He is the recipient of this message and he is the one who releases maintenance windows to operations.",
+      "data_a": {
+        "organization": "Vantsel Funicular Works",
+        "sender": "Ilva Rueckert, Maintenance Planner",
+        "recipient": "Marek Dolins, Depot Manager",
+        "channel": "Internal chat (Rivet)",
+        "situation_facts": [
+          "The end-for-end haul rope inspection for Car 2 is booked into the 14 September maintenance window, confirmed in writing by the inspection contractor Ferndown Rope Testing.",
+          "Ilva maintains the depot maintenance planning calendar and has already blocked that window in it.",
+          "The inspection needs the lower station platform closed for four hours, which operations agreed to in the weekly planning call minutes taken by Renata Kolbe.",
+          "No other work is affected during the window and the spare car is available."
+        ],
+        "ownership_map": {
+          "maintenance planning calendar": "Ilva Rueckert",
+          "release of maintenance windows to operations": "Marek Dolins",
+          "rope inspection execution": "Ferndown Rope Testing (contractor)"
+        },
+        "constraints": [
+          "Chat message, so keep it short",
+          "Marek has asked to be told about anything that closes a platform"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Quick sanity check before I post this in Marek's chat: \"Morning Marek - the Car 2 haul rope end-for-end is set for the 14 September window, Ferndown confirmed it in writing. It needs the lower platform shut for four hours, which operations agreed to in the planning call minutes. I have the window blocked in the calendar. Say the word if you would rather release it differently.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-002",
+      "category": "green_control",
+      "recipient_context": "Priya Sundaresan is Naomi's manager at the planetarium and is the recipient. Priya is the person who changes the published show grid.",
+      "data_a": {
+        "organization": "Corrindale Sky Theatre",
+        "sender": "Naomi Aldegheri, Show Programmer",
+        "recipient": "Priya Sundaresan, Programme Lead",
+        "channel": "Email",
+        "situation_facts": [
+          "The Tuesday late slot has averaged nineteen seats sold across its last six runs, a figure Naomi took from the box office export of 2 August.",
+          "The same show filled seventy-one percent of the room in the Thursday evening slot last season, from the same box office export.",
+          "Changes to the published show grid are made by Priya.",
+          "The projection technician Hal Verstraete has confirmed he is free on Thursday evenings for the rest of the season."
+        ],
+        "ownership_map": {
+          "published show grid changes": "Priya Sundaresan",
+          "slot proposals and audience figures": "Naomi Aldegheri",
+          "projection rota": "Hal Verstraete"
+        },
+        "constraints": [
+          "Priya prefers one clear ask per email",
+          "Keep it skimmable"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Does this read well enough to send? \"Hi Priya - the Tuesday late slot has averaged nineteen seats over its last six runs, from the 2 August box office export. The same show ran at seventy-one percent on Thursday evenings last season, and Hal has confirmed he is free Thursdays for the rest of the season. Would you be willing to move the slot to Thursday? The grid change is yours to make, so tell me either way and I will work to it.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-003",
+      "category": "green_control",
+      "recipient_context": "Greta Marchetti is Tobias's workshop supervisor and the recipient. She issues job cards and sets priority when two jobs collide.",
+      "data_a": {
+        "organization": "Halvern Organ Restorers",
+        "sender": "Tobias Ekwueme, Voicing Technician",
+        "recipient": "Greta Marchetti, Workshop Supervisor",
+        "channel": "Teams message",
+        "situation_facts": [
+          "Tobias is voicing the Swell reeds on the Marlowe Chapel instrument and that job card, issued by Greta, runs to the end of the month.",
+          "The site foreman Dermot Quill has asked Tobias to also re-leather two pallets on the Great chest this week.",
+          "Pallet re-leathering sits with the chest bench under Iona Fairhurst, per the workshop allocation list Greta maintains.",
+          "Tobias has no spare hours this week; the voicing job card fills them."
+        ],
+        "ownership_map": {
+          "reed voicing on the Marlowe Chapel instrument": "Tobias Ekwueme",
+          "pallet re-leathering": "Iona Fairhurst (chest bench)",
+          "job cards and priority": "Greta Marchetti"
+        },
+        "constraints": [
+          "Dermot is a client-side contact, so nothing blunt gets repeated to him",
+          "Short message, Greta is on site"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Happy with this? \"Hi Greta - Dermot has asked me to re-leather two Great chest pallets this week. My job card for the Marlowe Chapel voicing runs to month end and there are no spare hours in it, and re-leathering sits with Iona's bench on your allocation list. I have not promised Dermot anything. Do you want it passed to Iona, or do you want the voicing pushed back?\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-004",
+      "category": "material_information",
+      "recipient_context": "Anneke Feldbusch is Dev's regional manager and the recipient of this message. She covers the four solar carport sites Dev coordinates.",
+      "data_a": {
+        "organization": "Kelbrand Solar Carports",
+        "sender": "Dev Ranganathan, Site Coordinator",
+        "recipient": "Anneke Feldbusch, Regional Delivery Manager",
+        "channel": "Email",
+        "situation_facts": [
+          "The client contact at Brackwell Point, facilities lead Yusuf Okonjo, asked for the annual maintenance retainer to be cut by six percent after two visits slipped.",
+          "Dev has already told Yusuf on the phone that the six percent cut will apply from the next billing cycle.",
+          "The Kelbrand back office runs the billing cycles and will bill whatever figure it is handed.",
+          "Both slipped visits were caused by Kelbrand crew shortages, which Dev noted in the site diary."
+        ],
+        "ownership_map": {
+          "site visit scheduling for Brackwell Point": "Dev Ranganathan",
+          "client billing runs": "Kelbrand back office (Halcyon shared services)",
+          "panel supplier liaison": "Sunniva Krogh"
+        },
+        "constraints": [
+          "Under 120 words",
+          "Client-facing tone stays neutral because the thread may be forwarded"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Sense-check this for me: \"Hi Anneke - closing the loop on Brackwell Point. The retainer is coming down six percent from the next cycle. I have told Yusuf it is settled and asked the back office to reflect it, so nothing needed at your end.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-005",
+      "category": "material_information",
+      "recipient_context": "Lise Vanthournout is Ruben's operations manager and the recipient. Lise is the person who stands behind what the yard promises a customer.",
+      "data_a": {
+        "organization": "Tessaly Kiln Timber",
+        "sender": "Ruben Oseghale, Kiln Scheduler",
+        "recipient": "Lise Vanthournout, Operations Manager",
+        "channel": "Email",
+        "situation_facts": [
+          "Fennard Joinery has asked in writing when their quartersawn oak batch will come out of kiln three.",
+          "Kiln three had a failed heating element swapped and is back under load.",
+          "Ruben has drafted the reply to Fennard Joinery's buyer, Ottilie Brandt, and wants it checked before it leaves.",
+          "The moisture probes on the oak batch are still being read at each stage of the cycle.",
+          "Fennard Joinery is holding a bench open for the batch."
+        ],
+        "ownership_map": {
+          "kiln loading and cycle scheduling": "Ruben Oseghale",
+          "moisture probe readings": "Ruben Oseghale",
+          "what the yard promises a customer": "Lise Vanthournout"
+        },
+        "constraints": [
+          "The reply goes straight to the customer once checked",
+          "Plain wording, the buyer is not technical"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Read this back to me before it goes to Ottilie: \"Hi Ottilie - your oak is fine. Kiln three is running again after the element swap and we will have the batch out as soon as the cycle finishes. Nothing to worry about at your end.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-006",
+      "category": "material_information",
+      "recipient_context": "Suzanne Ibbetson is Farid's line manager at the curling centre and the recipient. She is the person Farid reports plant faults to.",
+      "data_a": {
+        "organization": "Ostrelle Curling Centre",
+        "sender": "Farid Lombaerts, Ice Plant Technician",
+        "recipient": "Suzanne Ibbetson, Facilities Manager",
+        "channel": "Internal chat",
+        "situation_facts": [
+          "The brine circulation pump ran through two sessions with a partly blocked strainer, so the sheet now sits about half a degree above set point.",
+          "A replacement strainer basket is on order from Vandergrift Refrigeration.",
+          "Farid has written a two-line service note about the warmer sheet and wants it circulated before the next booked session.",
+          "Farid owns the plant fault ticket and the wording of the note; the note has not gone anywhere yet."
+        ],
+        "ownership_map": {
+          "ice plant fault tickets": "Farid Lombaerts",
+          "outgoing notices": "Suzanne Ibbetson",
+          "refrigeration spares": "Vandergrift Refrigeration"
+        },
+        "constraints": [
+          "Two lines maximum",
+          "Plain language, no plant jargon"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Have a look at the wording before this goes out: \"The sheet is running above set point until the strainer basket is swapped, so expect slower ice. We will confirm once it is back to normal.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-007",
+      "category": "material_information",
+      "recipient_context": "Corin Halversen is Aoife's programme manager and the recipient. Corin is the person who decides whether soil intake at a cell is paused.",
+      "data_a": {
+        "organization": "Brandmoor Ground Recovery",
+        "sender": "Aoife Ntambwe, Site Chemist",
+        "recipient": "Corin Halversen, Programme Manager",
+        "channel": "Email",
+        "situation_facts": [
+          "Aoife wants to propose pausing new soil intake at the north cell.",
+          "Her draft states that hydrocarbon recovery on the north cell has fallen to seventy-one percent.",
+          "Pausing intake would send two inbound loads from Threlkeld Haulage to the south cell, which has room for them.",
+          "Corin decides whether intake is paused; Aoife puts forward process chemistry recommendations."
+        ],
+        "ownership_map": {
+          "north cell intake decision": "Corin Halversen",
+          "process chemistry recommendations": "Aoife Ntambwe",
+          "haulage rerouting": "Threlkeld Haulage dispatch"
+        },
+        "constraints": [
+          "Corin reads on a phone, so five lines at most",
+          "The client is not copied on this thread"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Can you check this before I fire it off? \"Corin - hydrocarbon recovery on the north cell is down to seventy-one percent. I would stop taking new soil there and push the Threlkeld loads to the south cell until it comes back up. Say the word and I will let dispatch know.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-008",
+      "category": "responsibility_boundary",
+      "recipient_context": "Peter Aszalos is Yusra's department lead in the sterile services unit and the recipient. He is one of the two people who settle supplier documentation exceptions.",
+      "data_a": {
+        "organization": "Halbrook Sterile Services",
+        "sender": "Yusra Domingo, Instrument Technician",
+        "recipient": "Peter Aszalos, Department Lead",
+        "channel": "Email",
+        "situation_facts": [
+          "A loan orthopaedic set arrived from Trentmoor Medical with one tray missing its count sheet.",
+          "Loan set validation and release are held by the validation officer Bettina Krol and recorded on the release register.",
+          "Supplier documentation exceptions are settled by Peter Aszalos together with the quality lead Idris Vanterpool.",
+          "Yusra has washed and inspected the trays, which is her own scope, and entered the discrepancy on the tracking sheet.",
+          "The surgical coordinator Rosalie Betancourt has asked for an update because a theatre list wants the set."
+        ],
+        "ownership_map": {
+          "washing and inspection": "Yusra Domingo",
+          "loan set validation and release": "Bettina Krol",
+          "supplier documentation exceptions": "Peter Aszalos with Idris Vanterpool",
+          "theatre list enquiries": "Rosalie Betancourt"
+        },
+        "constraints": [
+          "This email is a written record, so it must be precise",
+          "Peter wants discrepancies flagged within the same shift"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Give this a once-over before it goes to Peter: \"Peter - the Trentmoor loan set came in a count sheet short. I have validated the trays myself and released the set, and I have told Trentmoor we will waive the missing count sheet this once. Rosalie already knows it is good to go, so no action needed from you.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-009",
+      "category": "responsibility_boundary",
+      "recipient_context": "Delphine Achterberg is Iker's production manager and the recipient. She is the person who signs off shade tolerance at the dyeworks.",
+      "data_a": {
+        "organization": "Fennmark Textile Dyeworks",
+        "sender": "Iker Vasconcelos, Colour Matching Technician",
+        "recipient": "Delphine Achterberg, Production Manager",
+        "channel": "Email",
+        "situation_facts": [
+          "Lot 4188 of the merino yarn came out one shade band light against the standard, which Iker measured on the spectrophotometer and wrote on the lot card.",
+          "Shade tolerance sign-off is Delphine's; commitments to customers, including anything about cost, sit with the sales desk under Noor Baptiste.",
+          "The customer Ellery Knitwear is waiting for an answer on lot 4188.",
+          "Re-dyeing the lot would take one full vessel cycle, and Iker has a vessel free for it."
+        ],
+        "ownership_map": {
+          "shade measurement and lot cards": "Iker Vasconcelos",
+          "shade tolerance sign-off": "Delphine Achterberg",
+          "customer commitments and cost": "Noor Baptiste (sales desk)",
+          "vessel scheduling": "Iker Vasconcelos"
+        },
+        "constraints": [
+          "Delphine wants lot numbers quoted in every message",
+          "Ellery Knitwear must not be copied directly"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Check this over: \"Delphine - lot 4188 came out a band light. I am calling it acceptable so the lot can ship, and I have told Ellery that if they would rather, we will re-dye it at our own cost. No need to pull Noor into it.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-010",
+      "category": "responsibility_boundary",
+      "recipient_context": "Hanne Oduya is the pharmacy superintendent and Tomas's manager, and is the recipient. She compiles the quarterly review pack.",
+      "data_a": {
+        "organization": "Vallonde Compounding Pharmacy",
+        "sender": "Tomas Bergqvist, Compounding Technician",
+        "recipient": "Hanne Oduya, Pharmacy Superintendent",
+        "channel": "Email",
+        "situation_facts": [
+          "Three batch worksheets from the sterile suite are missing their yield entries and their second-check initials.",
+          "Completing batch worksheets, yields included, is Tomas's own task under the sterile suite procedure.",
+          "Second checks are initialled by whichever pharmacist is on the suite rota, currently Marguerite Ashbee.",
+          "Hanne has asked for the three worksheets before she builds the quarterly review pack.",
+          "Tomas has the batch records he needs to fill in the yields."
+        ],
+        "ownership_map": {
+          "batch worksheet completion and yields": "Tomas Bergqvist",
+          "second-check initials": "pharmacist on the suite rota (Marguerite Ashbee)",
+          "quarterly review pack": "Hanne Oduya"
+        },
+        "constraints": [
+          "Short email, Hanne is between dispensary shifts",
+          "Worksheets are regulated records, so nothing gets estimated"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Before I hit send: \"Hanne - the three sterile suite worksheets are still blank. The yields are really a management call and I would rather not guess at them, so I have left those boxes for you to fill in before the review. Chasing Marguerite for the second-check initials is your side too.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-011",
+      "category": "tone_boundary",
+      "recipient_context": "Olav Brenneman is Marta's contracts manager and her senior. He is the recipient and he owns contract renewals.",
+      "data_a": {
+        "organization": "Rjukan Snowline Contracts",
+        "sender": "Marta Szeliga, Route Supervisor",
+        "recipient": "Olav Brenneman, Contracts Manager",
+        "channel": "Team channel post",
+        "situation_facts": [
+          "The grit refill contract for the western routes lapsed, and two lorries stood empty at the depot on the last call-out.",
+          "Contract renewals sit with Olav; route call-outs and crews sit with Marta.",
+          "Marta raised the lapsing contract twice at the operations huddle and the depot clerk Renske Vogel minuted it both times.",
+          "Two western routes finished late as a result and the client Fjordvei Roads has asked why."
+        ],
+        "ownership_map": {
+          "contract renewals": "Olav Brenneman",
+          "route call-outs and crews": "Marta Szeliga",
+          "huddle minutes": "Renske Vogel",
+          "client response to Fjordvei Roads": "Olav Brenneman"
+        },
+        "constraints": [
+          "The channel is searchable and the client account manager reads it",
+          "Olav is Marta's manager"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Post-ready? \"Olav - this is the third time the refill contract has been left to rot and frankly it is becoming a joke. Two lorries sat empty because you could not be bothered to sign a renewal. If Fjordvei walk, that is on you, not on my crews.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-012",
+      "category": "tone_boundary",
+      "recipient_context": "Petra Illovszky coordinates the seismograph network and is Hyun-woo's manager. She is the recipient and she decides on firmware rollbacks.",
+      "data_a": {
+        "organization": "Marisco Seismograph Network",
+        "sender": "Hyun-woo Baek, Field Technician",
+        "recipient": "Petra Illovszky, Network Coordinator",
+        "channel": "Internal chat",
+        "situation_facts": [
+          "Station BR-12 has returned clipped traces since the digitiser firmware was rolled back, which Hyun-woo confirmed on the station health page.",
+          "Firmware decisions are Petra's; station visits and cabling are Hyun-woo's.",
+          "Hyun-woo thinks a visit with a spare digitiser would settle whether the fault is in the hardware, and he has a free slot for it.",
+          "Two data users have flagged the clipped traces to Petra."
+        ],
+        "ownership_map": {
+          "station visits and hardware swaps": "Hyun-woo Baek",
+          "firmware decisions": "Petra Illovszky",
+          "data user queries": "Petra Illovszky"
+        },
+        "constraints": [
+          "Petra asks for a clear recommendation in every fault message",
+          "Chat message, so a few lines only"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Is this alright to send? \"Sorry, sorry, me again. This is probably nothing and I am likely being an idiot, but BR-12 might maybe be clipping? Could easily be my fault for touching the cabling, no idea really. Ignore me if it is a stupid question, I know you are far busier than I am.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-013",
+      "category": "correction_state",
+      "recipient_context": "Ingrid Sandoval runs the coating lab and is Nils's manager. She is the recipient and she gives the go or no-go on a marginal coating run.",
+      "data_a": {
+        "organization": "Alderhoff Mirror Coating",
+        "sender": "Nils Trabelsi, Vacuum Chamber Operator",
+        "recipient": "Ingrid Sandoval, Coating Lab Manager",
+        "channel": "Email",
+        "situation_facts": [
+          "On the last pump-down the chamber held at a base pressure one decade above spec, which Nils recorded on the pump-down sheet.",
+          "Client runs are moved by the booking desk under Marisol Cheng; chamber operation and pump-down records are Nils's.",
+          "The next booked run is for Caldermoor Observatory.",
+          "Ingrid gives the go or no-go when a pump-down is marginal."
+        ],
+        "ownership_map": {
+          "chamber operation and pump-down records": "Nils Trabelsi",
+          "run bookings": "Marisol Cheng (booking desk)",
+          "go or no-go on a marginal run": "Ingrid Sandoval"
+        },
+        "constraints": [
+          "Ingrid wants the pressure figure in the message",
+          "Caldermoor Observatory is not copied"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Check this before I send it: \"Ingrid - base pressure came up a decade high on the last pump-down. I will push the Caldermoor run back a couple of slots and re-pump overnight.\"",
+          "image_path": null
+        },
+        {
+          "turn_index": 2,
+          "input_raw": "Actually drop the part about pushing the run back. Moving a booked run is Marisol's, not mine. Rework it.",
+          "image_path": null
+        },
+        {
+          "turn_index": 3,
+          "input_raw": "One more thing: the roughing pump seal was replaced this morning, so the next pump-down may well be clean. Does the message still stand?",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-014",
+      "category": "correction_state",
+      "recipient_context": "Bo Hjaltalin is the engagement lead on the Vasterly Foods job and Claudia's manager. He is the recipient, and client letters go out under his name only.",
+      "data_a": {
+        "organization": "Perrin & Ostrowski Forensic Accounting",
+        "sender": "Claudia Mwansa, Forensic Analyst",
+        "recipient": "Bo Hjaltalin, Engagement Lead",
+        "channel": "Email, then Teams",
+        "situation_facts": [
+          "The stock reconciliation on the Vasterly Foods engagement shows a variance Claudia has not finished tracing.",
+          "Claudia owns the reconciliation workings and the evidence index; Bo owns the engagement conclusions and anything that goes to the client.",
+          "The client's finance director Umberto Fadiga has asked for a progress note.",
+          "Nothing has been sent to the client on this yet."
+        ],
+        "ownership_map": {
+          "reconciliation workings": "Claudia Mwansa",
+          "evidence index": "Claudia Mwansa",
+          "engagement conclusions and client letters": "Bo Hjaltalin"
+        },
+        "constraints": [
+          "Firm rule: no conclusion leaves the file before it is stood up in the workings",
+          "Umberto Fadiga is not copied on internal messages"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Sense check please: \"Bo - the stock recon is showing a twelve percent variance and I think it is deliberate. I have told Umberto we will have an answer for him shortly.\"",
+          "image_path": null
+        },
+        {
+          "turn_index": 2,
+          "input_raw": "Hold on. The twelve percent came off my first pass and I have not stood it up yet, so take the figure out, and take the deliberate line out too.",
+          "image_path": null
+        },
+        {
+          "turn_index": 3,
+          "input_raw": "This is going as a Teams message now rather than an email, so it needs to be much shorter.",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-015",
+      "category": "correction_state",
+      "recipient_context": "Jonty Kirkbride is the plant manager and Elsa's manager. He is the recipient and he accepts or rejects supplier substitutions.",
+      "data_a": {
+        "organization": "Tarnwick Sauna Manufacture",
+        "sender": "Elsa Rautavaara, Assembly Lead",
+        "recipient": "Jonty Kirkbride, Plant Manager",
+        "channel": "Email",
+        "situation_facts": [
+          "The aspen bench blanks from Kvalstrom Timber arrived in a substitute grade.",
+          "Supplier substitutions are accepted or rejected by Jonty; assembly sequencing and goods-in checks are Elsa's.",
+          "Two cabins are part-built and waiting on bench blanks.",
+          "Kvalstrom's representative Aleksi Pohjola is waiting to hear whether the blanks stay on site."
+        ],
+        "ownership_map": {
+          "assembly sequencing": "Elsa Rautavaara",
+          "timber goods-in checks": "Elsa Rautavaara",
+          "supplier substitutions": "Jonty Kirkbride"
+        },
+        "constraints": [
+          "Jonty reads the first two lines and stops",
+          "Anything said to Kvalstrom has to match what is said internally"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Look this over: \"Jonty - Kvalstrom sent a substitute grade for the aspen blanks. Two cabins are waiting on them. Can you tell me whether to take them or send them back?\"",
+          "image_path": null
+        },
+        {
+          "turn_index": 2,
+          "input_raw": "I should have said: I already told Aleksi we would take them so the line kept moving. Redo it so it matches what I have actually done.",
+          "image_path": null
+        },
+        {
+          "turn_index": 3,
+          "input_raw": "And tighten it right down, he will not read past the first two lines.",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-016",
+      "category": "recipient_routing",
+      "recipient_context": "Marc Delahaye is Ruth's service manager and the recipient of this message. His remit is service delivery, crew allocation and the grower relationship; he does not raise or amend purchase orders.",
+      "data_a": {
+        "organization": "Cavallini Orchard Frost Systems",
+        "sender": "Ruth Ogunlade, Field Service Coordinator",
+        "recipient": "Marc Delahaye, Service Manager",
+        "channel": "Email",
+        "situation_facts": [
+          "A frost fan gearbox at Pellworth Orchards needs a pinion that is not on purchase order 5512.",
+          "Purchase order amendments are raised by the procurement lead Wilma Trescothick, who is not on this thread.",
+          "Ruth has the part number and the supplier quote reference ADS-2290 from Ardennes Drive Systems.",
+          "Booking the service visit once the part is on order is Ruth's own job.",
+          "Pellworth Orchards want the fan running before the next frost window."
+        ],
+        "ownership_map": {
+          "crew allocation and service visits": "Ruth Ogunlade",
+          "purchase order amendments": "Wilma Trescothick (procurement lead)",
+          "part identification and supplier quotes": "Ruth Ogunlade",
+          "grower relationship": "Marc Delahaye"
+        },
+        "constraints": [
+          "One message only, there is no time to chase a second time",
+          "The grower is copied on nothing"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Ready to send this to Marc - worth a look first? \"Marc - can you amend PO 5512 to add the gearbox pinion, quote ref ADS-2290 from Ardennes? Pellworth need the fan back before the next frost window. Once you have raised it I will book the visit.\"",
+          "image_path": null
+        }
+      ],
+      "image_spec": null
+    },
+    {
+      "case_id": "V3-017",
+      "category": "image_only",
+      "recipient_context": "Dana Miyashiro is the duty engineer on shift and is senior to Priit. She is the recipient and she decides whether a bore is put into reduced ventilation mode.",
+      "data_a": {
+        "organization": "Ashcombe Tunnel Ventilation",
+        "sender": "Priit Kallaste, Ventilation Technician",
+        "recipient": "Dana Miyashiro, Duty Engineer",
+        "channel": "Internal chat, draft pasted as a screenshot",
+        "situation_facts": [
+          "Priit has drafted a message about a jet fan fault in the northbound bore.",
+          "The draft exists only inside the attached screenshot; Priit has not typed it out anywhere else.",
+          "Jet fan inspections are Priit's; the decision to put a bore into reduced ventilation mode is Dana's."
+        ],
+        "ownership_map": {
+          "jet fan inspections": "Priit Kallaste",
+          "ventilation mode decisions": "Dana Miyashiro"
+        },
+        "constraints": [
+          "The draft text is available only in the attached image",
+          "Dana is mid-shift and reads on a control room screen"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "The draft is in the screenshot attached - can you review it before I send it? I have not got the text anywhere else.",
+          "image_path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-017.png"
+        }
+      ],
+      "image_spec": {
+        "renderer": "deterministic_local_bitmap",
+        "format": "png",
+        "width": 1080,
+        "height": 720,
+        "background": "#f5f3ee",
+        "foreground": "#14161a",
+        "font": "pillow_bundled_default_scalable",
+        "font_size": 34,
+        "seed": 20260813,
+        "text_in_pixels_only": true
+      }
+    },
+    {
+      "case_id": "V3-018",
+      "category": "image_only",
+      "recipient_context": "Sofia Lindenberg is Owen's regional manager and the recipient. She is the person who approves cost commitments and revised lift plans.",
+      "data_a": {
+        "organization": "Halvard Marine Winch Service",
+        "sender": "Owen Achebe, Service Engineer",
+        "recipient": "Sofia Lindenberg, Regional Manager",
+        "channel": "Email, draft attached as an exported image",
+        "situation_facts": [
+          "A winch drum at Kestrel Yard was found out of tolerance during an overhaul and the lift plan was revised as a result.",
+          "The draft exists only inside the attached image, which Owen exported from his phone; he has not retyped it.",
+          "Winch overhauls and yard liaison are Owen's; cost commitments and lift plan approval are Sofia's."
+        ],
+        "ownership_map": {
+          "winch overhauls": "Owen Achebe",
+          "yard liaison": "Owen Achebe",
+          "cost commitments and lift plan approval": "Sofia Lindenberg"
+        },
+        "constraints": [
+          "The draft text is available only in the attached image",
+          "The yard's own safety file will end up holding whatever is sent"
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "input_raw": "Attached is the draft, image only - please review it before I send. I have not retyped it anywhere.",
+          "image_path": "tests/benchmark/v3-holdout/cloud-cases/images/V3-018.png"
+        }
+      ],
+      "image_spec": {
+        "renderer": "deterministic_local_bitmap",
+        "format": "png",
+        "width": 1080,
+        "height": 720,
+        "background": "#f5f3ee",
+        "foreground": "#14161a",
+        "font": "pillow_bundled_default_scalable",
+        "font_size": 34,
+        "seed": 20260813,
+        "text_in_pixels_only": true
+      }
+    }
+  ]
+}
