@@ -1,0 +1,33 @@
+{
+  "schema_version": "v2",
+  "case_id": "V2-014",
+  "generated_at_utc": "2026-08-13T10:38:43Z",
+  "provenance": {
+    "sut": "workplace-survival",
+    "model": "GPT-5.6 Sol",
+    "branch": "cursor/blind-v2-holdout-17a0",
+    "input": {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-014.json",
+      "sha256": "0ebc2ff0869692a91b8c4dd86b42808ce3afd668c7a49e10b5f5bd586120a718"
+    },
+    "runtime": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  "output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Threadneedle corridor extension application was submitted on 11 July.\n- No written decision, conditional approval, or reference to a decision has been received, and the regulator's portal showed the application as under assessment on 3 December.\n- Ferran's report that the application was \"basically approved\" is unverified and unsupported by a named source, document, email, or case reference.\n- Q1 flight planning on the Threadneedle corridor cannot begin without a written decision.\n- Ines will restate Marisol's wording to investors on 5 December.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says the extension \"has been approved\" and \"we can plan Q1 flights,\" but Data A confirms that no written decision has been received, the portal still shows under assessment, and Q1 planning cannot begin without a written decision.\n- Communication risk: The wording could cause Ines to tell investors that approval has been granted and that Q1 planning can begin when neither statement is supported; both claims must be corrected.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and cooperative, including a conditional offer to help with the slide.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nInes - the Threadneedle corridor extension application remains under assessment. We have not received a written decision, and we cannot begin Q1 flight planning on that corridor until we do. Happy to write the slide if useful. Marisol"
+}
