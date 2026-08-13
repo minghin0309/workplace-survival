@@ -1,0 +1,50 @@
+{
+  "schema_version": "v2",
+  "role": "labeler-2",
+  "context_id": "bc-ad97cf43-3536-51e5-8449-36f664077d45",
+  "model_id": "unverified",
+  "model_family": "grok",
+  "cloud_branch": "cursor/gold-labeler-2-rerun-7d45",
+  "cloud_commit": "30bc76b0f569d57a373d91c25bbf4cf14ec176fb",
+  "labels_path": "tests/benchmark/v2-holdout/cloud-cases/gold-labeler-2-rerun.json",
+  "labels_sha256": "3d927fa748f90c6bc264b30d23354855968f70ee01b25f5c54d5f5dad2976eb8",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/cases.json",
+      "sha256": "bc9908ce199f66b1043bb43c1a38dbccd90e854c58972733d1d27abf58f5e828"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "sha256": "9ee25ed5257e7159867881013a8c0b9f37c245ed87fff53edc38963356248e24"
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "sha256": "3f8b87a120d30780479744db866d7dc636fa4c7229918995de38fca5c7347dab"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "images_opened": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-017.png",
+      "opened_directly": true
+    },
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/images/V2-018.png",
+      "opened_directly": true
+    }
+  ],
+  "isolation": "No non-allowlisted path content, filename listing, search result, prior label, gold, scorer, test, plan, methodology, oracle, runtime, history, PR, or output was accessed. Repository reads were limited to the five allowlisted paths. Git was used only to create this output branch, stage the two output files, commit, and push. SHA-256 hashing was applied only to the five allowlisted inputs and the labels output file. Cloud run identity was taken from cursor-cloud run-info, not from repository files.",
+  "limitations": [
+    "No filesystem audit proof is available; isolation is attested from this run's intended tool use, not from an independent machine-verified access log.",
+    "Machine model ID is unverified: cursor-cloud run-info returned originalModelName null, so model_id is recorded as unverified rather than guessed.",
+    "context_id is the bcId from cursor-cloud run-info (bc-ad97cf43-3536-51e5-8449-36f664077d45). That metadata is run-identity metadata, not a filesystem audit of repository reads.",
+    "Direct Read of both PNGs returned environment image descriptions rather than a pixel-level OCR transcript; draft text used for labeling is the text visible in those opened images."
+  ]
+}
