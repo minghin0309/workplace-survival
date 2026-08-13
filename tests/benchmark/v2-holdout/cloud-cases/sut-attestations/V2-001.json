@@ -1,0 +1,58 @@
+{
+  "schema_version": "v2",
+  "artifact": "sut-attestation",
+  "case_id": "V2-001",
+  "attested_at_utc": "2026-08-13T10:35:43Z",
+  "context_provenance": {
+    "input_path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-001.json",
+    "recipient_context": "Supplied by input.recipient_context and treated as case context.",
+    "data_a": "Supplied by input.data_a and treated as Data A.",
+    "turn_inputs": "Supplied sequentially by input.turns[].input_raw while preserving case state."
+  },
+  "model_provenance": {
+    "requested_model_id": "gpt-5.6-sol-high-fast",
+    "machine_model_id": "unverified",
+    "run_info_bc_id": "bc-0d4027c2-e23b-5219-91e7-4cb52e7d3086",
+    "run_info_url": "https://cursor.com/agents/bc-0d4027c2-e23b-5219-91e7-4cb52e7d3086",
+    "machine_model_resolution": "Cursor Cloud run-info returned originalModelName as null."
+  },
+  "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+  "cloud_branch": "cursor/v2-001-workplace-survival-3086",
+  "cloud_commit": "b8bbacd7e056650b6f40683c0e45aebcc73bd1c9",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v2-holdout/cloud-cases/sut-inputs/V2-001.json",
+      "sha256": "84a11d742f17f3cde561c0b30406bfca7b2c9f71368416bd77fbe3946a3adec3"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "output": {
+    "path": "tests/benchmark/v2-holdout/cloud-cases/sut-raw/V2-001.json",
+    "sha256": "482ea525df8a884f161fc250c18163b7cc92d875af32565e37d1295d7251ee0e"
+  },
+  "limitations": [
+    "The input artifact did not contain generator_context_id, so the raw output records it as null.",
+    "The machine model ID could not be verified because Cursor Cloud run-info returned no original model name."
+  ],
+  "isolation": {
+    "case_scope": "V2-001 only",
+    "repository_reads": "Restricted to the five allowlisted source/runtime files and the generated raw output for hashing.",
+    "excluded": "No gold, rubric, ontology, tests, scorer, plans, methodology, oracle, other case inputs or outputs, history, diffs, or pull requests were accessed.",
+    "evaluation": "No scoring or evaluation was performed."
+  }
+}
