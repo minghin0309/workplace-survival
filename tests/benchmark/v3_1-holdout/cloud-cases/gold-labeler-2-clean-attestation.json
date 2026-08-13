@@ -1,0 +1,88 @@
+{
+  "attestation_id": "gold-labeler-2-clean-attestation",
+  "labeler_id": "gold-labeler-2",
+  "label_set_id": "gold-labeler-2-clean",
+  "labels_file": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-2-clean.json",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "envelope_version": "v3.1",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "working_branch": "cursor/gold-labeler-2-v31-clean-ac12",
+  "attested_at": "2026-08-13",
+  "reads": {
+    "policy": "exactly five repository-relative paths read; no fallback, listing, search, glob, MCP, runtime/Skill, oracle/design/mutations/tools/brief/plan/tests/attestation artifacts, other label sets, history, PR data, or external sources accessed",
+    "files": [
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/cases.json",
+        "sha256": "5bb06cb933b56f228a4af42336361c9bd4feed49157d389b1d9bbb1a16e1128a"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+        "sha256": "50b52b2b00f4b91107620fa0e365d63a920d9972326365c362d1754cc236d55c"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png",
+        "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa"
+      },
+      {
+        "path": "tests/blind/GOLD_RUBRIC.md",
+        "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+      },
+      {
+        "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+        "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+      }
+    ],
+    "read_count": 5
+  },
+  "validation": {
+    "coverage": {
+      "cases_labeled": 18,
+      "cases_required": 18,
+      "turns_labeled": 24,
+      "turns_required": 24,
+      "case_ids_match_source_order": true,
+      "turn_ids_match_source_order": true,
+      "ok": true
+    },
+    "subsets": {
+      "required_question_topics_subset_of_allowed_every_turn": true,
+      "required_revision_facts_subset_of_allowed_every_turn": true,
+      "all_question_tokens_canonical_ontology_concepts": true,
+      "all_revision_tokens_canonical_ontology_concepts": true,
+      "all_invariant_tokens_canonical": true,
+      "all_token_lists_sorted": true,
+      "max_three_required_question_topics_per_turn": true,
+      "ok": true
+    },
+    "overall": {
+      "derivation_rule": "Red > Gray > Yellow > Green",
+      "all_rated_turns_match_derivation": true,
+      "null_ratings_only_on_nonrated_routes": true,
+      "distribution": {"Green": 10, "Yellow": 5, "Red": 9, "Gray": 0},
+      "ok": true
+    },
+    "images": {
+      "image_turns": ["V31-008-T1", "V31-018-T1"],
+      "both_images_opened_and_labeled": true,
+      "sha256_matches_image_spec": {
+        "V31-008-T1": true,
+        "V31-018-T1": true
+      },
+      "no_image_token_guess_invariant_present_on_image_turns": true,
+      "illegible_values_held_as_placeholders_not_guessed": true,
+      "ok": true
+    }
+  },
+  "labeling_notes": {
+    "routes": "All 24 turns are Normal mode: every recipient is Marit Osgarde, workroom manager and direct line manager; every turn has an identifiable message (draft text, attached image, or an authoritative correction plus prior draft) and usable background. No Intake, Scope, Message-template, or Limited-background trigger appears.",
+    "question_concepts_used": ["approval-authority", "confirmed-deadline", "confirmed-owner", "current-root-cause", "operational-impact"],
+    "revision_concepts_used": ["no-revision", "placeholder-unknown-value", "preserve-confirmed-deadline", "preserve-confirmed-owner", "preserve-intended-recipient", "remove-unsafe-commitment", "remove-unsupported-accusation"],
+    "ontology_gaps": "Missing values without a canonical question concept (V31-007 goods-in log reference, V31-008 exact crown circumference, V31-009 named recovery route) are carried as placeholder-unknown-value revision facts rather than forced onto a non-fitting concept.",
+    "image_findings": "V31-008 docket: crown-circumference figure illegible (ink ran in the annexe press room); Menkes require one exact circumference and release the Friday 10 October 08:00 slot on an incomplete form. V31-018 draft note: coordinator commits a write-off and personal credit-note signature, commits Ilva and Callum to an unagreed Saturday shift, absorbs the Ashvale rush charge, insults Dane Krivec, and shuts the manager out."
+  },
+  "violations": {
+    "coverage_shortfall": false,
+    "extra_paths_attempted": false,
+    "violation_flag": false
+  }
+}
