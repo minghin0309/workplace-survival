@@ -226,6 +226,20 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - each remediation rule is protected by a killed mutant.
 - Evidence: triage, regression summary, remediation mutant diffs, raw outputs, and oracle results.
 
+#### T14.4 — Evidence-complete remediation acceptance
+
+- [ ] Completed
+
+- Source requirement: Validate remediation runtime with the T13.10 evidence contract before merging to `main`.
+- Owner files: suite result files, `tests/evidence/`, remediation reports, `README.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - Functional TC-01–TC-114 and every active targeted suite are rerun;
+  - all 13 image cases are opened and hash-linked;
+  - every PASS has raw input/output, assertions, runtime commit, and exact result citation;
+  - package validation is reported separately from behavioral cases;
+  - summary-only remediation results are replaced by evidence-complete current results.
+- Evidence: remediation acceptance plan, full evidence JSON, package record, validator output, and updated acceptance report.
+
 ## Task template
 
 Copy this block when adding work:

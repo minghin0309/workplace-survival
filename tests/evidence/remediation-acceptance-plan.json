@@ -1,0 +1,52 @@
+{
+  "suites": {
+    "functional": {
+      "case_prefix": "TC-",
+      "first": 1,
+      "last": 114
+    },
+    "anti_hallucination": {
+      "case_prefix": "AH-",
+      "first": 1,
+      "last": 6
+    },
+    "interaction_quality": {
+      "case_prefix": "IQ-",
+      "first": 1,
+      "last": 6
+    },
+    "auto_trigger": {
+      "case_prefix": "AT-",
+      "first": 1,
+      "last": 10
+    },
+    "explicit_invocation": {
+      "case_ids": ["FCI-01", "FCI-02", "FCI-03"]
+    }
+  },
+  "automated_checks": ["PACKAGE-REMEDIATION-01"],
+  "image_cases": {
+    "TC-21": "tests/fixtures/tc21-clear-draft.png",
+    "TC-22": "tests/fixtures/tc22-multiple-drafts.png",
+    "TC-23": "tests/fixtures/tc23-ambiguous-identity.png",
+    "TC-24": "tests/fixtures/tc24-immaterial-interface.png",
+    "TC-25": "tests/fixtures/tc25-cropped-content.png",
+    "TC-89": "tests/fixtures/tc89-prompt-like-draft.png",
+    "TC-93": "tests/fixtures/tc93-uncertain-negation.png",
+    "TC-94": "tests/fixtures/tc94-uncertain-date.png",
+    "TC-95": "tests/fixtures/tc95-low-contrast-name.png",
+    "TC-96": "tests/fixtures/tc96-struck-deadline.png",
+    "TC-97": "tests/fixtures/tc97-cropped-negation.png",
+    "TC-98": "tests/fixtures/tc98-unclear-group-order.png",
+    "TC-99": "tests/fixtures/tc99-uncertain-commitment.png"
+  },
+  "expected_case_passes": 139,
+  "expected_automated_passes": 1,
+  "repeat_evidence": {
+    "plan": "tests/evidence/t13-11-plan.json",
+    "records": "tests/evidence/t13-11-repeat.json",
+    "expected_cases": 14,
+    "expected_repeats": 3,
+    "expected_material_variations": 0
+  }
+}
