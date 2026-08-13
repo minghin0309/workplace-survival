@@ -1,5 +1,6 @@
 # Benchmark v2 Gold Freeze Results
 
+- Status: `INVALID_PROTOCOL`
 - Frozen at: `2026-08-13T07:48:28.422888Z`
 - Runtime: `main@9d48b048d083507c20f2714b21053d36b68d6366`
 - Cases: 18
@@ -11,6 +12,8 @@
 
 Validation:
 
+- This freeze passed the mechanical validator but was invalidated after transcript audit showed that gold labeler 2 read prohibited benchmark plan, methodology, scorer, and test files while its attestation claimed otherwise.
+- It must not be used as the parent of SUT output or evaluation manifests.
 - 17 methodology unit and negative tests passed.
 - Canonical normalization was idempotent.
 - Route, rating, question, revision, and invariant decisions were unchanged.

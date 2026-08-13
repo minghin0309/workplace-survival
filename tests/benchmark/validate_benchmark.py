@@ -69,6 +69,38 @@ def unwrap_document(document: object, collection_key: str) -> list[dict]:
     return document[collection_key]
 
 
+def validate_not_invalidated(manifest_path: Path) -> None:
+    registry_path = manifest_path.parent / "invalidated-manifests.json"
+    if not registry_path.is_file():
+        return
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    require(
+        set(registry) == {"schema_version", "manifests"}
+        and registry["schema_version"] == "v2"
+        and isinstance(registry["manifests"], list),
+        "manifest invalidation registry schema",
+    )
+    manifest_hash = digest(manifest_path)
+    for item in registry["manifests"]:
+        require(
+            set(item)
+            == {
+                "path",
+                "sha256",
+                "status",
+                "reason",
+                "evidence_context_id",
+            }
+            and item["status"] == "INVALID_PROTOCOL"
+            and re.fullmatch(r"[0-9a-f]{64}", item["sha256"]) is not None
+            and isinstance(item["reason"], str)
+            and bool(item["reason"]),
+            "manifest invalidation entry schema",
+        )
+        if item["sha256"] == manifest_hash:
+            raise ValueError(f"manifest invalidated: {item['reason']}")
+
+
 def validate_cases(cases: list[dict], notes: list[dict]) -> None:
     case_ids = [item["case_id"] for item in cases]
     require(len(case_ids) == len(set(case_ids)), "duplicate case IDs")
@@ -426,7 +458,9 @@ def main() -> None:
     cases = unwrap_document(cases_document, "cases")
     notes = unwrap_document(notes_document, "notes")
     gold = json.loads(Path(sys.argv[3]).read_text(encoding="utf-8"))
-    manifest = json.loads(Path(sys.argv[4]).read_text(encoding="utf-8"))
+    manifest_path = Path(sys.argv[4])
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    validate_not_invalidated(manifest_path)
     validate_cases(cases, notes)
     validate_gold(gold)
     validate_manifest(manifest)

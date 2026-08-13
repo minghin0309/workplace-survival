@@ -454,6 +454,34 @@ class BenchmarkMethodologyTests(unittest.TestCase):
             entry["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
             validate_benchmark.validate_manifest(manifest)
 
+    def test_invalidated_manifest_is_rejected_by_hash(self):
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory)
+            manifest_path = directory / "gold-manifest.json"
+            manifest_path.write_text('{"immutable": true}\n')
+            import hashlib
+
+            manifest_hash = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+            (directory / "invalidated-manifests.json").write_text(
+                json.dumps(
+                    {
+                        "schema_version": "v2",
+                        "manifests": [
+                            {
+                                "path": str(manifest_path),
+                                "sha256": manifest_hash,
+                                "status": "INVALID_PROTOCOL",
+                                "reason": "Prohibited file access.",
+                                "evidence_context_id": "context-1",
+                            }
+                        ],
+                    }
+                )
+                + "\n"
+            )
+            with self.assertRaisesRegex(ValueError, "manifest invalidated"):
+                validate_benchmark.validate_not_invalidated(manifest_path)
+
     def test_attestation_family_mismatch_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             directory = Path(directory)
