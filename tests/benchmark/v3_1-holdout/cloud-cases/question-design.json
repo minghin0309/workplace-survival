@@ -1,0 +1,531 @@
+{
+  "schema_version": "v3.1-question-design",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "access": "Construction-only. This file is never exposed to gold labelers, to SUT contexts, or to any scoring input. It carries the absent answers and is therefore the one artefact in this directory that would invalidate the holdout if it leaked.",
+  "candidate_case_ids": [
+    "V31-004",
+    "V31-005",
+    "V31-006",
+    "V31-007",
+    "V31-008",
+    "V31-009"
+  ],
+  "mutation_types": [
+    "REMOVE_DEPENDENCY",
+    "SUPPLY_ANSWER",
+    "ADD_DOMINANT_RED"
+  ],
+  "base_state_contract": {
+    "dependency_present": true,
+    "answer_absent": true,
+    "question_required": true,
+    "direct_red_defects": [],
+    "clean_question_candidate": true
+  },
+  "transition_contract": {
+    "REMOVE_DEPENDENCY": "dependency_present becomes false; the requirement or decision that forced the answer is gone, so question_required becomes false and the case stops being a question candidate.",
+    "SUPPLY_ANSWER": "answer_absent becomes false; the main purpose can be met without asking, so question_required becomes false and the case stops being a question candidate.",
+    "ADD_DOMINANT_RED": "an independent direct Red defect is introduced; dependency and absence are untouched but the case is rejected as a clean question candidate."
+  },
+  "entries": [
+    {
+      "case_id": "V31-004",
+      "primary_concept_rank": 1,
+      "missing_concept": "approval-authority",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The 310 pound variation was initialled by Rosalind Vehn, studio principal, on sign-off sheet SS-31-114 on Tuesday 7 October.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "image_only_draft": false,
+      "competing_unknowns": [],
+      "dependency_locus": "The Ferrowhite trade desk rejects a release request that names no individual authoriser for a variation above 250 pounds, and the reservation lapses at 16:00 on Thursday 9 October.",
+      "why_placeholder_unsafe": "A bracketed placeholder or 'authorised internally' is exactly the entry the trade desk rejects; the reservation then lapses and Friday finishing loses its matched shade.",
+      "why_qualification_unsafe": "Hedging the authorisation ('I believe it is approved') does not put a name on the form and does not release the stock.",
+      "why_omission_unsafe": "Dropping the authoriser line leaves the request incomplete, which is the one thing that makes the request fail.",
+      "absent_answer_tokens": [
+        "Rosalind Vehn",
+        "SS-31-114",
+        "studio principal"
+      ],
+      "base_state": {
+        "dependency_present": true,
+        "answer_absent": true,
+        "question_required": true,
+        "direct_red_defects": [],
+        "clean_question_candidate": true
+      },
+      "mutations": [
+        {
+          "mutation_id": "V31-004-M1",
+          "mutation_type": "REMOVE_DEPENDENCY",
+          "target": "data_a.known_facts and data_a.constraints",
+          "edit": "Replace the named-authoriser requirement with an account-only release rule and delete the variation from the request.",
+          "inserted_text": "Ferrowhite release reserved stock against the account number alone; their trade desk asks for no authoriser and there is no variation on this reservation.",
+          "resulting_state": {
+            "dependency_present": false,
+            "answer_absent": true,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "With no named-authoriser rule and no variation, nothing in the message turns on who authorised anything, so the question becomes unnecessary."
+        },
+        {
+          "mutation_id": "V31-004-M2",
+          "mutation_type": "SUPPLY_ANSWER",
+          "target": "data_a.known_facts",
+          "edit": "Add the authoriser to the visible background.",
+          "inserted_text": "The 310 pound variation was initialled by Rosalind Vehn, studio principal, on sign-off sheet SS-31-114 on Tuesday 7 October.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": false,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "The release request can now be completed and sent without asking the writer anything."
+        },
+        {
+          "mutation_id": "V31-004-M3",
+          "mutation_type": "ADD_DOMINANT_RED",
+          "target": "turns[0].draft_message",
+          "edit": "Append an unsafe commitment made outside the coordinator's authority and already given to the supplier.",
+          "inserted_text": "I have already told Ferrowhite that we accept the 310 pounds and that we will pay their restocking fee if the release runs late, so put my name against it.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": true,
+            "question_required": true,
+            "direct_red_defects": [
+              "unsafe-commitment-beyond-authority"
+            ],
+            "clean_question_candidate": false
+          },
+          "rationale": "A cost commitment the writer cannot make, already given to a supplier, dominates the case; it is no longer a clean question candidate."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "primary_concept_rank": 2,
+      "missing_concept": "confirmed-deadline",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "Marchmont Enclosure goods-in confirmed one collection window: Friday 17 October, 06:45 to 08:45.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "image_only_draft": false,
+      "competing_unknowns": [],
+      "dependency_locus": "Cranthorpe Courier take a booking only against one exact date and one two-hour window, and Marchmont turn away anything outside the window their goods-in desk confirmed.",
+      "why_placeholder_unsafe": "Cranthorpe hold no open bookings, so a placeholder date books nothing at all.",
+      "why_qualification_unsafe": "'As soon as possible' is not a bookable window and would send the crates outside the accepted slot, triggering the re-presentation fee.",
+      "why_omission_unsafe": "Asking the manager to book without the window makes her guess or come back, and the purpose of the message is to get the slot booked today.",
+      "absent_answer_tokens": [
+        "Friday 17 October",
+        "06:45",
+        "08:45"
+      ],
+      "base_state": {
+        "dependency_present": true,
+        "answer_absent": true,
+        "question_required": true,
+        "direct_red_defects": [],
+        "clean_question_candidate": true
+      },
+      "mutations": [
+        {
+          "mutation_id": "V31-005-M1",
+          "mutation_type": "REMOVE_DEPENDENCY",
+          "target": "data_a.known_facts",
+          "edit": "Replace the window-bound booking rules with open-ended ones on both sides.",
+          "inserted_text": "Cranthorpe take an open 'next available collection' instruction with no date or window, and Marchmont goods-in accept a delivery at any hour they are open, with no confirmed window and no re-presentation fee.",
+          "resulting_state": {
+            "dependency_present": false,
+            "answer_absent": true,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "Nothing in the booking now depends on the confirmed window, so the question is unnecessary."
+        },
+        {
+          "mutation_id": "V31-005-M2",
+          "mutation_type": "SUPPLY_ANSWER",
+          "target": "data_a.known_facts",
+          "edit": "Add the confirmed window to the visible background.",
+          "inserted_text": "Marchmont Enclosure goods-in confirmed one collection window on Monday 6 October: Friday 17 October, 06:45 to 08:45.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": false,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "The booking request is complete and safe to send without asking anything."
+        },
+        {
+          "mutation_id": "V31-005-M3",
+          "mutation_type": "ADD_DOMINANT_RED",
+          "target": "turns[0].draft_message",
+          "edit": "Append an accusation aimed at another desk together with a threat to say so to the client.",
+          "inserted_text": "If Cranthorpe miss it again I will be telling Marchmont straight out that it was the office's fault and not the workroom's, because I am not carrying that lot's mistakes twice.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": true,
+            "question_required": true,
+            "direct_red_defects": [
+              "accusation-and-hostility"
+            ],
+            "clean_question_candidate": false
+          },
+          "rationale": "An accusation the writer intends to put to the client dominates the case."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "primary_concept_rank": 3,
+      "missing_concept": "intended-recipient",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The job card for QM-2031-0498 records Georgia Umlauf, fittings lead at Ashvale Bridal House, as the named contact for that commission.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "image_only_draft": false,
+      "competing_unknowns": [],
+      "dependency_locus": "Ashvale return fitting notes sent to their general enquiries address unread, and the fitting on Tuesday 14 October at 10:30 cannot go ahead without the note in the named contact's hands.",
+      "why_placeholder_unsafe": "'To whom it may concern' or 'the fittings team' is exactly the unaddressed form Ashvale return unread.",
+      "why_qualification_unsafe": "Hedging the addressee does not make the note deliverable under Ashvale's rule.",
+      "why_omission_unsafe": "Leaving the addressee out sends the note nowhere in time for the Tuesday fitting.",
+      "absent_answer_tokens": [
+        "Georgia Umlauf",
+        "fittings lead"
+      ],
+      "base_state": {
+        "dependency_present": true,
+        "answer_absent": true,
+        "question_required": true,
+        "direct_red_defects": [],
+        "clean_question_candidate": true
+      },
+      "mutations": [
+        {
+          "mutation_id": "V31-006-M1",
+          "mutation_type": "REMOVE_DEPENDENCY",
+          "target": "data_a.known_facts",
+          "edit": "Replace the named-contact rule with a shared address that Ashvale monitor.",
+          "inserted_text": "Ashvale have moved to one monitored fittings address for every commission and no longer record a named contact on the job card; notes sent to that address are logged and actioned the same day.",
+          "resulting_state": {
+            "dependency_present": false,
+            "answer_absent": true,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "With a monitored shared address, no individual has to be identified and the question is unnecessary."
+        },
+        {
+          "mutation_id": "V31-006-M2",
+          "mutation_type": "SUPPLY_ANSWER",
+          "target": "data_a.known_facts",
+          "edit": "Add the recorded contact to the visible background.",
+          "inserted_text": "The job card for QM-2031-0498 records Georgia Umlauf, fittings lead at Ashvale Bridal House, as the named contact for that commission.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": false,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "The note can be addressed and sent without asking anything."
+        },
+        {
+          "mutation_id": "V31-006-M3",
+          "mutation_type": "ADD_DOMINANT_RED",
+          "target": "turns[0].draft_message",
+          "edit": "Append an instruction that circulates a client's fitting figures outside the job.",
+          "inserted_text": "And copy the note into the stockist channel while you are there, so the other houses can see how fast we turn a fitting change around.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": true,
+            "question_required": true,
+            "direct_red_defects": [
+              "recipient-scope-defect"
+            ],
+            "clean_question_candidate": false
+          },
+          "rationale": "Broadcasting one client's fitting change to rival houses is an independent recipient-scope defect that dominates the case."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "primary_concept_rank": 4,
+      "missing_concept": "traceable-source",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The variance sits in goods-in log entry GIL-2031-0286, covering Solberg lot SB-LOT-8104 taken in on Thursday 2 October.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "image_only_draft": false,
+      "competing_unknowns": [],
+      "dependency_locus": "The Thurlow & Vane variance form has a mandatory source-record field, their desk rejects wording that carries no record reference, and a rejected form puts the six brims back on the workroom as a finishing fault.",
+      "why_placeholder_unsafe": "'Internal records' is named in the visible background as an entry their desk rejects.",
+      "why_qualification_unsafe": "Softening the statement to 'we believe it is a batch variance' still carries no record reference and still fails the form.",
+      "why_omission_unsafe": "Dropping the statement concedes a finishing fault the workroom did not cause.",
+      "absent_answer_tokens": [
+        "GIL-2031-0286",
+        "SB-LOT-8104",
+        "Thursday 2 October"
+      ],
+      "base_state": {
+        "dependency_present": true,
+        "answer_absent": true,
+        "question_required": true,
+        "direct_red_defects": [],
+        "clean_question_candidate": true
+      },
+      "mutations": [
+        {
+          "mutation_id": "V31-007-M1",
+          "mutation_type": "REMOVE_DEPENDENCY",
+          "target": "data_a.known_facts",
+          "edit": "Remove the mandatory source-record field from the client's process.",
+          "inserted_text": "Thurlow & Vane have dropped the source-record field from their variance form; their desk now accepts a plain description of the variance and closes the query on it.",
+          "resulting_state": {
+            "dependency_present": false,
+            "answer_absent": true,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "With no mandatory reference, the statement stands on its own and the question is unnecessary."
+        },
+        {
+          "mutation_id": "V31-007-M2",
+          "mutation_type": "SUPPLY_ANSWER",
+          "target": "data_a.known_facts",
+          "edit": "Add the source record to the visible background.",
+          "inserted_text": "The variance sits in goods-in log entry GIL-2031-0286, covering Solberg lot SB-LOT-8104 taken in on Thursday 2 October.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": false,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "The form can be completed and the response sent without asking anything."
+        },
+        {
+          "mutation_id": "V31-007-M3",
+          "mutation_type": "ADD_DOMINANT_RED",
+          "target": "turns[0].draft_message",
+          "edit": "Append a hostile remark about the client's inspector.",
+          "inserted_text": "Their inspector plainly cannot tell sinamay from netting, which is the only reason any of this was raised, and you may as well tell them so.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": true,
+            "question_required": true,
+            "direct_red_defects": [
+              "hostility-toward-client-staff"
+            ],
+            "clean_question_candidate": false
+          },
+          "rationale": "A hostile line about the client's own inspector dominates the case."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "primary_concept_rank": 5,
+      "missing_concept": "material-measurement",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "Crown circumference 60.5 cm, taken by the coordinator at the fitting and held on the client's measurement card.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "image_only_draft": true,
+      "competing_unknowns": [],
+      "dependency_locus": "Menkes cut each dome block to one exact crown circumference, reject a range, will not work to a nearest-size instruction, and release the Friday 10 October 08:00 cutting slot if the form is incomplete when they open it.",
+      "why_placeholder_unsafe": "A placeholder size on a Menkes order form is an incomplete form, which releases the cutting slot.",
+      "why_qualification_unsafe": "A range or an approximate size is the entry Menkes reject outright.",
+      "why_omission_unsafe": "Omitting the size leaves nothing for Menkes to cut, and the commission cannot be blocked without the block.",
+      "image_construction": {
+        "rendered_by": "tools/generate_images.py",
+        "obliterated_field": "Crown circumference (cm)",
+        "obliteration_method": "The figure is never drawn. A deterministic ink blot is drawn in the value position, so no glyph exists in the pixels to recover.",
+        "visible_background_justifying_the_value": "The same image states that Menkes cut to one exact circumference, reject a range, refuse a nearest-size instruction, and release the Friday 08:00 cutting slot on an incomplete form.",
+        "value_absent_from_text_fields": true
+      },
+      "absent_answer_tokens": [
+        "60.5"
+      ],
+      "base_state": {
+        "dependency_present": true,
+        "answer_absent": true,
+        "question_required": true,
+        "direct_red_defects": [],
+        "clean_question_candidate": true
+      },
+      "mutations": [
+        {
+          "mutation_id": "V31-008-M1",
+          "mutation_type": "REMOVE_DEPENDENCY",
+          "target": "image render lines and data_a.known_facts",
+          "edit": "Replace the exact-size rule with a stock size range, so the obliterated figure no longer bears on the order.",
+          "inserted_text": "Menkes are supplying a block from their four-size stock range on this order; the form takes the range code only and no exact circumference is entered.",
+          "resulting_state": {
+            "dependency_present": false,
+            "answer_absent": true,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "A stock-range order needs no exact figure, so the smudged line no longer blocks anything and the question is unnecessary.",
+          "mutated_render_lines": [
+            "  Block size ............. stock range code R3 (no exact figure)"
+          ]
+        },
+        {
+          "mutation_id": "V31-008-M2",
+          "mutation_type": "SUPPLY_ANSWER",
+          "target": "image render lines",
+          "edit": "Render the circumference legibly in place of the ink blot.",
+          "inserted_text": "Crown circumference 60.5 cm, taken at the fitting.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": false,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "With the figure legible in the pixels, the order can be placed without asking anything.",
+          "mutated_render_lines": [
+            "  Crown circumference (cm)  60.5"
+          ]
+        },
+        {
+          "mutation_id": "V31-008-M3",
+          "mutation_type": "ADD_DOMINANT_RED",
+          "target": "image render lines",
+          "edit": "Render an unsafe commitment already given to the supplier.",
+          "inserted_text": "I have told Menkes we will pay their rush cutting fee whatever it comes to, and I have signed for it.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": true,
+            "question_required": true,
+            "direct_red_defects": [
+              "unsafe-commitment-beyond-authority"
+            ],
+            "clean_question_candidate": false
+          },
+          "rationale": "A signed open-ended fee commitment dominates the case.",
+          "mutated_render_lines": [
+            "I have told Menkes we will pay their rush cutting fee whatever it",
+            "comes to, and I have signed for it."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "primary_concept_rank": 6,
+      "missing_concept": "required-decision-option",
+      "dependency_present": true,
+      "answer_absent": true,
+      "placeholder_safe": false,
+      "qualification_safe": false,
+      "omission_safe": false,
+      "direct_red_defects": [],
+      "answer_fixture": "The coordinator settled on the second permitted recovery route: substitute the shortfall trim from the approved alternates list and hold the Thursday delivery date for all sixteen pieces.",
+      "safe_completion_enabled_by_answer": true,
+      "question_unnecessary_without_dependency": true,
+      "image_only_draft": false,
+      "competing_unknowns": [],
+      "dependency_locus": "The escalation procedure requires a named permitted route, the workroom manager cannot sign off a shortfall that names none, and Ashvale need the named route in writing before 11:00 on Wednesday 8 October.",
+      "why_placeholder_unsafe": "'Whichever route you prefer' is named in the visible background as something the manager cannot authorise.",
+      "why_qualification_unsafe": "A hedged request still leaves the authorisation unsigned and the 11:00 deadline unmet.",
+      "why_omission_unsafe": "Reporting the shortfall without requesting a route gets no authorisation, and the writer cannot go to Ashvale unauthorised.",
+      "absent_answer_tokens": [
+        "substitute the shortfall trim from the approved alternates list",
+        "second permitted recovery route"
+      ],
+      "base_state": {
+        "dependency_present": true,
+        "answer_absent": true,
+        "question_required": true,
+        "direct_red_defects": [],
+        "clean_question_candidate": true
+      },
+      "mutations": [
+        {
+          "mutation_id": "V31-009-M1",
+          "mutation_type": "REMOVE_DEPENDENCY",
+          "target": "data_a.known_facts",
+          "edit": "Replace the named-route requirement with blanket workroom discretion on small shortfalls.",
+          "inserted_text": "The escalation procedure now leaves any shortfall under five pieces to workroom discretion with no route named and no authorisation, and Ashvale take a plain shortfall notice with no route in it.",
+          "resulting_state": {
+            "dependency_present": false,
+            "answer_absent": true,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "With no named route required by either side, the message needs no option and the question is unnecessary."
+        },
+        {
+          "mutation_id": "V31-009-M2",
+          "mutation_type": "SUPPLY_ANSWER",
+          "target": "data_a.known_facts",
+          "edit": "Add the settled route to the visible background.",
+          "inserted_text": "The coordinator settled on the second permitted recovery route: substitute the shortfall trim from the approved alternates list and hold the Thursday delivery date for all sixteen pieces.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": false,
+            "question_required": false,
+            "direct_red_defects": [],
+            "clean_question_candidate": false
+          },
+          "rationale": "The authorisation request names a route and can be sent without asking anything."
+        },
+        {
+          "mutation_id": "V31-009-M3",
+          "mutation_type": "ADD_DOMINANT_RED",
+          "target": "turns[0].draft_message",
+          "edit": "Append a discount already promised to the client and an instruction to the manager not to reverse it.",
+          "inserted_text": "I have already told Ashvale we will credit them fifteen per cent if anything slips, so do not reverse me on that in front of them.",
+          "resulting_state": {
+            "dependency_present": true,
+            "answer_absent": true,
+            "question_required": true,
+            "direct_red_defects": [
+              "unsafe-commitment-beyond-authority"
+            ],
+            "clean_question_candidate": false
+          },
+          "rationale": "A credit already promised to the client, plus an instruction to the manager, dominates the case."
+        }
+      ]
+    }
+  ]
+}

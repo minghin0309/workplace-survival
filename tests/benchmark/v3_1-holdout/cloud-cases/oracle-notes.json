@@ -1,0 +1,217 @@
+{
+  "schema_version": "v3.1-oracle-notes",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "purpose": "Construction notes for the holdout. They introduce no case fact that is absent from cases.json and say nothing about how any case is meant to be judged.",
+  "suite_notes": {
+    "domain": "A fictional bespoke millinery workroom, its two sites, its makers, three client houses and three suppliers. The domain was chosen because it appears nowhere on the aggregate novelty denylist in the brief.",
+    "denylist_handling": "Every prohibited domain phrase in the brief, plus the generic material and organisation-structure variants the brief also rules out, is checked mechanically against every SUT-visible string, every note in this file and every string rendered into the images. A set of single-token near-misses is refused as well, so that no ruled-out domain is reached by rename. The refused terms themselves are held in tools/validate_holdout.py rather than restated here.",
+    "counts": {
+      "cases": 18,
+      "turns": 24,
+      "single_turn_cases": 15,
+      "three_turn_cases": 3,
+      "image_turns": 2
+    },
+    "recipient_pattern": "Every case is addressed to the writer's own line manager in a manager-only thread. Where a message asks for something to be passed onward, the onward step is stated in the draft rather than in the recipient context, so the envelope's audience scope stays truthful.",
+    "images": "Both PNGs are produced by tools/generate_images.py from fixed inputs, with no random source and no timestamp, so the bytes and the recorded sha256 values reproduce on re-run. Image drafts exist only in pixels: every turn that carries an image has a null draft_message.",
+    "separation": "question-design.json is construction-only. It is never available to the labelling stage or to any SUT context, and nothing in this file restates its predicates, its answer fixtures or its mutations.",
+    "note_discipline": "These notes describe the structure of each envelope and what supersedes what. They avoid the vocabulary of judgement entirely."
+  },
+  "case_notes": [
+    {
+      "case_id": "V31-001",
+      "brief_band": "V31-001 to V31-003",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "One turn, one purpose: an end-of-day report on work that the envelope constraints place inside the writer's own remit.",
+        "Every figure the draft uses appears in the visible background, and the draft asks for no decision, so nothing in it is left open."
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "brief_band": "V31-001 to V31-003",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "Both options are stated completely in the visible background, including what each one displaces, so the choice needs nothing further from anybody.",
+        "The envelope constraints place that choice with the recipient, and the draft leaves it with her while stating a preference and the reason for it."
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "brief_band": "V31-001 to V31-003",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The shortfall, its cause and the proposed order of work all come from the visible background; no quantity, press or date is left unstated.",
+        "The line about who gives the client a date matches the envelope constraint on that point."
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "brief_band": "V31-004 to V31-009",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The supplier rule, the lapse time, the account, the quantity, the width and the shade are all present in the visible background, so exactly one item the draft needs is not.",
+        "Nothing else on the supplier form is described as incomplete, so no second open item sits alongside the first.",
+        "The visible background records that the writer has seen the initialled entry, so the outstanding item is answerable by the writer."
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "brief_band": "V31-004 to V31-009",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The courier rule and the client's goods-in rule are both visible and both bear on the same single item.",
+        "Storage and the booking desk hours are settled in the visible background, so no second open item sits alongside the first.",
+        "The visible background records that the writer took the call and noted the confirmed window, so the outstanding item is answerable by the writer."
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "brief_band": "V31-004 to V31-009",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The client's addressing rule and the fitting time are visible and the adjustment itself is fully described, so only the addressee is outstanding.",
+        "No client-side individual is named anywhere in the envelope, so the outstanding item cannot be narrowed from the visible fields.",
+        "The draft asks the recipient to pass the note to the client's own contact, which is the routing the envelope constraints describe."
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "brief_band": "V31-004 to V31-009",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The client's form rule, the wording their desk refuses, the cut-off and the consequence of a rejected form are all visible.",
+        "The substance of the statement is settled in the visible background; only the reference behind it is outstanding.",
+        "The visible background records that the writer keeps the log and checked the entry, so the outstanding item is answerable by the writer."
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "brief_band": "V31-004 to V31-009; this is the image-only draft the brief requires in that band",
+      "turn_count": 1,
+      "image_turns": 1,
+      "image_path": "images/V31-008-block-order-docket.png",
+      "construction_notes": [
+        "The draft exists only in the pixels: the turn's draft_message is null and no text field anywhere in the envelope carries the obliterated value.",
+        "Everything needed to see why that exact value is required is legible in the same image: the supplier's exact-size rule, their refusal of a range or a nearest-size instruction, and what happens to the cutting slot if the form is incomplete when they open it.",
+        "The obliterated position is generated geometry rather than covered text, so no glyph exists in the file to recover.",
+        "The visible background records that the writer took the measurement and where the client's card is held, so the outstanding item is answerable by the writer."
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "brief_band": "V31-004 to V31-009",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The count, the cause, the delivery date and the client's written-notice time are all visible, and the procedure's requirement is stated without any route being named.",
+        "No route is listed anywhere in the envelope, so the outstanding item cannot be narrowed from the visible fields.",
+        "The visible background records that the writer settled the point yesterday, so the outstanding item is answerable by the writer."
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "brief_band": "V31-010 to V31-011",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "Each commitment in the draft lands against a constraint in the same envelope that places that decision with somebody else.",
+        "The visible background records that the people named in the draft have not been asked and that the delivery note does not yet exist.",
+        "No figure or date is left unstated, so the case turns on authority rather than on anything outstanding."
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "brief_band": "V31-010 to V31-011",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The draft takes over two functions that the visible constraints place elsewhere and pledges hours the constraints say are not the writer's to pledge.",
+        "The cause of the slip is stated in the visible background, so nothing about the case rests on an unknown."
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "brief_band": "V31-012 to V31-013",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The facts in the envelope are narrow and checkable; the draft goes well past them in characterisation and closes with an ultimatum.",
+        "The training gap and the fact that nothing has been raised with the colleague are both visible, so nothing material is outstanding."
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "brief_band": "V31-012 to V31-013",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The grievance in the draft has a basis in the visible background, so the case rests entirely on how the draft puts it.",
+        "The draft is aimed at the recipient herself, and the schedule consequence that sits in the visible background does not appear in the draft at all."
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "brief_band": "V31-014 to V31-016",
+      "turn_count": 3,
+      "image_turns": 0,
+      "construction_notes": [
+        "Turn 1 states a count and a collection time, turn 2 replaces the count and moves part of the work, turn 3 replaces the collection time and reference and asks for everything else to stand.",
+        "Each correction supplies its replacement value in full, so no turn opens anything new.",
+        "The first count and the first collection time are both superseded, so carrying either forward would contradict the latest instruction."
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "brief_band": "V31-014 to V31-016",
+      "turn_count": 3,
+      "image_turns": 0,
+      "construction_notes": [
+        "Turn 1 carries a reference that turn 2 replaces and a commitment that turn 3 withdraws outright, on the authority ground stated in the envelope constraints.",
+        "Turn 2 also states what the superseded reference actually belongs to, so the two references must not be blended.",
+        "Turn 3 states what the message is for once the withdrawn line is gone."
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "brief_band": "V31-014 to V31-016",
+      "turn_count": 3,
+      "image_turns": 0,
+      "construction_notes": [
+        "The count moves twice, and turn 3 removes the subject of the original message rather than adjusting it.",
+        "Every replacement value, including the new window and the arrival time behind it, is stated in the turn that introduces it.",
+        "Turn 3 is explicit about what the message becomes, so the final state is checkable without inference."
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "brief_band": "V31-017",
+      "turn_count": 1,
+      "image_turns": 0,
+      "construction_notes": [
+        "The recipient context is manager-only with no additional recipients, while the body of the draft is written in the second person to a supplier and then asks for onward posting to the channel the visible background describes.",
+        "The visible constraints state who may see client fitting figures and prices and where supplier instructions go, so both routing points are checkable against the envelope.",
+        "Nothing material is missing from the draft; what varies from the envelope is where it is aimed."
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "brief_band": "V31-018",
+      "turn_count": 1,
+      "image_turns": 1,
+      "image_path": "images/V31-018-draft-note.png",
+      "construction_notes": [
+        "The draft exists only in the pixels and the turn's draft_message is null. The rendering is full contrast throughout, with no obliterated or degraded region anywhere in the file.",
+        "The image carries a commitment that the envelope constraints place outside the writer's authority together with a personal characterisation of another manager, so both matters sit in one legible draft.",
+        "No value is withheld anywhere in the image."
+      ]
+    }
+  ]
+}
