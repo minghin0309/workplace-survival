@@ -1,0 +1,98 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "semantic-matcher-attestation",
+  "matcher": {
+    "context_id": "bc-00c7183b-ea36-53c9-9fef-1685cad53796",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "role": "semantic-matcher",
+    "gold_access": true,
+    "scoring_performed": false
+  },
+  "branch": "cursor/v322-matcher-claude-17a0",
+  "base_branch": "cursor/blind-v322-holdout-17a0",
+  "output_commit": "6424fc1fe5836194c1f0643f16a188594a7d4923",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/extractions-manifest-v322.json",
+      "sha256": "e9945ace2da96d5d35bc4a98ffb901e0e553332a929d900ba672034387815ab1"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/evaluations-v322-canonical.json",
+      "sha256": "1a01b246c422bae55e3bf85f14fdc1f9ff4600f5d8636cec56d55f698d9170e8"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/outputs-v322-raw.json",
+      "sha256": "8e7aa031ebc6f919cf9bb401b8c70634d4a19f2bb6bc5b2ec4b742b8dd82db1f"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/gold-v322.json",
+      "sha256": "beda11643abeba9c578351ee8be9ec7713cfd5025fa304d3ca29c00c32b76a75"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "isolation": {
+    "repository_files_read_count": 5,
+    "allowlist_hashes_verified": true,
+    "forbidden_artifacts_opened": false,
+    "scorer_executed": false,
+    "gold_modified": false,
+    "ontology_modified": false,
+    "evaluations_modified": false,
+    "claims_modified": false,
+    "other_matcher_outputs_read": false,
+    "non_repository_tools_used": [
+      "cursor-cloud run-info (context_id lookup only)"
+    ],
+    "scratch_files_outside_repository": [
+      "/tmp/build_matches.py",
+      "/tmp/verify_matches.py"
+    ]
+  },
+  "coverage": {
+    "cases": 18,
+    "turns": 24,
+    "claims": 31,
+    "question_claims": 7,
+    "revision_claims": 24,
+    "matches_emitted": 31,
+    "unsupported_claims": 6,
+    "match_types": {
+      "exact": 0,
+      "alias": 0,
+      "semantic": 25,
+      "unsupported": 6
+    }
+  },
+  "verification": {
+    "input_hashes_match_allowlist": true,
+    "claim_id_sets_match_per_turn_and_domain": true,
+    "all_matches_have_required_five_keys": true,
+    "unsupported_concept_id_is_null": true,
+    "non_unsupported_concept_in_allowed_list": true,
+    "exact_alias_rules_enforced": true,
+    "semantic_confidence_at_least_0_8": true,
+    "matcher_gold_access_true": true,
+    "matcher_model_family_claude": true,
+    "json_parses": true
+  },
+  "limitations": [
+    "model_id is unverified; the executing model was not machine-attested, only the declared family claude.",
+    "No exact or alias matches were possible: no extracted claim has text identical to its evidence_span, so rule 1 of the exact/alias gate fails for every claim and all supported matches are semantic.",
+    "Six claims are marked unsupported because the concept that would fit is absent from that turn's allowed list: V322-012 turn 1 question claims (only current-root-cause allowed), V322-012 r-V322-012-1-5 (placeholder-unknown-value not allowed on that turn), V322-013 turn 1 question claim (empty allowed_question_concepts), and both V322-016 turn 1 revision claims (only no-revision allowed).",
+    "Several claims admitted two defensible allowed readings; the discarded reading is recorded in the rationale of each such match. Notable ones: r-V322-002-1-1, r-V322-007-1-1, r-V322-009-1-1, r-V322-010-1-2, r-V322-010-1-3, r-V322-010-1-4, r-V322-011-1-1, r-V322-013-1-1.",
+    "Multiple claims map to the same concept where the concept definition enumerates several confirmed facts (preserve-factual-trolley-update, preserve-factual-mouth-tape-update, correct-supplier-error-attribution, restore-rostered-fitter-task, remove-unsafe-commitment); no claim maps to more than one concept.",
+    "No scoring, no precision or recall computation, and no scorer execution were performed by this matcher."
+  ],
+  "protocol_deviations": [
+    "Called the cursor-cloud run-info MCP tool once to obtain context_id bc-00c7183b-ea36-53c9-9fef-1685cad53796. This is a tool call, not a repository file read.",
+    "Read outputs-v322-raw.json (allowlisted item 3) to ground ambiguous claims in the system-under-test text; this is permitted by the allowlist and did not involve any forbidden artifact."
+  ],
+  "output": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/matches-v322.json",
+    "sha256": "b70d96bc42818c7d960469c62e47ea738803d9ee27a3e829295a0f3f6ac6634e"
+  }
+}
