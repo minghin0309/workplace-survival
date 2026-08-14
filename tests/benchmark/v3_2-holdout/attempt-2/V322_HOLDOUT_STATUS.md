@@ -1,7 +1,9 @@
 # Fresh v3.2 Holdout Attempt 2 Status
 
-- Status: `MATCHES_COPIED`
-- Dual gold-blind extractors copied with `git show` (not merged): grok, gemini. GPT adjudicator copied the same way. Canonical claims: 7 question / 24 revision. Unresolved disagreements: 0. Extraction snapshot frozen. Claude matcher copied with `git show` (not merged); gold_access true.
+- Status: `SCORED`
+- Thresholds passed: no
+- Formal scorer invocations: 1
+- Rerun performed: no
 
 - Methodology: v3.2
 - Runtime: `main@9d48b048d083507c20f2714b21053d36b68d6366`
@@ -10,12 +12,12 @@
 - Turns: 24
 - Distinct SUT contexts: 18
 - Coverage: `VALID_COVERAGE`
-- Formal scorer invocations: 0
 
-All 18 SUT cases copied with `git show` from dedicated branches. Those branches were not merged. Direct image opens: V322-008, V322-018.
+Report: `tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/score-report-v322.json`
+Report SHA-256: `3b646bac33b84ec798eb53e779b716237fb7fa0cd1fdcc532a7f0ef93593cc03`
 
-Extractor-1 (grok) protocol deviation: off-allowlist read of `SKILL.md`; Skill was not modified.
+Route 24/24. Tone 21/22. Invariants 0 violations. Responsibility 15/22, overall 16/22, question recall 3/6, revision recall 11/41, question precision 4/7, revision precision 21/24.
 
-Next: freeze evaluations, one v3.2 scorer invocation.
+Gold, matches, evaluations, and Skill files were not rewritten after freeze. No in-version rescore.
 
 Attempt 1 remains `INVALID_COVERAGE` and will not be rescored.
