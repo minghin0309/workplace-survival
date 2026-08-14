@@ -1,0 +1,59 @@
+{
+  "schema_version": "v1",
+  "case_id": "V31-009",
+  "execution": {
+    "timestamp_utc": "2026-08-14T02:50:44Z",
+    "sut": "Workplace Survival",
+    "model": "GPT-5.6 Sol",
+    "scope": "single case only",
+    "scoring_performed": false
+  },
+  "input": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-009.json",
+    "sha256": "0a118470f1e8ac34275e233b6638616fcfb459bed681b2e64e0ad6dfb7f23804",
+    "hash_verified": true
+  },
+  "runtime_skill_files": [
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "output": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-outputs/V31-009.md",
+    "sha256": "cc5c5538b22e1c7014aff5f74a3d1dba43e0c88ed392c27f06aa4484e909a376",
+    "raw_output_commit": "1d5b0e786e2f5f80467a7c5b6a86577701cec974"
+  },
+  "provenance": {
+    "source_commit": "f609800eba5f3e8f20b541f7776c1a427ca8aed2",
+    "branch": "cursor/v31-009-sut-c521",
+    "repo_source_files_read": [
+      "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-009.json",
+      ".cursor/skills/workplace-survival/SKILL.md",
+      ".cursor/skills/workplace-survival/REFERENCE.md",
+      ".cursor/skills/workplace-survival/FORMATS.md",
+      ".cursor/skills/workplace-survival/EXAMPLES.md"
+    ]
+  },
+  "isolation": {
+    "cases_executed": [
+      "V31-009"
+    ],
+    "other_cases_executed": false,
+    "other_preexisting_repo_content_read": false,
+    "generated_output_was_hashed_after_creation": true,
+    "network_or_external_sources_used": false
+  }
+}
