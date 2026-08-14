@@ -64,6 +64,13 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/v3_2/run_mutation_tests.py`
 - `tests/benchmark/v3_2/score_semantic_v3_2.py`
 - `tests/benchmark/v3_2/test_scorer_v3_2.py`
+- `tests/benchmark/v3_2/recipient_manager_contract.py`
+- `tests/benchmark/v3_2/test_recipient_manager_contract.py`
+- `tests/benchmark/v3_2/run_recipient_mutations.py`
+- `tests/benchmark/v3_2/RECIPIENT_MUTATION_RESULTS.json`
+- `tests/benchmark/v3_2/RECIPIENT_VALIDATION_RESULTS.md`
+- `tests/benchmark/v3_2/V32_ATTEMPT1_COVERAGE_TRIAGE.md`
+- `tests/benchmark/v3_2/V32_ATTEMPT2_CASE_BRIEF.md`
 - `tests/benchmark/v3_2-holdout/V32_CASE_BRIEF.md`
 - `tests/benchmark/v3_2-holdout/V32_HOLDOUT_PLAN.md`
 - `tests/benchmark/v3_2-holdout/V32_HOLDOUT_STATUS.md`

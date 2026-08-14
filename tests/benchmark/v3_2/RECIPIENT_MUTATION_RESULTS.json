@@ -1,0 +1,29 @@
+{
+  "schema_version": "v3.2-recipient",
+  "baseline_passed": true,
+  "mutants": [
+    {
+      "mutation_id": "M1_ROUTING_MAY_BE_QUESTION_CANDIDATE",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "..........F...\n======================================================================\nFAIL: test_routing_case_cannot_be_question_candidate (tests.benchmark.v3_2.test_recipient_manager_contract.RecipientContractTests.test_routing_case_cannot_be_question_candidate)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_2/test_recipient_manager_contract.py\", line 123, in test_routing_case_cannot_be_question_candidate\n    with self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 14 tests in 0.001s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "mutation_id": "M2_NON_MANAGER_QUESTION_CANDIDATES_ALLOWED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "mark.v3_2.test_recipient_manager_contract.RecipientContractTests.test_question_candidate_non_manager_fails)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_2/test_recipient_manager_contract.py\", line 95, in test_question_candidate_non_manager_fails\n    with self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_routing_case_as_manager_fails (tests.benchmark.v3_2.test_recipient_manager_contract.RecipientContractTests.test_routing_case_as_manager_fails)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_2/test_recipient_manager_contract.py\", line 113, in test_routing_case_as_manager_fails\n    with self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_two_non_manager_cases_fail (tests.benchmark.v3_2.test_recipient_manager_contract.RecipientContractTests.test_two_non_manager_cases_fail)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_2/test_recipient_manager_contract.py\", line 119, in test_two_non_manager_cases_fail\n    with self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 14 tests in 0.001s\n\nFAILED (failures=6)\n"
+    },
+    {
+      "mutation_id": "M3_ROLE_WITHOUT_MANAGER_ALLOWED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "........F.....\n======================================================================\nFAIL: test_role_without_manager_token_fails (tests.benchmark.v3_2.test_recipient_manager_contract.RecipientContractTests.test_role_without_manager_token_fails)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_2/test_recipient_manager_contract.py\", line 78, in test_role_without_manager_token_fails\n    self.assertFalse(contract.is_manager_recipient(value))\nAssertionError: True is not false\n\n----------------------------------------------------------------------\nRan 14 tests in 0.001s\n\nFAILED (failures=1)\n"
+    }
+  ],
+  "killed": 3,
+  "total": 3,
+  "mutation_score": 1.0,
+  "attempt1_cases_modified": false,
+  "runtime_skill_changes": false
+}

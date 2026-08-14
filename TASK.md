@@ -361,6 +361,36 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.2 score report.
 - Progress: archived as `INVALID_COVERAGE` after gold freeze; SUT and the v3.2 scorer were not invoked. Question candidates used non-manager recipients and gold-routed `Scope`. Gold was not rewritten.
 
+#### T14.13 — v3.2 manager-recipient case-design remediation
+
+- [x] Completed
+
+- Source requirement: Correct the benchmark-design cause of v3.2 `INVALID_COVERAGE` without changing frozen attempt-1 cases or gold.
+- Owner files: `tests/benchmark/v3_2/`, `TASK.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - the invalid v3.2 attempt-1 holdout remains immutable and no case content is reused;
+  - exactly one non-manager recipient is allowed and it is the routing case;
+  - question candidates cannot be Scope-routed by construction;
+  - a role without a `manager` token fails the gate;
+  - unit and mutation tests kill routing-as-question, non-manager question candidates, and manager-token-optional defects;
+  - validation uses synthetic fixtures plus the frozen attempt-1 envelope as a negative fixture.
+- Evidence: coverage triage, attempt-2 case brief, executable contract, unit results, and mutation results.
+
+#### T14.14 — Fresh benchmark v3.2 unseen holdout attempt 2
+
+- [ ] Completed
+
+- Source requirement: Measure unseen-case performance with methodology v3.2 plus the manager-recipient construction contract. No product behavior change during scoring.
+- Owner files: `tests/benchmark/v3_2-holdout/attempt-2/`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - unseen cases use a domain that is not millinery, harpworks, or any denylisted prior domain;
+  - every case except the routing case is a manager recipient;
+  - cases satisfy the v3.1 question-candidate contract and coverage gates before SUT;
+  - gold freeze includes `SEMANTIC_ONTOLOGY.json` and `score_semantic_v3_2.py`;
+  - each case uses a distinct cloud SUT context;
+  - dual extraction and semantic matching precede a single v3.2 scorer invocation;
+  - v3.1 and v3.2 attempt 1 are not rescored; runtime Skill files are not modified.
+- Evidence: gold/output/evaluation manifests, protocol audits, and one v3.2 score report.
 
 ## Task template
 

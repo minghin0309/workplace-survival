@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### v3.2 manager-recipient case-design remediation
+
+- Preserved v3.2 attempt 1 unchanged as `INVALID_COVERAGE`.
+- Triaged why non-manager question candidates gold-routed `Scope` and produced one required question concept.
+- Added a manager-recipient contract: exactly one non-manager routing case; question candidates cannot be that case.
+- Passed 14 unit tests, including a negative fixture against the frozen attempt-1 envelope.
+- Killed all 3 targeted recipient-contract mutants.
+- Confirmed no Skill, gold, or attempt-1 case files changed.
+
 ### Fresh benchmark v3.2 unseen holdout
 
 - Generated 18 concert-harpworks cases in an isolated cloud context and copied them with `git show`.
