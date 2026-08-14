@@ -1,0 +1,71 @@
+{
+  "schema_version": "v3",
+  "scorer_version": "3",
+  "status": "SCORER_ERROR",
+  "executed_at_utc": "2026-08-14T05:18:03.754174Z",
+  "attempt_id": "254be648659135915ebb99d76304dd42733bb84744a8ca724b60a12cf447358c",
+  "rerun_performed": false,
+  "arguments": [
+    "tests/benchmark/v3_1-holdout/cloud-cases/evaluation-manifest-v31.json",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+    "tests/benchmark/v3_1-holdout/cloud-cases/gold-v31.json",
+    "tests/benchmark/v3_1-holdout/cloud-cases/outputs-v31-raw.json",
+    "tests/benchmark/v3_1-holdout/cloud-cases/evaluations-v31-canonical.json",
+    "tests/benchmark/v3_1-holdout/cloud-cases/matches-v31-canonical.json",
+    "tests/benchmark/v3_1-holdout/cloud-cases/score-report-v31.json"
+  ],
+  "scorer_sha256": "9877d0e914960262c676616ba4eeff4d24bd831c7ca1228dcdf943dd4e252e61",
+  "frozen_inputs": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/evaluation-manifest-v31.json",
+      "sha256": "70ab4a3490a04ea68cd060502031712fe111479ce1ee8f5d6dad2e1526071f7d",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-v31.json",
+      "sha256": "bb8fbf70ac84e8718fef8abd0d2f7d53aee07213343b25f418db8329e1bedf2d",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/outputs-v31-raw.json",
+      "sha256": "cf5ef7e28ca5bacd6e4e28e6bd2d92dfb5be61b34f51ce67bb4b40a7071be7b8",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/evaluations-v31-canonical.json",
+      "sha256": "63cc05f43da57a426bb252dc50b137f63e7f531697848d2ae5e367fc14841aa2",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/matches-v31-canonical.json",
+      "sha256": "d837eb00ecd87db9d59014c27038b075d77bdd6fffb311d78d95e18a71e6145e",
+      "exists": true
+    }
+  ],
+  "failure": {
+    "stage": "scoring",
+    "type": "ValueError",
+    "message": "manifest schema"
+  },
+  "coverage": {
+    "turns": 24,
+    "accepted_turns": 23,
+    "gold_uncertain_turns": 1,
+    "gold_uncertain_rate": 0.041666666666666664,
+    "required_question_concepts": 6,
+    "required_question_cases": 6,
+    "required_revision_concepts": 70,
+    "required_revision_cases": 18
+  },
+  "metrics": null,
+  "case_results": null,
+  "limitations": [
+    "This immutable envelope records a failed scorer invocation.",
+    "No result from another benchmark version is repaired or replaced."
+  ]
+}

@@ -1,6 +1,6 @@
 # Fresh v3.1 Holdout Status
 
-- Status: `EVALUATIONS_FROZEN`
+- Status: `SCORER_ERROR`
 - Cases: 18
 - Turns: 24
 - Gold-uncertain turns: 1
@@ -17,7 +17,8 @@
 - Unresolved claim disagreements: 0
 - Semantic matcher: 1 (Claude)
 - Unsupported semantic claims: 2
-- Formal scorer invocations: 0
+- Formal scorer invocations: 1
+- Score status: `SCORER_ERROR`
 
 Construction:
 
@@ -71,5 +72,6 @@ Frozen evidence:
 - extraction snapshot SHA-256: `a406161c1fac10f9c8b1f86c402891ac7dc81ac616abc8df0ebf9eb545c8b46e`
 - canonical matches SHA-256: `d837eb00ecd87db9d59014c27038b075d77bdd6fffb311d78d95e18a71e6145e`
 - evaluation snapshot SHA-256: `70ab4a3490a04ea68cd060502031712fe111479ce1ee8f5d6dad2e1526071f7d`
+- score report SHA-256: `3ce1834894dd1007e4929ad4da0f44c5592264c49358f89473c4882101e4e8c2`
 
-Formal scoring has not started.
+Formal scoring ran once and recorded `SCORER_ERROR` (`manifest schema`). No rerun.

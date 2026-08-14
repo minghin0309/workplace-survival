@@ -1,6 +1,6 @@
 # Benchmark v3.1 Semantic Match Results
 
-- Status: `EVALUATIONS_FROZEN`
+- Status: `EVALUATIONS_FROZEN` then `SCORER_ERROR`
 - Frozen at: `2026-08-14T05:17:25.221677Z`
 - Matcher family: Claude
 - Matcher context: `bc-5f0c3516-ef1c-5dcd-b9e9-1e797251d676`
@@ -25,5 +25,5 @@ Validation:
 - V31-015 turns 1 and 2 ask a question while gold allows no question concepts, so those two claims are unsupported.
 - Transcript audit: `gold_access=true`, `prohibited_content_access=false`. Re-reading authored `matches-v31.json` after write is `ACCEPTED_WITH_PROCEDURAL_DEVIATION`. Holdout was not pushed.
 - The 12-artifact evaluation snapshot passed validation.
-- Formal scoring has not started.
+- Formal scoring ran once afterwards and recorded `SCORER_ERROR` (`manifest schema`). See `SCORE_RESULTS.md`.
 - Runtime Skill files were not modified.

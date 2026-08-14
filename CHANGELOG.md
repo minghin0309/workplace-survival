@@ -4,6 +4,13 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.1 single v3 scorer invocation
+
+- Invoked frozen `score_semantic_v3.py` once against the evaluation snapshot.
+- Coverage gates computed: 24 turns, 23 accepted, 6 question concepts / 6 cases, 70 revision concepts / 18 cases.
+- v2 core aborted on `manifest schema` before metrics. Status `SCORER_ERROR`.
+- Preserved the immutable envelope. No rerun. Gold, ontology, matches, and runtime Skill files were not modified.
+
 ### Fresh benchmark v3.1 semantic match freeze
 
 - Ran one isolated Claude matcher with gold access on `cursor/v31-matcher-claude-17a0`; copied with `git show` and did not merge that branch.
@@ -11,7 +18,7 @@ This file records completed outcomes. Detailed assertions and execution evidence
 - Allowlisted inputs: extraction snapshot, canonical evaluations, raw outputs, canonical gold, ontology.
 - Transcript audit: no prohibited content; authored-output re-read is `ACCEPTED_WITH_PROCEDURAL_DEVIATION`.
 - Froze 12 evaluation artifacts against outputs manifest `993eb2a0…` and extraction snapshot `a406161c…`.
-- Formal scoring has not started. Runtime Skill files were not modified.
+- Formal scoring ran once afterwards and recorded `SCORER_ERROR`. Runtime Skill files were not modified.
 
 ### Fresh benchmark v3.1 gold-blind extraction freeze
 
