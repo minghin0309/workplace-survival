@@ -1,0 +1,50 @@
+{
+  "schema_version": "v3.2-designer-attestation",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "designer_role": "isolated case designer for Workplace Survival benchmark holdout v3.2",
+  "cloud_context": {
+    "bcId": "bc-9996f210-fde7-527c-898e-bc114613975e",
+    "run_name": "V32 isolated case design",
+    "run_url": "https://cursor.com/agents/bc-9996f210-fde7-527c-898e-bc114613975e",
+    "repoUrl": "https://github.com/minghin0309/workplace-survival",
+    "source": "internal"
+  },
+  "model_metadata": {
+    "reported_name": "Cursor Grok 4.6",
+    "run_original_model_name": null,
+    "note": "Cloud run-info returned originalModelName null. This designer used the Cursor Grok 4.6 agent identity supplied in-session."
+  },
+  "branch": "cursor/isolated-v32-case-design-975e",
+  "commit": "PENDING_AFTER_GIT_COMMIT",
+  "files_read": [
+    "tests/benchmark/v3_2-holdout/V32_CASE_BRIEF.md"
+  ],
+  "files_authored": [
+    "tests/benchmark/v3_2-holdout/cloud-cases/cases.json",
+    "tests/benchmark/v3_2-holdout/cloud-cases/oracle-notes.json",
+    "tests/benchmark/v3_2-holdout/cloud-cases/question-design.json",
+    "tests/benchmark/v3_2-holdout/cloud-cases/designer-attestation.json",
+    "tests/benchmark/v3_2-holdout/cloud-cases/images/v32-008-t1-stores-chit.png",
+    "tests/benchmark/v3_2-holdout/cloud-cases/images/v32-018-t1-loft-thread.png",
+    "tests/benchmark/v3_2-holdout/cloud-cases/tools/render_v32_images.py"
+  ],
+  "domain_chosen": "Concert pedal-harp restringing and regulation workshop (Ilex & Norrish Concert Harpworks at Coppice Loft, Grellhaven).",
+  "domain_not_denylisted": "The workplace is concert pedal-harp restringing, humidity rest, and pedal-rod regulation. That is not millinery or hatmaking, not organ restoration, not puppet or marionette theatre, and not any other denylisted domain (cargo-bike delivery, freight, ceramics, municipal water, geothermal, seed banks, esports, subtitling, dubbing, veterinary telehealth, insurance, offshore wind, archive digitisation, mycelium, heritage trusts, lighthouses, drones, bakery, ornithology, hydrographic survey, funicular rail, planetariums, solar carports, timber kilns, curling ice, ground remediation, sterile services, dye works, compounding pharmacies, snow clearance, seismograph networks, mirror coating, forensic accounting, sauna manufacturing, orchard frost, tunnel ventilation, or marine winches). Entity names, sites, job references, clients, and suppliers were invented for this holdout and are not respellings of the listed prior-holdout names.",
+  "image_sha256s": {
+    "images/v32-008-t1-stores-chit.png": "44c9c0a8033ff83aea60abd5a95db84d26ec4c4f73d3ec55e5aa828ef00d90df",
+    "images/v32-018-t1-loft-thread.png": "64d25eb620628d6262f0b7aeac9902ddf8c89ecc2f2846e1329d867ee52dd247"
+  },
+  "artifact_sha256s_at_attestation_write": {
+    "cases.json": "957ee032a049dbd0522a94fe767a8e9e1b7afc45f09e2f7ef07b4e4f5729c8dd",
+    "question-design.json": "146ec25bdbfa233dee8e744839429c8a94c6cc1e58a5bc974a447e23ad5267c7",
+    "oracle-notes.json": "230eeac32df962f88d49643ce0a5a07e8fdc5eda9ed26fb353876c1215392b8c"
+  },
+  "image_method": "Pillow RGB PNGs with DejaVu Sans, no random source, custom writer emitting only IHDR/IDAT/IEND. After writing, hashes were taken from file bytes only; PNGs were not opened as images.",
+  "limitations": [
+    "This designer read only V32_CASE_BRIEF.md from the repository, plus files this designer authored under cloud-cases/.",
+    "Runtime Skill files, gold, rubrics, ontology, scorers, tests, prior cases, archive artifacts, holdout plans, pull requests, and external sources were not opened.",
+    "The repository was not globbed. No PNG from another directory was opened.",
+    "ManagePullRequest was not present in this run's MCP catalog; PR creation may need a follow-up if GitHub write tools remain unavailable."
+  ],
+  "isolation_statement": "No other repository content was accessed. The only repository file read was tests/benchmark/v3_2-holdout/V32_CASE_BRIEF.md. Subsequent reads were limited to files this designer authored under tests/benchmark/v3_2-holdout/cloud-cases/."
+}
