@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.1 isolated SUT freeze
+
+- Executed 18 cases / 24 turns in distinct cloud contexts after valid gold coverage.
+- Extracted each case from its own source commit; did not merge the seven shared-holdout delivery commits.
+- Path-canonicalized heterogeneous raw/attestation files and wrapped Markdown without changing Skill text.
+- Recorded transcript protocol audits: 0 prohibited v3.1 gold-content opens; procedural deviations preserved.
+- Froze 46 output artifacts against gold manifest `2aea4832…`; canonical parent remains `f609800`.
+- Extraction, matching, and formal scoring have not started. Runtime Skill files were not modified.
+
 ### v3.1 required-question case-design remediation
 
 - Preserved the first v3 holdout unchanged as `INVALID_COVERAGE`.
