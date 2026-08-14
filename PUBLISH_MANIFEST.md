@@ -95,6 +95,7 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/v3_2-holdout/cloud-cases/adjudicator-v32-raw-attestation.json`
 - `tests/benchmark/v3_2-holdout/cloud-cases/coverage-report-v32.json`
 - `tests/benchmark/v3_2-holdout/cloud-cases/gold-protocol-audits.json`
+- `tests/benchmark/v3_2-holdout/cloud-cases/invalid-coverage-manifest-v32.json`
 - `tests/benchmark/v3_2-holdout/cloud-cases/tools/render_v32_images.py`
 - `tests/benchmark/v3_2-holdout/cloud-cases/images/v32-008-t1-stores-chit.png`
 - `tests/benchmark/v3_2-holdout/cloud-cases/images/v32-018-t1-loft-thread.png`
