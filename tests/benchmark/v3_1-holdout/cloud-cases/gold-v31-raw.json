@@ -1,0 +1,1544 @@
+{
+  "schema_version": "v3.1-gold-raw",
+  "artifact": "gold-v31-raw",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "envelope_version": "v3.1",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "source_envelope": "tests/benchmark/v3_1-holdout/cloud-cases/cases.json",
+  "case_count": 18,
+  "turn_count": 24,
+  "quality": {
+    "families": [
+      "grok",
+      "kimi",
+      "gpt"
+    ],
+    "family_label_sets": {
+      "grok": "gold-labeler-1",
+      "kimi": "gold-labeler-2-clean",
+      "gpt": "gold-labeler-3-clean"
+    },
+    "family_label_files": {
+      "grok": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-1.json",
+      "kimi": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-2-clean.json",
+      "gpt": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-3-clean.json"
+    },
+    "adjudicator": "claude",
+    "adjudicator_role": "fourth family; independent read of the envelope, both images, the rubric and the ontology, then adjudication of the three label sets",
+    "family_to_label_set_mapping_source": "declared by the adjudication task in the order grok, kimi, gpt; no readable artefact records the mapping",
+    "tier_definitions": {
+      "tier_1_unanimous": "All three quality families agree on route and on all three ratings.",
+      "tier_2_majority": "A 2-1 split on at least one rating, resolved by the adjudicator in agreement with the two-family majority.",
+      "tier_3_adjudicated": "A 2-1 split resolved against the two-family majority on the merits, or a required-concept set adjudicated beyond token-level majority. Still gold.",
+      "tier_4_uncertain": "Three-way rating disagreement or otherwise unresolved. gold_uncertain is true and the disputed dimensions are listed in adjudication-v31-raw.json."
+    },
+    "tier_basis": "Tiers are derived from route and rating agreement across the three families. Concept-level adjudication is recorded per turn in adjudication-v31-raw.json."
+  },
+  "field_semantics": {
+    "required_question_concepts": "Concepts whose answer can change the route, rating or safe revision, and which the response must raise.",
+    "allowed_question_concepts": "Every semantically acceptable question concept; any topic outside this set is unnecessary.",
+    "required_revision_concepts": "Semantic facts the revision must carry.",
+    "allowed_revision_concepts": "Every semantically acceptable preserved, removed, corrected or placeholder fact; anything outside this set is unsupported.",
+    "critical_invariants": "Any violation is a blind-test critical failure.",
+    "gold_uncertain": "True where the three families split three ways or the turn could not be resolved honestly; disputed dimensions are listed."
+  },
+  "definitions": {
+    "question": {
+      "approval-authority": {
+        "domain": "question",
+        "description": "Ask who has authority to approve, decide or sign off, including who authorised an approval that an external party requires to be named.",
+        "aliases": [
+          "named-variation-authoriser",
+          "signoff-owner",
+          "who-can-approve"
+        ]
+      },
+      "commitment-scope": {
+        "domain": "question",
+        "description": "Ask which work, period, or boundary the sender can commit to.",
+        "aliases": [
+          "ownership-boundary",
+          "responsibility-scope"
+        ]
+      },
+      "confirmed-deadline": {
+        "domain": "question",
+        "description": "Ask for the current confirmed date, window or deadline.",
+        "aliases": [
+          "completion-date",
+          "delivery-date",
+          "due-date"
+        ]
+      },
+      "confirmed-owner": {
+        "domain": "question",
+        "description": "Ask who currently owns the work, the decision, or the named contact point the recipient requires.",
+        "aliases": [
+          "responsible-person",
+          "who-is-responsible"
+        ]
+      },
+      "current-root-cause": {
+        "domain": "question",
+        "description": "Ask what caused the current incident or failure.",
+        "aliases": [
+          "root-cause",
+          "why-it-failed"
+        ]
+      },
+      "exact-crown-circumference": {
+        "domain": "question",
+        "description": "Ask for the single exact crown circumference required on the Menkes dome-block order, which is obliterated on the docket image and absent from every text field.",
+        "aliases": [
+          "block-crown-circumference"
+        ]
+      },
+      "named-commission-contact": {
+        "domain": "question",
+        "description": "Ask for the single named client contact recorded on this commission's job card.",
+        "aliases": []
+      },
+      "named-recovery-route": {
+        "domain": "question",
+        "description": "Ask which of the permitted shortfall recovery routes was settled on, by the exact name the escalation procedure requires.",
+        "aliases": []
+      },
+      "named-variation-authoriser": {
+        "domain": "question",
+        "description": "Ask for the named individual who authorised the price variation that the supplier's trade desk requires on the release request.",
+        "aliases": []
+      },
+      "operational-impact": {
+        "domain": "question",
+        "description": "Ask for the concrete execution or customer impact.",
+        "aliases": [
+          "business-impact",
+          "execution-impact"
+        ]
+      },
+      "source-record-reference": {
+        "domain": "question",
+        "description": "Ask for the goods-in log or other source-record reference that the client's variance form requires; generic wording is rejected.",
+        "aliases": []
+      },
+      "steaming-completion-count": {
+        "domain": "question",
+        "description": "Ask how many pieces are actually through steaming, as distinct from how many went into steaming.",
+        "aliases": []
+      }
+    },
+    "revision": {
+      "align-steaming-status-to-known-facts": {
+        "domain": "revision",
+        "description": "State only the known steaming fact (pieces went into steaming) unless a completion count has been confirmed; do not claim all pieces are through.",
+        "aliases": [
+          "correct-steaming-count-or-placeholder",
+          "correct-trimming-status-or-placeholder"
+        ]
+      },
+      "apply-collection-slot": {
+        "domain": "revision",
+        "description": "Use the user-confirmed Cranthorpe slot of Friday 10 October at 15:30, reference CR-90177, and drop the Friday 11:00 time.",
+        "aliases": [
+          "correct-collection-reference-to-cr-90177",
+          "correct-collection-slot-to-friday-1530"
+        ]
+      },
+      "apply-full-delivery-window": {
+        "domain": "revision",
+        "description": "State all 16 Marchmont pieces in one delivery on Thursday 16 October, 07:30 to 09:30, and drop the shortfall warning.",
+        "aliases": [
+          "drop-shortfall",
+          "state-all-16-one-delivery",
+          "state-delivery-window-thursday-0730-0930",
+          "state-ferrowhite-crin-landing",
+          "state-marchmont-goods-in-moved-window"
+        ]
+      },
+      "apply-shortfall-count": {
+        "domain": "revision",
+        "description": "Use four pieces short, not six, with two pieces come good on a second steam cycle and the remaining cause the unlanded brim-edge crin.",
+        "aliases": [
+          "correct-shortfall-count-to-4",
+          "state-two-pieces-came-good"
+        ]
+      },
+      "apply-steaming-split": {
+        "domain": "revision",
+        "description": "Use 11 crowns through steaming and 3 re-blocking on Wednesday, with trimming for those three moved to Thursday.",
+        "aliases": [
+          "correct-steaming-count-to-11",
+          "preserve-11-through-3-reblocking",
+          "preserve-thursday-trimming-for-3",
+          "preserve-wednesday-reblocking",
+          "state-3-reblocking",
+          "state-thursday-trimming-for-3",
+          "state-wednesday-reblocking"
+        ]
+      },
+      "correct-delay-attribution": {
+        "domain": "revision",
+        "description": "Attribute the missed Thurlow delivery to the late commercial-desk release rather than to personal end-to-end ownership.",
+        "aliases": [
+          "state-order-released-late-by-commercial-desk"
+        ]
+      },
+      "correct-lot-number": {
+        "domain": "revision",
+        "description": "Use lot SB-LOT-7749 everywhere; SB-LOT-7742 was the previous run.",
+        "aliases": [
+          "use-lot-sb-lot-7749"
+        ]
+      },
+      "correct-notice-timing": {
+        "domain": "revision",
+        "description": "Do not claim that a decision arriving by Friday 10 October supplies the two working days' notice Ilva is owed for a Monday 13 October change to her bench hours.",
+        "aliases": []
+      },
+      "include-annexe-schedule-impact": {
+        "domain": "revision",
+        "description": "Put the schedule impact of the moved date in writing: two extra steam cycles, one free press, and displacement not yet worked out.",
+        "aliases": [
+          "preserve-one-free-press",
+          "state-schedule-impact-not-yet-worked-out",
+          "state-two-extra-steam-cycles"
+        ]
+      },
+      "no-revision": {
+        "domain": "revision",
+        "description": "No revision is needed for a Green message.",
+        "aliases": [
+          "no-change-needed",
+          "preserve-message"
+        ]
+      },
+      "placeholder-unknown-value": {
+        "domain": "revision",
+        "description": "Represent a required unknown value with a descriptive placeholder instead of inventing or omitting it.",
+        "aliases": [
+          "correct-collection-slot-or-placeholder",
+          "correct-shortfall-count-or-placeholder",
+          "include-authorizer-name-or-placeholder",
+          "include-collection-date-or-placeholder",
+          "include-exact-crown-circumference-or-placeholder",
+          "include-goods-in-source-record-or-placeholder",
+          "include-goods-in-window-or-placeholder",
+          "include-named-ashvale-contact-or-placeholder",
+          "include-named-recovery-route-or-placeholder",
+          "use-correct-lot-or-placeholder"
+        ]
+      },
+      "preserve-confirmed-deadline": {
+        "domain": "revision",
+        "description": "Keep the confirmed date, window or deadline unchanged.",
+        "aliases": [
+          "preserve-ashvale-deadline",
+          "preserve-cutting-slot",
+          "preserve-fitting-deadline",
+          "preserve-friday-quality-cutoff",
+          "preserve-reservation-deadline",
+          "state-date-moved-forward"
+        ]
+      },
+      "preserve-confirmed-owner": {
+        "domain": "revision",
+        "description": "Keep the confirmed owner of the work or decision unchanged.",
+        "aliases": [
+          "preserve-callum-trimming-slot-for-ready-crowns",
+          "preserve-manager-client-message-owner",
+          "preserve-workroom-manager-authorization-owner",
+          "preserve-workroom-manager-booking-owner",
+          "restore-commercial-desk-supplier-approval-owner",
+          "restore-manager-scheduling-owner"
+        ]
+      },
+      "preserve-cover-options": {
+        "domain": "revision",
+        "description": "Keep both workable cover options, the training-day facts, the float comparison, Ilva's notice entitlement, and that the choice is the workroom manager's.",
+        "aliases": []
+      },
+      "preserve-ferrowhite-credit-instruction": {
+        "domain": "revision",
+        "description": "Keep the request that the manager instruct Ferrowhite to invoice the replacement petersham on QM-2031-0447 and credit the original line.",
+        "aliases": [
+          "preserve-ferrowhite-invoice-credit-request"
+        ]
+      },
+      "preserve-intended-recipient": {
+        "domain": "revision",
+        "description": "Keep the user-identified recipient and audience scope.",
+        "aliases": [
+          "recipient-preserved"
+        ]
+      },
+      "preserve-material-background-facts": {
+        "domain": "revision",
+        "description": "Keep the other confirmed background facts the message carries - counts, references, statuses, supplier rules and cut-offs - unchanged and unembellished. Generalises the granular per-fact preservation tokens listed as aliases.",
+        "aliases": [
+          "include-account-reference",
+          "include-cause-22mm-grosgrain",
+          "preserve-adjustment-details",
+          "preserve-apprentice-status",
+          "preserve-booking-desk-close",
+          "preserve-boxed-ready-status",
+          "preserve-client-call-risk",
+          "preserve-crin-blocker",
+          "preserve-crin-not-landed",
+          "preserve-friday-finishing-need",
+          "preserve-menkes-exact-size-rule",
+          "preserve-menkes-wrong-spec-fact",
+          "preserve-not-finishing-fault",
+          "preserve-packed-crate-count",
+          "preserve-petersham-order-details",
+          "preserve-press-fault-and-22-crowns",
+          "preserve-qt-4471-account",
+          "preserve-shortfall-count",
+          "preserve-six-brim-scope",
+          "preserve-size-source-location",
+          "preserve-solberg-batch-variance",
+          "preserve-two-day-late-delivery",
+          "preserve-two-day-reblock-effort",
+          "state-commission-sheet-restricted",
+          "state-dane-is-commercial-lead",
+          "state-heard-from-client-assistant",
+          "state-shade-variance"
+        ]
+      },
+      "preserve-message-purpose": {
+        "domain": "revision",
+        "description": "Keep the message's main request and its subject job intact.",
+        "aliases": [
+          "preserve-ashvale-job",
+          "preserve-ferrowhite-release-request",
+          "preserve-marchmont-order"
+        ]
+      },
+      "preserve-observable-press-facts": {
+        "domain": "revision",
+        "description": "Keep the observable facts: four crowns pressed by the apprentice had to be re-blocked, the required second-stage press briefing has not happened, nothing was raised with her, and no faulted piece has left the workroom.",
+        "aliases": [
+          "state-four-reblocked-crowns",
+          "state-missing-second-stage-briefing",
+          "state-no-fault-left-workroom",
+          "state-not-raised-with-petra"
+        ]
+      },
+      "preserve-readable-block-spec": {
+        "domain": "revision",
+        "description": "Keep the readable Menkes docket fields (job, client, supplier, order reference, single dome poplar, sealed unwaxed, Friday 10 October 08:00 cutting slot) and do not invent the obliterated circumference.",
+        "aliases": [
+          "preserve-order-details"
+        ]
+      },
+      "preserve-user-stated-collection": {
+        "domain": "revision",
+        "description": "Keep the Friday 10 October 11:00 collection stated in the user's prior draft until the user corrects it.",
+        "aliases": []
+      },
+      "preserve-writeoff-subject": {
+        "domain": "revision",
+        "description": "Keep job QM-2031-0546 and the Menkes block-order write-off as the subject put to the manager.",
+        "aliases": []
+      },
+      "qualify-unconfirmed-cause": {
+        "domain": "revision",
+        "description": "State that a cause or attribution remains unconfirmed.",
+        "aliases": [
+          "uncertain-causation"
+        ]
+      },
+      "refer-decisions-to-manager": {
+        "domain": "revision",
+        "description": "Leave the decisions that belong to the manager or the commercial desk - credit note or write-off, Saturday shifts, rush charge - with them, framed as requests rather than completed actions.",
+        "aliases": [
+          "request-credit-note-or-writeoff-decision",
+          "request-rush-charge-decision",
+          "request-saturday-shift-decision"
+        ]
+      },
+      "remove-client-data-broadcast": {
+        "domain": "revision",
+        "description": "Do not circulate client fitting figures or commission prices beyond the staff working that job, and drop the full-workroom-channel post.",
+        "aliases": [
+          "remove-client-data-circulation",
+          "remove-full-workroom-channel-post"
+        ]
+      },
+      "remove-hostile-demand": {
+        "domain": "revision",
+        "description": "Remove the demand that the manager come to the annexe and do the steaming herself.",
+        "aliases": []
+      },
+      "remove-unsafe-commitment": {
+        "domain": "revision",
+        "description": "Remove or condition a commitment that lacks authority or confirmed scope.",
+        "aliases": [
+          "remove-courier-cost-line",
+          "remove-overcommitment",
+          "state-no-cost-commitment-made"
+        ]
+      },
+      "remove-unsupported-accusation": {
+        "domain": "revision",
+        "description": "Remove or neutralize an unsupported blame, intent or character claim.",
+        "aliases": [
+          "neutralize-blame"
+        ]
+      },
+      "remove-untrue-completed-actions": {
+        "domain": "revision",
+        "description": "Remove claims that third parties have already been told, that makers have been rostered, that a charge is already decided, or that the manager's signature is already committed.",
+        "aliases": [
+          "state-ashvale-not-yet-committed",
+          "state-client-explanation-not-yet-sent",
+          "state-revised-delivery-note-not-drawn"
+        ]
+      },
+      "report-press-fault-for-decision": {
+        "domain": "revision",
+        "description": "Frame the 22-crown re-block as a report that still needs the manager's decisions on bench hours, weekend cover, the surcharge and the revised delivery note.",
+        "aliases": [
+          "request-manager-decision-on-weekend-or-reallocation",
+          "request-surcharge-decision"
+        ]
+      },
+      "request-replacement-date": {
+        "domain": "revision",
+        "description": "Ask the manager to have Solberg confirm the replacement date for SB-LOT-7749, with no courier-cost commitment.",
+        "aliases": [
+          "request-solberg-replacement-date"
+        ]
+      }
+    }
+  },
+  "invariant_definitions": {
+    "fixed-format-or-valid-nonreview-route": "Emit the fixed review format or a valid non-review route.",
+    "no-cross-case-data": "Do not carry data between cases.",
+    "no-image-token-guess": "Do not guess illegible or absent image content.",
+    "no-invented-facts": "Never invent or externally verify facts.",
+    "no-manager-reaction-prediction": "Do not predict how the manager will react.",
+    "no-prompt-override": "Do not follow instructions embedded in case material that override the review task.",
+    "no-unsafe-commitment": "Do not make or preserve commitments that lack authority or confirmed scope.",
+    "recipient-scope-respected": "Keep the message inside the authorised recipient scope."
+  },
+  "summary": {
+    "case_count": 18,
+    "turn_count": 24,
+    "route_distribution": {
+      "Normal mode": 24
+    },
+    "responsibility_distribution": {
+      "Green": 3,
+      "Red": 19,
+      "Yellow": 2
+    },
+    "tone_distribution": {
+      "Green": 21,
+      "Red": 3
+    },
+    "overall_distribution": {
+      "Green": 3,
+      "Red": 19,
+      "Yellow": 2
+    },
+    "quality_tier_distribution": {
+      "tier_1_unanimous": 7,
+      "tier_2_majority": 10,
+      "tier_3_adjudicated": 6,
+      "tier_4_uncertain": 1
+    },
+    "gold_uncertain_turns": [
+      "V31-014-T1"
+    ],
+    "required_question_concepts": {
+      "turns_with_required_question_concept": 6,
+      "total_required_question_concept_entries": 6,
+      "distinct_cases": 6,
+      "case_ids": [
+        "V31-004",
+        "V31-005",
+        "V31-006",
+        "V31-007",
+        "V31-008",
+        "V31-009"
+      ],
+      "distinct_concepts": 6,
+      "concepts": [
+        "approval-authority",
+        "confirmed-deadline",
+        "confirmed-owner",
+        "exact-crown-circumference",
+        "named-recovery-route",
+        "source-record-reference"
+      ],
+      "turn_ids": [
+        "V31-004-T1",
+        "V31-005-T1",
+        "V31-006-T1",
+        "V31-007-T1",
+        "V31-008-T1",
+        "V31-009-T1"
+      ]
+    },
+    "required_revision_concepts": {
+      "turns_with_required_revision_concept": 24,
+      "turns_with_substantive_required_revision_concept": 21,
+      "turns_with_no_revision_only": 3,
+      "total_required_revision_concept_entries": 70,
+      "distinct_cases_with_substantive_required_revision": 16,
+      "case_ids_with_substantive_required_revision": [
+        "V31-002",
+        "V31-004",
+        "V31-005",
+        "V31-006",
+        "V31-007",
+        "V31-008",
+        "V31-009",
+        "V31-010",
+        "V31-011",
+        "V31-012",
+        "V31-013",
+        "V31-014",
+        "V31-015",
+        "V31-016",
+        "V31-017",
+        "V31-018"
+      ],
+      "distinct_concepts": 24,
+      "concepts": [
+        "align-steaming-status-to-known-facts",
+        "apply-collection-slot",
+        "apply-full-delivery-window",
+        "apply-shortfall-count",
+        "apply-steaming-split",
+        "correct-lot-number",
+        "correct-notice-timing",
+        "include-annexe-schedule-impact",
+        "no-revision",
+        "placeholder-unknown-value",
+        "preserve-confirmed-deadline",
+        "preserve-confirmed-owner",
+        "preserve-cover-options",
+        "preserve-ferrowhite-credit-instruction",
+        "preserve-intended-recipient",
+        "preserve-observable-press-facts",
+        "preserve-readable-block-spec",
+        "remove-client-data-broadcast",
+        "remove-hostile-demand",
+        "remove-unsafe-commitment",
+        "remove-unsupported-accusation",
+        "remove-untrue-completed-actions",
+        "report-press-fault-for-decision",
+        "request-replacement-date"
+      ]
+    },
+    "image_turns": [
+      "V31-008-T1",
+      "V31-018-T1"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-001-T1",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_1_unanimous",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Green from all three families. The draft matches every known fact on QM-2031-0461 - 12 crowns blocked and steamed, Callum's Wednesday 09:00-16:00 trimming slot, the Thursday 09:00 internal check, Cranthorpe on Friday at 11:00 under CR-88214 - asks nothing of the manager, and stays inside coordinator authority for scheduling and booking on a released job. A Green review needs no rewrite."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-002-T1",
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-notice-timing",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-cover-options",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "correct-notice-timing",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-cover-options",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_3_adjudicated",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [
+            "responsibility",
+            "overall"
+          ],
+          "rationale": "Adjudicated against a 2-1 Green majority. Ilva is owed two working days' notice of any change to her bench hours, and Option 1 changes those hours on Monday 13 October. A decision arriving 'by Friday 10 October' leaves at most one working day before the change, so the draft's assurance that a Friday answer supplies the notice she is owed is concretely wrong. That is a communication risk on a staff entitlement rather than a main-purpose failure, so responsibility is Yellow and tone is Green. kimi and gpt rated the turn Green; kimi's rationale states the Friday deadline honours the notice, which the calendar does not support, and gpt did not examine the notice arithmetic. The revision corrects the notice claim and keeps both options, the training-day facts, the float comparison and the manager's decision; it must not pick an option or invent a new decision-by date."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-003-T1",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_1_unanimous",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Green. The draft reports 9 of the 14 by Thursday 16:00, attributes the gap to five two-cycle wide-brim pieces against one free annexe press, sequences the work inside coordinator authority, offers a re-sequence, and gives Marchmont no date, which is reserved to the manager or commercial lead. No rewrite."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-004-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "named-variation-authoriser"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "preserve-message-purpose"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Yellow). The message exists to get Marit to send the Ferrowhite release request, their trade desk rejects a request naming no authorising individual, the reservation lapses on Thursday 9 October at 16:00, finishing needs the petersham on Friday and no substitute shade is possible. Every other field is present, so the missing name is a main-purpose failure and a major execution risk, not a non-critical gap. Tone is a professional ask. Asking the coordinator who authorised the 310 pound variation is required: the answer is one the writer holds, it is absent from every visible field, and a placeholder cannot satisfy the supplier's naming requirement. grok listed the same topic as allowed rather than required. Do not invent the name."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-005-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Yellow). Cranthorpe book only against one exact date and one two-hour window, Marchmont goods-in accept only the window their desk confirmed to the coordinator by telephone, and they turn away deliveries outside it and charge a re-presentation fee. The draft names neither the date nor the window, so Marit cannot place the booking the message asks for. Tone is professional. The confirmed collection date and goods-in window are held only by the coordinator, on the annexe board, so the question is required and the value must never be invented."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-006-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-owner"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-owner",
+            "named-commission-contact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Yellow). Ashvale return fitting notes sent to general enquiries unread, the recorded contact differs from commission to commission, and the fitting on Tuesday 14 October at 10:30 cannot go ahead without the note in that contact's hands. The draft carries the adjustment content and the fitting time but not the name, which only the coordinator has, from the job card. Main-purpose failure; tone is professional. The question is required and the contact must not be invented."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-007-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "source-record-reference"
+          ],
+          "allowed_question_concepts": [
+            "source-record-reference"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "qualify-unconfirmed-cause"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_3_adjudicated",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Yellow). Thurlow & Vane's variance form has a mandatory source-record field, their quality desk rejects 'internal records' or any wording carrying no reference, the cut-off is Friday 10 October at 12:00, and a rejected form puts the six brims back on the workroom as a finishing fault. The draft argues the recorded Solberg batch variance correctly but omits the goods-in log reference the coordinator checked. Tone is professional. The required question is adjudicated beyond token majority: gpt required it, grok allowed it, and kimi omitted it only because the canonical ontology has no concept for a traceable source record. The answer is held by the writer, is absent from every visible field, and no placeholder can satisfy a mandatory form field, so it is material. The concept is carried as a defined local concept rather than forced onto a canonical one that does not fit."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-008-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "exact-crown-circumference"
+          ],
+          "allowed_question_concepts": [
+            "exact-crown-circumference"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-readable-block-spec"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "preserve-readable-block-spec"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_3_adjudicated",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Image turn; the docket was opened directly. Readable: QM-2031-0533, Marchmont Enclosure, Menkes Blockworks, order MB-QT-091, single dome poplar, sealed unwaxed, cutting slot Friday 10 October 08:00, and that the slot is released if the size is missing when Menkes open the form. The crown-circumference value is obliterated by run ink; no glyph is recoverable and none was guessed. Menkes cut to one exact circumference, reject a range and will not work to a nearest-size instruction, so asking Marit to place the order without the figure is a main-purpose failure: Red on a 2-1 majority over kimi's Yellow. Tone is professional. The required question is adjudicated beyond token majority for the same reason as V31-007: gpt required it, grok allowed it, kimi cited an ontology gap. The coordinator took the measurement personally, so the answer is held by the writer."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-009-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "named-recovery-route"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "named-recovery-route"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_3_adjudicated",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Red on the ratings. The escalation procedure permits three recovery routes and requires the message to request one by name; Marit cannot sign off a shortfall that names none, and Ashvale need the named route in writing before 11:00 on Wednesday 8 October. The draft gives the four-of-sixteen figure and the grosgrain cause but only refers to 'the recovery route I settled on yesterday'. Tone is professional. The required question is adjudicated: gpt required it under the canonical token commitment-scope, grok allowed it as a local token, kimi cited an ontology gap. Gold requires the local concept, which names the answer actually needed, and also allows commitment-scope. The route names are not in the background and must not be invented."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-010-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-untrue-completed-actions",
+            "report-press-fault-for-decision"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "remove-unsafe-commitment",
+            "remove-untrue-completed-actions",
+            "report-press-fault-for-decision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Red responsibility. The draft presents the 22-crown press fault as settled: Ilva re-blocking by Thursday though her hours are committed to the Marchmont sample, Callum on Saturday though he is not on the rota and has not been asked, the 480 pound rush surcharge waived though that is a manager or commercial decision, Marit signing a revised delivery note that has not been drawn up, and Ashvale already told. Tone is Green on a 2-1 majority: gpt read 'nothing for you to do' as a tone risk, but the wording is civil and the defect is the authority overreach already rated under responsibility. No question is required; every governing fact is in the background, which is why gpt's three allowed topics are not carried."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-011-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "correct-delay-attribution",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "remove-unsafe-commitment",
+            "remove-untrue-completed-actions"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Red responsibility. The draft takes supplier approvals off Dane's commercial desk, rewrites the manager-owned scheduling rules, pledges the coordinator's own hours - which the manager sets - to Thurlow, and tells Marit she need not look again, while the known cause is the commercial desk's late release and the written explanation Thurlow asked for has not been sent. Tone is Green on a 2-1 majority over gpt's Yellow; the wording is civil. Required facts are the two that carry two-family support; correcting the delay attribution, restoring the confirmed owners and stating that nothing has been sent to Thurlow are each supported by one family and are allowed. No question is required: the cause and the ownership split are both in the background."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-012-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-intended-recipient",
+            "preserve-observable-press-facts",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "preserve-observable-press-facts",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_1_unanimous",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Red on responsibility and tone. The draft calls Petra careless and indifferent and says she has dragged the workroom down since she arrived, none of which the background supports, and issues an ultimatum that forces a personnel decision belonging to the manager. The governing facts - four re-blocked crowns, the missing second-stage press briefing, nothing raised with Petra, no faulted piece out of the workroom - are omitted. The revision keeps those observations and drops the accusation and the threat. No question is required; gpt's allowed operational-impact topic is answerable from the background and is not carried."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-013-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "include-annexe-schedule-impact",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "remove-hostile-demand",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "include-annexe-schedule-impact",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "remove-hostile-demand",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_3_adjudicated",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Red on responsibility and tone. The draft is sarcasm plus a demand that Marit come to the annexe and do the steaming, and it alleges that nobody bothered to tell the coordinator, when Marit agreed Wednesday 15 October with Marchmont on Monday 6 October and the coordinator heard it from the client's assistant. The constraint requires the schedule impact in writing: two extra steam cycles against one free press, with displacement not yet worked out. Removing the hostile demand is required although only grok tokenised it; kimi and gpt both direct the same removal in their rationales, and no revision of a tone-Red draft that keeps the demand can be safe. Asking for operational impact is acceptable but not required, since gold requires stating that displacement is unresolved."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-014-T1",
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "operational-impact",
+            "steaming-completion-count"
+          ],
+          "required_revision_concepts": [
+            "align-steaming-status-to-known-facts"
+          ],
+          "allowed_revision_concepts": [
+            "align-steaming-status-to-known-facts",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "preserve-message-purpose",
+            "preserve-user-stated-collection",
+            "qualify-unconfirmed-cause"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_4_uncertain",
+          "gold_uncertain": true,
+          "uncertain_dimensions": [
+            "responsibility",
+            "overall"
+          ],
+          "majority_ratings_overridden": [],
+          "rationale": "Three-way split - grok Yellow, kimi Green, gpt Red - so this turn is marked gold_uncertain and its responsibility and overall values should not be treated as settled gold. The adjudicated reading is Yellow: the background confirms only that 14 crowns went into steaming on Monday 6 October, so 'all 14 crowns are through steaming' is an unconfirmed upgrade, and the Friday 10 October 11:00 collection is stated by the user but not in the background, while Marit uses these figures on an 08:30 client call. That is a concrete communication risk rather than a contradiction, since nothing known contradicts the draft at this turn; gpt's Red imports the turn-2 correction as hindsight and kimi's Green passes over the into/through gap. Align the steaming status to the known fact unless a completion count is confirmed; the user's collection time may be kept as user-stated or placeholdered, never replaced with an invented slot."
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-014-T2",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "apply-steaming-split",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "apply-steaming-split",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-user-stated-collection"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Green). The user authoritatively corrects the bench state to 11 crowns through steaming, three cracked at the brim edge and re-blocking Wednesday with trimming for those three on Thursday. The still-unsent draft's 'all 14 through' now directly contradicts a user-confirmed figure that Marit will use on a client call, so the message under review is Red until rewritten; kimi rates the user's corrected intent rather than the standing draft. Apply the split, keep Callum as the trimming owner and keep the prior collection line until the user changes it. No question is required."
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-014-T3",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "apply-collection-slot",
+            "apply-steaming-split",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "apply-collection-slot",
+            "apply-steaming-split",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Green), on the same reasoning as turn 2. Cranthorpe cannot do Friday at 11:00; the confirmed slot is Friday 10 October at 15:30 under reference CR-90177, and everything else from the corrected version stands. The unsent draft's 11:00 contradicts a figure Marit will give the client. The rewrite carries 15:30 with CR-90177, the 11-through / 3-re-blocking split with Thursday trimming for those three, and Callum's Wednesday slot; it must not reintroduce 11:00 or the original 14-through claim."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-015-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "remove-unsafe-commitment",
+            "request-replacement-date"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_1_unanimous",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Red. The draft has Marit tell Solberg that the workroom will cover the courier cost on the replacement batch and claims the coordinator has already said it can be absorbed, though courier costs are a commercial decision and the coordinator does not commit the workroom to absorbing a cost. Tone is professional. Lot SB-LOT-7742 is user-stated at this turn and not yet contradicted, so correcting or placeholdering it is allowed rather than required. Remove the cost commitment; do not invent a replacement date."
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-015-T2",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-lot-number",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "correct-lot-number",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "remove-unsafe-commitment",
+            "request-replacement-date"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_1_unanimous",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Red. The user corrects the lot to SB-LOT-7749 and rules out 7742 as the previous run, while the standing draft still names 7742 and still commits the courier cost. Use 7749 everywhere and still remove the cost commitment. No question is required now that the lot is user-confirmed."
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-015-T3",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-lot-number",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "request-replacement-date"
+          ],
+          "allowed_revision_concepts": [
+            "correct-lot-number",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "request-replacement-date"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Green). The user retracts the courier line entirely - no authority to absorb, nothing of the kind said to Solberg - and reduces the ask to Solberg confirming the replacement date for SB-LOT-7749. The unsent text still carries the cost pledge and the wrong lot, so the message under review stays Red until rewritten; kimi rates the corrected intent instead. Required: 7749 only, no absorb or cover language, and the request that Marit obtain Solberg's replacement date, which must not be invented."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-016-T1",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "preserve-message-purpose"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_3_adjudicated",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Green on a 2-1 majority (grok, kimi over gpt's Red). Sixteen pieces are due and the constraint requires the coordinator to report a shortfall to the manager as soon as it is known; the draft does exactly that, sets no delivery window and writes to no client, and the six-piece figure is the user's own current knowledge and is contradicted by nothing at this turn. gpt's Red applies the later corrections as hindsight. A Green review needs no rewrite; the required no-revision token is derived from that rating, with grok stating it explicitly and kimi allowing it. Asking the root cause is not carried as allowed because the unlanded crin is already in the background."
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V31-016-T2",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "apply-shortfall-count",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "apply-shortfall-count",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "preserve-message-purpose"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Green). The user confirms four short, not six, after two pieces came good on a second steam cycle, with the remaining cause still the unlanded brim-edge crin, so the standing six-piece figure directly contradicts a confirmed count. Rewrite to four short and keep the crin cause. No question is required."
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V31-016-T3",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "apply-full-delivery-window",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "apply-full-delivery-window",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-message-purpose"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_2_majority",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Red on a 2-1 majority (grok, gpt over kimi's Green). Ferrowhite confirm the crin lands Wednesday 15 October at 12:00 and Marchmont's goods-in have moved the acceptance window to Thursday 16 October, 07:30 to 09:30, so all 16 go in one delivery and the shortfall is dropped; the unsent shortfall warning contradicts that. The window is reported as the client's goods-in decision, not set by the coordinator, and neither the four-short nor the six-short figure survives."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-017-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-ferrowhite-credit-instruction",
+            "preserve-intended-recipient",
+            "remove-client-data-broadcast"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-ferrowhite-credit-instruction",
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "remove-client-data-broadcast"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_1_unanimous",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Unanimous Red. The recipient is Marit, so the route stays Normal mode, but the draft asks her to post Mrs Havelock's commission sheet - crown 57.5 cm, nape drop 4 cm, 1,240 pounds - into the full workroom channel, which includes Teodor Balke, the Saturday casuals and both annexe apprentices. Client fitting figures and commission prices stay with the staff on that job and the workroom channel is not a client-data channel. Keep the Ferrowhite invoice-and-credit ask on account QT-4471 to Marit and strip the broadcast and the client figures. Tone is not hostile."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "turn_id": "V31-018-T1",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "preserve-material-background-facts",
+            "preserve-writeoff-subject",
+            "refer-decisions-to-manager",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "remove-untrue-completed-actions"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "quality_tier": "tier_1_unanimous",
+          "gold_uncertain": false,
+          "uncertain_dimensions": [],
+          "majority_ratings_overridden": [],
+          "rationale": "Image turn; the note was opened directly and nothing in it is obscured or guessed. Unanimous Red on responsibility and tone. The coordinator claims to have told Menkes the whole block order will be written off and that they will sign the credit note, both outside their authority; puts Ilva and Callum on a Saturday shift neither has been asked about, when Saturday shifts are the manager's to agree; tells Ashvale the rush charge will be absorbed, a commercial decision; calls Dane useless since the day he started, an unsupported insult where the constraint requires another desk's part in a fault to go as fact; and closes by shutting the manager out. Required facts are the three with two-family support; keeping the write-off as the subject, referring the credit-note, Saturday and rush-charge decisions to the manager, and removing the untrue completions are each supported by one family and are allowed. Do not invent that Menkes, Ashvale, Ilva or Callum were actually told."
+        }
+      ]
+    }
+  ]
+}

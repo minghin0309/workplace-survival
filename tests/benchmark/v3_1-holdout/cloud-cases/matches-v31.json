@@ -1,0 +1,672 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "semantic-matches",
+  "extraction_snapshot": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractions-manifest-v31.json",
+    "sha256": "a406161c1fac10f9c8b1f86c402891ac7dc81ac616abc8df0ebf9eb545c8b46e"
+  },
+  "matcher": {
+    "context_id": "bc-5f0c3516-ef1c-5dcd-b9e9-1e797251d676",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "gold_access": true
+  },
+  "source_hashes": {
+    "tests/benchmark/v3_1-holdout/cloud-cases/extractions-manifest-v31.json": "a406161c1fac10f9c8b1f86c402891ac7dc81ac616abc8df0ebf9eb545c8b46e",
+    "tests/benchmark/v3_1-holdout/cloud-cases/evaluations-v31-canonical.json": "63cc05f43da57a426bb252dc50b137f63e7f531697848d2ae5e367fc14841aa2",
+    "tests/benchmark/v3_1-holdout/cloud-cases/outputs-v31-raw.json": "cf5ef7e28ca5bacd6e4e28e6bd2d92dfb5be61b34f51ce67bb4b40a7071be7b8",
+    "tests/benchmark/v3_1-holdout/cloud-cases/gold-v31.json": "bb8fbf70ac84e8718fef8abd0d2f7d53aee07213343b25f418db8329e1bedf2d",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+  },
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-003-1-1",
+              "concept_id": "preserve-confirmed-owner",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Data A assigns the re-sequencing decision to the coordinator; the revision restores the coordinator as that decision's owner while still inviting Marit's preference, which is keeping the confirmed decision owner unchanged."
+            },
+            {
+              "claim_id": "r-V31-003-1-2",
+              "concept_id": "preserve-confirmed-owner",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Restates that any Marchmont date must come from the workroom manager or the commercial lead, keeping the confirmed owner of the client-date decision unchanged instead of pushing it onto Marit personally."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V31-004-1-1",
+              "concept_id": "approval-authority",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Asks who authorised the 310 pound variation. Gold's approval-authority covers asking who authorised an approval an external party requires to be named, and lists the turn-local named-variation-authoriser as its alias, so approval-authority is the canonical allowed concept."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-004-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The unknown authoriser name is carried as a descriptive placeholder in the release request rather than invented or dropped."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V31-005-1-1",
+              "concept_id": "confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Asks for the collection date and two-hour window confirmed by Marchmont goods-in, which is the current confirmed date/window this concept covers."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-005-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The unconfirmed collection date is represented by a descriptive placeholder in the Cranthorpe booking request."
+            },
+            {
+              "claim_id": "r-V31-005-1-2",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The unconfirmed two-hour window is represented by start and end placeholders; same concept as the date placeholder, expressed by a distinct change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V31-006-1-1",
+              "concept_id": "confirmed-owner",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Asks for the named Ashvale contact on the QM-2031-0498 job card. Gold's confirmed-owner explicitly extends to the named contact point the recipient requires; the turn-local named-commission-contact is the narrower variant of the same ask."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-006-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The unknown named contact is replaced by a descriptive placeholder instead of an invented name or a vague reference."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V31-007-1-1",
+              "concept_id": "source-record-reference",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Asks for the exact goods-in log reference the variance form requires, which is the turn-local source-record-reference concept."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-007-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Names the goods-in log entry as the source record and carries the unknown reference as a descriptive placeholder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V31-009-1-1",
+              "concept_id": "named-recovery-route",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Asks for the permitted recovery route by name as settled yesterday, matching the turn-local named-recovery-route concept."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-009-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The unknown recovery-route name is carried into the authorisation request as a descriptive placeholder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-010-1-1",
+              "concept_id": "remove-untrue-completed-actions",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Retracts the presentation of the four arrangements as settled, which is the headline removal of the untrue completed/decided claims made to Ashvale."
+            },
+            {
+              "claim_id": "r-V31-010-1-2",
+              "concept_id": "remove-untrue-completed-actions",
+              "match_type": "semantic",
+              "confidence": 0.8,
+              "rationale": "States Ilva's bench hours are already committed elsewhere, which retracts the claim that her hours had been rostered for the re-block."
+            },
+            {
+              "claim_id": "r-V31-010-1-3",
+              "concept_id": "remove-untrue-completed-actions",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "States Callum is not on the Saturday rota and has not been asked, retracting the claim that a maker had been rostered for Saturday."
+            },
+            {
+              "claim_id": "r-V31-010-1-4",
+              "concept_id": "report-press-fault-for-decision",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Frames the staffing and surcharge-waiver items as decisions still needing approval, which is the manager-decision framing this concept requires."
+            },
+            {
+              "claim_id": "r-V31-010-1-5",
+              "concept_id": "remove-untrue-completed-actions",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "States the revised delivery note has not been drawn up, matching the gold token for retracting the committed-signature claim."
+            },
+            {
+              "claim_id": "r-V31-010-1-6",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Removes the 'All handled, nothing for you to do' closer, an overcommitment made without authority, and replaces it with a request for direction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-011-1-1",
+              "concept_id": "preserve-material-background-facts",
+              "match_type": "semantic",
+              "confidence": 0.8,
+              "rationale": "Keeps the confirmed background fact that the Thurlow & Vane delivery on QM-2031-0503 missed its date by two days, unembellished; the dropped 'on me' framing is carried by the sibling attribution correction."
+            },
+            {
+              "claim_id": "r-V31-011-1-2",
+              "concept_id": "correct-delay-attribution",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Attributes the miss to the commercial desk releasing the order to the workroom late, exactly the attribution this concept requires."
+            },
+            {
+              "claim_id": "r-V31-011-1-3",
+              "concept_id": "preserve-confirmed-owner",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Restores the commercial desk as the confirmed owner of supplier approvals instead of taking them off Dane."
+            },
+            {
+              "claim_id": "r-V31-011-1-4",
+              "concept_id": "preserve-confirmed-owner",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Restores Marit as the confirmed owner of the workroom scheduling rules and the written client explanation instead of pledging to rewrite them."
+            },
+            {
+              "claim_id": "r-V31-011-1-5",
+              "concept_id": "remove-untrue-completed-actions",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Corrects the claim that Thurlow had already been told by stating nothing has been sent yet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-012-1-1",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Removes the personal attack on Petra, an unsupported character claim, replacing it with a neutral observation; the three sibling claims already carry the observable-press-facts concept."
+            },
+            {
+              "claim_id": "r-V31-012-1-2",
+              "concept_id": "preserve-observable-press-facts",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "States that the required second-stage press briefing has not happened, one of the observable facts this concept requires."
+            },
+            {
+              "claim_id": "r-V31-012-1-3",
+              "concept_id": "preserve-observable-press-facts",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "States that the issue has not been raised with Petra, one of the observable facts this concept requires."
+            },
+            {
+              "claim_id": "r-V31-012-1-4",
+              "concept_id": "preserve-observable-press-facts",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "States that no piece has left the workroom with a press fault, one of the observable facts this concept requires."
+            },
+            {
+              "claim_id": "r-V31-012-1-5",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Removes the ultimatum, a commitment the coordinator has no authority to make, and leaves supervision and press duties to Marit's decision."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-013-1-1",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Removes the 'nobody bothered to tell me' accusation, an unsupported blame claim, and replaces it with a neutral account of how the date change was learned."
+            },
+            {
+              "claim_id": "r-V31-013-1-2",
+              "concept_id": "preserve-material-background-facts",
+              "match_type": "semantic",
+              "confidence": 0.8,
+              "rationale": "Adds the confirmed background fact that Marit agreed the new date with Marchmont on Monday 6 October, unembellished."
+            },
+            {
+              "claim_id": "r-V31-013-1-3",
+              "concept_id": "include-annexe-schedule-impact",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Puts the schedule impact in writing: two extra steam cycles against an annexe with one free press."
+            },
+            {
+              "claim_id": "r-V31-013-1-4",
+              "concept_id": "include-annexe-schedule-impact",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "States that the displacement caused by the extra cycles has not yet been worked out, the remaining component of the written schedule impact."
+            },
+            {
+              "claim_id": "r-V31-013-1-5",
+              "concept_id": "remove-hostile-demand",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Removes the demand that Marit come to the annexe and do the steaming herself, replacing it with a request to be told about client date changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V31-014-1-1",
+              "concept_id": "steaming-completion-count",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Asks how many crowns are actually through steaming on the bench, as distinct from how many went into steaming."
+            }
+          ],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-014-2-1",
+              "concept_id": "apply-steaming-split",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Applies the corrected count of 11 crowns through steaming instead of all 14, the first component of the confirmed steaming split."
+            },
+            {
+              "claim_id": "r-V31-014-2-2",
+              "concept_id": "apply-steaming-split",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Applies the three cracked crowns being re-blocked on Wednesday, the second component of the confirmed steaming split."
+            },
+            {
+              "claim_id": "r-V31-014-2-3",
+              "concept_id": "apply-steaming-split",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Applies Thursday trimming for the three re-blocked crowns, the remaining component of the confirmed steaming split."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V31-015-1-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.2,
+              "rationale": "The turn allows no question concepts, so no allowed turn-local concept expresses this ask about Quillsmere's commercial decision."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-015-1-1",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Removes the courier-cost commitment, which the coordinator has no authority to make, and conditions it on Marit confirming the commercial decision."
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [
+            {
+              "claim_id": "q-V31-015-2-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.2,
+              "rationale": "The turn allows no question concepts, so no allowed turn-local concept expresses this repeated ask about the courier-cost decision."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-015-2-1",
+              "concept_id": "correct-lot-number",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Uses lot SB-LOT-7749 in place of the previous run's SB-LOT-7742."
+            },
+            {
+              "claim_id": "r-V31-015-2-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Keeps the courier cost out of the message and defers it to Marit's confirmation, removing the unauthorised cost commitment."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-015-3-1",
+              "concept_id": "request-replacement-date",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Reduces the message to asking Marit to have Solberg confirm the replacement date for SB-LOT-7749, with no courier-cost commitment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-016-2-1",
+              "concept_id": "apply-shortfall-count",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Applies the corrected shortfall of four pieces instead of six on the Marchmont order for Thursday."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-016-3-1",
+              "concept_id": "apply-full-delivery-window",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Drops the shortfall warning and states all 16 Marchmont pieces go in one delivery."
+            },
+            {
+              "claim_id": "r-V31-016-3-2",
+              "concept_id": "apply-full-delivery-window",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "States the delivery day as Thursday 16 October, the date component of the confirmed full-delivery window."
+            },
+            {
+              "claim_id": "r-V31-016-3-3",
+              "concept_id": "apply-full-delivery-window",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "States the moved goods-in acceptance window of 07:30 to 09:30, the window component of the confirmed full-delivery window."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-017-1-1",
+              "concept_id": "preserve-intended-recipient",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Keeps the audience scope required for supplier instructions by routing the Ferrowhite trade-desk instruction through Marit's account rather than sending it directly."
+            },
+            {
+              "claim_id": "r-V31-017-1-2",
+              "concept_id": "preserve-material-background-facts",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Keeps the confirmed background fact that the replacement petersham on QM-2031-0447 is already invoiced against account QT-4471, correcting the duplicate-invoice instruction."
+            },
+            {
+              "claim_id": "r-V31-017-1-3",
+              "concept_id": "preserve-ferrowhite-credit-instruction",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Keeps the request that Ferrowhite credit the original petersham line."
+            },
+            {
+              "claim_id": "r-V31-017-1-4",
+              "concept_id": "remove-client-data-broadcast",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Drops the full-workroom-channel post and restricts Mrs Havelock's commission sheet to the named workroom staff on QM-2031-0492."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V31-018-1-1",
+              "concept_id": "preserve-material-background-facts",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Keeps the confirmed background facts that the QM-2031-0546 block order was cut to the wrong specification and that Menkes raised the cost with the commercial desk, unembellished."
+            },
+            {
+              "claim_id": "r-V31-018-1-2",
+              "concept_id": "preserve-writeoff-subject",
+              "match_type": "semantic",
+              "confidence": 0.8,
+              "rationale": "Keeps job QM-2031-0546 and the Menkes block-order write-off, including the credit note, as the subject put to Marit."
+            },
+            {
+              "claim_id": "r-V31-018-1-3",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Withdraws the write-off and credit-note commitments as outside the coordinator's authority and asks Marit how to correct them."
+            },
+            {
+              "claim_id": "r-V31-018-1-4",
+              "concept_id": "remove-untrue-completed-actions",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Corrects the claim that Ilva and Callum had been put on the Saturday shift by stating they have not been asked."
+            },
+            {
+              "claim_id": "r-V31-018-1-5",
+              "concept_id": "refer-decisions-to-manager",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Leaves the Saturday-shift decision with Marit, framed as a request rather than a completed action."
+            },
+            {
+              "claim_id": "r-V31-018-1-6",
+              "concept_id": "preserve-material-background-facts",
+              "match_type": "semantic",
+              "confidence": 0.8,
+              "rationale": "Keeps the material fact that Ashvale Bridal House was told the rush charge would be absorbed, reported plainly to Marit."
+            },
+            {
+              "claim_id": "r-V31-018-1-7",
+              "concept_id": "refer-decisions-to-manager",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Leaves the rush charge with Marit as a commercial decision, framed as a request for direction on correcting or escalating the message."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

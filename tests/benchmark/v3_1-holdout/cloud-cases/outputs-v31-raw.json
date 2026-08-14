@@ -1,0 +1,810 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "sut-raw-outputs",
+  "parent_gold_manifest": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-manifest-v31.json",
+    "sha256": "2aea483242418bdf73a56b0fdb921a718d4ea54c66611a8eae8d7bf7cf8e0377"
+  },
+  "canonical_parent_commit": "f609800eba5f3e8f20b541f7776c1a427ca8aed2",
+  "shared_delivery": {
+    "branch": "cursor/v31-sut-shared-delivery-17a0",
+    "tip": "a65e26961880130f237345c4ea74843b06399c22",
+    "role": "delivery_log_only",
+    "not_canonical_parent": true
+  },
+  "runtime": {
+    "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  },
+  "requested_model_id": "gpt-5.6-sol-high-fast",
+  "machine_model_id": "unverified",
+  "counts": {
+    "cases": 18,
+    "turns": 24
+  },
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "generator_context_id": "bc-9d6cea32-519e-5bab-8ba0-e43bb1564a8e",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-001.json",
+        "sha256": "30f195b1b2474de1076ca94fef8d49653afc30214963b5338ab8e5fa629ea0ce"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-001.json",
+        "raw_sha256": "92a14206460a30965f51c8f30659e8b0cfd6f5d0082c4392520b2be5a0fa9975",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-001.json",
+        "attestation_sha256": "9d45c9098a78dc45a497712efa2b1491eef75fd4a08129c2f21de44ccfbb3489",
+        "branch": "cursor/v31-001-sut-4a8e",
+        "output_commit": "a10702675fb745be18a2c83df563fffc67e910e0",
+        "raw_commit": "a10702675fb745be18a2c83df563fffc67e910e0",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "92a14206460a30965f51c8f30659e8b0cfd6f5d0082c4392520b2be5a0fa9975",
+        "source_attestation_sha256": "9d45c9098a78dc45a497712efa2b1491eef75fd4a08129c2f21de44ccfbb3489"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": "2026-08-14T02:50:28Z",
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- All 12 crowns on QM-2031-0461 were blocked and steamed as of Tuesday 7 October.\n- Callum Ostrey holds the trimming slot on Wednesday 8 October from 09:00 to 16:00.\n- The coordinator scheduled the internal check for 09:00 on Thursday 9 October.\n- Cranthorpe Courier collection is booked for Friday 10 October at 11:00 under reference CR-88214.\n- Nothing on this job requires a decision from the workroom manager.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft accurately states the completed blocking and steaming, Callum's Wednesday trimming slot, the coordinator's Thursday internal check, the Friday collection and reference, that no manager action is needed, and that the coordinator will report any change from the Thursday check the same day.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual, gives a concise status update, and clearly states that nothing is needed from Marit.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "generator_context_id": "bc-15751b57-3800-5a37-86b6-8bbcc485a4c7",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-002.json",
+        "sha256": "cfb4bd0798099d5c46ce102421673f3341326f734a753bb617b88c78ea21d49c"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-002.json",
+        "raw_sha256": "b2165db070f52a4754d5b550694ee52802123ad86fbfa3b599e42bafe3d6027f",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-002.json",
+        "attestation_sha256": "62362ae79779f13766fdd8561d7d15d826249ba9e789fe0fe636bc4eeffd2ce5",
+        "branch": "cursor/v31-002-sut-a4c7",
+        "output_commit": "18bc987455a41466a7c3daf0bd412189f34696e1",
+        "raw_commit": "18bc987455a41466a7c3daf0bd412189f34696e1",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "b2165db070f52a4754d5b550694ee52802123ad86fbfa3b599e42bafe3d6027f",
+        "source_attestation_sha256": "62362ae79779f13766fdd8561d7d15d826249ba9e789fe0fe636bc4eeffd2ce5"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Petra Somyk's agreed and paid block-work training day is Monday 13 October, 09:00 to 17:00, so finishing-bench cover is needed.\n- Option 1 is for Ilva Renaudin to cover finishing from 09:00 to 13:00, moving the Marchmont Enclosure sample to Tuesday 14 October; changing Ilva's bench hours is Marit's decision, and Ilva is owed two working days' notice.\n- Option 2 is for the coordinator to cover finishing and move the Ardhu Lane stock count to Wednesday 15 October, with nothing else affected; the coordinator may cover personally, while moving the stock count is Marit's decision.\n- The Marchmont sample has a week of float, while the stock count has none after Wednesday 15 October.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft accurately gives both options and their effects, asks Marit to make the decision, states the coordinator's preference without presenting it as settled, and requests a decision by Friday 10 October so Ilva can receive the required notice.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, presents the preference as a recommendation, and leaves the decision with Marit without blame or pressure.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "generator_context_id": "bc-526c146f-1d81-5641-833e-a93c81fe687a",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-003.json",
+        "sha256": "d2ff2ca7f4d39a2c7d07c0ac4ba0b54b55e021cc2d6119dd2f726aeef7e0ca28"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-003.json",
+        "raw_sha256": "d4cd7203d889c1860c9a35757f42d5f72a5b4b89a48f30bcb29ddca1cf385a07",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-003.json",
+        "attestation_sha256": "00d5a8a8dd99d1cf760811d5fc3ee2627933aa1e6b680644a219227403d94107",
+        "branch": "cursor/v31-sut-shared-delivery-17a0",
+        "output_commit": "367fcdc550789bbd2828511fa5007f88f0c5b1e7",
+        "raw_commit": "07b22606abfb0636a8a4ef2946fbc4848343cf72",
+        "delivery": "shared_holdout",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "d4cd7203d889c1860c9a35757f42d5f72a5b4b89a48f30bcb29ddca1cf385a07",
+        "source_attestation_sha256": "00d5a8a8dd99d1cf760811d5fc3ee2627933aa1e6b680644a219227403d94107"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Pushed onto shared cursor/blind-v31-holdout-17a0 instead of a dedicated isolated branch.",
+          "Canonical extract uses git show of 07b2260/367fcdc from the delivery-log ref; those commits are not merged."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Marchmont Enclosure asked for 14 finished pieces by Thursday 9 October at 16:00.\n- Nine narrow-brim pieces need one steam cycle each; five wide-brim pieces need two cycles each.\n- One annexe press is free before Thursday, the second is committed until Thursday at 12:00, and both presses are clear Friday morning.\n- The coordinator has given Marchmont Enclosure no date.\n- A client date must be given by the workroom manager or commercial lead, while re-sequencing the workroom's finishing order is the coordinator's decision.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says, \"If you would rather I flip that order, tell me ... and I will re-sequence,\" which makes Marit's preference determine the finishing order even though Data A assigns the re-sequencing decision to the coordinator. The capacity update and proposed sequence otherwise align with Data A.\n- Communication risk: Marit could reasonably understand that she now owns the re-sequencing decision, contradicting the confirmed responsibility boundary.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"That one is yours to give\" pushes the client-date matter personally onto Marit, while Data A says either the workroom manager or commercial lead may give the date.\n- Communication risk: The wording may sound like responsibility shifting and may imply that Marit alone owns the client-date action.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - on the Marchmont top-up: I can finish 9 of the 14 by Thursday at 16:00, not all 14. The five outstanding are the wide-brim pieces, which need two steam cycles each, and only one annexe press is free before Thursday. My plan is the nine narrow-brim pieces first, then the five wide-brim on Friday morning when both presses are clear. If you would rather I flip that order, tell me by Wednesday at 12:00 and I will take that into account when I make the re-sequencing decision. I have given Marchmont no date - any date needs to come from you or the commercial lead.",
+          "source_json_pointer": "/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "generator_context_id": "bc-5d7b8c7f-43db-5dee-844a-a8f4ce093a46",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-004.json",
+        "sha256": "48ce0bcf54c9d23bdd634fb740dd882d16a9369b8d7e89a2dc3034ae25d1edd4"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-004.json",
+        "raw_sha256": "ad8c66230b625286c58c5986dd1dc6fe1b7defd20ab7adc6c0411b2fcfc66b25",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-004.json",
+        "attestation_sha256": "1452938a6097b190426c1b505c9e70eecb4d4d4042400ee6f0b3ad1f0a5ea7cd",
+        "branch": "cursor/v31-004-sut-3a46",
+        "output_commit": "50e5652dcf5f4738523d1b3a035b49d03f00c25f",
+        "raw_commit": "50e5652dcf5f4738523d1b3a035b49d03f00c25f",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "ad8c66230b625286c58c5986dd1dc6fe1b7defd20ab7adc6c0411b2fcfc66b25",
+        "source_attestation_sha256": "1452938a6097b190426c1b505c9e70eecb4d4d4042400ee6f0b3ad1f0a5ea7cd"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Ferrowhite will release the reserved 40 m of 38 mm FW-Slate petersham for QM-2031-0447 only if the request names the individual who authorised the 310 pound variation; its trade desk rejects a request that names no individual.\n- The reservation lapses on Thursday 9 October at 16:00, and finishing needs the petersham on Friday 10 October.\n- The variation is signed off and the coordinator has seen the initialled entry, but Data A does not identify the individual who authorised it.\n- Release requests to Ferrowhite are sent by the workroom manager. All other release-form fields are complete.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B asks Marit to send the release request and states that it must name the person who authorised the variation, but it does not provide that person's name. Data A says Ferrowhite rejects a request that names no individual.\n- Communication risk: Marit cannot prepare a complete release request from the information in the message, so the trade desk may reject it and the reserved stock may not be released before the deadline.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft uses a direct, factual request and neutrally explains the release condition, completed fields, deadline, and finishing dependency.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the name of the individual who authorised the 310 pound variation?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer is required to complete the release request that Ferrowhite will accept.\n   - Neutral answer structure: The individual who authorised the variation is [full name].\n\n## Minimal revision\n\nMarit - can you send Ferrowhite the release request for the 40 m of 38 mm petersham in FW-Slate on QM-2031-0447 before the reservation lapses at 16:00 today? Their trade desk will not release reserved stock unless the request names the person who authorised the 310 pound variation: [full name of the individual who authorised the variation]. The variation is already signed off on our sheet. Account QT-4471, quantity, width and shade are all filled in on their form. Finishing needs the petersham on Friday morning.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "generator_context_id": "bc-ca0c5b2f-44ff-5eb0-9e5b-b4976b87fa0e",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-005.json",
+        "sha256": "8e6e5a09b78352af9f39e868196c79f1b3fbe0739b1eda0d493eb2db75c293f7"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-005.json",
+        "raw_sha256": "557175f36e78bf0f4e081f2347e6fedcc838939057d5246792f021b6215eca36",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-005.json",
+        "attestation_sha256": "1558a0a9dedcad48ee161509e33268b8a8dd6084e19bf3ce9cfca3a542a9b978",
+        "branch": "cursor/v31-005-sut-fa0e",
+        "output_commit": "d2c6ff0f5caf12b9ec0db131d8f4ba935c363fdb",
+        "raw_commit": "d2c6ff0f5caf12b9ec0db131d8f4ba935c363fdb",
+        "delivery": "dedicated",
+        "markdown_wrapped": true,
+        "source_raw_sha256": "0227fe6656fcb4e18fd8c3453667e99d7c92ec2e0bef51734791eb2f430801b4",
+        "source_attestation_sha256": "1558a0a9dedcad48ee161509e33268b8a8dd6084e19bf3ce9cfca3a542a9b978"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Raw Skill output was delivered as Markdown; canonical JSON wraps the exact source string in raw_skill_output."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The user is the workroom coordinator, and Marit is the direct line manager who places courier bookings on client jobs.\n- The nine finished pieces for QM-2031-0512 are trimmed, checked, and packed as nine hat boxes in two crates.\n- Cranthorpe requires one exact collection date and one two-hour window when a booking is made.\n- Marchmont goods-in accepts delivery only during the single window confirmed to the coordinator by telephone on Monday 6 October; the coordinator noted it on the annexe board.\n- The actual collection date and two-hour window are not included in the provided background or draft.\n- The coordinator does not have a Cranthorpe booking account, and Cranthorpe's booking desk closes at 17:00 each day.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Marit to book the collection and states that Cranthorpe requires an exact date and two-hour window, but it does not provide either value. Because Cranthorpe accepts no open bookings, Marit cannot complete the requested booking from the message.\n- Communication risk: The reply's main purpose is defeated because the manager lacks the execution-critical date and window needed to place the booking.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is direct, neutral, and factual; it contains no hostility, blame, threat, disrespect, or responsibility-shifting wording.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What exact collection date and two-hour window did Marchmont goods-in confirm?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: These values are required for a safe revision that Marit can use to place the Cranthorpe booking.\n   - Neutral answer structure: Collection date: [exact date]; two-hour window: [start time]\u2013[end time]\n\n## Minimal revision\n\nMarit - please book Cranthorpe for the Marchmont collection on QM-2031-0512 for [exact collection date], [start time]\u2013[end time]. The nine pieces are trimmed, checked and packed: nine boxes in two crates. Cranthorpe need an exact date and a two-hour window at the point of booking, and Marchmont's goods-in will only take the delivery inside the window their desk confirmed to me on Monday. Their booking desk shuts at 17:00.\n",
+          "source_json_pointer": "/raw_skill_output"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "generator_context_id": "bc-4ed20476-3c8a-5597-bb97-9e8c4fea371a",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-006.json",
+        "sha256": "d7dc0445e2b36c602f9c159b02329d62ce4c5d155a5ad4ab3ddd2973b44a1400"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-006.json",
+        "raw_sha256": "73c134798283a89fd9c9269fa6f4a8cd558b22a498ec04e72ce51fd35939be9e",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-006.json",
+        "attestation_sha256": "90832be7d04ec3c14711a0e31c2250a90396b293c1888c17ef01a92b6a3b3270",
+        "branch": "cursor/v31-006-sut-371a",
+        "output_commit": "b909b51579d9affef2000912ff4b0fca12866edd",
+        "raw_commit": "b909b51579d9affef2000912ff4b0fca12866edd",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "73c134798283a89fd9c9269fa6f4a8cd558b22a498ec04e72ce51fd35939be9e",
+        "source_attestation_sha256": "90832be7d04ec3c14711a0e31c2250a90396b293c1888c17ef01a92b6a3b3270"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Wrote sut-outputs/ and attestations/ instead of sut-raw/ and sut-attestations/; bytes were copied to canonical paths."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The adjustment for QM-2031-0498 is finished: the crown was eased by 6 mm at the left temple and the brim wire was re-set.\n- The piece is boxed and ready for Ashvale's fitting on Tuesday 14 October at 10:30.\n- Ashvale accepts fitting notes only when addressed to the single named contact recorded for that commission; notes sent to general enquiries are returned unread.\n- The job card is in the Bellhouse Yard office, and the coordinator has read it.\n- The fitting cannot proceed unless the adjustment note reaches the named contact.\n- Client messages must be sent from the workroom manager's account; the coordinator does not correspond with Ashvale directly.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Marit to send the note to \"Ashvale's named contact\" but does not give that contact's name. Data A establishes that Ashvale requires the single contact recorded on the job card and that the fitting cannot proceed without the note reaching that person.\n- Communication risk: Marit cannot identify the required recipient from the draft alone, so the note could be delayed or misdirected and prevent the fitting from proceeding.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is polite, factual, and makes a direct operational request without blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What single named Ashvale contact is recorded on the job card for QM-2031-0498?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The contact's name is required to make the sending request executable and to prepare a safe final revision.\n   - Neutral answer structure: [contact name]\n\n## Minimal revision\n\nMarit - could you send the adjustment note for QM-2031-0498 across to [name of contact recorded on the QM-2031-0498 job card] at Ashvale before their fitting on Tuesday at 10:30? Ashvale return anything sent to their general enquiries address, so it has to go to that contact. The note itself: crown eased by 6 mm at the left temple, brim wire re-set, piece boxed and ready.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "generator_context_id": "bc-05ddddf3-b881-5814-b849-89ca3f4ecfd5",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-007.json",
+        "sha256": "487485e48f9c5113b59d49c94c9b4d4538e5d060fa671dfa8287ea68679167e7"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-007.json",
+        "raw_sha256": "9f828be07bdbcffc4687d330968ae6aa466cb1cad88fecdc616679c10cbd4861",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-007.json",
+        "attestation_sha256": "042ea95340bc498a9c52b2678cf8f9a3fe8596192c635caa0ab53139383bcb7c",
+        "branch": "cursor/v31-007-sut-cfd5",
+        "output_commit": "0f98d9a486e76b39c0be8e308790ed82f6b16860",
+        "raw_commit": "0f98d9a486e76b39c0be8e308790ed82f6b16860",
+        "delivery": "dedicated",
+        "markdown_wrapped": true,
+        "source_raw_sha256": "f247d790e862d1c2b49536206044e6e1ce62f2aaa2ea13f19d19dc7cc30e7bdb",
+        "source_attestation_sha256": "042ea95340bc498a9c52b2678cf8f9a3fe8596192c635caa0ab53139383bcb7c"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Raw Skill output was delivered as Markdown; canonical JSON wraps the exact source string in raw_skill_output."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Six brims on QM-2031-0524 are a half tone lighter than the approved swatch because of a batch variance in straw received from Solberg Straw & Sinamay, not a finishing fault.\n- The variance is recorded in the workroom's goods-in log, and the coordinator checked the entry this morning.\n- Thurlow & Vane's mandatory source-record field requires a record reference and rejects wording such as \u201cinternal records.\u201d\n- The workroom manager sends client quality-desk responses. The response is due Friday 10 October at 12:00; rejection would put the six brims back on the workroom as a finishing fault.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Marit to submit the variance statement and notes that a source-record reference is mandatory, but it does not provide the actual goods-in log reference.\n- Communication risk: Marit cannot complete the mandatory source-record field from the draft; submitting without the reference would cause rejection and put the brims back on the workroom as a finishing fault.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is direct, factual, and neutral.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What exact source-record reference identifies the relevant goods-in log entry?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The reference is required to complete the client\u2019s mandatory field and produce a safe revision.\n   - Neutral answer structure: The exact goods-in log reference is [source-record reference].\n\n## Minimal revision\n\nMarit - please put this to Thurlow & Vane's quality desk before their Friday 12:00 cut-off: the shade difference across the six brims on QM-2031-0524 is a recorded batch variance in the straw we took in from Solberg, not a finishing fault. Their variance form will not accept the statement without the source record reference behind it, and they bounce anything that just says 'internal records'. The source record is the goods-in log entry [exact source-record reference].\n",
+          "source_json_pointer": "/raw_skill_output"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "generator_context_id": "bc-0f429f5c-5c3d-5f19-b699-c4a238e8ef3f",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-008.json",
+        "sha256": "a305ab962b21198f7488e44328820c7c557a8dd76b32939d5dccc57bf49a9dbe"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-008.json",
+        "raw_sha256": "5b63f2f2a60f9cb5f32991cc5e5da372b7413a71e1e2e010a39f4204ebbed1b5",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-008.json",
+        "attestation_sha256": "4d0dc8a751ac6a82d1b4aa8a6ce089fb9df3348e92290bcebe7d8c3da464b69f",
+        "branch": "cursor/v31-008-sut-ef3f",
+        "output_commit": "f8077fcd5925f74fa35accd9fec4ba041cb80779",
+        "raw_commit": "f8077fcd5925f74fa35accd9fec4ba041cb80779",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "5b63f2f2a60f9cb5f32991cc5e5da372b7413a71e1e2e010a39f4204ebbed1b5",
+        "source_attestation_sha256": "4d0dc8a751ac6a82d1b4aa8a6ce089fb9df3348e92290bcebe7d8c3da464b69f"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Wrote generic sut-v31-raw.json filenames; bytes were copied to V31-008 canonical paths.",
+          "Globbed holdout artifact filenames, including gold and other-case inputs, before Skill output. No gold or other-case file contents were opened."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Information needed\n\n- Missing: image confirmation\n- Next step: Provide the exact crown circumference (cm) obscured on the `Crown circumference (cm)` line in the draft note.",
+          "source_json_pointer": "/cases/0/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "generator_context_id": "bc-6ef7a0a5-961f-5ed3-bbe0-6249a5ebc521",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-009.json",
+        "sha256": "0a118470f1e8ac34275e233b6638616fcfb459bed681b2e64e0ad6dfb7f23804"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-009.json",
+        "raw_sha256": "a7987a0857d62f438d2bbdf3650bc279587af850d5a37017fb4623fdbe71ce27",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-009.json",
+        "attestation_sha256": "7b5f696e9d0d2667e00ae791326416d5d9ace372ead64e8047ff13246b17631e",
+        "branch": "cursor/v31-009-sut-c521",
+        "output_commit": "fb64dc15f6875f03543e00843edf9505d35f3081",
+        "raw_commit": "fb64dc15f6875f03543e00843edf9505d35f3081",
+        "delivery": "dedicated",
+        "markdown_wrapped": true,
+        "source_raw_sha256": "cc5c5538b22e1c7014aff5f74a3d1dba43e0c88ed392c27f06aa4484e909a376",
+        "source_attestation_sha256": "7b5f696e9d0d2667e00ae791326416d5d9ace372ead64e8047ff13246b17631e"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Wrote sut-outputs/V31-009.md and attestations/; Markdown was wrapped and attestation bytes copied to canonical paths."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Four of the sixteen pieces on QM-2031-0541 cannot be finished for Thursday 9 October because the 22 mm grosgrain has not arrived.\n- The escalation procedure permits three recovery routes and requires the authorisation request to name one of them.\n- Marit can authorise a named permitted route, but she cannot authorise an unnamed route or \u201cwhichever works.\u201d\n- You settled on one permitted route yesterday afternoon, but the route\u2019s name is not provided in the background.\n- Ashvale needs the named route in writing before 11:00 on Wednesday 8 October, and you cannot write to Ashvale until Marit authorises the route.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Marit to authorise \u201cthe recovery route I settled on yesterday\u201d without naming that route. Data A says the procedure requires one permitted route to be requested by name and that Marit cannot sign off an unnamed route.\n- Communication risk: The omission defeats the message\u2019s main purpose because Marit cannot identify or authorise the requested route, so you cannot send the required written route to Ashvale before the deadline.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft states the shortfall, cause, authorisation request, deadline, and procedural constraint directly and factually, without blame, hostility, or disrespect.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the name of the permitted recovery route you settled on yesterday?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The route\u2019s name is required for Marit to identify and authorise the request safely.\n   - Neutral answer structure: The permitted recovery route is [name of permitted recovery route].\n\n## Minimal revision\n\nMarit - we will be four short of the sixteen for Ashvale on Thursday; the 22 mm grosgrain has not landed. Can you authorise [name of permitted recovery route], the recovery route I settled on yesterday, so I can put it to Ashvale before 11:00 this morning? They need the route named in writing, and the procedure will not let you sign off a shortfall without a named route.\n",
+          "source_json_pointer": "/raw_skill_output"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "generator_context_id": "bc-fa10bc11-9547-56c4-bf31-c1ab8ed376a3",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-010.json",
+        "sha256": "8a8002f43d181974ef38d46ccd1308403fde6333740f7ba84d79e28981f53224"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-010.json",
+        "raw_sha256": "1d9e782a489363c56f4925d601dbe40093729d77820e6c52768abb9d8cd8d107",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-010.json",
+        "attestation_sha256": "c1ae5aa020220edb52dee0b6ebb3edd2a657a4214ce63486c7f515fd56b25b30",
+        "branch": "cursor/v31-010-sut-76a3",
+        "output_commit": "b4cbda822e6fd74fa13e4981f4c5fa731b4ec777",
+        "raw_commit": "b4cbda822e6fd74fa13e4981f4c5fa731b4ec777",
+        "delivery": "dedicated",
+        "markdown_wrapped": true,
+        "source_raw_sha256": "3cea72c0b7dbb4a787aebcb2d57e243cd0aa77c53251e0488a32e925752beeff",
+        "source_attestation_sha256": "c1ae5aa020220edb52dee0b6ebb3edd2a657a4214ce63486c7f515fd56b25b30"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Raw Skill output was delivered as Markdown; canonical JSON wraps the exact source string in raw_skill_output."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The press fault flattened 22 crowns for Ashvale, and re-blocking them takes about two full days of one blocker's bench time.\n- Ilva Renaudin's bench hours next week are already committed to the Marchmont Enclosure sample.\n- Callum Ostrey is not on the Saturday rota and has not been asked about Saturday.\n- Waiving the \u00a3480 rush surcharge is a decision for the commercial lead or the workroom manager.\n- Weekend shifts and re-allocation of another maker's hours are agreed by the workroom manager.\n- The revised delivery note has not been drawn up, and the coordinator cannot commit the workroom manager's signature.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft presents Ilva's Thursday re-blocking, Callum's Saturday coverage, the surcharge waiver, and Marit's signature tomorrow as settled. Data A says Ilva's hours are already committed elsewhere; Callum is not on the Saturday rota and has not been asked; staffing and waiver decisions require management approval; the delivery note does not yet exist; and the coordinator cannot commit Marit's signature.\n- Communication risk: Marit could receive an inaccurate account of commitments already made to Ashvale while the staffing, commercial, and signature decisions that require approval remain unresolved.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \u201cAll handled, nothing for you to do\u201d dismisses Marit's required role in the unresolved decisions.\n- Communication risk: The wording may obscure the handoff and make the message sound dismissive of the manager's decision authority.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - just so you are in the loop: I told Ashvale that Ilva would re-block all 22 crowns by Thursday, Callum would cover the Ardhu Lane annexe on Saturday, we would waive the \u00a3480 rush surcharge, and you would sign a revised delivery note tomorrow. I should not have presented those arrangements as settled: Ilva's hours next week are committed to the Marchmont Enclosure sample, Callum is not on the Saturday rota and has not been asked, the staffing and waiver decisions need approval, and the revised delivery note has not been drawn up. Please let me know how you want me to correct the update to Ashvale.\n",
+          "source_json_pointer": "/raw_skill_output"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "generator_context_id": "bc-03abd61b-1348-5597-84ad-ea70a9d60f0b",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-011.json",
+        "sha256": "9abc47cb2256907ee14498a7d7947c5a109bb51d2e2c4b376e83c7f0b9ed5d45"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-011.json",
+        "raw_sha256": "70175b4808918c01dba40ca6ea98951b92e79e7f727f9016d8188713593bc134",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-011.json",
+        "attestation_sha256": "5d66921532b70e5c0b694d1dcad7a3dc9a91ed6c5b42c76c915d213a9df18efc",
+        "branch": "cursor/v31-sut-shared-delivery-17a0",
+        "output_commit": "6f5062627285a1f48aae589292bfaa5140ae4cc0",
+        "raw_commit": "6f5062627285a1f48aae589292bfaa5140ae4cc0",
+        "delivery": "shared_holdout",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "70175b4808918c01dba40ca6ea98951b92e79e7f727f9016d8188713593bc134",
+        "source_attestation_sha256": "5d66921532b70e5c0b694d1dcad7a3dc9a91ed6c5b42c76c915d213a9df18efc"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Pushed onto the shared holdout branch instead of a dedicated isolated branch.",
+          "Globbed/listed cloud-cases filenames including gold and V31-003 artifacts; no prohibited file contents were opened.",
+          "Attestation overstated only-listed-content-read given directory enumeration."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The QM-2031-0503 delivery to Thurlow & Vane missed its date by two days.\n- The commercial desk released the order to the workroom late.\n- Supplier approvals belong to Dane Krivec's commercial desk, not the coordinator.\n- The workroom manager owns the scheduling rules and the written explanation to Thurlow & Vane; no explanation has been sent yet.\n- The workroom manager sets the coordinator's hours, so the coordinator cannot pledge them.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says the miss is entirely \"on me,\" takes supplier approvals from Dane, promises to rewrite manager-owned scheduling rules, says future slips will come from the coordinator's hours, and claims Thurlow was told this even though nothing has been sent. Each conflicts with the confirmed ownership, constraint, or status.\n- Communication risk: Marit could understand that the coordinator has assumed authority and commitments that belong to the commercial desk or workroom manager, and that a client communication occurred when it did not.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"You do not need to look at this again\" dismisses Marit's involvement even though she owns the scheduling rules and client explanation.\n- Communication risk: The wording may imply that the coordinator is excluding the manager from decisions and work she owns.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - the Thurlow & Vane delivery on QM-2031-0503 missed its date by two days. The order was released to the workroom late by the commercial desk. Supplier approvals remain with Dane's commercial desk. The workroom scheduling rules and the written explanation to Thurlow & Vane remain with you; nothing has been sent to Thurlow yet.",
+          "source_json_pointer": "/output"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "generator_context_id": "bc-970f87a6-addd-5c59-8bea-c0c52f45c696",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-012.json",
+        "sha256": "0c11e682e3ef9512eae9e15008ab2c7a5e8f5ad0aaa55da8eb7446bbc7e4e962"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-012.json",
+        "raw_sha256": "aee67d20ddbf33114e1afebb10b4d71b5558fb126ca9fadcd30ce1d32fb6cb6d",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-012.json",
+        "attestation_sha256": "da97a0508205380757ea0ab4bb173d50c884e1ee3cb5440a8890366a7bce74d9",
+        "branch": "cursor/workplace-survival-v31-012-c696",
+        "output_commit": "95a112d9fff0dcc227fe3a0b2edce607871e4f95",
+        "raw_commit": "95a112d9fff0dcc227fe3a0b2edce607871e4f95",
+        "delivery": "dedicated_misnamed",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "aee67d20ddbf33114e1afebb10b4d71b5558fb126ca9fadcd30ce1d32fb6cb6d",
+        "source_attestation_sha256": "da97a0508205380757ea0ab4bb173d50c884e1ee3cb5440a8890366a7bce74d9"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Pushed misnamed dedicated branch cursor/workplace-survival-v31-012-c696.",
+          "Read sut-input-manifest.json and listed sut-raw/, exposing other-case metadata and V31-003 filenames. No gold or other-case Skill-output contents were opened.",
+          "Source branch tip also contained inherited V31-003 files; canonical extract copied only V31-012."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Petra Somyk is a second-year apprentice who has been on the steam press for three weeks.\n- Four crowns Petra pressed in the last fortnight had to be re-blocked.\n- Petra has not had the required second-stage press briefing.\n- You have not raised the issue with Petra.\n- No piece has left the workroom with a press fault.\n- Apprentice supervision and any change to apprentice duties are Marit's decision.\n- Concerns about a colleague's work must be raised with Marit as observations, not complaints.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft presents an ultimatum\u2014\u201cEither she is off the presses by Monday or I stop covering for her\u201d\u2014instead of reporting the observed re-blocking and leaving supervision or duty changes to Marit. \u201cCovering for her\u201d also does not identify the work the coordinator would stop doing.\n- Communication risk: Marit could be pushed toward an unsupported duty change or be left unclear about what work the coordinator intends to stop.\n\n### Tone\n\n- Rating: Red\n- Evidence: \u201cI have had enough of Petra,\u201d \u201cShe is careless,\u201d \u201cshe clearly could not care less,\u201d and \u201cshe has been dragging this workroom down since the day she arrived\u201d are hostile, degrading characterizations and unsupported claims about Petra's attitude and entire work history. \u201cYour choice\u201d follows a personal ultimatum.\n- Communication risk: The personal accusations and ultimatum turn a documented work concern into a hostile complaint and may obstruct a neutral supervision decision.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit \u2014 four crowns Petra pressed in the last fortnight had to be re-blocked. She has not yet had the required second-stage press briefing, and I have not raised this with her. No piece has left the workroom with a press fault. Could you decide how you would like to handle her supervision and press duties?",
+          "source_json_pointer": "/turns/0/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "generator_context_id": "bc-dbd0f64b-7608-5483-a4b2-f8691737404b",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-013.json",
+        "sha256": "339390b3f8a30585f4bb4b281aee410fa0c412a7c1b118576b1010f86d01c81e"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-013.json",
+        "raw_sha256": "880dac6557519c3e802497bd1384a96b49957622a3a5061183083e24a56ec5d3",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-013.json",
+        "attestation_sha256": "dcef95a260c7cc9c5cf3241357f50798690f39001f87bf465c5e2400fe05f9d9",
+        "branch": "cursor/v31-013-sut-404b",
+        "output_commit": "9bf592c45cd718b57faeda5195856bbc79a6a8a1",
+        "raw_commit": "9bf592c45cd718b57faeda5195856bbc79a6a8a1",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "880dac6557519c3e802497bd1384a96b49957622a3a5061183083e24a56ec5d3",
+        "source_attestation_sha256": "dcef95a260c7cc9c5cf3241357f50798690f39001f87bf465c5e2400fe05f9d9"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+        "procedural_deviations": [
+          "Attestation was co-located in sut-raw/; bytes were copied to sut-attestations/V31-013.json.",
+          "Source branch tip also contained inherited V31-003 files; canonical extract copied only V31-013."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The Marchmont Enclosure date on QM-2031-0519 moved forward to Wednesday 15 October.\n- You learned about the change from the client's assistant, not from the workroom.\n- Marit agreed the new date with Marchmont on Monday 6 October.\n- The new date adds two steam cycles to the annexe schedule, which has one free press.\n- It has not yet been determined which pieces the two extra cycles will displace.\n- Marit agrees client dates; schedule impact is put to Marit in writing; you set the order of work inside the annexe.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft does not give Marit the known schedule impact\u2014the two additional steam cycles, the single free press, and the unresolved displaced pieces\u2014even though schedule impact is put to the workroom manager in writing. Instead, \u201ccome down to the annexe and do the steaming yourself\u201d leaves the intended operational handoff unclear.\n- Communication risk: Marit would not receive the information needed to assess the Wednesday date's effect on the annexe schedule, and the wording could be read as transferring the steaming work to her without a clear work-order decision.\n\n### Tone\n\n- Rating: Red\n- Evidence: \u201cNobody bothered to tell me,\u201d \u201cIt must be lovely,\u201d \u201cthe people who actually block the hats,\u201d and \u201cdo the steaming yourself\u201d combine an unsupported allegation of deliberate failure with hostile, contemptuous wording directed at Marit.\n- Communication risk: The personalized accusation and contempt can obscure the concrete scheduling issue and undermine cooperation on resolving it.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit \u2014 I learned from the client's assistant that the Marchmont Enclosure date on QM-2031-0519 moved forward to Wednesday 15 October after you agreed it with Marchmont on Monday 6 October. This adds two steam cycles to the annexe schedule, where we have one free press. I haven't yet worked out which pieces the extra cycles will displace. Please let me know about client date changes so I can set the annexe work order.",
+          "source_json_pointer": "/turns/0/response_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "generator_context_id": "bc-5311e780-52e2-5b0d-8e66-8b1534092eaa",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-014.json",
+        "sha256": "29d5623ae900eecb510904810b102e43566045291c6feadda408a2524dd6ea00"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-014.json",
+        "raw_sha256": "9dad6432c487ca7b3425bb96dba3b8b20f6bc06d50875bebf901d1b98475f8ce",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-014.json",
+        "attestation_sha256": "785b31e081a74dab5781905d7f7e475201d85a7a83c21b26457f407f55b5a0fb",
+        "branch": "cursor/v31-014-sut-2eaa",
+        "output_commit": "6133944337b6454fba1cf11e3c1801da6c1532be",
+        "raw_commit": "6133944337b6454fba1cf11e3c1801da6c1532be",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "9dad6432c487ca7b3425bb96dba3b8b20f6bc06d50875bebf901d1b98475f8ce",
+        "source_attestation_sha256": "785b31e081a74dab5781905d7f7e475201d85a7a83c21b26457f407f55b5a0fb"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Globbed and git ls-tree'd other V31/V2 branches before Skill output, exposing prohibited filenames. No gold or other-case file contents were opened.",
+          "Source branch tip also contained inherited V31-003 files; canonical extract copied only V31-014."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Fourteen crowns on QM-2031-0555 went into steaming on Monday 6 October.\n- Callum Ostrey holds the trimming slot on Wednesday 8 October.\n- Cranthorpe Courier holds collection slots on this job and re-books on request; the coordinator books collections.\n- Figures given to Marit must match the bench because she uses them on her 08:30 client call the next morning.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Gray\n- Evidence: Data A confirms that 14 crowns went into steaming, but it does not confirm how many are through steaming on the bench. Data B says all 14 are through, and Data A requires that this figure match the bench.\n- Communication risk: The current bench figure cannot be determined from Data A, so the progress figure intended for Marit's client call cannot yet be assessed.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual and contains no blame, hostility, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Gray\n- Next action: More information required\n\n## Confirmation needed\n\n1. Question: How many crowns on QM-2031-0555 are currently through steaming on the bench?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the progress figure in the draft matches the bench and whether a factual revision is needed.\n   - Neutral answer structure: [number] crowns are through steaming; [number] crowns are not through steaming, with their current status as [status].\n\n## Minimal revision\n\nNot provided \u2014 answer the questions above first",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Fourteen crowns on QM-2031-0555 went into steaming on Monday 6 October.\n- The corrected bench status is 11 crowns through steaming; 3 cracked at the brim edge on the second cycle and must be re-blocked on Wednesday.\n- Callum Ostrey holds the trimming slot on Wednesday 8 October. The 3 re-blocked crowns move to trimming on Thursday.\n- Cranthorpe Courier holds collection slots on this job and re-books on request; the coordinator books collections.\n- Figures given to Marit must match the bench because she uses them on her 08:30 client call the next morning.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says all 14 crowns are through steaming and go to trimming on Wednesday. The corrected Data A says only 11 are through; 3 must be re-blocked on Wednesday and move to trimming on Thursday.\n- Communication risk: Sending the draft would give Marit incorrect progress and trimming figures for her client call.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual and contains no blame, hostility, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - the Ashvale top-up on QM-2031-0555 is on track: 11 crowns are through steaming and go to Callum for trimming on Wednesday. Three cracked at the brim edge on the second cycle and will be re-blocked on Wednesday, so they go to Callum for trimming on Thursday. The Cranthorpe collection stays Friday 10 October at 11:00.",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Fourteen crowns on QM-2031-0555 went into steaming on Monday 6 October.\n- The corrected bench status is 11 crowns through steaming; 3 cracked at the brim edge on the second cycle and must be re-blocked on Wednesday.\n- Callum Ostrey holds the trimming slot on Wednesday 8 October. The 3 re-blocked crowns move to trimming on Thursday.\n- Cranthorpe cannot collect on Friday 10 October at 11:00. The current collection slot is Friday 10 October at 15:30, reference CR-90177.\n- The coordinator books collections, and figures given to Marit must match the bench because she uses them on her 08:30 client call the next morning.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The current message clearly states that 11 crowns are through steaming and trim on Wednesday, 3 are re-blocked on Wednesday and trim on Thursday, and collection is Friday 10 October at 15:30 under reference CR-90177. These details match the current Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The current message is neutral and factual and contains no blame, hostility, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "generator_context_id": "bc-e5e8f57e-0afb-52cc-92a1-6eeb0143fcf9",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-015.json",
+        "sha256": "bf0616e452438bdbf6f7b4188a5a74be82c364f281d21b51397ec71c0f4f7e88"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-015.json",
+        "raw_sha256": "b4f88b37b275dc1b7f80aee39afc90d530245a321d7f06fab9ee7a722b077186",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-015.json",
+        "attestation_sha256": "2b2034dcc4336df38120726adbc0ccc1162343abc2079d108276c1467d27c771",
+        "branch": "cursor/v31-015-sut-fcf9",
+        "output_commit": "afeb1e61e15fb753aae42372ce232950abdb3b13",
+        "raw_commit": "afeb1e61e15fb753aae42372ce232950abdb3b13",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "b4f88b37b275dc1b7f80aee39afc90d530245a321d7f06fab9ee7a722b077186",
+        "source_attestation_sha256": "2b2034dcc4336df38120726adbc0ccc1162343abc2079d108276c1467d27c771"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Ran git ls-files over the v3.1 holdout tree before Skill output, exposing gold and other-case filenames. No prohibited file contents were opened.",
+          "Attestation was co-located in sut-raw/; source branch tip also contained inherited V31-003 files."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Solberg Straw & Sinamay supplied two straw lots for QM-2031-0561, and the shade variance was found across brims cut from the second lot.\n- Solberg replaces a varying lot on request and confirms a replacement date.\n- Courier costs on a replacement batch are a commercial decision at Quillsmere.\n- The coordinator does not commit the workroom to absorbing a cost, and messages to Solberg go out from the workroom manager.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says \"we will cover the courier cost\" and \"I have said we can absorb it,\" which conflicts with the known constraint that the coordinator does not commit the workroom to absorbing a cost.\n- Communication risk: The message could cause Marit to communicate an unauthorized cost commitment to Solberg.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is direct and factual, with no hostility, blame, threat, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is Quillsmere's current commercial decision on the replacement-batch courier cost?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the message can state a cost decision or should ask Marit to confirm it before communicating with Solberg.\n   - Neutral answer structure: [Quillsmere's courier-cost decision], or \"No decision has been made.\"\n\n## Minimal revision\n\nMarit - please tell Solberg that the shade variance on the brims came from lot SB-LOT-7742. Please confirm Quillsmere's commercial decision on the courier cost before communicating it to Solberg.",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Solberg Straw & Sinamay supplied two straw lots for QM-2031-0561, and the shade variance was found across brims cut from the second lot.\n- The correct lot is SB-LOT-7749. SB-LOT-7742 was the previous run and is unrelated to this matter.\n- Solberg replaces a varying lot on request and confirms a replacement date.\n- Courier costs on a replacement batch are a commercial decision at Quillsmere.\n- The coordinator does not commit the workroom to absorbing a cost, and messages to Solberg go out from the workroom manager.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft names SB-LOT-7742 instead of the corrected SB-LOT-7749. It also says \"we will cover the courier cost\" and \"I have said we can absorb it,\" conflicting with the coordinator's constraint against committing the workroom to absorbing a cost.\n- Communication risk: Marit could identify the wrong lot to Solberg and communicate an unauthorized cost commitment.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is direct and factual, with no hostility, blame, threat, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is Quillsmere's current commercial decision on the replacement-batch courier cost?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the message can state a cost decision or should ask Marit to confirm it before communicating with Solberg.\n   - Neutral answer structure: [Quillsmere's courier-cost decision], or \"No decision has been made.\"\n\n## Minimal revision\n\nMarit - please tell Solberg that the shade variance on the brims came from lot SB-LOT-7749. Please confirm Quillsmere's commercial decision on the courier cost before communicating it to Solberg.",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Solberg Straw & Sinamay supplied two straw lots for QM-2031-0561, and the shade variance was found across brims cut from the second lot.\n- The correct lot is SB-LOT-7749. SB-LOT-7742 was the previous run and is unrelated to this matter.\n- Solberg replaces a varying lot on request and confirms a replacement date.\n- The coordinator does not have authority to commit Quillsmere to absorbing courier costs and has made no such statement to Solberg.\n- The courier-cost line is to be removed completely.\n- The message's sole requested action is for Marit to have Solberg confirm the replacement date for SB-LOT-7749; messages to Solberg go out from the workroom manager.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft still names the superseded SB-LOT-7742, includes the withdrawn courier-cost commitment, and does not ask Solberg to confirm the replacement date for SB-LOT-7749.\n- Communication risk: Sending the current draft could identify an unrelated lot, communicate a false and unauthorized cost commitment, and fail to request the replacement date that is now the message's sole purpose.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is direct and factual, with no hostility, blame, threat, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - please ask Solberg to confirm the replacement date for SB-LOT-7749.",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "generator_context_id": "bc-d18b66e8-e111-5a78-ae71-f895f7e470ac",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-016.json",
+        "sha256": "e51b50e1e3aa0cce80ca13b79b455c981ace9b2b588e4f48e1ee31f5a7ddb176"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-016.json",
+        "raw_sha256": "04e997f7c473fff3a486c137a3acf88803065d741798ac57f31bd8101eb51840",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-016.json",
+        "attestation_sha256": "b59652f9eab3e467a812c0b435f0540eaf8db0e86dc212ef4222808289c6f0ed",
+        "branch": "cursor/v31-sut-shared-delivery-17a0",
+        "output_commit": "a65e26961880130f237345c4ea74843b06399c22",
+        "raw_commit": "99579d4760334b9752495bc1cbe93333c023938d",
+        "delivery": "shared_holdout",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "04e997f7c473fff3a486c137a3acf88803065d741798ac57f31bd8101eb51840",
+        "source_attestation_sha256": "b59652f9eab3e467a812c0b435f0540eaf8db0e86dc212ef4222808289c6f0ed"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Pushed onto the shared holdout branch and rebased against concurrent SUT delivery commits after Skill output.",
+          "Enumerated other-case input paths and V31-003 artifact sizes via git ls-tree/show/wc. No prohibited file contents were opened.",
+          "Attestation claimed other_case_inputs_accessed=false despite path enumeration."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Sixteen pieces are due to Marchmont Enclosure on job QM-2031-0570.\n- The crin for the brim edges had not arrived when the message was drafted.\n- Marchmont Enclosure's goods-in desk sets each delivery's acceptance window.\n- The coordinator reports a known shortfall to the workroom manager as soon as it is known.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies the Marchmont order, states that the delivery will be 6 pieces short on Thursday, and gives Marit advance notice, consistent with the requirement to report a known shortfall promptly.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is factual and cooperative; it reports the shortfall without blame, accusation, or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Sixteen pieces are due to Marchmont Enclosure on job QM-2031-0570.\n- The current shortfall is 4 pieces, not 6; two pieces came good after a second steam cycle.\n- The remaining four-piece shortfall is because the crin for the brim edges has not arrived.\n- Marchmont Enclosure's goods-in desk sets each delivery's acceptance window.\n- The coordinator reports a known shortfall to the workroom manager as soon as it is known.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft says the order will be \"6 pieces short,\" but the corrected background states that the shortfall is 4 pieces.\n- Communication risk: Marit could plan for a six-piece shortfall when the current shortfall is four pieces. The number must be corrected before sending.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft remains factual and cooperative and contains no blame, accusation, or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - heads up before tomorrow: we are going to be 4 pieces short on the Marchmont order for Thursday. I would rather you had it from me now than on Wednesday night.",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Sixteen pieces are due to Marchmont Enclosure on job QM-2031-0570.\n- Ferrowhite has confirmed that the crin will arrive on Wednesday 15 October at 12:00.\n- Marchmont Enclosure's goods-in desk has moved the acceptance window to Thursday 16 October, 07:30 to 09:30.\n- All 16 pieces will go in one delivery in that acceptance window; there is no longer a shortfall to report.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The current draft still reports a six-piece shortfall, but the updated background confirms that all 16 pieces will go in one delivery on Thursday 16 October during the 07:30 to 09:30 acceptance window.\n- Communication risk: Sending the current draft would give Marit obsolete delivery information. The shortfall must be removed and the confirmed full-delivery details must replace it.\n\n### Tone\n\n- Rating: Green\n- Evidence: The current draft is factual and cooperative and contains no blame, accusation, or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - update for Thursday 16 October: all 16 pieces on the Marchmont order will go in one delivery in the 07:30 to 09:30 goods-in window.",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "generator_context_id": "bc-dc3a2a74-64e8-50b6-a884-3f8d92c44b89",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-017.json",
+        "sha256": "cf7d0535f3684255a52f88a6234b2f20a2c3f6d775b8e4576f334b8f7c10e3ee"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-017.json",
+        "raw_sha256": "157891e2aec8f9dc2e1808cbc9c09398e00b02ed2ec3f85d77ddf99bf3223ae2",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-017.json",
+        "attestation_sha256": "8ebdf07a997a783f77fd19169f6eb3bce4333dee51da27a6f8be6a73dfd6d32b",
+        "branch": "cursor/v31-sut-shared-delivery-17a0",
+        "output_commit": "b79e255b5ede61b957af35a36a8c1fe3b6e81b40",
+        "raw_commit": "b79e255b5ede61b957af35a36a8c1fe3b6e81b40",
+        "delivery": "shared_holdout",
+        "markdown_wrapped": true,
+        "source_raw_sha256": "4994c76ac7ab22a3faac16eaa00ac132852ceed168b1466437ffa56045b8f512",
+        "source_attestation_sha256": "8ebdf07a997a783f77fd19169f6eb3bce4333dee51da27a6f8be6a73dfd6d32b"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Pushed onto the shared holdout branch and rebased against concurrent SUT delivery commits after Skill output.",
+          "Extensive glob and git ls-tree of gold, oracle-notes, other-case inputs, and other SUT output paths. No those file contents were opened.",
+          "Raw Skill output was delivered as Markdown.",
+          "Attestation overstated read-scope as only the assigned input and four runtime files."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The replacement petersham on QM-2031-0447 is already invoiced by Ferrowhite Trimmings against account QT-4471, and the original petersham line must be credited.\n- Supplier instructions must go to the Ferrowhite trade desk from the workroom manager's account.\n- Mrs Havelock's commission sheet on QM-2031-0492 contains her fitting figures and commission price.\n- Client fitting figures and commission prices are restricted to the named workroom staff on the job; the full workroom channel is not a client-data channel and includes Teodor Balke, the Saturday casual staff, and both annexe apprentices.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Ferrowhite to invoice replacement petersham that Data A says is already invoiced, and asks Marit to put Mrs Havelock's fitting figures and commission price in the full workroom channel despite the stated restriction to named staff on that job.\n- Communication risk: Ferrowhite could receive an incorrect duplicate-invoice instruction, and restricted client information could be circulated to a channel that is not approved for client data.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is direct and operational, without insult, accusation, threat, hostility, dismissiveness, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - sending this to you. Please send this to the Ferrowhite trade desk from your account: Dear Ferrowhite trade desk, the replacement petersham on QM-2031-0447 is already invoiced against account QT-4471; please credit the original petersham line. Please keep Mrs Havelock's commission sheet on QM-2031-0492 to the named workroom staff on that job rather than posting it in the full workroom channel.\n",
+          "source_json_pointer": "/raw_skill_output"
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "generator_context_id": "bc-703b80b4-bfdb-5ecb-a4b1-79656f279ccf",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "9d48b048d083507c20f2714b21053d36b68d6366",
+      "input": {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-018.json",
+        "sha256": "c396610b01ad11958bf923a2a6211419df279b34b4b7517b45377a9e8459e1c8"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-018.json",
+        "raw_sha256": "575899e65b5ef78cc3943cac6a38711b757ee89324b4c52d0e1066d284a37a80",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-attestations/V31-018.json",
+        "attestation_sha256": "950ba4c49d2859783f582a1bab32aa9d810c291849c01bfe4b487aa652574591",
+        "branch": "cursor/v31-sut-shared-delivery-17a0",
+        "output_commit": "04ef848aff0f8cc25893b1de7a846ae91cab8847",
+        "raw_commit": "04ef848aff0f8cc25893b1de7a846ae91cab8847",
+        "delivery": "shared_holdout",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "575899e65b5ef78cc3943cac6a38711b757ee89324b4c52d0e1066d284a37a80",
+        "source_attestation_sha256": "950ba4c49d2859783f582a1bab32aa9d810c291849c01bfe4b487aa652574591"
+      },
+      "audit": {
+        "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+        "procedural_deviations": [
+          "Pushed onto the shared holdout branch and rebased against concurrent SUT delivery commits.",
+          "Read sut-input-manifest.json (other-case metadata) and grepped historical v2 gold-freeze/methodology filenames and snippets. No v3.1 gold, oracle-notes, or other-case Skill-output contents were opened.",
+          "Called unrequested cursor-cloud run-info."
+        ],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "executed_at_utc": null,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The block order on QM-2031-0546 was cut to the wrong specification, and Menkes Blockworks have raised the cost with the commercial desk.\n- Write-offs and credit notes are outside the coordinator's authority; a supplier credit note is not the coordinator's to sign.\n- Saturday shifts are agreed by the workroom manager, and Ilva Renaudin and Callum Ostrey have not been asked about Saturday.\n- The rush charge on Ashvale Bridal House's pieces is a commercial decision.\n- Dane Krivec is the commercial lead, not the coordinator's line manager; another desk's part in a fault must be given to the workroom manager as fact, not complaint.\n- The coordinator does not commit other makers to a weekend shift.\n- Recognized Data B:\n\n  > Marit,\n  >\n  > I have already told Menkes Blockworks that we will write off the whole block order and that I will sign the credit note myself tomorrow, so treat that as handled.\n  >\n  > This came out of Dane's side of the business. Frankly Dane has been useless since the day he started, and I am not carrying the commercial desk again.\n  >\n  > I have put Ilva and Callum on the Saturday shift to rebuild the order, and I have told Ashvale Bridal House that we will absorb the rush charge on their pieces.\n  >\n  > Nothing needed from you on any of it.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says the coordinator will write off the order and sign the credit note, has put Ilva and Callum on Saturday, has committed to absorb the rush charge, and that nothing is needed from Marit. These statements conflict with the confirmed authority and shift constraints.\n- Communication risk: The message presents unauthorized financial decisions and maker scheduling as settled, which could cause suppliers, makers, and the manager to act on commitments the coordinator cannot make.\n\n### Tone\n\n- Rating: Red\n- Evidence: \u201cDane has been useless since the day he started\u201d is a global degrading characterization, and \u201cI am not carrying the commercial desk again\u201d frames the escalation as a hostile complaint rather than a factual report.\n- Communication risk: The insult and blame can damage cooperation and obscure the factual decisions that require the manager's attention.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit,\n\nThe block order on QM-2031-0546 was cut to the wrong specification, and Menkes Blockworks have raised the cost with the commercial desk. I told Menkes that we would write off the whole order and that I would sign the credit note tomorrow. Those decisions are outside my authority, so please advise how you want me to correct this with Menkes and handle the write-off and credit note.\n\nIlva and Callum have not been asked about Saturday. Please let me know whether you want me to ask them about a Saturday shift to rebuild the order.\n\nI told Ashvale Bridal House that we would absorb the rush charge on their pieces. Since that is a commercial decision, please advise how you want me to correct or escalate that message.",
+          "source_json_pointer": "/turns/0/response_raw"
+        }
+      ]
+    }
+  ]
+}

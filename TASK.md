@@ -313,6 +313,21 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - unit and mutation tests protect every construction transition.
 - Evidence: coverage triage, v3.1 case brief, executable contract, unit results, and mutation results.
 
+#### T14.10 — Fresh benchmark v3.1 unseen holdout
+
+- [ ] Completed
+
+- Source requirement: Measure unseen-case performance with methodology v3 plus the v3.1 question-case construction contract. No product behavior change during scoring.
+- Owner files: `tests/benchmark/v3_1-holdout/`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - unseen millinery-domain cases satisfy the v3.1 construction contract and coverage gates before SUT;
+  - each case uses a distinct cloud SUT context;
+  - SUT artifacts are extracted from per-case source commits; shared-holdout delivery commits are a log, not the freeze parent;
+  - dual extraction and semantic matching precede a single v3 scorer invocation;
+  - preregistered metrics and failures are preserved without modifying gold or runtime Skill files.
+- Evidence: gold/output manifests, protocol audits, source index, delivery log, score report.
+- Progress: gold, SUT, extraction, and evaluation snapshots are frozen; the single v3 scorer invocation recorded `SCORER_ERROR` (`manifest schema`) and was not rerun.
+
 ## Task template
 
 Copy this block when adding work:

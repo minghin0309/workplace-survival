@@ -4,6 +4,40 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.1 single v3 scorer invocation
+
+- Invoked frozen `score_semantic_v3.py` once against the evaluation snapshot.
+- Coverage gates computed: 24 turns, 23 accepted, 6 question concepts / 6 cases, 70 revision concepts / 18 cases.
+- v2 core aborted on `manifest schema` before metrics. Status `SCORER_ERROR`.
+- Preserved the immutable envelope. No rerun. Gold, ontology, matches, and runtime Skill files were not modified.
+
+### Fresh benchmark v3.1 semantic match freeze
+
+- Ran one isolated Claude matcher with gold access on `cursor/v31-matcher-claude-17a0`; copied with `git show` and did not merge that branch.
+- Mapped all 59 extracted claims; 57 semantic, 2 unsupported.
+- Allowlisted inputs: extraction snapshot, canonical evaluations, raw outputs, canonical gold, ontology.
+- Transcript audit: no prohibited content; authored-output re-read is `ACCEPTED_WITH_PROCEDURAL_DEVIATION`.
+- Froze 12 evaluation artifacts against outputs manifest `993eb2a0…` and extraction snapshot `a406161c…`.
+- Formal scoring ran once afterwards and recorded `SCORER_ERROR`. Runtime Skill files were not modified.
+
+### Fresh benchmark v3.1 gold-blind extraction freeze
+
+- Copied Claude and Gemini extractor blobs plus GPT adjudication from dedicated branches with `git show`; did not merge those branches.
+- Covered 18 cases / 24 turns with exact-span claims; 0 unresolved disagreements.
+- Kept Claude's 8 question / 51 revision claims after 10 count disagreements.
+- Recorded transcript audits: no gold/oracle/ontology/scorer/image opens; shared-checkout harness collision is `PASS_WITH_PROCEDURAL_DEVIATION`.
+- Froze 15 extraction artifacts against outputs manifest `993eb2a0…`.
+- Matching and formal scoring have not started. Runtime Skill files were not modified.
+
+### Fresh benchmark v3.1 isolated SUT freeze
+
+- Executed 18 cases / 24 turns in distinct cloud contexts after valid gold coverage.
+- Extracted each case from its own source commit; did not merge the seven shared-holdout delivery commits.
+- Path-canonicalized heterogeneous raw/attestation files and wrapped Markdown without changing Skill text.
+- Recorded transcript protocol audits: 0 prohibited v3.1 gold-content opens; procedural deviations preserved.
+- Froze 46 output artifacts against gold manifest `2aea4832…`; canonical parent remains `f609800`.
+- Extraction, matching, and formal scoring have not started. Runtime Skill files were not modified.
+
 ### v3.1 required-question case-design remediation
 
 - Preserved the first v3 holdout unchanged as `INVALID_COVERAGE`.

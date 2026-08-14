@@ -1,0 +1,37 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-018",
+  "recipient_context": {
+    "recipient_name": "Marit Osgarde",
+    "recipient_role": "workroom manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal workroom message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "workroom coordinator",
+    "organization": "Quillsmere Millinery Workroom",
+    "site": "Ardhu Lane annexe",
+    "situation": "The coordinator has drafted a note to the workroom manager about the Menkes Blockworks write-off on job QM-2031-0546. The draft is attached as an image.",
+    "known_facts": [
+      "The block order on QM-2031-0546 was cut to the wrong specification and Menkes Blockworks have raised the cost with the commercial desk.",
+      "A credit note on a supplier order is not the coordinator's to sign.",
+      "Saturday shifts are agreed by the workroom manager; Ilva Renaudin and Callum Ostrey have not been asked about Saturday.",
+      "The rush charge on Ashvale Bridal House's pieces is a commercial decision.",
+      "Dane Krivec is the commercial lead and is not the coordinator's line manager."
+    ],
+    "constraints": [
+      "Write-offs and credit notes are outside the coordinator's authority.",
+      "Anything about another desk's part in a fault goes to the workroom manager as fact, not as complaint.",
+      "The coordinator does not commit other makers to a weekend shift."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "This is the note I want to send Marit; the text is in the attached image. Please review it.",
+      "image_path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png"
+    }
+  ]
+}

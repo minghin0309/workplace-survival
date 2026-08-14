@@ -1,0 +1,36 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "semantic-matcher-transcript-audits",
+  "acceptance_rule": "Accept only when the transcript shows gold access limited to canonical gold-v31.json plus the four other allowlisted files, and no oracle-notes, images, scorer, methodology, extractor-raw, Skill, or other prohibited repository content. Re-reading the matcher’s own authored matches file is a procedural deviation, not contamination. Dedicated matcher branch is a git-show source; it is not merged into the holdout freeze parent.",
+  "attempts": [
+    {
+      "context_id": "bc-5f0c3516-ef1c-5dcd-b9e9-1e797251d676",
+      "model_family": "claude",
+      "model_id": "unverified",
+      "cloud_branch": "cursor/v31-matcher-claude-17a0",
+      "cloud_commit": "1e97d7cbbf0f222b14e897bc765df0c4f146476d",
+      "status": "ACCEPTED_WITH_PROCEDURAL_DEVIATION",
+      "reason": "Read the five allowlisted inputs with verified SHA-256s. Re-read authored matches-v31.json after write for local verification. Attestation under-reported that extra read. No prohibited content. Holdout was not pushed.",
+      "artifacts_accepted": true,
+      "gold_access": true,
+      "prohibited_content_access": false,
+      "images_opened": false,
+      "holdout_pushed": false,
+      "scoring_performed": false,
+      "cases": 18,
+      "turns": 24,
+      "claims": 59,
+      "unsupported_claims": 2,
+      "procedural_deviations": [
+        "Re-read tests/benchmark/v3_1-holdout/cloud-cases/matches-v31.json after writing it (local /tmp verifier and attestation builder). That path is the authored output, not a prohibited source.",
+        "Self-attestation set protocol_deviations to [] and isolation.repository_files_read_count to 5 despite the authored-output re-read.",
+        "Used git rev-parse HEAD to record output_commit; no git status, ls-tree, or holdout log."
+      ]
+    }
+  ],
+  "limitations": [
+    "Audit uses the cloud transcript and published branch topology rather than an independent filesystem access monitor.",
+    "Machine model ID was unavailable from cloud run metadata.",
+    "Semantic correctness is validated structurally against allowed gold concept lists, ontology aliases, and confidence; formal benchmark scoring occurs only after evaluation freeze."
+  ]
+}

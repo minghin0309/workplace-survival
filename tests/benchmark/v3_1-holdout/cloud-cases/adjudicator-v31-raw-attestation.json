@@ -1,0 +1,303 @@
+{
+  "attestation_id": "adjudicator-v31-raw-attestation",
+  "role": "fourth-family adjudicator",
+  "adjudicator_family": "claude",
+  "quality_families_adjudicated": ["grok", "kimi", "gpt"],
+  "family_label_sets": {
+    "grok": "gold-labeler-1",
+    "kimi": "gold-labeler-2-clean",
+    "gpt": "gold-labeler-3-clean"
+  },
+  "family_to_label_set_mapping_source": "Declared by the adjudication task in the order grok, kimi, gpt, mapped onto labeler 1, 2 and 3 respectively. No readable artefact records which model family produced which label set, so this mapping is carried as declared rather than as verified.",
+  "suite_id": "v31-holdout-cloud-attempt2",
+  "envelope_version": "v3.1",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "base_commit": "28722c34c121f0384e7adfa9fadc0f6037f70191",
+  "working_branch": "cursor/gold-adjudicator-v31-b201",
+  "attested_at": "2026-08-13",
+  "reads": {
+    "policy": "Only the exact paths named in the adjudication task were read. No listing, search, glob or fallback source was used, and no runtime, Skill, oracle, question-design, construction-mutation, tools, brief, plan, test, contract, scorer, prior-holdout, output, history, pull-request or external source was opened.",
+    "declared_read_count": 12,
+    "files": [
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/cases.json",
+        "sha256": "5bb06cb933b56f228a4af42336361c9bd4feed49157d389b1d9bbb1a16e1128a"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+        "sha256": "50b52b2b00f4b91107620fa0e365d63a920d9972326365c362d1754cc236d55c"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png",
+        "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-1.json",
+        "sha256": "43e756af9749e963af9725802ed6cc1163c69fcb932088a7f91108f2250fa279"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-1-attestation.json",
+        "sha256": "78f5dd1a2fbc68dcd8a9a9e5e4047a4ddbde849c1ec218c1d22bfb0436292904"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-2-clean.json",
+        "sha256": "f528d5e0935cc6b2315f983d2452f8d30224c137fba598afe499fb133bb50949"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-2-clean-attestation.json",
+        "sha256": "b5c753da57579a2e5e0908270816828a6e7ab0c1da09594faf9473ac9bb58a6e"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-3-clean.json",
+        "sha256": "25795ccf954f418fe916b55e5d5904e36f62259b04fb53be4c430f0f13b6d3f9"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-3-clean.attestation.json",
+        "sha256": "76d4cb781a93af28111e2d5d7f5889dbd1916e5e5b1900ee903c4be8adf4e31d"
+      },
+      {
+        "path": "tests/blind/GOLD_RUBRIC.md",
+        "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+      },
+      {
+        "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+        "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+      },
+      {
+        "path": "tests/benchmark/v3_1-holdout/cloud-cases/designer-attestation.json",
+        "sha256": "1d3a2dcdaf1026aa960b43b306578c3d12cac2d1cbdce6aa8014085542b273d7"
+      }
+    ]
+  },
+  "image_opening": {
+    "opened_directly": [
+      "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-008-block-order-docket.png",
+      "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png"
+    ],
+    "obscured_fields": {
+      "V31-008-block-order-docket.png": ["crown circumference (cm)"],
+      "V31-018-draft-note.png": []
+    },
+    "guessed_obscured_values": false,
+    "note": "Both images were read by the adjudicator before comparing label sets, so the image turns were not adjudicated from any labeler's description of the pixels."
+  },
+  "other_path_access_flags": [
+    {
+      "flag": "filename_discovery_attempts",
+      "detail": "The task named four artefacts by description rather than by exact filename ('gold-labeler-1.json + attestation', 'gold-labeler-2-clean.json + attestation'), and only gold-labeler-3-clean.attestation.json was given verbatim. Because listing, search and glob were prohibited, the correct paths were reached by attempting the plausible names directly.",
+      "attempts_that_returned_file_not_found": [
+        "tests/benchmark/v3_1-holdout/gold-labeler-1.json",
+        "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-1.attestation.json",
+        "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-2-clean.attestation.json",
+        "tests/benchmark/v3_1-holdout/cloud-cases/gold-labeler-2-attestation.json"
+      ],
+      "content_returned": false,
+      "effect_on_adjudication": "None. Each attempt returned only a not-found error. No file outside the declared read list was opened, and every attempt targeted an artefact the task explicitly authorised."
+    },
+    {
+      "flag": "repository_metadata_operations",
+      "detail": "git fetch, checkout and pull of the base branch cursor/blind-v31-holdout-17a0; git log --oneline of the three most recent commit subjects on that branch, which exposed commit titles only and no file content; git checkout -b of the working branch; git add, commit, push; git rev-parse and git show --stat of the adjudicator's own commit; sha256sum of the twelve declared read paths and of the three output files.",
+      "content_returned": false,
+      "effect_on_adjudication": "None on any label. The commit subjects seen were the three v3.1 labeler commits already covered by the declared reads."
+    },
+    {
+      "flag": "generation_script_outside_repository",
+      "detail": "Adjudication was emitted by a Python script held at /tmp/adjudicate_v31.py, outside the repository and not committed. The script reads only the envelope and the three label files from the declared read list, so every raw vote in adjudication-v31-raw.json is extracted from its source file rather than re-typed.",
+      "content_returned": false
+    },
+    {
+      "flag": "skill_not_read",
+      "detail": "The workplace-survival skill was listed in the agent environment and was not read. No Skill, runtime, contract, scorer, oracle-note, question-design, mutation, tool or test file was opened, and no MCP tool, web search, pull-request or issue lookup was performed."
+    }
+  ],
+  "disallowed_lookup_attestation": {
+    "listing": false,
+    "search": false,
+    "glob": false,
+    "fallback_sources": false,
+    "runtime_or_skill": false,
+    "oracle_notes": false,
+    "question_design": false,
+    "construction_mutations": false,
+    "tools": false,
+    "case_brief": false,
+    "holdout_plan": false,
+    "tests_or_contract_or_scorer": false,
+    "prior_holdout_or_archive": false,
+    "system_outputs_or_history": false,
+    "pull_requests_or_issues": false,
+    "external_sources": false,
+    "mcp": false
+  },
+  "method": {
+    "independence": "The envelope, both images, the rubric and the ontology were read first and the cases were judged on their own terms before any label set was compared.",
+    "vote_preservation": "adjudication-v31-raw.json reproduces all four label fields, both question lists, both revision lists and the rationale for every family on every turn, verbatim from the label files. No vote was normalised away, and every family concept dropped from gold is listed per turn under family_votes_not_carried_into_gold.",
+    "cross_vocabulary_mapping": "The three families used three different token vocabularies. Each token is mapped onto one adjudicated concept, and the mapping is published twice: as per-turn mapped_votes in the adjudication record, and as alias lists on every concept definition in the gold.",
+    "two_one_rule": "A 2-1 split was decided on the merits against the envelope, the rubric and the images, treating the majority as evidence rather than as a tie-break. One turn was resolved against the two-family majority and five more carry a required-concept set that exceeds token-level majority; all six are flagged in both artefacts.",
+    "three_way_rule": "The single three-way rating split, V31-014-T1, is marked gold_uncertain with its disputed dimensions named. No three-way split was forced into a majority.",
+    "hindsight_rule": "Each turn was rated on the state of the message at that turn. A later user correction was never used to rate an earlier turn, and an unsent draft that contradicts a correction already given was rated on that contradiction.",
+    "coverage_discipline": "No coverage gate was targeted or reverse-engineered. Coverage facts were computed after adjudication and are reported as observed. The designer attestation was read as authorised and was used only to confirm that the six question candidates each turn on an answer absent from every visible field; it was not used to hit a count.",
+    "ontology_discipline": "Where a material missing answer had no fitting canonical ontology concept (V31-007 source record, V31-008 crown circumference, V31-009 named recovery route), a defined local concept was used rather than forcing a canonical concept that does not fit. kimi's ontology-gap reasoning is preserved in the record."
+  },
+  "outputs": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-v31-raw.json",
+      "sha256": "4ea14b0ca3f0430bac8fb5957fb63f825e5448ccaa7db485b02d8c0619748d79",
+      "commit": "a097de8975371199a624a6e56b9dfa3c3062b218"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/adjudication-v31-raw.json",
+      "sha256": "64e62293aa32c5474773dfd99f96201477081bd32e126ab6fc96fee5ecd72827",
+      "commit": "a097de8975371199a624a6e56b9dfa3c3062b218"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/adjudicator-v31-raw-attestation.json",
+      "sha256": "recorded by the commit that adds this file",
+      "commit": "committed after the two artefacts above"
+    }
+  ],
+  "validation": {
+    "checks_run_by": "the generation script, with every result recorded in adjudication-v31-raw.json under validation",
+    "structure": {
+      "case_count": 18,
+      "turn_count": 24,
+      "case_ids_and_turn_order_match_envelope": true,
+      "all_routes_normal_mode": true
+    },
+    "raw_vote_totals": {
+      "votes_per_dimension": 72,
+      "responsibility": {"Green": 16, "Red": 49, "Yellow": 7},
+      "tone": {"Green": 61, "Red": 9, "Yellow": 2},
+      "overall": {"Green": 16, "Red": 49, "Yellow": 7},
+      "route": {"Normal mode": 72},
+      "per_family_turn_count": {"grok": 24, "kimi": 24, "gpt": 24},
+      "overall_agreement_profile": {"3_of_3": 11, "2_of_3": 12, "1_of_3": 1}
+    },
+    "final_turn_parity": {
+      "cases_checked": 18,
+      "exact_parity_all_three_families": 9,
+      "two_of_three_parity": 9,
+      "adjudicated_final_turn_matches_at_least_two_families": 17,
+      "adjudicated_final_turn_matches_one_family": 1,
+      "one_family_case": "V31-002-T1, where the adjudicator sided with grok's Yellow against a 2-1 Green majority",
+      "recorded_per_case": "family route, responsibility, tone and overall on every case's final turn, with the adjudicated values and the parity count"
+    },
+    "concept_subsets": {
+      "required_question_subset_of_allowed_every_turn": true,
+      "required_revision_subset_of_allowed_every_turn": true,
+      "max_three_required_question_concepts_per_turn": true,
+      "every_concept_and_invariant_defined": true,
+      "all_concept_lists_sorted": true
+    },
+    "ratings": {
+      "overall_derivation": "Red > Gray > Yellow > Green",
+      "all_overall_values_match_derivation": true,
+      "green_turns_require_no_revision": true,
+      "no_revision_absent_on_non_green_turns": true,
+      "null_ratings_used": false
+    },
+    "tiers": {
+      "assignment": "computed from family agreement, not declared",
+      "distribution": {
+        "tier_1_unanimous": 7,
+        "tier_2_majority": 10,
+        "tier_3_adjudicated": 6,
+        "tier_4_uncertain": 1
+      },
+      "total": 24,
+      "gold_uncertain_turns": ["V31-014-T1"]
+    },
+    "coverage_facts": {
+      "note": "Observed after adjudication; not fitted.",
+      "turns_with_required_question_concept": 6,
+      "required_question_distinct_cases": 6,
+      "required_question_distinct_concepts": 6,
+      "required_question_case_ids": ["V31-004", "V31-005", "V31-006", "V31-007", "V31-008", "V31-009"],
+      "required_question_concepts": [
+        "approval-authority",
+        "confirmed-deadline",
+        "confirmed-owner",
+        "exact-crown-circumference",
+        "named-recovery-route",
+        "source-record-reference"
+      ],
+      "turns_with_required_revision_concept_including_no_revision": 24,
+      "turns_with_substantive_required_revision_concept": 21,
+      "turns_with_no_revision_only": 3,
+      "distinct_cases_with_substantive_required_revision": 16,
+      "required_revision_distinct_concepts": 24,
+      "image_turns_carry_no_image_token_guess": true
+    },
+    "errors": [],
+    "warnings": []
+  },
+  "adjudicated_gold_distribution": {
+    "responsibility": {"Green": 3, "Red": 19, "Yellow": 2},
+    "tone": {"Green": 21, "Red": 3},
+    "overall": {"Green": 3, "Red": 19, "Yellow": 2}
+  },
+  "departures_from_family_majority": [
+    {
+      "turn_id": "V31-002-T1",
+      "kind": "rating",
+      "raw_votes": {"grok": "Yellow", "kimi": "Green", "gpt": "Green"},
+      "adjudicated": "Yellow",
+      "reason": "Ilva is owed two working days' notice of a change to her bench hours and Option 1 changes them on Monday 13 October, so a decision arriving by Friday 10 October cannot supply that notice. The draft's assurance that it does is concretely wrong, which is a Yellow communication risk. kimi's rationale asserts the opposite and gpt did not examine the arithmetic."
+    },
+    {
+      "turn_id": "V31-007-T1",
+      "kind": "required question concept",
+      "raw_position": "gpt required source-record-reference, grok allowed it, kimi omitted it citing an ontology gap",
+      "adjudicated": "required",
+      "reason": "Thurlow & Vane's form has a mandatory source-record field and rejects generic wording, so no placeholder can satisfy it; the reference is held by the writer and absent from every visible field."
+    },
+    {
+      "turn_id": "V31-008-T1",
+      "kind": "required question concept",
+      "raw_position": "gpt required block-crown-circumference, grok allowed exact-crown-circumference, kimi omitted it citing an ontology gap",
+      "adjudicated": "required as exact-crown-circumference, with the gpt token carried as an alias",
+      "reason": "Menkes cut to one exact circumference, reject a range and will not work to a nearest-size instruction; the figure is obliterated in the image and the coordinator took the measurement personally."
+    },
+    {
+      "turn_id": "V31-009-T1",
+      "kind": "required question concept",
+      "raw_position": "gpt required the canonical commitment-scope, grok allowed the local named-recovery-route, kimi omitted it",
+      "adjudicated": "required as named-recovery-route, with commitment-scope also allowed",
+      "reason": "The procedure requires the route by name and the manager cannot authorise a shortfall naming none. The local concept names the answer actually needed instead of forcing a canonical concept that does not fit."
+    },
+    {
+      "turn_id": "V31-013-T1",
+      "kind": "required revision concept",
+      "raw_position": "only grok tokenised remove-hostile-demand, though kimi and gpt both direct the same removal in their rationales",
+      "adjudicated": "required",
+      "reason": "No revision of a tone-Red draft that keeps the demand that the manager come down and do the steaming herself can be safe."
+    },
+    {
+      "turn_id": "V31-016-T1",
+      "kind": "required revision concept",
+      "raw_position": "grok required no-revision, kimi allowed it, gpt dissented with a Red rating and correction facts",
+      "adjudicated": "required",
+      "reason": "The turn is adjudicated Green on a 2-1 majority, and the rubric derives no rewrite from a Green review."
+    }
+  ],
+  "residual_risk": [
+    {
+      "risk": "The mapping from quality family names to label sets could not be verified from any readable artefact.",
+      "mitigation": "The mapping is recorded as declared by the task, and every raw vote is also carried under its own label set id, so a reviewer can relabel families without touching the votes."
+    },
+    {
+      "risk": "Three label vocabularies had to be normalised before support could be counted, and normalisation is a judgement.",
+      "mitigation": "Every token-to-concept mapping is published per turn in mapped_votes and again as alias lists on the concept definitions, so any disputed mapping is visible and reversible."
+    },
+    {
+      "risk": "gpt used granular per-fact preservation tokens that gold generalises into preserve-material-background-facts.",
+      "mitigation": "The generalisation is declared in the concept definition and every original token is listed as an alias; the exact gpt lists remain verbatim in the adjudication record."
+    },
+    {
+      "risk": "V31-014-T1 is a genuine three-way split, so its responsibility and overall values are not settled gold.",
+      "mitigation": "The turn is marked gold_uncertain with its disputed dimensions named in both artefacts, and the adjudicated Yellow is presented with its reasoning rather than as consensus."
+    }
+  ],
+  "protocol_violations_found": [],
+  "coverage_fitting_found": false
+}

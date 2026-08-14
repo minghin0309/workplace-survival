@@ -1,0 +1,39 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-004",
+  "recipient_context": {
+    "recipient_name": "Marit Osgarde",
+    "recipient_role": "workroom manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal workroom message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "workroom coordinator",
+    "organization": "Quillsmere Millinery Workroom",
+    "site": "Bellhouse Yard workroom",
+    "situation": "Ferrowhite Trimmings are holding reserved petersham for job QM-2031-0447 and will release it only against a request that names the individual who authorised the price variation.",
+    "known_facts": [
+      "The reserved stock is 40 m of 38 mm petersham in shade FW-Slate.",
+      "The price variation on the reserved stock is 310 pounds.",
+      "Ferrowhite release reserved stock only on a request naming the individual who authorised a variation above 250 pounds; their trade desk rejects a request that names no individual.",
+      "The reservation lapses on Thursday 9 October at 16:00.",
+      "The variation is already signed off inside the workroom and the entry on the sign-off sheet is initialled.",
+      "The coordinator has seen the initialled entry on the sign-off sheet.",
+      "Finishing on QM-2031-0447 starts on Friday 10 October and needs the petersham.",
+      "Every other field on the Ferrowhite release form is complete: account QT-4471, quantity, width and shade."
+    ],
+    "constraints": [
+      "Release requests to the Ferrowhite trade desk are sent by the workroom manager.",
+      "The coordinator cannot authorise a price variation.",
+      "Finishing cannot start on substitute trim; the shade is matched to the commission."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Check this before I send it to Marit.\n\nDraft under review:\nMarit - can you send Ferrowhite the release request for the 40 m of 38 mm petersham in FW-Slate on QM-2031-0447 before the reservation lapses at 16:00 today? Their trade desk will not release reserved stock unless the request names the person who authorised the 310 pound variation, and the variation is already signed off on our sheet. Account QT-4471, quantity, width and shade are all filled in on their form. Finishing needs the petersham on Friday morning."
+    }
+  ]
+}

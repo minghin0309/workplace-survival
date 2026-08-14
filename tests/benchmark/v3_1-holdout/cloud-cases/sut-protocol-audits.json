@@ -1,0 +1,204 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "sut-transcript-audits",
+  "acceptance_rule": "Accept only when the transcript shows no access to v3.1 gold, adjudication, oracle notes, another case's input/output content, scoring expectations, or other prohibited repository content. Record non-contaminating command, path-discovery, schema, and delivery deviations separately. Shared-holdout delivery commits are a log, not the canonical parent.",
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "context_id": "bc-9d6cea32-519e-5bab-8ba0-e43bb1564a8e",
+      "verdict": "PASS",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": []
+    },
+    {
+      "case_id": "V31-002",
+      "context_id": "bc-15751b57-3800-5a37-86b6-8bbcc485a4c7",
+      "verdict": "PASS",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": []
+    },
+    {
+      "case_id": "V31-003",
+      "context_id": "bc-526c146f-1d81-5641-833e-a93c81fe687a",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Pushed onto shared cursor/blind-v31-holdout-17a0 instead of a dedicated isolated branch.",
+        "Canonical extract uses git show of 07b2260/367fcdc from the delivery-log ref; those commits are not merged."
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "context_id": "bc-5d7b8c7f-43db-5dee-844a-a8f4ce093a46",
+      "verdict": "PASS",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": []
+    },
+    {
+      "case_id": "V31-005",
+      "context_id": "bc-ca0c5b2f-44ff-5eb0-9e5b-b4976b87fa0e",
+      "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Raw Skill output was delivered as Markdown; canonical JSON wraps the exact source string in raw_skill_output."
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "context_id": "bc-4ed20476-3c8a-5597-bb97-9e8c4fea371a",
+      "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Wrote sut-outputs/ and attestations/ instead of sut-raw/ and sut-attestations/; bytes were copied to canonical paths."
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "context_id": "bc-05ddddf3-b881-5814-b849-89ca3f4ecfd5",
+      "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Raw Skill output was delivered as Markdown; canonical JSON wraps the exact source string in raw_skill_output."
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "context_id": "bc-0f429f5c-5c3d-5f19-b699-c4a238e8ef3f",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": true,
+      "procedural_deviations": [
+        "Wrote generic sut-v31-raw.json filenames; bytes were copied to V31-008 canonical paths.",
+        "Globbed holdout artifact filenames, including gold and other-case inputs, before Skill output. No gold or other-case file contents were opened."
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "context_id": "bc-6ef7a0a5-961f-5ed3-bbe0-6249a5ebc521",
+      "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Wrote sut-outputs/V31-009.md and attestations/; Markdown was wrapped and attestation bytes copied to canonical paths."
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "context_id": "bc-fa10bc11-9547-56c4-bf31-c1ab8ed376a3",
+      "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Raw Skill output was delivered as Markdown; canonical JSON wraps the exact source string in raw_skill_output."
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "context_id": "bc-03abd61b-1348-5597-84ad-ea70a9d60f0b",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Pushed onto the shared holdout branch instead of a dedicated isolated branch.",
+        "Globbed/listed cloud-cases filenames including gold and V31-003 artifacts; no prohibited file contents were opened.",
+        "Attestation overstated only-listed-content-read given directory enumeration."
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "context_id": "bc-970f87a6-addd-5c59-8bea-c0c52f45c696",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Pushed misnamed dedicated branch cursor/workplace-survival-v31-012-c696.",
+        "Read sut-input-manifest.json and listed sut-raw/, exposing other-case metadata and V31-003 filenames. No gold or other-case Skill-output contents were opened.",
+        "Source branch tip also contained inherited V31-003 files; canonical extract copied only V31-012."
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "context_id": "bc-dbd0f64b-7608-5483-a4b2-f8691737404b",
+      "verdict": "PASS_WITH_METADATA_NORMALIZATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Attestation was co-located in sut-raw/; bytes were copied to sut-attestations/V31-013.json.",
+        "Source branch tip also contained inherited V31-003 files; canonical extract copied only V31-013."
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "context_id": "bc-5311e780-52e2-5b0d-8e66-8b1534092eaa",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Globbed and git ls-tree'd other V31/V2 branches before Skill output, exposing prohibited filenames. No gold or other-case file contents were opened.",
+        "Source branch tip also contained inherited V31-003 files; canonical extract copied only V31-014."
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "context_id": "bc-e5e8f57e-0afb-52cc-92a1-6eeb0143fcf9",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Ran git ls-files over the v3.1 holdout tree before Skill output, exposing gold and other-case filenames. No prohibited file contents were opened.",
+        "Attestation was co-located in sut-raw/; source branch tip also contained inherited V31-003 files."
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "context_id": "bc-d18b66e8-e111-5a78-ae71-f895f7e470ac",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Pushed onto the shared holdout branch and rebased against concurrent SUT delivery commits after Skill output.",
+        "Enumerated other-case input paths and V31-003 artifact sizes via git ls-tree/show/wc. No prohibited file contents were opened.",
+        "Attestation claimed other_case_inputs_accessed=false despite path enumeration."
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "context_id": "bc-dc3a2a74-64e8-50b6-a884-3f8d92c44b89",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": false,
+      "procedural_deviations": [
+        "Pushed onto the shared holdout branch and rebased against concurrent SUT delivery commits after Skill output.",
+        "Extensive glob and git ls-tree of gold, oracle-notes, other-case inputs, and other SUT output paths. No those file contents were opened.",
+        "Raw Skill output was delivered as Markdown.",
+        "Attestation overstated read-scope as only the assigned input and four runtime files."
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "context_id": "bc-703b80b4-bfdb-5ecb-a4b1-79656f279ccf",
+      "verdict": "PASS_WITH_PROCEDURAL_DEVIATION",
+      "prohibited_content_access": false,
+      "image_opened_directly": true,
+      "procedural_deviations": [
+        "Pushed onto the shared holdout branch and rebased against concurrent SUT delivery commits.",
+        "Read sut-input-manifest.json (other-case metadata) and grepped historical v2 gold-freeze/methodology filenames and snippets. No v3.1 gold, oracle-notes, or other-case Skill-output contents were opened.",
+        "Called unrequested cursor-cloud run-info."
+      ]
+    }
+  ],
+  "limitations": [
+    "Audits are based on cloud transcripts and tool logs, not an independent filesystem access monitor.",
+    "Cloud run metadata returned null machine model names for the SUT contexts; canonical machine_model_id is unverified.",
+    "Image audits prove direct image-path opening and repository isolation, not pixel-only OCR independent of all allowlisted context.",
+    "Five cases delivered via shared-holdout commits; canonical freeze extracts those files by git show and does not merge that history.",
+    "Filename glob, git ls-tree, and historical-document grep are recorded as procedural deviations. They did not open v3.1 gold label content."
+  ]
+}

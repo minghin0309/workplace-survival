@@ -1,0 +1,57 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "matcher-attestation",
+  "context_id": "bc-5f0c3516-ef1c-5dcd-b9e9-1e797251d676",
+  "model_id": "unverified",
+  "model_family": "claude",
+  "branch": "cursor/v31-matcher-claude-17a0",
+  "output_commit": "813a7c40ffda234637c3b258f19ae9e6b673d639",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractions-manifest-v31.json",
+      "sha256": "a406161c1fac10f9c8b1f86c402891ac7dc81ac616abc8df0ebf9eb545c8b46e"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/evaluations-v31-canonical.json",
+      "sha256": "63cc05f43da57a426bb252dc50b137f63e7f531697848d2ae5e367fc14841aa2"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/outputs-v31-raw.json",
+      "sha256": "cf5ef7e28ca5bacd6e4e28e6bd2d92dfb5be61b34f51ce67bb4b40a7071be7b8"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/gold-v31.json",
+      "sha256": "bb8fbf70ac84e8718fef8abd0d2f7d53aee07213343b25f418db8329e1bedf2d"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "gold_access": true,
+  "scoring_performed": false,
+  "limitations": [
+    "model_id is unverified because the runtime machine model ID was unavailable to this matcher context.",
+    "Matching was performed by a single matcher context with gold access; no second matcher or adjudicator reviewed these decisions.",
+    "Where a claim described replacing problematic content with corrective content, only one concept could be recorded per claim; the discarded reading is noted in the rationale where it was close.",
+    "Turn-local gold concepts defined only in concept_definitions were matched as semantic, never exact or alias, since they carry no ontology entry.",
+    "No claim had text identical to its evidence_span, so no exact or alias match was available under the deterministic rule."
+  ],
+  "protocol_deviations": [],
+  "isolation": {
+    "repository_files_read_count": 5,
+    "repository_files_read_exact": true,
+    "claims_or_evaluations_modified": false,
+    "gold_or_ontology_modified": false
+  },
+  "coverage": {
+    "cases": 18,
+    "turns": 24,
+    "claims": 59,
+    "unsupported_claims": 2
+  },
+  "output": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/matches-v31.json",
+    "sha256": "d837eb00ecd87db9d59014c27038b075d77bdd6fffb311d78d95e18a71e6145e"
+  }
+}
