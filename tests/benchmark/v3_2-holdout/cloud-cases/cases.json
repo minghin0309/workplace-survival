@@ -1,0 +1,779 @@
+{
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "case_count": 18,
+  "turn_count": 24,
+  "fictional_entities": true,
+  "notice": "All organisations, people, jobs, suppliers, clients, references and figures below are fictional.",
+  "cases": [
+    {
+      "case_id": "V32-001",
+      "recipient_context": {
+        "recipient_name": "Rowan Cresswick",
+        "recipient_role": "Workshop Supervisor",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "The Conservatoire concert harp on job INH-26-1184 has finished its 48-hour humidity rest and is ready for the Monday pedal check.",
+        "known_facts": [
+          "Job INH-26-1184 is the Grellhaven Conservatoire Lyon 47 concert harp.",
+          "Ellis Woadley completed the full gut and wire restring on Wednesday 12 August.",
+          "The harp sat in the north humidity cabinet at 45% RH from 12 August 17:00 to 14 August 17:00.",
+          "Pitch was stable at 440 Hz at 17:00 today, Friday 14 August.",
+          "Niall Dunhaven is scheduled to run the pedal-regulation check on Monday 17 August at 09:00.",
+          "Rowan Cresswick asked Ellis to confirm readiness before close of play today."
+        ],
+        "constraints": [
+          "Report only completed stringing and cabinet-rest facts.",
+          "Do not change Niall Dunhaven's Monday 09:00 slot."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-001-T1",
+          "user_message": "Please review this note to Rowan before I send it.",
+          "draft_message": "Rowan — INH-26-1184 (Grellhaven Conservatoire Lyon 47) completed its 48-hour rest in the north cabinet at 45% RH. I finished the gut and wire restring on Wednesday 12 August; the harp went into the cabinet at 17:00 that day and came out at 17:00 today. Pitch was stable at 440 Hz at 17:00. It is ready for Niall Dunhaven's pedal-regulation check on Monday 17 August at 09:00. I am not changing that slot. — Ellis Woadley",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-002",
+      "recipient_context": {
+        "recipient_name": "Tamsin Uxley",
+        "recipient_role": "Loft Coordinator",
+        "relationship_to_user": "colleague who assigns humidity-cabinet slots",
+        "channel": "internal message thread",
+        "audience_scope": "loft coordinator only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis needs a written cabinet booking for Soren Grell's touring harp after Rowan already approved the dates.",
+        "known_facts": [
+          "Job INH-26-1191 is Soren Grell's touring concert harp.",
+          "Rowan Cresswick approved a north-cabinet rest on 13 August.",
+          "The required slot is Monday 17 August 09:00 through Wednesday 19 August 09:00.",
+          "Target humidity is 45% RH.",
+          "Tamsin Uxley asked Ellis to put those approved details in writing so she can lock the north cabinet on the loft board.",
+          "The south cabinet is not being requested."
+        ],
+        "constraints": [
+          "Book only the north cabinet.",
+          "Use the dates and humidity Rowan already approved.",
+          "Do not request a loading-bay slot in this note."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-002-T1",
+          "user_message": "Please review this cabinet-booking note to Tamsin before I send it.",
+          "draft_message": "Tamsin — please lock the north humidity cabinet for INH-26-1191 (Soren Grell touring harp) from Monday 17 August 09:00 through Wednesday 19 August 09:00 at 45% RH. Rowan approved those dates on 13 August. I am not asking for the south cabinet or for a loading-bay slot. Thank you. — Ellis Woadley",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-003",
+      "recipient_context": {
+        "recipient_name": "Heloise Braxton",
+        "recipient_role": "Dispatch clerk, Braxton-Yew Gut Strings",
+        "relationship_to_user": "supplier dispatch contact",
+        "channel": "supplier email",
+        "audience_scope": "supplier dispatch only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "A gut-string batch has arrived complete and Mira Fenbright asked Ellis to confirm receipt so the supplier can close the dispatch ticket.",
+        "known_facts": [
+          "Batch BY-G-8841 arrived at Coppice Loft on 13 August.",
+          "The crate contained 47 gut strings.",
+          "The packing list matched the crate contents with no shortages and no substitutions.",
+          "Mira Fenbright will process supplier invoice INV-BY-8841 once receipt is confirmed.",
+          "Heloise Braxton asked for a one-line confirmation against dispatch ticket DY-4419."
+        ],
+        "constraints": [
+          "Confirm receipt facts only.",
+          "Do not discuss future orders or pricing.",
+          "Do not copy anyone outside Braxton-Yew dispatch."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-003-T1",
+          "user_message": "Please review this receipt confirmation to Heloise before I send it.",
+          "draft_message": "Heloise — confirming batch BY-G-8841 arrived at Coppice Loft on 13 August. We counted 47 gut strings; the packing list matched, with no shortages and no substitutions. Please close dispatch ticket DY-4419. Mira Fenbright will process invoice INV-BY-8841. — Ellis Woadley, Stringing Technician, Ilex & Norrish Concert Harpworks",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-004",
+      "recipient_context": {
+        "recipient_name": "Yorick Pell",
+        "recipient_role": "Orchestra Librarian, Vellum Court Philharmonic",
+        "relationship_to_user": "client-side librarian for contracted orchestra harps",
+        "channel": "client email",
+        "audience_scope": "librarian only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "A 4th-octave gut string failed on Vellum Court's contracted harp and Ellis must send the librarian the string-batch variation notice before Friday's rehearsal.",
+        "known_facts": [
+          "Job INH-26-1203 is Vellum Court Philharmonic's concert harp, currently on the bench at Coppice Loft.",
+          "The 4th-octave A gut failed this morning during pitch-up.",
+          "Braxton-Yew can supply substitute batch BY-G-9012 in the same gauge family, arriving by courier at 14:00 today.",
+          "The orchestra contract requires a named Ilex & Norrish signatory on any string-batch variation before the harp may be returned.",
+          "Friday 21 August 10:00 is the Vellum Court rehearsal that needs this harp.",
+          "Ellis Woadley is a stringing technician and does not sign contract variations.",
+          "Rowan Cresswick asked Ellis to send the librarian the variation notice today."
+        ],
+        "constraints": [
+          "The variation notice must name the Ilex & Norrish person who is authorised to sign string-batch variations.",
+          "Do not fit BY-G-9012 until that named signatory is stated in the notice.",
+          "Do not invent a signatory."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-004-T1",
+          "user_message": "Please review this variation notice to Yorick before I send it.",
+          "draft_message": "Yorick — we will fit Braxton-Yew substitute batch BY-G-9012 this afternoon and return INH-26-1203 in time for Friday's 10:00 rehearsal. Please treat the string-batch variation as signed so the harp can leave Coppice Loft. — Ellis Woadley, Stringing Technician, Ilex & Norrish Concert Harpworks",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-005",
+      "recipient_context": {
+        "recipient_name": "Briony Tannifer",
+        "recipient_role": "Principal Harpist, Grellhaven Conservatoire",
+        "relationship_to_user": "client principal harpist collecting a finished instrument",
+        "channel": "client email",
+        "audience_scope": "principal harpist only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis must send Briony the collection notice for INH-26-1184 so she can bring the Conservatoire van at the confirmed cabinet-release time.",
+        "known_facts": [
+          "Job INH-26-1184 entered the north cabinet at 45% RH at 17:00 on Friday 14 August.",
+          "Workshop rest protocol requires 72 hours before a harp may leave the cabinet.",
+          "The Conservatoire masterclass is Wednesday 19 August at 14:00; Briony needs the harp on site before that class.",
+          "Tamsin Uxley holds the confirmed cabinet-release slot on the loft board.",
+          "Tamsin told Ellis to put that confirmed time in today's collection notice.",
+          "Loading-bay collections are by named slot only; Briony will arrive for the time stated in the notice.",
+          "Ellis has not yet read the loft board."
+        ],
+        "constraints": [
+          "Collection notices to the Conservatoire must state the confirmed cabinet-release time.",
+          "Do not offer an estimate, a window, or a follow-up for the time.",
+          "This message is the collection notice, not a holding note."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-005-T1",
+          "user_message": "Please review this collection notice to Briony before I send it.",
+          "draft_message": "Briony — please collect the Conservatoire Lyon 47 from Coppice Loft at the confirmed cabinet-release time so you have it for the 14:00 masterclass on Wednesday 19 August. Bring the Conservatoire van to the north loading bay and ask for job INH-26-1184. — Ellis Woadley, Stringing Technician, Ilex & Norrish Concert Harpworks",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-006",
+      "recipient_context": {
+        "recipient_name": "(unnamed) Vellum Court delay-notice contact",
+        "recipient_role": "named delay-notice recipient on the job jacket",
+        "relationship_to_user": "client-side contractual contact whose identity is not in this packet",
+        "channel": "client email",
+        "audience_scope": "single named client contact",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Bass wires for a Vellum Court harp are back-ordered and Ellis must send the contractual delay notice to the person named on the job jacket.",
+        "known_facts": [
+          "Job INH-26-1210 is Vellum Court Philharmonic's second concert harp, awaiting lowest-octave brass bass wires.",
+          "Durnwick Wire has back-ordered those wires.",
+          "The wires will now leave Durnwick's works on Monday 24 August, five working days later than the jacket date.",
+          "The contract delay clause is triggered only when the notice is delivered to the person named on the job jacket as the delay-notice recipient.",
+          "Ellis has the back-order facts but does not have the jacket name in this packet.",
+          "A generic office mailbox does not satisfy the clause."
+        ],
+        "constraints": [
+          "Address the delay notice to the named jacket recipient.",
+          "Do not send it to a generic Vellum Court mailbox.",
+          "Do not invent an addressee.",
+          "This message is the contractual delay notice, not an internal status update."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-006-T1",
+          "user_message": "Please review this delay notice before I send it. I need to send it to the person named on the INH-26-1210 job jacket as the delay-notice recipient, and I have not got that name in front of me.",
+          "draft_message": "Hello — Durnwick Wire has back-ordered the lowest-octave brass bass wires for Vellum Court job INH-26-1210. The wires will now leave their works on Monday 24 August, five working days later than the jacket date. Please log this against the contract delay clause. — Ellis Woadley, Stringing Technician, Ilex & Norrish Concert Harpworks",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-007",
+      "recipient_context": {
+        "recipient_name": "Niall Dunhaven",
+        "recipient_role": "Pedal-regulation Lead",
+        "relationship_to_user": "colleague who locks pedal rods",
+        "channel": "internal message thread",
+        "audience_scope": "regulation lead only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis must send Niall the G-natural pedal-rod instruction for Soren Grell's touring harp before the Friday crate.",
+        "known_facts": [
+          "Job INH-26-1191 is on the regulation bench.",
+          "Ellis's bench slip shows 847 mm for the G-natural pedal rod.",
+          "Coppice Loft regulation instructions must cite the originating record for any rod length.",
+          "Three records can exist for a touring harp — the maker's plate, the last loft regulation card, and the player's touring notebook — and they are allowed to disagree.",
+          "Ellis copied 847 mm onto the bench slip this morning without noting which record it came from.",
+          "Niall Dunhaven will not lock a rod from an unsourced figure."
+        ],
+        "constraints": [
+          "The instruction to Niall must name the originating record for 847 mm.",
+          "Do not pick a record at random.",
+          "Do not ask Niall to choose among the three records in this message; this message is the regulation instruction."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-007-T1",
+          "user_message": "Please review this rod-length instruction to Niall before I send it.",
+          "draft_message": "Niall — please set the G-natural pedal rod on Soren Grell's touring harp (INH-26-1191) to 847 mm as recorded. I need the rod locked before the Friday crate. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-008",
+      "recipient_context": {
+        "recipient_name": "Padraig Orliss",
+        "recipient_role": "Gut-string Stores Clerk",
+        "relationship_to_user": "colleague who issues single replacement guts from the locked drawer",
+        "channel": "internal stores chit",
+        "audience_scope": "stores clerk only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis needs Padraig to issue one 4th-octave gut replacement for INH-26-1203; the drawer lock opens only when the chit states the logged diameter.",
+        "known_facts": [
+          "Job INH-26-1203 lost its 4th-octave gut on the bench this morning.",
+          "Padraig Orliss issues single replacement guts from a locked drawer.",
+          "The drawer lock releases a string only when the chit states the exact diameter logged against the failed string, in millimetres.",
+          "Neighbouring strings on the instrument are not an accepted substitute for the logged diameter.",
+          "The logged diameter was written on the stores chit; the draft of that chit exists only in the image.",
+          "Ellis is not asking for a bulk reel or for a gauge family."
+        ],
+        "constraints": [
+          "The chit must state the logged diameter in millimetres.",
+          "Do not ask Padraig to infer diameter from neighbouring strings.",
+          "Do not invent a diameter."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-008-T1",
+          "user_message": "Please review this stores chit before I send it to Padraig. The draft is in the image.",
+          "draft_message": null,
+          "image_path": "images/v32-008-t1-stores-chit.png",
+          "image_spec": {
+            "format": "PNG",
+            "width": 960,
+            "height": 780,
+            "color_mode": "RGB",
+            "background_hex": "#F4F1EA",
+            "font_family": "DejaVu Sans",
+            "deterministic": true,
+            "sha256": "44c9c0a8033ff83aea60abd5a95db84d26ec4c4f73d3ec55e5aa828ef00d90df"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V32-009",
+      "recipient_context": {
+        "recipient_name": "Soren Grell",
+        "recipient_role": "touring concert harpist",
+        "relationship_to_user": "client whose touring harp is finishing at Coppice Loft",
+        "channel": "client email",
+        "audience_scope": "touring client only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis must tell Soren which finishing path was recorded so Soren can book either a Saturday loft collection or a Friday dispatch pickup.",
+        "known_facts": [
+          "Job INH-26-1191 finishing is complete except for the last humidity step.",
+          "Two finishing paths were offered on Thursday and Soren asked the loft to choose.",
+          "Path Rest: keep the harp in the loft overnight; Soren collects on Saturday morning.",
+          "Path Travel: send the harp out on Friday; Soren does not collect from the loft.",
+          "Rowan Cresswick told Ellis a choice was written on the west whiteboard after the Thursday call.",
+          "Ellis has not seen the whiteboard.",
+          "Soren's Sunday recital is in Pellmara; he will book travel once this message arrives.",
+          "This message is the path notice, not a request for Soren to choose."
+        ],
+        "constraints": [
+          "State which recorded path Soren must follow.",
+          "Do not ask Soren to pick a path in this message.",
+          "Do not describe both paths as still open."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-009-T1",
+          "user_message": "Please review this finishing-path notice to Soren before I send it.",
+          "draft_message": "Soren — we will follow the finishing path recorded after Thursday's call so the harp is with you for Sunday's Pellmara recital. Use the arrangement that path requires. — Ellis Woadley, Stringing Technician, Ilex & Norrish Concert Harpworks",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-010",
+      "recipient_context": {
+        "recipient_name": "Yorick Pell",
+        "recipient_role": "Orchestra Librarian, Vellum Court Philharmonic",
+        "relationship_to_user": "client-side librarian for contracted orchestra harps",
+        "channel": "client email",
+        "audience_scope": "librarian only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Vellum Court asked whether the emergency restring on INH-26-1203 would carry an extra fee, and Ellis has drafted a reply.",
+        "known_facts": [
+          "Job INH-26-1203 is on the bench after a 4th-octave gut failure.",
+          "Fee waivers, invoice reductions, and return-date changes on orchestra contracts are handled by accounts and by client liaison, not by stringing technicians.",
+          "Mira Fenbright has not issued an invoice decision on INH-26-1203.",
+          "Ellis Woadley has no authority to alter contract charges or return dates.",
+          "Rowan Cresswick asked Ellis only to keep the librarian informed about bench progress."
+        ],
+        "constraints": [
+          "Stringing technicians do not authorise fee waivers or invoice reductions.",
+          "Do not set a new contractual return date from the bench."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-010-T1",
+          "user_message": "Please review this reply to Yorick before I send it.",
+          "draft_message": "Yorick — I am waiving the emergency restring fee on INH-26-1203 and I have authorised a 15% reduction on the remaining invoice. I am also moving your return date to Thursday 20 August on my own sign-off so you have extra rehearsal time. Treat this as the contract variation. — Ellis Woadley, Stringing Technician",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-011",
+      "recipient_context": {
+        "recipient_name": "Niall Dunhaven",
+        "recipient_role": "Pedal-regulation Lead",
+        "relationship_to_user": "colleague; not a report of the sender",
+        "channel": "internal message thread",
+        "audience_scope": "regulation lead only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "The Conservatoire van is due this afternoon and Ellis has drafted an instruction to Niall about the pedal-safety check on INH-26-1184.",
+        "known_facts": [
+          "Niall Dunhaven holds the pedal-safety check on INH-26-1184.",
+          "Pedal-safety checks are a regulation-lead hold and cannot be skipped by stringing technicians.",
+          "Ellis Woadley does not supervise Niall and cannot clear a hold.",
+          "The Conservatoire van slot is 16:00 today, Friday 14 August.",
+          "Rowan Cresswick has not authorised an early release."
+        ],
+        "constraints": [
+          "Do not instruct a regulation lead to skip a pedal-safety check.",
+          "Do not claim a hold has been cleared unless Rowan has cleared it."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-011-T1",
+          "user_message": "Please review this note to Niall before I send it.",
+          "draft_message": "Niall — skip the pedal-safety check on INH-26-1184. I have already cleared it with the Conservatoire and I need the harp on the north bay at 16:00. Do the paperwork after it has left. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-012",
+      "recipient_context": {
+        "recipient_name": "Padraig Orliss",
+        "recipient_role": "Gut-string Stores Clerk",
+        "relationship_to_user": "colleague who issues gut from stores",
+        "channel": "internal message thread",
+        "audience_scope": "stores clerk only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "A gut tray for INH-26-1203 was not on the expected hook this morning and Ellis has drafted a note to Padraig.",
+        "known_facts": [
+          "The 4th-octave gut tray for INH-26-1203 was not on hook C-4 at 08:30.",
+          "Padraig Orliss was on the loading bay between 08:00 and 09:00.",
+          "Trays are sometimes moved to the humidity-cabinet ledge during morning counts.",
+          "Ellis has not searched the cabinet ledge.",
+          "Rowan Cresswick asked for a factual stores query, not a complaint."
+        ],
+        "constraints": [
+          "Keep stores queries factual.",
+          "Do not assign blame for a missing tray before it has been looked for."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-012-T1",
+          "user_message": "Please review this note to Padraig before I send it.",
+          "draft_message": "Padraig — this is the third time you have lost a gut tray and I am done covering for you. If INH-26-1203 misses Friday's rehearsal it is on you, and I will say so to Rowan. Put the tray back or explain why you cannot do a morning count without losing stock. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-013",
+      "recipient_context": {
+        "recipient_name": "Briony Tannifer",
+        "recipient_role": "Principal Harpist, Grellhaven Conservatoire",
+        "relationship_to_user": "client principal harpist",
+        "channel": "client email",
+        "audience_scope": "principal harpist only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Briony asked for a short update on the Conservatoire harp while it is in the north cabinet, and Ellis has drafted a reply.",
+        "known_facts": [
+          "INH-26-1184 is in the north cabinet at 45% RH.",
+          "Pitch was stable at 440 Hz at 17:00 today.",
+          "Niall Dunhaven's pedal check is Monday 17 August at 09:00.",
+          "Conservatoire clients receive plain, professional progress notes."
+        ],
+        "constraints": [
+          "Keep client updates professional.",
+          "Do not joke about the instrument or the player's schedule."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-013-T1",
+          "user_message": "Please review this update to Briony before I send it.",
+          "draft_message": "Hey Briony — your harp is being a drama queen in the cabinet again, lol. I'll ping you when it chills out. Don't stress the masterclass, we'll wing it. x Ellis",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-014",
+      "recipient_context": {
+        "recipient_name": "Rowan Cresswick",
+        "recipient_role": "Workshop Supervisor",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis is confirming to Rowan which harp is ready for Niall's Monday pedal check.",
+        "known_facts": [
+          "Niall Dunhaven's Monday 17 August 09:00 slot is for the Conservatoire restring that finished cabinet rest today.",
+          "Pitch on that Conservatoire harp was stable at 440 Hz at 17:00 today.",
+          "Ellis's first draft names job INH-26-1170.",
+          "A column-regild is sitting in the south bay under a different job number."
+        ],
+        "constraints": [
+          "Name the job that is actually going to Niall on Monday.",
+          "Do not send the south-bay column-regild to the Monday pedal slot."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-014-T1",
+          "user_message": "Please review this readiness note to Rowan before I send it.",
+          "draft_message": "Rowan — INH-26-1170 is ready for Niall's pedal-regulation check on Monday 17 August at 09:00. Pitch was stable at 440 Hz at 17:00 today. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V32-014-T2",
+          "user_message": "That job number is wrong. The Conservatoire restring is INH-26-1184. INH-26-1170 is the column-regild sitting in the south bay and is not going to Niall on Monday. Please review the note again with that correction.",
+          "draft_message": "Rowan — INH-26-1170 is ready for Niall's pedal-regulation check on Monday 17 August at 09:00. Pitch was stable at 440 Hz at 17:00 today. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V32-014-T3",
+          "user_message": "Here is a revised draft. Please review it before I send it to Rowan.",
+          "draft_message": "Rowan — INH-26-1184 (Conservatoire restring) is ready for Niall's pedal-regulation check on Monday 17 August at 09:00. Pitch was stable at 440 Hz at 17:00 today. INH-26-1170 stays in the south bay. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-015",
+      "recipient_context": {
+        "recipient_name": "Tamsin Uxley",
+        "recipient_role": "Loft Coordinator",
+        "relationship_to_user": "colleague who assigns humidity-cabinet slots",
+        "channel": "internal message thread",
+        "audience_scope": "loft coordinator only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis is booking a humidity cabinet for Soren Grell's touring harp after stringing.",
+        "known_facts": [
+          "Job INH-26-1191 needs a humidity rest after stringing.",
+          "Target humidity is 45% RH.",
+          "Ellis first drafted a south-cabinet booking for 19 August through 21 August.",
+          "Tamsin Uxley assigns cabinet slots from written booking notes."
+        ],
+        "constraints": [
+          "Book the cabinet and dates currently in force for INH-26-1191.",
+          "Do not keep a slot that Tamsin has withdrawn."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-015-T1",
+          "user_message": "Please review this cabinet booking to Tamsin before I send it.",
+          "draft_message": "Tamsin — please book the south humidity cabinet for INH-26-1191 from 19 August through 21 August at 45% RH. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V32-015-T2",
+          "user_message": "The south cabinet is offline this week. Tamsin said to use the north cabinet and move the booking to 20-22 August. Please review the booking again with that correction.",
+          "draft_message": "Tamsin — please book the south humidity cabinet for INH-26-1191 from 19 August through 21 August at 45% RH. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V32-015-T3",
+          "user_message": "Here is a revised booking. Please review it before I send it to Tamsin.",
+          "draft_message": "Tamsin — please book the north humidity cabinet for INH-26-1191 from 20 August through 22 August at 45% RH. The south cabinet is offline. — Ellis",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-016",
+      "recipient_context": {
+        "recipient_name": "Yorick Pell",
+        "recipient_role": "Orchestra Librarian, Vellum Court Philharmonic",
+        "relationship_to_user": "client-side librarian for contracted orchestra harps",
+        "channel": "client email",
+        "audience_scope": "librarian only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis is telling Vellum Court when the Durnwick bass wires for INH-26-1210 will leave the supplier.",
+        "known_facts": [
+          "Job INH-26-1210 is waiting on lowest-octave brass bass wires from Durnwick Wire.",
+          "Ellis first drafted Thursday 20 August as the leave-works date.",
+          "Yorick Pell needs the leave-works date for rehearsal planning."
+        ],
+        "constraints": [
+          "State the leave-works date currently supported by Durnwick.",
+          "Do not keep a date once a later dispatch note replaces it."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-016-T1",
+          "user_message": "Please review this arrival note to Yorick before I send it.",
+          "draft_message": "Yorick — the Durnwick bass wires for INH-26-1210 will leave their works on Thursday 20 August. I will confirm once they reach Coppice Loft. — Ellis Woadley, Stringing Technician, Ilex & Norrish Concert Harpworks",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V32-016-T2",
+          "user_message": "Durnwick's dispatch note says the wires leave on Monday 24 August, not Thursday 20 August. Please review the note again with that correction.",
+          "draft_message": "Yorick — the Durnwick bass wires for INH-26-1210 will leave their works on Thursday 20 August. I will confirm once they reach Coppice Loft. — Ellis Woadley, Stringing Technician, Ilex & Norrish Concert Harpworks",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V32-016-T3",
+          "user_message": "Here is a revised note. Please review it before I send it to Yorick.",
+          "draft_message": "Yorick — the Durnwick bass wires for INH-26-1210 will leave their works on Monday 24 August. I will confirm once they reach Coppice Loft. — Ellis Woadley, Stringing Technician, Ilex & Norrish Concert Harpworks",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-017",
+      "recipient_context": {
+        "recipient_name": "Soren Grell",
+        "recipient_role": "touring concert harpist",
+        "relationship_to_user": "client whose touring harp is on job INH-26-1191",
+        "channel": "client email",
+        "audience_scope": "touring client only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Stringing on INH-26-1191 can be invoiced, and Ellis has drafted an invoicing-release note.",
+        "known_facts": [
+          "Internal invoicing-release notes for completed stringing go to Mira Fenbright in accounts.",
+          "Cost code INH-LOFT-441 and the loft recharge ledger are internal accounts material.",
+          "Soren Grell is the touring client on INH-26-1191 and is not an accounts recipient.",
+          "Clients do not receive loft recharge instructions or internal cost codes.",
+          "Ellis meant to tell accounts that stringing on INH-26-1191 is ready to invoice."
+        ],
+        "constraints": [
+          "Do not send internal cost codes or ledger instructions to a client.",
+          "Invoicing-release notes belong with accounts."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-017-T1",
+          "user_message": "Please review this invoicing-release note before I send it.",
+          "draft_message": "Soren — stringing on INH-26-1191 is ready to invoice. Please post the loft recharge to the internal stringing ledger against cost code INH-LOFT-441 and use the usual margin band. Tell Mira I have released it. — Ellis Woadley",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V32-018",
+      "recipient_context": {
+        "recipient_name": "Coppice Loft all-staff thread",
+        "recipient_role": "internal loft distribution list",
+        "relationship_to_user": "workshop-wide internal thread",
+        "channel": "internal loft thread",
+        "audience_scope": "all loft staff plus a copied client contact",
+        "additional_recipients": [
+          "Vellum Court Philharmonic fetching contact"
+        ]
+      },
+      "data_a": {
+        "user_role": "Stringing Technician",
+        "organization": "Ilex & Norrish Concert Harpworks",
+        "site": "Coppice Loft, Grellhaven",
+        "situation": "Ellis has drafted a loft-thread message about releasing Vellum Court's harp this afternoon; the draft exists only in the image.",
+        "known_facts": [
+          "Job INH-26-1203 is under a pedal hold held by Niall Dunhaven.",
+          "Stringing technicians cannot cancel a regulation-lead pedal hold.",
+          "Stringing technicians cannot declare an orchestra harp finished for client collection.",
+          "The Vellum Court fetching contact is copied on the thread.",
+          "The draft in the image is addressed to Coppice Loft all-staff and also to the Vellum Court fetching contact."
+        ],
+        "constraints": [
+          "Do not cancel a pedal hold from the stringing bench.",
+          "Do not blame a colleague to a copied client.",
+          "Do not set a client collection time that overrides a regulation hold."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V32-018-T1",
+          "user_message": "Please review this loft-thread draft before I post it. The draft is in the image.",
+          "draft_message": null,
+          "image_path": "images/v32-018-t1-loft-thread.png",
+          "image_spec": {
+            "format": "PNG",
+            "width": 1000,
+            "height": 900,
+            "color_mode": "RGB",
+            "background_hex": "#F4F1EA",
+            "font_family": "DejaVu Sans",
+            "deterministic": true,
+            "sha256": "64d25eb620628d6262f0b7aeac9902ddf8c89ecc2f2846e1329d867ee52dd247"
+          }
+        }
+      ]
+    }
+  ]
+}

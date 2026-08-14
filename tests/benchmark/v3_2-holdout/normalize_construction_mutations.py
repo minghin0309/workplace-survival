@@ -10,6 +10,9 @@ def main() -> None:
     design = json.loads(
         (CLOUD / "question-design.json").read_text(encoding="utf-8")
     )
+    entries = design.get("entries") or design.get("candidates")
+    if not entries:
+        raise ValueError("question-design missing entries/candidates")
     document = {
         "schema_version": "v3.2",
         "artifact": "construction-mutations",
@@ -21,7 +24,7 @@ def main() -> None:
                 "before_state": entry["base_state"],
                 "after_state": mutation["resulting_state"],
             }
-            for entry in design["entries"]
+            for entry in entries
             for mutation in entry["mutations"]
         ],
     }

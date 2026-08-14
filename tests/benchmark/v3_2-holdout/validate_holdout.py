@@ -138,6 +138,8 @@ def main() -> None:
     design = json.loads(
         (CLOUD / "question-design.json").read_text(encoding="utf-8")
     )
+    design_entries = design.get("entries") or design.get("candidates")
+    require(bool(design_entries), "question-design entries")
     mutations = json.loads(
         (CLOUD / "construction-mutations.json").read_text(encoding="utf-8")
     )
@@ -184,7 +186,7 @@ def main() -> None:
     require(turn_total == 24, "turn total")
     require("V32-018" in image_cases, "V32-018 image")
 
-    entries = [core(entry) for entry in design["entries"]]
+    entries = [core(entry) for entry in design_entries]
     contract.validate_design(entries)
     require(
         [entry["case_id"] for entry in entries]
@@ -192,7 +194,7 @@ def main() -> None:
         "question candidate IDs",
     )
     require(
-        any(entry.get("image_only_draft") for entry in design["entries"]),
+        any(entry.get("image_only_draft") for entry in design_entries),
         "image-only question candidate",
     )
     require(
@@ -223,7 +225,7 @@ def main() -> None:
     hits = [term for term in DENYLIST if term in haystack]
     require(not hits, "novelty denylist: " + ", ".join(hits))
 
-    for entry in design["entries"]:
+    for entry in design_entries:
         tokens = entry.get("absent_answer_tokens") or []
         visible = flatten(
             next(
