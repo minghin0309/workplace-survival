@@ -47,8 +47,14 @@ def main() -> None:
         "artifact": "adjudicated-gold",
         "case_set_id": "v32-holdout-cloud-attempt1",
         "gold_quality": {
-            "labeler_model_families": raw["gold_quality"]["labeler_model_families"],
-            "adjudicator_model_family": raw["gold_quality"]["adjudicator_model_family"],
+            "labeler_model_families": raw.get("gold_quality", raw.get("quality", {})).get(
+                "labeler_model_families"
+            )
+            or raw.get("quality", {}).get("families"),
+            "adjudicator_model_family": raw.get("gold_quality", raw.get("quality", {})).get(
+                "adjudicator_model_family"
+            )
+            or raw.get("quality", {}).get("adjudicator"),
             "human_review_available": False,
             "adjudication_complete": True,
             "vote_distributions_preserved": True,

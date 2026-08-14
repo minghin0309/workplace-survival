@@ -1,6 +1,6 @@
 # Fresh v3.2 Holdout Status
 
-- Status: `GOLD_LABELING_IN_PROGRESS`
+- Status: `GOLD_ADJUDICATION_PENDING`
 - Methodology: v3.2
 - Runtime: `main@9d48b048d083507c20f2714b21053d36b68d6366`
 - Holdout branch: `cursor/blind-v32-holdout-17a0`
@@ -10,12 +10,14 @@
 
 Construction remains valid. Designer branch was copied with `git show` and not merged.
 
-Gold:
+Gold labelers (all copied with `git show`, not merged):
 
-- labeler-3 (gpt) copied from `cursor/v32-gold-labeler-gpt-17a0-f8ea` @ `e1d8085`; not merged;
-- labeler-2 (gemini) copied from `cursor/v32-gold-labeler-gemini-17a0` @ `cc92b2d`; not merged;
-- both: 18/24 coverage; allowlist-only; `question_design_accessed=false`; `skill_files_accessed=false`;
-- labeler-1 (grok) still running;
-- adjudication not started.
+- grok: `cursor/v32-gold-labeler-grok-17a0` @ `795d5b4`
+- gemini: `cursor/v32-gold-labeler-gemini-17a0` @ `cc92b2d`
+- gpt: `cursor/v32-gold-labeler-gpt-17a0-f8ea` @ `e1d8085`
+
+All three: 18/24 coverage; allowlist-only; `question_design_accessed=false`; `skill_files_accessed=false`.
+
+Adjudication has not started. Gold freeze (ontology + v3.2 scorer) has not started.
 
 v3.1 remains archived as `SCORER_ERROR` and will not be rescored.

@@ -68,6 +68,7 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/v3_2-holdout/V32_HOLDOUT_PLAN.md`
 - `tests/benchmark/v3_2-holdout/V32_HOLDOUT_STATUS.md`
 - `tests/benchmark/v3_2-holdout/GOLD_LABELING_BRIEF.md`
+- `tests/benchmark/v3_2-holdout/GOLD_ADJUDICATION_BRIEF.md`
 - `tests/benchmark/v3_2-holdout/validate_holdout.py`
 - `tests/benchmark/v3_2-holdout/normalize_construction_mutations.py`
 - `tests/benchmark/v3_2-holdout/finalize_gold.py`
@@ -80,6 +81,12 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/v3_2-holdout/cloud-cases/oracle-notes.json`
 - `tests/benchmark/v3_2-holdout/cloud-cases/question-design.json`
 - `tests/benchmark/v3_2-holdout/cloud-cases/designer-attestation.json`
+- `tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-1.json`
+- `tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-1-attestation.json`
+- `tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-2.json`
+- `tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-2-attestation.json`
+- `tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-3.json`
+- `tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-3-attestation.json`
 - `tests/benchmark/v3_2-holdout/cloud-cases/tools/render_v32_images.py`
 - `tests/benchmark/v3_2-holdout/cloud-cases/images/v32-008-t1-stores-chit.png`
 - `tests/benchmark/v3_2-holdout/cloud-cases/images/v32-018-t1-loft-thread.png`
