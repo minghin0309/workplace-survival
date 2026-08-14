@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.1 semantic match freeze
+
+- Ran one isolated Claude matcher with gold access on `cursor/v31-matcher-claude-17a0`; copied with `git show` and did not merge that branch.
+- Mapped all 59 extracted claims; 57 semantic, 2 unsupported.
+- Allowlisted inputs: extraction snapshot, canonical evaluations, raw outputs, canonical gold, ontology.
+- Transcript audit: no prohibited content; authored-output re-read is `ACCEPTED_WITH_PROCEDURAL_DEVIATION`.
+- Froze 12 evaluation artifacts against outputs manifest `993eb2a0…` and extraction snapshot `a406161c…`.
+- Formal scoring has not started. Runtime Skill files were not modified.
+
 ### Fresh benchmark v3.1 gold-blind extraction freeze
 
 - Copied Claude and Gemini extractor blobs plus GPT adjudication from dedicated branches with `git show`; did not merge those branches.

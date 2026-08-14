@@ -1,6 +1,6 @@
 # Fresh v3.1 Holdout Status
 
-- Status: `EXTRACTION_SNAPSHOT_FROZEN`
+- Status: `EVALUATIONS_FROZEN`
 - Cases: 18
 - Turns: 24
 - Gold-uncertain turns: 1
@@ -15,6 +15,8 @@
 - Gold-blind extractors: 2
 - Extraction adjudicator: 1
 - Unresolved claim disagreements: 0
+- Semantic matcher: 1 (Claude)
+- Unsupported semantic claims: 2
 - Formal scorer invocations: 0
 
 Construction:
@@ -50,6 +52,13 @@ Extraction:
 - canonical evaluations keep 8 question claims and 51 revision claims (Claude's finer splits; V31-008 Intake Next-step is not a Confirmation-needed claim);
 - extractor-2 raw `context_id` remains `unverified`; canonical evaluations record `bc-407b6129-b25d-5064-9d64-5523806bbeb3`.
 
+Matching:
+
+- one isolated Claude matcher (`bc-5f0c3516-ef1c-5dcd-b9e9-1e797251d676`) on `cursor/v31-matcher-claude-17a0`; copied with `git show`, not merged;
+- allowlist was the extraction snapshot, canonical evaluations, raw outputs, canonical gold, and ontology;
+- 59 claims / 57 semantic / 2 unsupported (V31-015 t1 and t2 questions; those turns allow no question concepts);
+- transcript audit: `gold_access=true`, `prohibited_content_access=false`; authored-output re-read is `ACCEPTED_WITH_PROCEDURAL_DEVIATION`.
+
 Frozen evidence:
 
 - canonical gold SHA-256: `bb8fbf70ac84e8718fef8abd0d2f7d53aee07213343b25f418db8329e1bedf2d`
@@ -60,5 +69,7 @@ Frozen evidence:
 - gold-blind extractor-visible SHA-256: `bbb623be7ff3a33124cf4f5285e96a9d552e13477dd17b1b8a58d18f67c60633`
 - canonical evaluations SHA-256: `63cc05f43da57a426bb252dc50b137f63e7f531697848d2ae5e367fc14841aa2`
 - extraction snapshot SHA-256: `a406161c1fac10f9c8b1f86c402891ac7dc81ac616abc8df0ebf9eb545c8b46e`
+- canonical matches SHA-256: `d837eb00ecd87db9d59014c27038b075d77bdd6fffb311d78d95e18a71e6145e`
+- evaluation snapshot SHA-256: `70ab4a3490a04ea68cd060502031712fe111479ce1ee8f5d6dad2e1526071f7d`
 
-Matching and formal scoring have not started.
+Formal scoring has not started.
