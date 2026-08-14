@@ -1,0 +1,58 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-002",
+  "sut": "workplace-survival",
+  "execution": {
+    "model": "GPT-5.6 Sol",
+    "mode": "autonomous cloud subagent",
+    "turns_executed": [
+      1
+    ]
+  },
+  "provenance": {
+    "base_branch": "cursor/blind-v31-holdout-17a0",
+    "base_commit": "f609800eba5f3e8f20b541f7776c1a427ca8aed2",
+    "execution_branch": "cursor/v31-002-sut-a4c7",
+    "raw_output_commit": "74ca9039dae90b3fcf4ba0aa808c3f17016fc83c",
+    "input": {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-002.json",
+      "sha256": "cfb4bd0798099d5c46ce102421673f3341326f734a753bb617b88c78ea21d49c"
+    },
+    "runtime_files": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ],
+    "raw_output": {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-002.json",
+      "sha256": "b2165db070f52a4754d5b550694ee52802123ad86fbfa3b599e42bafe3d6027f"
+    }
+  },
+  "isolation": {
+    "source_content_read": [
+      "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-002.json",
+      ".cursor/skills/workplace-survival/SKILL.md",
+      ".cursor/skills/workplace-survival/REFERENCE.md",
+      ".cursor/skills/workplace-survival/FORMATS.md",
+      ".cursor/skills/workplace-survival/EXAMPLES.md"
+    ],
+    "other_repository_content_read": false,
+    "repository_search_performed": false,
+    "gold_design_oracle_content_accessed": false,
+    "other_case_content_accessed": false,
+    "statement": "The SUT response was produced from V31-002 input and the four workplace-survival runtime Markdown files only. No gold, design, oracle, or other case content was read."
+  }
+}

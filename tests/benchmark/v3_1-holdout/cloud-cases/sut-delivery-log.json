@@ -1,0 +1,46 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "sut-shared-delivery-log",
+  "branch": "cursor/v31-sut-shared-delivery-17a0",
+  "tip": "a65e26961880130f237345c4ea74843b06399c22",
+  "canonical_parent_commit": "f609800eba5f3e8f20b541f7776c1a427ca8aed2",
+  "not_canonical_parent": true,
+  "commits": [
+    {
+      "sha256_commit": "a65e26961880130f237345c4ea74843b06399c22",
+      "subject": "Attest V31-016 isolated SUT execution"
+    },
+    {
+      "sha256_commit": "b79e255b5ede61b957af35a36a8c1fe3b6e81b40",
+      "subject": "Add Workplace Survival V31-017 SUT artifacts"
+    },
+    {
+      "sha256_commit": "99579d4760334b9752495bc1cbe93333c023938d",
+      "subject": "Add V31-016 raw SUT response"
+    },
+    {
+      "sha256_commit": "04ef848aff0f8cc25893b1de7a846ae91cab8847",
+      "subject": "Attest V31-018 SUT execution"
+    },
+    {
+      "sha256_commit": "6f5062627285a1f48aae589292bfaa5140ae4cc0",
+      "subject": "Add V31-011 Workplace Survival SUT output"
+    },
+    {
+      "sha256_commit": "367fcdc550789bbd2828511fa5007f88f0c5b1e7",
+      "subject": "Attest V31-003 SUT execution"
+    },
+    {
+      "sha256_commit": "07b22606abfb0636a8a4ef2946fbc4848343cf72",
+      "subject": "Add V31-003 raw SUT response"
+    }
+  ],
+  "cases_delivered_on_shared_holdout": [
+    "V31-003",
+    "V31-011",
+    "V31-016",
+    "V31-017",
+    "V31-018"
+  ],
+  "note": "These seven commits raced onto cursor/blind-v31-holdout-17a0. Canonical SUT freeze extracts each case by git show from the listed source commits and does not merge this history."
+}

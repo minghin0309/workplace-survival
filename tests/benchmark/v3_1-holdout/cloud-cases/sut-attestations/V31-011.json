@@ -1,0 +1,41 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-011",
+  "artifact": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-011.json",
+    "sha256": "70175b4808918c01dba40ca6ea98951b92e79e7f727f9016d8188713593bc134"
+  },
+  "content_read": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-011.json",
+      "sha256": "9abc47cb2256907ee14498a7d7947c5a109bb51d2e2c4b376e83c7f0b9ed5d45",
+      "role": "sut_input"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66",
+      "role": "runtime_skill"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56",
+      "role": "runtime_skill"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198",
+      "role": "runtime_skill"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77",
+      "role": "runtime_skill"
+    }
+  ],
+  "attestations": {
+    "only_listed_content_read": true,
+    "output_recorded_exactly": true,
+    "provenance_recorded": true,
+    "scoring_performed": false
+  }
+}

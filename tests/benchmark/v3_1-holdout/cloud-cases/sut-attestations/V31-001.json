@@ -1,0 +1,58 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-001",
+  "generated_at_utc": "2026-08-14T02:50:43Z",
+  "input": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-001.json",
+    "sha256": "30f195b1b2474de1076ca94fef8d49653afc30214963b5338ab8e5fa629ea0ce"
+  },
+  "runtime": [
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "execution": {
+    "context": {
+      "value": null,
+      "verification": "unverified"
+    },
+    "model": {
+      "value": null,
+      "verification": "unverified"
+    },
+    "base_branch": "cursor/blind-v31-holdout-17a0",
+    "branch": "cursor/v31-001-sut-4a8e",
+    "output_commit": "dbeddd8e1f2308169d57df15392200e559ac263b"
+  },
+  "output": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-raw/V31-001.json",
+    "sha256": "92a14206460a30965f51c8f30659e8b0cfd6f5d0082c4392520b2be5a0fa9975"
+  },
+  "isolation": {
+    "status": "passed",
+    "authorized_repository_files_read": [
+      "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-001.json",
+      ".cursor/skills/workplace-survival/SKILL.md",
+      ".cursor/skills/workplace-survival/REFERENCE.md",
+      ".cursor/skills/workplace-survival/FORMATS.md",
+      ".cursor/skills/workplace-survival/EXAMPLES.md"
+    ],
+    "other_repository_files_read": [],
+    "repository_listing_or_search_performed": false,
+    "gold_design_oracle_or_other_cases_read": false,
+    "violations": []
+  }
+}
