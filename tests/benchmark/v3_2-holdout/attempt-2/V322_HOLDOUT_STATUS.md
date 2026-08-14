@@ -1,6 +1,6 @@
 # Fresh v3.2 Holdout Attempt 2 Status
 
-- Status: `SUT_OUTPUTS_ASSEMBLED`
+- Status: `SUT_OUTPUTS_FROZEN`
 - Methodology: v3.2
 - Runtime: `main@9d48b048d083507c20f2714b21053d36b68d6366`
 - Holdout branch: `cursor/blind-v322-holdout-17a0`
