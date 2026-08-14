@@ -72,6 +72,7 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/v3_2-holdout/finalize_gold.py`
 - `tests/benchmark/v3_2-holdout/validate_gold.py`
 - `tests/benchmark/v3_2-holdout/freeze_gold.py`
+- `tests/benchmark/v3_2-holdout/prepare_sut_inputs.py`
 - `tests/benchmark/v2-holdout/V2_CASE_BRIEF.md`
 - `tests/benchmark/v2-holdout/V2_HOLDOUT_PLAN.md`
 - `tests/blind/BLIND_CASE_BRIEF.md`
