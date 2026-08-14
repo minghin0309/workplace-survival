@@ -20,7 +20,8 @@ def main() -> None:
         "mutations": [
             {
                 "case_id": entry["case_id"],
-                "mutation_type": mutation["mutation_type"],
+                "mutation_type": mutation.get("mutation_type")
+                or mutation["mutation"],
                 "before_state": entry["base_state"],
                 "after_state": mutation["resulting_state"],
             }

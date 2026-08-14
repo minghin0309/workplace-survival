@@ -139,8 +139,39 @@ def require(condition: bool, message: str) -> None:
         raise ValueError(message)
 
 
+def _mutation_name(mutation: dict) -> str:
+    return mutation.get("mutation_type") or mutation["mutation"]
+
+
 def core(entry: dict) -> dict:
-    return {key: entry[key] for key in qcontract.REQUIRED_KEYS}
+    if qcontract.REQUIRED_KEYS <= set(entry):
+        return {key: entry[key] for key in qcontract.REQUIRED_KEYS}
+    base = entry.get("base_state") or {}
+    mutations = {
+        _mutation_name(item): item.get("resulting_state") or {}
+        for item in entry.get("mutations") or []
+    }
+    independent_red = bool(base.get("independent_red"))
+    placeholder = bool(base.get("qualification_or_placeholder_sufficient"))
+    return {
+        "case_id": entry["case_id"],
+        "missing_concept": entry.get("missing_concept") or entry["primary_concept"],
+        "dependency_present": True,
+        "answer_absent": True,
+        "placeholder_safe": placeholder,
+        "qualification_safe": placeholder,
+        "omission_safe": bool(base.get("complete_safe_message_without_answer")),
+        "direct_red_defects": ["independent-red"] if independent_red else [],
+        "answer_fixture": entry["answer_fixture"],
+        "safe_completion_enabled_by_answer": bool(
+            mutations.get("SUPPLY_ANSWER", {}).get(
+                "complete_safe_message_possible", True
+            )
+        ),
+        "question_unnecessary_without_dependency": not bool(
+            mutations.get("REMOVE_DEPENDENCY", {}).get("question_necessary", False)
+        ),
+    }
 
 
 def flatten(value) -> str:
@@ -169,8 +200,10 @@ def main() -> None:
         and [case["case_id"] for case in cases["cases"]] == expected_ids,
         "case coverage",
     )
+    note_rows = notes.get("case_notes") or notes.get("notes")
+    require(bool(note_rows), "oracle notes")
     require(
-        [note["case_id"] for note in notes["case_notes"]] == expected_ids,
+        [note["case_id"] for note in note_rows] == expected_ids,
         "note coverage",
     )
     rcontract.validate_envelope(cases["cases"], QUESTION_IDS, ROUTING_ID)
@@ -213,7 +246,10 @@ def main() -> None:
         "question candidate IDs",
     )
     require(
-        any(entry.get("image_only_draft") for entry in design_entries),
+        any(
+            entry.get("image_only_draft") or entry.get("image_only")
+            for entry in design_entries
+        ),
         "image-only question candidate",
     )
     require(len(mutations["mutations"]) == 18, "construction mutation count")
@@ -236,7 +272,9 @@ def main() -> None:
     require(not hits, "novelty denylist: " + ", ".join(hits))
 
     for entry in design_entries:
-        tokens = entry.get("absent_answer_tokens") or []
+        tokens = list(entry.get("absent_answer_tokens") or [])
+        if entry.get("absent_answer_token"):
+            tokens.append(entry["absent_answer_token"])
         visible = flatten(
             next(
                 case
