@@ -1,0 +1,40 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-018",
+  "context_id": "bc-703b80b4-bfdb-5ecb-a4b1-79656f279ccf",
+  "model": "GPT-5.6 Sol",
+  "branch": "cursor/blind-v31-holdout-17a0",
+  "source_commit": "367fcdc550789bbd2828511fa5007f88f0c5b1e7",
+  "input": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-018.json",
+    "sha256": "c396610b01ad11958bf923a2a6211419df279b34b4b7517b45377a9e8459e1c8"
+  },
+  "image": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/images/V31-018-draft-note.png",
+    "sha256": "6bc73d3ad1dd2fcddb1dbf822dd5e6a725f212bc27f98b45c5b0b591dbdd1baa",
+    "opened_directly": true
+  },
+  "runtime_skill_files": [
+    {
+      "path": ".cursor/skills/workplace-survival/SKILL.md",
+      "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+      "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/FORMATS.md",
+      "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+    },
+    {
+      "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+      "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+    }
+  ],
+  "gold_or_scoring_content_accessed": false,
+  "scoring_performed": false,
+  "limitations": [
+    "Before execution, repository discovery exposed filenames, the V31-018 manifest entry, and short benchmark-documentation search snippets. No gold, oracle, question-design, scorer, validator, or other-case artifact content was opened or used in the response."
+  ]
+}
