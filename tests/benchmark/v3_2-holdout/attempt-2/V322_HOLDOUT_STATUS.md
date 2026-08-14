@@ -1,7 +1,7 @@
 # Fresh v3.2 Holdout Attempt 2 Status
 
-- Status: `EXTRACTION_FROZEN`
-- Dual gold-blind extractors copied with `git show` (not merged): grok, gemini. GPT adjudicator copied the same way. Canonical claims: 7 question / 24 revision. Unresolved disagreements: 0. Extraction snapshot frozen.
+- Status: `MATCHES_COPIED`
+- Dual gold-blind extractors copied with `git show` (not merged): grok, gemini. GPT adjudicator copied the same way. Canonical claims: 7 question / 24 revision. Unresolved disagreements: 0. Extraction snapshot frozen. Claude matcher copied with `git show` (not merged); gold_access true.
 
 - Methodology: v3.2
 - Runtime: `main@9d48b048d083507c20f2714b21053d36b68d6366`
@@ -16,6 +16,6 @@ All 18 SUT cases copied with `git show` from dedicated branches. Those branches 
 
 Extractor-1 (grok) protocol deviation: off-allowlist read of `SKILL.md`; Skill was not modified.
 
-Next: isolated Claude matcher (not grok/gemini/gpt), freeze evaluations, one v3.2 scorer invocation.
+Next: freeze evaluations, one v3.2 scorer invocation.
 
 Attempt 1 remains `INVALID_COVERAGE` and will not be rescored.
