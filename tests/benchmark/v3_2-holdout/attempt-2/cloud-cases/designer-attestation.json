@@ -1,0 +1,43 @@
+{
+  "attestation_version": "v3.2-attempt2",
+  "suite_id": "v32-holdout-cloud-attempt2",
+  "designer_role": "isolated case designer",
+  "cloud_context": {
+    "bcId": "bc-f611a232-52e9-5f7a-b29b-17b77b53b375",
+    "run_name": "V322 isolated case design",
+    "run_url": "https://cursor.com/agents/bc-f611a232-52e9-5f7a-b29b-17b77b53b375",
+    "repoUrl": "https://github.com/minghin0309/workplace-survival",
+    "source": "internal",
+    "owningUserName": "Ming Hin Ng",
+    "owningUserEmail": "nmhnmh0309@gmail.com",
+    "model_name": "Cursor Grok 4.6",
+    "originalModelName_from_run_info": null
+  },
+  "branch": "cursor/v322-attempt2-cases-b375",
+  "commit": "UNSTAMPED",
+  "files_read": [
+    "tests/benchmark/v3_2/V32_ATTEMPT2_CASE_BRIEF.md"
+  ],
+  "repository_content_access": "No other repository content was accessed. Skill files, SPEC, tests, gold, ontology, scorers, prior holdouts, millinery cases, harpworks/attempt-1 cases, plans, TASK.md, CHANGELOG, PRs, and any PNG outside files authored in this attempt-2 case directory were not read. The repository was not globbed. The web was not searched. PNGs authored here were hashed as bytes and were not opened as images.",
+  "domain": {
+    "chosen": "Fictional hot-air balloon / aerostat envelope workshop: Thornwick Aerostat Works at Spindlefen Hangar, with load-tape fitting, gore cutting, rip-panel sewing, and throat-ring work.",
+    "why_not_denylisted": "The aggregate novelty denylist names millinery/hatmaking, concert pedal-harp restringing and harpworks, cargo-bike delivery, ceramics/pottery, and the other listed domains; aerostat envelope fabrication is none of those domains and does not rename them."
+  },
+  "manager_recipient_invariant": "V322-017 is the only non-manager recipient. Every other case, including V322-004 through V322-009 and V322-018, uses relationship_to_user exactly 'direct line manager', audience_scope exactly 'manager only', additional_recipients exactly [], and a recipient_role containing 'manager' without the forbidden non-manager phrases.",
+  "counts": {
+    "cases": 18,
+    "turns": 24,
+    "three_turn_cases": ["V322-014", "V322-015", "V322-016"],
+    "image_turns": 2,
+    "image_only_question_candidate": "V322-008"
+  },
+  "image_sha256": {
+    "images/v322-008-t1.png": "4ebf4167dc2bbbafbeb764fb1a686eeaa60d2cc0aae1682bd9d0baa4a86583ab",
+    "images/v322-018-t1.png": "975d45c3494d34d1edf90f4bfad913d68c3e629d215faf3ec2758fb911fe3b2f"
+  },
+  "artifact_sha256": {
+    "cases.json": "b1fb32978860ed8f19e1921fb0caab556ba66d978b670bdd4d7e10b4b8667223",
+    "question-design.json": "1fa838a51119ab09b9f82932505ffcbcbebfe23fd1d9cc3bcaf71b948e54f80f",
+    "oracle-notes.json": "d999c37abf631844ef10ab575e159956dc988a441a9abfde033b07d8dcb0fe68"
+  }
+}
