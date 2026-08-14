@@ -345,6 +345,21 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - validation uses synthetic fixtures and does not supply v2/v3.1 holdout artifacts.
 - Evidence: v3.2 methodology contract, unit results, mutation results, validation report, and empty runtime diff.
 
+#### T14.12 — Fresh benchmark v3.2 unseen holdout
+
+- [ ] Completed
+
+- Source requirement: Measure unseen-case performance with methodology v3.2. Gold freeze must include ontology and the v3.2 scorer. No product behavior change during scoring.
+- Owner files: `tests/benchmark/v3_2-holdout/`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - unseen cases use a domain that is not millinery and is not on the v3.1 denylist;
+  - cases satisfy the v3.1 construction contract and coverage gates before SUT;
+  - gold freeze includes `SEMANTIC_ONTOLOGY.json` and `score_semantic_v3_2.py`;
+  - each case uses a distinct cloud SUT context;
+  - dual extraction and semantic matching precede a single v3.2 scorer invocation;
+  - v3.1 is not rescored and runtime Skill files are not modified.
+- Evidence: gold/output/evaluation manifests, protocol audits, and one v3.2 score report.
+
 ## Task template
 
 Copy this block when adding work:

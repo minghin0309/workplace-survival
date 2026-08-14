@@ -64,6 +64,14 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/v3_2/run_mutation_tests.py`
 - `tests/benchmark/v3_2/score_semantic_v3_2.py`
 - `tests/benchmark/v3_2/test_scorer_v3_2.py`
+- `tests/benchmark/v3_2-holdout/V32_CASE_BRIEF.md`
+- `tests/benchmark/v3_2-holdout/V32_HOLDOUT_PLAN.md`
+- `tests/benchmark/v3_2-holdout/V32_HOLDOUT_STATUS.md`
+- `tests/benchmark/v3_2-holdout/validate_holdout.py`
+- `tests/benchmark/v3_2-holdout/normalize_construction_mutations.py`
+- `tests/benchmark/v3_2-holdout/finalize_gold.py`
+- `tests/benchmark/v3_2-holdout/validate_gold.py`
+- `tests/benchmark/v3_2-holdout/freeze_gold.py`
 - `tests/benchmark/v2-holdout/V2_CASE_BRIEF.md`
 - `tests/benchmark/v2-holdout/V2_HOLDOUT_PLAN.md`
 - `tests/blind/BLIND_CASE_BRIEF.md`
