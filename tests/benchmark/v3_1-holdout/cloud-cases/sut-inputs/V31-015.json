@@ -1,0 +1,42 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-015",
+  "recipient_context": {
+    "recipient_name": "Marit Osgarde",
+    "recipient_role": "workroom manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal workroom message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "workroom coordinator",
+    "organization": "Quillsmere Millinery Workroom",
+    "site": "Bellhouse Yard workroom",
+    "situation": "A request to the workroom manager about a replacement straw batch on job QM-2031-0561 is corrected twice before it is sent.",
+    "known_facts": [
+      "Solberg Straw & Sinamay supplied two lots of straw for QM-2031-0561.",
+      "A shade variance was found across the brims cut from the second lot.",
+      "Solberg replace a varying lot on request and confirm a replacement date.",
+      "Courier costs on a replacement batch are a commercial decision at Quillsmere."
+    ],
+    "constraints": [
+      "The coordinator does not commit the workroom to absorbing a cost.",
+      "Messages to Solberg go out from the workroom manager."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Check this before I send it to Marit.\n\nDraft under review:\nMarit - please tell Solberg that the shade variance on the brims came from lot SB-LOT-7742, and that we will cover the courier cost on the replacement batch. I have said we can absorb it."
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Two things to fix before this goes anywhere. The lot number is wrong: it is SB-LOT-7749, not SB-LOT-7742. 7742 was the previous run and has nothing to do with this. Use 7749 everywhere."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "Also drop the courier cost line completely. I do not have the authority to absorb costs, I have said nothing of the kind to Solberg, and it should never have been in there. All I need from the message is Solberg confirming the replacement date for SB-LOT-7749."
+    }
+  ]
+}

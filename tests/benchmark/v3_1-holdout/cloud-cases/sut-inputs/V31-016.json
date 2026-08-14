@@ -1,0 +1,42 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-016",
+  "recipient_context": {
+    "recipient_name": "Marit Osgarde",
+    "recipient_role": "workroom manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal workroom message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "workroom coordinator",
+    "organization": "Quillsmere Millinery Workroom",
+    "site": "Ardhu Lane annexe",
+    "situation": "A shortfall warning on the Marchmont Enclosure order, job QM-2031-0570, is corrected twice before it is sent.",
+    "known_facts": [
+      "Sixteen pieces are due to Marchmont Enclosure on QM-2031-0570.",
+      "The crin for the brim edges had not arrived when the coordinator first wrote the message.",
+      "Marchmont Enclosure's goods-in desk sets the acceptance window for each delivery.",
+      "The workroom manager speaks to Marchmont Enclosure each morning."
+    ],
+    "constraints": [
+      "Delivery windows are set by the client's goods-in desk.",
+      "The coordinator reports a shortfall to the workroom manager as soon as it is known."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Check this before I send it to Marit.\n\nDraft under review:\nMarit - heads up before tomorrow: we are going to be 6 pieces short on the Marchmont order for Thursday. I would rather you had it from me now than on Wednesday night."
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Update the numbers: it is 4 short, not 6. Two of the six came good after a second steam cycle. The reason for the remaining four is the same, the crin for the brim edges has not landed."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "Last change. Ferrowhite have confirmed the crin lands Wednesday 15 October at 12:00, and Marchmont's goods-in have moved their acceptance window to Thursday 16 October, 07:30 to 09:30. That means all 16 go in one delivery after all. Please redraft it as the full 16 pieces, one delivery, Thursday 16 October, 07:30 to 09:30, and drop the shortfall."
+    }
+  ]
+}

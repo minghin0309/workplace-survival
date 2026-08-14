@@ -1,0 +1,37 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-007",
+  "recipient_context": {
+    "recipient_name": "Marit Osgarde",
+    "recipient_role": "workroom manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal workroom message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "workroom coordinator",
+    "organization": "Quillsmere Millinery Workroom",
+    "site": "Bellhouse Yard workroom",
+    "situation": "Thurlow & Vane's quality desk has queried a shade difference across six brims on job QM-2031-0524, and their process requires any batch-variance statement to cite the source record it comes from.",
+    "known_facts": [
+      "Six brims on QM-2031-0524 read a half tone lighter than the approved swatch.",
+      "The difference is a batch variance in the straw taken in from Solberg Straw & Sinamay, not a finishing fault.",
+      "The variance was written into the workroom's goods-in log at intake, and the coordinator checked that entry this morning.",
+      "The Thurlow & Vane variance form has a mandatory source-record field.",
+      "Their quality desk rejects a form filled in with 'internal records' or any wording that carries no record reference.",
+      "Their cut-off for the response is Friday 10 October at 12:00.",
+      "A rejected form puts the six brims back on the workroom as a finishing fault."
+    ],
+    "constraints": [
+      "Responses to a client quality desk are sent by the workroom manager.",
+      "The coordinator keeps the goods-in log."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Look this over before I send it to Marit.\n\nDraft under review:\nMarit - please put this to Thurlow & Vane's quality desk before their Friday 12:00 cut-off: the shade difference across the six brims on QM-2031-0524 is a recorded batch variance in the straw we took in from Solberg, not a finishing fault. Their variance form will not accept the statement without the source record reference behind it, and they bounce anything that just says 'internal records'."
+    }
+  ]
+}

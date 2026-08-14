@@ -1,0 +1,42 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-014",
+  "recipient_context": {
+    "recipient_name": "Marit Osgarde",
+    "recipient_role": "workroom manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal workroom message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "workroom coordinator",
+    "organization": "Quillsmere Millinery Workroom",
+    "site": "Bellhouse Yard workroom",
+    "situation": "A progress message on the Ashvale Bridal House top-up, job QM-2031-0555, is corrected twice before it is sent.",
+    "known_facts": [
+      "Fourteen crowns on QM-2031-0555 went into steaming on Monday 6 October.",
+      "Callum Ostrey holds the trimming slot on Wednesday 8 October.",
+      "Cranthorpe Courier hold collection slots on QM-2031-0555 and re-book on request.",
+      "The workroom manager uses the figures in this message on her client call at 08:30 the next morning."
+    ],
+    "constraints": [
+      "The coordinator books collections on this job.",
+      "Figures given to the workroom manager have to match the bench."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Check this before I send it to Marit.\n\nDraft under review:\nMarit - the Ashvale top-up on QM-2031-0555 is on track: all 14 crowns are through steaming and they go to Callum for trimming on Wednesday. The Cranthorpe collection stays Friday 10 October at 11:00."
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Hold on, a correction before anything else happens to it: only 11 crowns are through steaming. Three cracked at the brim edge on the second cycle and have to be re-blocked. Re-blocking is Wednesday, so trimming for those three moves to Thursday. Please redo the message with 11 through steaming and 3 re-blocking."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "One more change and then it can go. Cranthorpe cannot do Friday at 11:00. The slot is now Friday 10 October at 15:30, reference CR-90177. Keep everything else from the last version."
+    }
+  ]
+}
