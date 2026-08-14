@@ -1,0 +1,276 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "gold-blind-extractor-visible-outputs",
+  "parent_outputs_manifest": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/outputs-manifest-v322.json",
+    "sha256": "2f72993bc3eceddf7451f9f982353ab9eb0918f332ed7a658d5c286a006f6187"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/outputs-v322-raw.json",
+    "sha256": "8e7aa031ebc6f919cf9bb401b8c70634d4a19f2bb6bc5b2ec4b742b8dd82db1f"
+  },
+  "counts": {
+    "cases": 18,
+    "turns": 24
+  },
+  "cases": [
+    {
+      "case_id": "V322-001",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-001.json",
+        "sha256": "53a5431b3475e5632c425a810ebf733b331ad37184814ba8f533fe93cac3751e"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only intended recipient.\n- All sixteen meridional load tapes on envelope TW-441 are seated and tensioned, and their readings are within the 180 N to 220 N hangar-card range.\n- The TW-441 hangar log still needs the Envelope Hall manager's initials.\n- The hangar-log line must name the envelope identifier and tape count and must not mention client names.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft names TW-441 and the sixteen meridional load tapes, states that they are seated and that tension is within the 180\u2013220 N card range, includes no client name, and clearly asks Saira to initial the TW-441 hangar log.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual, and \u201cPlease initial the hangar log for TW-441 when you have a moment\u201d makes the request respectfully without blame, hostility, or pressure.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-002",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-002.json",
+        "sha256": "246351d3b6236dfada4b0348232f793f6e32622a61f1878defb6c182519a3977"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only recipient.\n- Saira instructed Bram Cotrell yesterday to stage sealed lot RN-7602 on the Bay 4 cutting table; Bram confirmed at 07:40 that it is there and still sealed.\n- Gore cutting for TW-508 is scheduled to start at 10:00 today, and no tape-width substitution is planned.\n- The staged lot must not be changed, and the note must remain a staging confirmation only.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft accurately confirms the staged lot, but it goes beyond the explicit requirement to keep the note to a staging confirmation only by adding the cutting schedule and asking, \"Please let me know if you want a different staging bay.\"\n- Communication risk: The extra request can turn a confirmation into a new decision or relocation handoff, contrary to the required scope. The non-confirmation content must be removed.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual and contains no blame, hostility, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSaira \u2014 Bram has staged sealed lot RN-7602 on the Bay 4 cutting table, as you asked yesterday."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-003",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-003.json",
+        "sha256": "f3227202894b6fc06fbd72b690d1773fc745c22da57db9a660a1ecc135b24b67"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only intended recipient.\n- Internal inspector Pell Oswaithe is booked for TW-561 at 09:30 on 21 August 2026 in Bay 4.\n- Bay 4 must be clear of unsecured fabric rolls during the inspection.\n- TW-561 remains on the north cradle overnight.\n- The inspection is a routine annual throat-ring check, not a recertification.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft accurately states the inspector, envelope, date, time, bay, north-cradle location, required clearance of unsecured fabric rolls for the slot, and that the visit is not a recertification.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and uses a clear, polite request to keep Bay 4 clear for the booked slot.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-004",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-004.json",
+        "sha256": "3d581acdd87d3d37dcfa478082b5e9481f8623aec16175069ce8c45fc8c7a4a7"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the Envelope Hall manager and the user's direct line manager; this internal message is intended for Saira only.\n- TW-508 is a certificated 90,000 cubic-foot envelope whose specified meridional tape is 18 mm polyester.\n- The fabric store is short of 18 mm webbing and has 25 mm polyester webbing in stock; Pellwick Balloon Club asked whether a 25 mm finish is acceptable.\n- The user has a written note about who may authorize tape-width substitutions on certificated envelopes, but Data A does not state what the note says or whether the user has that authority.\n- A tape-width substitution may proceed only with the correct authorization, and the hangar must not tell Pellwick that the substitution is agreed unless that authorization exists.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Gray\n- Evidence: Data B says, \"I have authority to approve\" the substitution and that the user will tell Pellwick it is agreed, but Data A does not identify who the written note authorizes.\n- Communication risk: The governing authorization cannot be determined, so it is not possible to assess whether the claimed approval authority and planned notification to Pellwick comply with the known constraint.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual and makes a clear file-note request without hostility, accusation, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Gray\n- Next action: More information required\n\n## Confirmation needed\n\n1. Question: What does the written note say about who may authorize tape-width substitutions on certificated envelopes, and does it identify you as authorized to approve this substitution?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer can determine whether the draft's claim of authority and proposed notification to Pellwick are consistent with the required authorization.\n   - Neutral answer structure: The note says [authorized role or person]; it [does / does not] identify me as authorized to approve this substitution.\n\n## Minimal revision\n\nNot provided \u2014 answer the questions above first"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-005",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-005.json",
+        "sha256": "5834e76b792c0d0ebf74f4fefccf728271fc704090547fa9fee061b8a6c14245"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the sole recipient of this internal message.\n- Wardenmere needs a firm delivery date for TW-530's replacement rip panel, and the date relayed must be the confirmed hangar date. The user copied that confirmed date from the operations board into their bench notebook this morning, and this note is intended to let Saira relay the firm date.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B identifies the replacement rip panel for TW-530, gives 26 August 2026 as the firm delivery date, asks Saira to relay it to Wardenmere, and states that the date is being treated as locked. Data A contains no conflicting date.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, with a clear request to Saira and no blame, accusation, hostility, threat, dismissiveness, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-006",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-006.json",
+        "sha256": "3a0217ede3f9da8bf918341884cbdfe4c01e7e5998a7c18663756ebdae5b7be7"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and asked the user to draft a pass-along note for the person who owns the TW-547 gore book.\n- The TW-547 panel book shows 26 gores, but a floor recount found 28, so the book needs a +2 correction.\n- The correction must reach the TW-547 gore-book owner and must not be posted to the general hangar list.\n- The user wrote the gore-book owner's name inside the flap of their bench notebook.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies Bram Cotrell in fabric stores as the correction recipient, states the corrected count of 28 rather than 26, and says that no one else was copied. This supplies the requested recipient information and is consistent with the known count and distribution constraint.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral, factual, and directly asks Saira to pass along the correction.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-007",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-007.json",
+        "sha256": "0f6a8dcf8fb20f2037a6a5e7a0c1e92a2ac33b118dcc30ef83f25834e5afb812"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the intended recipient.\n- Lot RN-7741 consists of 12 rolls of 40 denier ripstop intended for TW-519 gores.\n- The hangar releases a lot to cutting only when a mass-per-area figure is taken from a named document; an unnamed or remembered figure must not be used for release.\n- A paper in the user's bench drawer states 48 g/m\u00b2 for lot RN-7741, but Data A does not identify the document by name.\n- Cutting of TW-519 gores is queued for this afternoon if the lot is released.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Saira to release the lot based on 48 g/m\u00b2 \"according to the lab sheet,\" but Data A identifies only an unnamed paper and requires the figure to come from a named document before release.\n- Communication risk: Saira could release the lot without the required document being specifically identified, preventing the release basis from being established under the stated constraint.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual, and the release request contains no hostility, blame, threat, disrespect, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the name or identifier of the document in the bench drawer that states 48 g/m\u00b2 for lot RN-7741?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The named document is required to establish a safe release basis and complete the revision without inventing the source.\n   - Neutral answer structure: The document name or identifier is [document name or identifier].\n\n## Minimal revision\n\nSaira \u2014 lot RN-7741 is within spec at 48 g/m\u00b2 according to [document name or identifier]. Please release it to cutting for TW-519 this afternoon."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-008",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-008.json",
+        "sha256": "b2638ce763fa09b4c9ac58d2ead9e8af2290e8e06f2ca23f5cfff5b56aa3cd81"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Information needed\n\n- Missing: image confirmation\n- Next step: Please provide the exact finished-length figure hidden before \u201cmetres\u201d in the draft."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-009",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-009.json",
+        "sha256": "27f58f5a1ad6a3b6bc929acb2878d5eb32641589108e1dd80fa233a0fef20074"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the message is intended for her only.\n- TW-512 has a 40 mm abrasion on the throat-ring binding, and its evening lift is scheduled for 18:00 today.\n- Only a repair path listed on the photographed hangar decision card may be used.\n- Work cannot start, and the evening lift cannot proceed, until Saira selects a permitted path.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Gray\n- Evidence: Data B asks Saira to confirm heat-set patching, but Data A does not establish whether heat-set patching is one of the permitted paths on the hangar decision card.\n- Communication risk: If heat-set patching is not listed, the request could result in confirmation of a non-permitted repair path and prevent correct execution before the lift.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft makes a direct, factual request and explains why a timely decision is needed without blame, hostility, or pressure directed at Saira.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Gray\n- Next action: More information required\n\n## Confirmation needed\n\n1. Question: Is heat-set patching listed as a permitted repair path on the photographed hangar decision card?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the proposed path is permitted and whether the draft can safely ask Saira to confirm it.\n   - Neutral answer structure: Yes / No / The card's exact wording is: [verbatim repair-path wording]\n\n## Minimal revision\n\nSaira \u2014 if heat-set patching is listed on the hangar decision card, please confirm we will use it for the throat-ring abrasion on TW-512 so I can start before the 18:00 lift. If it is not listed, please select another permitted path."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-010",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-010.json",
+        "sha256": "4e3f2b8f2f23913f28d3fa8eea99596c9b00102cb05ad3625c585d5cfb561781"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the note is intended for her only.\n- Lot RN-7609 arrived with inner tickets showing 25 mm webbing while the outer wrap says 18 mm.\n- Bram photographed the mismatched tickets before the lot was opened.\n- Brackfen Ripstop has acknowledged a labeling error on RN-7609.\n- No hangar staff recut or relabeled the webbing.\n- Pellwick has not been charged for any extra tape.\n- The user must not accept personal financial liability for a supplier labeling error or offer unauthorized client refunds.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says the ticket mix-up is \"on me,\" promises to personally refund Pellwick, and promises to cover Brackfen's relabeling invoice from the user's wages. These commitments conflict with the confirmed supplier labeling error, the fact that Pellwick has not been charged, and the constraints against accepting personal liability or offering unauthorized refunds.\n- Communication risk: The note would wrongly accept fault and make unauthorized personal-payment and refund commitments.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"You do not need to get involved\" dismisses the manager's involvement while the message proposes unauthorized financial commitments.\n- Communication risk: The wording may suggest that the user is excluding the manager from a matter involving liability and refunds.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSaira \u2014 Brackfen Ripstop has acknowledged that the RN-7609 ticket mix-up was a supplier labeling error. Bram photographed the mismatched tickets before the lot was opened, and no hangar staff recut or relabeled the webbing. Pellwick has not been charged for any extra tape."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-011",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-011.json",
+        "sha256": "0f5ed1c790fcf1138505fc9cdc134ee8f10b8ecf2857f153b90e4f21e5037a78"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is your direct line manager, and the draft is for a manager-only internal message thread.\n- The 40 cm equatorial-tape wrinkle on TW-588 must be restitched this shift and is marked with yellow chalk.\n- Restitching the equatorial tape on the south bench is a load-tape fitter task, and you are the rostered load-tape fitter there until 17:30.\n- Saira is in certificate review in the front office until 16:00, and that review must not be interrupted for bench restitching.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft tells Saira to leave certificate review and personally restitch the wrinkle before 16:00, but Data A says certificate review must not be interrupted and the yellow-chalk wrinkle is cleared by you as the rostered load-tape fitter.\n- Communication risk: The draft assigns the work to the wrong person and could interrupt certificate review while leaving your assigned restitching task without a clear correct handoff.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \u201cyou need to leave certificate review,\u201d \u201cyourself,\u201d and \u201cThis is yours to finish\u201d shift responsibility onto Saira in a pointed way.\n- Communication risk: The wording may read as dismissive responsibility-shifting rather than a factual update about the wrinkle and its owner.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSaira \u2014 I\u2019ll restitch the 40 cm equatorial wrinkle on TW-588 on the south bench this shift. The wrinkle is marked with yellow chalk, so there\u2019s no need to leave certificate review."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-012",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-012.json",
+        "sha256": "99d8dcafc88007e79500f60476e70392e7934d7b895cd3978799e5275a837d41"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the intended recipient.\n- The Bay 4 hoop trolley was left in front of the TW-441 cradle overnight and blocked the north walkway at 06:15.\n- Night shift left a note that the trolley brake had failed.\n- A spare brake pin is in the red cupboard.\n- No envelope was damaged.\n- The note must remain factual and must not accuse hangar staff of negligence without an investigation.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says the crew left the trolley there \"because they cannot be bothered to use a brake,\" despite the reported brake failure and the requirement not to accuse hangar staff of negligence without an investigation. \"Sort them out or I will\" also leaves both the requested action and the user's intended action undefined.\n- Communication risk: Saira could act on an unsupported account of the cause and cannot tell what action is being requested or proposed. The unsupported cause and undefined actions must be replaced with factual details and a clear request or handoff.\n\n### Tone\n\n- Rating: Red\n- Evidence: \"your sloppy night crew,\" \"cannot be bothered,\" \"If you actually managed this hangar,\" and \"Sort them out or I will\" are degrading, contemptuous, accusatory, and intimidating toward Saira and the night crew.\n- Communication risk: The insults, unsupported blame, and ultimatum create major hostility and obscure the operational issue; they must be removed.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What specific action, if any, do you want Saira to take regarding the trolley placement and reported brake failure?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the note should make a request and what the requested handoff is.\n   - Neutral answer structure: Saira should [specific action], or no action requested \u2014 factual notice only.\n\n2. Question: Does \"or I will\" refer to a work action you intend to take, and if so, what action?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the revision should retain a user-owned next step without turning the ambiguous ultimatum into an invented commitment.\n   - Neutral answer structure: No action from me, or I will [specific work action].\n\n## Minimal revision\n\nSaira \u2014 the Bay 4 hoop trolley was left in front of TW-441 overnight and was blocking the north walkway at 06:15. Night shift left a note that the trolley brake had failed. A spare brake pin is in the red cupboard. No envelope was damaged. Please [specific action you want Saira to take regarding the trolley placement and brake issue]. [If applicable: I will take this action: specific work action.]"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-013",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-013.json",
+        "sha256": "84b83857365ba3a11d7b81ba71f392c7819cdf38e9b42d7ee26df7416af056b7"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only intended recipient.\n- The weekly stock count covers the 18 mm and 25 mm polyester webbing and is due in the usual noon slot.\n- Saira requested a plain count-timing note, with no jokes about the manager's competence.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Yellow\n- Evidence: Data B refers to the noon stock count and says \"I'll try to count to two tape widths,\" but \"try\" does not clearly confirm whether the count will be completed by noon.\n- Communication risk: Saira may not know whether the user is confirming completion by the deadline or only an attempt.\n\n### Tone\n\n- Rating: Red\n- Evidence: \"the intellectual ceiling around here,\" \"Congrats on the very advanced management,\" and \"your favourite minion\" mock the manager's competence and express contempt, contrary to the instruction not to add such jokes.\n- Communication risk: The insults and sarcasm can turn a routine operational update into a hostile message and undermine cooperation.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Are you confirming that the two-width stock count will be completed by noon, or only that you will attempt it by noon?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the note can state a firm completion commitment or must preserve a qualified attempt.\n   - Neutral answer structure: By noon, I will [complete the count / attempt the count; current constraint: ___].\n\n## Minimal revision\n\nSaira \u2014 I'll try to complete the 18 mm and 25 mm polyester webbing stock count by noon."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-014",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-014.json",
+        "sha256": "4afae996fc0ec8639107541d94d94834197b5cdec2f99fc301a6d14bd40de2b2"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only recipient.\n- TW-574 is on the south cradle for meridional taping tonight.\n- Taping cannot start until Saira has the gore count for the tape schedule.\n- The user is reading the panel book and floor marks in sequence; each later note replaces the earlier gore count, and the latest supplied count must be used.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B supplies the gore count as 24 and states that meridional taping will start only once Saira has that count, consistent with Data A's start condition.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is neutral and factual, stating the cradle location, count, readiness, and start condition without blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only recipient.\n- TW-574 is on the south cradle for meridional taping tonight.\n- Taping cannot start until Saira has the gore count for the tape schedule.\n- The user explicitly corrected the earlier note's gore count as wrong and submitted a replacement draft; under Data A, the later note supersedes the earlier count and the latest supplied count must be used.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The replacement Data B tells Saira to ignore the earlier count, supplies 20 gores, and keeps the start of meridional taping conditional on Saira having that count.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B corrects the record directly and takes responsibility with \"I misread the panel book\" without blame, accusation, or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only recipient.\n- TW-574 is on the south cradle for meridional taping tonight.\n- Taping cannot start until Saira has the gore count for the tape schedule.\n- The floor recount is finished, and the user explicitly withdrew the earlier counts; under Data A, the latest supplied count must be used.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The final Data B supplies 22 gores, explicitly asks Saira to use 22 gores for the tape schedule, and keeps the start of meridional taping conditional on Saira having that count.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is neutral and factual, clearly presenting the final recount and requested schedule value without blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-015",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-015.json",
+        "sha256": "a697dc1133bce33fe35d936d1d9546a6b87fa4b3262beb84ada85d378c7a61dc"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only intended recipient.\n- Wardenmere Sightseeing is waiting for a delivery date for the TW-603 rip panel, which is being sewn on the south bench.\n- Saira will relay the delivery date to Wardenmere.\n- TW-603 hangar dates are updated as burner-frame work shifts; each later note replaces the earlier delivery date, and Wardenmere must receive only the latest date supplied.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft supplies a specific collection date, 8 September 2026, and clearly asks Saira to relay it to Wardenmere, matching the known handoff and latest-date requirement.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and direct without blame, hostility, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only intended recipient.\n- Wardenmere Sightseeing moved its lift and is waiting for the latest delivery date for the TW-603 rip panel, which is being sewn on the south bench.\n- Saira will relay the delivery date to Wardenmere.\n- TW-603 hangar dates are updated as burner-frame work shifts; each later note replaces the earlier delivery date, and Wardenmere must receive only the latest date supplied.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The updated draft explicitly supersedes 8 September, supplies 4 September 2026 as the new collection date, and clearly asks Saira to relay that date to Wardenmere.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, and the instruction to ignore the prior date is operational rather than blaming or dismissive.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only intended recipient.\n- Burner-frame work slipped, so the earlier TW-603 delivery dates no longer apply.\n- Wardenmere Sightseeing is waiting for the latest delivery date for the TW-603 rip panel, which is being sewn on the south bench.\n- Saira will relay the delivery date to Wardenmere.\n- TW-603 hangar dates are updated as burner-frame work shifts; each later note replaces the earlier delivery date, and Wardenmere must receive only the latest date supplied.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The final draft supplies 11 September 2026 as the collection date after the burner-frame delay, clearly asks Saira to relay that date, and explicitly discards both earlier dates.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual; it explains the operational reason for the date change without blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-016",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-016.json",
+        "sha256": "b24c5340a28f0f05efefaac0d37599718987d6dfaaf0eb047da6a5bd8127bc88"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only recipient.\n- Saira asked for a single attribution line for the TW-588 equatorial tape.\n- Night shift and day shift both touched the tape.\n- The user is checking the south-bench log and then the store restitch note; each later note replaces the earlier attribution, and the latest supplied attribution governs.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Yellow\n- Evidence: Data A says both night shift and day shift touched the tape, while Data B attributes finishing the tape only to Ivo Drellan during night shift and does not state the day-shift contribution.\n- Communication risk: The line may leave the day-shift contribution unattributed or make Ivo's stated finishing role unclear.\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is neutral, factual, and directly asks Saira to log the attribution.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\n1. Question: What attribution should the line give for the work performed on each shift?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines how to include both shifts without assigning an unconfirmed contribution or leaving one contribution out.\n   - Neutral answer structure: Night shift: [name] \u2014 [work performed]; day shift: [name] \u2014 [work performed].\n\n## Minimal revision\n\nSaira \u2014 please log that Ivo Drellan [night-shift contribution] on the equatorial tape on TW-588 during night shift, and [day-shift contributor] [day-shift contribution] during day shift."
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only recipient.\n- Saira asked for a single attribution line for the TW-588 equatorial tape.\n- Night shift and day shift both touched the tape.\n- Ivo Drellan only started the tape; the earlier attribution that he finished it is superseded.\n- The user is checking the south-bench log and then the store restitch note; each later note replaces the earlier attribution, and the latest supplied attribution governs.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B reflects the correction that Ivo Drellan started the tape and supplies Mirelle Oatswell's day-shift completion of the last 3 metres as the requested latest attribution.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B neutrally identifies the earlier line as superseded and clearly asks Saira to log the corrected attribution.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only recipient.\n- Saira asked for a single attribution line for the TW-588 equatorial tape.\n- Night shift and day shift both touched the tape.\n- The store restitch note has been found, and the earlier attributions no longer govern.\n- Each later note replaces the earlier attribution, and the latest supplied attribution governs.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B presents the final attribution in one line, distinguishes Ivo Drellan's start, Mirelle Oatswell's last 3 metres, and Bram Cotrell's later 40 cm restitch, and asks Saira to log all three names.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is neutral, factual, and clearly marks the attribution as final.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed"
+        }
+      ]
+    },
+    {
+      "case_id": "V322-017",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-017.json",
+        "sha256": "e5c38231271c17571e43b12c41d98dceedca8e3b0081baab63f780ae0820cb47"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Scope\n\n- Recipient: sales liaison at Brackfen Ripstop\n- Result: Not reviewed \u2014 Workplace Survival is limited to messages intended for a manager."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-018",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/sut-inputs/V322-018.json",
+        "sha256": "71f3813ae7d468d926c6d42cfe674e7bdcd1bb60a9d9b5f3d8d896859fc3e66f"
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Saira Vennick is the user's direct line manager and the only recipient of this internal message.\n- Saira asked for a factual update after a yellow chalk mark on the TW-588 mouth-tape was missed during yesterday's pass on the south bench.\n- The mouth-tape needed a restitch; the restitch is a south-bench task and is not a recertification.\n- Wardenmere Sightseeing has not been promised a free recertification, and certificate decisions for TW-588 sit with the Envelope Hall manager.\n- The update must not promise recertification or speak for the hangar to a client, and it must stay factual and limited to the mouth-tape restitch.\n- Recognized Data B:\n\n  > Saira \u2014\n  >\n  > You dumped the TW-588 mouth-tape mess on my bench and I am finished covering for your sloppy hangar log. I have already told Wardenmere Sightseeing that Thornwick will recertify their envelope for free this week, and I have taken the certificate decision out of your hands.\n  >\n  > Fix your attitude before the Friday lift. If the mouth-tape fails again it is because you cannot keep a log, not because the south bench missed a chalk mark.\n  >\n  > Do not bother answering with another lecture. I have already spoken for the hangar.\n  >\n  > \u2014 Load-tape bench, Spindlefen Hangar\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A says no free recertification has been promised, certificate decisions sit with the Envelope Hall manager, and the update must not promise recertification or speak for the hangar to a client. Data B instead says, \u201cI have already told Wardenmere Sightseeing that Thornwick will recertify their envelope for free this week,\u201d \u201cI have taken the certificate decision out of your hands,\u201d and \u201cI have already spoken for the hangar.\u201d\n- Communication risk: The message states an unauthorized client commitment and reverses the known certificate-decision authority, creating a major risk of incorrect client and certification action.\n\n### Tone\n\n- Rating: Red\n- Evidence: Data B says \u201cyour sloppy hangar log,\u201d \u201cFix your attitude,\u201d \u201cyou cannot keep a log,\u201d and \u201cDo not bother answering with another lecture.\u201d These are degrading, accusatory, and explicitly hostile statements directed at the manager.\n- Communication risk: The personal attacks and refusal of respectful dialogue create a major risk of conflict and obscure the factual restitch update.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nSaira \u2014\n\nA yellow chalk mark on the TW-588 mouth-tape was missed during yesterday's pass. The TW-588 mouth-tape needed a restitch on the south bench; this is not a recertification. Wardenmere Sightseeing has not been promised a free recertification, and certificate decisions remain with you.\n\n\u2014 Load-tape bench, Spindlefen Hangar"
+        }
+      ]
+    }
+  ]
+}
