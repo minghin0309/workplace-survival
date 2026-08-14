@@ -1,0 +1,47 @@
+{
+  "labeler_id": "gold-labeler-3",
+  "model_family": "gpt",
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "branch": "cursor/v32-gold-labeler-gpt-17a0-f8ea",
+  "labels_commit": "5e1e134d4314e4b1ac4c0fc30866d0c7e5b16be4",
+  "files_actually_read": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/GOLD_LABELING_BRIEF.md",
+      "sha256": "e6422c09187b583885a3d21eeba568ccd7ecdbe272b38c2f97c5a5e9223db1d6"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/cases.json",
+      "sha256": "957ee032a049dbd0522a94fe767a8e9e1b7afc45f09e2f7ef07b4e4f5729c8dd"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/images/v32-008-t1-stores-chit.png",
+      "sha256": "44c9c0a8033ff83aea60abd5a95db84d26ec4c4f73d3ec55e5aa828ef00d90df"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/images/v32-018-t1-loft-thread.png",
+      "sha256": "64d25eb620628d6262f0b7aeac9902ddf8c89ecc2f2846e1329d867ee52dd247"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "35f5efb3c4af922c23391f4c80432a964b9b67b59c07eecd1e8ece6ff04906f4"
+    }
+  ],
+  "gold_or_scoring_accessed": "not_applicable_gold_labeler",
+  "question_design_accessed": false,
+  "skill_files_accessed": false,
+  "scorer_run": false,
+  "protocol_deviations": [
+    "The required cloud branch-policy suffix -f8ea was appended to the requested dedicated branch name."
+  ]
+}
