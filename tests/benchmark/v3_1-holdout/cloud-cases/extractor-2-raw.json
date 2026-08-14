@@ -1,0 +1,802 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "unverified",
+    "model_id": "unverified",
+    "model_family": "gemini"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-visible.json",
+    "sha256": "bbb623be7ff3a33124cf4f5285e96a9d552e13477dd17b1b8a58d18f67c60633"
+  },
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill evaluated the message under Normal mode with all Green ratings (Responsibility Green, Tone Green, Overall Green). Confirmation needed is None; Minimal revision is No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill evaluated the message under Normal mode with all Green ratings. Confirmation needed is None; Minimal revision is No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-003-1-1",
+              "text": "Clarifies that coordinator takes manager's preference into account when making the re-sequencing decision",
+              "evidence_span": "If you would rather I flip that order, tell me by Wednesday at 12:00 and I will take that into account when I make the re-sequencing decision."
+            },
+            {
+              "claim_id": "r-V31-003-1-2",
+              "text": "Clarifies that any client date must come from manager or commercial lead",
+              "evidence_span": "I have given Marchmont no date - any date needs to come from you or the commercial lead."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red and Tone Yellow, requiring revision. Revised message adjusts re-sequencing wording to preserve coordinator's decision authority and clarifies client date ownership."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-004-1-1",
+              "text": "Asks for the name of the individual who authorised the 310 pound variation",
+              "evidence_span": "What is the name of the individual who authorised the 310 pound variation?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-004-1-1",
+              "text": "Inserts placeholder for the full name of the individual who authorised the variation",
+              "evidence_span": "Their trade desk will not release reserved stock unless the request names the person who authorised the 310 pound variation: [full name of the individual who authorised the variation]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red due to missing authoriser name required by Ferrowhite. Requests missing authoriser name under Confirmation needed and includes placeholder in Minimal revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-005-1-1",
+              "text": "Asks for the exact collection date and two-hour window confirmed by Marchmont goods-in",
+              "evidence_span": "What exact collection date and two-hour window did Marchmont goods-in confirm?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-005-1-1",
+              "text": "Inserts placeholders for exact collection date and two-hour window in booking request",
+              "evidence_span": "Marit - please book Cranthorpe for the Marchmont collection on QM-2031-0512 for [exact collection date], [start time]–[end time]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red due to missing collection date and time window. Asks for exact collection date and two-hour window under Confirmation needed and inserts placeholders in Minimal revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-006-1-1",
+              "text": "Asks for the single named Ashvale contact recorded on the job card for QM-2031-0498",
+              "evidence_span": "What single named Ashvale contact is recorded on the job card for QM-2031-0498?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-006-1-1",
+              "text": "Replaces generic recipient with placeholder for contact recorded on job card",
+              "evidence_span": "Marit - could you send the adjustment note for QM-2031-0498 across to [name of contact recorded on the QM-2031-0498 job card] at Ashvale before their fitting on Tuesday at 10:30?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red due to missing named contact. Requests contact name in Confirmation needed and inserts placeholder in Minimal revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-007-1-1",
+              "text": "Asks for the exact source-record reference identifying the goods-in log entry",
+              "evidence_span": "What exact source-record reference identifies the relevant goods-in log entry?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-007-1-1",
+              "text": "Adds source record specification with placeholder for exact goods-in log reference",
+              "evidence_span": "The source record is the goods-in log entry [exact source-record reference]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red due to missing source-record reference required by Thurlow & Vane quality desk. Requests reference in Confirmation needed and adds placeholder in Minimal revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Intake",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [
+            {
+              "claim_id": "q-V31-008-1-1",
+              "text": "Requests exact crown circumference (cm) obscured on draft note line",
+              "evidence_span": "Provide the exact crown circumference (cm) obscured on the `Crown circumference (cm)` line in the draft note."
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill routed to Intake (Information needed) due to obscured value in image. Requests confirmation of obscured crown circumference without guessing."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-009-1-1",
+              "text": "Asks for the name of the permitted recovery route settled on yesterday",
+              "evidence_span": "What is the name of the permitted recovery route you settled on yesterday?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-009-1-1",
+              "text": "Inserts placeholder for the name of the permitted recovery route in authorisation request",
+              "evidence_span": "Can you authorise [name of permitted recovery route], the recovery route I settled on yesterday, so I can put it to Ashvale before 11:00 this morning?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red because recovery route name was not specified. Requests route name under Confirmation needed and inserts placeholder in Minimal revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-010-1-1",
+              "text": "Acknowledges that arrangements should not have been presented as settled and lists unresolved constraints requiring approval",
+              "evidence_span": "I should not have presented those arrangements as settled: Ilva's hours next week are committed to the Marchmont Enclosure sample, Callum is not on the Saturday rota and has not been asked, the staffing and waiver decisions need approval, and the revised delivery note has not been drawn up."
+            },
+            {
+              "claim_id": "r-V31-010-1-2",
+              "text": "Asks manager how to correct the update to Ashvale instead of dismissing manager involvement",
+              "evidence_span": "Please let me know how you want me to correct the update to Ashvale."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red and Tone Yellow due to unauthorized commitments and dismissive phrasing. Minimal revision acknowledges constraints and asks manager how to correct update."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-011-1-1",
+              "text": "States delivery missed date by two days and order was released late by commercial desk",
+              "evidence_span": "The order was released to the workroom late by the commercial desk."
+            },
+            {
+              "claim_id": "r-V31-011-1-2",
+              "text": "Affirms supplier approvals remain with Dane's commercial desk",
+              "evidence_span": "Supplier approvals remain with Dane's commercial desk."
+            },
+            {
+              "claim_id": "r-V31-011-1-3",
+              "text": "Affirms workroom scheduling rules and client explanation remain with manager, and nothing sent yet",
+              "evidence_span": "The workroom scheduling rules and the written explanation to Thurlow & Vane remain with you; nothing has been sent to Thurlow yet."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red and Tone Yellow. Minimal revision restores correct role boundaries regarding supplier approvals, scheduling rules, and client communication."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-012-1-1",
+              "text": "Replaces hostile accusations with factual observation of re-blocking, training status, and workroom record",
+              "evidence_span": "four crowns Petra pressed in the last fortnight had to be re-blocked. She has not yet had the required second-stage press briefing, and I have not raised this with her. No piece has left the workroom with a press fault."
+            },
+            {
+              "claim_id": "r-V31-012-1-2",
+              "text": "Asks manager to decide supervision and press duties instead of giving an ultimatum",
+              "evidence_span": "Could you decide how you would like to handle her supervision and press duties?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red and Tone Red due to hostile accusations and ultimatum. Minimal revision replaces complaint with neutral factual observations and leaves supervision decision to manager."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-013-1-1",
+              "text": "Replaces sarcastic remarks with factual explanation of date change notice and annexe schedule impact",
+              "evidence_span": "I learned from the client's assistant that the Marchmont Enclosure date on QM-2031-0519 moved forward to Wednesday 15 October after you agreed it with Marchmont on Monday 6 October. This adds two steam cycles to the annexe schedule, where we have one free press. I haven't yet worked out which pieces the extra cycles will displace."
+            },
+            {
+              "claim_id": "r-V31-013-1-2",
+              "text": "Requests notice of client date changes to set annexe work order instead of hostile challenge",
+              "evidence_span": "Please let me know about client date changes so I can set the annexe work order."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red and Tone Red due to sarcasm and unclear handoff. Minimal revision provides factual scheduling impact and asks to be informed of client date changes."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-014-1-1",
+              "text": "Asks how many crowns on QM-2031-0555 are currently through steaming on the bench",
+              "evidence_span": "How many crowns on QM-2031-0555 are currently through steaming on the bench?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Gray and Overall Gray due to unconfirmed bench status. Requests bench count under Confirmation needed; Minimal revision is not provided."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-014-2-1",
+              "text": "Updates count to 11 crowns through steaming going to Callum for trimming on Wednesday",
+              "evidence_span": "11 crowns are through steaming and go to Callum for trimming on Wednesday."
+            },
+            {
+              "claim_id": "r-V31-014-2-2",
+              "text": "Reports 3 cracked crowns re-blocking on Wednesday and trimming on Thursday",
+              "evidence_span": "Three cracked at the brim edge on the second cycle and will be re-blocked on Wednesday, so they go to Callum for trimming on Thursday."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red after user provided corrected bench figures. Minimal revision updates counts for Wednesday trimming and Thursday re-blocking/trimming."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Green, Tone Green, Overall Green after collection reschedule was incorporated. Confirmation needed is None; Minimal revision is No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-015-1-1",
+              "text": "Asks for Quillsmere's current commercial decision on replacement-batch courier cost",
+              "evidence_span": "What is Quillsmere's current commercial decision on the replacement-batch courier cost?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-015-1-1",
+              "text": "Replaces cost absorption commitment with request to confirm commercial decision on courier cost",
+              "evidence_span": "Please confirm Quillsmere's commercial decision on the courier cost before communicating it to Solberg."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red due to unauthorized cost absorption statement. Asks for courier cost decision under Confirmation needed and removes cost commitment from Minimal revision."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-015-2-1",
+              "text": "Asks for Quillsmere's current commercial decision on replacement-batch courier cost",
+              "evidence_span": "What is Quillsmere's current commercial decision on the replacement-batch courier cost?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-015-2-1",
+              "text": "Updates lot number to SB-LOT-7749",
+              "evidence_span": "the shade variance on the brims came from lot SB-LOT-7749."
+            },
+            {
+              "claim_id": "r-V31-015-2-2",
+              "text": "Replaces cost absorption commitment with request to confirm commercial decision on courier cost",
+              "evidence_span": "Please confirm Quillsmere's commercial decision on the courier cost before communicating it to Solberg."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red after user corrected lot number. Minimal revision updates lot number to SB-LOT-7749 and requests confirmation of commercial decision on courier cost."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-015-3-1",
+              "text": "Redrafts message to only request confirmation of replacement date for SB-LOT-7749, dropping courier cost line",
+              "evidence_span": "Marit - please ask Solberg to confirm the replacement date for SB-LOT-7749."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red. Minimal revision removes courier cost line entirely and requests replacement date for SB-LOT-7749."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill evaluated initial draft under Normal mode with all Green ratings. Confirmation needed is None; Minimal revision is No revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-016-2-1",
+              "text": "Updates shortfall count from 6 pieces to 4 pieces",
+              "evidence_span": "we are going to be 4 pieces short on the Marchmont order for Thursday."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red after user updated shortfall count. Minimal revision updates shortfall to 4 pieces."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-016-3-1",
+              "text": "Replaces shortfall warning with update that all 16 pieces will go in one delivery on Thursday 16 October in 07:30 to 09:30 window",
+              "evidence_span": "Marit - update for Thursday 16 October: all 16 pieces on the Marchmont order will go in one delivery in the 07:30 to 09:30 goods-in window."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red against updated situation. Minimal revision replaces shortfall notice with confirmation of single 16-piece delivery on Thursday 16 October."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-017-1-1",
+              "text": "Requests manager send instruction stating replacement petersham is already invoiced and original line should be credited",
+              "evidence_span": "Please send this to the Ferrowhite trade desk from your account: Dear Ferrowhite trade desk, the replacement petersham on QM-2031-0447 is already invoiced against account QT-4471; please credit the original petersham line."
+            },
+            {
+              "claim_id": "r-V31-017-1-2",
+              "text": "Instructs keeping Mrs Havelock commission sheet restricted to named workroom staff on the job rather than full workroom channel",
+              "evidence_span": "Please keep Mrs Havelock's commission sheet on QM-2031-0492 to the named workroom staff on that job rather than posting it in the full workroom channel."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red due to incorrect invoicing instruction and privacy violation of client data in full workroom channel. Minimal revision corrects invoice instruction and restricts client data."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-018-1-1",
+              "text": "Reports supplier specification error and asks manager for advice on correcting unauthorized write-off and credit note commitments",
+              "evidence_span": "The block order on QM-2031-0546 was cut to the wrong specification, and Menkes Blockworks have raised the cost with the commercial desk. I told Menkes that we would write off the whole order and that I would sign the credit note tomorrow. Those decisions are outside my authority, so please advise how you want me to correct this with Menkes and handle the write-off and credit note."
+            },
+            {
+              "claim_id": "r-V31-018-1-2",
+              "text": "Clarifies Ilva and Callum have not been asked about Saturday and requests decision on asking them",
+              "evidence_span": "Ilva and Callum have not been asked about Saturday. Please let me know whether you want me to ask them about a Saturday shift to rebuild the order."
+            },
+            {
+              "claim_id": "r-V31-018-1-3",
+              "text": "Reports rush charge statement and asks manager how to handle commercial decision, dropping hostile attacks on commercial desk",
+              "evidence_span": "I told Ashvale Bridal House that we would absorb the rush charge on their pieces. Since that is a commercial decision, please advise how you want me to correct or escalate that message."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Skill rated Responsibility Red and Tone Red due to unauthorized financial and scheduling commitments and hostile personal attacks. Minimal revision replaces complaints and commitments with factual status and asks manager for direction."
+        }
+      ]
+    }
+  ]
+}

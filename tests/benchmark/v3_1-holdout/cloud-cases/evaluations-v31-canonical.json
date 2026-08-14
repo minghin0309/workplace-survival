@@ -1,0 +1,1116 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "gold-blind-evaluations",
+  "evaluation_quality": {
+    "extractors": [
+      {
+        "context_id": "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+        "model_id": "unverified",
+        "model_family": "claude",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/extraction-attestations/extractor-1.json",
+        "attestation_sha256": "d7848f9c27c764de356abee224bad439e97357cb14f92bdb95ad50e2e62c7619"
+      },
+      {
+        "context_id": "bc-407b6129-b25d-5064-9d64-5523806bbeb3",
+        "model_id": "unverified",
+        "model_family": "gemini",
+        "attestation_path": "tests/benchmark/v3_1-holdout/cloud-cases/extraction-attestations/extractor-2.json",
+        "attestation_sha256": "429aeb051a2928fbcef1633b810a348b9b4f4c99155f7147c1c71fa1831e3a2e"
+      }
+    ],
+    "adjudicator": {
+      "context_id": "bc-f001181e-4ec6-5746-aaad-b4bd3ba288e3",
+      "model_id": "unverified",
+      "model_family": "gpt"
+    }
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-visible.json",
+    "sha256": "bbb623be7ff3a33124cf4f5285e96a9d552e13477dd17b1b8a58d18f67c60633"
+  },
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-003-1-1",
+              "text": "Rewrites the re-sequencing sentence so the coordinator, not Marit, makes the re-sequencing decision, with Marit's preference taken into account by Wednesday at 12:00.",
+              "evidence_span": "tell me by Wednesday at 12:00 and I will take that into account when I make the re-sequencing decision"
+            },
+            {
+              "claim_id": "r-V31-003-1-2",
+              "text": "Replaces 'that one is yours to give' with a statement that any Marchmont date must come from Marit or the commercial lead.",
+              "evidence_span": "any date needs to come from you or the commercial lead"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-004-1-1",
+              "text": "Asks the user for the name of the individual who authorised the 310 pound variation.",
+              "evidence_span": "1. Question: What is the name of the individual who authorised the 310 pound variation?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-004-1-1",
+              "text": "Inserts a placeholder for the authoriser's name into the release request so the request names the individual Ferrowhite requires.",
+              "evidence_span": "[full name of the individual who authorised the variation]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-005-1-1",
+              "text": "Asks the user for the exact collection date and two-hour window confirmed by Marchmont goods-in.",
+              "evidence_span": "1. Question: What exact collection date and two-hour window did Marchmont goods-in confirm?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-005-1-1",
+              "text": "Inserts a placeholder for the exact collection date into the Cranthorpe booking request.",
+              "evidence_span": "for [exact collection date]"
+            },
+            {
+              "claim_id": "r-V31-005-1-2",
+              "text": "Inserts placeholders for the start and end of the two-hour collection window.",
+              "evidence_span": "[start time]\u2013[end time]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-006-1-1",
+              "text": "Asks the user for the single named Ashvale contact recorded on the QM-2031-0498 job card.",
+              "evidence_span": "1. Question: What single named Ashvale contact is recorded on the job card for QM-2031-0498?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-006-1-1",
+              "text": "Replaces the unnamed 'Ashvale's named contact for that commission' with a placeholder for the contact recorded on the QM-2031-0498 job card.",
+              "evidence_span": "[name of contact recorded on the QM-2031-0498 job card]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-007-1-1",
+              "text": "Asks the user for the exact source-record reference identifying the goods-in log entry.",
+              "evidence_span": "1. Question: What exact source-record reference identifies the relevant goods-in log entry?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-007-1-1",
+              "text": "Adds a closing sentence naming the goods-in log entry as the source record, with a placeholder for the exact reference.",
+              "evidence_span": "The source record is the goods-in log entry [exact source-record reference]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Intake",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The question-claim count is resolved as 0: the Intake output's request appears under Next step, not under Confirmation needed, and the extraction brief defines question claims as questions under Confirmation needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-009-1-1",
+              "text": "Asks the user for the name of the permitted recovery route settled on yesterday.",
+              "evidence_span": "1. Question: What is the name of the permitted recovery route you settled on yesterday?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-009-1-1",
+              "text": "Inserts a placeholder for the named permitted recovery route into the authorisation request.",
+              "evidence_span": "[name of permitted recovery route], the recovery route I settled on yesterday"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-010-1-1",
+              "text": "Reframes the four arrangements as things already told to Ashvale rather than settled facts, and states they should not have been presented as settled.",
+              "evidence_span": "I should not have presented those arrangements as settled"
+            },
+            {
+              "claim_id": "r-V31-010-1-2",
+              "text": "Adds that Ilva's bench hours next week are committed to the Marchmont Enclosure sample.",
+              "evidence_span": "Ilva's hours next week are committed to the Marchmont Enclosure sample"
+            },
+            {
+              "claim_id": "r-V31-010-1-3",
+              "text": "Adds that Callum is not on the Saturday rota and has not been asked.",
+              "evidence_span": ", Callum is not on the Saturday rota and has not been asked,"
+            },
+            {
+              "claim_id": "r-V31-010-1-4",
+              "text": "Adds that the staffing and surcharge-waiver decisions need approval.",
+              "evidence_span": "the staffing and waiver decisions need approval"
+            },
+            {
+              "claim_id": "r-V31-010-1-5",
+              "text": "Adds that the revised delivery note has not been drawn up.",
+              "evidence_span": "the revised delivery note has not been drawn up"
+            },
+            {
+              "claim_id": "r-V31-010-1-6",
+              "text": "Replaces 'All handled, nothing for you to do' with a request for Marit's direction on correcting the update to Ashvale.",
+              "evidence_span": "Please let me know how you want me to correct the update to Ashvale."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-011-1-1",
+              "text": "States the QM-2031-0503 delivery to Thurlow & Vane missed its date by two days, without the draft's 'on me' ownership framing.",
+              "evidence_span": "the Thurlow & Vane delivery on QM-2031-0503 missed its date by two days"
+            },
+            {
+              "claim_id": "r-V31-011-1-2",
+              "text": "Adds that the commercial desk released the order to the workroom late.",
+              "evidence_span": "The order was released to the workroom late by the commercial desk."
+            },
+            {
+              "claim_id": "r-V31-011-1-3",
+              "text": "Replaces taking supplier approvals off Dane with a statement that supplier approvals remain with Dane's commercial desk.",
+              "evidence_span": "Supplier approvals remain with Dane's commercial desk."
+            },
+            {
+              "claim_id": "r-V31-011-1-4",
+              "text": "Replaces the pledge to rewrite the scheduling rules with a statement that the scheduling rules and the written client explanation remain with Marit.",
+              "evidence_span": "The workroom scheduling rules and the written explanation to Thurlow & Vane remain with you"
+            },
+            {
+              "claim_id": "r-V31-011-1-5",
+              "text": "Corrects the draft's claim that Thurlow was already told, stating nothing has been sent yet.",
+              "evidence_span": "nothing has been sent to Thurlow yet."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-012-1-1",
+              "text": "Replaces the personal attack with the factual observation that four crowns Petra pressed in the last fortnight had to be re-blocked.",
+              "evidence_span": "four crowns Petra pressed in the last fortnight had to be re-blocked"
+            },
+            {
+              "claim_id": "r-V31-012-1-2",
+              "text": "Adds that Petra has not yet had the required second-stage press briefing.",
+              "evidence_span": "She has not yet had the required second-stage press briefing"
+            },
+            {
+              "claim_id": "r-V31-012-1-3",
+              "text": "Adds that the coordinator has not raised the issue with Petra.",
+              "evidence_span": "I have not raised this with her"
+            },
+            {
+              "claim_id": "r-V31-012-1-4",
+              "text": "Adds that no piece has left the workroom with a press fault.",
+              "evidence_span": "No piece has left the workroom with a press fault."
+            },
+            {
+              "claim_id": "r-V31-012-1-5",
+              "text": "Replaces the ultimatum with a request that Marit decide on Petra's supervision and press duties.",
+              "evidence_span": "Could you decide how you would like to handle her supervision and press duties?"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-013-1-1",
+              "text": "Replaces the 'nobody bothered to tell me' accusation with the factual statement that the coordinator learned of the Wednesday 15 October date from the client's assistant.",
+              "evidence_span": "I learned from the client's assistant that the Marchmont Enclosure date on QM-2031-0519 moved forward to Wednesday 15 October"
+            },
+            {
+              "claim_id": "r-V31-013-1-2",
+              "text": "Adds that Marit agreed the new date with Marchmont on Monday 6 October.",
+              "evidence_span": "after you agreed it with Marchmont on Monday 6 October"
+            },
+            {
+              "claim_id": "r-V31-013-1-3",
+              "text": "Adds the schedule impact: two extra steam cycles against an annexe with one free press.",
+              "evidence_span": "This adds two steam cycles to the annexe schedule, where we have one free press."
+            },
+            {
+              "claim_id": "r-V31-013-1-4",
+              "text": "Adds that it has not yet been worked out which pieces the extra cycles will displace.",
+              "evidence_span": "I haven't yet worked out which pieces the extra cycles will displace."
+            },
+            {
+              "claim_id": "r-V31-013-1-5",
+              "text": "Replaces 'come down to the annexe and do the steaming yourself' with a request to be told about client date changes so the coordinator can set the annexe work order.",
+              "evidence_span": "Please let me know about client date changes so I can set the annexe work order."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-014-1-1",
+              "text": "Asks the user how many crowns on QM-2031-0555 are currently through steaming on the bench.",
+              "evidence_span": "1. Question: How many crowns on QM-2031-0555 are currently through steaming on the bench?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-014-2-1",
+              "text": "Corrects the through-steaming figure from all 14 crowns to 11, still going to Callum for trimming on Wednesday.",
+              "evidence_span": "11 crowns are through steaming and go to Callum for trimming on Wednesday"
+            },
+            {
+              "claim_id": "r-V31-014-2-2",
+              "text": "Adds that three crowns cracked at the brim edge on the second cycle and will be re-blocked on Wednesday.",
+              "evidence_span": "Three cracked at the brim edge on the second cycle and will be re-blocked on Wednesday"
+            },
+            {
+              "claim_id": "r-V31-014-2-3",
+              "text": "Adds that the three re-blocked crowns go to Callum for trimming on Thursday.",
+              "evidence_span": "so they go to Callum for trimming on Thursday"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-015-1-1",
+              "text": "Asks the user for Quillsmere's current commercial decision on the replacement-batch courier cost.",
+              "evidence_span": "1. Question: What is Quillsmere's current commercial decision on the replacement-batch courier cost?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-015-1-1",
+              "text": "Removes the courier-cost commitment and instead asks Marit to confirm Quillsmere's commercial decision on the courier cost before it is communicated to Solberg.",
+              "evidence_span": "Please confirm Quillsmere's commercial decision on the courier cost before communicating it to Solberg."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V31-015-2-1",
+              "text": "Asks the user for Quillsmere's current commercial decision on the replacement-batch courier cost.",
+              "evidence_span": "1. Question: What is Quillsmere's current commercial decision on the replacement-batch courier cost?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-015-2-1",
+              "text": "Corrects the lot number from SB-LOT-7742 to SB-LOT-7749 in the message to Solberg.",
+              "evidence_span": "please tell Solberg that the shade variance on the brims came from lot SB-LOT-7749"
+            },
+            {
+              "claim_id": "r-V31-015-2-2",
+              "text": "Keeps the courier cost out of the message and asks Marit to confirm Quillsmere's commercial decision before communicating it to Solberg.",
+              "evidence_span": "Please confirm Quillsmere's commercial decision on the courier cost before communicating it to Solberg."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-015-3-1",
+              "text": "Reduces the message to a single request that Marit ask Solberg to confirm the replacement date for SB-LOT-7749.",
+              "evidence_span": "please ask Solberg to confirm the replacement date for SB-LOT-7749."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-016-2-1",
+              "text": "Corrects the shortfall from 6 pieces to 4 pieces on the Marchmont order for Thursday.",
+              "evidence_span": "we are going to be 4 pieces short on the Marchmont order for Thursday"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-016-3-1",
+              "text": "Drops the shortfall and states that all 16 pieces on the Marchmont order go in one delivery.",
+              "evidence_span": "all 16 pieces on the Marchmont order will go in one delivery"
+            },
+            {
+              "claim_id": "r-V31-016-3-2",
+              "text": "Sets the delivery to Thursday 16 October.",
+              "evidence_span": "update for Thursday 16 October"
+            },
+            {
+              "claim_id": "r-V31-016-3-3",
+              "text": "Gives the moved goods-in acceptance window as 07:30 to 09:30.",
+              "evidence_span": "in the 07:30 to 09:30 goods-in window"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-017-1-1",
+              "text": "Routes the supplier instruction to the Ferrowhite trade desk from Marit's account rather than having it sent directly.",
+              "evidence_span": "Please send this to the Ferrowhite trade desk from your account"
+            },
+            {
+              "claim_id": "r-V31-017-1-2",
+              "text": "Corrects the duplicate-invoice instruction, stating the replacement petersham on QM-2031-0447 is already invoiced against account QT-4471.",
+              "evidence_span": "the replacement petersham on QM-2031-0447 is already invoiced against account QT-4471"
+            },
+            {
+              "claim_id": "r-V31-017-1-3",
+              "text": "Keeps the request to credit the original petersham line.",
+              "evidence_span": "please credit the original petersham line"
+            },
+            {
+              "claim_id": "r-V31-017-1-4",
+              "text": "Replaces the request to post the commission sheet in the full workroom channel with an instruction to keep it to the named workroom staff on QM-2031-0492.",
+              "evidence_span": "Please keep Mrs Havelock's commission sheet on QM-2031-0492 to the named workroom staff on that job rather than posting it in the full workroom channel."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V31-018-1-1",
+              "text": "States factually that the QM-2031-0546 block order was cut to the wrong specification and that Menkes Blockworks have raised the cost with the commercial desk.",
+              "evidence_span": "The block order on QM-2031-0546 was cut to the wrong specification, and Menkes Blockworks have raised the cost with the commercial desk."
+            },
+            {
+              "claim_id": "r-V31-018-1-2",
+              "text": "Reports that the coordinator told Menkes the whole order would be written off and that the coordinator would sign the credit note tomorrow.",
+              "evidence_span": "I told Menkes that we would write off the whole order and that I would sign the credit note tomorrow."
+            },
+            {
+              "claim_id": "r-V31-018-1-3",
+              "text": "Withdraws those decisions as outside the coordinator's authority and asks Marit how to correct the position with Menkes and handle the write-off and credit note.",
+              "evidence_span": "Those decisions are outside my authority, so please advise how you want me to correct this with Menkes and handle the write-off and credit note."
+            },
+            {
+              "claim_id": "r-V31-018-1-4",
+              "text": "Corrects the Saturday-shift claim, stating Ilva and Callum have not been asked about Saturday.",
+              "evidence_span": "Ilva and Callum have not been asked about Saturday."
+            },
+            {
+              "claim_id": "r-V31-018-1-5",
+              "text": "Asks Marit whether the coordinator should ask them about a Saturday shift to rebuild the order.",
+              "evidence_span": "Please let me know whether you want me to ask them about a Saturday shift to rebuild the order."
+            },
+            {
+              "claim_id": "r-V31-018-1-6",
+              "text": "Reports that the coordinator told Ashvale Bridal House the rush charge on their pieces would be absorbed.",
+              "evidence_span": "I told Ashvale Bridal House that we would absorb the rush charge on their pieces."
+            },
+            {
+              "claim_id": "r-V31-018-1-7",
+              "text": "States the rush charge is a commercial decision and asks Marit how to correct or escalate that message.",
+              "evidence_span": "Since that is a commercial decision, please advise how you want me to correct or escalate that message."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": [
+              "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+              "bc-407b6129-b25d-5064-9d64-5523806bbeb3"
+            ],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "gold-blind-evaluator-attestation",
+  "adjudicator": {
+    "context_id": "bc-f001181e-4ec6-5746-aaad-b4bd3ba288e3",
+    "model_id": "unverified",
+    "model_family": "gpt",
+    "role": "gold-blind extraction adjudicator"
+  },
+  "branch": "cursor/v31-extractor-adjudicator-17a0",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "base_commit": "ee5ac561428d94ede6cddc779c823db5e2747fbc",
+  "output_commit": "675bf583226aa9038adc51e5c5ad3c089a6c3ba7",
+  "output_files": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/evaluations-v31.json",
+      "sha256": "be4d13b4125096aeeb51d1a74a66935642b852ae13b17937ec8ea27f79b1c221",
+      "commit": "fc5eb5c2ac0d745f103e03dcb69aa69012ceac62"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extraction-adjudication-v31.json",
+      "sha256": "80705751ffcbad2cf90acad3c7d2f15b9313d81e0ca78bec1f090d1da5226631",
+      "commit": "675bf583226aa9038adc51e5c5ad3c089a6c3ba7"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/evaluator-attestation-v31.json",
+      "sha256": null,
+      "commit": null,
+      "note": "This attestation is hashed and committed after it is written, so it cannot contain its own digest or commit."
+    }
+  ],
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/EXTRACTION_BRIEF.md",
+      "sha256": "a6c50cf7871eb3a42acbf8dc24f5c5e01ca2a7604d8e97751f4c03bc6e5b00b8"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-visible.json",
+      "sha256": "bbb623be7ff3a33124cf4f5285e96a9d552e13477dd17b1b8a58d18f67c60633"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-001.json",
+      "sha256": "30f195b1b2474de1076ca94fef8d49653afc30214963b5338ab8e5fa629ea0ce"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-002.json",
+      "sha256": "cfb4bd0798099d5c46ce102421673f3341326f734a753bb617b88c78ea21d49c"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-003.json",
+      "sha256": "d2ff2ca7f4d39a2c7d07c0ac4ba0b54b55e021cc2d6119dd2f726aeef7e0ca28"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-004.json",
+      "sha256": "48ce0bcf54c9d23bdd634fb740dd882d16a9369b8d7e89a2dc3034ae25d1edd4"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-005.json",
+      "sha256": "8e6e5a09b78352af9f39e868196c79f1b3fbe0739b1eda0d493eb2db75c293f7"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-006.json",
+      "sha256": "d7dc0445e2b36c602f9c159b02329d62ce4c5d155a5ad4ab3ddd2973b44a1400"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-007.json",
+      "sha256": "487485e48f9c5113b59d49c94c9b4d4538e5d060fa671dfa8287ea68679167e7"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-008.json",
+      "sha256": "a305ab962b21198f7488e44328820c7c557a8dd76b32939d5dccc57bf49a9dbe"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-009.json",
+      "sha256": "0a118470f1e8ac34275e233b6638616fcfb459bed681b2e64e0ad6dfb7f23804"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-010.json",
+      "sha256": "8a8002f43d181974ef38d46ccd1308403fde6333740f7ba84d79e28981f53224"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-011.json",
+      "sha256": "9abc47cb2256907ee14498a7d7947c5a109bb51d2e2c4b376e83c7f0b9ed5d45"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-012.json",
+      "sha256": "0c11e682e3ef9512eae9e15008ab2c7a5e8f5ad0aaa55da8eb7446bbc7e4e962"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-013.json",
+      "sha256": "339390b3f8a30585f4bb4b281aee410fa0c412a7c1b118576b1010f86d01c81e"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-014.json",
+      "sha256": "29d5623ae900eecb510904810b102e43566045291c6feadda408a2524dd6ea00"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-015.json",
+      "sha256": "bf0616e452438bdbf6f7b4188a5a74be82c364f281d21b51397ec71c0f4f7e88"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-016.json",
+      "sha256": "e51b50e1e3aa0cce80ca13b79b455c981ace9b2b588e4f48e1ee31f5a7ddb176"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-017.json",
+      "sha256": "cf7d0535f3684255a52f88a6234b2f20a2c3f6d775b8e4576f334b8f7c10e3ee"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-018.json",
+      "sha256": "c396610b01ad11958bf923a2a6211419df279b34b4b7517b45377a9e8459e1c8"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-1-raw.json",
+      "git_ref": "origin/cursor/v31-extractor-claude-17a0",
+      "sha256": "d3d7359f76143fd134652e76745d9dcf5b85746b35cb3cad857d490f9950deb4"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-1-attestation.json",
+      "git_ref": "origin/cursor/v31-extractor-claude-17a0",
+      "sha256": "b1e58fd452ea7b946fcc95758f0b4bcefd6f6ee3cec0215b4fc895c0ac67e6c5"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-2-raw.json",
+      "git_ref": "origin/cursor/v31-extractor-gemini-17a0",
+      "sha256": "78a3abb7573408afb354316360165addacafbee12221cba290606ba647148684"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-2-attestation.json",
+      "git_ref": "origin/cursor/v31-extractor-gemini-17a0",
+      "sha256": "311a2c4b6a59d6e78e37f96ee954628616f110c45fd63a68afb148008ab441ff"
+    }
+  ],
+  "files_read_count": 24,
+  "coverage": {
+    "cases_expected": 18,
+    "cases_evaluated": 18,
+    "turns_expected": 24,
+    "turns_evaluated": 24,
+    "unresolved_claim_disagreements": 0
+  },
+  "gold_or_scoring_accessed": false,
+  "scoring_performed": false,
+  "verification": {
+    "source_sha256_verified": true,
+    "extractor_blob_sha256_verified": true,
+    "sut_input_sha256_verified": true,
+    "json_syntax_verified": true,
+    "coverage_verified": true,
+    "claim_ids_verified": true,
+    "evidence_spans_verified": true,
+    "evidence_span_method": "Every adjudicated claim's evidence_span was programmatically checked as a non-empty exact contiguous substring of that turn's raw_output after the written evaluations artifact was reloaded from disk.",
+    "invariant_keys_verified": true,
+    "label_vocabulary_verified": true
+  },
+  "limitations": [
+    "The images attached to V31-008 and V31-018 were not opened. V31-008 was adjudicated from its Intake output and SUT-visible text; V31-018's recognized image transcription was checked only against the raw output and the case's SUT-visible data_a.",
+    "The rating labels were extracted as written and were not scored for correctness.",
+    "The output_commit is the commit containing both evaluations-v31.json and extraction-adjudication-v31.json. This attestation's own later commit cannot be embedded in the file.",
+    "The model_id is unverified; the assigned model family is gpt."
+  ],
+  "protocol_deviations": [],
+  "protocol_deviations_note": "None. No gold, oracle notes, ontology, scorer, methodology, images, TEST_CASES, or other forbidden files were accessed; no scoring was performed; the holdout tree was not globbed or listed; git status and git ls-tree were not run; extractor branches were fetched only for the four specified git-show blobs and were not merged; the base branch was not pushed."
+}

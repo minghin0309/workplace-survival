@@ -1,0 +1,1825 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "gold-blind-extraction-adjudication",
+  "source_extractors": [
+    {
+      "extractor": 1,
+      "context_id": "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+      "model_family": "claude",
+      "source_path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-1-raw.json",
+      "sha256": "d3d7359f76143fd134652e76745d9dcf5b85746b35cb3cad857d490f9950deb4"
+    },
+    {
+      "extractor": 2,
+      "context_id": "bc-407b6129-b25d-5064-9d64-5523806bbeb3",
+      "model_family": "gemini",
+      "source_path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-2-raw.json",
+      "sha256": "78a3abb7573408afb354316360165addacafbee12221cba290606ba647148684"
+    }
+  ],
+  "adjudicator": {
+    "context_id": "bc-f001181e-4ec6-5746-aaad-b4bd3ba288e3",
+    "model_id": "unverified",
+    "model_family": "gpt"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-visible.json",
+    "sha256": "bbb623be7ff3a33124cf4f5285e96a9d552e13477dd17b1b8a58d18f67c60633"
+  },
+  "cases": [
+    {
+      "case_id": "V31-001",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-002",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-003",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-004",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-005",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-006",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-007",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-008",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Intake",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Intake",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Intake",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The question-claim count is resolved as 0: the Intake output's request appears under Next step, not under Confirmation needed, and the extraction brief defines question claims as questions under Confirmation needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-009",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-010",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 6
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 6
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-011",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 5
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 3
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 5
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-012",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 5
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 5
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-013",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 5
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 5
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-014",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 3
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 3
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-015",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-016",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, claim counts, and all eight invariants. Claim wording and evidence spans were checked against the turn's raw output."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 3
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 3
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-017",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 4
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 4
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    },
+    {
+      "case_id": "V31-018",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 7
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 3
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 7
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "The extractors agreed on route, ratings, and invariants. The claim-count disagreement is resolved using extractor 1's finer faithful decomposition, which separates distinct substantive changes while preserving exact spans."
+        }
+      ]
+    }
+  ]
+}
