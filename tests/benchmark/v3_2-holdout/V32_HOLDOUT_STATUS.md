@@ -13,8 +13,9 @@ Construction remains valid. Designer branch was copied with `git show` and not m
 Gold:
 
 - labeler-3 (gpt) copied from `cursor/v32-gold-labeler-gpt-17a0-f8ea` @ `e1d8085`; not merged;
-- 18 cases / 24 turns; allowlist-only reads; `question_design_accessed=false`; `skill_files_accessed=false`;
-- labeler-1 (grok) and labeler-2 (gemini) still running;
+- labeler-2 (gemini) copied from `cursor/v32-gold-labeler-gemini-17a0` @ `cc92b2d`; not merged;
+- both: 18/24 coverage; allowlist-only; `question_design_accessed=false`; `skill_files_accessed=false`;
+- labeler-1 (grok) still running;
 - adjudication not started.
 
 v3.1 remains archived as `SCORER_ERROR` and will not be rescored.
