@@ -1,0 +1,42 @@
+{
+  "labeler_id": "gold-labeler-1",
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "model_family": "grok",
+  "branch": "cursor/v32-gold-labeler-grok-17a0",
+  "commit": "298776f587d61a64a24f8ab7d58b3df818147d5e",
+  "labels_path": "tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-1.json",
+  "labels_sha256": "a68c44eb607588bca9346f5264ac726129616220fc82d396ffc928f6d0c24232",
+  "gold_or_scoring_accessed": "not applicable",
+  "question_design_accessed": false,
+  "skill_files_accessed": false,
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/GOLD_LABELING_BRIEF.md",
+      "sha256": "e6422c09187b583885a3d21eeba568ccd7ecdbe272b38c2f97c5a5e9223db1d6"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/cases.json",
+      "sha256": "957ee032a049dbd0522a94fe767a8e9e1b7afc45f09e2f7ef07b4e4f5729c8dd"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/images/v32-008-t1-stores-chit.png",
+      "sha256": "44c9c0a8033ff83aea60abd5a95db84d26ec4c4f73d3ec55e5aa828ef00d90df"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/images/v32-018-t1-loft-thread.png",
+      "sha256": "64d25eb620628d6262f0b7aeac9902ddf8c89ecc2f2846e1329d867ee52dd247"
+    }
+  ],
+  "protocol_deviations": [
+    "None. Isolation followed: only the six allowed paths were read. question-design.json, oracle-notes.json, Skill files, SPEC, scorers, methodology, freeze scripts, v3.1 millinery artifacts, and any other PNG were not read. The scorer was not run. The occluded V32-008 millimetre token was not guessed."
+  ]
+}
