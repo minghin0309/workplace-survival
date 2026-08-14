@@ -1,6 +1,6 @@
 # Fresh v3.2 Holdout Status
 
-- Status: `CONSTRUCTION_VALID`
+- Status: `GOLD_LABELING_IN_PROGRESS`
 - Methodology: v3.2
 - Runtime: `main@9d48b048d083507c20f2714b21053d36b68d6366`
 - Holdout branch: `cursor/blind-v32-holdout-17a0`
@@ -8,15 +8,13 @@
 - Turns: 24
 - Formal scorer invocations: 0
 
-Construction:
+Construction remains valid. Designer branch was copied with `git show` and not merged.
 
-- isolated designer: `bc-9996f210-fde7-527c-898e-bc114613975e`;
-- source branch `cursor/isolated-v32-case-design-975e` @ `466fd70` copied with `git show`; not merged;
-- domain: concert pedal-harp restringing/regulation (not denylisted);
-- six question candidates; V32-008 image-only occluded measurement; V32-018 readable image-only;
-- `validate_holdout.py` passed (18 mutations, denylist, PNG headers);
-- question-design key is `candidates`; harness accepts that alias without rewriting the blob.
+Gold:
 
-Gold, SUT, extraction, matching, and scoring have not started.
+- labeler-3 (gpt) copied from `cursor/v32-gold-labeler-gpt-17a0-f8ea` @ `e1d8085`; not merged;
+- 18 cases / 24 turns; allowlist-only reads; `question_design_accessed=false`; `skill_files_accessed=false`;
+- labeler-1 (grok) and labeler-2 (gemini) still running;
+- adjudication not started.
 
 v3.1 remains archived as `SCORER_ERROR` and will not be rescored.
