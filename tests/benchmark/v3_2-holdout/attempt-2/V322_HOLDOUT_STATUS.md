@@ -1,6 +1,6 @@
 # Fresh v3.2 Holdout Attempt 2 Status
 
-- Status: `CONSTRUCTION_VALID`
+- Status: `GOLD_LABELS_COPIED`
 - Methodology: v3.2
 - Runtime: `main@9d48b048d083507c20f2714b21053d36b68d6366`
 - Holdout branch: `cursor/blind-v322-holdout-17a0`
@@ -8,10 +8,14 @@
 - Turns: 24
 - Formal scorer invocations: 0
 
-Isolated designer `bc-f611a232-52e9-5f7a-b29b-17b77b53b375` on `cursor/v322-attempt2-cases-b375` @ `d68a006`. Copied with `git show`; that branch was not merged. PNGs hashed as bytes and not opened as images.
+Construction `VALID`. Isolated designer `bc-f611a232-52e9-5f7a-b29b-17b77b53b375` copied with `git show`.
 
-Manager-recipient gate passed: V322-017 is the only non-manager recipient. Construction validator: `tests/benchmark/v3_2-holdout/attempt-2/validate_holdout.py`.
+Gold labels copied with `git show` (labeler branches not merged):
 
-Next: three isolated gold labelers (grok, gemini, gpt), then Claude adjudication, coverage, freeze, SUT only if `VALID_COVERAGE`.
+- grok `cursor/v322-gold-labeler-1-17a0` @ `f7c765a`
+- gemini `cursor/v322-gold-labeler-2-17a0` @ `10fdfd3`
+- gpt `cursor/v322-gold-labeler-3-17a0` @ `4a7f9f8`
+
+Next: isolated Claude adjudication, then `finalize_gold.py` / coverage. SUT only if `VALID_COVERAGE`.
 
 Attempt 1 remains `INVALID_COVERAGE` and will not be rescored.
