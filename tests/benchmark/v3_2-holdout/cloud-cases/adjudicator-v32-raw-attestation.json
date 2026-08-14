@@ -1,0 +1,140 @@
+{
+  "attestation_type": "fourth-family gold adjudication",
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": ["grok", "gemini", "gpt"],
+  "family_mapping": {
+    "grok": "gold-labeler-1.json",
+    "gemini": "gold-labeler-2.json",
+    "gpt": "gold-labeler-3.json"
+  },
+  "branch": "cursor/v32-gold-adjudicator-claude-17a0-9afb",
+  "base_branch": "cursor/blind-v32-holdout-17a0",
+  "base_commit": "30943d93add88fb1f453f845ec2aa448d6467a2e",
+  "commits": [
+    {
+      "sha": "e49c0ec",
+      "order": 1,
+      "file": "tests/benchmark/v3_2-holdout/cloud-cases/gold-v32-raw.json",
+      "subject": "Add adjudicated v3.2 holdout gold labels (claude fourth-family)"
+    },
+    {
+      "sha": "af237c0",
+      "order": 2,
+      "file": "tests/benchmark/v3_2-holdout/cloud-cases/adjudication-v32-raw.json",
+      "subject": "Add v3.2 holdout adjudication record with all three families' votes"
+    },
+    {
+      "sha": "pending",
+      "order": 3,
+      "file": "tests/benchmark/v3_2-holdout/cloud-cases/adjudicator-v32-raw-attestation.json",
+      "subject": "Add v3.2 gold adjudicator attestation"
+    }
+  ],
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/GOLD_ADJUDICATION_BRIEF.md",
+      "sha256": "4561c91acc24e311c49fdfb065dd4288a1c19a090070ea73b25c57d259044411"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/GOLD_LABELING_BRIEF.md",
+      "sha256": "e6422c09187b583885a3d21eeba568ccd7ecdbe272b38c2f97c5a5e9223db1d6"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/cases.json",
+      "sha256": "957ee032a049dbd0522a94fe767a8e9e1b7afc45f09e2f7ef07b4e4f5729c8dd"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/images/v32-008-t1-stores-chit.png",
+      "sha256": "44c9c0a8033ff83aea60abd5a95db84d26ec4c4f73d3ec55e5aa828ef00d90df",
+      "note": "matches image_spec.sha256 in cases.json"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/images/v32-018-t1-loft-thread.png",
+      "sha256": "64d25eb620628d6262f0b7aeac9902ddf8c89ecc2f2846e1329d867ee52dd247",
+      "note": "matches image_spec.sha256 in cases.json"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-1.json",
+      "sha256": "a68c44eb607588bca9346f5264ac726129616220fc82d396ffc928f6d0c24232"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-2.json",
+      "sha256": "b471a0d73d1ed306ebbfd9ce966bbcba21ba9bfd6803dfab146cc88095c19f37"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "35f5efb3c4af922c23391f4c80432a964b9b67b59c07eecd1e8ece6ff04906f4"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/gold-v32-raw.json",
+      "sha256": "dc0d85869b3e5180754f2c9d7686390d62a0f4beaba4e09a3f161804777eb71f"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/cloud-cases/adjudication-v32-raw.json",
+      "sha256": "1a9d717b98e9c4b769a1eba63f711834f92b5adacff2237133a191a00118a038"
+    }
+  ],
+  "question_design_accessed": false,
+  "oracle_notes_accessed": false,
+  "skill_files_accessed": false,
+  "spec_accessed": false,
+  "scorer_accessed": false,
+  "scorer_run": false,
+  "methodology_accessed": false,
+  "freeze_scripts_accessed": false,
+  "v31_millinery_artifacts_accessed": false,
+  "other_images_accessed": false,
+  "occluded_v32_008_token_guessed": false,
+  "prior_holdout_artifacts_accessed": false,
+  "coverage": {
+    "case_count": 18,
+    "turn_count": 24,
+    "multi_turn_cases": ["V32-014", "V32-015", "V32-016"],
+    "all_families_preserved": true
+  },
+  "tier_counts": {
+    "tier_1_unanimous": 4,
+    "tier_2_majority": 1,
+    "tier_3_adjudicated": 18,
+    "tier_4_uncertain": 1
+  },
+  "gold_uncertain_turn_count": 1,
+  "gold_uncertain_turn_ids": ["V32-008-T1"],
+  "gold_uncertain_fraction": 0.0417,
+  "uncertainty_gate": "<=20% of 24 turns",
+  "uncertainty_gate_met": true,
+  "human_review": "unavailable",
+  "validation_performed": [
+    "18 cases and 24 turns present, with three turns each on V32-014, V32-015 and V32-016",
+    "every turn carries turn_index, route, responsibility, tone, overall, the four concept lists, critical_invariants, rationale and gold_uncertain",
+    "every required concept also appears in the matching allowed list",
+    "overall matches the Red > Gray > Yellow > Green derivation on all rated turns",
+    "Intake, Scope and Message-template routes carry null ratings",
+    "every concept ID used in gold resolves in definitions.question or definitions.revision",
+    "all 720 preserved family vote fields in adjudication-v32-raw.json compared byte-equal against the three labeler files"
+  ],
+  "protocol_deviations": [
+    {
+      "deviation": "A single `ls` of tests/benchmark/v3_2-holdout/cloud-cases/ was executed while checking git state, which displayed the directory's file names.",
+      "impact": "File names only. No contents of any non-allowlisted file were opened or read; question-design.json and oracle-notes.json were listed but never read.",
+      "mitigation": "No further directory listing or globbing of the holdout tree was performed."
+    }
+  ],
+  "notes": [
+    "The dominant disagreement across the suite is structural: grok and gpt route every message whose sole recipient is explicitly not the sender's manager to Scope with null ratings, while gemini rates all 24 turns in Normal mode. The adjudicated gold follows the grok/gpt majority because GOLD_RUBRIC.md defines Scope as 'recipient is explicitly not a manager and no manager is included' and directs null ratings on that route. gemini's content findings are preserved verbatim per turn in adjudication-v32-raw.json.",
+    "On Scope-routed turns the adjudicated gold requires no revision concept, because a scope decline produces no manager-message review and a required token would penalise a correct response; 'no-revision' is retained in the allowed list as a benign no-op. This departs from the token majority, so those turns are recorded as tier_3_adjudicated.",
+    "V32-008-T1 is the only three-way categorical route split (grok Intake, gemini Normal mode, gpt Scope) and is the sole gold_uncertain turn. It was adjudicated to Scope for consistency with the identical Padraig Orliss recipient context that grok and gpt both routed Scope at V32-012, and the occluded millimetre value was neither guessed nor inferred from neighbouring strings under any reading."
+  ]
+}

@@ -1,0 +1,693 @@
+{
+  "labeler_id": "gold-labeler-1",
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "model_family": "grok",
+  "case_count": 18,
+  "turn_count": 24,
+  "local_concept_definitions": {
+    "logged-string-diameter": {
+      "domain": "question",
+      "description": "Ask for the exact logged 4th-octave gut diameter in millimetres. Do not guess the occluded image token or infer diameter from neighbouring strings."
+    },
+    "confirmed-conservatoire-job-number": {
+      "domain": "question",
+      "description": "Ask which job number is the Conservatoire restring assigned to Niall Dunhaven's Monday pedal-regulation slot."
+    },
+    "correct-job-number-to-1184": {
+      "domain": "revision",
+      "description": "Name INH-26-1184 as the Conservatoire restring for Monday's pedal slot; do not keep INH-26-1170 in that slot."
+    },
+    "keep-1170-as-south-bay-column-regild": {
+      "domain": "revision",
+      "description": "Keep INH-26-1170 as the south-bay column-regild, not as the Monday pedal-check harp."
+    },
+    "preserve-pitch-stable-440": {
+      "domain": "revision",
+      "description": "Keep the confirmed fact that pitch was stable at 440 Hz at 17:00 today."
+    },
+    "remove-unauthorized-hold-cancellation": {
+      "domain": "revision",
+      "description": "Remove the claim that a stringing technician is cancelling Niall Dunhaven's pedal hold."
+    },
+    "remove-unauthorized-finished-declaration": {
+      "domain": "revision",
+      "description": "Remove the declaration that the orchestra harp is finished for client collection."
+    },
+    "remove-unauthorized-collection-time": {
+      "domain": "revision",
+      "description": "Remove the 16:00 client collection instruction that overrides the regulation hold."
+    },
+    "remove-client-facing-colleague-blame": {
+      "domain": "revision",
+      "description": "Remove blame, insult, or embarrassment claims about a colleague from a thread that copies a client contact."
+    },
+    "restore-professional-register": {
+      "domain": "revision",
+      "description": "Replace hostile or dismissive wording with a professional internal register."
+    }
+  },
+  "cases": [
+    {
+      "case_id": "V32-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Rowan Cresswick is the direct line manager; the draft is identifiable and the background is usable. The note reports only completed restring and north-cabinet rest facts for INH-26-1184, keeps Niall Dunhaven's Monday 17 August 09:00 slot, and matches the stated pitch and humidity figures. No concrete responsibility or tone issue."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Tamsin Uxley is a loft coordinator described as a colleague who assigns humidity-cabinet slots, not a manager, and no manager is included on the thread. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Heloise Braxton is a supplier dispatch clerk, not a manager, and audience_scope is supplier dispatch only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Yorick Pell is a client-side orchestra librarian, not a manager, and audience_scope is librarian only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Briony Tannifer is a client principal harpist, not a manager, and audience_scope is principal harpist only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The named delay-notice recipient is a client-side contractual contact, not a manager, and no manager is included. The missing jacket name does not change the Scope route. Ratings are null."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Niall Dunhaven is a pedal-regulation lead described as a colleague who locks pedal rods, not a manager, and audience_scope is regulation lead only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Intake",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": ["logged-string-diameter"],
+          "allowed_question_concepts": ["logged-string-diameter"],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The draft exists only in the image. Visible chit text requires the exact logged diameter in millimetres for the drawer lock and says neighbouring strings are not an accepted substitute. That millimetre value is geometrically occluded. Image information is required before rating, so the route is Intake. Asking for the logged diameter can change whether a sendable chit can be produced. Do not guess the occluded token. Ratings are null."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Soren Grell is a touring client, not a manager, and audience_scope is touring client only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Yorick Pell is a client-side orchestra librarian, not a manager, and audience_scope is librarian only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Niall Dunhaven is described as a colleague who is not a report of the sender, and audience_scope is regulation lead only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Padraig Orliss is a stores clerk described as a colleague who issues gut from stores, not a manager, and audience_scope is stores clerk only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Briony Tannifer is a client principal harpist, not a manager, and audience_scope is principal harpist only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["confirmed-conservatoire-job-number"],
+          "allowed_question_concepts": ["confirmed-conservatoire-job-number"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline",
+            "preserve-pitch-stable-440"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Rowan Cresswick is the direct line manager. The Monday 09:00 slot is for the Conservatoire restring that finished cabinet rest today, and pitch on that harp was stable at 440 Hz at 17:00. The packet states that Ellis's first draft names INH-26-1170 and that a south-bay column-regild sits under a different job number, but it does not confirm which number is the Conservatoire restring. Governing job identity is therefore missing. Tone has no concrete issue. Overall is Gray. Asking for the Conservatoire job number can change the rating and the safe revision. Do not invent a job number or copy one from another case. Unknown required identity stays a placeholder."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["correct-job-number-to-1184"],
+          "allowed_revision_concepts": [
+            "correct-job-number-to-1184",
+            "keep-1170-as-south-bay-column-regild",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline",
+            "preserve-pitch-stable-440"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The user now states that the Conservatoire restring is INH-26-1184 and that INH-26-1170 is the south-bay column-regild and is not going to Niall on Monday. The unchanged draft still names INH-26-1170 as ready for that slot, which directly contradicts the correction and the constraint not to send the column-regild to Monday. Responsibility is Red. Tone remains professional. Overall is Red. No further question is required. The revision must name INH-26-1184 for Monday."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised draft names INH-26-1184 as the Conservatoire restring for Niall's Monday 17 August 09:00 slot, keeps the confirmed 440 Hz pitch fact, and leaves INH-26-1170 in the south bay. That matches the turn-2 correction and the case constraints. No concrete issue remains."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Tamsin Uxley is a loft coordinator described as a colleague who assigns humidity-cabinet slots, not a manager, and no manager is included. Ratings are null on the Scope route."
+        },
+        {
+          "turn_index": 2,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The recipient remains Tamsin Uxley, a colleague loft coordinator, and no manager is included. The cabinet-date correction does not change recipient scope. Ratings remain null."
+        },
+        {
+          "turn_index": 3,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised booking is still addressed only to Tamsin Uxley, a colleague, with no manager included. Scope is unchanged. Ratings remain null."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Yorick Pell is a client-side orchestra librarian, not a manager, and audience_scope is librarian only. No manager is included. Ratings are null on the Scope route."
+        },
+        {
+          "turn_index": 2,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The recipient remains Yorick Pell, a client librarian, and no manager is included. The dispatch-date correction does not change recipient scope. Ratings remain null."
+        },
+        {
+          "turn_index": 3,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised leave-works note is still addressed only to Yorick Pell, a client librarian, with no manager included. Scope is unchanged. Ratings remain null."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Soren Grell is a touring client, not a manager, and audience_scope is touring client only. No manager is included. Ratings are null on the Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "remove-unauthorized-hold-cancellation",
+            "remove-unauthorized-finished-declaration",
+            "remove-unauthorized-collection-time",
+            "remove-client-facing-colleague-blame",
+            "restore-professional-register",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The readable image draft is posted to Coppice Loft all-staff, which includes workshop staff, so a manager is included and the route is Normal mode. Visible text cancels Niall Dunhaven's pedal hold, declares INH-26-1203 finished, and tells the copied Vellum Court fetching contact to collect at 16:00 and not wait for Niall. Packet facts say a stringing technician cannot cancel a regulation-lead pedal hold or declare an orchestra harp finished for client collection. That is a main-purpose failure and major execution risk, so responsibility is Red. Visible wording tells Niall to take his checklist and sit down and assigns any slipping pedal as his embarrassment on a thread that copies a client, which is hostility and an unsupported accusation, so tone is Red. Overall is Red. A safe revision must remove the unauthorized commitments and the colleague-blame content. No question is required."
+        }
+      ]
+    }
+  ]
+}

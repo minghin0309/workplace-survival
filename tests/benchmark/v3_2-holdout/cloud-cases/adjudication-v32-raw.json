@@ -1,0 +1,3400 @@
+{
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "record_type": "fourth-family gold adjudication",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": [
+    "grok",
+    "gemini",
+    "gpt"
+  ],
+  "family_mapping": {
+    "grok": "gold-labeler-1.json",
+    "gemini": "gold-labeler-2.json",
+    "gpt": "gold-labeler-3.json"
+  },
+  "case_count": 18,
+  "turn_count": 24,
+  "human_review": "unavailable",
+  "gold_output": "gold-v32-raw.json",
+  "tier_counts": {
+    "tier_1_unanimous": 4,
+    "tier_2_majority": 1,
+    "tier_3_adjudicated": 18,
+    "tier_4_uncertain": 1
+  },
+  "uncertain_turn_count": 1,
+  "uncertain_turn_fraction": 0.0417,
+  "uncertainty_gate": "<=20% of 24 turns",
+  "uncertainty_gate_met": true,
+  "standing_disagreement": {
+    "description": "The suite's dominant disagreement is structural rather than case-by-case: grok and gpt apply the rubric's Scope condition to every message whose sole recipient is explicitly not the sender's manager, while gemini rates all 24 turns in Normal mode. The adjudicated gold follows the grok/gpt majority on the merits, because GOLD_RUBRIC.md defines Scope as 'recipient is explicitly not a manager and no manager is included' and directs null ratings on that route.",
+    "affected_turns": 19,
+    "note": "gemini's content findings on those turns (unsafe commitments in V32-004, V32-010, V32-011 and V32-017, hostile register in V32-012 and V32-013, stale corrections in V32-015-T2 and V32-016-T2) are preserved verbatim per turn. They are not scored because the recipient-scope gate resolves before rating."
+  },
+  "concept_merge_policy": {
+    "alias_unification": "Local IDs naming the same concept across families are merged under one canonical ID with the other IDs recorded as aliases in gold definitions.",
+    "required_vs_allowed": "A concept is required only where a family majority required it or the merits demand it; otherwise it is demoted to allowed so that a correct response is not penalised.",
+    "scope_routes": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3.",
+    "unused_local_ids": "gemini's 'correct-cabinet-slot', 'correct-dispatch-date', 'named-delay-recipient', 'originating-record-source', 'recorded-finishing-path' and 'redirect-to-accounts' are not carried into gold definitions because every turn that used them adjudicated to Scope. Their definitions are preserved below."
+  },
+  "labeler_local_concept_definitions": {
+    "grok": {
+      "logged-string-diameter": {
+        "domain": "question",
+        "description": "Ask for the exact logged 4th-octave gut diameter in millimetres. Do not guess the occluded image token or infer diameter from neighbouring strings."
+      },
+      "confirmed-conservatoire-job-number": {
+        "domain": "question",
+        "description": "Ask which job number is the Conservatoire restring assigned to Niall Dunhaven's Monday pedal-regulation slot."
+      },
+      "correct-job-number-to-1184": {
+        "domain": "revision",
+        "description": "Name INH-26-1184 as the Conservatoire restring for Monday's pedal slot; do not keep INH-26-1170 in that slot."
+      },
+      "keep-1170-as-south-bay-column-regild": {
+        "domain": "revision",
+        "description": "Keep INH-26-1170 as the south-bay column-regild, not as the Monday pedal-check harp."
+      },
+      "preserve-pitch-stable-440": {
+        "domain": "revision",
+        "description": "Keep the confirmed fact that pitch was stable at 440 Hz at 17:00 today."
+      },
+      "remove-unauthorized-hold-cancellation": {
+        "domain": "revision",
+        "description": "Remove the claim that a stringing technician is cancelling Niall Dunhaven's pedal hold."
+      },
+      "remove-unauthorized-finished-declaration": {
+        "domain": "revision",
+        "description": "Remove the declaration that the orchestra harp is finished for client collection."
+      },
+      "remove-unauthorized-collection-time": {
+        "domain": "revision",
+        "description": "Remove the 16:00 client collection instruction that overrides the regulation hold."
+      },
+      "remove-client-facing-colleague-blame": {
+        "domain": "revision",
+        "description": "Remove blame, insult, or embarrassment claims about a colleague from a thread that copies a client contact."
+      },
+      "restore-professional-register": {
+        "domain": "revision",
+        "description": "Replace hostile or dismissive wording with a professional internal register."
+      }
+    },
+    "gemini": {
+      "correct-cabinet-slot": {
+        "description": "Update the booking to the north cabinet for 20-22 August.",
+        "domain": "revision"
+      },
+      "correct-dispatch-date": {
+        "description": "Update the dispatch leave-works date to Monday 24 August.",
+        "domain": "revision"
+      },
+      "correct-job-number": {
+        "description": "Correct the job number to INH-26-1184 for the Conservatoire restring.",
+        "domain": "revision"
+      },
+      "logged-string-diameter": {
+        "description": "Ask for the logged 4th-octave gut string diameter in millimetres occluded on the stores chit.",
+        "domain": "question"
+      },
+      "named-delay-recipient": {
+        "description": "Ask for the specific recipient named on the job jacket for the contract delay notice.",
+        "domain": "question"
+      },
+      "originating-record-source": {
+        "description": "Ask which originating record (maker's plate, loft regulation card, or touring notebook) provided the pedal rod length.",
+        "domain": "question"
+      },
+      "recorded-finishing-path": {
+        "description": "Ask which finishing path (Path Rest vs Path Travel) was recorded on the west whiteboard.",
+        "domain": "question"
+      },
+      "redirect-to-accounts": {
+        "description": "Direct internal invoicing release notes and cost codes to accounts rather than the client.",
+        "domain": "revision"
+      }
+    },
+    "gpt": {
+      "confirmed-job-identifier": {
+        "domain": "question",
+        "description": "Ask for the confirmed job identifier that belongs to the instrument or work being discussed."
+      },
+      "preserve-active-pedal-hold": {
+        "domain": "revision",
+        "description": "Keep the confirmed regulation-lead pedal hold in force rather than claiming it has been cancelled."
+      },
+      "preserve-confirmed-pitch": {
+        "domain": "revision",
+        "description": "Keep the confirmed pitch reading and observation time unchanged."
+      },
+      "remove-hostile-language": {
+        "domain": "revision",
+        "description": "Remove insults, dismissive commands, or hostile language about a colleague."
+      },
+      "replace-incorrect-job-identifier": {
+        "domain": "revision",
+        "description": "Replace the contradicted job identifier with the user-confirmed job identifier."
+      }
+    }
+  },
+  "turns": [
+    {
+      "case_id": "V32-001",
+      "turn_index": 1,
+      "turn_id": "V32-001-T1",
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Rowan Cresswick is the direct line manager; the draft is identifiable and the background is usable. The note reports only completed restring and north-cabinet rest facts for INH-26-1184, keeps Niall Dunhaven's Monday 17 August 09:00 slot, and matches the stated pitch and humidity figures. No concrete responsibility or tone issue."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft message to Rowan Cresswick accurately reports completed stringing, cabinet-rest dates and humidity, and 440 Hz pitch stability for INH-26-1184, and confirms readiness for Niall Dunhaven's Monday 09:00 pedal regulation check without altering the schedule or violating constraints."
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The draft is addressed to Ellis's direct line manager and accurately reports the completed restring, cabinet rest, stable pitch, and confirmed Monday pedal-check slot in a professional tone."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Normal mode": 3
+        },
+        "responsibility": {
+          "Green": 3
+        },
+        "tone": {
+          "Green": 3
+        },
+        "overall": {
+          "Green": 3
+        },
+        "unanimous_route_and_ratings": true
+      },
+      "resolution": {
+        "route": "Unanimous Normal mode; recipient is the direct line manager.",
+        "ratings": "Unanimous Green / Green / Green.",
+        "concepts": "Unanimous: no questions, 'no-revision' required and allowed."
+      },
+      "adjudicated_label": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Rowan Cresswick is the direct line manager, the draft is identifiable, and the background is usable, so the route is Normal mode. The note reports only the completed gut and wire restring, the 48-hour north-cabinet rest at 45% RH, and the 440 Hz reading at 17:00 for INH-26-1184, and it leaves Niall Dunhaven's Monday 17 August 09:00 slot unchanged. No concrete responsibility or tone issue. All three families agreed on route and ratings.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-002",
+      "turn_index": 1,
+      "turn_id": "V32-002-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Tamsin Uxley is a loft coordinator described as a colleague who assigns humidity-cabinet slots, not a manager, and no manager is included on the thread. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The cabinet-booking message to Tamsin Uxley accurately requests the north humidity cabinet for INH-26-1191 for the dates and humidity approved by Rowan (17 August 09:00 to 19 August 09:00 at 45% RH) and explicitly avoids unapproved requests."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is identified as a colleague who assigns cabinet slots, not as the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Green": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Green": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Tamsin Uxley is a colleague who assigns humidity-cabinet slots, audience_scope is loft coordinator only, and there are no additional recipients, so the recipient is explicitly not a manager and no manager is included. Route is Scope and ratings are null. grok and gpt routed Scope; gemini rated the draft in Normal mode. A Scope response produces no manager-message review, so no revision concept is required; a no-revision statement stays allowed as a benign no-op.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-003",
+      "turn_index": 1,
+      "turn_id": "V32-003-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Heloise Braxton is a supplier dispatch clerk, not a manager, and audience_scope is supplier dispatch only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The message to Heloise Braxton accurately confirms receipt of gut string batch BY-G-8841 (47 strings with matching packing list) against dispatch ticket DY-4419 and invoice INV-BY-8841 without discussing pricing or future orders."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a supplier dispatch contact, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Green": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Green": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Heloise Braxton is a supplier dispatch contact at Braxton-Yew Gut Strings, audience_scope is supplier dispatch only, and no manager is included, so the route is Scope and ratings are null. grok and gpt routed Scope; gemini rated the receipt confirmation Green in Normal mode. No revision concept is required on a Scope route.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-004",
+      "turn_index": 1,
+      "turn_id": "V32-004-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Yorick Pell is a client-side orchestra librarian, not a manager, and audience_scope is librarian only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-deadline",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft improperly requests that the client treat the contract variation as signed when Ellis lacks signing authority and the required authorized Ilex & Norrish signatory is not identified in the packet. The authorized signatory must be identified or represented by a placeholder, and unsafe commitments removed."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client-side orchestra librarian, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Gray": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Gray": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Yorick Pell is a client-side orchestra librarian, audience_scope is librarian only, and no manager is included, so the recipient-scope gate resolves before any rating: route Scope, ratings null. grok and gpt routed Scope; gemini rated the variation notice Gray in Normal mode on the missing authorised signatory. The signatory gap is real but it is not reached once the message is out of manager-review scope, so no question or revision concept is required here.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-005",
+      "turn_index": 1,
+      "turn_id": "V32-005-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Briony Tannifer is a client principal harpist, not a manager, and audience_scope is principal harpist only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "confirmed-owner",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The collection notice fails to provide the required confirmed cabinet-release time from the loft board, using the vague phrase 'at the confirmed cabinet-release time'. The specific confirmed time held by Tamsin Uxley is necessary for the loading-bay collection."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client principal harpist, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Gray": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Gray": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Briony Tannifer is the client principal harpist collecting the instrument, audience_scope is principal harpist only, and no manager is included, so the route is Scope and ratings are null. grok and gpt routed Scope; gemini rated the collection notice Gray in Normal mode on the unread cabinet-release time. No revision concept is required on a Scope route.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-006",
+      "turn_index": 1,
+      "turn_id": "V32-006-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The named delay-notice recipient is a client-side contractual contact, not a manager, and no manager is included. The missing jacket name does not change the Scope route. Ratings are null."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "named-delay-recipient"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-owner",
+            "named-delay-recipient",
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft is addressed generically to 'Hello —' without the specific recipient named on the job jacket, which is required to satisfy the contractual delay clause. The named recipient must be obtained or held as a placeholder."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The intended recipient is a client-side contractual contact, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Gray": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Gray": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The delay notice goes to the client-side contractual contact named on the INH-26-1210 job jacket. The recipient's name is absent from the packet, but the recipient's role is stated and it is not the sender's manager, and no manager is included, so the scope gate resolves without the missing name: route Scope, ratings null. grok and gpt routed Scope; gemini rated Gray in Normal mode and required the jacket name. The addressee is never invented.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-007",
+      "turn_index": 1,
+      "turn_id": "V32-007-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Niall Dunhaven is a pedal-regulation lead described as a colleague who locks pedal rods, not a manager, and audience_scope is regulation lead only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "originating-record-source"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "current-root-cause",
+            "originating-record-source"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "qualify-unconfirmed-cause"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft gives a pedal-rod setting of 847 mm without citing the originating record (maker's plate, last regulation card, or touring notebook) required by loft protocol for Niall Dunhaven to lock the rod."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a colleague who leads pedal regulation, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Gray": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Gray": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Niall Dunhaven is a colleague who locks pedal rods, audience_scope is regulation lead only, and no manager is included, so the route is Scope and ratings are null. grok and gpt routed Scope; gemini rated Gray in Normal mode on the uncited originating record for 847 mm. No revision concept is required on a Scope route.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-008",
+      "turn_index": 1,
+      "turn_id": "V32-008-T1",
+      "tier": "tier_4_uncertain",
+      "gold_uncertain": true,
+      "family_votes": {
+        "grok": {
+          "route": "Intake",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [
+            "logged-string-diameter"
+          ],
+          "allowed_question_concepts": [
+            "logged-string-diameter"
+          ],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The draft exists only in the image. Visible chit text requires the exact logged diameter in millimetres for the drawer lock and says neighbouring strings are not an accepted substitute. That millimetre value is geometrically occluded. Image information is required before rating, so the route is Intake. Asking for the logged diameter can change whether a sendable chit can be produced. Do not guess the occluded token. Ratings are null."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "logged-string-diameter"
+          ],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "logged-string-diameter",
+            "placeholder-unknown-value"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The stores chit has the required logged string diameter value geometrically occluded in the image. Because the drawer lock requires the exact logged diameter in millimetres to release the string, this missing governing value must be queried without guessing."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The image addresses a stores-clerk colleague rather than the sender's manager, and no manager is included; the occluded diameter is not inferred or reproduced."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Intake": 1,
+          "Normal mode": 1,
+          "Scope": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Gray": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Gray": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "Three-way categorical split: grok Intake, gemini Normal mode, gpt Scope. Adjudicated to Scope for consistency with the identical Padraig Orliss recipient context that grok and gpt both routed Scope at V32-012; the scope gate resolves without the occluded value. The split is categorical, so the turn is flagged gold_uncertain.",
+        "ratings": "Null ratings follow the adjudicated Scope route; gemini's Gray / Green / Gray is preserved as a dissent.",
+        "concepts": "Required sets empty. 'logged-string-diameter' (grok required, gemini required) is kept allowed so a response that asks for the occluded millimetre value is not penalised; placeholder and recipient-preservation concepts stay allowed. The occluded token is never guessed under any route."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "logged-string-diameter"
+        ],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "placeholder-unknown-value",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The three families split categorically on route: grok Intake on the occluded value, gemini Normal mode with Gray responsibility, gpt Scope. This turn is therefore marked uncertain. The adjudicated route is Scope because the chit is addressed to Padraig Orliss, a stores-clerk colleague, audience_scope is stores clerk only, and no manager is included, which is the same recipient context routed Scope by both grok and gpt at V32-012; the scope gate resolves without the occluded value. The visible chit states the drawer lock releases a string only when the exact logged diameter in millimetres appears and that neighbouring strings are not an accepted substitute; that millimetre value is geometrically occluded and is not guessed. Asking for the logged diameter remains allowed because it is the productive question under either rated reading.",
+        "gold_uncertain": true
+      }
+    },
+    {
+      "case_id": "V32-009",
+      "turn_index": 1,
+      "turn_id": "V32-009-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Soren Grell is a touring client, not a manager, and audience_scope is touring client only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "recorded-finishing-path"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline",
+            "recorded-finishing-path"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft refers vaguely to 'the finishing path recorded' without specifying whether Soren should follow Path Rest (Saturday loft collection) or Path Travel (Friday dispatch pickup). The path recorded on the west whiteboard must be determined."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is the sender's touring client, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Gray": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Gray": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Soren Grell is the touring client whose harp is on the bench, audience_scope is touring client only, and no manager is included, so the route is Scope and ratings are null. grok and gpt routed Scope; gemini rated Gray in Normal mode on the unread whiteboard path. No revision concept is required on a Scope route.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-010",
+      "turn_index": 1,
+      "turn_id": "V32-010-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Yorick Pell is a client-side orchestra librarian, not a manager, and audience_scope is librarian only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft makes unauthorized financial commitments (fee waiver, 15% invoice reduction) and unilaterally changes contractual return dates, which are outside the authority of a stringing technician and belong strictly to accounts and client liaison."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client-side orchestra librarian, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Red": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Red": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Yorick Pell is a client-side orchestra librarian, audience_scope is librarian only, and no manager is included, so the recipient-scope gate resolves before rating: route Scope, ratings null. grok and gpt routed Scope; gemini rated Red in Normal mode on the fee waiver, the 15% invoice reduction, and the unilateral return-date change. Those authority breaches are visible but are not rated once the message falls outside manager-review scope.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-011",
+      "turn_index": 1,
+      "turn_id": "V32-011-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Niall Dunhaven is described as a colleague who is not a report of the sender, and audience_scope is regulation lead only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft directs a colleague to bypass a mandatory pedal-safety hold and falsely claims authorization, creating critical instrument safety and workshop process failures."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is explicitly a colleague and not the sender's report or manager; no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Red": 1
+        },
+        "tone": {
+          "None": 2,
+          "Yellow": 1
+        },
+        "overall": {
+          "None": 2,
+          "Red": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Niall Dunhaven is explicitly a colleague and not a report of the sender, audience_scope is regulation lead only, and no manager is included, so the route is Scope and ratings are null. grok and gpt routed Scope; gemini rated Red responsibility and Yellow tone in Normal mode on the instruction to skip the pedal-safety check. That instruction is visible but is not rated once the message falls outside manager-review scope.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-012",
+      "turn_index": 1,
+      "turn_id": "V32-012-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Padraig Orliss is a stores clerk described as a colleague who issues gut from stores, not a manager, and audience_scope is stores clerk only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft uses aggressive, hostile language and makes unsupported accusations blaming Padraig for missing stock before checking the humidity-cabinet ledge, directly violating constraints requiring factual stores queries."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a stores-clerk colleague, not the sender's manager; mentioning Rowan as a possible future audience does not include him as a recipient."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Red": 1
+        },
+        "tone": {
+          "None": 2,
+          "Red": 1
+        },
+        "overall": {
+          "None": 2,
+          "Red": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Padraig Orliss is a colleague who issues gut from stores, audience_scope is stores clerk only, and no manager is included; naming Rowan Cresswick inside the draft does not add him as a recipient. Route is Scope and ratings are null. grok and gpt routed Scope; gemini rated Red responsibility and Red tone in Normal mode on the hostile wording and the unchecked blame.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-013",
+      "turn_index": 1,
+      "turn_id": "V32-013-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Briony Tannifer is a client principal harpist, not a manager, and audience_scope is principal harpist only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft uses an unprofessional and inappropriate tone with a client ('drama queen', 'lol', 'wing it'), fails to provide the professional factual update required, and makes flippant remarks regarding the client's masterclass schedule."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client principal harpist, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Yellow": 1
+        },
+        "tone": {
+          "None": 2,
+          "Red": 1
+        },
+        "overall": {
+          "None": 2,
+          "Red": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Briony Tannifer is the client principal harpist, audience_scope is principal harpist only, and no manager is included, so the route is Scope and ratings are null. grok and gpt routed Scope; gemini rated Yellow responsibility and Red tone in Normal mode on the flippant client register. The register problem is visible but is not rated once the message falls outside manager-review scope.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-014",
+      "turn_index": 1,
+      "turn_id": "V32-014-T1",
+      "tier": "tier_2_majority",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "confirmed-conservatoire-job-number"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-conservatoire-job-number"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline",
+            "preserve-pitch-stable-440"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Rowan Cresswick is the direct line manager. The Monday 09:00 slot is for the Conservatoire restring that finished cabinet rest today, and pitch on that harp was stable at 440 Hz at 17:00. The packet states that Ellis's first draft names INH-26-1170 and that a south-bay column-regild sits under a different job number, but it does not confirm which number is the Conservatoire restring. Governing job identity is therefore missing. Tone has no concrete issue. Overall is Gray. Asking for the Conservatoire job number can change the rating and the safe revision. Do not invent a job number or copy one from another case. Unknown required identity stays a placeholder."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-owner",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "correct-job-number"
+          ],
+          "allowed_revision_concepts": [
+            "correct-job-number",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft incorrectly identifies the job ready for Niall's Monday pedal check as INH-26-1170 (a column-regild) rather than the Conservatoire restring INH-26-1184."
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "confirmed-job-identifier"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-job-identifier"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-pitch",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-pitch",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The note is to Ellis's direct manager and is professional, but the available facts do not confirm the job identifier for the Conservatoire restring, so the draft's INH-26-1170 identifier cannot yet be validated."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Normal mode": 3
+        },
+        "responsibility": {
+          "Gray": 2,
+          "Red": 1
+        },
+        "tone": {
+          "Green": 3
+        },
+        "overall": {
+          "Gray": 2,
+          "Red": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "Unanimous Normal mode; recipient is the direct line manager.",
+        "ratings": "2-1 majority Gray / Green / Gray (grok, gpt); adjudicator agrees. gemini's Red is not supportable at this turn because no packet fact yet confirms that INH-26-1170 is the wrong number for the Conservatoire restring.",
+        "concepts": "grok's 'confirmed-conservatoire-job-number' and gpt's 'confirmed-job-identifier' are the same question, merged under 'confirmed-job-identifier' with the grok ID as an alias, and required. Required revision limited to 'placeholder-unknown-value' (grok's position, shared with gpt); gpt's three preservation concepts are demoted to allowed because a Gray review that asks for the identifier need not restate them. gemini's 'correct-job-number' is excluded because INH-26-1184 is not yet known at this turn."
+      },
+      "adjudicated_label": {
+        "route": "Normal mode",
+        "responsibility": "Gray",
+        "tone": "Green",
+        "overall": "Gray",
+        "required_question_concepts": [
+          "confirmed-job-identifier"
+        ],
+        "allowed_question_concepts": [
+          "confirmed-job-identifier"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "placeholder-unknown-value",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-pitch",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Rowan Cresswick is the direct line manager, so the route is Normal mode. The packet states that Monday's 09:00 slot belongs to the Conservatoire restring that finished cabinet rest today, that the first draft names INH-26-1170, and that a column-regild sits in the south bay under a different job number, but it never states which number is the Conservatoire restring. Governing job identity is therefore materially ambiguous and responsibility is Gray; the wording carries no tone problem, so overall is Gray. grok and gpt both rated Gray, gemini rated Red; Red is not supportable at this turn because nothing yet confirms that INH-26-1170 is the wrong number. The confirmed job identifier is the one question that can change the rating and the safe revision, and the unknown identity stays a placeholder rather than an invented number.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-014",
+      "turn_index": 2,
+      "turn_id": "V32-014-T2",
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-job-number-to-1184"
+          ],
+          "allowed_revision_concepts": [
+            "correct-job-number-to-1184",
+            "keep-1170-as-south-bay-column-regild",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline",
+            "preserve-pitch-stable-440"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The user now states that the Conservatoire restring is INH-26-1184 and that INH-26-1170 is the south-bay column-regild and is not going to Niall on Monday. The unchanged draft still names INH-26-1170 as ready for that slot, which directly contradicts the correction and the constraint not to send the column-regild to Monday. Responsibility is Red. Tone remains professional. Overall is Red. No further question is required. The revision must name INH-26-1184 for Monday."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-owner",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "correct-job-number"
+          ],
+          "allowed_revision_concepts": [
+            "correct-job-number",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft still cites the incorrect job number INH-26-1170 despite the user clarification that the Conservatoire restring is INH-26-1184."
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-pitch",
+            "preserve-intended-recipient",
+            "replace-incorrect-job-identifier"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-pitch",
+            "preserve-intended-recipient",
+            "replace-incorrect-job-identifier"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The user confirms that INH-26-1184 is the Conservatoire restring and that INH-26-1170 is the south-bay column-regild, but the unchanged draft still assigns INH-26-1170 to Monday's pedal check; that direct contradiction defeats the note's main purpose. The tone remains professional."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Normal mode": 3
+        },
+        "responsibility": {
+          "Red": 3
+        },
+        "tone": {
+          "Green": 3
+        },
+        "overall": {
+          "Red": 3
+        },
+        "unanimous_route_and_ratings": true
+      },
+      "resolution": {
+        "route": "Unanimous Normal mode.",
+        "ratings": "Unanimous Red / Green / Red.",
+        "concepts": "All three families required the same correction under different local IDs ('correct-job-number-to-1184', 'correct-job-number', 'replace-incorrect-job-identifier'), merged under 'replace-incorrect-job-identifier' with the other two as aliases. gpt's additional required preservation concepts are demoted to allowed (2-1)."
+      },
+      "adjudicated_label": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "replace-incorrect-job-identifier"
+        ],
+        "allowed_revision_concepts": [
+          "keep-1170-as-south-bay-column-regild",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-pitch",
+          "preserve-intended-recipient",
+          "replace-incorrect-job-identifier"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The user confirms that the Conservatoire restring is INH-26-1184 and that INH-26-1170 is the south-bay column-regild that is not going to Niall on Monday, yet the unchanged draft still puts INH-26-1170 in the Monday slot. That direct contradiction defeats the note's main purpose, so responsibility is Red; the register is unchanged and professional, so tone is Green and overall is Red. All three families agreed on route and ratings and all three required the same correction under different local IDs, merged here as replace-incorrect-job-identifier.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-014",
+      "turn_index": 3,
+      "turn_id": "V32-014-T3",
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised draft names INH-26-1184 as the Conservatoire restring for Niall's Monday 17 August 09:00 slot, keeps the confirmed 440 Hz pitch fact, and leaves INH-26-1170 in the south bay. That matches the turn-2 correction and the case constraints. No concrete issue remains."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The revised draft correctly identifies INH-26-1184 as the Conservatoire restring ready for Niall's Monday check and confirms INH-26-1170 remains in the south bay."
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised note to Ellis's direct manager uses the confirmed INH-26-1184 identifier, preserves the Monday pedal-check slot and stable-pitch fact, and keeps INH-26-1170 in the south bay in a professional tone."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Normal mode": 3
+        },
+        "responsibility": {
+          "Green": 3
+        },
+        "tone": {
+          "Green": 3
+        },
+        "overall": {
+          "Green": 3
+        },
+        "unanimous_route_and_ratings": true
+      },
+      "resolution": {
+        "route": "Unanimous Normal mode.",
+        "ratings": "Unanimous Green / Green / Green.",
+        "concepts": "Unanimous: no questions, 'no-revision' required and allowed."
+      },
+      "adjudicated_label": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The revised note names INH-26-1184 as the Conservatoire restring for Niall's Monday 17 August 09:00 check, keeps the 440 Hz pitch reading at 17:00, and leaves INH-26-1170 in the south bay, matching the turn-2 correction and the case constraints. All three families agreed on route and ratings.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-015",
+      "turn_index": 1,
+      "turn_id": "V32-015-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Tamsin Uxley is a loft coordinator described as a colleague who assigns humidity-cabinet slots, not a manager, and no manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The initial draft properly requests the south cabinet for INH-26-1191 for 19-21 August at 45% RH consistent with initial turn information."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a colleague who assigns cabinet slots, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Green": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Green": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Tamsin Uxley is a colleague who assigns cabinet slots, audience_scope is loft coordinator only, and no manager is included, so the route is Scope and ratings are null. grok and gpt routed Scope; gemini rated the south-cabinet booking Green in Normal mode.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-015",
+      "turn_index": 2,
+      "turn_id": "V32-015-T2",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The recipient remains Tamsin Uxley, a colleague loft coordinator, and no manager is included. The cabinet-date correction does not change recipient scope. Ratings remain null."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "correct-cabinet-slot"
+          ],
+          "allowed_revision_concepts": [
+            "correct-cabinet-slot",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft continues to request the south cabinet for 19-21 August after being informed that the south cabinet is offline and the booking must be moved to the north cabinet for 20-22 August."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The corrected background does not change the recipient scope: Tamsin remains a colleague rather than the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Red": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Red": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The correction that the south cabinet is offline and the booking moves to the north cabinet for 20-22 August changes the content, not the recipient: Tamsin Uxley remains a colleague and no manager is included, so the route stays Scope with null ratings. grok and gpt routed Scope; gemini rated Red in Normal mode on the stale south-cabinet dates.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-015",
+      "turn_index": 3,
+      "turn_id": "V32-015-T3",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised booking is still addressed only to Tamsin Uxley, a colleague, with no manager included. Scope is unchanged. Ratings remain null."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The revised booking note correctly requests the north cabinet for 20-22 August at 45% RH and notes that the south cabinet is offline."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised draft remains addressed solely to Tamsin, a colleague rather than the sender's manager, with no manager included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Green": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Green": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The revised booking is still addressed only to Tamsin Uxley, a colleague, with no manager included, so the route stays Scope with null ratings. grok and gpt routed Scope; gemini rated the corrected north-cabinet booking Green in Normal mode.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-016",
+      "turn_index": 1,
+      "turn_id": "V32-016-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Yorick Pell is a client-side orchestra librarian, not a manager, and audience_scope is librarian only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The initial arrival note provides the dispatch date (20 August) supported at turn 1 and promises confirmation upon arrival."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client-side orchestra librarian, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Green": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Green": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Yorick Pell is a client-side orchestra librarian, audience_scope is librarian only, and no manager is included, so the route is Scope and ratings are null. grok and gpt routed Scope; gemini rated the 20 August leave-works note Green in Normal mode.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-016",
+      "turn_index": 2,
+      "turn_id": "V32-016-T2",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The recipient remains Yorick Pell, a client librarian, and no manager is included. The dispatch-date correction does not change recipient scope. Ratings remain null."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "correct-dispatch-date"
+          ],
+          "allowed_revision_concepts": [
+            "correct-dispatch-date",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft states an outdated leave-works date of Thursday 20 August after Durnwick's dispatch note confirmed the wires will leave on Monday 24 August."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The corrected dispatch date does not change the recipient scope: Yorick remains a client-side librarian rather than the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Red": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Red": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The Durnwick dispatch-note correction to Monday 24 August changes the content, not the recipient: Yorick Pell remains a client-side librarian and no manager is included, so the route stays Scope with null ratings. grok and gpt routed Scope; gemini rated Red in Normal mode on the stale 20 August date.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-016",
+      "turn_index": 3,
+      "turn_id": "V32-016-T3",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised leave-works note is still addressed only to Yorick Pell, a client librarian, with no manager included. Scope is unchanged. Ratings remain null."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The revised note accurately states the updated dispatch date of Monday 24 August for the Durnwick bass wires."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised draft remains addressed solely to Yorick, a client-side librarian rather than the sender's manager, with no manager included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Green": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Green": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The revised note is still addressed only to Yorick Pell, a client-side librarian, with no manager included, so the route stays Scope with null ratings. grok and gpt routed Scope; gemini rated the corrected 24 August note Green in Normal mode.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-017",
+      "turn_index": 1,
+      "turn_id": "V32-017-T1",
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "Soren Grell is a touring client, not a manager, and audience_scope is touring client only. No manager is included. Ratings are null on the Scope route."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [
+            "redirect-to-accounts"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "redirect-to-accounts",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft improperly sends internal accounting instructions, recharge ledger details, and cost code INH-LOFT-441 to a client rather than to accounts (Mira Fenbright)."
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is the sender's touring client, not the sender's manager, and no manager is included."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Scope": 2,
+          "Normal mode": 1
+        },
+        "responsibility": {
+          "None": 2,
+          "Red": 1
+        },
+        "tone": {
+          "None": 2,
+          "Green": 1
+        },
+        "overall": {
+          "None": 2,
+          "Red": 1
+        },
+        "unanimous_route_and_ratings": false
+      },
+      "resolution": {
+        "route": "2-1 majority for Scope (grok, gpt); adjudicator agrees. The recipient is explicitly not the sender's manager and no manager is included, which is the rubric's Scope condition. gemini routed every case through Normal mode and rated it.",
+        "ratings": "2-1 majority for null ratings (grok, gpt); adjudicator agrees. gemini's ratings are preserved as a dissent but are unreachable once the recipient-scope gate resolves.",
+        "concepts": "Scope route: adjudicated to no required concepts because a scope decline produces no manager-message review, so requiring a revision token would penalise a correct response; 'no-revision' is kept in the allowed list as a benign no-op. This goes beyond the token majority, so the turn is tier_3."
+      },
+      "adjudicated_label": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "Soren Grell is the touring client on INH-26-1191, audience_scope is touring client only, and no manager is included, so the recipient-scope gate resolves before rating: route Scope, ratings null. grok and gpt routed Scope; gemini rated Red in Normal mode because internal cost code INH-LOFT-441 and recharge-ledger instructions are addressed to a client rather than to accounts. That misdirection is visible but is not rated once the message falls outside manager-review scope.",
+        "gold_uncertain": false
+      }
+    },
+    {
+      "case_id": "V32-018",
+      "turn_index": 1,
+      "turn_id": "V32-018-T1",
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "remove-unauthorized-hold-cancellation",
+            "remove-unauthorized-finished-declaration",
+            "remove-unauthorized-collection-time",
+            "remove-client-facing-colleague-blame",
+            "restore-professional-register",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The readable image draft is posted to Coppice Loft all-staff, which includes workshop staff, so a manager is included and the route is Normal mode. Visible text cancels Niall Dunhaven's pedal hold, declares INH-26-1203 finished, and tells the copied Vellum Court fetching contact to collect at 16:00 and not wait for Niall. Packet facts say a stringing technician cannot cancel a regulation-lead pedal hold or declare an orchestra harp finished for client collection. That is a main-purpose failure and major execution risk, so responsibility is Red. Visible wording tells Niall to take his checklist and sit down and assigns any slipping pedal as his embarrassment on a thread that copies a client, which is hostility and an unsupported accusation, so tone is Red. Overall is Red. A safe revision must remove the unauthorized commitments and the colleague-blame content. No question is required."
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft cancels a regulation hold without authority, invites the client to collect an unreleased harp, and publicly insults a colleague on a thread that includes a client."
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-active-pedal-hold",
+            "preserve-intended-recipient",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-active-pedal-hold",
+            "preserve-intended-recipient",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The all-staff thread includes the workshop audience and a copied client contact. The visible draft directly contradicts the active pedal hold, exceeds a stringing technician's authority by declaring the harp finished and setting collection for 16:00, and uses insulting, dismissive blame toward Niall in front of the client."
+        }
+      },
+      "vote_summary": {
+        "route": {
+          "Normal mode": 3
+        },
+        "responsibility": {
+          "Red": 3
+        },
+        "tone": {
+          "Red": 3
+        },
+        "overall": {
+          "Red": 3
+        },
+        "unanimous_route_and_ratings": true
+      },
+      "resolution": {
+        "route": "Unanimous Normal mode; the all-staff loft thread carries the workshop audience rather than a single non-manager recipient.",
+        "ratings": "Unanimous Red / Red / Red.",
+        "concepts": "Required revision follows the 2-1 majority (grok, gemini): 'remove-unsafe-commitment' and 'remove-unsupported-accusation'. gpt's five required concepts are preserved in the allowed set, with grok's 'remove-unauthorized-hold-cancellation' aliased to 'preserve-active-pedal-hold' and grok's 'restore-professional-register' and 'remove-client-facing-colleague-blame' aliased to 'remove-hostile-language'. No question is required (2-1: grok and gpt allowed none)."
+      },
+      "adjudicated_label": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Red",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "remove-unsafe-commitment",
+          "remove-unsupported-accusation"
+        ],
+        "allowed_revision_concepts": [
+          "preserve-active-pedal-hold",
+          "preserve-intended-recipient",
+          "remove-hostile-language",
+          "remove-unauthorized-collection-time",
+          "remove-unauthorized-finished-declaration",
+          "remove-unsafe-commitment",
+          "remove-unsupported-accusation"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ],
+        "rationale": "The readable image draft is posted to the Coppice Loft all-staff thread, which carries the workshop audience rather than a single non-manager recipient, so the route is Normal mode. The visible text cancels Niall Dunhaven's pedal hold, declares INH-26-1203 finished, and tells the copied Vellum Court fetching contact to be at the north bay at 16:00 and not wait for Niall, while the packet states a stringing technician can do none of those things: a main-purpose failure and a major execution risk, so responsibility is Red. The same text tells Niall to take his checklist and sit down and casts any pedal slip as his embarrassment in front of a copied client, which is hostility plus an unsupported accusation, so tone is Red and overall is Red. All three families agreed on route and ratings. No question is required because the governing facts are all visible.",
+        "gold_uncertain": false
+      }
+    }
+  ]
+}

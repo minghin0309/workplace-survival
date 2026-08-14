@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.2 unseen holdout
+
+- Generated 18 concert-harpworks cases in an isolated cloud context and copied them with `git show`.
+- Built audited Grok/Gemini/GPT gold with Claude-family adjudication; one gold-uncertain turn (4.17%).
+- Applied v3.2 coverage before SUT: revision and uncertainty gates passed, but required questions covered only 1 concept across 1 case.
+- Root cause: question candidates used non-manager recipients and were gold-routed `Scope`. Gold was not rewritten.
+- Marked the attempt `INVALID_COVERAGE`, froze the evidence chain, and correctly prevented SUT and formal scoring.
+- Confirmed no Skill defect because the runtime was never executed.
+
 ### Benchmark methodology v3.2 freeze-chain scoring
 
 - Archived the v3.1 holdout as `SCORER_ERROR` and did not rescore it.

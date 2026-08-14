@@ -1,0 +1,694 @@
+{
+  "labeler_id": "gold-labeler-3",
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "model_family": "gpt",
+  "case_count": 18,
+  "turn_count": 24,
+  "local_concept_definitions": {
+    "confirmed-job-identifier": {
+      "domain": "question",
+      "description": "Ask for the confirmed job identifier that belongs to the instrument or work being discussed."
+    },
+    "preserve-active-pedal-hold": {
+      "domain": "revision",
+      "description": "Keep the confirmed regulation-lead pedal hold in force rather than claiming it has been cancelled."
+    },
+    "preserve-confirmed-pitch": {
+      "domain": "revision",
+      "description": "Keep the confirmed pitch reading and observation time unchanged."
+    },
+    "remove-hostile-language": {
+      "domain": "revision",
+      "description": "Remove insults, dismissive commands, or hostile language about a colleague."
+    },
+    "replace-incorrect-job-identifier": {
+      "domain": "revision",
+      "description": "Replace the contradicted job identifier with the user-confirmed job identifier."
+    }
+  },
+  "cases": [
+    {
+      "case_id": "V32-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The draft is addressed to Ellis's direct line manager and accurately reports the completed restring, cabinet rest, stable pitch, and confirmed Monday pedal-check slot in a professional tone."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is identified as a colleague who assigns cabinet slots, not as the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a supplier dispatch contact, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client-side orchestra librarian, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client principal harpist, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The intended recipient is a client-side contractual contact, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a colleague who leads pedal regulation, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The image addresses a stores-clerk colleague rather than the sender's manager, and no manager is included; the occluded diameter is not inferred or reproduced."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is the sender's touring client, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client-side orchestra librarian, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is explicitly a colleague and not the sender's report or manager; no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a stores-clerk colleague, not the sender's manager; mentioning Rowan as a possible future audience does not include him as a recipient."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client principal harpist, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "confirmed-job-identifier"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-job-identifier"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-pitch",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-pitch",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The note is to Ellis's direct manager and is professional, but the available facts do not confirm the job identifier for the Conservatoire restring, so the draft's INH-26-1170 identifier cannot yet be validated."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-pitch",
+            "preserve-intended-recipient",
+            "replace-incorrect-job-identifier"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-pitch",
+            "preserve-intended-recipient",
+            "replace-incorrect-job-identifier"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The user confirms that INH-26-1184 is the Conservatoire restring and that INH-26-1170 is the south-bay column-regild, but the unchanged draft still assigns INH-26-1170 to Monday's pedal check; that direct contradiction defeats the note's main purpose. The tone remains professional."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised note to Ellis's direct manager uses the confirmed INH-26-1184 identifier, preserves the Monday pedal-check slot and stable-pitch fact, and keeps INH-26-1170 in the south bay in a professional tone."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a colleague who assigns cabinet slots, not the sender's manager, and no manager is included."
+        },
+        {
+          "turn_index": 2,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The corrected background does not change the recipient scope: Tamsin remains a colleague rather than the sender's manager, and no manager is included."
+        },
+        {
+          "turn_index": 3,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised draft remains addressed solely to Tamsin, a colleague rather than the sender's manager, with no manager included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is a client-side orchestra librarian, not the sender's manager, and no manager is included."
+        },
+        {
+          "turn_index": 2,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The corrected dispatch date does not change the recipient scope: Yorick remains a client-side librarian rather than the sender's manager, and no manager is included."
+        },
+        {
+          "turn_index": 3,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The revised draft remains addressed solely to Yorick, a client-side librarian rather than the sender's manager, with no manager included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The sole recipient is the sender's touring client, not the sender's manager, and no manager is included."
+        }
+      ]
+    },
+    {
+      "case_id": "V32-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-active-pedal-hold",
+            "preserve-intended-recipient",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-active-pedal-hold",
+            "preserve-intended-recipient",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected",
+            "no-image-token-guess"
+          ],
+          "rationale": "The all-staff thread includes the workshop audience and a copied client contact. The visible draft directly contradicts the active pedal hold, exceeds a stringing technician's authority by declaring the harp finished and setting collection for 16:00, and uses insulting, dismissive blame toward Niall in front of the client."
+        }
+      ]
+    }
+  ]
+}
