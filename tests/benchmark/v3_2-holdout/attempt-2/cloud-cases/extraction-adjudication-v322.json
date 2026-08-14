@@ -1,0 +1,1849 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "gold-blind-extraction-adjudication",
+  "source_extractors": [
+    {
+      "extractor": 1,
+      "context_id": "bc-67e42ce2-6f4b-52df-af72-2ab315f76639",
+      "model_family": "grok",
+      "source_path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/extractor-1-raw.json",
+      "sha256": "980fb48b53ca2e6ed41c1273b6f27f06bdd142c2cd04d21fa2ba31bc33bde677"
+    },
+    {
+      "extractor": 2,
+      "context_id": "bc-8c33fcfe-893c-57f6-b785-2a00056f1ad6",
+      "model_family": "gemini",
+      "source_path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/extractor-2-raw.json",
+      "sha256": "e76c023d11fba1936132c9a56a67d07804d98be8a43df44c7d21678f25f7e9a5"
+    }
+  ],
+  "adjudicator": {
+    "context_id": "bc-b290cc8b-0d7d-57fb-9226-34119105ae74",
+    "model_id": "unverified",
+    "model_family": "gpt"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/extractor-visible.json",
+    "sha256": "97d1a3e6cbd3cfd8b6d80bf4a0df4f0131846e559a950665055a94c9d86d2a1f"
+  },
+  "cases": [
+    {
+      "case_id": "V322-001",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-002",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Extractor-1's finer faithful revision-claim split was retained; route, ratings, and invariants agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-003",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-004",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim counts and evidence agree; extractor-1's detailed faithful claim wording was retained. Route, ratings, and invariants agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-005",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-006",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-007",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim counts and evidence agree; extractor-1's detailed faithful claim wording was retained. Route, ratings, and invariants agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-008",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Intake",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Intake",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Intake",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-009",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Extractor-1's finer faithful revision-claim split was retained; route, ratings, and invariants agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-010",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 4
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 4
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Extractor-1's finer faithful revision-claim split was retained; route, ratings, and invariants agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-011",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Yellow",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 2
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Extractor-1's finer faithful revision-claim split was retained; route, ratings, and invariants agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-012",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 2,
+              "revision_claims": 6
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 2,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 2,
+              "revision_claims": 6
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Extractor-1's finer faithful revision-claim split was retained; route, ratings, and invariants agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-013",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Yellow",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Yellow",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Yellow",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim counts and evidence agree; extractor-1's detailed faithful claim wording was retained. Route, ratings, and invariants agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-014",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-015",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-016",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Yellow",
+              "tone": "Green",
+              "overall": "Yellow"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Yellow",
+              "tone": "Green",
+              "overall": "Yellow"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Yellow",
+              "tone": "Green",
+              "overall": "Yellow"
+            },
+            "claim_counts": {
+              "question_claims": 1,
+              "revision_claims": 2
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Extractor-1's finer faithful revision-claim split was retained; route, ratings, and invariants agree."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-017",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Scope",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Scope",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Scope",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 0
+            },
+            "claims_taken_from": "both",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Claim lists are identical; route, ratings, and invariants also agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-018",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 4
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 1
+            },
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "resolution": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "claim_counts": {
+              "question_claims": 0,
+              "revision_claims": 4
+            },
+            "claims_taken_from": "extractor-1",
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "unresolved_claim_disagreements": 0
+          },
+          "notes": "Extractor-1's finer faithful revision-claim split was retained; route, ratings, and invariants agree."
+        }
+      ]
+    }
+  ]
+}
