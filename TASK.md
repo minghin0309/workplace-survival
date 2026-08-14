@@ -315,7 +315,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.10 — Fresh benchmark v3.1 unseen holdout
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Measure unseen-case performance with methodology v3 plus the v3.1 question-case construction contract. No product behavior change during scoring.
 - Owner files: `tests/benchmark/v3_1-holdout/`, `TASK.md`, `CHANGELOG.md`.
@@ -326,7 +326,24 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3 scorer invocation;
   - preregistered metrics and failures are preserved without modifying gold or runtime Skill files.
 - Evidence: gold/output manifests, protocol audits, source index, delivery log, score report.
-- Progress: gold, SUT, extraction, and evaluation snapshots are frozen; the single v3 scorer invocation recorded `SCORER_ERROR` (`manifest schema`) and was not rerun.
+- Progress: archived as `SCORER_ERROR` after one v3 scorer invocation (`manifest schema`); not rerun.
+
+#### T14.11 — Benchmark methodology v3.2 freeze-chain scoring
+
+- [x] Completed
+
+- Source requirement: Preserve the v3.1 `SCORER_ERROR` outcome and score v3.1-compatible freeze documents without requiring a v2 exact-key manifest. Gold freeze must include ontology. No product behavior change.
+- Owner files: `tests/benchmark/v3_2/`, `TASK.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - v3.1 remains archived and is never rescored;
+  - extra freeze-document keys are allowed and `version` `3.1`/`3.2` is accepted;
+  - a gold freeze without `ontology` is `INVALID_SCORING_INPUT`;
+  - v2 manifests are rejected;
+  - zero denominators remain `NOT_APPLICABLE`;
+  - every scorer invocation writes one immutable success or failure envelope;
+  - unit and mutation tests kill extra-key rejection, optional-ontology, and missing-envelope defects;
+  - validation uses synthetic fixtures and does not supply v2/v3.1 holdout artifacts.
+- Evidence: v3.2 methodology contract, unit results, mutation results, validation report, and empty runtime diff.
 
 ## Task template
 

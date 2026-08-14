@@ -4,6 +4,17 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Benchmark methodology v3.2 freeze-chain scoring
+
+- Archived the v3.1 holdout as `SCORER_ERROR` and did not rescore it.
+- Added a v3.2 scorer that validates evaluation → outputs → gold freeze documents itself and never calls v2 `main()`.
+- Allowed extra freeze keys and `version` `3.1`/`3.2`; rejected v2 manifests.
+- Required gold freeze roles `gold`, `ontology`, and `scorer`. Missing ontology is `INVALID_SCORING_INPUT`.
+- Kept v3 metric policy: zero denominators are `NOT_APPLICABLE`; coverage gates run first; reports are immutable.
+- Passed 12 synthetic unit tests and killed all 3 targeted scorer mutants.
+- Confirmed no Skill, v2, v3 scorer, or v3.1 holdout files changed.
+- Formal v3.2 scoring still requires a fresh unseen holdout.
+
 ### Fresh benchmark v3.1 single v3 scorer invocation
 
 - Invoked frozen `score_semantic_v3.py` once against the evaluation snapshot.
