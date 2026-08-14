@@ -347,7 +347,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.12 — Fresh benchmark v3.2 unseen holdout
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Measure unseen-case performance with methodology v3.2. Gold freeze must include ontology and the v3.2 scorer. No product behavior change during scoring.
 - Owner files: `tests/benchmark/v3_2-holdout/`, `TASK.md`, `CHANGELOG.md`.
@@ -359,6 +359,8 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.2 scorer invocation;
   - v3.1 is not rescored and runtime Skill files are not modified.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.2 score report.
+- Progress: archived as `INVALID_COVERAGE` after gold freeze; SUT and the v3.2 scorer were not invoked. Question candidates used non-manager recipients and gold-routed `Scope`. Gold was not rewritten.
+
 
 ## Task template
 

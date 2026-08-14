@@ -1,0 +1,40 @@
+{
+  "schema_version": "v3.2-gold-protocol-audits",
+  "suite_id": "v32-holdout-cloud-attempt1",
+  "copy_method": "git show",
+  "merged_isolated_branches": false,
+  "labelers": [
+    {
+      "family": "grok",
+      "source_branch": "cursor/v32-gold-labeler-grok-17a0",
+      "source_commit": "795d5b4abd70fdf716938558aae3ca639373ffb3",
+      "question_design_accessed": false,
+      "skill_files_accessed": false
+    },
+    {
+      "family": "gemini",
+      "source_branch": "cursor/v32-gold-labeler-gemini-17a0",
+      "source_commit": "cc92b2de448df6d794972a579866a04c8c365f7d",
+      "question_design_accessed": false,
+      "skill_files_accessed": false
+    },
+    {
+      "family": "gpt",
+      "source_branch": "cursor/v32-gold-labeler-gpt-17a0-f8ea",
+      "source_commit": "e1d80857d19558b133016d3b1a58a42b88feb106",
+      "question_design_accessed": false,
+      "skill_files_accessed": false
+    }
+  ],
+  "adjudicator": {
+    "family": "claude",
+    "source_branch": "cursor/v32-gold-adjudicator-claude-17a0-9afb",
+    "source_commit": "0858de47c48743ae1c237d8e9e029e60eeeb573a",
+    "question_design_accessed": false,
+    "skill_files_accessed": false,
+    "protocol_deviation": "one ls of cloud-cases file names; non-allowlisted contents not read"
+  },
+  "coverage_status": "INVALID_COVERAGE",
+  "sut_execution_authorized": false,
+  "formal_scorer_invocations": 0
+}
