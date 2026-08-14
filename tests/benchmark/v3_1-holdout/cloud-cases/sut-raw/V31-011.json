@@ -1,0 +1,29 @@
+{
+  "schema_version": "v3.1",
+  "case_id": "V31-011",
+  "output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- The QM-2031-0503 delivery to Thurlow & Vane missed its date by two days.\n- The commercial desk released the order to the workroom late.\n- Supplier approvals belong to Dane Krivec's commercial desk, not the coordinator.\n- The workroom manager owns the scheduling rules and the written explanation to Thurlow & Vane; no explanation has been sent yet.\n- The workroom manager sets the coordinator's hours, so the coordinator cannot pledge them.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says the miss is entirely \"on me,\" takes supplier approvals from Dane, promises to rewrite manager-owned scheduling rules, says future slips will come from the coordinator's hours, and claims Thurlow was told this even though nothing has been sent. Each conflicts with the confirmed ownership, constraint, or status.\n- Communication risk: Marit could understand that the coordinator has assumed authority and commitments that belong to the commercial desk or workroom manager, and that a client communication occurred when it did not.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"You do not need to look at this again\" dismisses Marit's involvement even though she owns the scheduling rules and client explanation.\n- Communication risk: The wording may imply that the coordinator is excluding the manager from decisions and work she owns.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nMarit - the Thurlow & Vane delivery on QM-2031-0503 missed its date by two days. The order was released to the workroom late by the commercial desk. Supplier approvals remain with Dane's commercial desk. The workroom scheduling rules and the written explanation to Thurlow & Vane remain with you; nothing has been sent to Thurlow yet.",
+  "provenance": {
+    "input": {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-011.json",
+      "sha256": "9abc47cb2256907ee14498a7d7947c5a109bb51d2e2c4b376e83c7f0b9ed5d45"
+    },
+    "runtime_skill_files": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "7c8303b47a134b31d27d63b56512d873474a0ad6e40f8b4e008330d900647d66"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "ab8a62a946d589cfa4813862d11b8cd70af64dfad27814ba3ab5068ea4cbca56"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "c67b48d6cd1532af4d2f0d5cb1d5d61b6528e5583853f2afe9da4881f009c198"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "dfe8862fa96430fd9f5c2e8ef2ad7c683afdcf4b9c17fe2d513889584689ee77"
+      }
+    ]
+  }
+}
