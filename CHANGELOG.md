@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.1 gold-blind extraction freeze
+
+- Copied Claude and Gemini extractor blobs plus GPT adjudication from dedicated branches with `git show`; did not merge those branches.
+- Covered 18 cases / 24 turns with exact-span claims; 0 unresolved disagreements.
+- Kept Claude's 8 question / 51 revision claims after 10 count disagreements.
+- Recorded transcript audits: no gold/oracle/ontology/scorer/image opens; shared-checkout harness collision is `PASS_WITH_PROCEDURAL_DEVIATION`.
+- Froze 15 extraction artifacts against outputs manifest `993eb2a0…`.
+- Matching and formal scoring have not started. Runtime Skill files were not modified.
+
 ### Fresh benchmark v3.1 isolated SUT freeze
 
 - Executed 18 cases / 24 turns in distinct cloud contexts after valid gold coverage.

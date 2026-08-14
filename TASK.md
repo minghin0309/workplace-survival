@@ -326,7 +326,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3 scorer invocation;
   - preregistered metrics and failures are preserved without modifying gold or runtime Skill files.
 - Evidence: gold/output manifests, protocol audits, source index, delivery log, score report.
-- Progress: gold freeze and SUT output freeze are done; extraction, matching, and scoring are not.
+- Progress: gold freeze, SUT output freeze, and extraction snapshot freeze are done; matching and scoring are not.
 
 ## Task template
 
