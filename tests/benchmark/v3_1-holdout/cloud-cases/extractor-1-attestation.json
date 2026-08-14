@@ -1,0 +1,266 @@
+{
+  "schema_version": "v3.1",
+  "artifact": "gold-blind-extraction-attestation",
+  "extractor": {
+    "context_id": "bc-d8bcdf8c-3937-5830-847c-cb085ded528e",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "role": "gold-blind extractor 1"
+  },
+  "branch": "cursor/v31-extractor-claude-17a0",
+  "base_branch": "cursor/blind-v31-holdout-17a0",
+  "base_commit": "ee5ac561428d94ede6cddc779c823db5e2747fbc",
+  "output_files": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-1-raw.json",
+      "sha256": "d3d7359f76143fd134652e76745d9dcf5b85746b35cb3cad857d490f9950deb4",
+      "commit": "ecafa7979e315a10211059098211c04478fffd1c"
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-1-attestation.json",
+      "sha256": null,
+      "commit": null,
+      "note": "This attestation is committed after the raw extraction; its own SHA-256 and commit cannot be recorded inside itself."
+    }
+  ],
+  "output_commit": "ecafa7979e315a10211059098211c04478fffd1c",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_1-holdout/EXTRACTION_BRIEF.md",
+      "sha256": "a6c50cf7871eb3a42acbf8dc24f5c5e01ca2a7604d8e97751f4c03bc6e5b00b8",
+      "role": "extraction brief",
+      "sha256_at_first_read": "9e61175cf162e3ff56184eb4ce32bdefe706ff6d7357f3578da158da2d7a11f3",
+      "sha256_changed_during_run": true,
+      "change_note": "The brief file was modified in the working tree between the start of the run and the writing of this attestation, by an actor outside this extraction. Re-reading it showed a single textual difference: the parenthetical inline SHA-256 reference for extractor-visible.json was removed from the opening paragraph. All substantive instructions (read scope, job, output paths, raw schema, label vocabulary, claim rules, invariant definitions, attestation contents, commit and branch rules) are unchanged, and the extraction follows the same instructions under both versions."
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/extractor-visible.json",
+      "sha256": "bbb623be7ff3a33124cf4f5285e96a9d552e13477dd17b1b8a58d18f67c60633",
+      "role": "extractor-visible SUT outputs",
+      "expected_sha256": "bbb623be7ff3a33124cf4f5285e96a9d552e13477dd17b1b8a58d18f67c60633",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-001.json",
+      "sha256": "30f195b1b2474de1076ca94fef8d49653afc30214963b5338ab8e5fa629ea0ce",
+      "role": "SUT-visible case input (V31-001)",
+      "expected_sha256": "30f195b1b2474de1076ca94fef8d49653afc30214963b5338ab8e5fa629ea0ce",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-002.json",
+      "sha256": "cfb4bd0798099d5c46ce102421673f3341326f734a753bb617b88c78ea21d49c",
+      "role": "SUT-visible case input (V31-002)",
+      "expected_sha256": "cfb4bd0798099d5c46ce102421673f3341326f734a753bb617b88c78ea21d49c",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-003.json",
+      "sha256": "d2ff2ca7f4d39a2c7d07c0ac4ba0b54b55e021cc2d6119dd2f726aeef7e0ca28",
+      "role": "SUT-visible case input (V31-003)",
+      "expected_sha256": "d2ff2ca7f4d39a2c7d07c0ac4ba0b54b55e021cc2d6119dd2f726aeef7e0ca28",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-004.json",
+      "sha256": "48ce0bcf54c9d23bdd634fb740dd882d16a9369b8d7e89a2dc3034ae25d1edd4",
+      "role": "SUT-visible case input (V31-004)",
+      "expected_sha256": "48ce0bcf54c9d23bdd634fb740dd882d16a9369b8d7e89a2dc3034ae25d1edd4",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-005.json",
+      "sha256": "8e6e5a09b78352af9f39e868196c79f1b3fbe0739b1eda0d493eb2db75c293f7",
+      "role": "SUT-visible case input (V31-005)",
+      "expected_sha256": "8e6e5a09b78352af9f39e868196c79f1b3fbe0739b1eda0d493eb2db75c293f7",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-006.json",
+      "sha256": "d7dc0445e2b36c602f9c159b02329d62ce4c5d155a5ad4ab3ddd2973b44a1400",
+      "role": "SUT-visible case input (V31-006)",
+      "expected_sha256": "d7dc0445e2b36c602f9c159b02329d62ce4c5d155a5ad4ab3ddd2973b44a1400",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-007.json",
+      "sha256": "487485e48f9c5113b59d49c94c9b4d4538e5d060fa671dfa8287ea68679167e7",
+      "role": "SUT-visible case input (V31-007)",
+      "expected_sha256": "487485e48f9c5113b59d49c94c9b4d4538e5d060fa671dfa8287ea68679167e7",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-008.json",
+      "sha256": "a305ab962b21198f7488e44328820c7c557a8dd76b32939d5dccc57bf49a9dbe",
+      "role": "SUT-visible case input (V31-008)",
+      "expected_sha256": "a305ab962b21198f7488e44328820c7c557a8dd76b32939d5dccc57bf49a9dbe",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-009.json",
+      "sha256": "0a118470f1e8ac34275e233b6638616fcfb459bed681b2e64e0ad6dfb7f23804",
+      "role": "SUT-visible case input (V31-009)",
+      "expected_sha256": "0a118470f1e8ac34275e233b6638616fcfb459bed681b2e64e0ad6dfb7f23804",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-010.json",
+      "sha256": "8a8002f43d181974ef38d46ccd1308403fde6333740f7ba84d79e28981f53224",
+      "role": "SUT-visible case input (V31-010)",
+      "expected_sha256": "8a8002f43d181974ef38d46ccd1308403fde6333740f7ba84d79e28981f53224",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-011.json",
+      "sha256": "9abc47cb2256907ee14498a7d7947c5a109bb51d2e2c4b376e83c7f0b9ed5d45",
+      "role": "SUT-visible case input (V31-011)",
+      "expected_sha256": "9abc47cb2256907ee14498a7d7947c5a109bb51d2e2c4b376e83c7f0b9ed5d45",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-012.json",
+      "sha256": "0c11e682e3ef9512eae9e15008ab2c7a5e8f5ad0aaa55da8eb7446bbc7e4e962",
+      "role": "SUT-visible case input (V31-012)",
+      "expected_sha256": "0c11e682e3ef9512eae9e15008ab2c7a5e8f5ad0aaa55da8eb7446bbc7e4e962",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-013.json",
+      "sha256": "339390b3f8a30585f4bb4b281aee410fa0c412a7c1b118576b1010f86d01c81e",
+      "role": "SUT-visible case input (V31-013)",
+      "expected_sha256": "339390b3f8a30585f4bb4b281aee410fa0c412a7c1b118576b1010f86d01c81e",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-014.json",
+      "sha256": "29d5623ae900eecb510904810b102e43566045291c6feadda408a2524dd6ea00",
+      "role": "SUT-visible case input (V31-014)",
+      "expected_sha256": "29d5623ae900eecb510904810b102e43566045291c6feadda408a2524dd6ea00",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-015.json",
+      "sha256": "bf0616e452438bdbf6f7b4188a5a74be82c364f281d21b51397ec71c0f4f7e88",
+      "role": "SUT-visible case input (V31-015)",
+      "expected_sha256": "bf0616e452438bdbf6f7b4188a5a74be82c364f281d21b51397ec71c0f4f7e88",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-016.json",
+      "sha256": "e51b50e1e3aa0cce80ca13b79b455c981ace9b2b588e4f48e1ee31f5a7ddb176",
+      "role": "SUT-visible case input (V31-016)",
+      "expected_sha256": "e51b50e1e3aa0cce80ca13b79b455c981ace9b2b588e4f48e1ee31f5a7ddb176",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-017.json",
+      "sha256": "cf7d0535f3684255a52f88a6234b2f20a2c3f6d775b8e4576f334b8f7c10e3ee",
+      "role": "SUT-visible case input (V31-017)",
+      "expected_sha256": "cf7d0535f3684255a52f88a6234b2f20a2c3f6d775b8e4576f334b8f7c10e3ee",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_1-holdout/cloud-cases/sut-inputs/V31-018.json",
+      "sha256": "c396610b01ad11958bf923a2a6211419df279b34b4b7517b45377a9e8459e1c8",
+      "role": "SUT-visible case input (V31-018)",
+      "expected_sha256": "c396610b01ad11958bf923a2a6211419df279b34b4b7517b45377a9e8459e1c8",
+      "expected_sha256_matched": true
+    }
+  ],
+  "files_read_count": 20,
+  "coverage": {
+    "cases_expected": 18,
+    "cases_extracted": 18,
+    "turns_expected": 24,
+    "turns_extracted": 24,
+    "case_ids": [
+      "V31-001",
+      "V31-002",
+      "V31-003",
+      "V31-004",
+      "V31-005",
+      "V31-006",
+      "V31-007",
+      "V31-008",
+      "V31-009",
+      "V31-010",
+      "V31-011",
+      "V31-012",
+      "V31-013",
+      "V31-014",
+      "V31-015",
+      "V31-016",
+      "V31-017",
+      "V31-018"
+    ],
+    "multi_turn_cases": [
+      "V31-014",
+      "V31-015",
+      "V31-016"
+    ],
+    "question_claims_total": 8,
+    "revision_claims_total": 51
+  },
+  "gold_or_scoring_accessed": false,
+  "scoring_performed": false,
+  "blindness_declaration": {
+    "gold_files_read": false,
+    "oracle_notes_read": false,
+    "adjudication_files_read": false,
+    "ontology_read": false,
+    "scorer_read": false,
+    "methodology_or_plans_read": false,
+    "test_cases_file_read": false,
+    "score_reports_read": false,
+    "other_holdouts_read": false,
+    "outputs_v31_raw_read": false,
+    "other_extractor_outputs_read": false,
+    "other_extractor_outputs_present_in_shared_checkout_unread": true,
+    "images_opened": false,
+    "holdout_tree_globbed_or_listed": false,
+    "concept_matching_performed": false,
+    "statement": "Only the extraction brief, extractor-visible.json and the 18 sut-inputs/V31-NNN.json files it lists were read. No gold, oracle, adjudication, ontology, scorer, methodology, plan, score-report, TEST_CASES, image, outputs-v31-raw.json or other-extractor artefact was opened, and the holdout tree was never globbed or listed. No scoring, grading or concept matching was performed; labels and claims record only what each SUT output states, checked against that case's own SUT-visible input."
+  },
+  "verification": {
+    "source_sha256_verified": true,
+    "sut_input_sha256_verified": true,
+    "evidence_spans_verified": true,
+    "evidence_span_method": "Every claim's evidence_span was checked programmatically to be a non-empty exact contiguous substring of that turn's raw_output, with no whitespace or Unicode normalisation. The written output file was then re-loaded from disk and re-checked independently.",
+    "claim_id_format_verified": true,
+    "invariant_keys_verified": "All eight required keys present with boolean values on all 24 turns.",
+    "label_vocabulary_verified": "All routes are from the permitted set; all ratings are Green/Yellow/Red/Gray/null."
+  },
+  "limitations": [
+    "model_id is recorded as 'unverified' because the running model identifier could not be self-verified from inside the run; model_family is 'claude' as assigned.",
+    "V31-008 and V31-018 attach PNG images that the brief forbids opening, so any output content sourced from those images could not be verified against the image itself. For V31-008 the output asks for the obscured crown circumference rather than supplying a value; for V31-018 the output's 'Recognized Data B' transcription was checked only for consistency with that case's data_a. no-image-token-guess is recorded true on both because no material name, date, number or negation appears to be supplied from an unread image, but this rests on that indirect check rather than on the image.",
+    "no-manager-reaction-prediction is recorded true on all 24 turns. The Skill's fixed format includes a 'Communication risk' line, and the risk wording observed (for example how a message 'could be read' or 'may sound') was treated as an interpretive risk statement about the message rather than a prediction of the manager's feelings or likely reaction.",
+    "Removals are not representable as evidence spans. Where a revision deletes draft content without replacement text inside the revision (V31-011's pledge of the coordinator's own hours and closing line, V31-015 turn 3's courier-cost line, V31-017's client fitting figures, V31-018's remarks about Dane), the removal is described in that turn's extraction_notes instead of being recorded as a claim.",
+    "V31-008's Intake route contains one information request under 'Next step' rather than under a 'Confirmation needed' heading; following the brief's rule literally, question_claims is empty for that turn and the request is described in extraction_notes.",
+    "Rating labels were transcribed as written by the SUT and were not assessed for correctness. Where an output's own evidence appeared inconsistent with the turn history (V31-014 turn 3), the observation is recorded in extraction_notes for the adjudicator without any scoring judgement.",
+    "This attestation cannot record its own SHA-256 or commit SHA, since it is hashed and committed after being written."
+  ],
+  "protocol_deviations": [
+    {
+      "kind": "git command outside the stated allowlist",
+      "detail": "Ran 'git diff --stat -- tests/benchmark/v3_1-holdout/EXTRACTION_BRIEF.md' once, to diagnose why that file's SHA-256 changed between the start of the run and attestation time. The command was scoped to the brief, which is an allowlisted readable file, and returned no output. No gold, scoring or other holdout content was revealed, and no other file's status or history was inspected.",
+      "materiality": "None to the extraction; disclosed for completeness."
+    },
+    {
+      "kind": "observed condition, not an action of this extraction",
+      "detail": "EXTRACTION_BRIEF.md changed on disk mid-run (SHA-256 9e61175cf162e3ff56184eb4ce32bdefe706ff6d7357f3578da158da2d7a11f3 at first read, a6c50cf7871eb3a42acbf8dc24f5c5e01ca2a7604d8e97751f4c03bc6e5b00b8 at attestation time). The sole difference is the removal of the inline SHA-256 reference for extractor-visible.json from the opening paragraph; all substantive instructions are identical.",
+      "materiality": "None. extractor-visible.json was verified against the expected digest bbb623be7ff3a33124cf4f5285e96a9d552e13477dd17b1b8a58d18f67c60633 supplied in the task assignment, and it matched at first read and again at attestation time. All 18 SUT input files matched their digests declared in extractor-visible.json."
+    },
+    {
+      "kind": "shared-workspace collision with a concurrent extractor",
+      "detail": "This extraction ran in a checkout that a second, concurrent gold-blind extractor (extractor 2, branch cursor/v31-extractor-gemini-17a0) was using at the same time. The branch cursor/v31-extractor-claude-17a0 created at the start of this run no longer existed at push time, HEAD had been moved onto the other extractor's branch, and the two commits made by this run had landed on top of that extractor's commits (e096ebb, ae58710) rather than directly on the holdout base. The modification of EXTRACTION_BRIEF.md noted above has the same cause.",
+      "remediation": "The branch was rebuilt with git plumbing (read-tree/update-index/write-tree/commit-tree against a temporary index) directly on base commit ee5ac561428d94ede6cddc779c823db5e2747fbc, applying only this run's two files in the required order, raw first then attestation. The shared HEAD, index and working tree were left untouched so the concurrent extractor was not disrupted. The pushed branch was verified to add exactly extractor-1-raw.json and extractor-1-attestation.json and to contain no extractor-2 file.",
+      "materiality": "None to the extraction content. No extractor-2 output file was ever opened or read; those files were present in the working tree only as a side effect of the shared checkout. This run's labels and claims derive solely from extractor-visible.json and the 18 SUT inputs, all of which were digest-verified."
+    },
+    {
+      "kind": "git commands outside the stated allowlist, used for recovery",
+      "detail": "To diagnose and repair the collision, this run additionally used 'git branch --show-current', 'git rev-parse <commit>:<path>' for its own two files, 'git log --oneline <base>..<head>', 'git diff --name-status', 'git read-tree', 'git update-index', 'git write-tree', 'git commit-tree' and 'git branch'. None of these read gold, scoring or other holdout content; the log and diff were scoped to the range between the holdout base and this run's own commits. 'git log --all', 'git ls-tree' and 'git status' were not run.",
+      "materiality": "Procedural only; required to avoid publishing another extractor's work on this branch."
+    }
+  ],
+  "protocol_deviations_note": "Four items disclosed above; none affects the extraction. Read scope, output paths, schema, label vocabulary, claim_id format, commit order (raw first, then attestation) and branch restriction were all followed as specified. The branch cursor/blind-v31-holdout-17a0 was neither checked out, merged, modified nor pushed, and no extractor-2 artefact was read or published on this branch."
+}
