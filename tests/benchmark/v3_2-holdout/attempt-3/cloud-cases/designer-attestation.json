@@ -1,0 +1,33 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "designer-attestation",
+  "suite_id": "v32-holdout-cloud-attempt3",
+  "cloud_context": {
+    "bcId": "bc-ffee9e5a-2148-50d7-bda6-8c891d9d8c8a",
+    "run_name": "V323 isolated case designer",
+    "repoUrl": "https://github.com/minghin0309/workplace-survival",
+    "source": "internal",
+    "owningUserName": "Ming Hin Ng",
+    "owningUserEmail": "nmhnmh0309@gmail.com"
+  },
+  "model_metadata": {
+    "declared_identity": "Cursor Grok 4.6",
+    "run_info_originalModelName": null
+  },
+  "branch": "cursor/v323-attempt3-cases-k4f2-17a0",
+  "base_branch": "cursor/blind-v323-holdout-17a0",
+  "commit": "6b4303233e36e842e2431a3de1dc6ac72cdea473",
+  "files_read": [
+    "tests/benchmark/v3_2/V32_ATTEMPT3_CASE_BRIEF.md"
+  ],
+  "image_hashes": {
+    "images/V323-008.png": "459063a2f5efaee4e199ec38387887c1374d27a6e0227c613dfae6e37a4ee6d9",
+    "images/V323-018.png": "70b2c7fce7a9d95ea1399cb6defe27167b31d4f38654d5784d28cdac71721c45"
+  },
+  "chosen_domain": "Greaveholt Cold-Cathode Works",
+  "domain_rationale": "The shared workplace fabricates and fills cold-cathode glass sign tubes for shopfront letters (tube bending, bombarding, rare-gas fill). It is not millinery, concert-harp restringing, aerostat or balloon envelope work, ceramics or kiln-clay production, dye works, organ restoration, or any other denylisted domain, and it does not reuse denylisted entity names.",
+  "manager_gate_statement": "V323-017 is the only non-manager recipient. Every other case, including V323-004 through V323-009 and V323-018, is a manager recipient with relationship_to_user exactly 'direct line manager', audience_scope exactly 'manager only', additional_recipients exactly [], and a recipient_role containing 'manager' and none of the forbidden non-manager phrases.",
+  "isolation_statement": "No other repository content was accessed. Runtime Skill files, gold, rubrics, ontology, scorers, tests, prior cases, archive artifacts, holdout plans, pull requests, CHANGELOG, TASK.md, the validator, and PNGs from other directories were not opened. WebSearch and WebFetch were not used for prior case content. PNGs written for this suite were hashed as bytes only and were not opened as images.",
+  "no_other_repository_content_accessed": true,
+  "v323_017_only_non_manager_recipient": true
+}

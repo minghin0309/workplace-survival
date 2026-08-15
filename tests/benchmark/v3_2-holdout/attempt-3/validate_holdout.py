@@ -232,6 +232,8 @@ def main() -> None:
     mutations = json.loads(
         (CLOUD / "construction-mutations.json").read_text(encoding="utf-8")
     )
+    mutation_rows = mutations.get("mutations") or mutations.get("rows")
+    require(isinstance(mutation_rows, list), "construction mutation rows")
     expected_ids = [f"V323-{index:03d}" for index in range(1, 19)]
     require(
         cases["case_count"] == 18
@@ -292,9 +294,9 @@ def main() -> None:
         ),
         "image-only question candidate",
     )
-    require(len(mutations["mutations"]) == 18, "construction mutation count")
+    require(len(mutation_rows) == 18, "construction mutation count")
     by_case = {}
-    for mutation in mutations["mutations"]:
+    for mutation in mutation_rows:
         by_case.setdefault(mutation["case_id"], set()).add(mutation["mutation_type"])
     require(
         all(
