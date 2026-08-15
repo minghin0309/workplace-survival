@@ -5,9 +5,8 @@
 | `suite_id` | `v32-holdout-cloud-attempt3` |
 | Skill runtime | T14.15 `d37540b` |
 | Frozen attempt 2 | do not rescore |
-| Harness | `e62047b` |
-| Designer branch | `cursor/v323-attempt3-cases-k4f2-17a0` @ `261c0bd` (isolated; not merged) |
 | Cases | copied with `git show`; construction `VALID` |
+| Gold labels | grok/gemini/gpt copied with `git show`; not merged |
 | Gold freeze | not written |
 | Coverage | not run |
 | SUT | not invoked |
