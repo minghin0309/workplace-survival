@@ -1,0 +1,1058 @@
+{
+  "gold_id": "gold-v323-raw",
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt3",
+  "case_count": 18,
+  "turn_count": 24,
+  "gold_quality": {
+    "labeler_model_families": ["grok", "gemini", "gpt"],
+    "adjudicator_model_family": "claude",
+    "labeler_files": {
+      "grok": "gold-labeler-1.json",
+      "gemini": "gold-labeler-2.json",
+      "gpt": "gold-labeler-3.json"
+    },
+    "human_review_available": false,
+    "tier_counts": {
+      "tier_1_unanimous": 14,
+      "tier_2_majority": 6,
+      "tier_3_adjudicated": 4,
+      "tier_4_uncertain": 0
+    },
+    "uncertain_turns": 0,
+    "uncertain_turn_fraction": 0.0,
+    "uncertainty_gate": "<=0.20"
+  },
+  "definitions": {
+    "question": {
+      "approval-authority": {
+        "source": "ontology",
+        "description": "Ask who has authority to approve or decide.",
+        "aliases": ["decision-authority", "signoff-owner", "who-can-approve"]
+      },
+      "commitment-scope": {
+        "source": "ontology",
+        "description": "Ask which work, period, or boundary the sender can commit to.",
+        "aliases": ["ownership-boundary", "responsibility-scope", "scope-of-commitment"]
+      },
+      "confirmed-deadline": {
+        "source": "ontology",
+        "description": "Ask for the current confirmed completion or delivery date.",
+        "aliases": ["completion-date", "delivery-date", "due-date", "target-date"]
+      },
+      "confirmed-owner": {
+        "source": "ontology",
+        "description": "Ask who currently owns the work or decision.",
+        "aliases": ["assignee", "responsible-person", "task-owner", "who-is-responsible"]
+      },
+      "recipient-manager-role": {
+        "source": "ontology",
+        "description": "Ask whether the named recipient is acting as the user's manager.",
+        "aliases": ["manager-role-confirmation", "recipient-role"]
+      },
+      "confirmed-collector-name": {
+        "source": "local",
+        "description": "Ask for the confirmed name of the person who will collect the finished unit.",
+        "aliases": ["collection-person", "collector-name", "who-will-collect"]
+      },
+      "collector-identity": {
+        "source": "local",
+        "description": "Alias form of confirmed-collector-name used by one labeler family.",
+        "canonical_id": "confirmed-collector-name"
+      },
+      "confirmed-collector": {
+        "source": "local",
+        "description": "Alias form of confirmed-collector-name used by one labeler family.",
+        "canonical_id": "confirmed-collector-name"
+      },
+      "cylinder-identity": {
+        "source": "local",
+        "description": "Ask for the traceable identity of the argon cylinder used as the gas source.",
+        "aliases": ["cylinder-tag", "gas-source-cylinder"]
+      },
+      "argon-cylinder-identity": {
+        "source": "local",
+        "description": "Alias form of cylinder-identity used by one labeler family.",
+        "canonical_id": "cylinder-identity"
+      },
+      "measured-cold-fill-pressure": {
+        "source": "local",
+        "description": "Ask for the measured cold-fill pressure in mbar required before the fill can be authorised.",
+        "aliases": ["cold-fill-pressure", "measured-pressure", "pressure-reading"]
+      },
+      "selected-repair-path": {
+        "source": "local",
+        "description": "Ask which single permitted repair path the sender selected: redraw from coated stock, replace the electrodes, or scrap and re-invoice.",
+        "aliases": ["chosen-repair-option", "repair-path-selection", "selected-repair-action"]
+      },
+      "chosen-repair-path": {
+        "source": "local",
+        "description": "Alias form of selected-repair-path used by one labeler family.",
+        "canonical_id": "selected-repair-path"
+      },
+      "repair-option-selection": {
+        "source": "local",
+        "description": "Alias form of selected-repair-path used by one labeler family.",
+        "canonical_id": "selected-repair-path"
+      },
+      "weekend-authoriser-name": {
+        "source": "local",
+        "description": "Ask for the name of the person who authorised weekend use of the bombard transformer; a case-specific narrowing of approval-authority.",
+        "canonical_id": "approval-authority"
+      }
+    },
+    "revision": {
+      "no-revision": {
+        "source": "ontology",
+        "description": "No revision is needed for a Green message.",
+        "aliases": ["no-change-needed", "no-revision-needed", "preserve-message"]
+      },
+      "placeholder-unknown-value": {
+        "source": "ontology",
+        "description": "Represent a required unknown value with a descriptive placeholder.",
+        "aliases": ["keep-unknown-placeholder", "required-placeholder", "unresolved-placeholder"]
+      },
+      "preserve-confirmed-deadline": {
+        "source": "ontology",
+        "description": "Keep the confirmed date or deadline unchanged.",
+        "aliases": ["confirmed-date-preserved", "keep-deadline"]
+      },
+      "preserve-confirmed-owner": {
+        "source": "ontology",
+        "description": "Keep the confirmed owner unchanged.",
+        "aliases": ["confirmed-owner-preserved", "keep-owner"]
+      },
+      "preserve-intended-recipient": {
+        "source": "ontology",
+        "description": "Keep the user-identified recipient or audience.",
+        "aliases": ["correct-addressee", "manager-recipient-preserved", "recipient-preserved"]
+      },
+      "qualify-unconfirmed-cause": {
+        "source": "ontology",
+        "description": "State that a cause or attribution remains unconfirmed.",
+        "aliases": ["cause-remains-unknown", "conditional-cause", "uncertain-causation"]
+      },
+      "remove-unsafe-commitment": {
+        "source": "ontology",
+        "description": "Remove or condition a commitment that lacks authority or confirmed scope.",
+        "aliases": ["conditional-ownership", "remove-overcommitment", "scope-commitment"]
+      },
+      "remove-unsupported-accusation": {
+        "source": "ontology",
+        "description": "Remove or neutralize an unsupported blame or intent claim.",
+        "aliases": ["neutralize-blame", "remove-bad-faith-claim", "remove-unconfirmed-accusation"]
+      },
+      "correct-duty-owner": {
+        "source": "local",
+        "description": "Keep the work and accountability with the confirmed signed duty owner instead of transferring it to the manager or an uninvolved colleague.",
+        "aliases": ["lise-performs-own-duty", "signed-duty-owner-retained"]
+      },
+      "lise-performs-own-duty": {
+        "source": "local",
+        "description": "Alias form of correct-duty-owner used by one labeler family.",
+        "canonical_id": "correct-duty-owner"
+      },
+      "remove-duty-refusal": {
+        "source": "local",
+        "description": "Remove the refusal to perform the sender's confirmed bench duty."
+      },
+      "remove-hostile-language": {
+        "source": "local",
+        "description": "Remove insults, sarcasm, contempt, and antagonistic commands while preserving the operational request."
+      },
+      "include-approval-authority": {
+        "source": "local",
+        "description": "Include the confirmed name of the person who authorised the work once the user supplies it."
+      },
+      "include-argon-cylinder-identity": {
+        "source": "local",
+        "description": "Include the traceable identity of the argon cylinder once the user supplies it."
+      },
+      "include-confirmed-collector-name": {
+        "source": "local",
+        "description": "Include the confirmed name of the person collecting the finished unit once the user supplies it."
+      },
+      "include-confirmed-deadline": {
+        "source": "local",
+        "description": "Include the confirmed client collection deadline once the user supplies it."
+      },
+      "include-selected-repair-path": {
+        "source": "local",
+        "description": "Name exactly one selected permitted repair path once the user supplies it."
+      },
+      "preserve-burner-slot-request": {
+        "source": "local",
+        "description": "Keep the request for a ribbon-burner slot."
+      },
+      "preserve-collection-client": {
+        "source": "local",
+        "description": "Keep the named collection client and the fact that a collection is booked."
+      },
+      "preserve-corrected-cooldown-45": {
+        "source": "local",
+        "description": "Keep cool-down as 45 minutes after the user corrected the 20-minute figure."
+      },
+      "preserve-friday-retraction": {
+        "source": "local",
+        "description": "Keep the retraction of the Friday 25 September 2026 finish date."
+      },
+      "preserve-hold-not-ready": {
+        "source": "local",
+        "description": "Keep the hold and not-ready collection status after the spark-test failure."
+      },
+      "preserve-job-identity": {
+        "source": "local",
+        "description": "Keep the stated job number, unit type, and client unchanged."
+      },
+      "preserve-new-date-after-burner": {
+        "source": "local",
+        "description": "Keep the statement that a new finish day will be given after the ribbon burner is back."
+      },
+      "preserve-niall-adjacent-not-authoriser": {
+        "source": "local",
+        "description": "Keep Niall Peveril as adjacent-station only and do not present him as the weekend authoriser."
+      },
+      "preserve-pattern-revision-as-normal": {
+        "source": "local",
+        "description": "Treat the pattern change as a normal dimension-check revision rather than sabotage."
+      },
+      "preserve-queue-job-ids": {
+        "source": "local",
+        "description": "Keep the three listed bombard-queue job numbers unchanged."
+      },
+      "preserve-shift-end": {
+        "source": "local",
+        "description": "Keep the stated shift-end time unchanged."
+      },
+      "preserve-splice-status": {
+        "source": "local",
+        "description": "Keep the completed-splice and cold-spark-check facts unchanged."
+      },
+      "request-bombard-order": {
+        "source": "local",
+        "description": "Keep the request that the bench manager set the afternoon bombard order."
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "V323-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-only note with usable background. Job, bombard time, cool-down, rack, and the booked 15:00 collection all match the supplied facts, and the draft does not move the collection time. No concrete responsibility or tone issue.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-only bombard log. Current, duration, heat-tint result, and manifold peg match the supplied facts, and the draft holds the fill until Orrin acknowledges the log as the constraint requires.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-only goods-in note. Stick count, arrival time, packing note PN-19, rack B3, and the no-crack result match the supplied facts. No concrete issue.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": ["approval-authority", "weekend-authoriser-name"],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "include-approval-authority",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-niall-adjacent-not-authoriser"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Orrin will not release the Saturday transformer key unless the note names who authorised weekend use, and that governing name is absent from the draft, so the request cannot succeed as written. Niall is explicitly not the authoriser, so the name must be asked for rather than inferred or invented; it remains a placeholder until supplied. The visible wording is professional.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": ["preserve-intended-recipient"],
+          "allowed_revision_concepts": [
+            "include-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-splice-status"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Orrin will not book the pumping cart unless the note states the confirmed client collection deadline, and the draft omits it. The user still holds that date, so asking for it changes the safe revision. The case bars estimating or placeholdering the deadline, so a placeholder is not an acceptable substitute here. Job, splice-complete, and cold-spark-check facts stay. Tone is professional.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["confirmed-collector-name"],
+          "allowed_question_concepts": [
+            "collector-identity",
+            "confirmed-collector",
+            "confirmed-collector-name",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": ["preserve-intended-recipient"],
+          "allowed_revision_concepts": [
+            "include-confirmed-collector-name",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Orrin only countersigns the collection ticket if the note names who will collect the unit, and the draft omits that name. The user still has it, so asking for it changes the safe revision. The case bars omitting or placeholdering the collector's name, so the name must be obtained rather than stubbed. Job and rack facts stay. Tone is professional.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["cylinder-identity"],
+          "allowed_question_concepts": ["argon-cylinder-identity", "cylinder-identity"],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "include-argon-cylinder-identity",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Orrin only signs the argon fill log if the note cites the traceable cylinder identity, and the draft omits it. The user read that identity off the manifold tag, so asking for it changes the safe revision. The identity must not be invented; until it is supplied it stays a placeholder. Job and 10 mA soak facts stay. Tone is professional.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["measured-cold-fill-pressure"],
+          "allowed_question_concepts": ["measured-cold-fill-pressure"],
+          "required_revision_concepts": ["preserve-intended-recipient"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The slip is legible apart from one field: recipient, sender, job, unit, and the house rule are all readable, so the message is identifiable and reviewable, but the measured cold-fill pressure the rule makes mandatory is geometrically occluded. That governing value is materially unreadable, which is Gray rather than a rating-blocking intake gap. The occluded token must not be guessed, and asking for the measured figure is productive because the visible rule makes it required. Visible wording is professional.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["selected-repair-path"],
+          "allowed_question_concepts": [
+            "chosen-repair-path",
+            "commitment-scope",
+            "repair-option-selection",
+            "selected-repair-path"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "allowed_revision_concepts": [
+            "include-selected-repair-path",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Orrin will not action the note unless it names exactly one of redraw from coated stock, replace the electrodes, or scrap and re-invoice. The user has already chosen one, but the draft leaves the path open and offers an unofficial either-or. Asking which permitted option was selected changes the safe revision; the choice must not be invented and stays a placeholder until supplied. Crack-location facts stay. Tone is professional.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["commitment-scope", "confirmed-owner"],
+          "required_revision_concepts": [
+            "correct-duty-owner",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "correct-duty-owner",
+            "lise-performs-own-duty",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-shift-end",
+            "remove-duty-refusal",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Electrode splicing on CC-3369 is the signed bender's own bench duty while she is on shift until 17:00, and Orrin countersigns rather than performs it in that situation. The draft refuses the splice and assigns it to the manager, contradicting the stated ownership and blocking the fill. The wording is directive and dismissive but carries no explicit insult or hostility, so tone is a concrete non-critical risk rather than Red. No question is needed; the revision keeps the duty with the signed owner.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["confirmed-owner"],
+          "required_revision_concepts": [
+            "correct-duty-owner",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "correct-duty-owner",
+            "lise-performs-own-duty",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-duty-refusal",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The spark-test sign-off on CC-3376 is part of the sender's signed duty because she ran the splice; Niall did not touch the job and Orrin does not reassign the sign-off afterwards. The draft disclaims ownership and asks that the result be recorded against Niall, directly contradicting those facts. Tone is blame-shifting but not overtly hostile. No question is needed; keep the sender as owner and drop the Niall attribution.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-hostile-language",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "preserve-queue-job-ids",
+            "remove-hostile-language",
+            "remove-unsupported-accusation",
+            "request-bombard-order"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The operational content is sound: the three cooled units are correctly listed and setting the afternoon order is Orrin's call, so responsibility carries no concrete defect. The draft is nonetheless openly sarcastic and insulting to the manager and asserts, without support, that he has not looked at the queue and is tinkering with the roster. Keep the job list and the order request; remove the hostility and the unsupported conduct claims.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-hostile-language",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-burner-slot-request",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-pattern-revision-as-normal",
+            "qualify-unconfirmed-cause",
+            "remove-hostile-language",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The supplied facts are that Tamsin issued a revised pattern after a dimension check and that such revisions are normal bench process. The draft instead asserts deliberate sabotage and intent to make the sender look slow, a major unsupported accusation that contradicts those facts, and demands the manager deal with her. Asking for the next burner slot is legitimate; the accusation and the hostile demand must go.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-only cool-down log. Job identity matches the supplied facts and nothing visible at this turn conflicts with the stated 20-minute cool-down. No concrete issue.",
+          "gold_uncertain": false
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-corrected-cooldown-45",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The user corrects cool-down from 20 to 45 minutes and the draft carries 45 minutes, so the governing figure is current. No concrete issue; the superseded 20-minute figure must not be restored.",
+          "gold_uncertain": false
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-corrected-cooldown-45",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The send-now draft still states the corrected 45-minute cool-down for CC-3411 and keeps the manager-only recipient. No concrete issue; do not reintroduce the 20-minute figure.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-only ready notice. Job identity and rack A3 match the facts supplied at the start of the thread and no contrary status is visible at this turn. No concrete issue.",
+          "gold_uncertain": false
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-hold-not-ready",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The user reports the splice failed the spark test and collection must wait; the draft is a hold notice that matches that superseding status. No concrete issue; the ready-for-collection claim must not return.",
+          "gold_uncertain": false
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-hold-not-ready",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The requested send is a hold notice and the draft states the spark-test failure and that the unit is not ready. No concrete issue; the turn-1 ready wording must not be restored.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-only finish-date note. Job identity matches the supplied facts and the Friday 25 September 2026 finish is the sender's own commitment with no blocker visible at this turn. No concrete issue.",
+          "gold_uncertain": false
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-friday-retraction",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The user retracts Friday because the ribbon burner is down, and the draft states the retraction with that reason and makes no replacement promise. No concrete issue; the Friday commitment must not be restored.",
+          "gold_uncertain": false
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-friday-retraction",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-new-date-after-burner",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The send draft retracts the Friday finish, gives the burner outage as the reason, and defers a new day until the burner is back, matching the user's instruction without a fresh unsupported commitment. No concrete issue.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["recipient-manager-role"],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Kerr Adelune is stated to be an outside gas-merchant delivery driver who does not work at Greaveholt, and no manager is on the delivery chat. The recipient is explicitly outside manager scope, so the route is Scope, ratings are null, and the draft is not rewritten as a manager message.",
+          "gold_uncertain": false
+        }
+      ]
+    },
+    {
+      "case_id": "V323-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["commitment-scope", "confirmed-owner"],
+          "required_revision_concepts": [
+            "correct-duty-owner",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "correct-duty-owner",
+            "lise-performs-own-duty",
+            "preserve-collection-client",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-shift-end",
+            "remove-duty-refusal",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The image is fully readable and is a manager note for CC-3425. Mercury dosing is the signed bender's duty while she is on shift until 16:00, and Orrin countersigns rather than doses; Coppervine Cycles is booked to collect later that day. The visible text refuses the dose, orders the manager to do it, forbids a reminder, and blames a missed collection on yesterday's rostering. That contradicts the stated ownership, risks the booked collection, and is openly hostile. Keep owner, shift end, and collection client; remove the refusal, the duty transfer, and the blame.",
+          "gold_uncertain": false
+        }
+      ]
+    }
+  ]
+}
