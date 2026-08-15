@@ -1,0 +1,148 @@
+{
+  "attestation_id": "adjudicator-v322-raw-attestation",
+  "role": "fourth-family gold adjudicator",
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt2",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": ["grok", "gemini", "gpt"],
+  "family_file_mapping": {
+    "grok": "gold-labeler-1.json",
+    "gemini": "gold-labeler-2.json",
+    "gpt": "gold-labeler-3.json"
+  },
+  "branch": "cursor/v322-gold-adjudicator-claude-17a0",
+  "base_branch": "cursor/blind-v322-holdout-17a0",
+  "base_commit": "d54836f459c8b91fa3b1af5591ec9f1cf8dd466f",
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/GOLD_ADJUDICATION_BRIEF.md",
+      "sha256": "9f60d1375689b5aee5701d659e3de59ceaaa3d008fa8ac378aecb5836f74b7b7"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/GOLD_LABELING_BRIEF.md",
+      "sha256": "1c73baf381077a84c4eb89531de6f4f2048e944c00c0cf936b0b4a72b8ad0e88"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/cases.json",
+      "sha256": "b1fb32978860ed8f19e1921fb0caab556ba66d978b670bdd4d7e10b4b8667223",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/images/v322-008-t1.png",
+      "sha256": "4ebf4167dc2bbbafbeb764fb1a686eeaa60d2cc0aae1682bd9d0baa4a86583ab",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/images/v322-018-t1.png",
+      "sha256": "975d45c3494d34d1edf90f4bfad913d68c3e629d215faf3ec2758fb911fe3b2f",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/gold-labeler-1.json",
+      "sha256": "94535b38423487eef387eb41d835daa65e4480722d507dc94cdbc7477d818e69",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/gold-labeler-2.json",
+      "sha256": "efc002302942c1def8c3f52ffe65122ab5d3500200f0a150e8fb50d1b78a5497",
+      "expected_sha256_matched": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/gold-labeler-3.json",
+      "sha256": "6545c1173fea9bc69a6235adfaea38a009ac104992efb7f0c841e5619f9cbce3",
+      "expected_sha256_matched": true
+    }
+  ],
+  "files_written": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/gold-v322-raw.json",
+      "sha256": "be1159b58fcb09468e7a0e0d7f4d85b13717b8936a25e9b14c56e53fba471cd9",
+      "commit": "d1ed17b494c586ebf0898e8da48dff12900c6f96"
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/adjudication-v322-raw.json",
+      "sha256": "2429ab4854244e598fdebdf69c6f28cdb11a2f9738e8b495021fa76f7b629208",
+      "commit": "4df198c1769e8d1ef87f751a381f4516624d4e8b"
+    }
+  ],
+  "access_controls": {
+    "allowlist_respected": true,
+    "files_read_outside_allowlist": [],
+    "question_design_accessed": false,
+    "oracle_notes_accessed": false,
+    "construction_mutations_accessed": false,
+    "verify_construction_accessed": false,
+    "render_images_accessed": false,
+    "skill_files_accessed": false,
+    "spec_accessed": false,
+    "tests_accessed": false,
+    "methodology_accessed": false,
+    "freeze_scripts_accessed": false,
+    "prior_holdout_artifacts_accessed": false,
+    "scorer_run": false,
+    "web_search_used": false,
+    "glob_or_directory_listing_of_holdout_tree": false,
+    "images_opened": [
+      "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/images/v322-008-t1.png",
+      "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/images/v322-018-t1.png"
+    ],
+    "other_images_opened": [],
+    "occluded_v322_008_token_guessed": false,
+    "labeler_files_modified": false,
+    "skill_files_modified": false,
+    "relabelled_from_scratch": false,
+    "votes_discarded": false,
+    "holdout_branch_checked_out_or_pushed": false
+  },
+  "coverage": {
+    "case_count": 18,
+    "turn_count": 24,
+    "multi_turn_cases": ["V322-014", "V322-015", "V322-016"],
+    "tier_counts": {
+      "tier_1_unanimous": 12,
+      "tier_2_majority": 7,
+      "tier_3_adjudicated": 5,
+      "tier_4_uncertain": 0
+    },
+    "gold_uncertain_turns": 0,
+    "uncertainty_rate": 0.0,
+    "uncertainty_gate": "<=0.20",
+    "uncertainty_gate_met": true,
+    "unanimity_manufactured": false
+  },
+  "validation": {
+    "performed_before_commit": true,
+    "method": "standalone checks run outside the repository tree; no suite scorer or repository test was executed",
+    "checks": {
+      "case_ids_and_turn_indices_match_cases_json": true,
+      "eighteen_cases_twenty_four_turns": true,
+      "all_twelve_required_turn_fields_present": true,
+      "required_question_concepts_subset_of_allowed": true,
+      "required_revision_concepts_subset_of_allowed": true,
+      "overall_matches_red_gray_yellow_green_derivation": true,
+      "null_ratings_on_intake_scope_template_routes": true,
+      "rated_routes_carry_non_null_ratings": true,
+      "at_most_three_required_question_concepts_per_turn": true,
+      "every_used_concept_defined_in_definitions": true,
+      "critical_invariant_tokens_canonical": true,
+      "gold_uncertain_boolean_on_every_turn": true,
+      "gold_quality_labeler_families_and_adjudicator_family_set": true,
+      "every_family_route_ratings_and_concept_sets_preserved_verbatim": true,
+      "tier_counts_consistent_between_gold_and_adjudication": true
+    }
+  },
+  "protocol_deviations": [
+    "None affecting the allowlist, the forbidden-source list, or the output contract.",
+    "Note on tier semantics: tier_3_adjudicated is recorded both when a 2-1 split is resolved against the majority and when a required concept set had to be settled beyond token majority. No turn in this suite was resolved against a route or rating majority; all five tier_3 turns are concept-set adjudications, four of them (V322-005, V322-006, V322-007, V322-009) because the third family routed Intake and so contributed no revision requirements, and one (V322-018) because two singleton revision tokens were promoted on the merits under unanimous Red ratings.",
+    "Note on definitions: definitions.question retains three ontology IDs (blocker-status, operational-impact, recipient-manager-role) that no turn uses, per the instruction to carry ontology IDs alongside kept local IDs."
+  ],
+  "statement": "I adjudicated the three independent gold label sets as the fourth model family rather than relabeling the holdout from scratch. No family's vote was discarded: every family's route, ratings, concept sets, critical invariants and rationale are preserved verbatim per turn in adjudication-v322-raw.json, and every departure from a family position is recorded with its tier and reasoning. I read only the ten allowlisted paths, opened only the two listed PNGs, did not guess the occluded V322-008 value, did not run the scorer, and did not modify the labeler or Skill files. Work is confined to the dedicated branch cursor/v322-gold-adjudicator-claude-17a0."
+}

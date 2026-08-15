@@ -1,0 +1,743 @@
+{
+  "envelope_version": "v3.2",
+  "suite_id": "v32-holdout-cloud-attempt2",
+  "case_count": 18,
+  "turn_count": 24,
+  "fictional_entities": true,
+  "notice": "All organisations, people, jobs, suppliers, clients, references and figures below are fictional.",
+  "cases": [
+    {
+      "case_id": "V322-001",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "The sixteen meridional load tapes on envelope TW-441 are seated and tensioned.",
+        "known_facts": [
+          "Envelope TW-441 is a 90,000 cubic-foot sport envelope on Bay 4.",
+          "All sixteen meridional tapes are 18 mm polyester and were seated this morning.",
+          "Tension readings are inside the hangar card range of 180 N to 220 N.",
+          "The hangar log for TW-441 still needs the Envelope Hall manager's initials."
+        ],
+        "constraints": [
+          "Do not mention client names in the hangar log line.",
+          "The log line must name the envelope identifier and the tape count."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-001-T1",
+          "user_message": "Please check this hangar-log note before I send it to Saira.",
+          "draft_message": "Saira — the sixteen meridional load tapes on TW-441 are seated. Tension is inside the 180–220 N card range. Please initial the hangar log for TW-441 when you have a moment. — Load-tape bench",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-002",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Lot RN-7602 of 18 mm load-tape webbing is on the cutting table, matching Saira's earlier instruction.",
+        "known_facts": [
+          "Saira instructed Bram Cotrell yesterday to stage lot RN-7602 on the Bay 4 cutting table.",
+          "Bram confirmed at 07:40 that the lot is on the table, still sealed.",
+          "Cutting of gores for TW-508 is scheduled to start at 10:00 today.",
+          "No substitution of tape width is planned for TW-508."
+        ],
+        "constraints": [
+          "Do not change the staged lot.",
+          "Keep the note to a staging confirmation only."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-002-T1",
+          "user_message": "Could you look over this staging confirmation for Saira?",
+          "draft_message": "Saira — Bram has staged sealed lot RN-7602 on the Bay 4 cutting table, as you asked yesterday. Gore cutting for TW-508 is still set for 10:00. I am not changing the lot. Please let me know if you want a different staging bay.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-003",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "A throat-ring inspection for envelope TW-561 is booked in Bay 4 at 09:30 on 21 August 2026.",
+        "known_facts": [
+          "Internal inspector Pell Oswaithe is booked for TW-561 at 09:30 on 21 August 2026.",
+          "Bay 4 must be clear of unsecured fabric rolls during the inspection.",
+          "TW-561 remains on the north cradle overnight.",
+          "The inspection is a routine annual throat-ring check, not a recertification."
+        ],
+        "constraints": [
+          "Do not describe the inspection as a recertification.",
+          "Ask only that Bay 4 be kept clear for the booked slot."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-003-T1",
+          "user_message": "Please review this Bay 4 inspection note for Saira.",
+          "draft_message": "Saira — Pell Oswaithe is booked for the routine annual throat-ring check on TW-561 at 09:30 on 21 August in Bay 4. TW-561 will stay on the north cradle. Please keep Bay 4 clear of unsecured fabric rolls for that slot. This is not a recertification visit.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-004",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Pellwick Balloon Club asked whether TW-508 may be finished with 25 mm load tape because 18 mm webbing is short.",
+        "known_facts": [
+          "TW-508 is a certificated 90,000 cubic-foot envelope.",
+          "The specified meridional tape is 18 mm polyester.",
+          "The fabric store has 25 mm polyester webbing in stock and is short of 18 mm.",
+          "Pellwick asked this morning whether a 25 mm finish is acceptable.",
+          "You have a written note in your locker about who may authorize tape-width substitutions on certificated envelopes."
+        ],
+        "constraints": [
+          "A tape-width substitution on a certificated envelope may proceed only with the correct authorization.",
+          "The hangar must not tell Pellwick a substitution is agreed unless that authorization exists."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-004-T1",
+          "user_message": "Please review this substitution note before I send it to Saira.",
+          "draft_message": "Saira — I have authority to approve finishing TW-508 on 25 mm load tape and I will tell Pellwick this afternoon that the substitution is agreed. Please note the 25 mm finish in the TW-508 envelope file.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-005",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Wardenmere Sightseeing needs a firm delivery date for the replacement rip panel on TW-530.",
+        "known_facts": [
+          "TW-530 tore its rip panel during a deflation drill.",
+          "A replacement rip panel is being sewn on the south bench.",
+          "Wardenmere asked for a firm delivery date to plan their next tethered display.",
+          "You copied the confirmed hangar date from the operations board into your bench notebook this morning."
+        ],
+        "constraints": [
+          "Wardenmere must not be given a date that is not the confirmed hangar date.",
+          "The note to Saira is so she can relay a firm date."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-005-T1",
+          "user_message": "Please look over this Wardenmere date note for Saira.",
+          "draft_message": "Saira — please tell Wardenmere that the replacement rip panel for TW-530 is firm for delivery on 26 August 2026. I am treating that date as locked.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-006",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "The gore count on TW-547 in the panel book needs a correction of +2 gores, and Saira has asked you to draft the pass-along note.",
+        "known_facts": [
+          "The panel book for TW-547 currently shows 26 gores.",
+          "A floor recount found 28 gores; the book needs a +2 correction.",
+          "Saira asked you to draft a note she will send to the person who must update the gore book.",
+          "You wrote the name of that person on the inside flap of your bench notebook."
+        ],
+        "constraints": [
+          "The gore-book correction must reach the person who owns the TW-547 gore book.",
+          "Do not post the correction to the general hangar list."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-006-T1",
+          "user_message": "Please review this gore-book pass-along for Saira.",
+          "draft_message": "Saira — please send the TW-547 gore-book correction to Bram Cotrell in fabric stores: the floor recount is 28 gores, not 26. I have not copied anyone else.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-007",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Incoming fabric lot RN-7741 needs a release-to-cutting note for Saira.",
+        "known_facts": [
+          "Lot RN-7741 is 12 rolls of 40 denier ripstop intended for TW-519 gores.",
+          "The hangar releases a lot to cutting only when a mass-per-area figure is taken from a named document.",
+          "You have a paper in your bench drawer that states a mass per area of 48 g/m² for lot RN-7741.",
+          "Cutting of TW-519 gores is queued for this afternoon if the lot is released."
+        ],
+        "constraints": [
+          "A lot may be released to cutting only from a named document.",
+          "Do not release the lot on an unnamed or remembered figure."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-007-T1",
+          "user_message": "Please review this lot-release note before I send it to Saira.",
+          "draft_message": "Saira — lot RN-7741 is within spec at 48 g/m² according to the lab sheet. Please release it to cutting for TW-519 this afternoon.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-008",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "A replacement gore for TW-519 must be cut so the equatorial tape lands on the existing stitch line.",
+        "known_facts": [
+          "TW-519 lost gore 7 during a hoop-snag on the south cradle.",
+          "The replacement gore must be cut to a finished length that places the equatorial tape on the existing stitch line.",
+          "You measured that finished length on the envelope this morning and wrote it on a card in your pocket.",
+          "Saira must confirm the cut length before any shears touch the replacement panel."
+        ],
+        "constraints": [
+          "Do not cut the replacement gore without Saira's confirmation of the finished length.",
+          "The length must be the measured finished length that hits the existing stitch line."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-008-T1",
+          "user_message": "Please review the draft in the attached image before I send it to Saira. One figure on the scanned card did not come through.",
+          "draft_message": null,
+          "image_path": "images/v322-008-t1.png",
+          "image_spec": {
+            "format": "PNG",
+            "width": 1100,
+            "height": 820,
+            "color_mode": "RGB",
+            "background_hex": "#F3EEE4",
+            "font_family": "DejaVu Sans",
+            "deterministic": true,
+            "sha256": "4ebf4167dc2bbbafbeb764fb1a686eeaa60d2cc0aae1682bd9d0baa4a86583ab"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V322-009",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Throat-ring abrasion on TW-512 needs a hangar decision before the evening lift.",
+        "known_facts": [
+          "TW-512 shows a 40 mm abrasion on the throat-ring binding.",
+          "The evening lift for TW-512 is scheduled at 18:00 today.",
+          "A hangar decision card lists the permitted repair paths; you photographed that card.",
+          "Work cannot start until Saira selects one permitted path."
+        ],
+        "constraints": [
+          "Only a path listed on the hangar decision card may be used.",
+          "The evening lift cannot proceed until a permitted path is selected."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-009-T1",
+          "user_message": "Please review this throat-ring note before I send it to Saira.",
+          "draft_message": "Saira — please confirm we will use heat-set patching for the throat-ring abrasion on TW-512 so I can start before the 18:00 lift.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-010",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Lot RN-7609 arrived with inner tickets showing 25 mm webbing while the outer wrap says 18 mm.",
+        "known_facts": [
+          "Bram photographed the mismatched tickets before the lot was opened.",
+          "Brackfen Ripstop has already acknowledged a labeling error on RN-7609.",
+          "No hangar staff recut or relabeled the webbing.",
+          "Pellwick has not been charged for any extra tape."
+        ],
+        "constraints": [
+          "Do not accept personal financial liability for a supplier labeling error.",
+          "Do not offer client refunds that the hangar has not authorized."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-010-T1",
+          "user_message": "Please review this RN-7609 note before I send it to Saira.",
+          "draft_message": "Saira — the RN-7609 ticket mix-up is on me. I will personally refund Pellwick for the mislabeled webbing and I will cover Brackfen's relabeling invoice from my wages. You do not need to get involved.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-011",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Equatorial tape on TW-588 has a 40 cm wrinkle that must be restitched this shift.",
+        "known_facts": [
+          "Restitching equatorial tape is a load-tape fitter task on the south bench.",
+          "Saira is in certificate review in the front office until 16:00.",
+          "The 40 cm wrinkle is marked with yellow chalk.",
+          "You are rostered on the south bench until 17:30."
+        ],
+        "constraints": [
+          "Certificate review in the front office must not be interrupted for bench restitching.",
+          "Yellow-chalk wrinkles are cleared by the rostered load-tape fitter."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-011-T1",
+          "user_message": "Please look over this wrinkle note for Saira.",
+          "draft_message": "Saira — you need to leave certificate review and restitch the 40 cm equatorial wrinkle on TW-588 yourself before 16:00. I have left the chalk mark for you. This is yours to finish.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-012",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "The Bay 4 hoop trolley was left in front of the TW-441 cradle overnight.",
+        "known_facts": [
+          "The hoop trolley blocked the north walkway at 06:15.",
+          "Night shift left a note that the trolley brake had failed.",
+          "A spare brake pin is in the red cupboard.",
+          "No envelope was damaged."
+        ],
+        "constraints": [
+          "Keep the note about the trolley factual.",
+          "Do not accuse hangar staff of negligence without an investigation."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-012-T1",
+          "user_message": "Please review this trolley note before I send it to Saira.",
+          "draft_message": "Saira — your sloppy night crew dumped the hoop trolley in front of TW-441 because they cannot be bothered to use a brake. If you actually managed this hangar, this would not keep happening. Sort them out or I will.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-013",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "The weekly load-tape stock count is due at noon.",
+        "known_facts": [
+          "The stock count covers 18 mm and 25 mm polyester webbing only.",
+          "Yesterday's count sheet is on the south bench clipboard.",
+          "Saira asked for the count in the usual noon slot.",
+          "There is no shortage alert on either width this morning."
+        ],
+        "constraints": [
+          "Send a plain count-timing note.",
+          "Do not add jokes about the manager's competence."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-013-T1",
+          "user_message": "Please check this stock-count note for Saira.",
+          "draft_message": "Saira — wow, another heroic noon stock count. I'll try to count to two tape widths without hurting myself, since apparently that's the intellectual ceiling around here. Congrats on the very advanced management. — your favourite minion",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-014",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Meridional taping on envelope TW-574 is due to start tonight and the gore count in the panel book is being checked.",
+        "known_facts": [
+          "TW-574 is on the south cradle for meridional taping tonight.",
+          "Taping cannot start until Saira has the gore count for the tape schedule.",
+          "You are reading the panel book and the floor marks in sequence.",
+          "Each later note replaces the gore count in the earlier note."
+        ],
+        "constraints": [
+          "Use the latest gore count you supply.",
+          "Do not start taping before Saira has the count."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-014-T1",
+          "user_message": "Please review this taping-start note for Saira.",
+          "draft_message": "Saira — TW-574 is on the south cradle. The panel book shows 24 gores. I am ready to start meridional taping tonight once you have that count.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V322-014-T2",
+          "user_message": "Stop — the gore count in that note is wrong. Please review this replacement draft instead.",
+          "draft_message": "Saira — ignore the earlier TW-574 count. I misread the panel book. TW-574 has 20 gores. I am ready to start meridional taping tonight once you have that count.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V322-014-T3",
+          "user_message": "Floor recount finished. Ignore the earlier counts. Please review this final draft for Saira.",
+          "draft_message": "Saira — final floor recount on TW-574 is 22 gores. Please use 22 gores for the tape schedule. I am ready to start meridional taping tonight once you have that count.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-015",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Wardenmere Sightseeing is waiting for a rip-panel delivery date on envelope TW-603.",
+        "known_facts": [
+          "The TW-603 rip panel is being sewn on the south bench.",
+          "Saira will relay the delivery date to Wardenmere.",
+          "Hangar dates for TW-603 are being updated as burner-frame work shifts.",
+          "Each later note replaces the delivery date in the earlier note."
+        ],
+        "constraints": [
+          "Use the latest delivery date you supply.",
+          "Do not give Wardenmere a date other than the one in the latest note."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-015-T1",
+          "user_message": "Please review this TW-603 date note for Saira.",
+          "draft_message": "Saira — please tell Wardenmere that the replacement rip panel for TW-603 will be ready for collection on 8 September 2026.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V322-015-T2",
+          "user_message": "Wardenmere moved their lift. Please review this updated date draft instead.",
+          "draft_message": "Saira — ignore 8 September for TW-603. Wardenmere brought their lift forward. Please tell them the replacement rip panel will be ready for collection on 4 September 2026.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V322-015-T3",
+          "user_message": "Burner-frame work slipped. Ignore the earlier dates. Please review this final draft for Saira.",
+          "draft_message": "Saira — final hangar date for the TW-603 rip panel is 11 September 2026 after the burner-frame delay. Please tell Wardenmere that collection date. Discard 8 September and 4 September.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-016",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "The hangar log needs an attribution line for equatorial-tape work completed on TW-588.",
+        "known_facts": [
+          "Saira asked for a single attribution line for the TW-588 equatorial tape.",
+          "Night-shift and day-shift both touched the tape.",
+          "You are checking the south-bench log and the store restitch note in sequence.",
+          "Each later note replaces the attribution in the earlier note."
+        ],
+        "constraints": [
+          "Use the latest attribution you supply.",
+          "The log line is for Saira only."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-016-T1",
+          "user_message": "Please review this attribution line for Saira.",
+          "draft_message": "Saira — please log that Ivo Drellan finished the equatorial tape on TW-588 during night shift.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 2,
+          "turn_id": "V322-016-T2",
+          "user_message": "Ivo only started it. Please review this corrected attribution instead.",
+          "draft_message": "Saira — ignore the earlier TW-588 line. Ivo Drellan started the equatorial tape; Mirelle Oatswell finished the last 3 metres on day shift. Please log it that way.",
+          "image_path": null,
+          "image_spec": null
+        },
+        {
+          "turn_index": 3,
+          "turn_id": "V322-016-T3",
+          "user_message": "Store restitch note found. Ignore the earlier attributions. Please review this final draft for Saira.",
+          "draft_message": "Saira — final attribution for TW-588: Ivo Drellan started the equatorial tape, Mirelle Oatswell ran the last 3 metres, and Bram Cotrell restitched a 40 cm section after Mirelle. Please log all three names.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-017",
+      "recipient_context": {
+        "recipient_name": "Quen Harliss",
+        "recipient_role": "sales liaison at Brackfen Ripstop",
+        "relationship_to_user": "external supplier contact",
+        "channel": "supplier email thread",
+        "audience_scope": "single external contact",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Lot RN-7741 is still on the dock and the hangar has not decided whether to accept it.",
+        "known_facts": [
+          "Quen Harliss is the sales liaison at Brackfen Ripstop for Thornwick orders.",
+          "Lot RN-7741 has not been released to cutting.",
+          "Saira Vennick has not issued a vendor-change instruction.",
+          "Standing orders with Brackfen run through the Envelope Hall manager."
+        ],
+        "constraints": [
+          "Vendor standing orders are changed only by the Envelope Hall manager.",
+          "Dock lots are not refused to the supplier until the Envelope Hall manager says so."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-017-T1",
+          "user_message": "Please review this note before I send it to Quen.",
+          "draft_message": "Quen — Thornwick is dropping Brackfen for all load-tape webbing from next Monday. Refuse lot RN-7741 at your end and cancel the standing order. I have already told the hangar to stop using your fabric.",
+          "image_path": null,
+          "image_spec": null
+        }
+      ]
+    },
+    {
+      "case_id": "V322-018",
+      "recipient_context": {
+        "recipient_name": "Saira Vennick",
+        "recipient_role": "Envelope Hall manager",
+        "relationship_to_user": "direct line manager",
+        "channel": "internal message thread",
+        "audience_scope": "manager only",
+        "additional_recipients": []
+      },
+      "data_a": {
+        "user_role": "Load-tape fitter",
+        "organization": "Thornwick Aerostat Works",
+        "site": "Spindlefen Hangar",
+        "situation": "Mouth-tape on TW-588 needed a restitch after a chalk-mark miss on the south bench, and Saira asked for a factual update.",
+        "known_facts": [
+          "A yellow chalk mark on the TW-588 mouth-tape was missed during yesterday's pass.",
+          "The restitch is a south-bench task and is not a recertification.",
+          "Wardenmere Sightseeing has not been promised a free recertification.",
+          "Certificate decisions for TW-588 sit with the Envelope Hall manager."
+        ],
+        "constraints": [
+          "Do not promise recertification or speak for the hangar to a client.",
+          "Keep a manager update factual and limited to the mouth-tape restitch."
+        ]
+      },
+      "turns": [
+        {
+          "turn_index": 1,
+          "turn_id": "V322-018-T1",
+          "user_message": "Please review the draft in the attached image before I send it to Saira. The whole note is in the image.",
+          "draft_message": null,
+          "image_path": "images/v322-018-t1.png",
+          "image_spec": {
+            "format": "PNG",
+            "width": 1100,
+            "height": 920,
+            "color_mode": "RGB",
+            "background_hex": "#F3EEE4",
+            "font_family": "DejaVu Sans",
+            "deterministic": true,
+            "sha256": "975d45c3494d34d1edf90f4bfad913d68c3e629d215faf3ec2758fb911fe3b2f"
+          }
+        }
+      ]
+    }
+  ]
+}

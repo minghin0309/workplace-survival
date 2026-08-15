@@ -71,6 +71,14 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/v3_2/RECIPIENT_VALIDATION_RESULTS.md`
 - `tests/benchmark/v3_2/V32_ATTEMPT1_COVERAGE_TRIAGE.md`
 - `tests/benchmark/v3_2/V32_ATTEMPT2_CASE_BRIEF.md`
+- `tests/benchmark/v3_2-holdout/attempt-2/V322_HOLDOUT_PLAN.md`
+- `tests/benchmark/v3_2-holdout/attempt-2/V322_HOLDOUT_STATUS.md`
+- `tests/benchmark/v3_2-holdout/attempt-2/validate_holdout.py`
+- `tests/benchmark/v3_2-holdout/attempt-2/normalize_construction_mutations.py`
+- `tests/benchmark/v3_2-holdout/attempt-2/finalize_gold.py`
+- `tests/benchmark/v3_2-holdout/attempt-2/validate_gold.py`
+- `tests/benchmark/v3_2-holdout/attempt-2/freeze_gold.py`
+- `tests/benchmark/v3_2-holdout/attempt-2/prepare_sut_inputs.py`
 - `tests/benchmark/v3_2-holdout/V32_CASE_BRIEF.md`
 - `tests/benchmark/v3_2-holdout/V32_HOLDOUT_PLAN.md`
 - `tests/benchmark/v3_2-holdout/V32_HOLDOUT_STATUS.md`

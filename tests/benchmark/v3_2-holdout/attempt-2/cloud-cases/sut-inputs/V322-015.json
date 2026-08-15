@@ -1,0 +1,42 @@
+{
+  "schema_version": "v3.2",
+  "case_id": "V322-015",
+  "recipient_context": {
+    "recipient_name": "Saira Vennick",
+    "recipient_role": "Envelope Hall manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "Load-tape fitter",
+    "organization": "Thornwick Aerostat Works",
+    "site": "Spindlefen Hangar",
+    "situation": "Wardenmere Sightseeing is waiting for a rip-panel delivery date on envelope TW-603.",
+    "known_facts": [
+      "The TW-603 rip panel is being sewn on the south bench.",
+      "Saira will relay the delivery date to Wardenmere.",
+      "Hangar dates for TW-603 are being updated as burner-frame work shifts.",
+      "Each later note replaces the delivery date in the earlier note."
+    ],
+    "constraints": [
+      "Use the latest delivery date you supply.",
+      "Do not give Wardenmere a date other than the one in the latest note."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this TW-603 date note for Saira.\n\nDraft under review:\nSaira \u2014 please tell Wardenmere that the replacement rip panel for TW-603 will be ready for collection on 8 September 2026."
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Wardenmere moved their lift. Please review this updated date draft instead.\n\nDraft under review:\nSaira \u2014 ignore 8 September for TW-603. Wardenmere brought their lift forward. Please tell them the replacement rip panel will be ready for collection on 4 September 2026."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "Burner-frame work slipped. Ignore the earlier dates. Please review this final draft for Saira.\n\nDraft under review:\nSaira \u2014 final hangar date for the TW-603 rip panel is 11 September 2026 after the burner-frame delay. Please tell Wardenmere that collection date. Discard 8 September and 4 September."
+    }
+  ]
+}

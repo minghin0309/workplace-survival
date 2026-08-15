@@ -1,0 +1,43 @@
+{
+  "schema_version": "v3.2-attempt2-gold-copy",
+  "method": "git show",
+  "merged": false,
+  "holdout_branch": "cursor/blind-v322-holdout-17a0",
+  "labelers": [
+    {
+      "n": 1,
+      "family": "grok",
+      "source_branch": "cursor/v322-gold-labeler-1-17a0",
+      "source_commit": "f7c765af50e8336ab3aa030114773d33b083d043",
+      "designer_context": "bc-f542c82d-061d-565d-9e6e-573139c3f008",
+      "sha256": {
+        "gold-labeler-1.json": "94535b38423487eef387eb41d835daa65e4480722d507dc94cdbc7477d818e69",
+        "gold-labeler-1-attestation.json": "f46130a51c5c03fcee08295ecfd4b4affa9745aee44d4b255864c86580c75ffd"
+      }
+    },
+    {
+      "n": 2,
+      "family": "gemini",
+      "source_branch": "cursor/v322-gold-labeler-2-17a0",
+      "source_commit": "10fdfd3b8480305a030f1b3491b22d90e5679dff",
+      "designer_context": "bc-5e0a3920-d46f-5981-83fb-c40e776b4584",
+      "sha256": {
+        "gold-labeler-2.json": "efc002302942c1def8c3f52ffe65122ab5d3500200f0a150e8fb50d1b78a5497",
+        "gold-labeler-2-attestation.json": "2ef65373f7ce06e8f836ea5f01fef417eefe01d54f437d5bb0708154fc77585b"
+      }
+    },
+    {
+      "n": 3,
+      "family": "gpt",
+      "source_branch": "cursor/v322-gold-labeler-3-17a0",
+      "source_commit": "4a7f9f85f6cf64528a35276b8413c1e91ab2b587",
+      "designer_context": "bc-ed398c10-4cb2-5450-8058-2b65aa528549",
+      "sha256": {
+        "gold-labeler-3.json": "6545c1173fea9bc69a6235adfaea38a009ac104992efb7f0c841e5619f9cbce3",
+        "gold-labeler-3-attestation.json": "038e6770c0f8139eda5def6b922ff9554df52bfd6945b09329d734468798be79"
+      }
+    }
+  ],
+  "schema_status": "18 cases / 24 turns each; required ⊆ allowed; overall derivation holds",
+  "rewritten": false
+}

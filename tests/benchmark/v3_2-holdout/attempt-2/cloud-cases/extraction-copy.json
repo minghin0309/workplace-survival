@@ -1,0 +1,48 @@
+{
+  "schema_version": "v3.2-attempt2-extraction-copy",
+  "method": "git show",
+  "merged": false,
+  "holdout_branch": "cursor/blind-v322-holdout-17a0",
+  "extractor_visible_sha256": "97d1a3e6cbd3cfd8b6d80bf4a0df4f0131846e559a950665055a94c9d86d2a1f",
+  "extractors": [
+    {
+      "n": 1,
+      "family": "grok",
+      "source_branch": "cursor/v322-extractor-grok-17a0",
+      "source_commit": "ff00149957cc05a4dfb5c54eed386ecd93037dbe",
+      "context_id": "bc-67e42ce2-6f4b-52df-af72-2ab315f76639",
+      "sha256": {
+        "extractor-1-raw.json": "980fb48b53ca2e6ed41c1273b6f27f06bdd142c2cd04d21fa2ba31bc33bde677",
+        "extractor-1-attestation.json": "655f98fe0f256701401dfe79d78859cce246fbe19fbfef0d83bc5a24b231e569"
+      },
+      "protocol_deviation": "attestation records an off-allowlist read of SKILL.md; Skill was not modified"
+    },
+    {
+      "n": 2,
+      "family": "gemini",
+      "source_branch": "cursor/v322-extractor-gemini-17a0",
+      "source_commit": "2dd5e3ec23aad4060a9d7c27dadc89d1809b16d3",
+      "context_id": "bc-8c33fcfe-893c-57f6-b785-2a00056f1ad6",
+      "sha256": {
+        "extractor-2-raw.json": "e76c023d11fba1936132c9a56a67d07804d98be8a43df44c7d21678f25f7e9a5",
+        "extractor-2-attestation.json": "d12759fdf8b3c4dc7ea3a38ba6245f2af737988cf79f5a74c0a06b3f8157b509"
+      }
+    }
+  ],
+  "adjudicator": {
+    "family": "gpt",
+    "source_branch": "cursor/v322-extractor-adjudicator-17a0",
+    "source_commit": "106a1723bf9abd731441e3814fb903b633297947",
+    "context_id": "bc-b290cc8b-0d7d-57fb-9226-34119105ae74",
+    "sha256": {
+      "evaluations-v322-canonical.json": "1a01b246c422bae55e3bf85f14fdc1f9ff4600f5d8636cec56d55f698d9170e8",
+      "extraction-adjudication-v322.json": "4da0203df1fed09ed8832b88c99077c4f944e9ed49d8cc37cbfe2d948069feff",
+      "evaluator-attestation-v322.json": "0f64456aa8a7b8014ca4e68952176c9b967a303199c5f8a79c162378df738850"
+    },
+    "chosen_claim_counts": {"question": 7, "revision": 24},
+    "unresolved_claim_disagreements": 0
+  },
+  "rewritten": false,
+  "route_agreement": "both extractors: 22 Normal mode, 1 Intake, 1 Scope; ratings agree",
+  "claim_count": {"grok": {"question": 7, "revision": 24}, "gemini": {"question": 7, "revision": 9}}
+}

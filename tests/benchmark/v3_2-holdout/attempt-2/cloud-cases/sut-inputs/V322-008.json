@@ -1,0 +1,35 @@
+{
+  "schema_version": "v3.2",
+  "case_id": "V322-008",
+  "recipient_context": {
+    "recipient_name": "Saira Vennick",
+    "recipient_role": "Envelope Hall manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "Load-tape fitter",
+    "organization": "Thornwick Aerostat Works",
+    "site": "Spindlefen Hangar",
+    "situation": "A replacement gore for TW-519 must be cut so the equatorial tape lands on the existing stitch line.",
+    "known_facts": [
+      "TW-519 lost gore 7 during a hoop-snag on the south cradle.",
+      "The replacement gore must be cut to a finished length that places the equatorial tape on the existing stitch line.",
+      "You measured that finished length on the envelope this morning and wrote it on a card in your pocket.",
+      "Saira must confirm the cut length before any shears touch the replacement panel."
+    ],
+    "constraints": [
+      "Do not cut the replacement gore without Saira's confirmation of the finished length.",
+      "The length must be the measured finished length that hits the existing stitch line."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review the draft in the attached image before I send it to Saira. One figure on the scanned card did not come through.",
+      "image_path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/images/v322-008-t1.png"
+    }
+  ]
+}

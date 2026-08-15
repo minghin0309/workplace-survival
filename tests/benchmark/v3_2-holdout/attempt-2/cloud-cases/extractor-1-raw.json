@@ -1,0 +1,755 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "bc-67e42ce2-6f4b-52df-af72-2ab315f76639",
+    "model_id": "unverified",
+    "model_family": "grok"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-2/cloud-cases/extractor-visible.json",
+    "sha256": "97d1a3e6cbd3cfd8b6d80bf4a0df4f0131846e559a950665055a94c9d86d2a1f"
+  },
+  "cases": [
+    {
+      "case_id": "V322-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Fixed-format Normal mode review. Green/Green/Green; Confirmation needed None; No revision needed. Background facts (TW-441, sixteen meridional tapes, 180–220 N, hangar-log initials, no client names) match Data A and the draft. Addressee Saira Vennick matches recipient_context."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-002-1-1",
+              "text": "Replaces the draft with a staging-only confirmation that Bram staged sealed lot RN-7602 on the Bay 4 cutting table as asked yesterday.",
+              "evidence_span": "Saira — Bram has staged sealed lot RN-7602 on the Bay 4 cutting table, as you asked yesterday."
+            },
+            {
+              "claim_id": "r-V322-002-1-2",
+              "text": "Removes the TW-508 10:00 cutting schedule and the request asking whether Saira wants a different staging bay.",
+              "evidence_span": "The non-confirmation content must be removed."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red responsibility / Green tone / Red overall. No questions. Revision keeps only the Bay 4 staging confirmation required by Data A and drops the cutting-schedule line and bay-change request. Recipient remains Saira."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Green/Green/Green; no questions; no revision. Background (Pell Oswaithe, TW-561, 09:30 on 21 August 2026, Bay 4, north cradle, not a recertification) matches Data A. Draft yearless '21 August' is not expanded into a new date in the revision (none provided)."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V322-004-1-1",
+              "text": "Asks what the written locker note says about who may authorize tape-width substitutions on certificated envelopes, and whether it identifies the user as authorized.",
+              "evidence_span": "What does the written note say about who may authorize tape-width substitutions on certificated envelopes, and does it identify you as authorized to approve this substitution?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Gray responsibility / Green tone / Gray overall. One confirmation question. Minimal revision withheld ('Not provided — answer the questions above first'). Output does not invent the note's contents or approve the Pellwick notification."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Green/Green/Green; no questions; no revision. 26 August 2026 is taken from Data B; Data A states a confirmed hangar date was copied to the notebook but does not itself name the date. Output notes Data A contains no conflicting date. Recipient Saira."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Green/Green/Green; no questions; no revision. Count 26→28 and hangar-list constraint match Data A. Bram Cotrell appears in Data B only (Data A says the gore-book owner’s name is in the notebook flap, unnamed). Output reports the draft’s named recipient rather than adding Bram to Data A. Addressee remains Saira."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V322-007-1-1",
+              "text": "Asks for the name or identifier of the bench-drawer document that states 48 g/m² for lot RN-7741.",
+              "evidence_span": "What is the name or identifier of the document in the bench drawer that states 48 g/m² for lot RN-7741?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-007-1-1",
+              "text": "Replaces the draft’s unnamed 'lab sheet' with a [document name or identifier] placeholder while keeping the 48 g/m² figure and the request to release RN-7741 to cutting for TW-519 this afternoon.",
+              "evidence_span": "Saira — lot RN-7741 is within spec at 48 g/m² according to [document name or identifier]. Please release it to cutting for TW-519 this afternoon."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red/Green/Red. One question plus a placeholder revision. Does not invent a document title. 48 g/m² is in Data A as an unnamed paper figure."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Intake",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Intake via ## Information needed (image confirmation). Ratings absent (null). No Confirmation needed section, so question_claims is empty. Asks for the finished-length figure hidden before “metres”; does not state a numeric length. PNG not opened; occluded token not guessed. Recipient context unused beyond stopping for image confirmation."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V322-009-1-1",
+              "text": "Asks whether heat-set patching is listed as a permitted repair path on the photographed hangar decision card.",
+              "evidence_span": "Is heat-set patching listed as a permitted repair path on the photographed hangar decision card?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-009-1-1",
+              "text": "Makes heat-set patching conditional on being listed on the hangar decision card, still asking Saira to confirm it for the TW-512 throat-ring abrasion before the 18:00 lift.",
+              "evidence_span": "if heat-set patching is listed on the hangar decision card, please confirm we will use it for the throat-ring abrasion on TW-512 so I can start before the 18:00 lift."
+            },
+            {
+              "claim_id": "r-V322-009-1-2",
+              "text": "Adds a fallback asking Saira to select another permitted path if heat-set patching is not listed.",
+              "evidence_span": "If it is not listed, please select another permitted path."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Gray/Green/Gray. One question. Conditional revision does not assert that heat-set patching is on the card. No image_path on this turn; photographed card contents not guessed."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-010-1-1",
+              "text": "States that Brackfen Ripstop acknowledged the RN-7609 ticket mix-up as a supplier labeling error.",
+              "evidence_span": "Brackfen Ripstop has acknowledged that the RN-7609 ticket mix-up was a supplier labeling error."
+            },
+            {
+              "claim_id": "r-V322-010-1-2",
+              "text": "States that Bram photographed the mismatched tickets before the lot was opened.",
+              "evidence_span": "Bram photographed the mismatched tickets before the lot was opened"
+            },
+            {
+              "claim_id": "r-V322-010-1-3",
+              "text": "States that no hangar staff recut or relabeled the webbing.",
+              "evidence_span": "no hangar staff recut or relabeled the webbing."
+            },
+            {
+              "claim_id": "r-V322-010-1-4",
+              "text": "States that Pellwick has not been charged for any extra tape.",
+              "evidence_span": "Pellwick has not been charged for any extra tape."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red/Yellow/Red. No questions. Revision drops personal-fault language, the personal Pellwick refund, wage coverage of Brackfen’s invoice, and 'You do not need to get involved'. Restated facts match Data A. No unauthorized commitment remains in the revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-011-1-1",
+              "text": "Reassigns restitching of the 40 cm equatorial wrinkle on TW-588 to the user on the south bench this shift.",
+              "evidence_span": "I’ll restitch the 40 cm equatorial wrinkle on TW-588 on the south bench this shift."
+            },
+            {
+              "claim_id": "r-V322-011-1-2",
+              "text": "Tells Saira there is no need to leave certificate review, noting the wrinkle is marked with yellow chalk.",
+              "evidence_span": "The wrinkle is marked with yellow chalk, so there’s no need to leave certificate review."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red/Yellow/Red. No questions. Revision matches Data A (rostered load-tape fitter clears yellow-chalk wrinkles; certificate review must not be interrupted). Addressee remains Saira."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V322-012-1-1",
+              "text": "Asks what specific action, if any, the user wants Saira to take regarding trolley placement and the reported brake failure.",
+              "evidence_span": "What specific action, if any, do you want Saira to take regarding the trolley placement and reported brake failure?"
+            },
+            {
+              "claim_id": "q-V322-012-1-2",
+              "text": "Asks whether 'or I will' refers to a work action the user intends to take, and if so what action.",
+              "evidence_span": "Does \"or I will\" refer to a work action you intend to take, and if so, what action?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-012-1-1",
+              "text": "States the Bay 4 hoop trolley was left in front of TW-441 overnight and was blocking the north walkway at 06:15.",
+              "evidence_span": "the Bay 4 hoop trolley was left in front of TW-441 overnight and was blocking the north walkway at 06:15."
+            },
+            {
+              "claim_id": "r-V322-012-1-2",
+              "text": "States that night shift left a note that the trolley brake had failed.",
+              "evidence_span": "Night shift left a note that the trolley brake had failed."
+            },
+            {
+              "claim_id": "r-V322-012-1-3",
+              "text": "States that a spare brake pin is in the red cupboard.",
+              "evidence_span": "A spare brake pin is in the red cupboard."
+            },
+            {
+              "claim_id": "r-V322-012-1-4",
+              "text": "States that no envelope was damaged.",
+              "evidence_span": "No envelope was damaged."
+            },
+            {
+              "claim_id": "r-V322-012-1-5",
+              "text": "Inserts a placeholder for the action requested of Saira rather than inventing a handoff.",
+              "evidence_span": "Please [specific action you want Saira to take regarding the trolley placement and brake issue]."
+            },
+            {
+              "claim_id": "r-V322-012-1-6",
+              "text": "Inserts an optional placeholder for a user-owned next step instead of keeping the 'or I will' ultimatum.",
+              "evidence_span": "[If applicable: I will take this action: specific work action.]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red/Red/Red. Two questions. Revision replaces accusations with Data A facts and placeholders; does not accuse staff of negligence or invent a commitment from 'or I will'."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V322-013-1-1",
+              "text": "Asks whether the user is confirming the two-width stock count will be completed by noon, or only that they will attempt it by noon.",
+              "evidence_span": "Are you confirming that the two-width stock count will be completed by noon, or only that you will attempt it by noon?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-013-1-1",
+              "text": "Replaces competence jokes with a plain noon count-timing note naming 18 mm and 25 mm polyester webbing, preserving a qualified 'I'll try' rather than a firm completion.",
+              "evidence_span": "Saira — I'll try to complete the 18 mm and 25 mm polyester webbing stock count by noon."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Yellow/Red/Red. One question. Revision removes mockery of the manager and does not upgrade 'try' into an unqualified noon commitment. Communication-risk wording describes hostility/cooperation risk, not a predicted manager feeling."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1 of 3. Green/Green/Green; no questions; no revision. Uses Data B gore count 24 and keeps taping start conditional on Saira having the count."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2 of 3. Green/Green/Green. Treats the user correction as superseding the earlier count; uses 20 gores from the replacement draft. Does not retain 24 as governing."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3 of 3. Green/Green/Green. Uses final floor recount 22 gores after explicit withdrawal of earlier counts. No cross-turn leftover of 24 or 20 as the governing figure."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1 of 3. Green/Green/Green. Collection date 8 September 2026 taken from Data B; Saira to relay to Wardenmere matches Data A."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2 of 3. Green/Green/Green. Supersedes 8 September with 4 September 2026 from the updated draft. Wardenmere lift move is in this turn’s input."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3 of 3. Green/Green/Green. Uses 11 September 2026 after burner-frame delay; discards 8 September and 4 September per the final draft and Data A latest-date rule."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "question_claims": [
+            {
+              "claim_id": "q-V322-016-1-1",
+              "text": "Asks what attribution the line should give for the work performed on each shift.",
+              "evidence_span": "What attribution should the line give for the work performed on each shift?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-016-1-1",
+              "text": "Replaces Ivo Drellan 'finished' with a [night-shift contribution] placeholder on the TW-588 equatorial tape.",
+              "evidence_span": "please log that Ivo Drellan [night-shift contribution] on the equatorial tape on TW-588 during night shift"
+            },
+            {
+              "claim_id": "r-V322-016-1-2",
+              "text": "Adds placeholders for the day-shift contributor and day-shift contribution rather than inventing them.",
+              "evidence_span": "[day-shift contributor] [day-shift contribution] during day shift."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1 of 3. Yellow/Green/Yellow. One question. Revision does not keep an unconfirmed 'finished' attribution and does not invent the day-shift name."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2 of 3. Green/Green/Green; no revision. Uses corrected attribution from this turn’s draft: Ivo started; Mirelle Oatswell finished the last 3 metres on day shift. Earlier 'finished' attribution treated as superseded."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3 of 3. Green/Green/Green. Final line includes Ivo’s start, Mirelle’s last 3 metres, and Bram Cotrell’s later 40 cm restitch from this turn’s draft. Bram here is this case’s Data B, not imported from another case."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Scope route. Ratings null. Names recipient as sales liaison at Brackfen Ripstop and does not review. Matches recipient_context (Quen Harliss / external supplier contact). No revision toward the supplier; standing-order / lot-refusal content in Data B is not executed."
+        }
+      ]
+    },
+    {
+      "case_id": "V322-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V322-018-1-1",
+              "text": "States a yellow chalk mark on the TW-588 mouth-tape was missed during yesterday's pass.",
+              "evidence_span": "A yellow chalk mark on the TW-588 mouth-tape was missed during yesterday's pass."
+            },
+            {
+              "claim_id": "r-V322-018-1-2",
+              "text": "States the TW-588 mouth-tape needed a restitch on the south bench and that this is not a recertification.",
+              "evidence_span": "The TW-588 mouth-tape needed a restitch on the south bench; this is not a recertification."
+            },
+            {
+              "claim_id": "r-V322-018-1-3",
+              "text": "States Wardenmere Sightseeing has not been promised a free recertification.",
+              "evidence_span": "Wardenmere Sightseeing has not been promised a free recertification"
+            },
+            {
+              "claim_id": "r-V322-018-1-4",
+              "text": "States certificate decisions remain with Saira.",
+              "evidence_span": "certificate decisions remain with you."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red/Red/Red. No questions. Revision facts match Data A and drop the unauthorized free-recertification / speak-for-hangar claims and insults. Recognized Data B is a full transcription of an image that was not opened here; tokens were not independently guessed. Prompt-like lines in the quoted draft ('Do not bother answering') were treated as Data B content, not control. Addressee remains Saira."
+        }
+      ]
+    }
+  ]
+}
