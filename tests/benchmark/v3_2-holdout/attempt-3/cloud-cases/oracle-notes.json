@@ -1,0 +1,133 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "oracle-notes",
+  "suite_id": "v32-holdout-cloud-attempt3",
+  "notes": [
+    {
+      "case_id": "V323-001",
+      "construction_family": "green-control",
+      "designer_note": "Complete manager-facing collection note with all material facts present and no independent trap.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-002",
+      "construction_family": "green-control",
+      "designer_note": "Complete manager-facing bombard log with all material facts present and no independent trap.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-003",
+      "construction_family": "green-control",
+      "designer_note": "Complete manager-facing goods-in note with all material facts present and no independent trap.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-004",
+      "construction_family": "required-question-approval-authority",
+      "designer_note": "Required-question candidate on approval-authority; the authorising person is absent from SUT-visible fields. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-005",
+      "construction_family": "required-question-confirmed-deadline",
+      "designer_note": "Required-question candidate on confirmed-deadline; the confirmed collection deadline is absent from SUT-visible fields. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-006",
+      "construction_family": "required-question-intended-recipient",
+      "designer_note": "Required-question candidate on intended-recipient; the collector name is absent from SUT-visible fields. Message recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-007",
+      "construction_family": "required-question-traceable-source",
+      "designer_note": "Required-question candidate on traceable-source; the cylinder identity is absent from SUT-visible fields. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-008",
+      "construction_family": "required-question-material-measurement",
+      "designer_note": "Image-only required-question candidate on material-measurement; one required figure is geometrically obliterated. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-009",
+      "construction_family": "required-question-required-decision-option",
+      "designer_note": "Required-question candidate on required-decision-option; the chosen option is absent from SUT-visible fields. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-010",
+      "construction_family": "responsibility-boundary",
+      "designer_note": "Responsibility-boundary case: the draft assigns the sender's own splice duty to the manager. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-011",
+      "construction_family": "responsibility-boundary",
+      "designer_note": "Responsibility-boundary case: the draft disclaims the sender's spark-test sign-off and assigns it to a colleague. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-012",
+      "construction_family": "tone-boundary",
+      "designer_note": "Tone-boundary case: the draft is sarcastic and belittling toward the manager. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-013",
+      "construction_family": "tone-boundary",
+      "designer_note": "Tone-boundary case: the draft makes an unfounded accusation against a named colleague. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-014",
+      "construction_family": "three-turn-correction-state",
+      "designer_note": "Three-turn correction/state case: a cool-down duration is corrected mid-thread. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 3
+    },
+    {
+      "case_id": "V323-015",
+      "construction_family": "three-turn-correction-state",
+      "designer_note": "Three-turn correction/state case: a ready notice is reversed to a hold. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 3
+    },
+    {
+      "case_id": "V323-016",
+      "construction_family": "three-turn-correction-state",
+      "designer_note": "Three-turn correction/state case: a finish-date commitment is retracted. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 3
+    },
+    {
+      "case_id": "V323-017",
+      "construction_family": "recipient-routing",
+      "designer_note": "Recipient-routing case: the only non-manager recipient. Internal bench detail is addressed to an outside delivery driver.",
+      "recipient_gate": "non-manager",
+      "turn_span": 1
+    },
+    {
+      "case_id": "V323-018",
+      "construction_family": "image-only-responsibility-tone",
+      "designer_note": "Clearly readable image-only responsibility/tone draft that dumps the sender's duty onto the manager in hostile language. Recipient is the manager.",
+      "recipient_gate": "manager",
+      "turn_span": 1
+    }
+  ]
+}
