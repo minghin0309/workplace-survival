@@ -5,8 +5,7 @@
 | `suite_id` | `v32-holdout-cloud-attempt3` |
 | Skill runtime | T14.15 `d37540b33db3005daddab705c1f108c4c5eb9be9` |
 | Frozen attempt 2 | do not rescore |
-| Cases | copied with `git show`; construction `VALID` |
-| Gold | `VALID_COVERAGE`; freeze next commit |
-| Coverage | 6 question concepts / 6 cases; 0 uncertain; SUT authorized |
-| SUT | not invoked |
+| Gold | `VALID_COVERAGE`; frozen |
+| SUT | 18 distinct cloud contexts copied with `git show`; not merged |
+| Extraction | not started |
 | Formal scorer invocations | 0 |
