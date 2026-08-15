@@ -1,0 +1,29 @@
+{
+  "schema_version": "v3.2-attempt3-extraction-copy",
+  "method": "git show",
+  "merged": false,
+  "holdout_branch": "cursor/blind-v323-holdout-17a0",
+  "extractors": [
+    {
+      "id": "extractor-1",
+      "family": "grok",
+      "source_branch": "cursor/v323-extractor-grok-17a0",
+      "source_commit": "b2d086dbe3e36755cd3c5b1b239898ab51aa88d7",
+      "context_id": "bc-889dd45d-daf2-5c3b-b454-354e7a88b56f"
+    },
+    {
+      "id": "extractor-2",
+      "family": "gemini",
+      "source_branch": "cursor/v323-extractor-gemini-17a0",
+      "source_commit": "3dbfb218861cf12431aa5f524022a106b533cbff",
+      "context_id": "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"
+    }
+  ],
+  "gold_or_scoring_accessed": false,
+  "sha256": {
+    "extractor-1-raw.json": "42505e0b8e3a44d469855939bc7189063b2b5930f9ab1d742637f0b98216041f",
+    "extractor-1-attestation.json": "9f37696aa62548fac84e9b3e55bbf25396f8a8a5cd0087c235919c37a682d541",
+    "extractor-2-raw.json": "bbd9a609bc25d073e72034fe590ac734afb9a37a56b1d086575c13240310af2d",
+    "extractor-2-attestation.json": "dc079a05aab87b908ec4e08024fceda86c5d9744a15abd94331fa3f9f797941a"
+  }
+}
