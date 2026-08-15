@@ -1,0 +1,89 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "matcher-attestation",
+  "case_set_id": "V323",
+  "matcher": {
+    "context_id": "bc-0761c9ff-a1ae-50fb-aa42-a6fe398af7de",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "role": "semantic-matcher"
+  },
+  "gold_access": true,
+  "scorer_run": false,
+  "files_read_count": 5,
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/extractions-manifest-v323.json",
+      "sha256": "7be3f8cc2c7a0c37b95e3b0f15343a8c591d007822847e2d1e567dc07868933d",
+      "sha256_verified": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/evaluations-v323-canonical.json",
+      "sha256": "15b6c34992c7388f9db201b5f297ce9d27e4810d3a2589db74862df4000e2455",
+      "sha256_verified": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/outputs-v323-raw.json",
+      "sha256": "609ca3b53d79fe3b743eac134d514bea3d8f33c66cd2734de268f5ed5f14ead5",
+      "sha256_verified": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-v323.json",
+      "sha256": "ed5bc77a5bb1839d45659d800aaaf3abc04212b044eedf08d6e6539c788d998f",
+      "sha256_verified": true
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+      "sha256_verified": true
+    }
+  ],
+  "output": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/matches-v323.json",
+    "sha256": "5469754ad90b4e23d908ba2e29be41a5b44b4a5b0f8e254da9943c622a0f8d99"
+  },
+  "git": {
+    "branch": "cursor/v323-matcher-claude-17a0",
+    "base_branch": "cursor/blind-v323-holdout-17a0",
+    "matches_commit": "22007205f805d520985112125d376abdf3f2e869"
+  },
+  "coverage": {
+    "cases": 18,
+    "turns": 24,
+    "claims_total": 22,
+    "decisions_total": 22,
+    "exact": 0,
+    "alias": 0,
+    "semantic": 19,
+    "unsupported": 3
+  },
+  "isolation": {
+    "read_only_the_five_listed_files": true,
+    "read_matching_brief": false,
+    "read_skill_files": false,
+    "read_scorer": false,
+    "read_methodology": false,
+    "read_oracle_notes": false,
+    "read_question_design": false,
+    "read_extractor_raw": false,
+    "read_images": false,
+    "globbed_or_listed_holdout_tree": false,
+    "scorer_executed": false,
+    "modified_gold": false,
+    "modified_ontology": false,
+    "modified_evaluations": false,
+    "modified_claims": false
+  },
+  "decision_rules_applied": {
+    "one_decision_per_claim": true,
+    "concept_in_turn_allowed_list_or_null": true,
+    "local_concept_definitions_treated_as_semantic_targets": true,
+    "exact_alias_requires_text_equals_evidence_span_and_ontology_alias_hit": true,
+    "semantic_confidence_floor_0_8": true,
+    "unsupported_keeps_null_concept": true,
+    "no_invented_concepts": true,
+    "no_dropped_claims": true
+  },
+  "notes": "No claim in the snapshot has claim text byte-identical to its evidence span, so the exact/alias gate is unmet for all 22 claims and every matched claim is recorded as semantic. Three claims are unsupported: two V323-013 question claims because that turn's allowed_question_concepts list is empty, and one V323-013 revision claim whose placeholder semantics has no allowed revision concept for that turn.",
+  "attested_at_utc": "2026-08-15T02:37:32Z"
+}
