@@ -1,0 +1,34 @@
+{
+  "schema_version": "v3.2",
+  "case_id": "V323-018",
+  "recipient_context": {
+    "recipient_name": "Orrin Medwick",
+    "recipient_role": "Nine-Rib Bench manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "journeyman tube-bender",
+    "organization": "Greaveholt Cold-Cathode Works",
+    "site": "Nine-Rib Bench, Yarrowbridge",
+    "situation": "A mercury-dose unit on CC-3425 is the sender's signed bench duty and still needs dosing before collection.",
+    "known_facts": [
+      "Lise Cardenoy is the signed tube-bender for CC-3425 and mercury dosing on that job is her bench duty.",
+      "Orrin Medwick countersigns completed doses; he does not perform them when the signed bender is on shift.",
+      "Coppervine Cycles is booked to collect the unit later on 24 September 2026.",
+      "Lise remains on shift until 16:00."
+    ],
+    "constraints": [
+      "Keep the note to Orrin Medwick only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "The mercury-dose note is in the attached image. Please review it before I send it to Orrin.",
+      "image_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/images/V323-018.png"
+    }
+  ]
+}

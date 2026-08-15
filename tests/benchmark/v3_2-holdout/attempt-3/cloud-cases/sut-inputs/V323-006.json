@@ -1,0 +1,34 @@
+{
+  "schema_version": "v3.2",
+  "case_id": "V323-006",
+  "recipient_context": {
+    "recipient_name": "Orrin Medwick",
+    "recipient_role": "Nine-Rib Bench manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "journeyman tube-bender",
+    "organization": "Greaveholt Cold-Cathode Works",
+    "site": "Nine-Rib Bench, Yarrowbridge",
+    "situation": "A finished unit needs the bench manager to countersign the collection ticket.",
+    "known_facts": [
+      "Orrin Medwick will only countersign the collection ticket if the note names the person who will collect the finished unit.",
+      "The writer was given that collector's name at the bench this morning and still has it.",
+      "Job CC-3332 is a 12mm argon logo for Wintle Chemists.",
+      "The unit is on collection rack A1."
+    ],
+    "constraints": [
+      "Do not omit or placeholder the collector's name.",
+      "Keep the note to Orrin Medwick only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this countersign request for Orrin.\n\nDraft under review:\nOrrin \u2014 please countersign the collection ticket for CC-3332, the 12mm argon logo for Wintle Chemists, now on rack A1. I will clip the signed ticket to the carrying crate."
+    }
+  ]
+}

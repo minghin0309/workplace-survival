@@ -1,0 +1,39 @@
+{
+  "schema_version": "v3.2",
+  "case_id": "V323-015",
+  "recipient_context": {
+    "recipient_name": "Orrin Medwick",
+    "recipient_role": "Nine-Rib Bench manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "journeyman tube-bender",
+    "organization": "Greaveholt Cold-Cathode Works",
+    "site": "Nine-Rib Bench, Yarrowbridge",
+    "situation": "A collection-ready notice for CC-3418 is being prepared for the bench manager.",
+    "known_facts": [
+      "Job CC-3418 is a 15mm neon repair for Duskletter Outfitters.",
+      "The unit is on collection rack A3 at the start of the thread."
+    ],
+    "constraints": [
+      "Keep the note to Orrin Medwick only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this ready-for-collection note for Orrin.\n\nDraft under review:\nOrrin \u2014 CC-3418, the 15mm neon repair for Duskletter Outfitters, is on rack A3 and is ready for collection. Please note it as released."
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Stop \u2014 the splice failed the spark test. It is not ready. Collection must wait.\n\nDraft under review:\nOrrin \u2014 hold collection on CC-3418. The splice failed the spark test and the unit is not ready."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "Send Orrin a hold notice, not a ready notice.\n\nDraft under review:\nOrrin \u2014 hold collection on CC-3418. The splice failed the spark test and the unit is not ready."
+    }
+  ]
+}

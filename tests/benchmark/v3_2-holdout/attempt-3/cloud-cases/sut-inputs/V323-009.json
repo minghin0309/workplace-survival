@@ -1,0 +1,34 @@
+{
+  "schema_version": "v3.2",
+  "case_id": "V323-009",
+  "recipient_context": {
+    "recipient_name": "Orrin Medwick",
+    "recipient_role": "Nine-Rib Bench manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "journeyman tube-bender",
+    "organization": "Greaveholt Cold-Cathode Works",
+    "site": "Nine-Rib Bench, Yarrowbridge",
+    "situation": "A cracked electrode well on CC-3362 needs the bench manager to action one repair path.",
+    "known_facts": [
+      "Orrin Medwick will not action the note unless it names exactly one of these three options: redraw from coated stock; replace the electrodes; scrap and re-invoice.",
+      "The writer has already chosen one of those three options and still knows which one.",
+      "Job CC-3362 is a 15mm neon script for Duskletter Outfitters.",
+      "The crack is confined to the electrode well; the coated tubing is otherwise intact."
+    ],
+    "constraints": [
+      "Do not leave the option open or list more than one choice.",
+      "Keep the note to Orrin Medwick only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this repair-path note for Orrin.\n\nDraft under review:\nOrrin \u2014 CC-3362, the 15mm neon script for Duskletter Outfitters, has a crack confined to the electrode well. The coated tubing is otherwise intact. Please action a repair path for this unit so I can either return it to the ribbon burner or strip the shells."
+    }
+  ]
+}
