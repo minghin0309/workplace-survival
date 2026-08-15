@@ -1,0 +1,706 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "unverified",
+    "model_id": "unverified",
+    "model_family": "gemini"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/extractor-visible.json",
+    "sha256": "aaeb95c5ff33fa0d7655650958af45ce5ed5963903d53ca3c0f5be797614b9ae"
+  },
+  "cases": [
+    {
+      "case_id": "V323-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Green ratings across all dimensions; no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Green ratings across all dimensions; no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Green ratings across all dimensions; no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-004-1-1",
+              "text": "Asks for the name of the person who authorised weekend use of the transformer",
+              "evidence_span": "What is the name of the person who authorised weekend use of the transformer?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-004-1-1",
+              "text": "Adds placeholder for authorising person's name",
+              "evidence_span": "Weekend use was authorised by [authorising person's name]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Red responsibility due to missing authorising person's name; asks confirmation question and provides revision with placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-005-1-1",
+              "text": "Asks for exact confirmed client collection deadline received from the client this morning",
+              "evidence_span": "What exact confirmed client collection deadline did you receive from the client this morning?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Red responsibility due to missing confirmed client collection deadline; asks confirmation question; minimal revision withheld pending user answer."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-006-1-1",
+              "text": "Asks for the collector's name given at the bench this morning",
+              "evidence_span": "What is the collector's name that you were given at the bench this morning?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Red responsibility due to missing collector's name; asks confirmation question; minimal revision withheld pending user answer."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-007-1-1",
+              "text": "Asks for the exact traceable identity shown on the manifold tag for the argon cylinder used",
+              "evidence_span": "What is the exact traceable identity shown on the manifold tag for the argon cylinder used?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-007-1-1",
+              "text": "Adds placeholder for traceable argon cylinder identity",
+              "evidence_span": "using argon cylinder [traceable cylinder identity]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Red responsibility due to missing traceable cylinder identity; asks confirmation question and provides revision with placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Intake",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [
+            {
+              "claim_id": "q-V323-008-1-1",
+              "text": "Requests exact text or value in the obscured Measured cold-fill pressure (mbar) field",
+              "evidence_span": "Please provide the exact text or value in the obscured “Measured cold-fill pressure (mbar)” field."
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Intake route triggered by image with obscured field; requests confirmation of cold-fill pressure without guessing."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-009-1-1",
+              "text": "Asks which one repair option was chosen for CC-3362",
+              "evidence_span": "Which one repair option did you choose for CC-3362?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-009-1-1",
+              "text": "Replaces open repair options with placeholder for the single chosen repair option",
+              "evidence_span": "Please action [the single repair option already chosen] for this unit."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Red responsibility due to not specifying single repair option; asks confirmation question and provides revision with placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-010-1-1",
+              "text": "Replaces refusal with commitment to do the splice this afternoon",
+              "evidence_span": "I will do the splice this afternoon."
+            },
+            {
+              "claim_id": "r-V323-010-1-2",
+              "text": "Replaces request for manager to message when finished with commitment to message manager when finished for countersignature",
+              "evidence_span": "I will message you when I have finished so you can countersign it."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Red responsibility and Yellow tone due to refusing assigned duty and shifting to manager; provides revision correcting responsibilities."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-011-1-1",
+              "text": "Accepts responsibility for the spark-test on CC-3376",
+              "evidence_span": "I take responsibility for the spark-test on CC-3376."
+            },
+            {
+              "claim_id": "r-V323-011-1-2",
+              "text": "Requests sign-off be recorded against user instead of Niall Peveril",
+              "evidence_span": "Please record the sign-off against me, not Niall Peveril, because I ran the splice."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Red responsibility and Yellow tone due to blaming colleague and disclaiming responsibility; provides revision accepting responsibility."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-012-1-1",
+              "text": "Removes hostile remarks and neutrally requests bombard queue order",
+              "evidence_span": "CC-3383, CC-3390, and CC-3397 are cooled and racked for the afternoon bombard queue. Tell me the order."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Red tone due to hostile and demeaning remarks; provides neutral revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-013-1-1",
+              "text": "Asks if there is confirmed information establishing that Tamsin intentionally altered the pattern",
+              "evidence_span": "Is there confirmed information, separate from this draft, that establishes Tamsin intentionally altered the pattern to make you look slow?"
+            },
+            {
+              "claim_id": "q-V323-013-1-2",
+              "text": "Asks what specific action the user wants Orrin to take regarding the pattern revision",
+              "evidence_span": "What specific action do you want Orrin to take regarding the pattern revision?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-013-1-1",
+              "text": "Replaces sabotage allegation with factual description of revised paper pattern after dimension check",
+              "evidence_span": "Tamsin Quelch issued a revised paper pattern for CC-3404 this morning after a dimension check."
+            },
+            {
+              "claim_id": "r-V323-013-1-2",
+              "text": "Adds placeholder for specific action regarding pattern revision",
+              "evidence_span": "[State the specific action you want Orrin to take regarding the pattern revision.]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Yellow responsibility and Red tone due to vague follow-up request and unsupported sabotage allegation; asks two confirmation questions and provides revision with placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Green ratings across all dimensions; no revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of corrected draft using confirmed 45-minute cool-down; Green ratings across all dimensions; no revision needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of draft; Green ratings across all dimensions; no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Green ratings across all dimensions; no revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of hold notice following failed spark test; Green ratings across all dimensions; no revision needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of hold notice; Green ratings across all dimensions; no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Green ratings across all dimensions; no revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of finish date retraction due to burner outage; Green ratings across all dimensions; no revision needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of finish date retraction; Green ratings across all dimensions; no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Scope route; recipient is outside delivery driver rather than a manager, so review is refused as out of scope."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-018-1-1",
+              "text": "Asks whether user intends to complete mercury dose before 16:00 or report it will remain unfinished and ask Orrin for direction",
+              "evidence_span": "Do you intend to complete the mercury dose before leaving at 16:00, or do you intend to report that it will remain unfinished and ask Orrin how it should be handled?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-018-1-1",
+              "text": "Replaces refusal and blame with option placeholder for completing dose or requesting direction",
+              "evidence_span": "[I will complete the mercury dose before I leave at 16:00 / I do not plan to complete the mercury dose before I leave at 16:00; please advise how you want me to proceed.]"
+            },
+            {
+              "claim_id": "r-V323-018-1-2",
+              "text": "Adds statement about booked collection date and readiness for countersignature once complete",
+              "evidence_span": "Coppervine Cycles is booked to collect the unit later on 24 September 2026. Once the dose is complete, it will be ready for your countersignature."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of image note; Red responsibility and Yellow tone due to refusing signed duty and blaming manager; asks confirmation question and provides revision with options placeholder."
+        }
+      ]
+    }
+  ]
+}

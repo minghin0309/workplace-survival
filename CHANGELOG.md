@@ -4,6 +4,16 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.2 unseen holdout attempt 3
+
+- Did not rescore or rewrite v3.2 attempt 2.
+- Built 18 unseen cases in an isolated cloud designer (aerostat denylisted) and copied them with `git show`.
+- Gold freeze `VALID_COVERAGE` (6 question concepts / 6 cases, 0 uncertain).
+- Ran 18 distinct cloud SUT contexts against the T14.15 Skill runtime.
+- Dual gold-blind extraction plus Claude matching, then one `score_semantic_v3_2.py` invocation: `SCORED`, thresholds not passed.
+- Question recall 6/6; revision recall 9/41. Case pass: V323-017 only.
+- Report SHA-256 `4f9a30bc01f6e419a4cc173f3a1f49bb19feb5ce8206ef2bbeb852ddabe1c834`. No in-version rerun.
+
 ### S-001/S-002 Skill remediation
 
 - Did not rescore or rewrite v3.2 attempt 2.

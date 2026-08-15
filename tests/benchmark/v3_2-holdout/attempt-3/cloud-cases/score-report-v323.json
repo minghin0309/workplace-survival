@@ -1,0 +1,407 @@
+{
+  "schema_version": "v3.2",
+  "scorer_version": "3.2",
+  "status": "SCORED",
+  "executed_at_utc": "2026-08-15T02:39:55.560203Z",
+  "attempt_id": "6d76451402768e28f120525bf538edb3edfc5e163ef30bd15b9bf1850c12f341",
+  "rerun_performed": false,
+  "arguments": [
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/evaluation-manifest-v323.json",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-v323.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/outputs-v323-raw.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/evaluations-v323-canonical.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/matches-v323.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/score-report-v323.json"
+  ],
+  "scorer_sha256": "9785066efce1f14ac071d05fe040a34c8be075b3ba28bcf9540054fde6f28fad",
+  "frozen_inputs": [
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/evaluation-manifest-v323.json",
+      "sha256": "0aec1437f28e7d407403a40b8013976b10208707c04b93910e62cd9a0514f23d",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-v323.json",
+      "sha256": "ed5bc77a5bb1839d45659d800aaaf3abc04212b044eedf08d6e6539c788d998f",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/outputs-v323-raw.json",
+      "sha256": "609ca3b53d79fe3b743eac134d514bea3d8f33c66cd2734de268f5ed5f14ead5",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/evaluations-v323-canonical.json",
+      "sha256": "15b6c34992c7388f9db201b5f297ce9d27e4810d3a2589db74862df4000e2455",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/matches-v323.json",
+      "sha256": "5469754ad90b4e23d908ba2e29be41a5b44b4a5b0f8e254da9943c622a0f8d99",
+      "exists": true
+    }
+  ],
+  "coverage": {
+    "turns": 24,
+    "accepted_turns": 24,
+    "gold_uncertain_turns": 0,
+    "gold_uncertain_rate": 0.0,
+    "required_question_concepts": 6,
+    "required_question_cases": 6,
+    "required_revision_concepts": 41,
+    "required_revision_cases": 17
+  },
+  "metrics": {
+    "route_accuracy": {
+      "value": 0.9583333333333334,
+      "numerator": 23,
+      "denominator": 24,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.95
+      },
+      "threshold_status": "PASS"
+    },
+    "responsibility_accuracy": {
+      "value": 0.6956521739130435,
+      "numerator": 16,
+      "denominator": 23,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "FAIL"
+    },
+    "tone_accuracy": {
+      "value": 0.9130434782608695,
+      "numerator": 21,
+      "denominator": 23,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "PASS"
+    },
+    "overall_accuracy": {
+      "value": 0.7391304347826086,
+      "numerator": 17,
+      "denominator": 23,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "FAIL"
+    },
+    "required_question_concept_recall": {
+      "value": 1.0,
+      "numerator": 6,
+      "denominator": 6,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "PASS"
+    },
+    "question_claim_support_precision": {
+      "value": 0.7777777777777778,
+      "numerator": 7,
+      "denominator": 9,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": "=",
+        "target": 1.0
+      },
+      "threshold_status": "FAIL"
+    },
+    "required_revision_concept_recall": {
+      "value": 0.21951219512195122,
+      "numerator": 9,
+      "denominator": 41,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "FAIL"
+    },
+    "revision_claim_support_precision": {
+      "value": 0.9230769230769231,
+      "numerator": 12,
+      "denominator": 13,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": "=",
+        "target": 1.0
+      },
+      "threshold_status": "FAIL"
+    },
+    "critical_invariant_violations": {
+      "value": 0,
+      "numerator": 0,
+      "denominator": 24,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": "=",
+        "target": 0
+      },
+      "threshold_status": "PASS"
+    },
+    "gold_uncertain_rate": {
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 24,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": "<=",
+        "target": 0.2
+      },
+      "threshold_status": "PASS"
+    }
+  },
+  "thresholds_passed": false,
+  "not_applicable_metrics": [],
+  "case_results": [
+    {
+      "case_id": "V323-001",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-002",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-003",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-004",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-005",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-006",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-007",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-008",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: route",
+        "turn 1: responsibility",
+        "turn 1: tone",
+        "turn 1: overall",
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-009",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-010",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-011",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-012",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-013",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: unsupported-question-claims",
+        "turn 1: required-revision-concepts",
+        "turn 1: unsupported-revision-claims"
+      ]
+    },
+    {
+      "case_id": "V323-014",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts",
+        "turn 2: required-revision-concepts",
+        "turn 3: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-015",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts",
+        "turn 2: required-revision-concepts",
+        "turn 3: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-016",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts",
+        "turn 2: required-revision-concepts",
+        "turn 3: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V323-017",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V323-018",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: tone",
+        "turn 1: required-revision-concepts"
+      ]
+    }
+  ],
+  "totals": {
+    "accepted_turns": 24,
+    "uncertain_turns": 0,
+    "route": 23,
+    "rated": {
+      "responsibility": 23,
+      "tone": 23,
+      "overall": 23
+    },
+    "rating_correct": {
+      "responsibility": 16,
+      "tone": 21,
+      "overall": 17
+    },
+    "required_questions": 6,
+    "required_questions_hit": 6,
+    "question_claims": 9,
+    "unsupported_question_claims": 2,
+    "required_revisions": 41,
+    "required_revisions_hit": 9,
+    "revision_claims": 13,
+    "unsupported_revision_claims": 1,
+    "critical_violations": 0
+  },
+  "gold_quality": {
+    "labeler_model_families": [
+      "grok",
+      "gemini",
+      "gpt"
+    ],
+    "adjudicator_model_family": "claude",
+    "human_review_available": false,
+    "adjudication_complete": true,
+    "vote_distributions_preserved": true,
+    "attestations": []
+  },
+  "matcher": {
+    "context_id": "bc-0761c9ff-a1ae-50fb-aa42-a6fe398af7de",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "gold_access": true
+  },
+  "limitations": [
+    "v3.2 validates v3.1-compatible freeze documents and does not call v2 main().",
+    "NOT_APPLICABLE metrics never count as threshold passes.",
+    "Archived v2 and v3.1 outcomes are not repaired or replaced."
+  ]
+}

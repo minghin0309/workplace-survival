@@ -1,0 +1,39 @@
+{
+  "schema_version": "v3.2",
+  "case_id": "V323-016",
+  "recipient_context": {
+    "recipient_name": "Orrin Medwick",
+    "recipient_role": "Nine-Rib Bench manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "journeyman tube-bender",
+    "organization": "Greaveholt Cold-Cathode Works",
+    "site": "Nine-Rib Bench, Yarrowbridge",
+    "situation": "A finish-date note for CC-3420 is being prepared for the bench manager.",
+    "known_facts": [
+      "Job CC-3420 is a 12mm argon window tube for Parquet Room bookshop.",
+      "The ribbon burner is the station used to finish that unit."
+    ],
+    "constraints": [
+      "Keep the note to Orrin Medwick only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this finish-date note for Orrin.\n\nDraft under review:\nOrrin \u2014 I can finish CC-3420, the 12mm argon window tube for Parquet Room bookshop, by Friday 25 September 2026. Please put that date on the bench board."
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "I have to retract Friday. The ribbon burner is down. I cannot promise Friday.\n\nDraft under review:\nOrrin \u2014 please retract the Friday 25 September 2026 finish for CC-3420. The ribbon burner is down and I cannot promise that date."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "Send Orrin the retraction and say I will give a new day after the burner is back.\n\nDraft under review:\nOrrin \u2014 please retract the Friday 25 September 2026 finish for CC-3420. The ribbon burner is down. I will give a new day after the burner is back."
+    }
+  ]
+}

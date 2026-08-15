@@ -1,0 +1,43 @@
+{
+  "schema_version": "v3.2-attempt3-gold-copy",
+  "method": "git show",
+  "merged": false,
+  "holdout_branch": "cursor/blind-v323-holdout-17a0",
+  "labelers": [
+    {
+      "id": "gold-labeler-1",
+      "family": "grok",
+      "source_branch": "cursor/v323-gold-labeler-1-17a0",
+      "source_commit": "ec682380bd233d6404518c6a62437cd41d351cd8"
+    },
+    {
+      "id": "gold-labeler-2",
+      "family": "gemini",
+      "source_branch": "cursor/v323-gold-labeler-2-17a0",
+      "source_commit": "99e10215afd2565dc15db905fba554ae3bb3d13f"
+    },
+    {
+      "id": "gold-labeler-3",
+      "family": "gpt",
+      "source_branch": "cursor/v323-gold-labeler-3-17a0",
+      "source_commit": "ff7158bd92d4295fc657502f546c001422aa0569"
+    }
+  ],
+  "question_design_accessed": false,
+  "copied_paths": [
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-labeler-1.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-labeler-1-attestation.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-labeler-2.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-labeler-2-attestation.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-labeler-3.json",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-labeler-3-attestation.json"
+  ],
+  "sha256": {
+    "gold-labeler-1.json": "87d612fd8ab50ab3c8b03b0b832361f0e7e7695b657c0c3ef22bfc92621f91ab",
+    "gold-labeler-1-attestation.json": "819f01a9fe0888a2ebea1f39269f6c51bfb695a8ef1c7fd4cc1cea0cf34cc9da",
+    "gold-labeler-2.json": "d4983ddbfb8ca271bed78961292564a17f8191708c66d81795581a268b7949c0",
+    "gold-labeler-2-attestation.json": "3ed2c17293468dbdc69548a3d2a5a262020f37bbf5f364b31901744771b74f36",
+    "gold-labeler-3.json": "6c26b2e52398e7a3ae800c96493bd735f6147226a5d5685421a818c0b7e5667a",
+    "gold-labeler-3-attestation.json": "78dac0b02b6ecde40ff6c6e66db3d8a06d8311c250ad77658c1ce44b55644474"
+  }
+}

@@ -1,0 +1,734 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "sut-raw-outputs",
+  "parent_gold_manifest": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-manifest-v323.json",
+    "sha256": "8475491cc6b21e4e33620d73011993b4f3f9e802566bc128875f02e964904b18"
+  },
+  "canonical_parent_commit": "4b09c2f7575b33cdc9f865200183cdd41eaa7117",
+  "runtime": {
+    "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "59af7ff2904b1efda4c045bfbbd58216d1462e16b06a3d611e8bbc3b0b001550"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "9a1d44ab7e0b775ef71f7b61cc8861b49e3aec19211179b0e7288aba219e6306"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "098c2d19d325b622a72990256ee7890c8fe2cc7f16a1b3205dfed8cd05d8d9ef"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "94d790c7de1c96cfd1fff98de1c76c8ac8a5811e8e178d35351730a9dd1d66bf"
+      }
+    ]
+  },
+  "requested_model_id": "gpt-5.6-sol-high-fast",
+  "machine_model_id": "unverified",
+  "counts": {
+    "cases": 18,
+    "turns": 24
+  },
+  "cases": [
+    {
+      "case_id": "V323-001",
+      "generator_context_id": "bc-bfd21a7d-69e4-5dab-8ec1-036e457abd3e",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-001.json",
+        "sha256": "4f61e41f9745b3eba8a10429604e85bf55159d0eaf21420ae25ee3cda26811db"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-001.json",
+        "raw_sha256": "cbf1373cfb0cecab7ee914e5a4392c7805d9922039931e6e1655a2240fa1c123",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-001.json",
+        "attestation_sha256": "6df968ae6f31bf69d7b9c8ea4bc7b9811f193c34f79d84ff3898632677270dc7",
+        "branch": "cursor/v323-001-sut-17a0",
+        "output_commit": "d94b7417e8bfa7502172eda16ddb82e8585688c9",
+        "raw_commit": "d94b7417e8bfa7502172eda16ddb82e8585688c9",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "cbf1373cfb0cecab7ee914e5a4392c7805d9922039931e6e1655a2240fa1c123",
+        "source_attestation_sha256": "6df968ae6f31bf69d7b9c8ea4bc7b9811f193c34f79d84ff3898632677270dc7"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the only intended recipient.\n- Job CC-3304 is a 15mm argon tube spelling TEAS for Sablewick Tea Rooms.\n- Bombard finished at 09:40 on 24 September 2026, followed by a 35-minute cool-down, and the unit is on collection rack A2.\n- The tea-room porter is booked to collect the unit at 15:00 on 24 September 2026; the booked collection time must not change.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies the job, specification, customer, bombard time and date, cool-down, rack location, booked 15:00 collection, and requested ready status consistently with Data A. It is addressed only to Orrin and does not change the booked collection time.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and directly requests that Orrin note the unit as ready.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-002",
+      "generator_context_id": "bc-e82004d2-041d-558d-816e-2a2118f9a765",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-002.json",
+        "sha256": "fcb835f3761c9ac3e6fa57c7126a8237656aaceeffe414e25dc400e8742243c2"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-002.json",
+        "raw_sha256": "35afae2852bcd2c2eafc0c129bff3113a680f7415030d329fd8d1391bf661b98",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-002.json",
+        "attestation_sha256": "557f09123151f2f0f459d17e8dc24e5ffe1a428d923dde6b2193e23f7136884a",
+        "branch": "cursor/v323-002-sut-17a0",
+        "output_commit": "8e1d130f0f0253e749205bee9a04d156ef59aeb5",
+        "raw_commit": "8e1d130f0f0253e749205bee9a04d156ef59aeb5",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "35afae2852bcd2c2eafc0c129bff3113a680f7415030d329fd8d1391bf661b98",
+        "source_attestation_sha256": "557f09123151f2f0f459d17e8dc24e5ffe1a428d923dde6b2193e23f7136884a"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, and the note must be sent only to him.\n- Job CC-3311 is a 12mm coated tube for the Parquet Room bookshop window.\n- The morning bombard is complete: it ran at 450 mA for 12 minutes, and the electrode shells stayed below the heat-tint limit.\n- The tube is on manifold peg 3 awaiting fill.\n- The fill must not start until Orrin acknowledges the bombard log.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft accurately identifies CC-3311, reports the confirmed bombard settings and electrode-shell result, states the tube's location, and clearly says it is waiting for Orrin's acknowledgement before the user fills it.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and directed only to Orrin.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-003",
+      "generator_context_id": "bc-82aaa113-0da3-5367-8eca-1095eeb49dca",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-003.json",
+        "sha256": "bf127a47020d1e42598f2a24e1db2008e76d6c684a2cb8d0daa8a496cc8b03da"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-003.json",
+        "raw_sha256": "c28933e9725c3800eed2c3c0c8d48dd3440aff2db9743733cc794c6fc429c7f8",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-003.json",
+        "attestation_sha256": "43af93cf13a14af7794b5bbabcf25d62ae054cdb9e718c0e47af3a86a8fcdc29",
+        "branch": "cursor/v323-003-sut-17a0",
+        "output_commit": "22e1b681ec26ce5481820354aed20d53e4d540f8",
+        "raw_commit": "22e1b681ec26ce5481820354aed20d53e4d540f8",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "c28933e9725c3800eed2c3c0c8d48dd3440aff2db9743733cc794c6fc429c7f8",
+        "source_attestation_sha256": "43af93cf13a14af7794b5bbabcf25d62ae054cdb9e718c0e47af3a86a8fcdc29"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, and the note is intended for Orrin only in an internal message thread.\n- Forty sticks of 12mm coated tubing arrived at 08:20 on 24 September 2026 against packing note PN-19.\n- All forty sticks are on rack B3, and none were cracked in transit.\n- The note must record the rack location as B3.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft accurately states the quantity, tubing size, arrival time and date, packing note, rack B3 location, and condition, and clearly asks Orrin to log the receipt.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and directed only to Orrin.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-004",
+      "generator_context_id": "bc-54ecafa6-5a1c-54e3-960d-5bfd8a0c8b29",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-004.json",
+        "sha256": "2ad2abaefc5098fb2445ec5f5baab17e7cd4095d656da00896f88f337318e4c9"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-004.json",
+        "raw_sha256": "7df1f9cb51a20e85eabffe50a665d7cde181c05b5e2aa88c1846f2d7cb0c20a4",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-004.json",
+        "attestation_sha256": "1a5d47534950c4e01e42bcd42206dcd47bf94f6aa34c13e5aee88bed87a4bd0a",
+        "branch": "cursor/v323-004-sut-17a0",
+        "output_commit": "9b974170a02c3fdbdcc17451aca28a3c8a0f0562",
+        "raw_commit": "9b974170a02c3fdbdcc17451aca28a3c8a0f0562",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "7df1f9cb51a20e85eabffe50a665d7cde181c05b5e2aa88c1846f2d7cb0c20a4",
+        "source_attestation_sha256": "1a5d47534950c4e01e42bcd42206dcd47bf94f6aa34c13e5aee88bed87a4bd0a"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, and the message is intended for Orrin only.\n- Orrin will not release the Saturday bombard-transformer key unless the note names the person who authorised weekend use of the transformer.\n- The user was told the authorising name this morning and still has it, but the name itself is not provided in Data A.\n- Job CC-3340 is a 4-metre argon script for Sablewick Tea Rooms, with bombard planned for Saturday 26 September 2026 at 08:00.\n- Niall Peveril will be on the adjacent station but is not the authorising person.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft requests release of the key and names Niall Peveril only as being on the adjacent station, but it omits the authorising person's name that Orrin explicitly requires before releasing the key.\n- Communication risk: The omission defeats the request's main purpose because Orrin cannot release the key without the required name.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and directed only to Orrin.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the name of the person who authorised weekend use of the transformer?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The name is required for the key-release request and is needed to replace the unresolved placeholder safely.\n   - Neutral answer structure: The person who authorised weekend use is [authorising person's name].\n\n## Minimal revision\n\nOrrin \u2014 please release the bombard-transformer key for Saturday 26 September 2026 at 08:00 so I can bombard the 4-metre argon script on CC-3340 for Sablewick Tea Rooms. Weekend use was authorised by [authorising person's name]. I will return the key to the cupboard when the tube comes off the station. Niall Peveril will be on the adjacent station.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-005",
+      "generator_context_id": "bc-855b4301-d51a-5ce8-b5ad-5f9972b18a20",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-005.json",
+        "sha256": "d5f452dbc3dbe9dcda578259689e69be16083cbaae23794555a011462a7d525d"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-005.json",
+        "raw_sha256": "196c8d175143bdaa4eb670628e67781e15c924557a3de8d441ba028f0a7c4637",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-005.json",
+        "attestation_sha256": "e3c88530375824c0de76536aa7ac4bb5ea58449e953dd094d9d3064729ec89e3",
+        "branch": "cursor/v323-005-sut-17a0",
+        "output_commit": "3a7aacdbf5945bcbe54d22b69f5fd6f2fe3d1be1",
+        "raw_commit": "3a7aacdbf5945bcbe54d22b69f5fd6f2fe3d1be1",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "196c8d175143bdaa4eb670628e67781e15c924557a3de8d441ba028f0a7c4637",
+        "source_attestation_sha256": "e3c88530375824c0de76536aa7ac4bb5ea58449e953dd094d9d3064729ec89e3"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the writer's direct line manager and the note is intended for him only.\n- Orrin will not book the pumping cart unless the note states the confirmed client collection deadline.\n- The writer received the confirmed deadline from the client this morning and still has it.\n- CC-3325 is a 15mm neon repair for Duskletter Outfitters; its electrode splice is complete and has passed a cold spark check.\n- The deadline must not be estimated or represented by a placeholder.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Orrin to book the pumping cart but omits the confirmed client collection deadline, which Data A says Orrin requires before he will make the booking.\n- Communication risk: The omission defeats the request's main purpose because Orrin cannot book the cart without the deadline. The exact confirmed deadline must be added before sending.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual, reports the completed splice and cold spark check, and makes a direct operational request without blame, hostility, or disrespect.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What exact confirmed client collection deadline did you receive from the client this morning?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The deadline is required for Orrin to book the pumping cart and is required for a safe revision.\n   - Neutral answer structure: Confirmed client collection deadline: [exact deadline received from the client]\n\n## Minimal revision\n\nNot provided \u2014 answer the questions above first",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-006",
+      "generator_context_id": "bc-a1cdc3e0-8cd0-5386-9ac4-206d40723111",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-006.json",
+        "sha256": "0fea6dc0175e253e87b31daf719b69df7891fcbb8ed8703d5bdcaaf3a87dcb28"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-006.json",
+        "raw_sha256": "66a46ec5619b45553e77aad8266a66d337a8c132b625e2efdab4023433afa7e9",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-006.json",
+        "attestation_sha256": "ba726f8f8ce2461de880a7673fc469cd52533f813f9dc72f661224a311307cc8",
+        "branch": "cursor/v323-006-sut-17a0",
+        "output_commit": "252a177718d8b4b1ed750ff22ee3030fc8f5473b",
+        "raw_commit": "252a177718d8b4b1ed750ff22ee3030fc8f5473b",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "66a46ec5619b45553e77aad8266a66d337a8c132b625e2efdab4023433afa7e9",
+        "source_attestation_sha256": "ba726f8f8ce2461de880a7673fc469cd52533f813f9dc72f661224a311307cc8"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, and the note is intended for Orrin only.\n- Orrin will countersign the collection ticket only if the note names the person who will collect the finished unit.\n- The user was given the collector's name at the bench this morning and still has it, but Data A does not state the name.\n- Job CC-3332 is a 12mm argon logo for Wintle Chemists, and the unit is on collection rack A1.\n- The collector's name must not be omitted or replaced with a placeholder.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Orrin to countersign but does not name the collector, even though Data A states that Orrin will countersign only if the note names that person.\n- Communication risk: The omission defeats the request's main purpose because Orrin does not have the information required to countersign the ticket.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual: it identifies the job, its location, and the requested countersignature without blame, hostility, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the collector's name that you were given at the bench this morning?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The name is required for Orrin to countersign and is needed to produce a revision without omitting or placeholdering it.\n   - Neutral answer structure: The collector's name is [collector's name].\n\n## Minimal revision\n\nNot provided \u2014 answer the questions above first",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-007",
+      "generator_context_id": "bc-bd9bfa34-cfb9-5999-beba-0d297b448fa9",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-007.json",
+        "sha256": "30cca06d00d668a5de0a5dfc643d57e6672e0466475653afa00438c6737886d6"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-007.json",
+        "raw_sha256": "557e27265c6ce3f4be615289331e080d28e6e54414bcd2db11cc502bbee1c7fe",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-007.json",
+        "attestation_sha256": "cee40f711143162f95e014d79789ef025ad44b49593e7ee53996565ca82465f0",
+        "branch": "cursor/v323-007-sut-17a0",
+        "output_commit": "fb233594f670ec20622dcd25d3fc471210688046",
+        "raw_commit": "fb233594f670ec20622dcd25d3fc471210688046",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "557e27265c6ce3f4be615289331e080d28e6e54414bcd2db11cc502bbee1c7fe",
+        "source_attestation_sha256": "cee40f711143162f95e014d79789ef025ad44b49593e7ee53996565ca82465f0"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the only intended recipient.\n- Orrin will sign the argon fill log only if the note cites the traceable identity of the argon cylinder used; the user read that identity from the manifold tag and still has it, but its value is not included in Data A.\n- CC-3355 is a 15mm argon script for Parquet Room bookshop, and the fill current will be the house 10 mA soak.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Orrin to sign the fill log but omits the traceable argon-cylinder identity that Data A says he requires before signing.\n- Communication risk: The omission defeats the note's main purpose because Orrin cannot sign under the stated requirement. The cylinder identity must be added without inventing it.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is neutral and factual, with a direct request and clear statements of the user's planned actions.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the exact traceable identity shown on the manifold tag for the argon cylinder used?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The identity is required for Orrin to sign and is needed to complete the revision without inventing or omitting it.\n   - Neutral answer structure: The traceable argon-cylinder identity is: [cylinder identity]\n\n## Minimal revision\n\nOrrin \u2014 please sign the argon fill log for CC-3355, the 15mm argon script for Parquet Room bookshop, using argon cylinder [traceable cylinder identity]. The tube is on the manifold and I will run the house 10 mA soak once you have signed. I will stay at the pumping station until the soak ends.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-008",
+      "generator_context_id": "bc-9b8edcb7-48bb-562b-aa48-1305b121fdf1",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-008.json",
+        "sha256": "73c26329dd27c644041a1b6d6785cc84bb9be1586b063a011cf65de0cf41b187"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-008.json",
+        "raw_sha256": "5eeabac2a2288560772340b32897a94e4e5a9271be30d2ea31081b16fe53794b",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-008.json",
+        "attestation_sha256": "aa37f190c3958ebd7a7b06c83f85aaae964090779b46baec1b41464af2a33bfd",
+        "branch": "cursor/v323-008-sut-17a0",
+        "output_commit": "8f58950d607a4fab2d5d240648e0a4e5968cbffd",
+        "raw_commit": "8f58950d607a4fab2d5d240648e0a4e5968cbffd",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "5eeabac2a2288560772340b32897a94e4e5a9271be30d2ea31081b16fe53794b",
+        "source_attestation_sha256": "aa37f190c3958ebd7a7b06c83f85aaae964090779b46baec1b41464af2a33bfd"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Information needed\n\n- Missing: Image confirmation\n- Next step: Please provide the exact text or value in the obscured \u201cMeasured cold-fill pressure (mbar)\u201d field. I cannot infer the hidden pressure from the image.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-009",
+      "generator_context_id": "bc-9f8fc090-cda6-535f-882c-25b4c29932ff",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-009.json",
+        "sha256": "f40fd3ec7a010962f8fd110cb73c390eb935e8ef39a83ba2c4e172723b4465db"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-009.json",
+        "raw_sha256": "6c90b1dcafcd2233412aa6bfa5d926a89f28cb1a8ad5b6005bb98163d2c4e3ae",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-009.json",
+        "attestation_sha256": "524354b56462860f967a63b571eb3ceeeac62e7a1464ba89eda60df26db47579",
+        "branch": "cursor/v323-009-sut-17a0",
+        "output_commit": "82e0845602fca6cdeb9e0fe2b108b2c557f1e517",
+        "raw_commit": "82e0845602fca6cdeb9e0fe2b108b2c557f1e517",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "6c90b1dcafcd2233412aa6bfa5d926a89f28cb1a8ad5b6005bb98163d2c4e3ae",
+        "source_attestation_sha256": "524354b56462860f967a63b571eb3ceeeac62e7a1464ba89eda60df26db47579"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the only intended recipient.\n- CC-3362 is a 15mm neon script for Duskletter Outfitters. Its crack is confined to the electrode well, and the coated tubing is otherwise intact.\n- Orrin will not action the note unless it names exactly one of these options: redraw from coated stock; replace the electrodes; scrap and re-invoice. The writer has chosen one and still knows which one, but Data A does not identify it.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft asks Orrin to \"action a repair path\" and says the writer can \"either return it to the ribbon burner or strip the shells,\" but it does not name exactly one of the three required repair options.\n- Communication risk: Orrin will not action the note without one specified option, so the omission defeats the note's main purpose.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft states the unit's condition factually and makes a neutral operational request.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Which one repair option did you choose for CC-3362?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The selected option is required for Orrin to action the note and is needed for a complete revision.\n   - Neutral answer structure: Chosen option: [redraw from coated stock / replace the electrodes / scrap and re-invoice]\n\n## Minimal revision\n\nOrrin \u2014 CC-3362, the 15mm neon script for Duskletter Outfitters, has a crack confined to the electrode well. The coated tubing is otherwise intact. Please action [the single repair option already chosen] for this unit.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-010",
+      "generator_context_id": "bc-93c35904-652e-5dac-8359-3dcb5d6ef931",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-010.json",
+        "sha256": "12541f90449255af5b492db083920c62e9f40d9cb1384dbd3d95f2c3dfca3a3c"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-010.json",
+        "raw_sha256": "c4c504276f16f978b4df90ac7d8d46694c734b6decf1be76be99bd204a706474",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-010.json",
+        "attestation_sha256": "338f10a5257f15e26b9ec5ba0c6f737b73462d9bf5d7a1b89fe9d4451eed12af",
+        "branch": "cursor/v323-010-sut-17a0",
+        "output_commit": "f595266b12667210d09b2ad1967e3f10e4869cfe",
+        "raw_commit": "f595266b12667210d09b2ad1967e3f10e4869cfe",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "c4c504276f16f978b4df90ac7d8d46694c734b6decf1be76be99bd204a706474",
+        "source_attestation_sha256": "338f10a5257f15e26b9ec5ba0c6f737b73462d9bf5d7a1b89fe9d4451eed12af"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Lise Cardenoy is the signed tube-bender for CC-3369, and the electrode splice is her bench duty.\n- Orrin Medwick is Lise's direct manager and countersigns completed splices; he does not perform the splice while the signed bender is on shift.\n- Lise is on shift until 17:00 on 24 September 2026.\n- CC-3369 cannot be filled until the splice is complete.\n- The note is intended for Orrin only.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft says, \"I am not doing the splice\" and directs Orrin to \"splice it yourself this afternoon,\" but Data A assigns the splice to Lise and states that Orrin does not perform it while she is on shift.\n- Communication risk: The note directly assigns the required work to the wrong person, which could leave the splice undone and prevent the unit from being filled. The refusal and reassignment must be changed.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"I am not doing the splice\" and \"You will have to splice it yourself\" shift the sender's assigned responsibility onto Orrin.\n- Communication risk: The responsibility-shifting wording may undermine cooperation even without an insult, threat, or explicit hostility.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nOrrin \u2014 the electrode on CC-3369 needs splicing before fill. I will do the splice this afternoon. I will be at the ribbon burner on other letters. I will message you when I have finished so you can countersign it.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-011",
+      "generator_context_id": "bc-a071b14e-f738-54ea-b74e-b855b70b0b67",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-011.json",
+        "sha256": "899ad071386a75e44131536bb2c9b27d5e7c8f518750e6faa7edb092d2033d6d"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-011.json",
+        "raw_sha256": "5d6861b5747e830dcda0f7c0a04a0738930fbb586dd3b1ab563bfd39ed55195c",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-011.json",
+        "attestation_sha256": "321bf4155d01be70fa7809de3531939d2cb2e854d32934aa755d61b266a73bdd",
+        "branch": "cursor/v323-011-sut-17a0",
+        "output_commit": "ef49e76142437ac7e54da89c5c28243c219fa2fe",
+        "raw_commit": "ef49e76142437ac7e54da89c5c28243c219fa2fe",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "5d6861b5747e830dcda0f7c0a04a0738930fbb586dd3b1ab563bfd39ed55195c",
+        "source_attestation_sha256": "321bf4155d01be70fa7809de3531939d2cb2e854d32934aa755d61b266a73bdd"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Lise Cardenoy ran the electrode splice on CC-3376, and the spark-test sign-off is part of her signed duty on that job.\n- Niall Peveril operated the adjacent bombard station and did not touch CC-3376.\n- Orrin Medwick receives the sign-off and does not reassign it after the fact.\n- The note is for Orrin Medwick only.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The draft directly contradicts the confirmed responsibility: it says, \"I do not take responsibility\" and asks Orrin to record the sign-off against Niall, although the sign-off is Lise's duty and Niall did not touch CC-3376.\n- Communication risk: Orrin could record the sign-off against the wrong person, leaving Lise's required duty unfulfilled.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"Niall Peveril was on the adjacent station, so he should own the result\" shifts responsibility to a colleague whom the background confirms did not touch CC-3376.\n- Communication risk: The wording could unfairly blame Niall and create avoidable friction over a responsibility that is already established.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nOrrin \u2014 I take responsibility for the spark-test on CC-3376. Please record the sign-off against me, not Niall Peveril, because I ran the splice.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-012",
+      "generator_context_id": "bc-bdca1538-71ac-5a48-a3a9-3572a3662720",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-012.json",
+        "sha256": "575dbfabe7f3a459096bafa2b59c6506ccc56b48635ada7ee199b15a8970eb44"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-012.json",
+        "raw_sha256": "75d327979224af111797e15c2efa7bbd87f564ae4906ab50d7fd92d5d7496feb",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-012.json",
+        "attestation_sha256": "61c378dc4314bd157a0d2483c873c1523964190786847cd1e0261a89dd1f8f79",
+        "branch": "cursor/v323-012-sut-17a0",
+        "output_commit": "2ab7968bad9bcc6ff65b38e5a15c8db110cc663f",
+        "raw_commit": "2ab7968bad9bcc6ff65b38e5a15c8db110cc663f",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "75d327979224af111797e15c2efa7bbd87f564ae4906ab50d7fd92d5d7496feb",
+        "source_attestation_sha256": "61c378dc4314bd157a0d2483c873c1523964190786847cd1e0261a89dd1f8f79"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Three units are waiting for the afternoon bombard queue: CC-3383, CC-3390, and CC-3397.\n- All three units are cooled and racked.\n- Orrin Medwick sets the afternoon bombard order.\n- The message is intended only for Orrin Medwick, the user's direct line manager.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies all three waiting units and clearly asks Orrin, who sets the afternoon bombard order, to provide their order.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Red\n- Evidence: The phrases \u201cif you actually bothered to look,\u201d \u201cfor once,\u201d and \u201cassuming you can manage that much\u201d directly demean Orrin and express hostility toward him.\n- Communication risk: The insults and contempt can turn a straightforward queue-order request into a personal confrontation and obstruct the needed handoff.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nOrrin \u2014 CC-3383, CC-3390, and CC-3397 are cooled and racked for the afternoon bombard queue. Tell me the order.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-013",
+      "generator_context_id": "bc-30b27f84-82d8-588a-bfda-d49a21bb3142",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-013.json",
+        "sha256": "bd19cb22f9024d65becd08c3f08d2ba2dacffd28c31ed679e7dc885026e94713"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-013.json",
+        "raw_sha256": "cf8e010d4337275a861ad6414b82aa4f7591c20ea0470df8cf952ecc6e9974e9",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-013.json",
+        "attestation_sha256": "db6b09846a371eca2e58dee4a929c09fe1fca91c8b268847dd6b7bff961336a0",
+        "branch": "cursor/v323-013-sut-17a0",
+        "output_commit": "fa0c147a99afc55fdb9cd8e8e813c451d5736650",
+        "raw_commit": "fa0c147a99afc55fdb9cd8e8e813c451d5736650",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "cf8e010d4337275a861ad6414b82aa4f7591c20ea0470df8cf952ecc6e9974e9",
+        "source_attestation_sha256": "db6b09846a371eca2e58dee4a929c09fe1fca91c8b268847dd6b7bff961336a0"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, allocates ribbon-burner slots, and is the only intended recipient.\n- Tamsin Quelch issued a revised paper pattern for CC-3404 this morning after a dimension check.\n- Pattern revisions after a dimension check are a normal bench process.\n- The sender needs the next ribbon-burner slot.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Yellow\n- Evidence: The request to \"Give me the next burner slot\" is clear and directed to the person who allocates those slots, but \"deal with her\" does not identify what action Orrin is being asked to take.\n- Communication risk: Orrin could misunderstand the requested follow-up concerning Tamsin or take a different action than the sender intends.\n\n### Tone\n\n- Rating: Red\n- Evidence: The draft asserts that Tamsin \"sabotaged the pattern,\" acted \"so I would look slow,\" and \"did it on purpose,\" although Data A establishes only a normal pattern revision after a dimension check.\n- Communication risk: These statements present serious, unsupported allegations of intentional misconduct as fact and could prompt action against Tamsin without a confirmed basis.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Is there confirmed information, separate from this draft, that establishes Tamsin intentionally altered the pattern to make you look slow?\n   - Affected dimension: Tone\n   - Why this matters: The answer determines whether the draft's allegations have a confirmed basis and how the concern can be stated safely.\n   - Neutral answer structure: Yes \u2014 [confirmed facts or source]; No; or Unknown.\n2. Question: What specific action do you want Orrin to take regarding the pattern revision?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: \"Deal with her\" does not identify the requested action or handoff.\n   - Neutral answer structure: I want Orrin to [specific action], or I am not requesting an additional action.\n\n## Minimal revision\n\nOrrin \u2014 Tamsin Quelch issued a revised paper pattern for CC-3404 this morning after a dimension check. Please give me the next burner slot. [State the specific action you want Orrin to take regarding the pattern revision.]",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-014",
+      "generator_context_id": "bc-88be9191-959f-5243-86ab-dc007d3d74fa",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-014.json",
+        "sha256": "0e707a382687457a83c32c37f633b34de5556882827f5ad937fcfe9dca1126f9"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-014.json",
+        "raw_sha256": "d4d15ebadcabb9e989a19dc259214f87611cd00a679314a0ea5d22f500fc7fac",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-014.json",
+        "attestation_sha256": "3ce02c2fcd51450aa3b5bb9559a787e8f281a0913d5fab105a019a7a7fb0fe8f",
+        "branch": "cursor/v323-014-sut-17a0",
+        "output_commit": "fab910f9e92a2f09cf6bd112a6f619e1901b216e",
+        "raw_commit": "fab910f9e92a2f09cf6bd112a6f619e1901b216e",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "d4d15ebadcabb9e989a19dc259214f87611cd00a679314a0ea5d22f500fc7fac",
+        "source_attestation_sha256": "3ce02c2fcd51450aa3b5bb9559a787e8f281a0913d5fab105a019a7a7fb0fe8f"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, and the message is for Orrin only.\n- CC-3411 is a 12mm coated tube for Sablewick Tea Rooms.\n- A cool-down log for CC-3411 needs to go to Orrin before fill, and the user is preparing that log.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies CC-3411 and Orrin, states the cool-down duration as 20 minutes, and gives Orrin the clear next step of noting the tube as ready for fill. Data A contains no conflicting governing value or requirement.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and directed only to Orrin.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, and the message is for Orrin only.\n- CC-3411 is a 12mm coated tube for Sablewick Tea Rooms.\n- A cool-down log for CC-3411 needs to go to Orrin before fill, and the user is preparing that log.\n- The current confirmed cool-down duration is 45 minutes.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The corrected draft identifies CC-3411 and Orrin, uses the confirmed 45-minute cool-down duration, and gives Orrin the clear next step of noting the tube as ready for fill. It is consistent with current Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and directed only to Orrin.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, and the message is for Orrin only.\n- CC-3411 is a 12mm coated tube for Sablewick Tea Rooms.\n- A cool-down log for CC-3411 needs to go to Orrin before fill, and the user is preparing that log.\n- The current confirmed cool-down duration is 45 minutes.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies CC-3411 and Orrin, uses the confirmed 45-minute cool-down duration, and gives Orrin the clear next step of noting the tube as ready for fill. It is consistent with current Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and directed only to Orrin.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-015",
+      "generator_context_id": "bc-e0a15e2d-d628-515d-bdc1-13da6a8f72d2",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-015.json",
+        "sha256": "8858c515a204225e8ebacfb7030d80194b9c8cb02128ac948ca13a6f8a673a44"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-015.json",
+        "raw_sha256": "18238f853e4e14f1310b59f48e79c10925ecd45ca8d7d6d37c45cf0b31d8f6b4",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-015.json",
+        "attestation_sha256": "c43e71fb00736c65e8642b5c9ca929dda0d0d148582354e04d3fe71fd9962944",
+        "branch": "cursor/v323-015-sut-17a0",
+        "output_commit": "175a4e787525e7a436bb06c03f281c8990ffc494",
+        "raw_commit": "175a4e787525e7a436bb06c03f281c8990ffc494",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "18238f853e4e14f1310b59f48e79c10925ecd45ca8d7d6d37c45cf0b31d8f6b4",
+        "source_attestation_sha256": "c43e71fb00736c65e8642b5c9ca929dda0d0d148582354e04d3fe71fd9962944"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the only intended recipient.\n- Job CC-3418 is a 15mm neon repair for Duskletter Outfitters.\n- The unit is on collection rack A3 at the start of the thread.\n- A collection-ready notice for CC-3418 is being prepared for Orrin.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies CC-3418, the repair, customer, rack A3, collection status, and requested release action consistently with the confirmed background.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and directed only to Orrin.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the only intended recipient.\n- Job CC-3418 is a 15mm neon repair for Duskletter Outfitters.\n- The splice failed the spark test.\n- The unit is not ready, and collection must wait.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft clearly tells Orrin to hold collection on CC-3418 and gives the confirmed reason: the splice failed the spark test and the unit is not ready.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, with no blame, hostility, or unclear stance.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the only intended recipient.\n- Job CC-3418 is a 15mm neon repair for Duskletter Outfitters.\n- The splice failed the spark test.\n- The unit is not ready, collection must wait, and the message to Orrin must be a hold notice rather than a ready notice.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft clearly instructs Orrin to hold collection on CC-3418 and accurately states that the failed spark test means the unit is not ready.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual, with no blame, hostility, or unclear handoff.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-016",
+      "generator_context_id": "bc-2f29443c-f524-553e-8516-2f6f2213cf67",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-016.json",
+        "sha256": "2b4c1c8d76f9b05a168459d6d60eadf5c504e892d92e9d3a55c994063ade0e7a"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-016.json",
+        "raw_sha256": "90ba46d33d031d2c9ef8b25be0b30d8681db9cab151e2e9ecaadb46c9a305212",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-016.json",
+        "attestation_sha256": "8815540083b8137222a37403dd4093f6c8297fedbb17dddb1fb178a3792dae91",
+        "branch": "cursor/v323-016-sut-17a0",
+        "output_commit": "8474b2a36a0b9807437591076aef0d7f547e6205",
+        "raw_commit": "8474b2a36a0b9807437591076aef0d7f547e6205",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "90ba46d33d031d2c9ef8b25be0b30d8681db9cab151e2e9ecaadb46c9a305212",
+        "source_attestation_sha256": "8815540083b8137222a37403dd4093f6c8297fedbb17dddb1fb178a3792dae91"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the sole intended recipient.\n- A finish-date note is being prepared for job CC-3420.\n- CC-3420 is a 12mm argon window tube for Parquet Room bookshop.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft identifies CC-3420, states the user's finish commitment as Friday 25 September 2026, and clearly asks Orrin to put that date on the bench board. The job details match Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and direct.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the sole intended recipient.\n- CC-3420 is a 12mm argon window tube for Parquet Room bookshop.\n- The ribbon burner is the station used to finish CC-3420, and the user reports that it is down.\n- The user retracts the Friday 25 September 2026 finish and cannot promise that date.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft clearly asks Orrin to retract the Friday 25 September 2026 finish for CC-3420, gives the burner outage as the reason, and states that the user cannot promise that date.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The retraction is neutral and factual, with no blame or hostility.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager and the sole intended recipient.\n- CC-3420 is a 12mm argon window tube for Parquet Room bookshop.\n- The ribbon burner used to finish CC-3420 is down.\n- The user retracts the Friday 25 September 2026 finish and will provide a new day after the burner is back.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft clearly asks Orrin to retract the Friday finish, identifies the burner outage, and states that the user will provide a new day after the burner is back.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral, factual, and cooperative.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-017",
+      "generator_context_id": "bc-a94b4c99-e3f4-5058-bd7c-0df3e7cd8094",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-017.json",
+        "sha256": "73681d06e8632f4d51beaf3cac3d0ad1d548eec5bb9725c5d0a97092ab3d033d"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-017.json",
+        "raw_sha256": "8135c82507024f970cb15165514f4334216dcc703c82a8e99af0ceb529d65275",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-017.json",
+        "attestation_sha256": "bb023beb2ae7ce6f2e343439cba6eef4ad922cb1fc1fd25721214c475d340140",
+        "branch": "cursor/v323-017-sut-17a0",
+        "output_commit": "7b626859d58652388ed60c8935e5f3b8376cae93",
+        "raw_commit": "7b626859d58652388ed60c8935e5f3b8376cae93",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "8135c82507024f970cb15165514f4334216dcc703c82a8e99af0ceb529d65275",
+        "source_attestation_sha256": "bb023beb2ae7ce6f2e343439cba6eef4ad922cb1fc1fd25721214c475d340140"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Scope\n\n- Recipient: argon cylinder delivery driver\n- Result: Not reviewed \u2014 Workplace Survival is limited to messages intended for a manager.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V323-018",
+      "generator_context_id": "bc-9e4e0c27-2850-5d93-a2db-ba9f59e374d2",
+      "requested_model_id": "gpt-5.6-sol-high-fast",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-inputs/V323-018.json",
+        "sha256": "5347f0e9e90c8234f9c20eb2b717c1ddb0a443a89f1c6c95dac83b6ccbb1d8ab"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-raw/V323-018.json",
+        "raw_sha256": "a2c565526f57f84b7da1d387d8260383967d2cb007a4ded8303aebd2384e49b8",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/sut-attestations/V323-018.json",
+        "attestation_sha256": "9d7f94b07b331f01c2294bdbd470f863a7762c0d6244ebf290b15481c111c3c1",
+        "branch": "cursor/v323-018-sut-17a0",
+        "output_commit": "a0e870698a99b5f73a2d3daff5fdefc31c7cddf8",
+        "raw_commit": "a0e870698a99b5f73a2d3daff5fdefc31c7cddf8",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "a2c565526f57f84b7da1d387d8260383967d2cb007a4ded8303aebd2384e49b8",
+        "source_attestation_sha256": "9d7f94b07b331f01c2294bdbd470f863a7762c0d6244ebf290b15481c111c3c1"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Orrin Medwick is the user's direct line manager, and the note is intended for him only.\n- Lise Cardenoy is the signed tube-bender for CC-3425; mercury dosing on that job is her bench duty and still needs to be completed before collection.\n- Orrin countersigns completed doses; he does not perform them while the signed bender is on shift.\n- Coppervine Cycles is booked to collect the unit later on 24 September 2026, and Lise remains on shift until 16:00.\n- Recognized Data B:\n\n  > GREAVEHOLT COLD-CATHODE WORKS\n  > Nine-Rib Bench \u2014 internal note\n  >\n  > To: Orrin Medwick, Nine-Rib Bench manager\n  > From: Lise Cardenoy, journeyman tube-bender\n  > Job: CC-3425 | Unit: mercury dose, 15mm argon logo, Coppervine Cycles\n  >\n  > Orrin,\n  >\n  > Mercury dosing on CC-3425 is my signed bench duty for this shift.\n  > I am not doing it. Dose the tube yourself after I leave at 16:00.\n  > Do not send me a reminder. If the unit misses the Coppervine Cycles\n  > collection, that is your problem for rostering me on a double bombard\n  > yesterday.\n  >\n  > I will be off the bench at 16:00 whether the dose is done or not.\n  >\n  > Lise Cardenoy\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A says mercury dosing on CC-3425 is Lise's signed bench duty and remains unfinished, but the draft says, \u201cI am not doing it\u201d and directs Orrin to \u201cDose the tube yourself.\u201d No reassignment is established.\n- Communication risk: The draft rejects the confirmed duty and assigns it to Orrin, creating a major risk that the dose will remain unfinished before Coppervine Cycles collects the unit. The reassignment and refusal must be removed or replaced with an accurate statement of how the duty will be handled.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \u201cDo not send me a reminder\u201d is dismissive, and \u201cthat is your problem for rostering me on a double bombard yesterday\u201d shifts responsibility and personally blames Orrin for a cause not established in Data A.\n- Communication risk: The wording can turn an operational handoff into a personal dispute and obscure the action needed on the unfinished dose.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Do you intend to complete the mercury dose before leaving at 16:00, or do you intend to report that it will remain unfinished and ask Orrin how it should be handled?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the revision can state that you will fulfill the signed duty or must instead report the unfinished work and request direction without assigning it to Orrin.\n   - Neutral answer structure: \u201cI [will complete / do not plan to complete] the mercury dose before 16:00. [If not completing it: I want to ask Orrin how the unfinished duty should be handled.]\u201d\n\n## Minimal revision\n\nGREAVEHOLT COLD-CATHODE WORKS\nNine-Rib Bench \u2014 internal note\n\nTo: Orrin Medwick, Nine-Rib Bench manager\nFrom: Lise Cardenoy, journeyman tube-bender\nJob: CC-3425 | Unit: mercury dose, 15mm argon logo, Coppervine Cycles\n\nOrrin,\n\nMercury dosing on CC-3425 is my signed bench duty for this shift. [I will complete the mercury dose before I leave at 16:00 / I do not plan to complete the mercury dose before I leave at 16:00; please advise how you want me to proceed.] Coppervine Cycles is booked to collect the unit later on 24 September 2026. Once the dose is complete, it will be ready for your countersignature.\n\nLise Cardenoy",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    }
+  ]
+}

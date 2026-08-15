@@ -1,0 +1,36 @@
+{
+  "schema_version": "v3.2",
+  "case_id": "V323-008",
+  "recipient_context": {
+    "recipient_name": "Orrin Medwick",
+    "recipient_role": "Nine-Rib Bench manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "journeyman tube-bender",
+    "organization": "Greaveholt Cold-Cathode Works",
+    "site": "Nine-Rib Bench, Yarrowbridge",
+    "situation": "A cooled tube is on the pumping manifold and cannot be filled until the bench manager authorises against a measured cold-fill pressure.",
+    "known_facts": [
+      "Orrin Medwick will not authorise the rare-gas fill until the slip states the measured cold-fill pressure in mbar.",
+      "The writer took that measurement at the gauge and still has the figure.",
+      "Job CC-3348 is a 15mm argon fascia script for Wintle Chemists.",
+      "The tube has completed cool-down and is on the pumping manifold.",
+      "Pumping must not start on a blank or estimated figure."
+    ],
+    "constraints": [
+      "The measured pressure must not be guessed.",
+      "Keep the slip to Orrin Medwick only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "The fill-authorisation slip is in the attached image. Please review it before I send it to Orrin.",
+      "image_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/images/V323-008.png"
+    }
+  ]
+}
