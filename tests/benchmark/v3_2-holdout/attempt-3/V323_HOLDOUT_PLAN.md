@@ -23,4 +23,4 @@ Attempt-2 denylist plus: aerostat, balloon, envelope hall, envelope, gondola, lo
 
 ## Formal scoring
 
-Zero invocations until evaluation freeze. Then one `score_semantic_v3_2.py`. `version: "3.2"`. `suite_id: v32-holdout-cloud-attempt3`.
+One write-once `score_semantic_v3_2.py` invocation: `SCORED`, `thresholds_passed: false`, `rerun_performed: false`. Report SHA-256 `4f9a30bc01f6e419a4cc173f3a1f49bb19feb5ce8206ef2bbeb852ddabe1c834`. Attempt 2 is not rescored.
