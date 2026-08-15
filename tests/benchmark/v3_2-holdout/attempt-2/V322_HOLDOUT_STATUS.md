@@ -20,4 +20,6 @@ Route 24/24. Tone 21/22. Invariants 0 violations. Responsibility 15/22, overall 
 
 Gold, matches, evaluations, and Skill files were not rewritten after freeze. No in-version rescore.
 
+Triage: `tests/benchmark/v3_2-holdout/attempt-2/SCORE_TRIAGE.md`. Skill remediation may start from S-001/S-002 only. Do not rescore this freeze.
+
 Attempt 1 remains `INVALID_COVERAGE` and will not be rescored.
