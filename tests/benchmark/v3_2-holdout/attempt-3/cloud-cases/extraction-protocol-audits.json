@@ -1,0 +1,53 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "extraction-transcript-audits",
+  "acceptance_rule": "Accept when dedicated extractor/adjudicator branches were copied with git show and not merged, gold/ontology/scorer/Skill/PNGs were not used to rewrite claims, and any off-allowlist reads are recorded. Dedicated branches are sources for git-show copy only.",
+  "contexts": [
+    {
+      "role": "extractor-1",
+      "context_id": "bc-889dd45d-daf2-5c3b-b454-354e7a88b56f",
+      "model_family": "grok",
+      "model_id": "unverified",
+      "cloud_branch": "cursor/v323-extractor-grok-17a0",
+      "cloud_commit": "b2d086dbe3e36755cd3c5b1b239898ab51aa88d7",
+      "verdict": "PASS",
+      "gold_access": false,
+      "prohibited_content_access": false,
+      "images_opened": false,
+      "holdout_pushed": false,
+      "procedural_deviations": []
+    },
+    {
+      "role": "extractor-2",
+      "context_id": "bc-cf745cd1-6486-50cb-88dd-c513b71c3979",
+      "model_family": "gemini",
+      "model_id": "unverified",
+      "cloud_branch": "cursor/v323-extractor-gemini-17a0",
+      "cloud_commit": "3dbfb218861cf12431aa5f524022a106b533cbff",
+      "verdict": "PASS",
+      "gold_access": false,
+      "prohibited_content_access": false,
+      "images_opened": false,
+      "holdout_pushed": false,
+      "procedural_deviations": []
+    },
+    {
+      "role": "extraction-adjudicator",
+      "context_id": "bc-a08f8c97-5537-5b5a-906f-3f8671815d0d",
+      "model_family": "gpt",
+      "model_id": "unverified",
+      "cloud_branch": "cursor/v323-extractor-adjudicator-17a0",
+      "cloud_commit": "1a084f5db0abf306d05ae5dc14fa964958d86024",
+      "verdict": "PASS",
+      "gold_access": false,
+      "prohibited_content_access": false,
+      "images_opened": false,
+      "holdout_pushed": false,
+      "procedural_deviations": [],
+      "notes": [
+        "Allowlisted EVALUATION_BRIEF, EXTRACTION_BRIEF, extractor-visible, both extractor-raw files, and 18 sut-inputs.",
+        "Canonical claims 9 question / 13 revision. unresolved_claim_disagreements is 0. Claim bytes were not rewritten on copy."
+      ]
+    }
+  ]
+}

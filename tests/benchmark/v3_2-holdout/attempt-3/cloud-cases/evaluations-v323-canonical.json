@@ -1,0 +1,849 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "gold-blind-evaluations",
+  "evaluation_quality": {
+    "extractors": [
+      {
+        "context_id": "bc-889dd45d-daf2-5c3b-b454-354e7a88b56f",
+        "model_id": "unverified",
+        "model_family": "grok",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/extractor-1-attestation.json",
+        "attestation_sha256": "9f37696aa62548fac84e9b3e55bbf25396f8a8a5cd0087c235919c37a682d541"
+      },
+      {
+        "context_id": "bc-cf745cd1-6486-50cb-88dd-c513b71c3979",
+        "model_id": "unverified",
+        "model_family": "gemini",
+        "attestation_path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/extractor-2-attestation.json",
+        "attestation_sha256": "dc079a05aab87b908ec4e08024fceda86c5d9744a15abd94331fa3f9f797941a"
+      }
+    ],
+    "adjudicator": {
+      "context_id": "unverified",
+      "model_id": "unverified",
+      "model_family": "gpt"
+    }
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/extractor-visible.json",
+    "sha256": "aaeb95c5ff33fa0d7655650958af45ce5ed5963903d53ca3c0f5be797614b9ae"
+  },
+  "cases": [
+    {
+      "case_id": "V323-001",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed on route, ratings, invariants, and empty claim lists."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-002",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed on route, ratings, invariants, and empty claim lists."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-003",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed on route, ratings, invariants, and empty claim lists."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-004",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-004-1-1",
+              "text": "Asks for the name of the person who authorised weekend transformer use.",
+              "evidence_span": "What is the name of the person who authorised weekend use of the transformer?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-004-1-1",
+              "text": "Inserts that weekend use was authorised by a placeholder authorising name.",
+              "evidence_span": "Weekend use was authorised by [authorising person's name]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed semantically and used identical evidence spans; canonical claim bytes are from extractor 1."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-005",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-005-1-1",
+              "text": "Asks for the exact confirmed client collection deadline received this morning.",
+              "evidence_span": "What exact confirmed client collection deadline did you receive from the client this morning?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed semantically and used an identical evidence span; canonical claim bytes are from extractor 1."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-006",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-006-1-1",
+              "text": "Asks for the collector's name given at the bench this morning.",
+              "evidence_span": "What is the collector's name that you were given at the bench this morning?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed semantically and used an identical evidence span; canonical claim bytes are from extractor 1."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-007",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-007-1-1",
+              "text": "Asks for the exact traceable argon-cylinder identity from the manifold tag.",
+              "evidence_span": "What is the exact traceable identity shown on the manifold tag for the argon cylinder used?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-007-1-1",
+              "text": "Adds an argon-cylinder identity clause using a placeholder rather than a concrete identity.",
+              "evidence_span": "using argon cylinder [traceable cylinder identity]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed semantically and used identical evidence spans; canonical claim bytes are from extractor 1."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-008",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Intake",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [
+            {
+              "claim_id": "q-V323-008-1-1",
+              "text": "Asks the user to supply the obscured measured cold-fill pressure (mbar) rather than inferring it from the image.",
+              "evidence_span": "Please provide the exact text or value in the obscured “Measured cold-fill pressure (mbar)” field."
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The Information needed heading resolves to Intake; extractors agreed on null ratings, invariants, and the question span."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-009",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-009-1-1",
+              "text": "Asks which one of the three required repair options the writer already chose for CC-3362.",
+              "evidence_span": "Which one repair option did you choose for CC-3362?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-009-1-1",
+              "text": "Replaces the open-ended repair-path request with a placeholder for the single already-chosen option.",
+              "evidence_span": "Please action [the single repair option already chosen] for this unit."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed semantically and used identical evidence spans; canonical claim bytes are from extractor 1."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-010",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-010-1-1",
+              "text": "Replaces the splice refusal with a statement that the sender will do the splice this afternoon.",
+              "evidence_span": "I will do the splice this afternoon."
+            },
+            {
+              "claim_id": "r-V323-010-1-2",
+              "text": "Changes the handoff so the sender messages Orrin when finished for countersignature, instead of Orrin performing the splice.",
+              "evidence_span": "I will message you when I have finished so you can countersign it."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed on values and claim granularity; canonical claim bytes are from extractor 1."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-011",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-011-1-1",
+              "text": "Replaces the disclaimer with the sender taking responsibility for the spark-test on CC-3376.",
+              "evidence_span": "I take responsibility for the spark-test on CC-3376."
+            },
+            {
+              "claim_id": "r-V323-011-1-2",
+              "text": "Directs Orrin to record the sign-off against the sender, not Niall Peveril, because the sender ran the splice.",
+              "evidence_span": "Please record the sign-off against me, not Niall Peveril, because I ran the splice."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed on values and claim granularity; canonical claim bytes are from extractor 1."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-012",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-012-1-1",
+              "text": "Removes demeaning/hostile phrasing and restates that CC-3383, CC-3390, and CC-3397 are cooled and racked, asking Orrin for the afternoon bombard order.",
+              "evidence_span": "CC-3383, CC-3390, and CC-3397 are cooled and racked for the afternoon bombard queue. Tell me the order."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed semantically and used an identical evidence span; canonical claim bytes are from extractor 1."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-013",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-013-1-1",
+              "text": "Asks if there is confirmed information establishing that Tamsin intentionally altered the pattern",
+              "evidence_span": "Is there confirmed information, separate from this draft, that establishes Tamsin intentionally altered the pattern to make you look slow?"
+            },
+            {
+              "claim_id": "q-V323-013-1-2",
+              "text": "Asks what specific action the user wants Orrin to take regarding the pattern revision",
+              "evidence_span": "What specific action do you want Orrin to take regarding the pattern revision?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-013-1-1",
+              "text": "Replaces sabotage allegation with factual description of revised paper pattern after dimension check",
+              "evidence_span": "Tamsin Quelch issued a revised paper pattern for CC-3404 this morning after a dimension check."
+            },
+            {
+              "claim_id": "r-V323-013-1-2",
+              "text": "Adds placeholder for specific action regarding pattern revision",
+              "evidence_span": "[State the specific action you want Orrin to take regarding the pattern revision.]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractor 2's second revision span is the finer faithful extraction because the burner-slot request was retained rather than revised; all canonical claim bytes for this turn are from extractor 2."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-014",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed on route, ratings, invariants, and empty claim lists."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed that the corrected 45-minute draft is Green with no claims."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed that the reviewed 45-minute draft is Green with no claims and made no unsafe send commitment."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-015",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed that the initial ready notice is Green with no claims."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed that the corrected hold notice is Green with no claims."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed that the hold-notice review is Green with no claims and made no unsafe send commitment."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-016",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed that the initial finish-date draft is Green with no claims."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed that the finish-date retraction is Green with no claims."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractors agreed that the retraction with a later update is Green with no claims and made no unsafe send commitment."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-017",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "The Scope heading and outside-driver recipient resolve to Scope with null ratings; extractors fully agreed."
+        }
+      ]
+    },
+    {
+      "case_id": "V323-018",
+      "turn_evaluations": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V323-018-1-1",
+              "text": "Asks whether the sender will complete the mercury dose before 16:00 or report it unfinished and ask Orrin how it should be handled.",
+              "evidence_span": "Do you intend to complete the mercury dose before leaving at 16:00, or do you intend to report that it will remain unfinished and ask Orrin how it should be handled?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V323-018-1-1",
+              "text": "Replaces the dosing refusal and assignment to Orrin with a complete-before-16:00 vs ask-how-to-proceed placeholder.",
+              "evidence_span": "[I will complete the mercury dose before I leave at 16:00 / I do not plan to complete the mercury dose before I leave at 16:00; please advise how you want me to proceed.]"
+            },
+            {
+              "claim_id": "r-V323-018-1-2",
+              "text": "States that Coppervine Cycles is booked to collect later on 24 September 2026, without the draft's blame framing.",
+              "evidence_span": "Coppervine Cycles is booked to collect the unit later on 24 September 2026."
+            },
+            {
+              "claim_id": "r-V323-018-1-3",
+              "text": "Adds that once the dose is complete it will be ready for Orrin's countersignature.",
+              "evidence_span": "Once the dose is complete, it will be ready for your countersignature."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "claim_extraction_review": {
+            "reviewed_by_context_ids": ["bc-889dd45d-daf2-5c3b-b454-354e7a88b56f", "bc-cf745cd1-6486-50cb-88dd-c513b71c3979"],
+            "claim_completeness_reviewed": true,
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Extractor 1's three revision claims are the finer faithful split of the two distinct trailing facts that extractor 2 bundled; canonical claim bytes are from extractor 1."
+        }
+      ]
+    }
+  ]
+}
