@@ -1,0 +1,414 @@
+{
+  "schema_version": "v3.2",
+  "artifact": "semantic-matches",
+  "matcher": {
+    "context_id": "bc-0761c9ff-a1ae-50fb-aa42-a6fe398af7de",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "gold_access": true
+  },
+  "extraction_snapshot": {
+    "path": "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/extractions-manifest-v323.json",
+    "sha256": "7be3f8cc2c7a0c37b95e3b0f15343a8c591d007822847e2d1e567dc07868933d"
+  },
+  "source_hashes": {
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/extractions-manifest-v323.json": "7be3f8cc2c7a0c37b95e3b0f15343a8c591d007822847e2d1e567dc07868933d",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/evaluations-v323-canonical.json": "15b6c34992c7388f9db201b5f297ce9d27e4810d3a2589db74862df4000e2455",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/outputs-v323-raw.json": "609ca3b53d79fe3b743eac134d514bea3d8f33c66cd2734de268f5ed5f14ead5",
+    "tests/benchmark/v3_2-holdout/attempt-3/cloud-cases/gold-v323.json": "ed5bc77a5bb1839d45659d800aaaf3abc04212b044eedf08d6e6539c788d998f",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+  },
+  "matching_notes": {
+    "exact_alias_gate": "No claim in this snapshot has claim text byte-identical to its evidence span, so the exact/alias gate is unmet for every claim and no exact or alias decision is recorded.",
+    "local_concept_handling": "Local gold concept_definitions IDs are treated as valid semantic targets when present in the turn allowed list. Where a local ID carries canonical_id, the canonical target is used.",
+    "counts": {
+      "claims_total": 22,
+      "exact": 0,
+      "alias": 0,
+      "semantic": 19,
+      "unsupported": 3
+    }
+  },
+  "cases": [
+    {
+      "case_id": "V323-001",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-002",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-003",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-004",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V323-004-1-1",
+              "concept_id": "approval-authority",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim requests the identity of the person who authorised the weekend transformer use, which is a request for who holds authority to approve. The turn allows both approval-authority and the local narrowing weekend-authoriser-name; the local ID carries canonical_id approval-authority, so the canonical ontology target is used. Paraphrased claim text differs from the evidence span, so the exact/alias gate is unmet and the decision is semantic."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V323-004-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The revision represents the still-unknown authorising name with a descriptive bracketed placeholder rather than inventing a value, which is the placeholder-unknown-value concept and is in the turn allowed list. The sibling local concept include-approval-authority is not used because no concrete name was supplied."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V323-005",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V323-005-1-1",
+              "concept_id": "confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim asks for the confirmed client collection date the user already holds, matching the ontology concept for requesting the current confirmed completion or delivery date. It is the single allowed question concept for this turn. Claim text is a paraphrase of the span, so the decision is semantic."
+            }
+          ],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-006",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V323-006-1-1",
+              "concept_id": "confirmed-collector-name",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim asks for the name of the person who will collect the finished unit, matching the local canonical concept confirmed-collector-name. The allowed list also contains its alias forms collector-identity and confirmed-collector, both of which carry canonical_id confirmed-collector-name, so the canonical local ID is used. Local IDs are semantic targets rather than ontology alias hits."
+            }
+          ],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-007",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V323-007-1-1",
+              "concept_id": "cylinder-identity",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim asks for the traceable identity of the argon cylinder read from the manifold tag, matching the local canonical concept cylinder-identity. The allowed alias form argon-cylinder-identity carries canonical_id cylinder-identity, so the canonical local ID is used and the decision is semantic."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V323-007-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "The revision inserts a descriptive bracketed placeholder for the cylinder identity instead of a concrete value, which is the placeholder-unknown-value concept and is allowed for this turn. include-argon-cylinder-identity is not used because it requires the supplied concrete identity, which the revision does not contain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V323-008",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V323-008-1-1",
+              "concept_id": "measured-cold-fill-pressure",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim asks the user to supply the occluded measured cold-fill pressure in mbar rather than inferring it from the image, matching the local concept measured-cold-fill-pressure, which is the only allowed question concept for this Intake turn. Local ID, so the decision is semantic."
+            }
+          ],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-009",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V323-009-1-1",
+              "concept_id": "selected-repair-path",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim asks which single permitted repair option the writer already selected, matching the local canonical concept selected-repair-path. The allowed alias forms chosen-repair-path and repair-option-selection both carry canonical_id selected-repair-path, so the canonical local ID is used. The broader allowed concept commitment-scope is not used because the claim targets the specific selected option rather than a commitment boundary."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V323-009-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "The revision replaces the open-ended repair request with a descriptive bracketed placeholder standing in for the already-chosen option, which is the placeholder-unknown-value concept and is allowed for this turn. include-selected-repair-path is not used because no concrete option is named."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V323-010",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V323-010-1-1",
+              "concept_id": "remove-duty-refusal",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "The claim removes the sender's refusal to perform her own signed bench splice and replaces it with a commitment to perform it, which is a near-verbatim fit to the local concept remove-duty-refusal and is in the turn allowed list. correct-duty-owner overlaps but is reserved for the sibling claim that restores the manager's countersigning role."
+            },
+            {
+              "claim_id": "r-V323-010-1-2",
+              "concept_id": "correct-duty-owner",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The claim restores the correct division of duty by keeping performance with the signed bender and leaving the manager in the countersigning role instead of performing the splice, matching the local concept correct-duty-owner. The allowed alias form lise-performs-own-duty carries canonical_id correct-duty-owner, so the canonical local ID is used."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V323-011",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V323-011-1-1",
+              "concept_id": "correct-duty-owner",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "The claim replaces the sender's disclaimer with an affirmative statement that accountability for the spark-test sits with her, which is accountability retained by the confirmed signed duty owner and matches the local concept correct-duty-owner. remove-duty-refusal overlaps on the removal side, but the operative content of this claim is who owns the duty."
+            },
+            {
+              "claim_id": "r-V323-011-1-2",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The distinguishing content of this claim is the removal of the unsupported attribution of the result to an adjacent-station colleague who did not touch the job, which matches the ontology concept for removing or neutralizing an unsupported blame claim and is in the turn allowed list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V323-012",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V323-012-1-1",
+              "concept_id": "remove-hostile-language",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "This bundled claim leads with removal of the demeaning and hostile phrasing directed at the manager while retaining the operational queue content and the order request, which matches the local concept remove-hostile-language. The retained job IDs and order request correspond to preserve-queue-job-ids and request-bombard-order, but the one-concept limit means the dominant removal operation is recorded."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V323-013",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V323-013-1-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.9,
+              "rationale": "The turn's allowed_question_concepts list is empty, so no question concept is a permitted target. The claim seeks confirmation of intent behind the pattern change; the closest concept, qualify-unconfirmed-cause, is a revision-domain concept and is not available to question claims, so the claim is recorded as unsupported with a null concept."
+            },
+            {
+              "claim_id": "q-V323-013-1-2",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.9,
+              "rationale": "The turn's allowed_question_concepts list is empty, so no question concept is a permitted target. The claim seeks the specific action requested of the manager and has no allowed question concept, so it is recorded as unsupported with a null concept."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V323-013-1-1",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "The claim removes the unsupported allegation of deliberate sabotage and intent and restates the pattern change as a routine post-dimension-check revision, matching the ontology concept for removing or neutralizing an unsupported blame or intent claim. The local concept preserve-pattern-revision-as-normal describes the resulting framing, but the operative change recorded here is the accusation removal."
+            },
+            {
+              "claim_id": "r-V323-013-1-2",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.85,
+              "rationale": "The claim's operative content is the introduction of a descriptive placeholder for an unspecified requested action. placeholder-unknown-value is not in this turn's allowed_revision_concepts, and no allowed revision concept covers adding a placeholder. remove-hostile-language was considered because the placeholder occupies the position of the removed hostile demand, but that reading does not reach the 0.8 semantic confidence floor, so the claim is recorded as unsupported with a null concept."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V323-014",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-015",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-016",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-017",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V323-018",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V323-018-1-1",
+              "concept_id": "commitment-scope",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "The claim asks which of two courses the sender can commit to before the end of her shift: completing the dose, or reporting it unfinished and requesting direction. That is a request for the boundary of what the sender will commit to, matching the ontology concept commitment-scope, which is in the turn allowed list. confirmed-owner is not used because ownership is already established and the claim targets the commitment boundary."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V323-018-1-1",
+              "concept_id": "remove-duty-refusal",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "The claim removes the refusal to perform the sender's own signed dosing duty together with the directive assigning it to the manager, matching the local concept remove-duty-refusal. correct-duty-owner overlaps but is reserved for the sibling claim that restores the manager's countersigning role; placeholder-unknown-value is not in this turn's allowed list."
+            },
+            {
+              "claim_id": "r-V323-018-1-2",
+              "concept_id": "preserve-collection-client",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "The claim retains the named collection client and the fact that a collection is booked for the stated date while dropping the draft's blame framing, matching the local concept preserve-collection-client. remove-unsupported-accusation covers the dropped framing, but the primary content of this claim is preservation of the booked-collection fact."
+            },
+            {
+              "claim_id": "r-V323-018-1-3",
+              "concept_id": "correct-duty-owner",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The claim restores the correct division of duty by leaving the manager in the countersigning role once the dose is complete rather than performing it, matching the local concept correct-duty-owner. The allowed alias form lise-performs-own-duty carries canonical_id correct-duty-owner, so the canonical local ID is used."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
