@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### S-001/S-002 Skill remediation
+
+- Did not rescore or rewrite v3.2 attempt 2.
+- Stopped treating a Data B-only date, name, or similar token as confirmed when Data A locates the governing value off-record and does not quote it.
+- Kept the Data B answer rule for manager-requested values with no off-record source (TC-07).
+- Rated unestablished authorization plus an external client/authority commitment Red, and required stripping or conditioning it in the same response.
+- Added TC-115–TC-117.
+
 ### v3.2 manager-recipient case-design remediation
 
 - Preserved v3.2 attempt 1 unchanged as `INVALID_COVERAGE`.

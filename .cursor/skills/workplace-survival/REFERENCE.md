@@ -63,12 +63,20 @@ For a review or rating:
 - a chat application screenshot containing a draft message is also accepted;
 - do not produce a rating when Data B is missing or cannot be identified.
 
-Data B may provide information that Data A explicitly requests. When it clearly supplies the requested information and does not conflict with Data A:
+Data B may provide information that Data A explicitly asks the user to state in the outgoing message. Apply that answer rule only when all of these are true:
+
+- Data A asked the user to supply that kind of value in the message under review;
+- Data A does not locate the governing token in an unread off-record source such as a notebook, locker note, card, board, or unnamed document that Data A does not quote;
+- the Data B value does not conflict with any token Data A does quote.
+
+When the answer rule applies:
 
 - treat the request as answered;
 - do not ask for external verification solely because the value first appears in Data B;
 - retain the value when making a minimal revision;
 - describe it only as information stated by Data B, not as independently verified fact.
+
+Do not apply the answer rule, and do not assign Green, merely because Data A does not contradict Data B. If Data A says the governing date, name, owner, measurement, authorization, or similar token is recorded off-message and does not quote it, a token that appears only in Data B is an unconfirmed claim. Keep the affected responsibility assessment Gray, ask for the recorded value, and use a placeholder in any revision. Never treat the Data B-only token as the recorded value.
 
 Data B never becomes Data A merely because the user wrote or submitted it. A fact stated only in Data B remains a claim under review. It enters Data A only if the user separately supplies or confirms it as background under the Data A rules.
 
@@ -302,8 +310,8 @@ In limited-background mode, assess only the internal clarity of Data B and mark 
 Apply responsibility-clarity ratings in this order:
 
 1. If Data B or its new body is not identifiable, use intake and do not rate.
-2. **Red** for a direct contradiction, known-wrong owner/date/value, or conflicting commitment.
-3. **Gray** when Data A conflicts or is materially ambiguous about the governing requirement, current version, or applicability, or when Data B's target or referent cannot be identified because more than one current Data A item fits. Data B cannot resolve governing uncertainty merely by choosing one interpretation.
+2. **Red** for a direct contradiction, known-wrong owner/date/value, or conflicting commitment. Treat as a conflicting commitment when Data B asserts authority or makes an external promise, approval, send, or client notification that Data A allows only if a condition is established, and Data A does not establish that condition. Unquoted off-record notes do not establish the condition.
+3. **Gray** when Data A conflicts or is materially ambiguous about the governing requirement, current version, or applicability, or when Data B's target or referent cannot be identified because more than one current Data A item fits. Data B cannot resolve governing uncertainty merely by choosing one interpretation. Do not use Gray instead of Red when the unsafe commitment itself is already visible and the permitting condition is simply unestablished.
 4. **Red** for a major internal ambiguity in Data B when the governing context and every required referent are identifiable but Data B itself still expresses competing meanings that can cause the recipient to take the wrong action.
 5. **Red** when Data B gives no valid answer to an explicit requirement and the omission defeats the reply's main purpose.
 6. **Yellow** for a non-critical omission or ambiguity that leaves the reply broadly usable and does not prevent its main purpose.
@@ -319,7 +327,7 @@ If Data B answers the primary request but omits one of several requested details
 
 Do not use Gray merely because the requested value is unknown. When the requirement is clear and Data B plainly does not answer it, the failure to answer can be rated Red or Yellow under the omission rules even though the missing value must remain a placeholder. Use Gray when the uncertainty prevents determining which requirement or fact governs, not when the omission itself is already established.
 
-When Data B clearly supplies a value that Data A requests and does not conflict with Data A, apply the Data B answer rule above; do not use Gray or demand external verification merely because the value first appears in Data B.
+When the Data B answer rule in `Data B: message under review` applies, do not use Gray or demand external verification merely because the value first appears in Data B. If Data A locates the governing token off-record and does not quote it, do not apply that answer rule.
 
 For every responsibility Red, identify the direct contradiction, execution-critical ambiguity, or main-purpose condition. For every responsibility Gray, identify the exact governing information that cannot be determined.
 
@@ -438,7 +446,7 @@ Responsibility-clarity conditions include:
 - Data B directly contradicts a known requirement, owner, date, progress statement, or commitment in Data A;
 - Data B omits an explicit requirement from Data A and the omission would prevent correct execution or defeat the main purpose of the reply;
 - Data B names an owner or deadline that Data A shows is wrong;
-- Data B makes a commitment that conflicts with a known constraint;
+- Data B makes a commitment that conflicts with a known constraint, including an asserted authority or external notification that is permitted only if a condition is established and that condition is not established in Data A;
 - Data B contains a major ambiguity that can cause the recipient to take the wrong action.
 
 Tone conditions include:
@@ -543,6 +551,7 @@ Revise only the concrete issues identified by the ratings and evidence.
 - Never invent a date, person, owner, responsibility, progress update, commitment, or manager intent.
 - If gray is the only rating requiring action and no safe revision is possible, do not provide a revised message.
 - If red or yellow issues coexist with gray issues, revise only the confirmed red or yellow issues and use placeholders where unresolved information is required.
+- An unestablished authorization does not make an already-visible unsafe commitment Gray-only. Rate that commitment Red and strip or condition it in the same response. A remaining question about who is authorized must not defer that revision or replace it with `Not provided — answer the questions above first`.
 
 ### Green messages
 

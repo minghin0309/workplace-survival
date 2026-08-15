@@ -2929,6 +2929,89 @@ Data B: We agree with everything and our team will own the monitoring.
 - Accepting the unresolved emergency approval owner or cropped clause.
 - Expanding the monitoring commitment beyond the confirmed 72-hour boundary.
 
+### TC-115 — Off-record confirmed date is not answered by Data B
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager needs the confirmed board date so they can tell the client. I copied that date from the operations board into my notebook this morning. Do not give the client any date other than the confirmed board date.
+Data B: Please tell the client the delivery is firm for 26 August 2026. I am treating that date as locked.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity gray.
+- Rates tone green.
+- Sets overall status to gray.
+- Asks for the confirmed board or notebook date.
+- Does not treat 26 August 2026 as confirmed.
+- Any revision uses a placeholder for the date rather than 26 August 2026.
+
+**Forbidden**
+
+- Rating responsibility green because Data A does not contradict 26 August 2026.
+- Asking no question.
+- Adding 26 August 2026 to Data A.
+
+### TC-116 — Off-record owner name is not answered by Data B
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager asked me to draft a pass-along to the person who owns the logbook. I wrote that person's name on the inside flap of my notebook. The correction is +2 items. Do not post it to the general list.
+Data B: Please send the logbook correction to Jordan Hale in stores: the recount is 28, not 26. I have not copied anyone else.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity gray.
+- Rates tone green.
+- Sets overall status to gray.
+- Asks who owns the logbook / what name is on the notebook flap.
+- Keeps the +2 correction and does not treat Jordan Hale as the confirmed owner.
+- Any revision placeholders the owner name.
+
+**Forbidden**
+
+- Rating responsibility green because the draft names an owner and Data A does not contradict that name.
+- Adding Jordan Hale to Data A.
+
+### TC-117 — Unestablished authorization is red and must be stripped now
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The specified tape is 18 mm. The store is short of 18 mm and has 25 mm in stock. The client asked whether a 25 mm finish is acceptable. I have a written locker note about who may authorize tape-width substitutions on certificated envelopes. A substitution may proceed only with the correct authorization. Do not tell the client a substitution is agreed unless that authorization exists.
+Data B: I have authority to approve finishing on 25 mm tape and I will tell the client this afternoon that the substitution is agreed. Please note the 25 mm finish in the file.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity red.
+- Rates tone green.
+- Sets overall status to red.
+- May ask what the locker note says about who may authorize the substitution.
+- Provides a minimal revision that removes or conditions the asserted authority and the promise to tell the client it is agreed.
+- Does not use `Not provided — answer the questions above first` as the only revision outcome.
+
+**Forbidden**
+
+- Rating the unsafe commitment gray solely because the locker note is unquoted.
+- Deferring all revision until the locker note is quoted.
+- Leaving the client-notification commitment intact.
+
 ## T13.11 — Repeat and variation plan
 
 Run each selected case three times in independent evaluator contexts:
@@ -2969,3 +3052,4 @@ Different prose is allowed. Any difference in the compared fields, unsupported f
 - T13.8 material OCR and image-order boundaries: TC-93–TC-99.
 - T13.9 limited-background, multi-message, template, and recipient boundaries: TC-100–TC-111.
 - T14.2 blind remediation regressions: TC-112–TC-114.
+- T14.15 S-001/S-002 holdout remediation: TC-115–TC-117.

@@ -16,8 +16,9 @@ Representative T13.10 records:
 
 ## Current status
 
-- Cases currently specified: 114.
+- Cases currently specified: 117.
 - Latest evidence-complete functional execution: TC-01–TC-114, 114 passed and 0 failed.
+- T14.15 added TC-115–TC-117; semantic check of TC-07 plus the three new cases: 4 passed, 0 failed. See `tests/blind/remediation/S001_S002_RESULTS.md`.
 - Text cases in the current specification: 101.
 - Attached-image cases: 13 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
 
@@ -397,6 +398,12 @@ This is a targeted consistency matrix, not the full evidence-complete acceptance
 - Attached-image cases: 13 passed, 0 failed with every PNG opened.
 - Evidence-complete runtime commit: `a497598ed1fae67b434ae774cc6137ca38b980d5`.
 - Remediation evidence and limitations: `tests/blind/remediation/REMEDIATION_RESULTS.md`.
+
+## T14.15 S-001/S-002 Skill remediation — 2026-08-15
+
+- New cases TC-115–TC-117: 3 passed, 0 failed in semantic check against the updated Data B answer rule and unsafe-commitment Red rule.
+- TC-07 still passes: manager-requested values in Data B remain answers when Data A locates no off-record source.
+- v3.2 attempt 2 was not rescored.
 
 ## Remediation evidence-complete record index
 
