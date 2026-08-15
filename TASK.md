@@ -378,7 +378,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.14 — Fresh benchmark v3.2 unseen holdout attempt 2
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Measure unseen-case performance with methodology v3.2 plus the manager-recipient construction contract. No product behavior change during scoring.
 - Owner files: `tests/benchmark/v3_2-holdout/attempt-2/`, `TASK.md`, `CHANGELOG.md`.
@@ -390,6 +390,37 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - each case uses a distinct cloud SUT context;
   - dual extraction and semantic matching precede a single v3.2 scorer invocation;
   - v3.1 and v3.2 attempt 1 are not rescored; runtime Skill files are not modified.
+- Evidence: gold/output/evaluation manifests, protocol audits, and one v3.2 score report.
+- Progress: archived as `SCORED` with thresholds not passed. Triage is `tests/benchmark/v3_2-holdout/attempt-2/SCORE_TRIAGE.md` on `cursor/blind-v322-holdout-17a0`. Freeze is not rescored.
+
+#### T14.15 — S-001/S-002 Skill remediation
+
+- [x] Completed
+
+- Source requirement: `SPEC.md` Data B and ratings. Attempt-2 triage S-001 (Data B as confirmed Data A) and S-002 (unauthorized commitment deferred).
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/`, `tests/TEST_CASES.md`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - an off-record governing token that Data A does not quote is Gray plus a question, not Green, when it appears only in Data B;
+  - TC-07 still treats a manager-requested value stated in Data B as an answer when no off-record source exists;
+  - an unestablished authorization plus an external client/authority commitment is Red and is stripped in the same response;
+  - v3.2 attempt 2 is not rescored and its gold is not rewritten.
+- Tests: TC-115, TC-116, TC-117; TC-07 must still pass.
+- Evidence: functional results for the new cases.
+
+#### T14.16 — Fresh benchmark v3.2 unseen holdout attempt 3
+
+- [ ] Completed
+
+- Source requirement: Measure unseen-case performance after T14.15 on methodology v3.2. No in-version rescore of attempt 2.
+- Owner files: `tests/benchmark/v3_2-holdout/attempt-3/`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - unseen cases use a domain that is not millinery, harpworks, Thornwick aerostat, or any denylisted prior domain;
+  - every case except the routing case is a manager recipient;
+  - cases satisfy the v3.1 question-candidate contract, manager-recipient contract, and coverage gates before SUT;
+  - gold freeze includes `SEMANTIC_ONTOLOGY.json` and `score_semantic_v3_2.py`;
+  - each case uses a distinct cloud SUT context against the T14.15 runtime;
+  - dual extraction and semantic matching precede a single v3.2 scorer invocation;
+  - v3.1, v3.2 attempt 1, and v3.2 attempt 2 are not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.2 score report.
 
 ## Task template

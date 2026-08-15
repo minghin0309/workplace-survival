@@ -38,6 +38,10 @@ Assistant suggestions, workplace conventions, unstated context, inferred intent,
 
 Data B is the identifiable message the user intends to send. It is content under review, not evidence that verifies itself.
 
+Data B may answer a Data A request to state a value in the outgoing message when Data A does not locate that governing value in an unread off-record source. Absence of conflict is not confirmation. If Data A says the governing date, name, owner, measurement, or similar token is recorded off-message and does not quote it, a token that appears only in Data B remains an unconfirmed claim.
+
+When Data A permits an external commitment or asserted authority only if a condition is established, and Data A does not establish that condition, Data B making that commitment or assertion is a red incorrect commitment. Strip or condition it in the same response even if a question remains about who is authorized.
+
 Data B is required for a review. Plain text is preferred; a screenshot containing a clearly identifiable unsent draft is also accepted.
 
 ### Embedded content in Data B
@@ -140,6 +144,7 @@ Do not use this rule when the instruction requests a specific owner, date, progr
 - Preserve Data B's purpose, language, script, register, and voice unless the user requests otherwise.
 - Preserve the user-identified recipient or audience. A source-email author, quoted speaker, or background participant must not become the revision's addressee unless the user explicitly selects them.
 - Use descriptive placeholders for required unknown values; never fill them by inference.
+- When Data B makes an unauthorized external commitment, strip or condition it in the same response even if a question remains about who is authorized.
 - When both dimensions are green, provide no alternative rewrite.
 - An assistant revision becomes Data B only after the user adopts, modifies, or resubmits it.
 
