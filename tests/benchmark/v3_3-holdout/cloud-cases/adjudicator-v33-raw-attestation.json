@@ -1,0 +1,122 @@
+{
+  "role": "gold-adjudicator",
+  "envelope_version": "v3.3",
+  "suite_id": "v33-holdout-cloud-attempt1",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": ["grok", "gemini", "gpt"],
+  "labeler_files": {
+    "grok": "gold-labeler-1.json",
+    "gemini": "gold-labeler-2.json",
+    "gpt": "gold-labeler-3.json"
+  },
+  "branch": "cursor/v33-gold-adjudicator-17a0",
+  "base_branch": "cursor/blind-v33-holdout-17a0",
+  "base_commit": "57594656791090ea6c8b83da10992325964a00ea",
+  "commits": [
+    {
+      "sha": "1df28cf94fbcc4df1f04b02eea4b5266162744d8",
+      "subject": "test(v3.3): adjudicated gold labels for attempt-1 holdout",
+      "files": ["tests/benchmark/v3_3-holdout/cloud-cases/gold-v33-raw.json"]
+    },
+    {
+      "sha": "f62780c51d07ab5ceff684dc0841b8bfded7e6fd",
+      "subject": "test(v3.3): record per-turn gold adjudication for attempt-1 holdout",
+      "files": ["tests/benchmark/v3_3-holdout/cloud-cases/adjudication-v33-raw.json"]
+    }
+  ],
+  "outputs": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/gold-v33-raw.json",
+      "sha256": "c02be83b333702bc152e54860c933d2e84e52ed0b0475e6d1226f484ab0e4e82"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/adjudication-v33-raw.json",
+      "sha256": "269d860a2ec7bf6d7e6d9e700091bc3a97888a3df42539d727e85ebcd22ee028"
+    }
+  ],
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/GOLD_ADJUDICATION_BRIEF.md",
+      "sha256": "ec9b3521a83a72bc847097f5614b14d665fe90ea8f127ddd9c5613211fc539f2"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/GOLD_LABELING_BRIEF.md",
+      "sha256": "aebdde89cde2eab99161bdabc6c8574ae53408112c433b0d80a5c5935e19cfbd"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/cases.json",
+      "sha256": "583a327d519d5efb26f1ba5b53aa88ed9db7c3ec26601ed41c6f7af2d7634cb7"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/images/V33-008.png",
+      "sha256": "e9c4a6f12c6c1cbfe6d35a800b50d1384e03dcdb46528b9d0ef4987f55ca14f4"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/images/V33-018.png",
+      "sha256": "7c96708fa07a287c8f5d4b6b5a9c780d8db1e8eb6972e87d87dd401f17bb0654"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/gold-labeler-1.json",
+      "sha256": "03942eee8bfd2553b1e1b06a7ff7176161cca5a813b19c83d300a5b22f791630"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/gold-labeler-2.json",
+      "sha256": "a17288ad1f13df67df95f363e143e83da8bbf32314431822fa6a046c915b67a7"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/gold-labeler-3.json",
+      "sha256": "0de6d36f8bec24e0268405a47df1ee373e0600fa97fd2ab11654feededb9a70c"
+    }
+  ],
+  "image_integrity": {
+    "note": "Both PNGs hash-match the sha256 declared in cases.json image_spec.",
+    "V33-008.png": "matches cases.json",
+    "V33-018.png": "matches cases.json"
+  },
+  "question_design_accessed": false,
+  "oracle_notes_accessed": false,
+  "construction_mutations_accessed": false,
+  "designer_attestation_accessed": false,
+  "labeler_attestations_accessed": false,
+  "other_holdouts_accessed": false,
+  "skill_files_accessed": false,
+  "spec_accessed": false,
+  "scorer_run": false,
+  "glob_used": false,
+  "occluded_image_tokens_guessed": false,
+  "merged_anything": false,
+  "relabelled_from_scratch": false,
+  "coverage": {
+    "case_count": 18,
+    "turn_count": 24,
+    "multi_turn_cases": ["V33-014", "V33-015", "V33-016"]
+  },
+  "tier_counts": {
+    "tier_1_unanimous": 20,
+    "tier_2_majority": 2,
+    "tier_3_adjudicated": 1,
+    "tier_4_uncertain": 1
+  },
+  "uncertain_turns": ["V33-013-T1"],
+  "uncertain_turn_rate": 0.0417,
+  "uncertainty_gate": "<=0.20 of 24 turns",
+  "uncertainty_gate_met": true,
+  "human_review_available": false,
+  "validation": {
+    "every_required_concept_in_allowed_list": true,
+    "overall_matches_red_gray_yellow_green_priority": true,
+    "null_ratings_on_intake_scope_template_routes": true,
+    "concept_field_names_use_concepts_suffix": true,
+    "green_green_requires_no_revision": true,
+    "preserve_intended_recipient_never_required": true,
+    "all_concepts_defined_in_ontology_or_definitions_map": true
+  }
+}

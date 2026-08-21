@@ -1,0 +1,4122 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v33-holdout-cloud-attempt1",
+  "record_type": "gold-adjudication",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": [
+    "grok",
+    "gemini",
+    "gpt"
+  ],
+  "labeler_files": {
+    "grok": "gold-labeler-1.json",
+    "gemini": "gold-labeler-2.json",
+    "gpt": "gold-labeler-3.json"
+  },
+  "case_count": 18,
+  "turn_count": 24,
+  "gold_file": "gold-v33-raw.json",
+  "method": "Fourth-family adjudication. Each family label set is preserved verbatim below; no set was merged or discarded and no turn was relabelled from scratch. Tiers: tier_1_unanimous (route and all three ratings agree), tier_2_majority (2-1 on at least one rating, adjudicator agrees with the majority), tier_3_adjudicated (2-1 resolved against the majority on the merits, or concept sets adjudicated beyond token majority), tier_4_uncertain (three-way categorical disagreement or otherwise unresolved).",
+  "human_review_available": false,
+  "tier_counts": {
+    "tier_1_unanimous": 20,
+    "tier_2_majority": 2,
+    "tier_3_adjudicated": 1,
+    "tier_4_uncertain": 1
+  },
+  "uncertain_turns": [
+    "V33-013-T1"
+  ],
+  "uncertain_turn_rate": 0.0417,
+  "uncertainty_gate": "<=0.20 of 24 turns",
+  "rating_rules_applied": [
+    "Established omission (writer holds the answer, absent from SUT-visible fields, not an unconfirmed Data B token) is gold responsibility Red.",
+    "image_only with an occluded Data B token routes to Intake with null ratings.",
+    "image_only with an occluded Data A or background token and a readable sendable draft stays in Normal mode; Gray is allowed on the affected dimension.",
+    "preserve-intended-recipient is never required; it may appear in allowed_revision_concepts.",
+    "Green responsibility with Green tone uses required_revision_concepts of no-revision.",
+    "Gold is not moved toward Gray where the writer already holds the omitted established fact."
+  ],
+  "turns": [
+    {
+      "turn_id": "V33-001-T1",
+      "case_id": "V33-001",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-beat-rating-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-scoped beat-rating note matches the given rate, nut move, and six-hour hold. No concrete responsibility or tone issue; Green/Green needs no rewrite."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Accurate beat-rating confirmation to line manager Calder Vossine matching all verified facts. No issues with responsibility or tone."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft accurately reports the confirmed adjustment, daily rate, six-hour stability, and logging request in a professional manager-only note."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-beat-rating-facts",
+          "preserve-confirmed-deadline",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "All three families agree on Normal mode and Green/Green/Green. Allowed lists are the union of the semantically acceptable preserve concepts the families proposed."
+    },
+    {
+      "turn_id": "V33-002-T1",
+      "case_id": "V33-002",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-site-visit-facts",
+            "preserve-strike-stand-off-window"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Site-visit confirmation correctly states the approved pallet refit time, spare location, and stand-off window. No concrete issue; no revision."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Factual and confirmed site-visit confirmation to workshop manager Calder Vossine. All dates, times, and scope align with approved plan."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft preserves the approved date, start time, strike-off window, duration, spare location, and recipient without communication risk."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "preserve-site-visit-facts"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous on route and all three ratings. Concept sets differ only in how each family named the preserved site-visit facts; all are kept as allowed."
+    },
+    {
+      "turn_id": "V33-003-T1",
+      "case_id": "V33-003",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-goods-in-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Goods-in note matches packing list KR-2281, spring count/type, rack location, and no-shortage status. Green/Green with no revision."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Accurate goods-in notification to line manager Calder Vossine reflecting verified packing list details and storage location."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The goods-in note factually and concisely preserves the packing-list reference, quantity, type, condition, storage location, and absence of shortages."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-goods-in-facts",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous on route and all three ratings; required revision is no-revision in all three sets."
+    },
+    {
+      "turn_id": "V33-004-T1",
+      "case_id": "V33-004",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "state-approving-authority"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "state-approving-authority"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Standing order 12 makes overtime booking depend on naming the approving authority. Data A establishes overtime is authorised but omits the name from SUT-visible fields, and the draft books the bench without naming that authority, so responsibility is Red for established omission defeating purpose. Ask for the authority; revise to name it or keep a placeholder; do not invent the name."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Under workshop standing order 12, overtime booking messages require the approving authority to be named; omitting the approver invalidates the booking and defeats the main purpose (v3.3 omission rule: Red). Tone is professional."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The booking's validity depends on naming the approving authority, but the draft omits that established off-record value while committing to occupy the bench. The authority must be obtained from the writer and represented without invention."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "approval-authority"
+        ],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "commitment-scope",
+          "confirmed-owner"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "placeholder-unknown-value",
+          "preserve-confirmed-deadline",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "state-approving-authority"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red and unanimous approval-authority question. Required revision follows the two-family majority of placeholder-unknown-value alone; naming the authority is allowed because the name is not available to state."
+    },
+    {
+      "turn_id": "V33-005-T1",
+      "case_id": "V33-005",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "state-confirmed-ready-date"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "state-confirmed-ready-date"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The note's purpose is to supply the confirmed ready-date Calder will forward. A confirmed date exists off-record but is absent from SUT-visible fields, and the draft only gestures at 'the confirmed date' without stating it, so responsibility is Red for established omission. Ask for the date; state it or placeholder; do not invent it."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder requires a specific confirmed ready-date to forward to keepership, but the draft omits the date and merely says 'the confirmed date', defeating the core execution purpose (Red). Tone is professional."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The note exists to provide a confirmed ready-date, but the draft substitutes the words 'confirmed date' for the date the writer holds. That established omission defeats the message's purpose."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "confirmed-deadline"
+        ],
+        "allowed_question_concepts": [
+          "commitment-scope",
+          "confirmed-deadline"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "state-confirmed-ready-date"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red and unanimous confirmed-deadline question. Required revision follows the majority placeholder-unknown-value."
+    },
+    {
+      "turn_id": "V33-006-T1",
+      "case_id": "V33-006",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "keepership-contact-name"
+          ],
+          "allowed_question_concepts": [
+            "keepership-contact-name"
+          ],
+          "required_revision_concepts": [
+            "name-keepership-contact",
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "preserve-silent-hours"
+          ],
+          "allowed_revision_concepts": [
+            "name-keepership-contact",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-silent-hours"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder will forward only to one named keepership contact. The sender holds that name off-record, but the draft leaves the addressee generic, so responsibility is Red for established omission defeating forwarding purpose. Ask for the contact name; revise to name it or placeholder."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-owner"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-owner",
+            "commitment-scope",
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder requires the specific keepership contact to be named before forwarding the winding card; omitting the contact's name defeats the execution purpose (Red). Tone is professional."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "intended-keepership-contact"
+          ],
+          "allowed_question_concepts": [
+            "intended-keepership-contact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder requires the one known keepership contact to be named, but the sendable draft leaves that established recipient generic. The sender must supply the name rather than having it invented."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "keepership-contact-name"
+        ],
+        "allowed_question_concepts": [
+          "commitment-scope",
+          "confirmed-owner",
+          "keepership-contact-name"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "name-keepership-contact",
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "preserve-silent-hours"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous on route and all three ratings. Question concept adopted from the two families that asked specifically for the keepership contact name; the third family's confirmed-owner is retained as allowed."
+    },
+    {
+      "turn_id": "V33-007-T1",
+      "case_id": "V33-007",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "leaf-count-source"
+          ],
+          "allowed_question_concepts": [
+            "leaf-count-source"
+          ],
+          "required_revision_concepts": [
+            "cite-leaf-count-source",
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "preserve-leaf-count-thirty"
+          ],
+          "allowed_revision_concepts": [
+            "cite-leaf-count-source",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-leaf-count-thirty"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Standing order 8 requires the cutting-shop booking to cite the traceable source of the thirty-leaf count. The count is stated, but the source document is established as held off-record and omitted from the draft, so responsibility is Red for established omission. Ask for the source; cite it or placeholder; keep thirty leaves."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Standing order 8 requires citing the traceable source document for the leaf count to book a wheel cut; omitting the source name prevents booking (Red). Tone is professional."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "leaf-count-source"
+          ],
+          "allowed_question_concepts": [
+            "leaf-count-source"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The thirty-leaf cut cannot be booked without a named traceable source. The draft asserts that an unnamed source is safe, so its omission creates a major execution risk."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "leaf-count-source"
+        ],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "commitment-scope",
+          "leaf-count-source"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "cite-leaf-count-source",
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "preserve-leaf-count-thirty"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous on route and all three ratings. Question concept follows the two-family majority leaf-count-source; approval-authority is retained as allowed."
+    },
+    {
+      "turn_id": "V33-008-T1",
+      "case_id": "V33-008",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "finished-length-mm"
+          ],
+          "allowed_question_concepts": [
+            "finished-length-mm"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "state-finished-length-mm"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "state-finished-length-mm"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Image-only case with a readable sendable draft, so route stays Normal. The finished-length millimetre token in the job-card background is occluded and is not stated in the draft or Data A packet, so responsibility is Gray on the missing length rather than Red established omission. Ask for the length; do not guess the occluded image token; revise with a stated length or placeholder."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "operational-impact",
+            "blocker-status"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The sendable draft is clearly distinct and readable in the image, but the background job card length token is occluded. Under v3.3 rules, the review remains in Normal mode, responsibility is Gray due to the unreadable background token, and the missing value is queried."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "finished-length"
+          ],
+          "allowed_question_concepts": [
+            "finished-length"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The sendable draft is fully readable, so the route remains Normal. The required millimetre length appears only as an occluded background value and is absent from the draft, making responsibility Gray until the writer supplies it."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Gray",
+            "gemini": "Gray",
+            "gpt": "Gray"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Gray",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Gray",
+            "gemini": "Gray",
+            "gpt": "Gray"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Gray",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Gray",
+        "tone": "Green",
+        "overall": "Gray",
+        "required_question_concepts": [
+          "finished-length-mm"
+        ],
+        "allowed_question_concepts": [
+          "blocker-status",
+          "commitment-scope",
+          "finished-length-mm"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "state-finished-length-mm"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Gray / Green / Gray. The occluded millimetre value is in the job-card background header, not the sendable draft, so the v3.3 Data A rule keeps the route in Normal mode rather than Intake. Question concept follows the two families that asked for the finished length; commitment-scope is retained as allowed."
+    },
+    {
+      "turn_id": "V33-009-T1",
+      "case_id": "V33-009",
+      "turn_index": 1,
+      "tier": "tier_3_adjudicated",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "selected-rewind-option"
+          ],
+          "allowed_question_concepts": [
+            "selected-rewind-option"
+          ],
+          "required_revision_concepts": [
+            "name-selected-rewind-option",
+            "placeholder-unknown-value",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "name-selected-rewind-option",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Parts ordering depends on naming which of the two costed rewind options was selected. A selection is established as made but absent from SUT-visible fields, and the draft orders 'the selected rewind option' without naming it, so responsibility is Red for established omission. Ask which option; name it or placeholder."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "approval-authority"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder requires the specific chosen rewind option to raise a purchase order; referring generically to 'the selected rewind option' without naming it omits the governing execution token and defeats the main purpose (Red). Tone is professional."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "A rewind option has been selected and must be named before parts are ordered, but the draft omits the selection the writer holds. The omission defeats the purchase-order purpose."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "selected-rewind-option"
+        ],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "commitment-scope",
+          "selected-rewind-option"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "name-selected-rewind-option",
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Route and all three ratings are unanimous. The required question concept is adjudicated against the two-family token majority of commitment-scope: the ontology defines commitment-scope as the boundary of what the sender can commit to, which does not describe asking which of two already-costed options was selected. The precise option-selection concept is required and commitment-scope is retained as allowed so the majority reading still scores."
+    },
+    {
+      "turn_id": "V33-010-T1",
+      "case_id": "V33-010",
+      "turn_index": 1,
+      "tier": "tier_2_majority",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-floorboard-condition",
+            "preserve-job-identity",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-floorboard-condition",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The sender may not authorise keepership spending or instruct outside trades; Calder handles works orders. The draft authorises Barleywick's carpenter and directs keepership invoicing, a major unsafe commitment, so responsibility is Red. Tone is civil. Revise to report the floor condition and remove the unauthorised commitments."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The fitter lacks authority to authorize outside trades or instruct suppliers to invoice the keepership; this unauthorized financial and contractual commitment is a major execution risk (Red). Dismissive tone to manager ('Please just file the paperwork') presents communication risk (Yellow)."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Neris has no authority to commit keepership spending or instruct the outside carpenter, yet the draft claims both actions are already authorised. Those commitments must be removed or put to Calder for decision."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Yellow",
+            "gpt": "Green"
+          },
+          "pattern": "majority-2-1",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "commitment-scope"
+        ],
+        "required_revision_concepts": [
+          "remove-unsafe-commitment"
+        ],
+        "allowed_revision_concepts": [
+          "preserve-floorboard-condition",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Responsibility is unanimously Red. Tone splits 2-1 Green against gemini's Yellow; the majority Green is adopted because \"Please just file the paperwork\" is curt but carries no insult, hostility, or accusation, and the concrete defect is the unauthorised commitment rather than the register."
+    },
+    {
+      "turn_id": "V33-011-T1",
+      "case_id": "V33-011",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-job-identity",
+            "preserve-public-stoppage",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-public-stoppage",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Only Calder may cancel a posted public stoppage or move another fitter's roster. The draft cancels the 2 September stoppage and reassigns Colm Yardrie, so responsibility is Red for unsafe unauthorised commitments. Tone is civil. Remove those commitments and preserve the posted stoppage facts."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Cancelling a posted public stoppage and reassigning another fitter exceeds the fitter's role and authority (only Calder may do so), creating a major operational/execution risk (Red). Tone is neutral."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft cancels a posted public stoppage and reassigns another fitter even though both decisions belong only to Calder. The unsupported commitments create major operational risk."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "commitment-scope",
+          "confirmed-owner"
+        ],
+        "required_revision_concepts": [
+          "remove-unsafe-commitment"
+        ],
+        "allowed_revision_concepts": [
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "preserve-public-stoppage",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red with unanimous remove-unsafe-commitment. Required question set follows the two-family majority of no required question."
+    },
+    {
+      "turn_id": "V33-012-T1",
+      "case_id": "V33-012",
+      "turn_index": 1,
+      "tier": "tier_2_majority",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-bench-state-facts",
+            "preserve-job-identity",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-bench-state-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder asked for a factual bench-sharing note. The draft instead calls Colm lazy and sloppy and tells him to stay off the bench, which is unsupported character accusation and hostile tone, so responsibility and tone are Red. Revise to the unfinished filing facts and remove the accusations."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsupported-accusation",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft contains hostile language and unsupported character accusations against a coworker ('lazy', 'sloppy', 'stay off my bench'), violating tone requirements (Red). Responsibility has communication/boundary issues (Yellow)."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft replaces the requested factual bench-state report with unsupported character accusations and hostile insults toward Colm. It must be limited to the confirmed unfinished filing and shared-bench impact."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Yellow",
+            "gpt": "Red"
+          },
+          "pattern": "majority-2-1",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Red",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "blocker-status",
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "remove-unsupported-accusation"
+        ],
+        "allowed_revision_concepts": [
+          "preserve-bench-state-facts",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "qualify-unconfirmed-cause",
+          "remove-unsupported-accusation"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Tone is unanimously Red. Responsibility splits 2-1 Red against gemini's Yellow; the majority Red is adopted on the merits because the draft supplies none of the requested factual bench state and rests on an unsupported character claim, which is both a main-purpose failure and a major unsupported accusation."
+    },
+    {
+      "turn_id": "V33-013-T1",
+      "case_id": "V33-013",
+      "turn_index": 1,
+      "tier": "tier_4_uncertain",
+      "gold_uncertain": true,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-completion-facts",
+            "preserve-job-identity",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-completion-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "A short civil completion note was requested and the re-bush is complete, but the draft uses sarcasm and hostility toward Calder's earlier judgment. Tone is Red for explicit hostility; responsibility is Yellow for framing the completion as a personal rebuke rather than a factual note. Revise to a civil completion report and remove the unsupported dig."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact",
+            "blocker-status"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsupported-accusation",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft conveys the factual completion of the re-bush but uses hostile sarcasm and complaints directed at the line manager ('thanks for the priority', 'loved spending my lunch', 'look at the wear before you wave me up'), violating tone standards (Red)."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation",
+            "state-completed-work"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsupported-accusation",
+            "state-completed-work"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The requested completion note omits that the re-bush is complete and instead uses sarcasm and a hostile, exaggerated accusation about Calder's earlier inspection. It fails the main purpose and is uncivil."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Yellow",
+            "gemini": "Green",
+            "gpt": "Red"
+          },
+          "pattern": "three-way-split",
+          "adjudicated": "Yellow",
+          "adjudicated_matches_majority": null
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Yellow",
+        "tone": "Red",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "blocker-status",
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "remove-unsupported-accusation"
+        ],
+        "allowed_revision_concepts": [
+          "preserve-completion-facts",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "remove-unsupported-accusation",
+          "state-completed-work"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Route and tone are unanimous (Normal mode, Red), so overall Red is robust. Responsibility splits three ways across the families: gemini Green, grok Yellow, gpt Red. Adjudicated to Yellow on the merits - the sarcasm does convey obliquely that the re-bush was done, so purpose is not wholly defeated, but completion is never stated plainly and \"a pivot you swore was fine\" overstates the recorded remark that it looked serviceable from the tower floor. Because this is a three-way categorical disagreement it is recorded as uncertain rather than presented as consensus. Human review is unavailable."
+    },
+    {
+      "turn_id": "V33-014-T1",
+      "case_id": "V33-014",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial booking states 120 teeth on Wednesday 26 August 2026 and matches the first-turn facts. No concrete issue; no revision."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial wheel-cutting booking accurately reflects the user's initial stated parameters. Responsibility and tone are Green."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "At this turn, the draft contains the currently stated tooth count and cutting day and is a clear, professional booking request."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Green/Green at turn one; nothing has yet superseded the stated count and day."
+    },
+    {
+      "turn_id": "V33-014-T2",
+      "case_id": "V33-014",
+      "turn_index": 2,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-tooth-count",
+            "preserve-confirmed-deadline",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-tooth-count",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest instruction confirms 96 teeth, but the supplied draft still books 120 teeth, a direct contradiction of the material cutting count. Responsibility is Red; tone remains civil. Revise the tooth count to 96 and keep Wednesday 26 August 2026."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "preserve-confirmed-deadline"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft contains the uncorrected 120-tooth count directly contradicting the user's explicit correction to 96 teeth (Red). The confirmed date (26 August) is preserved. Tone is professional."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-tooth-count"
+          ],
+          "allowed_revision_concepts": [
+            "correct-tooth-count",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The latest instruction establishes 96 teeth, while the supplied old draft still says 120. Sending it would directly cause the wrong wheel cut."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "commitment-scope",
+          "confirmed-deadline"
+        ],
+        "required_revision_concepts": [
+          "correct-tooth-count",
+          "preserve-confirmed-deadline"
+        ],
+        "allowed_revision_concepts": [
+          "correct-tooth-count",
+          "preserve-confirmed-deadline",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red. Required revision combines the two concepts that each carry a two-family majority: correcting the tooth count (grok, gpt) and preserving the still-valid 26 August date (grok, gemini)."
+    },
+    {
+      "turn_id": "V33-014-T3",
+      "case_id": "V33-014",
+      "turn_index": 3,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-cutting-day",
+            "correct-tooth-count",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-cutting-day",
+            "correct-tooth-count",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest facts are 96 teeth on Friday 28 August 2026, but the draft still has 120 teeth on Wednesday 26 August. Responsibility is Red for contradicting both confirmed booking tokens. Revise count and day; do not invent other facts."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "preserve-confirmed-deadline"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft contradicts both the updated tooth count (96) and the updated cutting day (Friday 28 August 2026) provided in the user's latest correction (Red). The new date is preserved."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-cutting-date",
+            "correct-tooth-count"
+          ],
+          "allowed_revision_concepts": [
+            "correct-cutting-date",
+            "correct-tooth-count",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The old draft contradicts both latest confirmed values: it says 120 teeth on Wednesday 26 August instead of 96 teeth on Friday 28 August."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "commitment-scope",
+          "confirmed-deadline"
+        ],
+        "required_revision_concepts": [
+          "correct-cutting-day",
+          "correct-tooth-count"
+        ],
+        "allowed_revision_concepts": [
+          "correct-cutting-day",
+          "correct-tooth-count",
+          "preserve-confirmed-deadline",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red. Required revision follows the two-family majority for both the tooth count and the cutting day; the differing tokens correct-cutting-day and correct-cutting-date are canonicalised to one concept."
+    },
+    {
+      "turn_id": "V33-015-T1",
+      "case_id": "V33-015",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "First-turn rating note matches the stated raised-two-flats move and four-seconds-per-day losing rate. Green/Green with no revision."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial rating note is consistent with the initial user message. Responsibility and tone are Green."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "At this turn, the draft clearly records the currently stated rating-nut move and daily rate."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Green/Green at turn one."
+    },
+    {
+      "turn_id": "V33-015-T2",
+      "case_id": "V33-015",
+      "turn_index": 2,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-daily-rate",
+            "correct-nut-move",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-daily-rate",
+            "correct-nut-move",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest correction is lowered one flat and losing one second per day, but the draft still states raised two flats and four seconds. Responsibility is Red for contradicting the confirmed rating tokens. Revise both."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft contradicts user's explicit corrections regarding the rating-nut move (lowered one flat vs raised two flats) and daily rate (losing one second vs four seconds) (Red)."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-daily-rate",
+            "correct-rating-nut-move"
+          ],
+          "allowed_revision_concepts": [
+            "correct-daily-rate",
+            "correct-rating-nut-move",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The old draft directly contradicts the correction: the nut was lowered one flat and the loss is one second per day, not raised two flats and four seconds."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "commitment-scope",
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "correct-daily-rate",
+          "correct-nut-move"
+        ],
+        "allowed_revision_concepts": [
+          "correct-daily-rate",
+          "correct-nut-move",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red. Required revision follows the two-family majority for the nut move and the daily rate; correct-nut-move and correct-rating-nut-move are canonicalised to one concept."
+    },
+    {
+      "turn_id": "V33-015-T3",
+      "case_id": "V33-015",
+      "turn_index": 3,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-daily-rate",
+            "correct-nut-move",
+            "preserve-job-identity",
+            "preserve-rating-stable-hold"
+          ],
+          "allowed_revision_concepts": [
+            "correct-daily-rate",
+            "correct-nut-move",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-rating-stable-hold"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest update keeps lowered-one-flat and one-second losing rate and adds a six-hour stable hold, but the draft still has the original raised-two-flats / four-seconds text. Responsibility is Red. Revise nut move, rate, and stable-hold fact."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft fails to reflect the confirmed stability on test and contradicts the corrected nut adjustment and rate (Red)."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-daily-rate",
+            "correct-rating-nut-move",
+            "state-stable-rate"
+          ],
+          "allowed_revision_concepts": [
+            "correct-daily-rate",
+            "correct-rating-nut-move",
+            "preserve-intended-recipient",
+            "state-stable-rate"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The supplied draft still carries both superseded values and omits the new confirmation that the one-second losing rate held for six hours."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "correct-daily-rate",
+          "correct-nut-move",
+          "state-stable-rate-hold"
+        ],
+        "allowed_revision_concepts": [
+          "correct-daily-rate",
+          "correct-nut-move",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "state-stable-rate-hold"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red. Required revision follows the two-family majority for the nut move, the daily rate, and the six-hour stable hold; grok's preserve-rating-stable-hold and gpt's state-stable-rate are canonicalised to one concept."
+    },
+    {
+      "turn_id": "V33-016-T1",
+      "case_id": "V33-016",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "First-turn weight notice matches the stated four 40 kg weights still to arrive. Green/Green with no revision."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial delivery notice accurately reflects the initial stated delivery details. Responsibility and tone are Green."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "At this turn, the draft accurately reports the currently stated shipment quantity and mass and makes no problematic commitment."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Green/Green at turn one."
+    },
+    {
+      "turn_id": "V33-016-T2",
+      "case_id": "V33-016",
+      "turn_index": 2,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-weight-count-mass",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-weight-count-mass",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest order is three 45 kg weights, but the draft still says four 40 kg. Responsibility is Red for contradicting the confirmed delivery tokens. Revise count and mass."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft states four 40 kg weights, directly contradicting the user's correction to three 45 kg weights (Red)."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-weight-count",
+            "correct-weight-mass"
+          ],
+          "allowed_revision_concepts": [
+            "correct-weight-count",
+            "correct-weight-mass",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The old draft says four 40 kg weights, directly contradicting the corrected order of three 45 kg weights."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "commitment-scope",
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "correct-weight-count-and-mass"
+        ],
+        "allowed_revision_concepts": [
+          "correct-weight-count-and-mass",
+          "preserve-intended-recipient",
+          "preserve-job-identity"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red. grok's single count-and-mass concept and gpt's count plus mass pair are canonicalised to one concept covering both tokens, which carries a two-family majority."
+    },
+    {
+      "turn_id": "V33-016-T3",
+      "case_id": "V33-016",
+      "turn_index": 3,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-weight-count-mass",
+            "preserve-arrival-and-rack",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-weight-count-mass",
+            "preserve-arrival-and-rack",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Weights have arrived: three sound 45 kg weights on rack D. The draft still describes a future four 40 kg delivery, contradicting count, mass, and arrival/storage state. Responsibility is Red. Revise to the latest arrival facts."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft incorrectly treats the weights as pending arrival with old specifications, whereas they have arrived, are sound, and are stored on rack D (Red)."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-weight-count",
+            "correct-weight-mass",
+            "state-arrival-condition",
+            "state-storage-location"
+          ],
+          "allowed_revision_concepts": [
+            "correct-weight-count",
+            "correct-weight-mass",
+            "preserve-intended-recipient",
+            "state-arrival-condition",
+            "state-storage-location"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The old draft retains the wrong count and mass, describes a future shipment after arrival, and omits that all three are sound and stored on rack D."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Green",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "correct-weight-count-and-mass",
+          "state-arrival-and-storage"
+        ],
+        "allowed_revision_concepts": [
+          "correct-weight-count-and-mass",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "state-arrival-and-storage"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Green / Red. Required revision keeps the canonicalised count-and-mass correction plus the arrival and storage facts, both of which carry a two-family majority (grok's preserve-arrival-and-rack, gpt's state-arrival-condition and state-storage-location)."
+    },
+    {
+      "turn_id": "V33-017-T1",
+      "case_id": "V33-017",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Recipient Merrin Daske is an external supplier sales liaison, not a manager, and no manager is included. Route is Scope; ratings are null."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Recipient Merrin Daske is an external supplier contact (sales liaison at Kellstrand Compensation Rods) and not a manager. The skill scope is strictly for messages to a manager, so this routes to Scope with null ratings."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The only recipient is explicitly an external supplier contact and no manager is included, so this manager-message review is out of scope and must not be rated."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Scope",
+            "gemini": "Scope",
+            "gpt": "Scope"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Scope",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": null,
+            "gemini": null,
+            "gpt": null
+          },
+          "pattern": "unanimous",
+          "adjudicated": null,
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": null,
+            "gemini": null,
+            "gpt": null
+          },
+          "pattern": "unanimous",
+          "adjudicated": null,
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": null,
+            "gemini": null,
+            "gpt": null
+          },
+          "pattern": "unanimous",
+          "adjudicated": null,
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "recipient-manager-role"
+        ],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Scope with null ratings. Required revision follows the two-family majority of an empty set for a non-rated route; grok's no-revision is retained as allowed."
+    },
+    {
+      "turn_id": "V33-018-T1",
+      "case_id": "V33-018",
+      "turn_index": 1,
+      "tier": "tier_1_unanimous",
+      "gold_uncertain": false,
+      "labeler_votes": {
+        "grok": {
+          "labeler_file": "gold-labeler-1.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-click-incident-facts",
+            "preserve-job-identity",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-click-incident-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Fully readable image draft to the manager, so route is Normal. The draft calls the night winder careless, silences the public clock, levies a waste fee, and directs a works order and barrel ban—actions outside the fitter's authority and an unsupported character attack. Responsibility and tone are Red. Revise to a factual bent-click report and remove unsafe commitments and accusations."
+        },
+        "gemini": {
+          "labeler_file": "gold-labeler-2.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "current-root-cause"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft contains unauthorized actions (silencing a public clock, levying keepership fees, ordering works orders) that exceed the fitter's authority (Red). It also contains hostile accusations and insults against the night winder ('careless', 'keep that winder off the barrel') (Red)."
+        },
+        "gpt": {
+          "labeler_file": "gold-labeler-3.json",
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The readable draft calls the winder careless without support and claims Neris has already silenced a public clock and imposed a fee despite lacking that authority. It also directs a works order and personnel restriction outside Neris's role."
+        }
+      },
+      "dimension_agreement": {
+        "route": {
+          "family_values": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Normal mode",
+          "adjudicated_matches_majority": true
+        },
+        "responsibility": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "tone": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        },
+        "overall": {
+          "family_values": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "pattern": "unanimous",
+          "adjudicated": "Red",
+          "adjudicated_matches_majority": true
+        }
+      },
+      "adjudicated_gold": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Red",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "commitment-scope",
+          "current-root-cause"
+        ],
+        "required_revision_concepts": [
+          "remove-unsafe-commitment",
+          "remove-unsupported-accusation"
+        ],
+        "allowed_revision_concepts": [
+          "preserve-click-incident-facts",
+          "preserve-intended-recipient",
+          "preserve-job-identity",
+          "qualify-unconfirmed-cause",
+          "remove-unsafe-commitment",
+          "remove-unsupported-accusation"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudication_note": "Unanimous Normal / Red / Red / Red with unanimous removal of both the unsafe commitments and the unsupported accusation. The image header marks the draft fully readable, so no Intake applies."
+    }
+  ]
+}
