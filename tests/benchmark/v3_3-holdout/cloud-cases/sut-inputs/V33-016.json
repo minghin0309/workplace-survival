@@ -1,0 +1,41 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V33-016",
+  "recipient_context": {
+    "recipient_name": "Calder Vossine",
+    "recipient_role": "workshop manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "pendulum and chime-train fitter",
+    "organization": "Wetherlees Turret-Clock Works",
+    "site": "Quoyfen Spire Yard",
+    "situation": "A weight delivery for JC-5914 is being reported to Calder Vossine, and the count, mass, and storage place are being corrected in this thread.",
+    "known_facts": [
+      "JC-5914 is the guildhall going train.",
+      "Weights come from Barleywick Clock-Weight Castings.",
+      "Later turns replace the first count and mass, then confirm arrival and rack location."
+    ],
+    "constraints": [
+      "Use the latest stated count, mass, and storage place.",
+      "Keep the note to Calder Vossine only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this weight-delivery notice to Calder.\n\nDraft under review:\nCalder \u2014 Barleywick is sending four 40 kg weights for JC-5914. I will take them in when they arrive. \u2014 Neris"
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Correction: the order is three 45 kg weights, not four 40 kg weights. The draft below is the old text.\n\nDraft under review:\nCalder \u2014 Barleywick is sending four 40 kg weights for JC-5914. I will take them in when they arrive. \u2014 Neris"
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "They arrived. All three 45 kg weights are sound and are now on rack D. Please update the note to Calder. The draft below is still the original.\n\nDraft under review:\nCalder \u2014 Barleywick is sending four 40 kg weights for JC-5914. I will take them in when they arrive. \u2014 Neris"
+    }
+  ]
+}
