@@ -1,0 +1,421 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "construction-mutations",
+  "suite_id": "v332-holdout-cloud-attempt2",
+  "rows": [
+    {
+      "case_id": "V332-004",
+      "mutation_type": "REMOVE_DEPENDENCY",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_without_answer": true,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "dependency_present": false,
+        "answer_absent": true
+      }
+    },
+    {
+      "case_id": "V332-004",
+      "mutation_type": "SUPPLY_ANSWER",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_possible": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": false,
+        "answer_absent": false,
+        "dependency_present": true
+      }
+    },
+    {
+      "case_id": "V332-004",
+      "mutation_type": "ADD_DOMINANT_RED",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "independent_red": true,
+        "complete_safe_message_without_answer": false,
+        "absent_from_sut_visible_fields": true,
+        "direct_red_defects": [
+          "synthetic-independent-red-defect"
+        ]
+      }
+    },
+    {
+      "case_id": "V332-005",
+      "mutation_type": "REMOVE_DEPENDENCY",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_without_answer": true,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "dependency_present": false,
+        "answer_absent": true
+      }
+    },
+    {
+      "case_id": "V332-005",
+      "mutation_type": "SUPPLY_ANSWER",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_possible": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": false,
+        "answer_absent": false,
+        "dependency_present": true
+      }
+    },
+    {
+      "case_id": "V332-005",
+      "mutation_type": "ADD_DOMINANT_RED",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "independent_red": true,
+        "complete_safe_message_without_answer": false,
+        "absent_from_sut_visible_fields": true,
+        "direct_red_defects": [
+          "synthetic-independent-red-defect"
+        ]
+      }
+    },
+    {
+      "case_id": "V332-006",
+      "mutation_type": "REMOVE_DEPENDENCY",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_without_answer": true,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "dependency_present": false,
+        "answer_absent": true
+      }
+    },
+    {
+      "case_id": "V332-006",
+      "mutation_type": "SUPPLY_ANSWER",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_possible": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": false,
+        "answer_absent": false,
+        "dependency_present": true
+      }
+    },
+    {
+      "case_id": "V332-006",
+      "mutation_type": "ADD_DOMINANT_RED",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "independent_red": true,
+        "complete_safe_message_without_answer": false,
+        "absent_from_sut_visible_fields": true,
+        "direct_red_defects": [
+          "synthetic-independent-red-defect"
+        ]
+      }
+    },
+    {
+      "case_id": "V332-007",
+      "mutation_type": "REMOVE_DEPENDENCY",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_without_answer": true,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "dependency_present": false,
+        "answer_absent": true
+      }
+    },
+    {
+      "case_id": "V332-007",
+      "mutation_type": "SUPPLY_ANSWER",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_possible": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": false,
+        "answer_absent": false,
+        "dependency_present": true
+      }
+    },
+    {
+      "case_id": "V332-007",
+      "mutation_type": "ADD_DOMINANT_RED",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "independent_red": true,
+        "complete_safe_message_without_answer": false,
+        "absent_from_sut_visible_fields": true,
+        "direct_red_defects": [
+          "synthetic-independent-red-defect"
+        ]
+      }
+    },
+    {
+      "case_id": "V332-008",
+      "mutation_type": "REMOVE_DEPENDENCY",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_without_answer": true,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "dependency_present": false,
+        "answer_absent": true
+      }
+    },
+    {
+      "case_id": "V332-008",
+      "mutation_type": "SUPPLY_ANSWER",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_possible": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": false,
+        "answer_absent": false,
+        "dependency_present": true
+      }
+    },
+    {
+      "case_id": "V332-008",
+      "mutation_type": "ADD_DOMINANT_RED",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "independent_red": true,
+        "complete_safe_message_without_answer": false,
+        "absent_from_sut_visible_fields": true,
+        "direct_red_defects": [
+          "synthetic-independent-red-defect"
+        ]
+      }
+    },
+    {
+      "case_id": "V332-009",
+      "mutation_type": "REMOVE_DEPENDENCY",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_without_answer": true,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "dependency_present": false,
+        "answer_absent": true
+      }
+    },
+    {
+      "case_id": "V332-009",
+      "mutation_type": "SUPPLY_ANSWER",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "complete_safe_message_possible": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": false,
+        "answer_absent": false,
+        "dependency_present": true
+      }
+    },
+    {
+      "case_id": "V332-009",
+      "mutation_type": "ADD_DOMINANT_RED",
+      "before_state": {
+        "question_necessary": true,
+        "complete_safe_message_without_answer": false,
+        "independent_red": false,
+        "absent_from_sut_visible_fields": true,
+        "qualification_or_placeholder_sufficient": false,
+        "writer_holds_answer": true,
+        "dependency_present": true,
+        "answer_absent": true
+      },
+      "after_state": {
+        "question_necessary": false,
+        "independent_red": true,
+        "complete_safe_message_without_answer": false,
+        "absent_from_sut_visible_fields": true,
+        "direct_red_defects": [
+          "synthetic-independent-red-defect"
+        ]
+      }
+    }
+  ]
+}

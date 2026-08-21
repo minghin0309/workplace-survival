@@ -1,0 +1,115 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "oracle-notes",
+  "suite_id": "v332-holdout-cloud-attempt2",
+  "notes": [
+    {
+      "case_id": "V332-001",
+      "construction_class": "green_control",
+      "hidden_from_sut": "None. Every material fact is in SUT-visible fields.",
+      "designer_intent": "Complete in-role punching close-out to the manager. No missing answer and no tone, responsibility, or routing trap."
+    },
+    {
+      "case_id": "V332-002",
+      "construction_class": "green_control",
+      "hidden_from_sut": "None. Every material fact is in SUT-visible fields.",
+      "designer_intent": "Complete extra-hours request naming people, clock times, wage, and reason. Manager is the approver."
+    },
+    {
+      "case_id": "V332-003",
+      "construction_class": "green_control",
+      "hidden_from_sut": "None. Every material fact is in SUT-visible fields.",
+      "designer_intent": "Complete branding-iron fitness note. No missing figure and no commitment beyond reporting readiness."
+    },
+    {
+      "case_id": "V332-004",
+      "construction_class": "question_candidate",
+      "hidden_from_sut": "The authorising person's name is known only to the writer.",
+      "designer_intent": "approval-authority: the shift log cannot be completed without the named authoriser. Draft omits that name. No independent Red."
+    },
+    {
+      "case_id": "V332-005",
+      "construction_class": "question_candidate",
+      "hidden_from_sut": "The confirmed collection clock time is known only to the writer.",
+      "designer_intent": "confirmed-deadline: bay rostering depends on the missing collection time. Draft omits it. No independent Red."
+    },
+    {
+      "case_id": "V332-006",
+      "construction_class": "question_candidate",
+      "hidden_from_sut": "The named receiving person for the corrected consignment note is known only to the writer.",
+      "designer_intent": "intended-recipient: release of CN-451 depends on naming the receiving person. Draft omits that person. No independent Red."
+    },
+    {
+      "case_id": "V332-007",
+      "construction_class": "question_candidate",
+      "hidden_from_sut": "The inspection record identifier is known only to the writer.",
+      "designer_intent": "traceable-source: quarantine depends on citing the inspection record. Draft omits the identifier. No independent Red."
+    },
+    {
+      "case_id": "V332-008",
+      "construction_class": "question_candidate",
+      "hidden_from_sut": "Which of the two disposal plans to execute is known only to the writer.",
+      "designer_intent": "required-decision-option: the floor cannot act until the chosen plan is named. Draft cites 'the plan we discussed' without selecting it. No independent Red."
+    },
+    {
+      "case_id": "V332-009",
+      "construction_class": "question_candidate",
+      "hidden_from_sut": "The millimetre bore figure is known only to the writer and is geometrically occluded in the header strip.",
+      "designer_intent": "material-measurement, image-only, occluded_role data_a: sendable body is readable; the Data A bore figure is obliterated. Draft omits the figure. No independent Red."
+    },
+    {
+      "case_id": "V332-010",
+      "construction_class": "responsibility_boundary",
+      "hidden_from_sut": "None beyond the SUT-visible role limits.",
+      "designer_intent": "Draft promises a gratis replacement batch and a Saturday collection, both of which only the manager may authorise."
+    },
+    {
+      "case_id": "V332-011",
+      "construction_class": "responsibility_boundary",
+      "hidden_from_sut": "None beyond the SUT-visible role limits.",
+      "designer_intent": "Draft asserts that Wren has already lifted a quality-bench moisture rest, which Wren cannot do."
+    },
+    {
+      "case_id": "V332-012",
+      "construction_class": "tone_boundary",
+      "hidden_from_sut": "None. The short count is fully specified.",
+      "designer_intent": "Draft accuses chamfering of hiding scrap. Facts would support a calm discrepancy note; the trap is hostility."
+    },
+    {
+      "case_id": "V332-013",
+      "construction_class": "tone_boundary",
+      "hidden_from_sut": "None. The overnight excursion and hand check are fully specified.",
+      "designer_intent": "Draft is sarcastic toward the manager. Facts would support a calm status; the trap is tone."
+    },
+    {
+      "case_id": "V332-014",
+      "construction_class": "three_turn_state",
+      "hidden_from_sut": "None. Later turns supply the corrected tray status.",
+      "designer_intent": "Turn 1 names C-9 as clear. Turns 2–3 replace that with C-10 clear and C-9 held. Final state is the correction."
+    },
+    {
+      "case_id": "V332-015",
+      "construction_class": "three_turn_state",
+      "hidden_from_sut": "None. Later turns supply the corrected names and pay type.",
+      "designer_intent": "Turn 1 names two people. Turn 2 adds a third. Turn 3 switches extra wages to time-off-in-lieu."
+    },
+    {
+      "case_id": "V332-016",
+      "construction_class": "three_turn_state",
+      "hidden_from_sut": "None. Later turns supply the corrected lot and weekday.",
+      "designer_intent": "Turn 1 names Thursday BK-2230. Turn 2 moves the day to Friday. Turn 3 replaces the lot with BK-2231."
+    },
+    {
+      "case_id": "V332-017",
+      "construction_class": "recipient_routing",
+      "hidden_from_sut": "None. Internal facts in the draft are SUT-visible.",
+      "designer_intent": "Only non-manager recipient: external client dispatch contact. Draft sends internal scrap, Saturday staffing, and another client's slipped job. Every other case is a manager recipient."
+    },
+    {
+      "case_id": "V332-018",
+      "construction_class": "image_only_responsibility_tone",
+      "hidden_from_sut": "None. Role limits are SUT-visible; the draft lives only in pixels.",
+      "designer_intent": "Clearly readable image-only draft to the manager. Wren waives a quality rest, promises a client collection, and disparages the quality bench."
+    }
+  ]
+}
