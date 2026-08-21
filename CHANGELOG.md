@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### v3.2 attempt-3 score triage
+
+- Did not rescore or rewrite attempt 3, attempt 2, or runtime Skill files.
+- Question recall 6/6: T14.15 S-001 held.
+- Revision recall 9/41 is mostly H-001 (`no-revision` vs empty claims, 12 turns) and H-003 (implicit `preserve-intended-recipient`).
+- Responsibility 16/23 is mostly gold Gray vs SPEC omission-Red on 004–009 (G-001), plus OCR intake on 008 (G-003).
+- Remaining Skill seeds: S-003/S-006 on V323-013, S-007 on V323-018. Do not Skill-patch toward gold Gray or Normal-mode review of an illegible Data B token.
+
 ### Fresh benchmark v3.2 unseen holdout attempt 3
 
 - Did not rescore or rewrite v3.2 attempt 2.
