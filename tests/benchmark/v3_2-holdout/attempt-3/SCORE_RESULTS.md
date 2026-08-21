@@ -35,4 +35,6 @@ Metrics:
 
 Case pass: V323-017 only. Gold, ontology, evaluations, matches, and runtime Skill files were not modified after freeze. A second scorer invocation is forbidden in-version.
 
+Triage (no rescore): `tests/benchmark/v3_2-holdout/attempt-3/SCORE_TRIAGE.md`.
+
 Attempt 2 remains frozen `SCORED` and is not rescored. Attempt 1 remains `INVALID_COVERAGE`. v3.1 remains `SCORER_ERROR`.
