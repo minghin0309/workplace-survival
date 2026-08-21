@@ -1,0 +1,510 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "semantic-matches",
+  "matcher": {
+    "context_id": "bc-883ce0a3-827c-53f6-9a3e-065873a07662",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "gold_access": true
+  },
+  "extraction_snapshot": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractions-manifest-v332.json",
+    "sha256": "e61eb61d3861cab60036dd693d57cba3b56b740d615e49abd302532c7e489866"
+  },
+  "source_hashes": {
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractions-manifest-v332.json": "e61eb61d3861cab60036dd693d57cba3b56b740d615e49abd302532c7e489866",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/evaluations-v332-canonical.json": "ecd6fd806c1743c1f57bf2dc9cbe03822ea2d48310dad9c4f432e37fb7a2b5a2",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/outputs-v332-raw.json": "d61dde993d3c3a74b16a317b43b5656d3b3e76542fd15b1dc99e341a9ab251cb",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-v332.json": "9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+  },
+  "matching_notes": {
+    "counts": {
+      "claims_total": 33,
+      "exact": 0,
+      "alias": 0,
+      "semantic": 28,
+      "unsupported": 5
+    },
+    "decision_rules": [
+      "Every extracted claim in evaluations-v332-canonical.json receives exactly one match decision.",
+      "concept_id is drawn only from that turn's gold allowed_question_concepts or allowed_revision_concepts, otherwise null with match_type unsupported.",
+      "exact and alias require claim text identical to the evidence span plus an ontology alias hit; no claim in this snapshot meets that bar, so all supported matches are semantic with confidence >= 0.8.",
+      "preserve-intended-recipient is never a required revision concept in v3.3; no claim was matched to it here.",
+      "No concept was invented and no claim was dropped; all 18 cases and 24 turns are represented."
+    ],
+    "coverage": {
+      "cases": 18,
+      "turns": 24
+    },
+    "unsupported_notes": [
+      "V332-014 T1, V332-015 T1 and V332-015 T2 are Green/Green in gold with empty allowed_question_concepts, so their question claims have no valid target.",
+      "V332-015 T1 and T2 revision claims insert a pay-type placeholder, but placeholder-unknown-value is not in those turns' allowed_revision_concepts and no-revision does not describe a substantive edit."
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "V332-001",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V332-002",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V332-003",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V332-004",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-004-1-1",
+              "concept_id": "approval-authority",
+              "match_type": "semantic",
+              "confidence": 0.93,
+              "rationale": "Asks who authorised the line-2 changeover so the shift log can record it as approved; this is a request for the approving authority, matching approval-authority (who-can-approve) rather than the day-to-day task owner."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-004-1-1",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Makes the die change conditional on the authorising name reaching the shift log, withdrawing the unconditional 'I will change the die this afternoon' commitment that Wren lacks authority for; conditional-ownership sense of remove-unsafe-commitment."
+            },
+            {
+              "claim_id": "r-V332-004-1-2",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Inserts the descriptive bracketed token [authorising person's name] in place of the unknown authoriser instead of inventing a name."
+            },
+            {
+              "claim_id": "r-V332-004-1-3",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.82,
+              "rationale": "Conditions the punching restart on the name being in the log rather than asking Edlyn to record the changeover as already authorised; conditions a commitment that lacks confirmed authority."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-005",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-005-1-1",
+              "concept_id": "confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Asks for the confirmed clock time for the CN-448 collection, which is the confirmed delivery/collection time this turn omits; matches confirmed-deadline (delivery-date)."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-005-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Replaces the missing collection time with the descriptive placeholder [confirmed collection time]."
+            },
+            {
+              "claim_id": "r-V332-005-1-2",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.8,
+              "rationale": "Keeps the loading-bay rostering ask pointed at the placeholdered time ('at that time') so the actionable request carries the unknown value as a placeholder rather than an invented clock time; no other allowed revision concept covers this turn's conditioning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-006",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-006-1-1",
+              "concept_id": "confirmed-owner",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "Asks who the receiving person and post at House Oxbow Cellars is, i.e. the confirmed responsible recipient of the corrected note; matches confirmed-owner (responsible-person)."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-006-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.93,
+              "rationale": "Issues the CN-451 correction to the descriptive placeholder [receiving person's name and post] rather than inventing a contact."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-007",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-007-1-1",
+              "concept_id": "blocker-status",
+              "match_type": "semantic",
+              "confidence": 0.82,
+              "rationale": "Asks for the inspection record identifier that must be cited before the C-14 quarantine hold can be placed, i.e. the citation that establishes the hold; gold treats this token as blocker-status rather than an account of what caused the surface checks."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-007-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Inserts the descriptive placeholder [inspection record identifier] into the quarantine request instead of citing an invented record."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-008",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-008-1-1",
+              "concept_id": "commitment-scope",
+              "match_type": "semantic",
+              "confidence": 0.87,
+              "rationale": "Asks which of the two already-discussed disposal plans Wren was told to run, i.e. which bounded scope of work can be committed to; matches commitment-scope (scope-of-commitment)."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-008-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Substitutes the descriptive placeholder [chosen disposal plan] for the ambiguous 'the plan we discussed' without picking a plan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-009",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V332-010",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-010-1-1",
+              "concept_id": "commitment-scope",
+              "match_type": "semantic",
+              "confidence": 0.82,
+              "rationale": "Asks whether Wren has already told the client that a free replacement and a Saturday collection are agreed, i.e. what has already been committed on Wren's behalf; the ownership-boundary sense of commitment-scope fits better than approval-authority, which the draft does not ask about."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-010-1-1",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Restates the complaint and the client's replacement request as a report, dropping the promise of free stock that only Edlyn can authorise."
+            },
+            {
+              "claim_id": "r-V332-010-1-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "States that gratis replacements and weekend loading slots need Edlyn's authorisation, explicitly conditioning the commitment on the authority Wren lacks."
+            },
+            {
+              "claim_id": "r-V332-010-1-3",
+              "concept_id": "preserve-confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.82,
+              "rationale": "Carries the confirmed next ordinary collection date, Tuesday 25 August, unchanged in place of the invented Saturday collection."
+            },
+            {
+              "claim_id": "r-V332-010-1-4",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Replaces the promised Saturday bay with a request for Edlyn's direction, removing the commitment Wren cannot make."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-011",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-011-1-1",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "Withdraws Wren's instruction to skip the moisture rest and states that only the quality bench may lift it, removing a commitment made without authority."
+            },
+            {
+              "claim_id": "r-V332-011-1-2",
+              "concept_id": "preserve-confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Restores the confirmed schedule that agglomeration happens after the rest rather than today, keeping the confirmed timing unchanged."
+            },
+            {
+              "claim_id": "r-V332-011-1-3",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.82,
+              "rationale": "Conditions the press 2 readiness request on the rest completing instead of committing the press this afternoon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-012",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-012-1-1",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Replaces the 'hiding cracked shoulders' and 'usual trick' accusation with the bare 800-to-772 short-count fact, neutralising blame Data A says there is no evidence for."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-013",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-013-1-1",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Drops the reprimand that Edlyn did not walk the stillage and reports only the overnight moisture excursion, removing the unsupported blame."
+            },
+            {
+              "claim_id": "r-V332-013-1-2",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "Strips the contemptuous claim that the office takes no interest and keeps only Gareth's hand-check result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V332-014",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-014-1-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 1.0,
+              "rationale": "Gold allows no question concepts for this Green/Green turn (allowed_question_concepts is empty), so the tray-status question has no valid semantic target."
+            }
+          ],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V332-015",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-015-1-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 1.0,
+              "rationale": "Gold allows no question concepts for this Green/Green turn (allowed_question_concepts is empty), so the pay-type question has no valid semantic target."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-015-1-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 1.0,
+              "rationale": "The pay-type placeholder insertion is a substantive change, so it cannot map to no-revision, and placeholder-unknown-value is not in this turn's allowed_revision_concepts."
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-015-2-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 1.0,
+              "rationale": "Gold allows no question concepts for this Green/Green turn (allowed_question_concepts is empty), so the pay-type question has no valid semantic target."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-015-2-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 1.0,
+              "rationale": "The pay-type placeholder insertion is a substantive change, so it cannot map to no-revision, and placeholder-unknown-value is not in this turn's allowed_revision_concepts."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V332-016",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V332-017",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V332-018",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V332-018-1-1",
+              "concept_id": "blocker-status",
+              "match_type": "semantic",
+              "confidence": 0.83,
+              "rationale": "Asks whether the 48-hour moisture rest on BK-2244 has already been dropped, i.e. whether the quality-bench hold blocking dispatch still stands; matches blocker-status (current-blocker)."
+            },
+            {
+              "claim_id": "q-V332-018-1-2",
+              "concept_id": "commitment-scope",
+              "match_type": "semantic",
+              "confidence": 0.83,
+              "rationale": "Asks whether a 09:00 collection has already been promised to House Mallowfrith dispatch, i.e. what has already been committed outside Wren's authority; ownership-boundary sense of commitment-scope."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V332-018-1-1",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "States that the rest stands and that Wren can neither waive it nor promise a collection time, removing both commitments made without authority."
+            },
+            {
+              "claim_id": "r-V332-018-1-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.83,
+              "rationale": "Refers the collection authorisation and bay staffing decision to Edlyn instead of committing a 09:00 collection."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
