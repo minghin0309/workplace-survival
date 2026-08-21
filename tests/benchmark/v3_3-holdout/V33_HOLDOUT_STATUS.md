@@ -9,7 +9,7 @@
 | Construction | `VALID`; copied with `git show` from `cursor/v33-attempt1-cases-r8n3-17a0` @ `1c9a8da` (not merged) |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (roles `gold` + `ontology` + `scorer`) |
 | SUT | frozen; 18/18 dedicated contexts copied via `git show` (not merged). Outputs SHA-256 `cd9713d1bcd91d896b11f8df814b1efcb6e9f3be977a8ad9b46df89384e6ef57`. Manifest SHA-256 `700af74d2fcbe94a03ccaa15a9e756d423b971a6e10e8be280a2d7312184ba5b`. Direct image opens: V33-008, V33-018. |
-| Extraction | gold-blind snapshot frozen after GPT adjudicator copy from `cursor/v33-extractor-adjudicator-17a0` @ `478630b` (not merged). Canonical 10 question / 27 revision claims; unresolved disagreements 0. Claude matcher next. |
+| Extraction | frozen SHA-256 `cbf785a36aec53dc0e2a34ca7e1ca6a270345091c110c099e75bf6f7dfb4ed12`. GPT adjudicator copied from `cursor/v33-extractor-adjudicator-17a0` @ `478630b` (not merged). Canonical 10 question / 27 revision claims; unresolved disagreements 0. Claude matcher next. |
 | Formal score | not started |
 
 SUT wave 1 (do not merge):
