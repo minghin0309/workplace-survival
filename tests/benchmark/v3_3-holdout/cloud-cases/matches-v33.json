@@ -1,0 +1,530 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "semantic-matches",
+  "matcher": {
+    "context_id": "bc-e75327d6-828c-5c1a-8020-805014784706",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "gold_access": true
+  },
+  "extraction_snapshot": {
+    "path": "tests/benchmark/v3_3-holdout/cloud-cases/extractions-manifest-v33.json",
+    "sha256": "cbf785a36aec53dc0e2a34ca7e1ca6a270345091c110c099e75bf6f7dfb4ed12"
+  },
+  "source_hashes": {
+    "tests/benchmark/v3_3-holdout/cloud-cases/extractions-manifest-v33.json": "cbf785a36aec53dc0e2a34ca7e1ca6a270345091c110c099e75bf6f7dfb4ed12",
+    "tests/benchmark/v3_3-holdout/cloud-cases/evaluations-v33-canonical.json": "76f55a591bae0ee750c03fc5f8ad2667c80b9cc1b4309d9534548a62d0bcdfe2",
+    "tests/benchmark/v3_3-holdout/cloud-cases/outputs-v33-raw.json": "cd9713d1bcd91d896b11f8df814b1efcb6e9f3be977a8ad9b46df89384e6ef57",
+    "tests/benchmark/v3_3-holdout/cloud-cases/gold-v33.json": "aeb9f00a78d08cac58ad058dd77db51d8d40c01418762a36f611a86608ad0704",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+  },
+  "matching_notes": {
+    "counts": {
+      "claims_total": 37,
+      "exact": 0,
+      "alias": 0,
+      "semantic": 36,
+      "unsupported": 1
+    },
+    "exact_alias_basis": "No canonical claim has text == evidence_span; every claim text is a paraphrase of the quoted span. The exact/alias gate therefore fails structurally for all 37 claims, so no exact or alias decision is available regardless of ontology alias coverage.",
+    "local_concept_targets": "Gold concept_definitions carry no canonical_id field in this case set. Suite-local IDs are used as semantic targets only when present in that turn's allowed list; ontology-sourced IDs are also treated as semantic (not exact/alias) for the reason above.",
+    "concept_reuse": "A concept may be the target of more than one claim in a turn when the SUT split one gold-allowed operation across distinct spans. Each claim still carries exactly one concept."
+  },
+  "cases": [
+    {
+      "case_id": "V33-001",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V33-002",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V33-003",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V33-004",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-004-1-1",
+              "concept_id": "approval-authority",
+              "match_type": "semantic",
+              "confidence": 0.97,
+              "rationale": "The claim asks who authorised the Saturday overtime, which is the ontology sense of approval-authority ('Ask who has authority to approve or decide'). approval-authority is in the turn's allowed_question_concepts."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-004-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The span inserts '[approving authority]' as a descriptive stand-in for the value the packet does not carry. That is placeholder-unknown-value, not state-approving-authority, because no authority is actually named."
+            },
+            {
+              "claim_id": "r-V33-004-1-2",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.0,
+              "rationale": "Conditioning the long-bench booking on named approval is a commitment-conditioning move, whose ontology sense is remove-unsafe-commitment. That concept is not in this turn's allowed_revision_concepts, and the remaining allowed concepts (placeholder-unknown-value, the preserves, state-approving-authority) do not describe conditioning a booking. No allowed concept fits."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-005",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-005-1-1",
+              "concept_id": "confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.93,
+              "rationale": "The claim asks for the confirmed ready-date for the pendulum, matching confirmed-deadline ('Ask for the current confirmed completion or delivery date'). It is the only date-seeking concept in allowed_question_concepts."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-005-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.96,
+              "rationale": "The span replaces the vague 'the confirmed date' with the descriptive placeholder '[confirmed ready-date]'. No actual date is supplied, so this is placeholder-unknown-value rather than state-confirmed-ready-date."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-006",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-006-1-1",
+              "concept_id": "keepership-contact-name",
+              "match_type": "semantic",
+              "confidence": 0.96,
+              "rationale": "The claim asks for the single keepership contact to receive the revised JC-4912 winding card, which is exactly the suite-local keepership-contact-name definition. It is present in allowed_question_concepts, so it is a valid semantic target."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-006-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.94,
+              "rationale": "The span substitutes '[keepership contact name]' for the generic 'the keepership contact'. Because no person is actually named, this is placeholder-unknown-value rather than name-keepership-contact."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-007",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-007-1-1",
+              "concept_id": "leaf-count-source",
+              "match_type": "semantic",
+              "confidence": 0.97,
+              "rationale": "The claim asks for the traceable source behind the thirty-leaf count, matching the suite-local leaf-count-source definition, which is in allowed_question_concepts."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-007-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "The span states the source as '[traceable source of the leaf count]', a descriptive stand-in rather than an actual citation, so it is placeholder-unknown-value rather than cite-leaf-count-source."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-008",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-008-1-1",
+              "concept_id": "finished-length-mm",
+              "match_type": "semantic",
+              "confidence": 0.97,
+              "rationale": "The claim asks for the millimetre length that standing order 5 requires in the logging request, which is the suite-local finished-length-mm definition and is in allowed_question_concepts."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-008-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.96,
+              "rationale": "The span inserts '[measured millimetre length] mm' rather than a numeric value, so it represents the unknown with a descriptive placeholder instead of satisfying state-finished-length-mm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-009",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-009-1-1",
+              "concept_id": "selected-rewind-option",
+              "match_type": "semantic",
+              "confidence": 0.97,
+              "rationale": "The claim asks which of the two already-costed rewind options was chosen for JC-5233, matching the suite-local selected-rewind-option definition in allowed_question_concepts."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-009-1-1",
+              "concept_id": "placeholder-unknown-value",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The span carries '[named selected rewind option]' instead of naming the pulley-weight or two-crank arrangement, so it is a descriptive placeholder rather than name-selected-rewind-option."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-010",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-010-1-1",
+              "concept_id": "commitment-scope",
+              "match_type": "semantic",
+              "confidence": 0.82,
+              "rationale": "The claim probes whether the sender has already instructed Barleywick and authorised the carpenter, or whether that is only draft wording. That establishes the boundary of what the sender has actually committed to outside trades, which is commitment-scope. It does not ask who holds approval authority, so approval-authority is the weaker of the two allowed options."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-010-1-1",
+              "concept_id": "preserve-floorboard-condition",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "The evidence span is the worn-floorboards and quote-offer report, which is precisely preserve-floorboard-condition ('Keep the factual report of the worn winding-stool floorboards for manager handling'). The removal of the invoice/start claims that the claim text also describes is carried by r-V33-010-1-2's handoff, so this claim is matched on the factual content it states."
+            },
+            {
+              "claim_id": "r-V33-010-1-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Handing keepership works orders and outside-trade instruction back to Calder removes the sender's unauthorised commitment and restores the correct ownership boundary, matching remove-unsafe-commitment (aliases include conditional-ownership and scope-commitment)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-011",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-011-1-1",
+              "concept_id": "approval-authority",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "The claim asks whether Calder, the only person who may cancel a posted stoppage or move a roster, has already authorized those changes. That is the approval-authority sense (alias who-can-approve/decision-authority) applied to a specific decision-holder."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-011-1-1",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Turning the announced cancellation and reassignment into a request for Calder to decide removes a commitment the sender lacks authority to make, matching remove-unsafe-commitment."
+            },
+            {
+              "claim_id": "r-V33-011-1-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.87,
+              "rationale": "Conditioning the keepership 'keep the clock running' wording on Calder actually cancelling the stoppage conditions a second unauthorised commitment, again remove-unsafe-commitment. It is a distinct span from r-V33-011-1-1, so it takes its own decision on the same concept."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-012",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-012-1-1",
+              "concept_id": "preserve-bench-state-facts",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The span states the unfinished JC-5517 gathering-pallet filing left on the shared bench, which is the preserve-bench-state-facts definition verbatim in substance."
+            },
+            {
+              "claim_id": "r-V33-012-1-2",
+              "concept_id": "preserve-bench-state-facts",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "Needing the bench this morning and finding the filing still open is the second half of the confirmed bench-state account, so it also falls under preserve-bench-state-facts. It is a separate span and therefore a separate decision on the same concept."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-013",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-013-1-1",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "The claim's operative act is replacing the sarcastic blame ('a pivot you swore was fine', 'look at the wear before you wave me up the tower') with civil wording, which is remove-unsupported-accusation ('Remove or neutralize an unsupported blame or intent claim'). The resulting completion sentence is the replacement text rather than a second decision."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-014",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-014-2-1",
+              "concept_id": "correct-tooth-count",
+              "match_type": "semantic",
+              "confidence": 0.98,
+              "rationale": "The span replaces the superseded 120-tooth count with the confirmed 96 in the booking note, which is the suite-local correct-tooth-count definition and is in this turn's allowed_revision_concepts."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-014-3-1",
+              "concept_id": "correct-tooth-count",
+              "match_type": "semantic",
+              "confidence": 0.97,
+              "rationale": "The span 'JC-5731, 96 teeth,' carries the corrected count in place of 120, matching correct-tooth-count."
+            },
+            {
+              "claim_id": "r-V33-014-3-2",
+              "concept_id": "correct-cutting-day",
+              "match_type": "semantic",
+              "confidence": 0.97,
+              "rationale": "The span 'on Friday 28 August 2026.' replaces the superseded Wednesday 26 August cutting day, matching correct-cutting-day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-015",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-015-2-1",
+              "concept_id": "correct-nut-move",
+              "match_type": "semantic",
+              "confidence": 0.98,
+              "rationale": "The span replaces 'raised the rating-nut two flats' with 'lowered the rating-nut one flat', which is the correct-nut-move definition."
+            },
+            {
+              "claim_id": "r-V33-015-2-2",
+              "concept_id": "correct-daily-rate",
+              "match_type": "semantic",
+              "confidence": 0.98,
+              "rationale": "The span replaces the superseded four-seconds-per-day rate with the confirmed one second per day, which is the correct-daily-rate definition."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-015-3-1",
+              "concept_id": "correct-nut-move",
+              "match_type": "semantic",
+              "confidence": 0.94,
+              "rationale": "The span again carries the lowered-one-flat move in place of the superseded raised-two-flats wording, matching correct-nut-move."
+            },
+            {
+              "claim_id": "r-V33-015-3-2",
+              "concept_id": "state-stable-rate-hold",
+              "match_type": "semantic",
+              "confidence": 0.93,
+              "rationale": "The span states the corrected one-second losing rate and that it is holding after six hours on test. state-stable-rate-hold covers exactly that combination and is the concept unique to this turn; correct-daily-rate alone would drop the six-hour hold that distinguishes this claim."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-016",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-016-2-1",
+              "concept_id": "correct-weight-count-and-mass",
+              "match_type": "semantic",
+              "confidence": 0.98,
+              "rationale": "The span replaces 'four 40 kg weights' with 'three 45 kg weights' for JC-5914, which is the correct-weight-count-and-mass definition."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-016-3-1",
+              "concept_id": "correct-weight-count-and-mass",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "This span carries the corrected three/45 kg figures against the superseded four/40 kg order. The arrival-and-rack content is carried by r-V33-016-3-2, so this claim is matched on the count-and-mass correction it uniquely supplies."
+            },
+            {
+              "claim_id": "r-V33-016-3-2",
+              "concept_id": "state-arrival-and-storage",
+              "match_type": "semantic",
+              "confidence": 0.94,
+              "rationale": "'All three are sound and are now on rack D.' is the state-arrival-and-storage definition ('State that the weights arrived sound and are now stored on rack D')."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V33-017",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V33-018",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V33-018-1-1",
+              "concept_id": "approval-authority",
+              "match_type": "semantic",
+              "confidence": 0.94,
+              "rationale": "The claim asks whether workshop-manager authority was already given for the silencing and the waste fee, which is the approval-authority sense of who may approve or decide those actions."
+            },
+            {
+              "claim_id": "q-V33-018-1-2",
+              "concept_id": "current-root-cause",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The claim asks for confirmed background on whether the winder was careless or the click has been bent before, i.e. what actually caused the bent click and whether the attribution holds. That is current-root-cause, the only cause-directed concept in allowed_question_concepts."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V33-018-1-1",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.9,
+              "rationale": "The distinguishing act is restating the bent-click report with 'careless' and 'again' dropped, which removes the unsupported fault attribution against the night winder. That is remove-unsupported-accusation; preserve-click-incident-facts describes the retained content rather than the corrective move."
+            },
+            {
+              "claim_id": "r-V33-018-1-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "Withholding the keepership silencing and the waste fee unless Calder authorizes them conditions commitments the sender has no authority to make, matching remove-unsafe-commitment."
+            },
+            {
+              "claim_id": "r-V33-018-1-3",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.87,
+              "rationale": "Deferring the works order to Calder removes the sender's works-order instruction, a separate unauthorised commitment from the keepership actions in r-V33-018-1-2, so it takes its own decision on the same concept."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
