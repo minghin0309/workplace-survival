@@ -8,8 +8,10 @@
 | Frozen attempt 1 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Draft PR #80. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `3ce86d5351b79b39f22f2277a04e40f14507ad52027b8bfa3d5271044cc37f53` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9`. Uncertain 0/24. |
-| SUT | frozen SHA-256 `7bf0eb2fc752620295da37f335eaaf5020549878b1bdfd8e7f363e077f9deeec`. 18 cases / 24 turns. Dedicated branches not merged. Extraction freeze next. |
-| Formal score | evaluation freeze SHA-256 `08671018c3238468bdee2776a507b269690af30d1a42be990153633cb59ec2eb`. Scorer not started. |
+| SUT | frozen SHA-256 `7bf0eb2fc752620295da37f335eaaf5020549878b1bdfd8e7f363e077f9deeec`. 18 cases / 24 turns. Dedicated branches not merged. |
+| Extraction | frozen SHA-256 `e61eb61d3861cab60036dd693d57cba3b56b740d615e49abd302532c7e489866`. Canonical 11 question / 22 revision claims; unresolved disagreements 0. |
+| Matching | frozen in evaluation snapshot SHA-256 `08671018c3238468bdee2776a507b269690af30d1a42be990153633cb59ec2eb`. Claude matcher copied from `cursor/v332-matcher-claude-17a0` @ `f1fb437` (draft PR #106, not merged). 33/33 claims decided (28 semantic, 5 unsupported). |
+| Formal score | `SCORED`; thresholds not passed. Report SHA-256 `de7123b79fdaa35549d3ee7eaaa64f9cfdd2f1a7e47c584dcf0c4418daef321d`. Formal scorer invocations: 1. Do not rescore. |
 
 Designer (do not merge): `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158`. Domain: Rowanleat Cork Works, Braydon Cut. Image-only question V332-009 `occluded_role: data_a`. Readable image V332-018. V332-017 is the only non-manager recipient.
 
@@ -83,9 +85,9 @@ SUT wave 6 (do not merge; copied with `git show`):
 
 Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true. V332-016 has 3 turns. V332-018 attested PNG read. Skill SHA-256 matches T14.21.
 
-SUT freeze: `outputs-manifest-v332.json` SHA-256 `7bf0eb2fc752620295da37f335eaaf5020549878b1bdfd8e7f363e077f9deeec`. Extractor-visible SHA-256 `2cae5473e656b6956cd2ce059bcef1dbcbd70b9b0dc5b9fb06e1e55ce7c5dc6f`. Extraction freeze SHA-256 `e61eb61d3861cab60036dd693d57cba3b56b740d615e49abd302532c7e489866`.
+SUT freeze: `outputs-manifest-v332.json` SHA-256 `7bf0eb2fc752620295da37f335eaaf5020549878b1bdfd8e7f363e077f9deeec`. Extractor-visible SHA-256 `2cae5473e656b6956cd2ce059bcef1dbcbd70b9b0dc5b9fb06e1e55ce7c5dc6f`. Extraction freeze SHA-256 `e61eb61d3861cab60036dd693d57cba3b56b740d615e49abd302532c7e489866`. Evaluation freeze SHA-256 `08671018c3238468bdee2776a507b269690af30d1a42be990153633cb59ec2eb`. Score report SHA-256 `de7123b79fdaa35549d3ee7eaaa64f9cfdd2f1a7e47c584dcf0c4418daef321d`. Formal scorer invocations: 1. Do not rescore.
 
-Semantic matcher (do not merge): `cursor/v332-matcher-claude-17a0` Claude `bc-883ce0a3-827c-53f6-9a3e-065873a07662` @ `f1fb437` (draft PR #106). Copied with `git show`. `gold_access` true, `scorer_run` false. 18/24, 33 claims (semantic 28, unsupported 5). Matches SHA-256 `4f9e61255fe1e38ffba70c8d6569c21edbfae7d4f5ad90cda37773d7767d4ad6`. Evaluation freeze SHA-256 `08671018c3238468bdee2776a507b269690af30d1a42be990153633cb59ec2eb`. Formal scorer invocations: 0.
+Semantic matcher (do not merge): `cursor/v332-matcher-claude-17a0` Claude `bc-883ce0a3-827c-53f6-9a3e-065873a07662` @ `f1fb437` (draft PR #106). Copied with `git show`. `gold_access` true, `scorer_run` false. 18/24, 33 claims (semantic 28, unsupported 5). Matches SHA-256 `4f9e61255fe1e38ffba70c8d6569c21edbfae7d4f5ad90cda37773d7767d4ad6`.
 
 Gold-blind extractors (do not merge):
 
@@ -97,4 +99,6 @@ Gold-blind extractors (do not merge):
 Isolation: grok and gemini `gold_or_scoring_accessed` false. Both 18/24.
 
 Extraction adjudicator (do not merge): `cursor/v332-extractor-adjudicator-17a0` GPT `bc-4ee52774-5253-543c-a97d-c546d6558593` @ `f660968` (draft PR #105). Canonical 18/24, unresolved 0, 11 question / 22 revision claims. Isolation clean.
+
+Score (one-shot, do not rerun): `SCORED`, `thresholds_passed: false`. Route 24/24, tone 23/23, invariants 0, uncertain 0. Responsibility 18/23, overall 19/23, question recall 5/6, question precision 8/11, revision recall 19/24, revision precision 20/22. Case pass: 13/18. Failed: V332-009, 013, 014, 015, 018. Later holdouts must denylist Rowanleat cork.
 

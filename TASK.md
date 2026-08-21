@@ -503,7 +503,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.22 — Fresh benchmark v3.3 unseen holdout attempt 2
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Measure unseen-case performance after T14.21 on methodology v3.3. No in-version rescore of v3.3 attempt 1.
 - Owner files: `tests/benchmark/v3_3-holdout/attempt-2/`, `TASK.md`, and `CHANGELOG.md`.
@@ -518,7 +518,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.3 scorer invocation;
   - v3.3 attempt 1 is not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
-- Progress: gold/SUT/extraction/evaluation frozen. One v3.3 score remaining. Attempt 1 is not rescored.
+- Progress: `SCORED`; thresholds not passed. Report SHA-256 `de7123b79fdaa35549d3ee7eaaa64f9cfdd2f1a7e47c584dcf0c4418daef321d`. Formal scorer invocations: 1. Do not rescore. Attempt 1 is not rescored.
 
 ## Task template
 

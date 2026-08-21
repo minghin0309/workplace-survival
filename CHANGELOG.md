@@ -4,6 +4,16 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.3 unseen holdout attempt 2
+
+- Did not rescore or rewrite v3.3 attempt 1, and did not change runtime Skill files.
+- Built 18 unseen Rowanleat cork cases in an isolated cloud designer and copied them with `git show`.
+- Gold freeze `VALID_COVERAGE` (6 question concepts / 6 cases, 0 uncertain turns, 24 revision concepts / 17 cases).
+- Ran 18 distinct cloud SUT contexts against the T14.21 Skill runtime.
+- Dual gold-blind extraction plus Claude matching, then one `score_semantic_v3_3.py` invocation: `SCORED`, thresholds not passed.
+- Question recall 5/6; revision recall 19/24. Route/tone/invariants passed. Responsibility 18/23; question precision 8/11; revision precision 20/22.
+- Report SHA-256 `de7123b79fdaa35549d3ee7eaaa64f9cfdd2f1a7e47c584dcf0c4418daef321d`. No in-version rerun.
+
 ### S-007 tone remediation
 
 - Rated an unsupported character or negligence label asserted as fact, including `careless`, as Tone Red rather than Yellow.

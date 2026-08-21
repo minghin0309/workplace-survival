@@ -1,0 +1,376 @@
+{
+  "schema_version": "v3.3",
+  "scorer_version": "3.3",
+  "status": "SCORED",
+  "executed_at_utc": "2026-08-21T14:46:41.587239Z",
+  "attempt_id": "683e3c7ec568bdde7c88bbcb62757269db6638b55fcf99c22b95aa91ebb57c44",
+  "rerun_performed": false,
+  "arguments": [
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/evaluation-manifest-v332.json",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-v332.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/outputs-v332-raw.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/evaluations-v332-canonical.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/matches-v332.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/score-report-v332.json"
+  ],
+  "scorer_sha256": "14e8fcb52923e791e525f9ed5bd283886d1660807b2989526680c473af69c7c7",
+  "frozen_inputs": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/evaluation-manifest-v332.json",
+      "sha256": "08671018c3238468bdee2776a507b269690af30d1a42be990153633cb59ec2eb",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-v332.json",
+      "sha256": "9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/outputs-v332-raw.json",
+      "sha256": "d61dde993d3c3a74b16a317b43b5656d3b3e76542fd15b1dc99e341a9ab251cb",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/evaluations-v332-canonical.json",
+      "sha256": "ecd6fd806c1743c1f57bf2dc9cbe03822ea2d48310dad9c4f432e37fb7a2b5a2",
+      "exists": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/matches-v332.json",
+      "sha256": "4f9e61255fe1e38ffba70c8d6569c21edbfae7d4f5ad90cda37773d7767d4ad6",
+      "exists": true
+    }
+  ],
+  "coverage": {
+    "turns": 24,
+    "accepted_turns": 24,
+    "gold_uncertain_turns": 0,
+    "gold_uncertain_rate": 0.0,
+    "required_question_concepts": 6,
+    "required_question_cases": 6,
+    "required_revision_concepts": 24,
+    "required_revision_cases": 17
+  },
+  "metrics": {
+    "route_accuracy": {
+      "value": 1.0,
+      "numerator": 24,
+      "denominator": 24,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.95
+      },
+      "threshold_status": "PASS"
+    },
+    "responsibility_accuracy": {
+      "value": 0.782608695652174,
+      "numerator": 18,
+      "denominator": 23,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "FAIL"
+    },
+    "tone_accuracy": {
+      "value": 1.0,
+      "numerator": 23,
+      "denominator": 23,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "PASS"
+    },
+    "overall_accuracy": {
+      "value": 0.8260869565217391,
+      "numerator": 19,
+      "denominator": 23,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "FAIL"
+    },
+    "required_question_concept_recall": {
+      "value": 0.8333333333333334,
+      "numerator": 5,
+      "denominator": 6,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "FAIL"
+    },
+    "question_claim_support_precision": {
+      "value": 0.7272727272727273,
+      "numerator": 8,
+      "denominator": 11,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": "=",
+        "target": 1.0
+      },
+      "threshold_status": "FAIL"
+    },
+    "required_revision_concept_recall": {
+      "value": 0.7916666666666666,
+      "numerator": 19,
+      "denominator": 24,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": ">=",
+        "target": 0.9
+      },
+      "threshold_status": "FAIL"
+    },
+    "revision_claim_support_precision": {
+      "value": 0.9090909090909091,
+      "numerator": 20,
+      "denominator": 22,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": "=",
+        "target": 1.0
+      },
+      "threshold_status": "FAIL"
+    },
+    "critical_invariant_violations": {
+      "value": 0,
+      "numerator": 0,
+      "denominator": 24,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": "=",
+        "target": 0
+      },
+      "threshold_status": "PASS"
+    },
+    "gold_uncertain_rate": {
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 24,
+      "status": "EVALUATED",
+      "threshold": {
+        "operator": "<=",
+        "target": 0.2
+      },
+      "threshold_status": "PASS"
+    }
+  },
+  "thresholds_passed": false,
+  "not_applicable_metrics": [],
+  "case_results": [
+    {
+      "case_id": "V332-001",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-002",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-003",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-004",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-005",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-006",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-007",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-008",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-009",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: required-question-concepts",
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V332-010",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-011",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-012",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-013",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility"
+      ]
+    },
+    {
+      "case_id": "V332-014",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: unsupported-question-claims",
+        "turn 1: required-revision-concepts"
+      ]
+    },
+    {
+      "case_id": "V332-015",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: responsibility",
+        "turn 1: overall",
+        "turn 1: unsupported-question-claims",
+        "turn 1: required-revision-concepts",
+        "turn 1: unsupported-revision-claims",
+        "turn 2: responsibility",
+        "turn 2: overall",
+        "turn 2: unsupported-question-claims",
+        "turn 2: required-revision-concepts",
+        "turn 2: unsupported-revision-claims"
+      ]
+    },
+    {
+      "case_id": "V332-016",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-017",
+      "passed": true,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": []
+    },
+    {
+      "case_id": "V332-018",
+      "passed": false,
+      "primary_scored": true,
+      "gold_uncertain_turns": 0,
+      "mismatches": [
+        "turn 1: required-revision-concepts"
+      ]
+    }
+  ],
+  "totals": {
+    "accepted_turns": 24,
+    "uncertain_turns": 0,
+    "route": 24,
+    "rated": {
+      "responsibility": 23,
+      "tone": 23,
+      "overall": 23
+    },
+    "rating_correct": {
+      "responsibility": 18,
+      "tone": 23,
+      "overall": 19
+    },
+    "required_questions": 6,
+    "required_questions_hit": 5,
+    "question_claims": 11,
+    "unsupported_question_claims": 3,
+    "required_revisions": 24,
+    "required_revisions_hit": 19,
+    "revision_claims": 22,
+    "unsupported_revision_claims": 2,
+    "critical_violations": 0
+  },
+  "gold_quality": {
+    "labeler_model_families": [
+      "grok",
+      "gemini",
+      "gpt"
+    ],
+    "adjudicator_model_family": "claude",
+    "human_review_available": false,
+    "adjudication_complete": true,
+    "vote_distributions_preserved": true,
+    "attestations": []
+  },
+  "matcher": {
+    "context_id": "bc-883ce0a3-827c-53f6-9a3e-065873a07662",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "gold_access": true
+  },
+  "limitations": [
+    "v3.3 inherits v3.2 freeze-chain validation and does not call v2 main().",
+    "Empty Green revision_claims credit required no-revision (H-001).",
+    "preserve-intended-recipient is never a scored required revision (H-003).",
+    "NOT_APPLICABLE metrics never count as threshold passes.",
+    "Archived v2, v3.1, and v3.2 outcomes are not repaired or replaced."
+  ]
+}
