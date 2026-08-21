@@ -470,7 +470,20 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.3 scorer invocation;
   - v3.2 attempt 3 is not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
-- Progress: `SCORED`; thresholds not passed. Report SHA-256 `447968a580bb87ca0433d1ce0f9e2ed70b596b5768ead73f4e4b2ad311414140`. Formal scorer invocations: 1. Do not rescore. v3.2 attempt 3 is not rescored.
+- Progress: `SCORED`; thresholds not passed. Report SHA-256 `447968a580bb87ca0433d1ce0f9e2ed70b596b5768ead73f4e4b2ad311414140`. Formal scorer invocations: 1. Do not rescore. v3.2 attempt 3 is not rescored. Triage is `tests/benchmark/v3_3-holdout/SCORE_TRIAGE.md`.
+
+#### T14.20 — v3.3 attempt-1 score triage
+
+- [x] Completed
+
+- Source requirement: Split Skill defects from methodology and gold on the frozen v3.3 attempt-1 score. No product behavior change. No in-version rescore.
+- Owner files: `tests/benchmark/v3_3-holdout/SCORE_TRIAGE.md`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - every failed metric is attributed to Skill, gold quality, or extraction/scoring contract;
+  - S-001 and S-002 deferral are recorded as closed on this freeze; H-001, H-003, and G-001 are recorded as closed;
+  - H-004, G-004, G-005, and G-006 are not treated as Skill seeds;
+  - gold, matches, evaluations, ontology, scorer, and runtime Skill files are unchanged.
+- Evidence: `tests/benchmark/v3_3-holdout/SCORE_TRIAGE.md`.
 
 ## Task template
 

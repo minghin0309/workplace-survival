@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### v3.3 attempt-1 score triage
+
+- Did not rescore or rewrite attempt 1, v3.2 attempt 3, or runtime Skill files.
+- Question recall 6/6: T14.15 S-001 held. S-002 deferral closed; 004's extra booking condition is G-004 (allowed-list tightness), not a Skill miss.
+- Revision recall 26/29 is three H-004 one-claim-one-concept squeezes (012, 014 T2, 015 T3). Skill stated the missing facts.
+- Revision precision 25/26 is G-004. 008 Gray vs Red is G-005. 010 tone Green vs Yellow is G-006.
+- Remaining Skill seed: S-007 tone Yellow vs Red on V33-018 `careless`/`again`. Do not Skill-patch toward gold Gray on 008, drop the 004 condition, or emit explicit strip-claims for H-004.
+
 ### Fresh benchmark v3.3 unseen holdout attempt 1
 
 - Did not rescore or rewrite v3.2 attempt 3, and did not change runtime Skill files.
