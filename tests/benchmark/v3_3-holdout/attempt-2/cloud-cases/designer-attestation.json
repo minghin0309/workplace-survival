@@ -1,0 +1,54 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "designer-attestation",
+  "suite_id": "v332-holdout-cloud-attempt2",
+  "cloud_context": {
+    "bc_id": "bc-6aae4b08-9ee7-5b3b-9942-535c099cb96e",
+    "run_name": "v332 attempt-2 case designer",
+    "repo_url": "https://github.com/minghin0309/workplace-survival",
+    "owning_user_name": "Ming Hin Ng",
+    "source": "internal"
+  },
+  "model_metadata": {
+    "original_model_name_from_run_info": null,
+    "declared_model": "Cursor Grok 4.6"
+  },
+  "branch": "cursor/v332-attempt2-cases-w4q9-17a0",
+  "commit_sha": "PENDING",
+  "files_read": [
+    "tests/benchmark/v3_3/V332_ATTEMPT2_CASE_BRIEF.md",
+    "tests/benchmark/v3_3-holdout/attempt-2/validate_holdout.py",
+    "tests/benchmark/v3_1/question_candidate_contract.py",
+    "tests/benchmark/v3_2/recipient_manager_contract.py",
+    "tests/benchmark/v3_3/revision_scoring_contract.py"
+  ],
+  "no_other_repository_content_accessed": true,
+  "prior_holdout_cases_not_read": true,
+  "attempt_1_cloud_cases_not_read": true,
+  "domain": {
+    "workplace": "Rowanleat Cork Works",
+    "site": "Braydon Cut punching rooms",
+    "craft": "industrial cork-bark steam-expansion, agglomerated-disc pressing, stopper punching, chamfering, surface colmation, and house-mark fire-branding for sparkling-wine bottlers",
+    "why_not_denylisted": "Cork-stopper agglomeration and punching is not millinery, harpworks, aerostat/envelope work, cold-cathode neon, turret-clock restoration, ceramics/pottery/kiln-production, cargo-bike/freight, municipal water, geothermal, seed banks, esports, subtitling, veterinary telehealth, insurance, offshore wind, archive digitisation, mycelium, heritage trusts, lighthouses, drones, bakery, ornithology, puppet theatre, hydrographic survey, funicular rail, planetariums, organ restoration, solar carports, timber kilns, curling ice, ground remediation, sterile services, dye works, compounding pharmacies, snow clearance, seismograph networks, mirror coating, forensic accounting, sauna manufacturing, orchard frost, tunnel ventilation, or marine winches. Entity names (Rowanleat, Braydon Cut, Wren Calloway, Edlyn Marrow, and related jobs/lots) are newly coined and are not respellings of denylisted holdout entities."
+  },
+  "manager_recipient_invariant": "V332-017 is the only non-manager recipient. Every other case, including V332-004 through V332-009 and V332-018, uses relationship_to_user 'direct line manager', audience_scope 'manager only', additional_recipients [], and a recipient_role containing 'manager'.",
+  "image_cases": [
+    "V332-009",
+    "V332-018"
+  ],
+  "image_hashes": {
+    "images/V332-009.png": "9fe6a29c93186ae0dd0755c9a99eb2c05c760fd89b7a2e590ed75493e33cfbfc",
+    "images/V332-018.png": "579043fa3c94d2a0539f02fbe734126188b9d5fe8781c8501cbeeb1602c8a6c1"
+  },
+  "image_only_question_candidate": {
+    "case_id": "V332-009",
+    "occluded_role": "data_a",
+    "image_only": true
+  },
+  "png_rendering": {
+    "library": "Pillow",
+    "font": "DejaVu Sans",
+    "deterministic": true,
+    "timestamp_chunk": false
+  }
+}
