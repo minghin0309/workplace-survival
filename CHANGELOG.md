@@ -4,6 +4,13 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### S-007 tone remediation
+
+- Rated an unsupported character or negligence label asserted as fact, including `careless`, as Tone Red rather than Yellow.
+- Rated an unestablished `again` pattern of fault asserted as fact as Tone Red.
+- Kept qualified low-severity fault suggestions Yellow (TC-68, TC-112).
+- Added TC-118. Did not rescore v3.3 attempt 1. Did not Skill-patch H-004, G-004, G-005, or G-006.
+
 ### v3.3 attempt-1 score triage
 
 - Did not rescore or rewrite attempt 1, v3.2 attempt 3, or runtime Skill files.

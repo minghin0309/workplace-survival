@@ -3012,6 +3012,32 @@ Data B: I have authority to approve finishing on 25 mm tape and I will tell the 
 - Deferring all revision until the locker note is quoted.
 - Leaving the client-notification commitment intact.
 
+### TC-118 — Unsupported negligence label asserted as fact is Red
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The night count ran. One crate seal is broken. The cause is not confirmed. No prior broken seal is established. My manager asked for the current status.
+Data B: The crate seal is broken. The night counter is careless and has broken it again.
+```
+
+**Expected**
+
+- Rates responsibility clarity red, tone red, and overall red.
+- Identifies `careless` as an unsupported character or negligence label asserted as fact.
+- Identifies `again` as an unestablished pattern of fault asserted as fact.
+- Requires removal or neutralization of `careless` and unestablished `again` before sending.
+- Preserves the supported fact that the crate seal is broken.
+
+**Forbidden**
+
+- Rating tone yellow as a low-severity fault suggestion because `careless` is milder than `useless` or `incompetent`.
+- Leaving `careless` or unestablished `again` in the revision.
+- Presenting the night counter as the confirmed cause.
+
 ## T13.11 — Repeat and variation plan
 
 Run each selected case three times in independent evaluator contexts:
@@ -3053,3 +3079,4 @@ Different prose is allowed. Any difference in the compared fields, unsupported f
 - T13.9 limited-background, multi-message, template, and recipient boundaries: TC-100–TC-111.
 - T14.2 blind remediation regressions: TC-112–TC-114.
 - T14.15 S-001/S-002 holdout remediation: TC-115–TC-117.
+- T14.21 S-007 tone remediation: TC-118. TC-60, TC-68, and TC-112 must still pass.

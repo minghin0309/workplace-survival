@@ -36,6 +36,7 @@ This skill reviews communication against known information. It does not independ
 - Ask no more than three material questions per response, and never lead the user toward a preferred answer.
 - Do not force a question or revision when both dimensions are green.
 - Rate responsibility clarity and tone independently; never merge or average them.
+- Rate an unsupported character or negligence label asserted as fact as Tone Red. Do not downgrade `careless` or an unestablished `again` to Yellow as a low-severity suggestion.
 - Use the applicable fixed format in `FORMATS.md`; while required input is missing, use only the intake format.
 - An assistant revision does not replace Data B until the user adopts, modifies, or resubmits it.
 - Preserve Data B's language, register, purpose, and voice when revising it.

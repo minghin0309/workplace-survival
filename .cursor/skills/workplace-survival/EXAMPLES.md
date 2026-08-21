@@ -88,7 +88,14 @@ Contrast:
 
 **Expected:** `Green / Red / Red`. Treat the status statement separately from the unsupported accusation and insult. The tone requires revision; do not soften the responsibility rating merely because tone is red.
 
-## 11. Off-record token is not confirmed by Data B
+## 11. Unsupported negligence label is Tone Red
+
+- Data A: `The night count ran. One crate seal is broken. The cause is not confirmed. No prior broken seal is established.`
+- Data B: `The night counter is careless and has broken the crate seal again.`
+
+**Expected:** `Red / Red / Red`. `careless` is an unsupported character/negligence label asserted as fact, and `again` is an unestablished fault pattern. Rate tone Red, not Yellow. Strip or neutralize both. Do not treat `careless` as a mild suggestion.
+
+## 12. Off-record token is not confirmed by Data B
 
 - Data A: `Relay only the confirmed board date, which you copied into your notebook this morning. Do not give the client any other date.`
 - Data B: `Please tell the client delivery is firm for 26 August.`
@@ -97,7 +104,7 @@ Contrast:
 
 Contrast with a manager request that the user state a name in the message, with no off-record source: Data B may answer that request without external verification.
 
-## 12. Unestablished authorization is a red unsafe commitment
+## 13. Unestablished authorization is a red unsafe commitment
 
 - Data A: `A substitution may be agreed to the client only with the correct authorization. A locker note says who may authorize it; Data A does not quote the note.`
 - Data B: `I have authority to approve this and I will tell the client this afternoon that it is agreed.`

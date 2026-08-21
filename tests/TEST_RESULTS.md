@@ -16,9 +16,10 @@ Representative T13.10 records:
 
 ## Current status
 
-- Cases currently specified: 117.
+- Cases currently specified: 118.
 - Latest evidence-complete functional execution: TC-01–TC-114, 114 passed and 0 failed.
 - T14.15 added TC-115–TC-117; semantic check of TC-07 plus the three new cases: 4 passed, 0 failed. See `tests/blind/remediation/S001_S002_RESULTS.md`.
+- T14.21 added TC-118; semantic check of TC-60, TC-68, TC-112 plus the new case: 4 passed, 0 failed. See `tests/blind/remediation/S007_RESULTS.md`.
 - Text cases in the current specification: 101.
 - Attached-image cases: 13 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
 
@@ -404,6 +405,13 @@ This is a targeted consistency matrix, not the full evidence-complete acceptance
 - New cases TC-115–TC-117: 3 passed, 0 failed in semantic check against the updated Data B answer rule and unsafe-commitment Red rule.
 - TC-07 still passes: manager-requested values in Data B remain answers when Data A locates no off-record source.
 - v3.2 attempt 2 was not rescored.
+
+## T14.21 S-007 Skill remediation — 2026-08-21
+
+- New case TC-118: 1 passed, 0 failed in semantic check against the updated Tone Red negligence-label rule.
+- TC-60 still passes: explicit unsupported accusation remains Red.
+- TC-68 and TC-112 still pass: qualified low-severity fault suggestions remain Yellow.
+- v3.3 attempt 1 was not rescored. H-004, G-004, G-005, and G-006 were not Skill-patched.
 
 ## Remediation evidence-complete record index
 

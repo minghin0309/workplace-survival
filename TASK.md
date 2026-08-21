@@ -485,6 +485,22 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - gold, matches, evaluations, ontology, scorer, and runtime Skill files are unchanged.
 - Evidence: `tests/benchmark/v3_3-holdout/SCORE_TRIAGE.md`.
 
+#### T14.21 — S-007 Skill remediation
+
+- [x] Completed
+
+- Source requirement: `SPEC.md` Ratings. Attempt-1 triage S-007 (tone Yellow vs Red on an unsupported negligence/character label asserted as fact).
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/`, `tests/TEST_CASES.md`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - an unsupported character or negligence label asserted as fact, including `careless`, is Tone Red, not Yellow;
+  - an unestablished `again` pattern of fault asserted as fact is Tone Red;
+  - qualified low-severity fault suggestions remain Yellow (TC-68, TC-112);
+  - TC-60 still rates an explicit unsupported accusation Red;
+  - v3.3 attempt 1 is not rescored and its gold is not rewritten;
+  - H-004, G-004, G-005, and G-006 are not Skill-patched.
+- Tests: TC-118; TC-60, TC-68, and TC-112 must still pass.
+- Evidence: functional results for the new case.
+
 ## Task template
 
 Copy this block when adding work:
