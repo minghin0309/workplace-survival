@@ -83,3 +83,12 @@ SUT wave 6 (do not merge; copied with `git show`):
 
 Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true. V332-016 has 3 turns. V332-018 attested PNG read. Skill SHA-256 matches T14.21.
 
+SUT freeze: `outputs-manifest-v332.json` SHA-256 `7bf0eb2fc752620295da37f335eaaf5020549878b1bdfd8e7f363e077f9deeec`. Extractor-visible SHA-256 `2cae5473e656b6956cd2ce059bcef1dbcbd70b9b0dc5b9fb06e1e55ce7c5dc6f`.
+
+Gold-blind extractors (do not merge):
+
+| N | family | intended branch | agent id |
+| --- | --- | --- | --- |
+| 1 | grok | `cursor/v332-extractor-grok-17a0` | `bc-b8e0017c-0020-5e74-b9b3-3423fbdecb9f` |
+| 2 | gemini | `cursor/v332-extractor-gemini-17a0` | `bc-d058aaec-c92f-5b2b-8f2b-0c3b7d41240f` |
+
