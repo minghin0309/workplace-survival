@@ -124,6 +124,8 @@ Derive overall status with fixed priority: `red > gray > yellow > green`. Overal
 
 Do not rate a message yellow merely because it could be more polished, formal, detailed, or polite. Do not rate missing information red unless Data A explicitly requires it or the omission itself creates major execution risk.
 
+An unsupported character or negligence label asserted as fact is Tone Red. So is an unestablished pattern of fault asserted as fact. Qualification such as `I think`, `it seems`, or `may` keeps a low-severity fault suggestion Yellow when no such label or major accusation is present.
+
 ### Short acknowledgements
 
 A short acknowledgement may confirm one identifiable reply target containing clear, non-conflicting instructions that require acknowledgement rather than a factual answer. It does not prove execution, completion, or external verification.
