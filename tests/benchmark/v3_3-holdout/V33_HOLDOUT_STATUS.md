@@ -51,6 +51,14 @@ SUT wave 5 (do not merge):
 | V33-014 | `cursor/v33-014-sut-17a0` @ `5d0a14f` (draft PR #68) | `bc-1a10f2f2-1cfe-564a-a583-8450ef1d7d52` |
 | V33-015 | `cursor/v33-015-sut-17a0` @ `fdd9af5` (draft PR #67) | `bc-5a99ccfd-3baa-5d24-a262-c6f4dbeb1b6b` |
 
+SUT wave 6 (do not merge):
+
+| case | branch | agent id |
+| --- | --- | --- |
+| V33-016 | `cursor/v33-016-sut-17a0` | `bc-5d320c7a-45f9-5b3f-b8d7-485d8940576d` |
+| V33-017 | `cursor/v33-017-sut-17a0` | `bc-1beb14a6-1969-5a83-a7c6-7316e6e7ce08` |
+| V33-018 | `cursor/v33-018-sut-17a0` | `bc-a8355044-2e33-528d-8fd9-d7b072efc0a4` |
+
 Gold labelers (do not merge these branches):
 
 | N | family | model | branch | agent id |
