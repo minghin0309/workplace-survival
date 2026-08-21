@@ -518,7 +518,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.3 scorer invocation;
   - v3.3 attempt 1 is not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
-- Progress: harness on `cursor/blind-v332-holdout-17a0`. Isolated designer in flight on `cursor/v332-attempt2-cases-w4q9-17a0`. Cases not yet copied.
+- Progress: construction `VALID` copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Gold not started.
 
 ## Task template
 
