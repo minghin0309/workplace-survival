@@ -85,6 +85,8 @@ Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design
 
 SUT freeze: `outputs-manifest-v332.json` SHA-256 `7bf0eb2fc752620295da37f335eaaf5020549878b1bdfd8e7f363e077f9deeec`. Extractor-visible SHA-256 `2cae5473e656b6956cd2ce059bcef1dbcbd70b9b0dc5b9fb06e1e55ce7c5dc6f`. Extraction freeze SHA-256 `e61eb61d3861cab60036dd693d57cba3b56b740d615e49abd302532c7e489866`.
 
+Semantic matcher (do not merge): `cursor/v332-matcher-claude-17a0` Claude `bc-883ce0a3-827c-53f6-9a3e-065873a07662` @ `f1fb437` (draft PR #106). Copied with `git show`. `gold_access` true, `scorer_run` false. 18/24, 33 claims (semantic 28, unsupported 5). Matches SHA-256 `4f9e61255fe1e38ffba70c8d6569c21edbfae7d4f5ad90cda37773d7767d4ad6`. Evaluation freeze next; formal scorer invocations: 0.
+
 Gold-blind extractors (do not merge):
 
 | N | family | intended branch | agent id |
