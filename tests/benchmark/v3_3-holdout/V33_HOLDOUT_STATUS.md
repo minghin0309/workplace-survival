@@ -8,7 +8,8 @@
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v33-attempt1-cases-r8n3-17a0` @ `1c9a8da` (not merged) |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (roles `gold` + `ontology` + `scorer`) |
-| SUT | 18/18 copied via `git show`; dedicated branches not merged. Direct image opens: V33-008, V33-018. |
+| SUT | frozen; 18/18 dedicated contexts copied via `git show` (not merged). Outputs SHA-256 `cd9713d1bcd91d896b11f8df814b1efcb6e9f3be977a8ad9b46df89384e6ef57`. Manifest SHA-256 `700af74d2fcbe94a03ccaa15a9e756d423b971a6e10e8be280a2d7312184ba5b`. Direct image opens: V33-008, V33-018. |
+| Extraction | gold-blind `extractor-visible.json` SHA-256 `4c2741a561ca592774a6ee9df3574c58f8b0f5747d4ddf8a343ce4e05fc0f4c9`; dual extractors not launched at freeze time |
 | Formal score | not started |
 
 SUT wave 1 (do not merge):
