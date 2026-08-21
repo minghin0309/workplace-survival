@@ -518,7 +518,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.3 scorer invocation;
   - v3.3 attempt 1 is not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
-- Progress: gold/SUT/extraction frozen. Matcher copied via `git show` from `cursor/v332-matcher-claude-17a0` (PR #106). Evaluation freeze then one v3.3 score remaining. Attempt 1 is not rescored.
+- Progress: gold/SUT/extraction/evaluation frozen. One v3.3 score remaining. Attempt 1 is not rescored.
 
 ## Task template
 
