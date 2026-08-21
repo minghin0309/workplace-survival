@@ -19,6 +19,6 @@ Gold labelers (do not merge these branches):
 | --- | --- | --- | --- | --- |
 | 1 | grok | `cursor-grok-4.5-high` | `cursor/v332-gold-labeler-1-17a0` | `bc-e6edc3fa-6cec-5a65-abf1-e8a9e1122860` |
 | 2 | gemini | `gemini-3.7-flash-high` | `cursor/v332-gold-labeler-2-17a0` | `bc-3d5eb3fe-978b-550d-b8f9-aaa3a2e1ce46` |
-| 3 | gpt | `gpt-5.6-sol-high` | `cursor/v332-gold-labeler-3-17a0` | `bc-6d2a6736-8125-520b-aa7a-9129b11232d6` |
+| 3 | gpt | `gpt-5.6-sol-high` | `cursor/v332-gold-labeler-3-17a0` @ `8be7825` (draft PR #81, do not merge) | `bc-6d2a6736-8125-520b-aa7a-9129b11232d6` |
 
 Copy onto holdout with `git show` after all three finish. Then launch one Claude-family gold adjudicator.
