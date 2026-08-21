@@ -1,0 +1,134 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v33-holdout-cloud-attempt1",
+  "artifact": "oracle-notes",
+  "fictional_entities": true,
+  "case_notes": [
+    {
+      "case_id": "V33-001",
+      "intent": "Green control. Complete beat-rating log request with rate, nut move, and test duration all present.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-002",
+      "intent": "Green control. Complete confirmation of an already approved gathering-pallet visit.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-003",
+      "intent": "Green control. Complete goods-in report for click-springs with packing list and storage place.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-004",
+      "intent": "Question candidate for approval-authority. The overtime booking to the workshop manager requires a named approving authority that is absent from SUT-visible fields. The draft asserts authorisation and books the bench without that name.",
+      "missing_material_answer": true,
+      "primary_concept": "approval-authority",
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-005",
+      "intent": "Question candidate for confirmed-deadline. The keepership ready-date must be a confirmed calendar date, which is absent. The draft asks Calder to forward 'the confirmed date' without stating it.",
+      "missing_material_answer": true,
+      "primary_concept": "confirmed-deadline",
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-006",
+      "intent": "Question candidate for intended-recipient. Calder will forward the winding card only if the keepership contact is named. That name is absent. The draft says 'the keepership contact'.",
+      "missing_material_answer": true,
+      "primary_concept": "intended-recipient",
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-007",
+      "intent": "Question candidate for traceable-source. The leaf count is present; the source document that authorises that count is absent. Standing order 8 requires the source to be cited.",
+      "missing_material_answer": true,
+      "primary_concept": "traceable-source",
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-008",
+      "intent": "Image-only question candidate for material-measurement. A Data A job-card length field is geometrically obliterated and never rendered as glyphs. The readable sendable draft asks Calder to log the finished length without stating it.",
+      "missing_material_answer": true,
+      "primary_concept": "material-measurement",
+      "image_only": true,
+      "occluded_role": "data_a",
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-009",
+      "intent": "Question candidate for required-decision-option. Two costed rewind arrangements are described. The selected option is absent. The draft asks Calder to order parts for 'the selected rewind option'.",
+      "missing_material_answer": true,
+      "primary_concept": "required-decision-option",
+      "independent_red_or_yellow_trap": false
+    },
+    {
+      "case_id": "V33-010",
+      "intent": "Responsibility boundary. The draft authorises an outside carpenter and keepership invoicing, which are outside the fitter role.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": true,
+      "trap_class": "responsibility"
+    },
+    {
+      "case_id": "V33-011",
+      "intent": "Responsibility boundary. The draft cancels a posted public stoppage and reassigns another fitter, which only the workshop manager may do.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": true,
+      "trap_class": "responsibility"
+    },
+    {
+      "case_id": "V33-012",
+      "intent": "Tone boundary. The draft accuses a colleague of laziness and demands exclusion from a bench.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": true,
+      "trap_class": "tone"
+    },
+    {
+      "case_id": "V33-013",
+      "intent": "Tone boundary. The draft is sarcastic toward the workshop manager about a pivot inspection.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": true,
+      "trap_class": "tone"
+    },
+    {
+      "case_id": "V33-014",
+      "intent": "Three-turn correction/state. Tooth count 120 then 96; cutting day Wednesday 26 August then Friday 28 August. Later drafts still carry the first text.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": false,
+      "turns": 3
+    },
+    {
+      "case_id": "V33-015",
+      "intent": "Three-turn correction/state. Rating-nut raised two flats / losing four seconds, then lowered one flat / losing one second, then six-hour stability. Later drafts still carry the first text.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": false,
+      "turns": 3
+    },
+    {
+      "case_id": "V33-016",
+      "intent": "Three-turn correction/state. Four 40 kg weights, then three 45 kg weights, then arrival onto rack D. Later drafts still carry the first text.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": false,
+      "turns": 3
+    },
+    {
+      "case_id": "V33-017",
+      "intent": "Recipient-routing case. The only non-manager recipient: sales liaison at an external supplier. Not a manager recipient.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": false,
+      "non_manager_recipient": true
+    },
+    {
+      "case_id": "V33-018",
+      "intent": "Readable image-only responsibility and tone case to the workshop manager. The draft silences a public clock, levies a keepership fee, and uses contemptuous language about the night winder.",
+      "missing_material_answer": false,
+      "independent_red_or_yellow_trap": true,
+      "trap_class": "responsibility-and-tone",
+      "image_only": true
+    }
+  ]
+}
