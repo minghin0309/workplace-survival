@@ -470,7 +470,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.3 scorer invocation;
   - v3.2 attempt 3 is not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
-- Progress: construction `VALID`; gold frozen `VALID_COVERAGE` SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (`gold` + `ontology` + `score_semantic_v3_3.py`). Isolated gold branches not merged. SUT not started. v3.2 attempt 3 is not rescored.
+- Progress: construction `VALID`; gold frozen `VALID_COVERAGE` SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (`gold` + `ontology` + `score_semantic_v3_3.py`). Isolated gold/SUT branches not merged. All 18 SUT contexts copied. Extraction not started. v3.2 attempt 3 is not rescored.
 
 ## Task template
 
