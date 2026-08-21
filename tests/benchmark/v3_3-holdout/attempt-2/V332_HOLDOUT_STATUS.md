@@ -7,7 +7,7 @@
 | Methodology | v3.3 |
 | Frozen attempt 1 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Draft PR #80. |
-| Gold | `VALID_COVERAGE`; 6 question concepts / 6 cases, 24 revision concepts / 17 cases, uncertain 0/24. Adjudicator copied from `cursor/v332-gold-adjudicator-17a0` @ `ee136c5` (draft PR #84, not merged). Freeze pending commit of canonical gold. |
+| Gold | `VALID_COVERAGE`; frozen SHA-256 `3ce86d5351b79b39f22f2277a04e40f14507ad52027b8bfa3d5271044cc37f53` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9`. Uncertain 0/24. |
 | SUT | not started |
 | Formal score | not started |
 

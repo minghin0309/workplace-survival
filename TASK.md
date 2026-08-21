@@ -518,7 +518,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.3 scorer invocation;
   - v3.3 attempt 1 is not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
-- Progress: gold `VALID_COVERAGE` (6 question concepts / 6 cases, 0 uncertain). Freeze and SUT next. Attempt 1 is not rescored.
+- Progress: gold freeze `VALID_COVERAGE` (6/6 question concepts, 0 uncertain). SUT inputs next. Attempt 1 is not rescored.
 
 ## Task template
 
