@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Benchmark methodology v3.3 revision scoring
+
+- Did not rescore or rewrite v3.2 attempt 3, and did not change runtime Skill files.
+- Empty Green revision claims now credit required `no-revision` (H-001).
+- `preserve-intended-recipient` is excluded from scored required revisions and forbidden in gold required lists (H-003).
+- Construction/gold contract: established omissions are gold Red; occluded Data B tokens are gold Intake.
+- Frozen attempt-3 gold fails that contract on purpose and is not rewritten.
+- Formal v3.3 scoring still requires a fresh unseen holdout.
+
 ### v3.2 attempt-3 score triage
 
 - Did not rescore or rewrite attempt 3, attempt 2, or runtime Skill files.

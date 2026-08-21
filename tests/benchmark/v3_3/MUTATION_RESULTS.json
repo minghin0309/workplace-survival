@@ -1,0 +1,27 @@
+{
+  "schema_version": "v3.3",
+  "baseline_passed": true,
+  "mutants": [
+    {
+      "mutation_id": "M1_EMPTY_NO_REVISION_CREDIT_DISABLED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": ".................F..\n======================================================================\nFAIL: test_empty_green_credits_no_revision (tests.benchmark.v3_3.test_scorer_v3_3.RevisionContractScoringTests.test_empty_green_credits_no_revision)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_3/test_scorer_v3_3.py\", line 536, in test_empty_green_credits_no_revision\n    self.assertNotIn(\"required-revision-concepts\", mismatches)\nAssertionError: 'required-revision-concepts' unexpectedly found in ['required-revision-concepts']\n\n----------------------------------------------------------------------\nRan 20 tests in 0.028s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "mutation_id": "M2_PRESERVE_RECIPIENT_STILL_REQUIRED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "...............F...F\n======================================================================\nFAIL: test_coverage_facts_exclude_preserve_intended_recipient (tests.benchmark.v3_3.test_scorer_v3_3.RevisionContractScoringTests.test_coverage_facts_exclude_preserve_intended_recipient)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_3/test_scorer_v3_3.py\", line 600, in test_coverage_facts_exclude_preserve_intended_recipient\n    self.assertEqual(facts[\"required_revision_concepts\"], 1)\nAssertionError: 2 != 1\n\n======================================================================\nFAIL: test_preserve_intended_recipient_is_not_a_scored_required_revision (tests.benchmark.v3_3.test_scorer_v3_3.RevisionContractScoringTests.test_preserve_intended_recipient_is_not_a_scored_required_revision)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_3/test_scorer_v3_3.py\", line 576, in test_preserve_intended_recipient_is_not_a_scored_required_revision\n    self.assertNotIn(\"required-revision-concepts\", mismatches)\nAssertionError: 'required-revision-concepts' unexpectedly found in ['required-revision-concepts']\n\n----------------------------------------------------------------------\nRan 20 tests in 0.023s\n\nFAILED (failures=2)\n"
+    },
+    {
+      "mutation_id": "M3_EXCEPTION_ENVELOPE_DISABLED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "..E.................\n======================================================================\nERROR: test_unexpected_exception_writes_scorer_error (tests.benchmark.v3_3.test_scorer_v3_3.FailureEnvelopeTests.test_unexpected_exception_writes_scorer_error)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_3/test_scorer_v3_3.py\", line 444, in test_unexpected_exception_writes_scorer_error\n    document = json.loads(report.read_text(encoding=\"utf-8\"))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1029, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpxoq1uyyt/report.json'\n\n----------------------------------------------------------------------\nRan 20 tests in 0.025s\n\nFAILED (errors=1)\n"
+    }
+  ],
+  "killed": 3,
+  "total": 3,
+  "mutation_score": 1.0
+}
