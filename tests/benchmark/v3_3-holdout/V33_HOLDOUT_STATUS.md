@@ -7,7 +7,7 @@
 | Methodology | v3.3 |
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v33-attempt1-cases-r8n3-17a0` @ `1c9a8da` (not merged) |
-| Gold | `VALID_COVERAGE`; freeze pending this commit then `freeze_gold.py` |
+| Gold | `VALID_COVERAGE`; frozen SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (roles `gold` + `ontology` + `scorer`) |
 | SUT | not started |
 | Formal score | not started |
 
