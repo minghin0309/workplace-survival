@@ -7,7 +7,7 @@
 | Methodology | v3.3 |
 | Frozen attempt 1 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Draft PR #80. |
-| Gold | three labelers copied with `git show` (not merged). Adjudicator not launched. |
+| Gold | three labelers copied with `git show` (not merged). Adjudicator launched on `cursor/v332-gold-adjudicator-17a0` (do not merge). |
 | SUT | not started |
 | Formal score | not started |
 
@@ -20,3 +20,5 @@ Gold labelers (do not merge these branches):
 | 1 | grok | `cursor-grok-4.5-high` | `cursor/v332-gold-labeler-1-17a0` @ `e8f0e07` (draft PR #82) | `bc-e6edc3fa-6cec-5a65-abf1-e8a9e1122860` |
 | 2 | gemini | `gemini-3.7-flash-high` | `cursor/v332-gold-labeler-2-17a0` @ `cb691c1` (draft PR #83) | `bc-3d5eb3fe-978b-550d-b8f9-aaa3a2e1ce46` |
 | 3 | gpt | `gpt-5.6-sol-high` | `cursor/v332-gold-labeler-3-17a0` @ `8be7825` (draft PR #81) | `bc-6d2a6736-8125-520b-aa7a-9129b11232d6` |
+
+Adjudicator (do not merge): `cursor/v332-gold-adjudicator-17a0` launched; family claude (`claude-opus-5-thinking-high`). Agent `bc-c4e64595-97a9-51c2-92cd-539461f04912`.

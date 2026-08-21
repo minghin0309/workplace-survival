@@ -518,7 +518,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.3 scorer invocation;
   - v3.3 attempt 1 is not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
-- Progress: construction `VALID`. Three gold labelers copied with `git show` (not merged). Adjudicator not launched.
+- Progress: construction `VALID`. Three gold labelers copied with `git show` (not merged). Gold adjudicator in flight.
 
 ## Task template
 
