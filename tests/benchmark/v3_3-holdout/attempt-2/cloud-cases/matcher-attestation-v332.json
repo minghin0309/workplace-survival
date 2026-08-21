@@ -1,0 +1,85 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "matcher-attestation",
+  "matcher": {
+    "context_id": "bc-883ce0a3-827c-53f6-9a3e-065873a07662",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "role": "isolated-semantic-matcher"
+  },
+  "gold_access": true,
+  "scorer_run": false,
+  "git": {
+    "branch": "cursor/v332-matcher-claude-17a0",
+    "base_branch": "cursor/blind-v332-holdout-17a0",
+    "base_commit": "e4408fabc98ed02a120cc517d56b93d5490e9e3d",
+    "matches_commit": "3cc45d233448b16992082f41059ae6e00b27da61",
+    "attestation_commit": "recorded-by-next-commit",
+    "merges_performed": []
+  },
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractions-manifest-v332.json",
+      "sha256": "e61eb61d3861cab60036dd693d57cba3b56b740d615e49abd302532c7e489866"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/evaluations-v332-canonical.json",
+      "sha256": "ecd6fd806c1743c1f57bf2dc9cbe03822ea2d48310dad9c4f432e37fb7a2b5a2"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/outputs-v332-raw.json",
+      "sha256": "d61dde993d3c3a74b16a317b43b5656d3b3e76542fd15b1dc99e341a9ab251cb"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-v332.json",
+      "sha256": "9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "files_written": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/matches-v332.json",
+      "sha256": "4f9e61255fe1e38ffba70c8d6569c21edbfae7d4f5ad90cda37773d7767d4ad6"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/matcher-attestation-v332.json",
+      "sha256": "self"
+    }
+  ],
+  "procedure": {
+    "read_only_allowlist_respected": true,
+    "files_read_count": 5,
+    "globbed_or_listed_holdout_tree": false,
+    "images_opened": false,
+    "scorer_executed": false,
+    "briefs_or_methodology_read": false,
+    "extractor_raw_files_read": false,
+    "gold_ontology_evaluations_claims_modified": false,
+    "sha256_verified_before_reading": true
+  },
+  "coverage": {
+    "cases": 18,
+    "turns": 24,
+    "claims_total": 33,
+    "match_type_counts": {
+      "exact": 0,
+      "alias": 0,
+      "semantic": 28,
+      "unsupported": 5
+    },
+    "claims_unmatched": 0
+  },
+  "attestation_statements": [
+    "Only the five allowlisted files were read; their SHA-256 digests were verified before reading and are recorded above.",
+    "Gold was accessed deliberately for this role; gold_access is true.",
+    "The scorer was not executed and no gold, ontology, evaluation, or claim artifact was modified.",
+    "Every extracted claim received exactly one match decision; no claim was dropped and no concept was invented.",
+    "Each non-null concept_id is present in that turn's gold allowed_question_concepts or allowed_revision_concepts, verified programmatically.",
+    "No claim text equalled its evidence span, so no exact or alias match was available; all supported matches are semantic with confidence at or above 0.8.",
+    "preserve-intended-recipient was not used as a match target for any claim.",
+    "No branch was merged and cursor/blind-v332-holdout-17a0 was never committed to or pushed."
+  ]
+}
