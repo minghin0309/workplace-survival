@@ -8,7 +8,7 @@
 | Frozen attempt 1 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Draft PR #80. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `3ce86d5351b79b39f22f2277a04e40f14507ad52027b8bfa3d5271044cc37f53` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9`. Uncertain 0/24. |
-| SUT | not started |
+| SUT | wave 1 launched (V332-001–003). Do not merge SUT branches. |
 | Formal score | not started |
 
 Designer (do not merge): `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158`. Domain: Rowanleat Cork Works, Braydon Cut. Image-only question V332-009 `occluded_role: data_a`. Readable image V332-018. V332-017 is the only non-manager recipient.
@@ -22,3 +22,12 @@ Gold labelers (do not merge):
 | 3 | gpt | `gpt-5.6-sol-high` | `cursor/v332-gold-labeler-3-17a0` @ `8be7825` (draft PR #81) | `bc-6d2a6736-8125-520b-aa7a-9129b11232d6` |
 
 Adjudicator (do not merge): `cursor/v332-gold-adjudicator-17a0` @ `ee136c5` (draft PR #84). Family claude. Copied with `git show`.
+
+SUT wave 1 (do not merge):
+
+| case | intended branch | agent id |
+| --- | --- | --- |
+| V332-001 | `cursor/v332-001-sut-17a0` | `bc-26360eda-9c18-53b3-8dfd-02aa3dbccebd` |
+| V332-002 | `cursor/v332-002-sut-17a0` | `bc-d0ad2f0c-4f0b-5dbc-b184-9f1767dec196` |
+| V332-003 | `cursor/v332-003-sut-17a0` | `bc-4a353ef9-3af0-5c91-bcc8-bf0cb18f44df` |
+
