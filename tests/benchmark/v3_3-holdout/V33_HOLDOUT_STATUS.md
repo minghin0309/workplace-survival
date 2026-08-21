@@ -8,7 +8,7 @@
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v33-attempt1-cases-r8n3-17a0` @ `1c9a8da` (not merged) |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (roles `gold` + `ontology` + `scorer`) |
-| SUT | wave 1 copied (V33-001–003). wave 2 launched: V33-004, V33-005, V33-006 (isolated, not merged). 007–018 queued. |
+| SUT | wave 1–2 copied (V33-001–006). wave 3 launched: V33-007, V33-008, V33-009 (isolated, not merged). 010–018 queued. |
 | Formal score | not started |
 
 SUT wave 1 (do not merge):
@@ -23,9 +23,17 @@ SUT wave 2 (do not merge):
 
 | case | branch | agent id |
 | --- | --- | --- |
-| V33-004 | `cursor/v33-004-sut-17a0` | `bc-1d375675-1943-528d-977a-7a6468c4040b` |
-| V33-005 | `cursor/v33-005-sut-17a0` | `bc-94411713-75b4-54fa-8f9a-ba2be808e8b5` |
-| V33-006 | `cursor/v33-006-sut-17a0` | `bc-1e556a03-877b-54ed-8b7e-0465bb64fc92` |
+| V33-004 | `cursor/v33-004-sut-17a0` @ `e27bec0` (draft PR #59) | `bc-1d375675-1943-528d-977a-7a6468c4040b` |
+| V33-005 | `cursor/v33-005-sut-17a0` @ `c585546` (draft PR #60) | `bc-94411713-75b4-54fa-8f9a-ba2be808e8b5` |
+| V33-006 | `cursor/v33-006-sut-17a0` @ `998d5b7` (draft PR #58) | `bc-1e556a03-877b-54ed-8b7e-0465bb64fc92` |
+
+SUT wave 3 (do not merge):
+
+| case | branch | agent id |
+| --- | --- | --- |
+| V33-007 | `cursor/v33-007-sut-17a0` | `bc-91ce3dab-914d-5456-a5ab-7eb726a4fa5e` |
+| V33-008 | `cursor/v33-008-sut-17a0` | `bc-672d2e1d-7861-5352-bc5d-7b56ba4141f3` |
+| V33-009 | `cursor/v33-009-sut-17a0` | `bc-dc842e47-c25f-5277-9168-8819fc882064` |
 
 Gold labelers (do not merge these branches):
 
