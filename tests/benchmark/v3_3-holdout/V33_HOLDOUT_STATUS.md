@@ -8,16 +8,16 @@
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v33-attempt1-cases-r8n3-17a0` @ `1c9a8da` (not merged) |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (roles `gold` + `ontology` + `scorer`) |
-| SUT | wave 1 launched: V33-001, V33-002, V33-003 (isolated, not merged). 004–018 queued (VM cap 3). |
+| SUT | wave 1 copied: V33-001/002/003 (`git show`, not merged). 004–018 queued (VM cap 3; 003 agent still wrapping). |
+| Formal score | not started |
 
 SUT wave 1 (do not merge):
 
 | case | branch | agent id |
 | --- | --- | --- |
-| V33-001 | `cursor/v33-001-sut-17a0` | `bc-7f8abf82-614c-55ea-bcfa-69dfbf78afc1` |
-| V33-002 | `cursor/v33-002-sut-17a0` | `bc-05aed183-eab3-51ae-84ee-f0aac9f1f053` |
-| V33-003 | `cursor/v33-003-sut-17a0` | `bc-1d281964-ccf4-542e-9e02-e8af775c299a` |
-| Formal score | not started |
+| V33-001 | `cursor/v33-001-sut-17a0` @ `690e2ce` (draft PR #56) | `bc-7f8abf82-614c-55ea-bcfa-69dfbf78afc1` |
+| V33-002 | `cursor/v33-002-sut-17a0` @ `dd2e5e4` (draft PR #55) | `bc-05aed183-eab3-51ae-84ee-f0aac9f1f053` |
+| V33-003 | `cursor/v33-003-sut-17a0` @ `a4f9f1f` (draft PR #57) | `bc-1d281964-ccf4-542e-9e02-e8af775c299a` |
 
 Gold labelers (do not merge these branches):
 
