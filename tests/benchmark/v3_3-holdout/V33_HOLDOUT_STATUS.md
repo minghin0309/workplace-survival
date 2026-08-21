@@ -10,8 +10,8 @@
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (roles `gold` + `ontology` + `scorer`) |
 | SUT | frozen; 18/18 dedicated contexts copied via `git show` (not merged). Outputs SHA-256 `cd9713d1bcd91d896b11f8df814b1efcb6e9f3be977a8ad9b46df89384e6ef57`. Manifest SHA-256 `700af74d2fcbe94a03ccaa15a9e756d423b971a6e10e8be280a2d7312184ba5b`. Direct image opens: V33-008, V33-018. |
 | Extraction | frozen SHA-256 `cbf785a36aec53dc0e2a34ca7e1ca6a270345091c110c099e75bf6f7dfb4ed12`. Canonical 10 question / 27 revision claims; unresolved disagreements 0. |
-| Matching | Claude matcher copied from `cursor/v33-matcher-claude-17a0` @ `89b33bb` (not merged). 37/37 claims decided (36 semantic, 1 unsupported). Evaluation freeze next. |
-| Formal score | not started |
+| Matching | frozen in evaluation snapshot SHA-256 `c4756c68b6fd580782d3266dc7615bcab0910718d3263d55a51bc45876d207c7`. Claude matcher copied from `cursor/v33-matcher-claude-17a0` @ `89b33bb` (draft PR #76, not merged). 37/37 claims decided (36 semantic, 1 unsupported). |
+| Formal score | `SCORED`; thresholds not passed. Report SHA-256 `447968a580bb87ca0433d1ce0f9e2ed70b596b5768ead73f4e4b2ad311414140`. Formal scorer invocations: 1. Do not rescore. |
 
 SUT wave 1 (do not merge):
 

@@ -24,3 +24,5 @@ All prior holdout domains plus Greaveholt cold-cathode neon/argon tube works and
 ## Formal scoring
 
 One write-once `score_semantic_v3_3.py` invocation after gold, SUT, extraction, and matching freezes. Gold freeze must include ontology and the v3.3 scorer. Attempt 3 is not rescored.
+
+Attempt 1 result: `SCORED`, thresholds not passed. Report SHA-256 `447968a580bb87ca0433d1ce0f9e2ed70b596b5768ead73f4e4b2ad311414140`. Formal scorer invocations: 1. Do not rescore.
