@@ -8,7 +8,7 @@
 | Frozen attempt 1 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Draft PR #80. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `3ce86d5351b79b39f22f2277a04e40f14507ad52027b8bfa3d5271044cc37f53` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9`. Uncertain 0/24. |
-| SUT | waves 1–4 copied via `git show` (V332-001–012). Wave 5: V332-013 copied; 014–015 still in flight. Do not merge SUT branches. |
+| SUT | waves 1–5 copied via `git show` (V332-001–015). Wave 6 launching (V332-016–018). Do not merge SUT branches. |
 | Formal score | not started |
 
 Designer (do not merge): `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158`. Domain: Rowanleat Cork Works, Braydon Cut. Image-only question V332-009 `occluded_role: data_a`. Readable image V332-018. V332-017 is the only non-manager recipient.
@@ -63,11 +63,21 @@ SUT wave 4 (do not merge; copied with `git show`):
 
 Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on all three. Skill SHA-256 matches T14.21.
 
-SUT wave 5 (do not merge):
+SUT wave 5 (do not merge; copied with `git show`):
 
 | case | branch | agent id | draft PR |
 | --- | --- | --- | --- |
-| V332-013 | `cursor/v332-013-sut-17a0` @ `d64eefc` (copied) | `bc-1d83a396-7821-5e94-8348-526e90edf62c` | #97 |
-| V332-014 | `cursor/v332-014-sut-17a0` | `bc-05af00d7-1b2d-5c2e-8df8-1a3f9d9e874b` | pending (3-turn, still running) |
-| V332-015 | `cursor/v332-015-sut-17a0` | `bc-67bb36a1-69c9-56ed-b555-203b342cea87` | pending (3-turn, still running) |
+| V332-013 | `cursor/v332-013-sut-17a0` @ `d64eefc` | `bc-1d83a396-7821-5e94-8348-526e90edf62c` | #97 |
+| V332-014 | `cursor/v332-014-sut-17a0` @ `6d1f4a8` | `bc-05af00d7-1b2d-5c2e-8df8-1a3f9d9e874b` | #98 |
+| V332-015 | `cursor/v332-015-sut-17a0` @ `98065ff` | `bc-67bb36a1-69c9-56ed-b555-203b342cea87` | #99 |
+
+Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on all three. 014 and 015 have 3 turns. Skill SHA-256 matches T14.21.
+
+SUT wave 6 (do not merge):
+
+| case | intended branch | agent id |
+| --- | --- | --- |
+| V332-016 | `cursor/v332-016-sut-17a0` | `bc-c9de4a18-1b6e-503f-b578-f9001c3567ef` |
+| V332-017 | `cursor/v332-017-sut-17a0` | `bc-e86de63f-3f86-5ce2-813c-4f405f59a06b` |
+| V332-018 | `cursor/v332-018-sut-17a0` | `bc-2156fe7d-e89d-5eef-8b72-f227b32302a4` |
 
