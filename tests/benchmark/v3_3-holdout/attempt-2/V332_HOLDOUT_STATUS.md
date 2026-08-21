@@ -8,7 +8,7 @@
 | Frozen attempt 1 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Draft PR #80. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `3ce86d5351b79b39f22f2277a04e40f14507ad52027b8bfa3d5271044cc37f53` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9`. Uncertain 0/24. |
-| SUT | waves 1–3 copied via `git show` (V332-001–009). Wave 4 launching (V332-010–012). Do not merge SUT branches. |
+| SUT | waves 1–4 copied via `git show` (V332-001–012). Wave 5 launching (V332-013–015). Do not merge SUT branches. |
 | Formal score | not started |
 
 Designer (do not merge): `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158`. Domain: Rowanleat Cork Works, Braydon Cut. Image-only question V332-009 `occluded_role: data_a`. Readable image V332-018. V332-017 is the only non-manager recipient.
@@ -53,11 +53,21 @@ SUT wave 3 (do not merge; copied with `git show`):
 
 Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on all three. V332-009 attested PNG read. Skill SHA-256 matches T14.21.
 
-SUT wave 4 (do not merge):
+SUT wave 4 (do not merge; copied with `git show`):
+
+| case | branch | agent id | draft PR |
+| --- | --- | --- | --- |
+| V332-010 | `cursor/v332-010-sut-17a0` @ `a330d00` | `bc-375c6128-d790-5836-96f8-7573ecad627c` | #95 |
+| V332-011 | `cursor/v332-011-sut-17a0` @ `d4bd6a3` | `bc-022740b3-60a1-5ceb-a1be-e98685d85a15` | #96 |
+| V332-012 | `cursor/v332-012-sut-17a0` @ `6c2d5e2` | `bc-df0b26b4-4930-56b8-9a34-6a92d77da9ef` | #94 |
+
+Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on all three. Skill SHA-256 matches T14.21.
+
+SUT wave 5 (do not merge):
 
 | case | intended branch | agent id |
 | --- | --- | --- |
-| V332-010 | `cursor/v332-010-sut-17a0` | `bc-375c6128-d790-5836-96f8-7573ecad627c` |
-| V332-011 | `cursor/v332-011-sut-17a0` | `bc-022740b3-60a1-5ceb-a1be-e98685d85a15` |
-| V332-012 | `cursor/v332-012-sut-17a0` | `bc-df0b26b4-4930-56b8-9a34-6a92d77da9ef` |
+| V332-013 | `cursor/v332-013-sut-17a0` | `bc-1d83a396-7821-5e94-8348-526e90edf62c` |
+| V332-014 | `cursor/v332-014-sut-17a0` | `bc-05af00d7-1b2d-5c2e-8df8-1a3f9d9e874b` |
+| V332-015 | `cursor/v332-015-sut-17a0` | `bc-67bb36a1-69c9-56ed-b555-203b342cea87` |
 
