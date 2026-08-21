@@ -1,0 +1,139 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v332-holdout-cloud-attempt2",
+  "artifact": "adjudicator-v332-raw-attestation",
+  "role": "fourth-family gold adjudicator",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": ["grok", "gemini", "gpt"],
+  "branch": "cursor/v332-gold-adjudicator-17a0",
+  "base_branch": "cursor/blind-v332-holdout-17a0",
+  "commit_at_start": "a2353f8c32195c302531ad1c1a6abe10066c8e83",
+  "commits": [
+    {
+      "sha": "32ac0300ad4c677d3b06163a8adcaf44fbf683b8",
+      "artifact": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-v332-raw.json"
+    },
+    {
+      "sha": "a83b49069c0402288c1cc684b74ffa30dc7f2430",
+      "artifact": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/adjudication-v332-raw.json"
+    }
+  ],
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/GOLD_ADJUDICATION_BRIEF.md",
+      "sha256": "26d79f9fb0c22bc4287ede9ab72245479a1c3af0ca19892f9713e0b7553143da"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/GOLD_LABELING_BRIEF.md",
+      "sha256": "b968013e68e7cd93fd4b953e641a429d0cf0c3464bcef235bd9b291f9800699e"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/cases.json",
+      "sha256": "e55606a2aa2ea8cbfc614fe4160ef01ff712d1192ba468ece85bc6b0ef7ee83e"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/images/V332-009.png",
+      "sha256": "9fe6a29c93186ae0dd0755c9a99eb2c05c760fd89b7a2e590ed75493e33cfbfc",
+      "matches_case_image_spec_sha256": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/images/V332-018.png",
+      "sha256": "579043fa3c94d2a0539f02fbe734126188b9d5fe8781c8501cbeeb1602c8a6c1",
+      "matches_case_image_spec_sha256": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-1.json",
+      "sha256": "554f31ca1e595c307f040f48167cfad697c68b115a04cf7cc1390dae7c28ba9b",
+      "model_family": "grok"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-2.json",
+      "sha256": "413698e673dab495327f4c9f44492f3dcd375e5b6514fb14bb265d75cf024fd3",
+      "model_family": "gemini"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-3.json",
+      "sha256": "dc9a674b6c132d8a47d149fc4ac4fc9c78df7e47465d88cb4e6ec54305b1e586",
+      "model_family": "gpt",
+      "case_list_key": "case_labels"
+    }
+  ],
+  "files_written": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-v332-raw.json",
+      "sha256": "6baaf1dc1ab9084b9e7fdc56bc26d918094ff5040349cb1947f9b56914984df2"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/adjudication-v332-raw.json",
+      "sha256": "b709b423bb0283888f80418c822573e0eb719a37166520ee62bc0df496091cfa"
+    }
+  ],
+  "isolation": {
+    "question_design_accessed": false,
+    "skill_files_accessed": false,
+    "oracle_notes_accessed": false,
+    "construction_mutations_accessed": false,
+    "designer_attestation_accessed": false,
+    "spec_accessed": false,
+    "scorer_accessed": false,
+    "scorer_run": false,
+    "attempt_1_cloud_cases_accessed": false,
+    "other_holdout_cloud_cases_accessed": false,
+    "other_pngs_accessed": false,
+    "glob_used": false,
+    "relabeled_from_scratch": false,
+    "images_read": ["images/V332-009.png", "images/V332-018.png"],
+    "notes": "Only the ten allowlisted files above were opened. The two case-referenced PNGs were read and their SHA-256 values match the sha256 recorded in each turn's image_spec. Directory listings of the cloud-cases folder were produced while committing, but no non-allowlisted file was opened."
+  },
+  "coverage": {
+    "cases_expected": 18,
+    "cases_adjudicated": 18,
+    "turns_expected": 24,
+    "turns_adjudicated": 24,
+    "multi_turn_cases": ["V332-014", "V332-015", "V332-016"]
+  },
+  "uncertainty": {
+    "uncertain_turns": 0,
+    "uncertain_turn_rate": 0.0,
+    "uncertain_turn_rate_cap": 0.2,
+    "within_cap": true,
+    "basis": "The two turns where the families split categorically on a rating, V332-004-T1 and V332-013-T1, were both resolvable from the case text plus the v3.3 rating rules, so no turn is marked gold_uncertain."
+  },
+  "validation": {
+    "envelope_fields_present": true,
+    "definitions_question_present": true,
+    "definitions_revision_present": true,
+    "gold_uncertain_present_on_every_turn": true,
+    "overall_matches_red_gray_yellow_green_derivation": true,
+    "null_ratings_on_nonrated_routes": true,
+    "required_concepts_subset_of_allowed": true,
+    "concepts_resolve_to_ontology_version_1": true,
+    "suite_local_concepts_used": 0,
+    "preserve_intended_recipient_never_required": true,
+    "green_green_uses_no_revision": true,
+    "no_revision_absent_from_non_green_allowed_lists": true,
+    "concept_and_invariant_lists_sorted": true
+  },
+  "v3_3_rules_applied": [
+    "Established omission of a token that a named execution step depends on is Red, not Gray: V332-004, V332-005, V332-006, V332-007, V332-008.",
+    "Occluded Data B token would route to Intake with null ratings: no turn in this suite qualified, since the V332-018 draft is fully legible.",
+    "Occluded Data A token beside an identifiable sendable draft stays Normal mode with the affected dimension Gray: V332-009.",
+    "preserve-intended-recipient is never a required revision concept.",
+    "Green/Green turns use required_revision_concepts [\"no-revision\"]."
+  ],
+  "adjudication_method": {
+    "ratings": "Majority of the three families; both rating splits were checked against the v3.3 rules and the case text before resolution.",
+    "required_lists": "Concept-level majority, overridden only where GOLD_RUBRIC forbids the concept; the three overrides are V332-010-T1, V332-011-T1, and V332-018-T1, where approval-authority was demoted to allowed because Data A already names the authority, so the answer cannot change route, rating, or safe revision.",
+    "allowed_lists": "Union of the three families minus concepts that contradict the adjudicated rating or lack a supporting fact; each exclusion is recorded with a reason in adjudication-v332-raw.json.",
+    "critical_invariants": "Token retained when at least two of the three families listed it.",
+    "relabeling": "No case was labeled from scratch; every adjudicated value is traceable to the recorded family votes."
+  }
+}
