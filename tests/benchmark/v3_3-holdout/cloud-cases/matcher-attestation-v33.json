@@ -1,0 +1,82 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "matcher-attestation",
+  "case_set_id": "v33-holdout-cloud-attempt1",
+  "matcher": {
+    "context_id": "bc-e75327d6-828c-5c1a-8020-805014784706",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "gold_access": true
+  },
+  "branch": "cursor/v33-matcher-claude-17a0",
+  "base_branch": "cursor/blind-v33-holdout-17a0",
+  "base_commit": "24b31eedf02971f622adb8cc22c1eda5ab530ec6",
+  "matches_commit": "f10920e38e90b58a5fb0ff1a765c2d5c845b8a1f",
+  "extraction_snapshot": {
+    "path": "tests/benchmark/v3_3-holdout/cloud-cases/extractions-manifest-v33.json",
+    "sha256": "cbf785a36aec53dc0e2a34ca7e1ca6a270345091c110c099e75bf6f7dfb4ed12"
+  },
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/extractions-manifest-v33.json",
+      "sha256": "cbf785a36aec53dc0e2a34ca7e1ca6a270345091c110c099e75bf6f7dfb4ed12"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/evaluations-v33-canonical.json",
+      "sha256": "76f55a591bae0ee750c03fc5f8ad2667c80b9cc1b4309d9534548a62d0bcdfe2"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/outputs-v33-raw.json",
+      "sha256": "cd9713d1bcd91d896b11f8df814b1efcb6e9f3be977a8ad9b46df89384e6ef57"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/gold-v33.json",
+      "sha256": "aeb9f00a78d08cac58ad058dd77db51d8d40c01418762a36f611a86608ad0704"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/cloud-cases/matches-v33.json",
+      "sha256": "2f319afcb80c525e7d9787d9e659173235c111f09e454dc1ee54f27471b5c451"
+    }
+  ],
+  "counts": {
+    "cases": 18,
+    "turns": 24,
+    "claims_total": 37,
+    "decisions_total": 37,
+    "question_claims": 10,
+    "revision_claims": 27,
+    "exact": 0,
+    "alias": 0,
+    "semantic": 36,
+    "unsupported": 1
+  },
+  "procedure": {
+    "gold_access": true,
+    "scorer_run": false,
+    "allowlist_only": true,
+    "files_read_outside_allowlist": [],
+    "skill_files_read": false,
+    "skill_files_modified": false,
+    "gold_modified": false,
+    "ontology_modified": false,
+    "evaluations_modified": false,
+    "claims_modified": false,
+    "claims_dropped": 0,
+    "claims_invented": 0,
+    "every_claim_has_exactly_one_decision": true,
+    "concepts_within_turn_allowed_lists": true,
+    "semantic_confidence_floor_met": true,
+    "unsupported_concept_ids_null": true
+  },
+  "notes": [
+    "Every canonical claim text is a paraphrase of its evidence_span; no claim satisfies text == evidence_span. The exact/alias gate therefore fails structurally for all 37 claims, so exact and alias counts are zero by construction rather than by ontology alias coverage.",
+    "Gold concept_definitions in this case set carry no canonical_id field, so no local-to-canonical redirection was applicable. Suite-local IDs were used as semantic targets only where the turn's allowed list contained them.",
+    "One decision is unsupported: r-V33-004-1-2 conditions the long-bench booking on named approval, which is the remove-unsafe-commitment sense, and that concept is absent from V33-004 turn 1 allowed_revision_concepts."
+  ]
+}
