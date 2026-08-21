@@ -8,7 +8,7 @@
 | Frozen attempt 1 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Draft PR #80. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `3ce86d5351b79b39f22f2277a04e40f14507ad52027b8bfa3d5271044cc37f53` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `9eed90da34b7b0be0e77c293f343a3983784406f1e818e85da0db18cd756b2d9`. Uncertain 0/24. |
-| SUT | waves 1–6 copied via `git show` (V332-001–018). Assembled 18/24. Freeze in progress. Do not merge SUT branches. |
+| SUT | frozen SHA-256 `7bf0eb2fc752620295da37f335eaaf5020549878b1bdfd8e7f363e077f9deeec`. 18 cases / 24 turns. Dedicated branches not merged. Extractors launching. |
 | Formal score | not started |
 
 Designer (do not merge): `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158`. Domain: Rowanleat Cork Works, Braydon Cut. Image-only question V332-009 `occluded_role: data_a`. Readable image V332-018. V332-017 is the only non-manager recipient.
@@ -73,11 +73,13 @@ SUT wave 5 (do not merge; copied with `git show`):
 
 Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on all three. 014 and 015 have 3 turns. Skill SHA-256 matches T14.21.
 
-SUT wave 6 (do not merge):
+SUT wave 6 (do not merge; copied with `git show`):
 
 | case | branch | agent id | draft PR |
 | --- | --- | --- | --- |
-| V332-016 | `cursor/v332-016-sut-17a0` | `bc-c9de4a18-1b6e-503f-b578-f9001c3567ef` | pending (3-turn, still running) |
-| V332-017 | `cursor/v332-017-sut-17a0` @ `72eb154` (copied) | `bc-e86de63f-3f86-5ce2-813c-4f405f59a06b` | #100 |
-| V332-018 | `cursor/v332-018-sut-17a0` | `bc-2156fe7d-e89d-5eef-8b72-f227b32302a4` | pending (PNG, still running) |
+| V332-016 | `cursor/v332-016-sut-17a0` @ `f898183` | `bc-c9de4a18-1b6e-503f-b578-f9001c3567ef` | #102 |
+| V332-017 | `cursor/v332-017-sut-17a0` @ `72eb154` | `bc-e86de63f-3f86-5ce2-813c-4f405f59a06b` | #100 |
+| V332-018 | `cursor/v332-018-sut-17a0` @ `263e43f` | `bc-2156fe7d-e89d-5eef-8b72-f227b32302a4` | #101 |
+
+Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true. V332-016 has 3 turns. V332-018 attested PNG read. Skill SHA-256 matches T14.21.
 
