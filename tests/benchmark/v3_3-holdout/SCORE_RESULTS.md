@@ -37,4 +37,6 @@ Failed cases: V33-004 (`unsupported-revision-claims`), V33-008 (responsibility/o
 
 Gold, ontology, evaluations, matches, and runtime Skill files were not modified after freeze. A second scorer invocation is forbidden in-version.
 
+Triage (no rescore): `tests/benchmark/v3_3-holdout/SCORE_TRIAGE.md`.
+
 v3.2 attempt 3 remains frozen `SCORED` and is not rescored. Attempt 2 remains frozen `SCORED`. Attempt 1 remains `INVALID_COVERAGE`. v3.1 remains `SCORER_ERROR`.
