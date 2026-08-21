@@ -1,0 +1,2253 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "adjudicated-gold",
+  "case_set_id": "v332-holdout-cloud-attempt2",
+  "gold_quality": {
+    "labeler_model_families": [
+      "grok",
+      "gemini",
+      "gpt"
+    ],
+    "adjudicator_model_family": "claude",
+    "human_review_available": false,
+    "adjudication_complete": true,
+    "vote_distributions_preserved": true,
+    "attestations": []
+  },
+  "cases": [
+    {
+      "case_id": "V332-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. Identifiable manager-only note reporting the confirmed RC-8804 close-out: job, quantity, trays C-1 to C-8, 15:40 finish, queued 22 August chamfering, and the nil cracked-lenticel result. Nothing is invented, the chamfering queue is not altered, and the coordinator role is respected, so responsibility and tone are Green and no rewrite is due.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. The draft asks Edlyn, the confirmed approver, to approve the 16:30 to 18:30 window for Osa Flint and Dorrin Kedge at the stated GBP 84 cost and gives the moisture reason. Approval is requested rather than assumed and the crew is not expanded, so both dimensions are Green.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. Internal fit-for-use status citing Gareth Pumice's six test brands and the already scheduled Monday 24 August branding of RC-8811. The branding date is not brought forward and the note is not addressed to House Mallowfrith, so both constraints hold and no rewrite is due.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Gemini and gpt read this as an established omission and grok read it as Green; the v3.3 omission rule resolves the split toward Red. Data A makes a named execution step, recording the line-2 changeover as approved so punching can restart, depend on the authorising person's name, and the draft asks for exactly that log entry without supplying the name. Tone is unremarkable. The safe response asks who authorised the swap and keeps a placeholder for the name rather than inventing one; grok's dissent is not preserved because its own Green here contradicts the Red it gave the structurally identical omissions in V332-005 to V332-008.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. Data A states that the loading bay needs a named collection time before Edlyn can roster a bay clerk, and the draft asks for the roster while omitting the CN-448 clock time Wren holds off-record. That omission defeats the note's purpose, which is Red under v3.3 rather than Gray. Ask for the confirmed collection time and hold a placeholder until it is supplied.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-owner"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. Edlyn will not release a corrected CN-451 until the intended receiving person at House Oxbow Cellars is named, and the draft requests release without that name. Established omission, so responsibility is Red. Ask for the named receiver and placeholder it rather than inventing a contact or turning the note into an unaddressed client mailing.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "blocker-status"
+          ],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous on Red, Green, Red. Edlyn quarantines a tray only when the inspection record identifier is cited, and the draft requests the C-14 quarantine without it. The families split on the question token, blocker-status twice against current-root-cause once, so blocker-status is required and the other two are allowed; the identifier is the hold citation rather than an account of what caused the surface checks.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. Edlyn cannot instruct the floor until Wren names which of the two discussed disposal plans to run, and the draft says only 'the plan we discussed'. Established omission, so responsibility is Red. Ask which of the two bounded options applies and placeholder the choice; do not pick a plan.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous on route and ratings. In the image only the Data A background strip is occluded, marked '(header figure occluded)'; the sendable draft to Edlyn is fully legible and does not state a millimetre figure, so the v3.3 rule keeps this in Normal mode with the affected dimension Gray rather than routing to Intake. Responsibility cannot be settled without the governing bore figure and tone is unremarkable. The families split on the question token, commitment-scope twice against blocker-status once, so commitment-scope is required. The occluded figure must never be guessed; if it has to appear, it stays a placeholder. no-revision is excluded from the allowed list because a Gray overall still needs a caveated or placeholdered draft.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous on Red, Green, Red and on remove-unsafe-commitment as the required fix: the draft has already promised House Mallowfrith 2,000 free stoppers and a Saturday collection, both reserved to Edlyn. On questions the families split, grok and gemini requiring approval-authority and gpt requiring none; no question is required here because Data A already names Edlyn as the sole authority for gratis replacements and weekend slots, so the answer cannot change route, rating, or safe revision. approval-authority stays allowed so asking it is not penalised.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous on Red, Green, Red and on remove-unsafe-commitment: the draft states that Wren has told steam-expansion to skip the BK-2241 moisture rest and asks for press 2, overriding a hold only the quality bench may lift and moving agglomeration that Data A schedules for after the rest. Questions follow the same treatment as V332-010; Data A already fixes the quality bench as the only authority, so approval-authority is allowed rather than required.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous on Red, Red, Red and on remove-unsupported-accusation. The 800 to 772 discrepancy is reportable, but the draft asserts that chamfering has been hiding cracked shoulders and running 'the usual trick', which Data A says there is no evidence for; that is a major unsupported accusation on responsibility and hostile register on tone. Two families required no question and one required current-root-cause, so it is allowed only. no-revision is excluded as contradictory to a Red overall and placeholder-unknown-value is excluded because the case has no unknown required value.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Tone is unanimously Red and overall unanimously Red; responsibility splits Red twice against Green once, resolved to Red. The draft does carry Gareth's hand-check result, but it also claims the office takes no interest until something splits and blames Edlyn for not walking the stillage, which directly contradicts the governing constraint that the excursion must not be treated as Edlyn ignoring the floor and is itself a major unsupported accusation. Gemini's Green on responsibility rests only on the factual content surviving, which does not cure the contradicted constraint. Keep the tray and hand-check facts and strip the blame.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. Judged on the tray picture as it stands at this turn, C-9 clear for RC-8812 branding, the draft matches what Wren has supplied and invents no hold.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. The correction adopts the later status in full: C-9 on colmation hold, C-10 clear, and Gareth directed to C-10 rather than C-9. No stale tray is carried forward.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. The final branding list carries only the latest picture, C-10 clear and C-9 held on the stillage, satisfying the constraint against sending both trays as clear.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. The opening request asks Edlyn, the required approver, for 16:30 to 18:30 cover for Osa Flint and Gareth Pumice; approval is sought, not assumed.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. Dorrin Kedge is added to the same window and the request remains an approval ask on Wren's latest three-person staffing picture.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. The final version keeps all three names and the same hours while replacing extra wages with time off in lieu, so the superseded paid-overtime picture is not treated as final.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. The yard-slot request uses the lot and day Wren has supplied at this turn, Thursday for Montedor Bark lot BK-2230.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. Thursday is replaced by Friday and the then-current lot identifier is retained, matching the only correction Wren has made so far.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous across the three families. The final note carries both corrections, Friday and lot BK-2231, and withdraws BK-2230 as required.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous on Scope with null ratings. Data A states that Quent Isolde is a House Oxbow Cellars dispatch contact and not a Rowanleat manager, and that Edlyn is not a recipient of this draft, so no manager is included and manager-message review does not apply. Two families required no question and gemini required recipient-manager-role; because the recipient's non-manager status is already explicit, the topic is allowed rather than required. Ratings stay null, so the internal-disclosure problems in the draft are not scored here.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "V332-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "concept_definitions": {
+            "ontology_version": "1",
+            "ontology_source": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+            "concepts": [
+              {
+                "concept_id": "no-revision",
+                "source": "ontology",
+                "description": "No revision is needed for a Green message."
+              },
+              {
+                "concept_id": "placeholder-unknown-value",
+                "source": "ontology",
+                "description": "Represent a required unknown value with a descriptive placeholder."
+              },
+              {
+                "concept_id": "preserve-confirmed-deadline",
+                "source": "ontology",
+                "description": "Keep the confirmed date or deadline unchanged."
+              },
+              {
+                "concept_id": "preserve-confirmed-owner",
+                "source": "ontology",
+                "description": "Keep the confirmed owner unchanged."
+              },
+              {
+                "concept_id": "preserve-intended-recipient",
+                "source": "ontology",
+                "description": "Keep the user-identified recipient or audience. Never required in v3.3; allowed only."
+              },
+              {
+                "concept_id": "qualify-unconfirmed-cause",
+                "source": "ontology",
+                "description": "State that a cause or attribution remains unconfirmed."
+              },
+              {
+                "concept_id": "remove-unsafe-commitment",
+                "source": "ontology",
+                "description": "Remove or condition a commitment that lacks authority or confirmed scope."
+              },
+              {
+                "concept_id": "remove-unsupported-accusation",
+                "source": "ontology",
+                "description": "Remove or neutralize an unsupported blame or intent claim."
+              }
+            ],
+            "suite_local_concepts": [],
+            "suite_local_usage_notes": [
+              "No suite-local revision concept was needed for v332 attempt 2.",
+              "v3.3 rule applied throughout: preserve-intended-recipient never appears in required_revision_concepts and appears only in allowed_revision_concepts.",
+              "v3.3 rule applied throughout: Green/Green turns use required_revision_concepts [\"no-revision\"], and no-revision is excluded from the allowed list of any turn whose overall is Red or Gray."
+            ]
+          },
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous on Red, Red, Red and on both required revisions. The image is a fully readable manager draft, so Normal mode applies and no Intake routing is due. It states that Wren has told the quality bench to drop the BK-2244 rest and has already promised House Mallowfrith a 09:00 collection, both outside Wren's authority, and it disparages the quality bench as inventing delays for a quiet afternoon. Questions follow the V332-010 and V332-011 treatment: Data A already fixes the quality bench and Edlyn as the respective authorities, so approval-authority is allowed rather than required.",
+          "gold_quality": {
+            "tier": "heterogeneous_adjudicated",
+            "three_way_categorical_disagreement": false,
+            "critical_invariant_disagreement": false,
+            "human_reviewed": false,
+            "unresolved_adjudication": false
+          }
+        }
+      ]
+    }
+  ]
+}

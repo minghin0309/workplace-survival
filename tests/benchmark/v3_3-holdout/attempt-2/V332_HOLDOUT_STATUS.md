@@ -7,13 +7,13 @@
 | Methodology | v3.3 |
 | Frozen attempt 1 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (not merged). Draft PR #80. |
-| Gold | three labelers copied with `git show` (not merged). Adjudicator launched on `cursor/v332-gold-adjudicator-17a0` (do not merge). |
+| Gold | `VALID_COVERAGE`; 6 question concepts / 6 cases, 24 revision concepts / 17 cases, uncertain 0/24. Adjudicator copied from `cursor/v332-gold-adjudicator-17a0` @ `ee136c5` (draft PR #84, not merged). Freeze pending commit of canonical gold. |
 | SUT | not started |
 | Formal score | not started |
 
-Designer (do not merge): `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158` (artifacts `c7528d3`). Domain: Rowanleat Cork Works, Braydon Cut. Image-only question V332-009 `occluded_role: data_a`. Readable image V332-018. V332-017 is the only non-manager recipient.
+Designer (do not merge): `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158`. Domain: Rowanleat Cork Works, Braydon Cut. Image-only question V332-009 `occluded_role: data_a`. Readable image V332-018. V332-017 is the only non-manager recipient.
 
-Gold labelers (do not merge these branches):
+Gold labelers (do not merge):
 
 | N | family | model | branch | agent id |
 | --- | --- | --- | --- | --- |
@@ -21,4 +21,4 @@ Gold labelers (do not merge these branches):
 | 2 | gemini | `gemini-3.7-flash-high` | `cursor/v332-gold-labeler-2-17a0` @ `cb691c1` (draft PR #83) | `bc-3d5eb3fe-978b-550d-b8f9-aaa3a2e1ce46` |
 | 3 | gpt | `gpt-5.6-sol-high` | `cursor/v332-gold-labeler-3-17a0` @ `8be7825` (draft PR #81) | `bc-6d2a6736-8125-520b-aa7a-9129b11232d6` |
 
-Adjudicator (do not merge): `cursor/v332-gold-adjudicator-17a0` launched; family claude (`claude-opus-5-thinking-high`). Agent `bc-c4e64595-97a9-51c2-92cd-539461f04912`.
+Adjudicator (do not merge): `cursor/v332-gold-adjudicator-17a0` @ `ee136c5` (draft PR #84). Family claude. Copied with `git show`.
