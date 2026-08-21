@@ -453,6 +453,25 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - validation uses synthetic fixtures plus frozen attempt-3 gold as a negative contract fixture.
 - Evidence: v3.3 methodology contract, unit results, mutation results, validation report, and archive note.
 
+#### T14.19 — Fresh benchmark v3.3 unseen holdout
+
+- [x] Completed
+
+- Source requirement: Measure unseen-case performance with methodology v3.3. No product behavior change during scoring. No in-version rescore of v3.2 attempt 3.
+- Owner files: `tests/benchmark/v3_3-holdout/`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - unseen cases use a domain that is not millinery, harpworks, Thornwick aerostat, Greaveholt cold-cathode, or any denylisted prior domain;
+  - every case except the routing case is a manager recipient;
+  - question candidates omit the required token from Data B and set `data_b_contains_unconfirmed_token` false;
+  - image-only question candidates set `occluded_role`; Data B occlusion is not treated as Normal-mode review;
+  - gold freeze includes `SEMANTIC_ONTOLOGY.json` and `score_semantic_v3_3.py`;
+  - gold required revisions omit `preserve-intended-recipient`; established omissions are gold Red;
+  - each case uses a distinct cloud SUT context against the T14.15 runtime;
+  - dual extraction and semantic matching precede a single v3.3 scorer invocation;
+  - v3.2 attempt 3 is not rescored.
+- Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
+- Progress: `SCORED`; thresholds not passed. Report SHA-256 `447968a580bb87ca0433d1ce0f9e2ed70b596b5768ead73f4e4b2ad311414140`. Formal scorer invocations: 1. Do not rescore. v3.2 attempt 3 is not rescored.
+
 ## Task template
 
 Copy this block when adding work:

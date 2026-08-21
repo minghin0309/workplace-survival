@@ -1,0 +1,791 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "bc-ec52eb55-6d93-5373-a682-d5ceb414f252",
+    "model_id": "unverified",
+    "model_family": "gemini"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_3-holdout/cloud-cases/extractor-visible.json",
+    "sha256": "4c2741a561ca592774a6ee9df3574c58f8b0f5747d4ddf8a343ce4e05fc0f4c9"
+  },
+  "cases": [
+    {
+      "case_id": "V33-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review with all Green ratings; confirmation needed is None; minimal revision is No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review with all Green ratings; confirmation needed is None; minimal revision is No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review with all Green ratings; confirmation needed is None; minimal revision is No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-004-1-1",
+              "text": "Asks who is the approving authority that authorised Saturday overtime",
+              "evidence_span": "1. Question: Who is the approving authority that authorised this Saturday overtime?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-004-1-1",
+              "text": "Adds placeholder for approving authority: authorised by [approving authority]",
+              "evidence_span": "authorised by [approving authority]"
+            },
+            {
+              "claim_id": "r-V33-004-1-2",
+              "text": "Conditions booking on named approval: Subject to that named approval, I will book the going-train strip on the long bench that day.",
+              "evidence_span": "Subject to that named approval, I will book the going-train strip on the long bench that day."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; asks for approving authority; revises draft with approving authority placeholder and approval condition."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-005-1-1",
+              "text": "Asks for the confirmed ready-date that Calder should forward to the keepership",
+              "evidence_span": "1. Question: What is the confirmed ready-date that Calder should forward to the keepership?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-005-1-1",
+              "text": "Replaces the confirmed date with placeholder [confirmed ready-date]",
+              "evidence_span": "ready on [confirmed ready-date] so they can plan the stoppage"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; asks for confirmed ready-date; revises draft with date placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-006-1-1",
+              "text": "Asks who is the keepership contact Calder should forward the revised JC-4912 silent-hours winding card to",
+              "evidence_span": "1. Question: Who is the keepership contact Calder should forward the revised JC-4912 silent-hours winding card to?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-006-1-1",
+              "text": "Replaces the keepership contact with placeholder [keepership contact name]",
+              "evidence_span": "forward the revised silent-hours winding card for JC-4912 to [keepership contact name]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; asks for keepership contact name; revises draft with contact placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-007-1-1",
+              "text": "Asks for the named traceable source of the leaf count of thirty",
+              "evidence_span": "1. Question: What is the named traceable source of the leaf count of thirty?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-007-1-1",
+              "text": "Replaces reference to source document with placeholder for traceable source of the leaf count",
+              "evidence_span": "The traceable source of that leaf count is [traceable source of the leaf count]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; asks for traceable source of leaf count; revises draft with source placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-008-1-1",
+              "text": "Asks what millimetre length should be stated in the message that asks Calder Vossine to log the rod",
+              "evidence_span": "1. Question: What millimetre length should be stated in the message that asks Calder Vossine to log the rod?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-008-1-1",
+              "text": "Inserts placeholder for measured millimetre length: [measured millimetre length] mm",
+              "evidence_span": "Please log the finished length of [measured millimetre length] mm in the compensation register so we can hang it tomorrow."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of image draft; Responsibility Red, Tone Green, Overall Red; asks for millimetre length without guessing; revises draft with length placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-009-1-1",
+              "text": "Asks which rewind option was selected for JC-5233",
+              "evidence_span": "1. Question: Which rewind option was selected for JC-5233?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-009-1-1",
+              "text": "Replaces the selected rewind option with placeholder [named selected rewind option]",
+              "evidence_span": "please order the parts for [named selected rewind option] on JC-5233"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; asks which rewind option was selected; revises draft with selected option placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-010-1-1",
+              "text": "Asks whether Barleywick was already instructed to invoice keepership and carpenter authorised to start on Monday, or if that is only wording in this draft",
+              "evidence_span": "1. Question: Have you already instructed Barleywick Clock-Weight Castings to invoice the keepership and authorised their carpenter to start on Monday, or is that only wording in this draft?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-010-1-1",
+              "text": "Replaces unauthorized invoicing and start claims with report that floorboards are worn and carpenter offered to quote",
+              "evidence_span": "The winding-stool floorboards at the market house around JC-5340 are worn, and a carpenter from Barleywick Clock-Weight Castings has offered to quote."
+            },
+            {
+              "claim_id": "r-V33-010-1-2",
+              "text": "Requests Calder to handle any keepership works order and outside trade instruction instead of telling him to file paperwork",
+              "evidence_span": "Please handle any keepership works order and any instruction to outside trades."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Yellow, Overall Red; asks about instructions to Barleywick; revises draft to remove unauthorized actions and hand off works orders to manager."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-011-1-1",
+              "text": "Asks whether Calder Vossine has already authorized cancelling the posted 2 September 2026 public stoppage on JC-5409 and moving Colm Yardrie off that rostered job",
+              "evidence_span": "1. Question: Has Calder Vossine already authorized cancelling the posted 2 September 2026 public stoppage on JC-5409 and moving Colm Yardrie off that rostered job?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-011-1-1",
+              "text": "Rephrases cancellation of stoppage and moving Colm into a request for Calder to decide",
+              "evidence_span": "Could you cancel the 2 September stoppage on JC-5409 and move Colm Yardrie onto JC-5517 that week?"
+            },
+            {
+              "claim_id": "r-V33-011-1-2",
+              "text": "Conditions keepership message on Calder cancelling the stoppage",
+              "evidence_span": "Please tell the keepership they can keep the clock running only if you cancel that stoppage."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; asks whether Calder authorized cancelling stoppage and moving fitter; revises draft to make stoppage cancellation a request."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-012-1-1",
+              "text": "Replaces allegations of laziness and sloppy filing with factual statement that Colm left JC-5517 gathering-pallet filing unfinished on shared bench",
+              "evidence_span": "Colm Yardrie left the JC-5517 gathering-pallet filing unfinished on the shared bench."
+            },
+            {
+              "claim_id": "r-V33-012-1-2",
+              "text": "Replaces demand for Colm to stay off bench with factual statement of needing the bench and finding filing still open",
+              "evidence_span": "I needed the bench this morning and found the filing still open."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Red, Overall Red; confirmation needed is None; revises draft to remove character attacks and state bench facts neutrally."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Yellow",
+          "overall": "Yellow",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-013-1-1",
+              "text": "Replaces sarcastic complaints and blame with civil statement of completion",
+              "evidence_span": "I've finished the re-bush on the JC-5624 pivot."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Green, Tone Yellow, Overall Yellow; confirmation needed is None; revises draft to remove sarcasm and provide clean completion note."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of initial draft; all Green ratings; confirmation needed is None; minimal revision is No revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-014-2-1",
+              "text": "Updates tooth count from 120 teeth to 96 teeth",
+              "evidence_span": "great wheel of JC-5731, 96 teeth, on Wednesday 26 August 2026"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; revises draft with corrected tooth count of 96 teeth."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-014-3-1",
+              "text": "Updates cutting date to Friday 28 August 2026 and tooth count to 96 teeth",
+              "evidence_span": "great wheel of JC-5731, 96 teeth, on Friday 28 August 2026"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; revises draft with corrected cutting date of Friday 28 August 2026 and tooth count of 96 teeth."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of initial draft; all Green ratings; confirmation needed is None; minimal revision is No revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-015-2-1",
+              "text": "Updates rating-nut move to lowered one flat",
+              "evidence_span": "lowered the rating-nut one flat"
+            },
+            {
+              "claim_id": "r-V33-015-2-2",
+              "text": "Updates daily rate to losing one second per day",
+              "evidence_span": "losing one second per day"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; revises draft to lowered one flat and losing one second per day."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-015-3-1",
+              "text": "Updates rating-nut move to lowered one flat",
+              "evidence_span": "lowered the rating-nut one flat"
+            },
+            {
+              "claim_id": "r-V33-015-3-2",
+              "text": "Updates daily rate to losing one second per day and holding after six hours on test",
+              "evidence_span": "losing one second per day; after six hours on test that rate is holding"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; revises draft to lowered one flat and one second losing rate holding after six hours on test."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of initial draft; all Green ratings; confirmation needed is None; minimal revision is No revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-016-2-1",
+              "text": "Updates weight order from four 40 kg weights to three 45 kg weights",
+              "evidence_span": "Barleywick is sending three 45 kg weights for JC-5914."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; revises draft with corrected order of three 45 kg weights."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-016-3-1",
+              "text": "Reports that three 45 kg weights from Barleywick for JC-5914 have arrived",
+              "evidence_span": "Three 45 kg weights from Barleywick for JC-5914 have arrived."
+            },
+            {
+              "claim_id": "r-V33-016-3-2",
+              "text": "Reports that all three weights are sound and are now on rack D",
+              "evidence_span": "All three are sound and are now on rack D."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review; Responsibility Red, Tone Green, Overall Red; revises draft to report arrival of three 45 kg weights, sound condition, and storage on rack D."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Scope route triggered due to external supplier recipient (sales liaison at Kellstrand); not reviewed under Workplace Survival boundary."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V33-018-1-1",
+              "text": "Asks whether workshop-manager authority has been given to silence harbour clock JC-6110 or charge keepership a waste fee",
+              "evidence_span": "1. Question: Has workshop-manager authority already been given to silence harbour clock JC-6110 or to charge the keepership a waste fee?"
+            },
+            {
+              "claim_id": "q-V33-018-1-2",
+              "text": "Asks whether there is confirmed background that the night winder was careless or that the click has been bent before",
+              "evidence_span": "2. Question: Is there confirmed background, separate from this draft, that the night winder was careless or that the click has been bent before?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V33-018-1-1",
+              "text": "Replaces careless/again claims with factual statement that night winder wound the clock and click is bent",
+              "evidence_span": "The night winder at harbour clock JC-6110 wound the clock, and the click is bent."
+            },
+            {
+              "claim_id": "r-V33-018-1-2",
+              "text": "Replaces unauthorized silencing and fee claims with statement refusing those actions unless authorized",
+              "evidence_span": "I am not telling the keepership the clock stays silent from tonight or charging them a waste fee unless you authorize that."
+            },
+            {
+              "claim_id": "r-V33-018-1-3",
+              "text": "Replaces order to send works order with request for Calder to take works order from here",
+              "evidence_span": "Take any works order from here, and keep that winder off the barrel."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of image draft; Responsibility Red, Tone Yellow, Overall Red; asks for confirmation of manager authority and background for character judgments without guessing; revises draft to remove unauthorized actions and hostile language."
+        }
+      ]
+    }
+  ]
+}

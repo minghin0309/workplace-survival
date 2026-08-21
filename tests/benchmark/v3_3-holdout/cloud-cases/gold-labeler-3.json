@@ -1,0 +1,408 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v33-holdout-cloud-attempt1",
+  "cases": [
+    {
+      "case_id": "V33-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The draft accurately reports the confirmed adjustment, daily rate, six-hour stability, and logging request in a professional manager-only note."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The draft preserves the approved date, start time, strike-off window, duration, spare location, and recipient without communication risk."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The goods-in note factually and concisely preserves the packing-list reference, quantity, type, condition, storage location, and absence of shortages."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": ["approval-authority"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The booking's validity depends on naming the approving authority, but the draft omits that established off-record value while committing to occupy the bench. The authority must be obtained from the writer and represented without invention."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The note exists to provide a confirmed ready-date, but the draft substitutes the words 'confirmed date' for the date the writer holds. That established omission defeats the message's purpose."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["intended-keepership-contact"],
+          "allowed_question_concepts": ["intended-keepership-contact"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "Calder requires the one known keepership contact to be named, but the sendable draft leaves that established recipient generic. The sender must supply the name rather than having it invented."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["leaf-count-source"],
+          "allowed_question_concepts": ["leaf-count-source"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The thirty-leaf cut cannot be booked without a named traceable source. The draft asserts that an unnamed source is safe, so its omission creates a major execution risk."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["finished-length"],
+          "allowed_question_concepts": ["finished-length"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-image-token-guess", "no-invented-facts", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The sendable draft is fully readable, so the route remains Normal. The required millimetre length appears only as an occluded background value and is absent from the draft, making responsibility Gray until the writer supplies it."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["commitment-scope"],
+          "allowed_question_concepts": ["commitment-scope"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "A rewind option has been selected and must be named before parts are ordered, but the draft omits the selection the writer holds. The omission defeats the purchase-order purpose."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Neris has no authority to commit keepership spending or instruct the outside carpenter, yet the draft claims both actions are already authorised. Those commitments must be removed or put to Calder for decision."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft cancels a posted public stoppage and reassigns another fitter even though both decisions belong only to Calder. The unsupported commitments create major operational risk."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["remove-unsupported-accusation"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "remove-unsupported-accusation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The draft replaces the requested factual bench-state report with unsupported character accusations and hostile insults toward Colm. It must be limited to the confirmed unfinished filing and shared-bench impact."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["remove-unsupported-accusation", "state-completed-work"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "remove-unsupported-accusation", "state-completed-work"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The requested completion note omits that the re-bush is complete and instead uses sarcasm and a hostile, exaggerated accusation about Calder's earlier inspection. It fails the main purpose and is uncivil."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "At this turn, the draft contains the currently stated tooth count and cutting day and is a clear, professional booking request."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["correct-tooth-count"],
+          "allowed_revision_concepts": ["correct-tooth-count", "preserve-confirmed-deadline", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The latest instruction establishes 96 teeth, while the supplied old draft still says 120. Sending it would directly cause the wrong wheel cut."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["correct-cutting-date", "correct-tooth-count"],
+          "allowed_revision_concepts": ["correct-cutting-date", "correct-tooth-count", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The old draft contradicts both latest confirmed values: it says 120 teeth on Wednesday 26 August instead of 96 teeth on Friday 28 August."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "At this turn, the draft clearly records the currently stated rating-nut move and daily rate."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["correct-daily-rate", "correct-rating-nut-move"],
+          "allowed_revision_concepts": ["correct-daily-rate", "correct-rating-nut-move", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The old draft directly contradicts the correction: the nut was lowered one flat and the loss is one second per day, not raised two flats and four seconds."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["correct-daily-rate", "correct-rating-nut-move", "state-stable-rate"],
+          "allowed_revision_concepts": ["correct-daily-rate", "correct-rating-nut-move", "preserve-intended-recipient", "state-stable-rate"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The supplied draft still carries both superseded values and omits the new confirmation that the one-second losing rate held for six hours."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "At this turn, the draft accurately reports the currently stated shipment quantity and mass and makes no problematic commitment."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["correct-weight-count", "correct-weight-mass"],
+          "allowed_revision_concepts": ["correct-weight-count", "correct-weight-mass", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The old draft says four 40 kg weights, directly contradicting the corrected order of three 45 kg weights."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["correct-weight-count", "correct-weight-mass", "state-arrival-condition", "state-storage-location"],
+          "allowed_revision_concepts": ["correct-weight-count", "correct-weight-mass", "preserve-intended-recipient", "state-arrival-condition", "state-storage-location"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "recipient-scope-respected"],
+          "rationale": "The old draft retains the wrong count and mass, describes a future shipment after arrival, and omits that all three are sound and stored on rack D."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "recipient-scope-respected"],
+          "rationale": "The only recipient is explicitly an external supplier contact and no manager is included, so this manager-message review is out of scope and must not be rated."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["remove-unsafe-commitment", "remove-unsupported-accusation"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "remove-unsafe-commitment", "remove-unsupported-accusation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The readable draft calls the winder careless without support and claims Neris has already silenced a public clock and imposed a fee despite lacking that authority. It also directs a works order and personnel restriction outside Neris's role."
+        }
+      ]
+    }
+  ]
+}

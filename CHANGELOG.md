@@ -4,6 +4,16 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.3 unseen holdout attempt 1
+
+- Did not rescore or rewrite v3.2 attempt 3, and did not change runtime Skill files.
+- Built 18 unseen Wetherlees turret-clock cases in an isolated cloud designer and copied them with `git show`.
+- Gold freeze `VALID_COVERAGE` (6 question concepts / 6 cases, 1 uncertain turn, 30 revision concepts / 17 cases).
+- Ran 18 distinct cloud SUT contexts against the T14.15 Skill runtime.
+- Dual gold-blind extraction plus Claude matching, then one `score_semantic_v3_3.py` invocation: `SCORED`, thresholds not passed.
+- Question recall 6/6; revision recall 26/29. Route/responsibility/tone/overall and question precision passed. Revision precision 25/26.
+- Report SHA-256 `447968a580bb87ca0433d1ce0f9e2ed70b596b5768ead73f4e4b2ad311414140`. No in-version rerun.
+
 ### Benchmark methodology v3.3 revision scoring
 
 - Did not rescore or rewrite v3.2 attempt 3, and did not change runtime Skill files.

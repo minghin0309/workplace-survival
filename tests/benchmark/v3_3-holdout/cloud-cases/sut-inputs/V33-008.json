@@ -1,0 +1,35 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V33-008",
+  "recipient_context": {
+    "recipient_name": "Calder Vossine",
+    "recipient_role": "workshop manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "pendulum and chime-train fitter",
+    "organization": "Wetherlees Turret-Clock Works",
+    "site": "Quoyfen Spire Yard",
+    "situation": "A newly finished invar compensation rod for JC-5116 is ready to stamp, and Calder Vossine will only enter a millimetre length that is stated in the sendable draft.",
+    "known_facts": [
+      "JC-5116 is the assembly-rooms turret clock.",
+      "The invar rod has been cut, faced, and measured on the long bench.",
+      "Workshop standing order 5 requires the millimetre length to appear in the message that asks Calder Vossine to log the rod.",
+      "The measured length is not stated in this packet."
+    ],
+    "constraints": [
+      "Do not stamp or hang the rod until Calder Vossine has logged a stated millimetre length.",
+      "Keep the note to Calder Vossine only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review the draft in the image before I send it to Calder.",
+      "image_path": "tests/benchmark/v3_3-holdout/cloud-cases/images/V33-008.png"
+    }
+  ]
+}

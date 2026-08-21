@@ -1,0 +1,40 @@
+{
+  "artifact": "designer-attestation",
+  "suite_id": "v33-holdout-cloud-attempt1",
+  "envelope_version": "v3.3",
+  "branch": "cursor/v33-attempt1-cases-r8n3-17a0",
+  "commit": "1255554d5ce512e68e1e61de45e93f43aae07cdd",
+  "cloud_context": {
+    "bcId": "bc-47408a09-1c91-5de5-9899-db13ee44f581",
+    "name": "Isolated v33 case designer",
+    "repoUrl": "https://github.com/minghin0309/workplace-survival",
+    "source": "internal",
+    "owningUserName": "Ming Hin Ng",
+    "createdAtMs": 1787284734878
+  },
+  "model_metadata": {
+    "label": "Cursor Grok 4.6",
+    "originalModelName": null
+  },
+  "files_read": [
+    "tests/benchmark/v3_3/V33_ATTEMPT1_CASE_BRIEF.md"
+  ],
+  "allowed_validator": "tests/benchmark/v3_3-holdout/validate_holdout.py",
+  "no_other_repository_content_accessed_for_case_design": true,
+  "did_not_read_skill_gold_rubrics_ontology_scorers_prior_cases": true,
+  "chosen_domain": "civic turret-clock restoration and electrically-wound time-signal regulation at Wetherlees Turret-Clock Works, Quoyfen Spire Yard",
+  "domain_not_denylisted_because": "The workplace restores and regulates public turret clocks (pendulums, going trains, strike trains, compensation rods, wheel-cutting). It is not millinery or hatmaking, not concert pedal-harp restringing, not hot-air aerostat or envelope-hall work, not cold-cathode neon or argon tube work, and not ceramics, pottery, kiln-production, or any other denylisted organisation form.",
+  "v33_017_only_non_manager_recipient": true,
+  "manager_recipient_invariant": "Every case other than V33-017 uses relationship_to_user 'direct line manager', audience_scope 'manager only', additional_recipients [], and a recipient_role containing 'manager' with no role negation.",
+  "image_only_question_candidate": {
+    "case_id": "V33-008",
+    "occluded_role": "data_a",
+    "note": "A Data A job-card millimetre field is geometrically obliterated and was never rendered as glyphs."
+  },
+  "image_hashes": {
+    "images/V33-008.png": "e9c4a6f12c6c1cbfe6d35a800b50d1384e03dcdb46528b9d0ef4987f55ca14f4",
+    "images/V33-018.png": "7c96708fa07a287c8f5d4b6b5a9c780d8db1e8eb6972e87d87dd401f17bb0654"
+  },
+  "data_b_contains_unconfirmed_token": false,
+  "answer_omitted_from_data_b": true
+}

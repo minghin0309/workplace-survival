@@ -1,0 +1,40 @@
+{
+  "schema_version": "v3.3-attempt1-extraction-copy",
+  "method": "git show",
+  "merged": false,
+  "holdout_branch": "cursor/blind-v33-holdout-17a0",
+  "extractors": [
+    {
+      "id": "extractor-1",
+      "family": "grok",
+      "source_branch": "cursor/v33-extractor-grok-17a0",
+      "source_commit": "07d992b17c91eb09141c98359e8fcab374ad36ce",
+      "draft_pr": 73,
+      "context_id": "bc-597f0d24-e39d-505b-8d3d-d9ed2871fe4b"
+    },
+    {
+      "id": "extractor-2",
+      "family": "gemini",
+      "source_branch": "cursor/v33-extractor-gemini-17a0",
+      "source_commit": "f03b16d29d753a83b9b17e37bf37dd2d8b1a9809",
+      "draft_pr": 74,
+      "context_id": "bc-ec52eb55-6d93-5373-a682-d5ceb414f252"
+    }
+  ],
+  "adjudicator": {
+    "family": "gpt",
+    "source_branch": "cursor/v33-extractor-adjudicator-17a0",
+    "source_commit": "478630bc17f114a362f08d0687dbdda96db5b43f",
+    "context_id": "bc-212cad18-3620-54e8-8fbf-15771a4eb675"
+  },
+  "gold_or_scoring_accessed": false,
+  "sha256": {
+    "extractor-1-raw.json": "8a3014ce59c4fde3a330016834bf374067767df208ebf6146d2669b7408de0eb",
+    "extractor-1-attestation.json": "70415c9b94f1a9a6781f1a76143a7828c625129b8703091c3cae5fae6e248a2b",
+    "extractor-2-raw.json": "414ffa0f6288b395a34dfe0ec72c332da7fbd8af37560b0facf396d462efd177",
+    "extractor-2-attestation.json": "cd0fe55c74d3819c9e2ec821a15eeb3c61add66f9cf9cbad79e5f4313a417bef",
+    "evaluations-v33-canonical.json": "76f55a591bae0ee750c03fc5f8ad2667c80b9cc1b4309d9534548a62d0bcdfe2",
+    "extraction-adjudication-v33.json": "d22f73ddddef9e45b58055aa174d6d583d37487a560a81e750b6d2b34fac6d54",
+    "evaluator-attestation-v33.json": "5dbeb05b671938585e20cfe678ac62d672bd0f30c16fffa8c92a96d4354eb306"
+  }
+}

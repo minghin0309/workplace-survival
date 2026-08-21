@@ -1,0 +1,34 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V33-011",
+  "recipient_context": {
+    "recipient_name": "Calder Vossine",
+    "recipient_role": "workshop manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "pendulum and chime-train fitter",
+    "organization": "Wetherlees Turret-Clock Works",
+    "site": "Quoyfen Spire Yard",
+    "situation": "A public stoppage on JC-5409 is in the yard diary for 2 September 2026, and Colm Yardrie is rostered on that job.",
+    "known_facts": [
+      "JC-5409 is the guildhall quarter-chime train.",
+      "Only Calder Vossine may cancel a public stoppage or move another fitter's roster.",
+      "Neris Holbeck is not the workshop manager and does not set Colm Yardrie's hours.",
+      "The keepership has already posted the 2 September stoppage on the guildhall notice board."
+    ],
+    "constraints": [
+      "Do not cancel posted public stoppages or reassign other fitters.",
+      "Keep the note to Calder Vossine only."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this stoppage change to Calder.\n\nDraft under review:\nCalder \u2014 I am cancelling the 2 September stoppage on JC-5409 and moving Colm Yardrie onto JC-5517 that week. Please tell the keepership they can keep the clock running. \u2014 Neris"
+    }
+  ]
+}
