@@ -1,0 +1,734 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "sut-raw-outputs",
+  "parent_gold_manifest": {
+    "path": "tests/benchmark/v3_3-holdout/cloud-cases/gold-manifest-v33.json",
+    "sha256": "b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7"
+  },
+  "canonical_parent_commit": "249806bf5093d698265b5113b73d549a81633a5a",
+  "runtime": {
+    "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "59af7ff2904b1efda4c045bfbbd58216d1462e16b06a3d611e8bbc3b0b001550"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "9a1d44ab7e0b775ef71f7b61cc8861b49e3aec19211179b0e7288aba219e6306"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "098c2d19d325b622a72990256ee7890c8fe2cc7f16a1b3205dfed8cd05d8d9ef"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "94d790c7de1c96cfd1fff98de1c76c8ac8a5811e8e178d35351730a9dd1d66bf"
+      }
+    ]
+  },
+  "requested_model_id": "inherit",
+  "machine_model_id": "unverified",
+  "counts": {
+    "cases": 18,
+    "turns": 24
+  },
+  "cases": [
+    {
+      "case_id": "V33-001",
+      "generator_context_id": "bc-7f8abf82-614c-55ea-bcfa-69dfbf78afc1",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-001.json",
+        "sha256": "0127c2f9270cf19da5d4bf29197b7ed423b0bd797d7bf7b7af4e75bf10fbcf63"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-001.json",
+        "raw_sha256": "bcd569299f8f6c691828700a0cdb0cb78a1389b04b8ebc5c7f14b9b4c0c655d8",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-001.json",
+        "attestation_sha256": "d47f990625d34f17e981bb90f688fe52fe4f8cecc81e02c41e8cab20dda7692a",
+        "branch": "cursor/v33-001-sut-17a0",
+        "output_commit": "690e2ce0121161cf5f269b073ea2baad59d1df6f",
+        "raw_commit": "690e2ce0121161cf5f269b073ea2baad59d1df6f",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "bcd569299f8f6c691828700a0cdb0cb78a1389b04b8ebc5c7f14b9b4c0c655d8",
+        "source_attestation_sha256": "d47f990625d34f17e981bb90f688fe52fe4f8cecc81e02c41e8cab20dda7692a"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Intended recipient is Calder Vossine, workshop manager and direct line manager; the note must be kept to Calder Vossine only.\n- JC-4418 is the Quoyfen Guildhall turret clock.\n- The guildhall turret clock JC-4418 finished its weekly beat-rating this morning and the figures are ready to log.\n- Beat-rating on 21 August 2026 showed a gaining rate of two seconds per day after the pendulum rating-nut was lowered one flat.\n- Calder Vossine asked for a written confirmation once the rating was stable.\n- The clock has been on test for six hours with no further drift.\n- Do not alter the logged rate without workshop-manager sign-off.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: The draft states that JC-4418 at Quoyfen Guildhall finished its weekly beat-rating this morning; after lowering the rating-nut one flat, the clock gained two seconds per day; and that rate has held for six hours on test. That matches the confirmed 21 August 2026 rating result, the six-hour test with no further drift, and Calder Vossine's request for written confirmation once the rating was stable. Asking Calder to log the new rate routes the logging action to the workshop manager, consistent with the constraint that the logged rate must not be altered without workshop-manager sign-off. No owner, date, rate, or commitment in the draft contradicts Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is factual and addressed to Calder, with a polite request to log the rate. It contains no insult, threat, hostility, accusation, dismissiveness, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-002",
+      "generator_context_id": "bc-05aed183-eab3-51ae-84ee-f0aac9f1f053",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-002.json",
+        "sha256": "b9492db1a2853f9ae4d445c166258ddbb39352421ed949937eafef3ae0fb2653"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-002.json",
+        "raw_sha256": "c06e7994414f806677f705bb8122c01fe920e31fe77b0240469ad39ac0093e20",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-002.json",
+        "attestation_sha256": "d12126925fc2713eec95b7f004dc201bf2bcbb34624664eb8b796a775c6dfeb0",
+        "branch": "cursor/v33-002-sut-17a0",
+        "output_commit": "dd2e5e4386bd261cba80e19e2e338c3ced1fa5f2",
+        "raw_commit": "dd2e5e4386bd261cba80e19e2e338c3ced1fa5f2",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "c06e7994414f806677f705bb8122c01fe920e31fe77b0240469ad39ac0093e20",
+        "source_attestation_sha256": "d12126925fc2713eec95b7f004dc201bf2bcbb34624664eb8b796a775c6dfeb0"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager, direct line manager; channel is an internal message thread to Calder Vossine only.\n- User role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- A confirmed gathering-pallet refit on JC-4520 is booked for Tuesday 25 August 2026 at 09:30.\n- JC-4520 is the market-house turret clock in the east tower.\n- Calder Vossine approved the visit on Friday 21 August 2026.\n- A spare gathering-pallet is packed in tool-bag 4.\n- The strike will be stood off from 09:30 to 12:30 while the pallet is changed; expected duration is three hours.\n- Stand the strike off only for the booked window.\n- Keep the note to Calder Vossine only.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B confirms the gathering-pallet refit on JC-4520 in the market-house east tower for Tuesday 25 August 2026 at 09:30, notes Calder's Friday approval, locates the spare pallet in tool-bag 4, and states the strike-off window from 09:30 to 12:30 with a three-hour expected duration. These statements match Data A and keep the note addressed to Calder only.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is a neutral, factual confirmation with no hostility, accusation, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-003",
+      "generator_context_id": "bc-1d281964-ccf4-542e-9e02-e8af775c299a",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-003.json",
+        "sha256": "226a12cbee9a6663d725191fd1bc71892141a6029e42af55c6a830ccc398c70f"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-003.json",
+        "raw_sha256": "44b36d9bbbcd5eb53e5cf81361b91a0e352ecc4be8edf2fa3f30567623505f6d",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-003.json",
+        "attestation_sha256": "c64617242ca7df491e1e2b92e393d33fb2a5ecc3807560fb316cce0d542c3b22",
+        "branch": "cursor/v33-003-sut-17a0",
+        "output_commit": "a4f9f1f4a3beb417177726a6b5bba98560d9016b",
+        "raw_commit": "a4f9f1f4a3beb417177726a6b5bba98560d9016b",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "44b36d9bbbcd5eb53e5cf81361b91a0e352ecc4be8edf2fa3f30567623505f6d",
+        "source_attestation_sha256": "c64617242ca7df491e1e2b92e393d33fb2a5ecc3807560fb316cce0d542c3b22"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; channel is an internal message thread; audience is Calder Vossine only.\n- Sender role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- A crate of replacement click-springs for JC-4603 arrived from Kellstrand Compensation Rods this afternoon.\n- Packing list KR-2281 lists twelve click-springs, type CS-6.\n- All twelve springs are present, oiled, and stored in rack C, bin 14.\n- JC-4603 is the assembly-rooms strike train.\n- No shortages were marked on the packing list.\n- Do not issue the springs to another job without workshop-manager agreement.\n- Keep the note to Calder Vossine only.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B reports that the Kellstrand crate for JC-4603 is in, packing list KR-2281 matches with twelve CS-6 click-springs, all oiled, now in rack C bin 14, and there are no shortages. Those statements match the confirmed Data A facts. The note is addressed to Calder only and does not issue the springs to another job.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is a short factual goods-in note (`the Kellstrand crate for JC-4603 is in`; `Packing list KR-2281 matches`; `No shortages`) with no hostility, accusation, threat, disrespect, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-004",
+      "generator_context_id": "bc-1d375675-1943-528d-977a-7a6468c4040b",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-004.json",
+        "sha256": "c53e6106ee41f66592b242571c84539db8153640a712a56a4b87b66964868419"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-004.json",
+        "raw_sha256": "8e3a75f126f0a45c7194cf3974d1e0932b55a31bfa73fb6c7de37381f013e207",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-004.json",
+        "attestation_sha256": "75cc0fffddeedfbbf2ed9838e3cb8f077152a619c3b009bdf0e83e446145434b",
+        "branch": "cursor/v33-004-sut-17a0",
+        "output_commit": "e27bec0ce36d348c3b126403f982172910879fc1",
+        "raw_commit": "e27bec0ce36d348c3b126403f982172910879fc1",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "8e3a75f126f0a45c7194cf3974d1e0932b55a31bfa73fb6c7de37381f013e207",
+        "source_attestation_sha256": "75cc0fffddeedfbbf2ed9838e3cb8f077152a619c3b009bdf0e83e446145434b"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; keep the note to Calder Vossine only.\n- Saturday overtime is needed to strip the going train of JC-4711 (the market-house turret clock); the going train cannot be stripped during weekday striking hours.\n- Saturday bench time on 29 August 2026 is free on the long bench.\n- Workshop standing order 12 requires any overtime booking message to Calder Vossine to name the approving authority.\n- Overtime has been authorised. The name of the approving authority is not in this packet.\n- The overtime booking is not valid until the approving authority is named in the message to Calder Vossine.\n- Do not occupy the long bench on Saturday without that named approval.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A requires the overtime booking note to name the approving authority, states that the booking is not valid until that name is in the message, and forbids occupying the long bench on Saturday without that named approval. The name is not in this packet. Data B says Saturday 29 August 2026 overtime on JC-4711 \u201cis authorised,\u201d commits \u201cI will book the going-train strip on the long bench that day,\u201d and asks Calder to enter the booking in the yard diary, without naming whose approval authorises the overtime.\n- Communication risk: Calder could enter an invalid overtime booking in the yard diary, and the long bench could be occupied on Saturday without the named approval the standing order and constraints require.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is a brief, factual booking request to Calder with a diary handoff and no insult, threat, hostility, blame, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Who is the approving authority that authorised this Saturday overtime?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The booking note must name that authority before the overtime booking is valid and before the long-bench occupation can be stated. The answer is the missing required value for a complete revision.\n   - Neutral answer structure: The approving authority is [name of the approving authority].\n\n## Minimal revision\n\nCalder \u2014 Saturday 29 August 2026 overtime on JC-4711 is authorised by [approving authority]. Subject to that named approval, I will book the going-train strip on the long bench that day. Please enter the booking in the yard diary. \u2014 Neris",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-005",
+      "generator_context_id": "bc-94411713-75b4-54fa-8f9a-ba2be808e8b5",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-005.json",
+        "sha256": "b6f0b4193529bdab803f573ca93a00ded90f12a7692c954f21db2822df95fd57"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-005.json",
+        "raw_sha256": "90b3dd7aed7a947a1e2fbd03809a2c5d0d30b3e8b332b6f6d13dc5e77bf0db62",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-005.json",
+        "attestation_sha256": "5a6212cf37481ed8f6adb43f3e63ff7b790c0fe8b858a965eff1678d3981c027",
+        "branch": "cursor/v33-005-sut-17a0",
+        "output_commit": "c5855468dc361d3dbef0ee5e878d6c93276030f7",
+        "raw_commit": "c5855468dc361d3dbef0ee5e878d6c93276030f7",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "90b3dd7aed7a947a1e2fbd03809a2c5d0d30b3e8b332b6f6d13dc5e77bf0db62",
+        "source_attestation_sha256": "5a6212cf37481ed8f6adb43f3e63ff7b790c0fe8b858a965eff1678d3981c027"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Intended recipient is Calder Vossine, workshop manager and direct line manager; the note is to Calder only.\n- User role is pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-4805 is the harbour turret clock.\n- The keepership needs a confirmed ready-date for the new compensated pendulum on JC-4805, and Calder Vossine will only forward a date that is confirmed.\n- The invar rod is cut and the mercury jar is filled; only hanging and rating remain.\n- Calder Vossine asked for one confirmed ready-date to give the keepership so they can plan the stoppage.\n- A confirmed ready-date exists. That date is not in this packet.\n- Do not offer an unconfirmed or approximate ready-date to the keepership.\n- The purpose of the note is to supply the confirmed date Calder will forward.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A states that Calder asked for one confirmed ready-date to give the keepership, that a confirmed ready-date exists but is not in this packet, and that the purpose of the note is to supply that date. Data B tells Calder to inform the keepership that the compensated pendulum for JC-4805 \"will be ready on the confirmed date\" without stating the date. That omits the only substantive information requested and does not answer the explicit requirement.\n- Communication risk: Calder has no confirmed calendar date to forward, so the keepership cannot plan the stoppage from this note.\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is a direct, polite request to Calder with a factual work update and no insult, hostility, threat, accusation, dismissiveness, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the confirmed ready-date that Calder should forward to the keepership?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data A requires the note to supply that date and does not quote it; the answer is needed to replace the placeholder with the confirmed value.\n   - Neutral answer structure: The confirmed ready-date is [date].\n\n## Minimal revision\n\nCalder \u2014 please tell the keepership that the compensated pendulum for JC-4805 will be ready on [confirmed ready-date] so they can plan the stoppage. I will have the jar sealed and the rod hanging for that morning. \u2014 Neris\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-006",
+      "generator_context_id": "bc-1e556a03-877b-54ed-8b7e-0465bb64fc92",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-006.json",
+        "sha256": "73a2d31ee181d20ae3f723f334b3e0ec37bba76875a6f7ff01aa51c97c5a4f9d"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-006.json",
+        "raw_sha256": "4896bb790bf9758527c331b34ebccb0f722d1df6193c16bcc1a6c6553aa6fe28",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-006.json",
+        "attestation_sha256": "6940c26a9bb86bfc87eca365691d2f313b47daca545cf564409c36c4851efad9",
+        "branch": "cursor/v33-006-sut-17a0",
+        "output_commit": "998d5b708fc91d0f009de35d87286d77c7f09e86",
+        "raw_commit": "998d5b708fc91d0f009de35d87286d77c7f09e86",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "4896bb790bf9758527c331b34ebccb0f722d1df6193c16bcc1a6c6553aa6fe28",
+        "source_attestation_sha256": "6940c26a9bb86bfc87eca365691d2f313b47daca545cf564409c36c4851efad9"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; keep the note to Calder Vossine only.\n- Revised silent-hours winding instructions for JC-4912 must go through Calder Vossine to one named keepership contact.\n- JC-4912 now strikes only between 07:00 and 21:00.\n- The winding card in the clock room still describes midnight striking.\n- Calder Vossine will forward the revised card to exactly one keepership contact and requires that person to be named in the message.\n- The intended keepership contact is known to the sender and is not named in this packet.\n- Do not leave the forwarding addressee unnamed; Calder will not send a card to a generic keepership desk.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A requires the keepership contact to be named in the message and states Calder will not send a card to a generic keepership desk. Data B asks Calder to forward the revised silent-hours winding card for JC-4912 to \"the keepership contact\" without naming that person. The stated hours 07:00 to 21:00 match Data A. This omission is the named addressee required before the forwarding handoff can proceed.\n- Communication risk: Calder cannot complete the required forwarding because the addressee is unnamed.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is a direct, factual request to Calder to forward the revised winding card and to state the new hours. No insult, hostility, accusation, threat, or responsibility-shifting language is present.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Who is the keepership contact Calder should forward the revised JC-4912 silent-hours winding card to?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data A requires that person to be named before Calder will send the card. The name is not in Data A, so a confirmed name is needed to replace the placeholder in the revision.\n   - Neutral answer structure: The keepership contact is: [name]\n\n## Minimal revision\n\nCalder \u2014 please forward the revised silent-hours winding card for JC-4912 to [keepership contact name] so the night winder stops winding for midnight striking. The new hours are 07:00 to 21:00. \u2014 Neris",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-007",
+      "generator_context_id": "bc-91ce3dab-914d-5456-a5ab-7eb726a4fa5e",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-007.json",
+        "sha256": "c321086925971e09de0bbfab91c919c1502061131285e6cdaff43b12f050ebdd"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-007.json",
+        "raw_sha256": "43a1834699433ebeb85f002a4a1df947f24e3ce22454c2a0bf3743ee35662c39",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-007.json",
+        "attestation_sha256": "8f9fba972c9b59416bd2a0ebf2e116be9b64df93da9617aff8bcef975408c117",
+        "branch": "cursor/v33-007-sut-17a0",
+        "output_commit": "452884862f32c2e59e2e008126b8529a36a67767",
+        "raw_commit": "452884862f32c2e59e2e008126b8529a36a67767",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "43a1834699433ebeb85f002a4a1df947f24e3ce22454c2a0bf3743ee35662c39",
+        "source_attestation_sha256": "8f9fba972c9b59416bd2a0ebf2e116be9b64df93da9617aff8bcef975408c117"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; keep the note to Calder Vossine only.\n- User role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5028's escape-wheel is worn beyond dressing. A replacement will be cut in the wheel-cutting shop next week. The leaf count to cut is thirty.\n- Workshop standing order 8 requires the cutting-shop booking message to cite the traceable source of that leaf count. Calder Vossine will accept that leaf count only with a named traceable source. Do not book a wheel cut unless the traceable source of the leaf count is named for Calder Vossine.\n- The source document for the count of thirty is not in this packet.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B asks Calder to book the wheel-cutting shop to cut a new escape-wheel for JC-5028 with thirty leaves and states \"I have taken the count from the source document and it is safe to cut.\" Workshop standing order 8 requires the booking message to cite the traceable source of the leaf count, and Data A forbids booking unless that source is named for Calder Vossine. Data B names no traceable source; it refers only to \"the source document.\" Data A locates that source document off-record and does not quote it. Data B therefore makes a booking commitment that Data A allows only if a named source is established, and that condition is not established.\n- Communication risk: Calder could book the cut without the named traceable source standing order 8 requires, treating an unnamed source and the claim that it is safe to cut as sufficient.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is a direct, factual booking request (\"please book the wheel-cutting shop\") with no insult, accusation, threat, hostility, or dismissiveness.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the named traceable source of the leaf count of thirty?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data A requires the booking to cite that source and does not quote the source document. The answer supplies the value that can be named in a safe revision.\n   - Neutral answer structure: The traceable source of the leaf count of thirty is [name or identifier of the source document].\n\n## Minimal revision\n\nCalder \u2014 please book the wheel-cutting shop to cut a new escape-wheel for JC-5028 with thirty leaves. The traceable source of that leaf count is [traceable source of the leaf count]. \u2014 Neris",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-008",
+      "generator_context_id": "bc-672d2e1d-7861-5352-bc5d-7b56ba4141f3",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-008.json",
+        "sha256": "5c01261a7df9216dc1edda7baf18a9b40b0d86e257c935b00d68c87a62bc4f0a"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-008.json",
+        "raw_sha256": "5cc9a3d58ac87305628706cb88ac33afdf53893e7f2aa96c18bf8d6841869222",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-008.json",
+        "attestation_sha256": "2ee4e8c49ce8228147590b457c88de5967a6acfdd53fe5445c14b89a61a67b4c",
+        "branch": "cursor/v33-008-sut-17a0",
+        "output_commit": "a100ad5702bdff78fbbb752953a09a75f355cba8",
+        "raw_commit": "a100ad5702bdff78fbbb752953a09a75f355cba8",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "5cc9a3d58ac87305628706cb88ac33afdf53893e7f2aa96c18bf8d6841869222",
+        "source_attestation_sha256": "2ee4e8c49ce8228147590b457c88de5967a6acfdd53fe5445c14b89a61a67b4c"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread; audience is Calder Vossine only.\n- User role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5116 is the assembly-rooms turret clock.\n- A newly finished invar compensation rod for JC-5116 is ready to stamp, and Calder Vossine will only enter a millimetre length that is stated in the sendable draft.\n- The invar rod has been cut, faced, and measured on the long bench.\n- Workshop standing order 5 requires the millimetre length to appear in the message that asks Calder Vossine to log the rod.\n- The measured length is not stated in this packet.\n- Do not stamp or hang the rod until Calder Vossine has logged a stated millimetre length.\n- Keep the note to Calder Vossine only.\n- Recognized Data B:\n\n  > Calder \u2014\n  > The new invar compensation rod for JC-5116 is ready to stamp.\n  > Please log the finished length in the compensation register so we can hang it tomorrow.\n  > I will bring the rod to the long bench at 08:00.\n  > \u2014 Neris Holbeck\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Workshop standing order 5 requires the millimetre length to appear in the message that asks Calder Vossine to log the rod, and Calder Vossine will only enter a millimetre length that is stated in the sendable draft. Data A states that the measured length is not stated in this packet. The sendable draft asks Calder to log the finished length but does not state a millimetre length. Data A also forbids stamping or hanging the rod until Calder Vossine has logged a stated millimetre length.\n- Communication risk: Without a millimetre length in the sendable draft, Calder Vossine cannot log the rod as required, so the stamp and hang steps cannot proceed from this note.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is a direct, factual request that Calder log the rod, plus a stated plan to bring it to the long bench at 08:00. It contains no insult, threat, hostility, accusation, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What millimetre length should be stated in the message that asks Calder Vossine to log the rod?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Standing order 5 and Calder Vossine's logging rule require a millimetre length in the sendable draft, and that length is not stated in this packet, so a safe revision cannot insert a numeric value.\n   - Neutral answer structure: The millimetre length to state in the message is [measured millimetre length] mm.\n\n## Minimal revision\n\nCalder \u2014\nThe new invar compensation rod for JC-5116 is ready to stamp.\nPlease log the finished length of [measured millimetre length] mm in the compensation register so we can hang it tomorrow.\nI will bring the rod to the long bench at 08:00.\n\u2014 Neris Holbeck",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-009",
+      "generator_context_id": "bc-dc842e47-c25f-5277-9168-8819fc882064",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-009.json",
+        "sha256": "4498a14d16e96c072c0989fb0535d17e520bda88a3a2f834743a1fa6a1b9f9e0"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-009.json",
+        "raw_sha256": "6dc43de5ad2c21c1f1020c41080cd180eadf4ccd2e50851f2f3f33cdb85807cb",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-009.json",
+        "attestation_sha256": "a731070a34d65464bf97df5a2ccfaab47aad57a826191b45018dc53455dc0a48",
+        "branch": "cursor/v33-009-sut-17a0",
+        "output_commit": "2bfdf5e1f27916701ba2cd5606a8a5d3f6ee843b",
+        "raw_commit": "2bfdf5e1f27916701ba2cd5606a8a5d3f6ee843b",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "6dc43de5ad2c21c1f1020c41080cd180eadf4ccd2e50851f2f3f33cdb85807cb",
+        "source_attestation_sha256": "a731070a34d65464bf97df5a2ccfaab47aad57a826191b45018dc53455dc0a48"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Calder Vossine is the workshop manager and the user's direct line manager; the note is for Calder Vossine only.\n- The user is a pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5233 currently uses a worn line-shaft rewind.\n- Two rewind options were costed: an automatic pulley-weight arrangement, and a restored two-crank manual arrangement.\n- JC-5233's rewind must be specified as one of those two already-costed options. Calder Vossine asked for a message that names the selected option so parts can be ordered for the September stoppage, and will only raise a purchase order for the option named in the message.\n- A selection has been made. The selected option is not named in this packet.\n- Do not order parts until the selected rewind option is named for Calder Vossine.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A requires the outgoing note to name the selected rewind option before Calder Vossine can raise a purchase order. Data B asks Calder to \"please order the parts for the selected rewind option on JC-5233\" without naming the automatic pulley-weight arrangement or the restored two-crank manual arrangement. The selected option is not named in Data A.\n- Communication risk: Calder Vossine cannot raise a purchase order from this note, so parts cannot be ordered for the September stoppage until a named option is supplied.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is a direct, polite parts-order request plus a status note that the line-shaft will stay in place. No insult, hostility, accusation, threat, or responsibility-shifting language is present.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Which rewind option was selected for JC-5233?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The message must name the selected option before parts can be ordered; the answer supplies the missing required value for a complete revision.\n   - Neutral answer structure: automatic pulley-weight arrangement / restored two-crank manual arrangement / [other named selection]\n\n## Minimal revision\n\nCalder \u2014 please order the parts for [named selected rewind option] on JC-5233 so we can fit it in the September stoppage. I will keep the line-shaft in place until the new parts arrive. \u2014 Neris",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-010",
+      "generator_context_id": "bc-028d6530-587a-5450-9206-5bbfa0035d7b",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-010.json",
+        "sha256": "964f7c9a8edc0c378665f98381524e497425ba6b75358b2672837562d0b55106"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-010.json",
+        "raw_sha256": "e52c492bd9ac8eef9381dc9424a472aec36e860776d5e298c44937f3fac05df1",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-010.json",
+        "attestation_sha256": "aa4b57f3c15e67c97a51c75ed784074691d43510563e8382ae5f0115a4012e79",
+        "branch": "cursor/v33-010-sut-17a0",
+        "output_commit": "913dcd7ec26b5e445ade39aadf84faba205fe807",
+        "raw_commit": "913dcd7ec26b5e445ade39aadf84faba205fe807",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "e52c492bd9ac8eef9381dc9424a472aec36e860776d5e298c44937f3fac05df1",
+        "source_attestation_sha256": "aa4b57f3c15e67c97a51c75ed784074691d43510563e8382ae5f0115a4012e79"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; keep the note to Calder Vossine only.\n- Sender role: pendulum and chime-train fitter (Neris Holbeck) at Wetherlees Turret-Clock Works, Quoyfen Spire Yard; this role is not civic building work or keepership purchasing.\n- JC-5340 is the market-house going train.\n- Situation: the winding-stool floorboards at the market house around JC-5340 are worn, and a carpenter from Barleywick Clock-Weight Castings offered to quote.\n- Calder Vossine handles keepership works orders and any instruction to outside carpenters.\n- Barleywick Clock-Weight Castings cast clock weights; they also keep a visiting carpenter.\n- Constraint: do not authorise keepership spending or instruct outside trades.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B says \"I have told Barleywick Clock-Weight Castings to invoice the keepership directly for a new winding-stool floor at JC-5340, and I have authorised their carpenter to start on Monday.\" Data A states that Calder Vossine handles keepership works orders and any instruction to outside carpenters, that Neris Holbeck's role is not civic building work or keepership purchasing, and that the user must not authorise keepership spending or instruct outside trades. Data A records only that a carpenter offered to quote; it does not establish authority to spend, invoice, or start work.\n- Communication risk: Calder may treat the keepership invoice and the carpenter's Monday start as already authorised, so an outside trade could be instructed or billed without keepership authority.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"Please just file the paperwork\" asks Calder only to file after the sender has claimed to authorise spending and instruct the carpenter.\n- Communication risk: The wording can read as dismissive and as shifting keepership purchasing onto Calder as a filing step, rather than as the person who handles works orders and outside-trade instruction.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Have you already instructed Barleywick Clock-Weight Castings to invoice the keepership and authorised their carpenter to start on Monday, or is that only wording in this draft?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether the revision should mention any contact with Barleywick, or only the quote offer already in Data A.\n   - Neutral answer structure: I [have already instructed Barleywick Clock-Weight Castings / have not contacted Barleywick Clock-Weight Castings; that wording is only in the draft]. If already contacted, what was said was: [exact wording or summary].\n\n## Minimal revision\n\nCalder \u2014 The winding-stool floorboards at the market house around JC-5340 are worn, and a carpenter from Barleywick Clock-Weight Castings has offered to quote. Please handle any keepership works order and any instruction to outside trades. \u2014 Neris\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-011",
+      "generator_context_id": "bc-fa7e26b9-e683-5016-94af-02fb69725239",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-011.json",
+        "sha256": "7766dce1d79f2c2a71192206c7db88851125f22c9a5100681b8e0470a20b9c7f"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-011.json",
+        "raw_sha256": "b68458205fb5aef123af4c9d767e7e1f16889ea074a229b6238429bfb04b4575",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-011.json",
+        "attestation_sha256": "9f102d8975f2a971e0dcb1a39c1dd3c3da0dc503769b9c2e8537f07b7dda1f14",
+        "branch": "cursor/v33-011-sut-17a0",
+        "output_commit": "cf6734b9c22e945d363798365bc125941b8163f7",
+        "raw_commit": "cf6734b9c22e945d363798365bc125941b8163f7",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "b68458205fb5aef123af4c9d767e7e1f16889ea074a229b6238429bfb04b4575",
+        "source_attestation_sha256": "9f102d8975f2a971e0dcb1a39c1dd3c3da0dc503769b9c2e8537f07b7dda1f14"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread, Calder Vossine only.\n- User role: pendulum and chime-train fitter, Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- A public stoppage on JC-5409 (the guildhall quarter-chime train) is in the yard diary for 2 September 2026, and Colm Yardrie is rostered on that job.\n- The keepership has already posted the 2 September stoppage on the guildhall notice board.\n- Only Calder Vossine may cancel a public stoppage or move another fitter's roster.\n- Neris Holbeck is not the workshop manager and does not set Colm Yardrie's hours.\n- Constraints: do not cancel posted public stoppages or reassign other fitters; keep the note to Calder Vossine only.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: The new body says \"I am cancelling the 2 September stoppage on JC-5409 and moving Colm Yardrie onto JC-5517 that week\" and \"Please tell the keepership they can keep the clock running.\" Data A states that only Calder Vossine may cancel a public stoppage or move another fitter's roster, that Neris Holbeck is not the workshop manager and does not set Colm Yardrie's hours, that the keepership has already posted the 2 September stoppage, and that posted public stoppages must not be cancelled and other fitters must not be reassigned. Data A does not establish that Calder Vossine has authorized those changes.\n- Communication risk: The recipient may treat the posted JC-5409 stoppage as cancelled, Colm Yardrie as reassigned, and the keepership as cleared to keep the clock running, although the sender is not authorized to make or announce those changes.\n\n### Tone\n\n- Rating: Green\n- Evidence: The new body is a direct operational note to Calder. It does not contain insult, hostility, threat, a degrading characterization, or an unsupported accusation.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Has Calder Vossine already authorized cancelling the posted 2 September 2026 public stoppage on JC-5409 and moving Colm Yardrie off that rostered job?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data A allows only Calder Vossine to cancel a public stoppage or move another fitter's roster, and it does not state that this authorization has already been given. The answer changes whether a safe revision should ask Calder to decide those changes or should refer only to a decision Calder has already made.\n   - Neutral answer structure: Calder has already authorized cancelling the stoppage and moving Colm Yardrie / Calder has not authorized these changes / unknown\n\n## Minimal revision\n\nCalder \u2014 Could you cancel the 2 September stoppage on JC-5409 and move Colm Yardrie onto JC-5517 that week? Please tell the keepership they can keep the clock running only if you cancel that stoppage. \u2014 Neris\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-012",
+      "generator_context_id": "bc-70faf7e6-b3e2-5855-bb26-b2e4d2d5a36f",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-012.json",
+        "sha256": "81f60d771bee4bbb3ffdf6e8fb06683737012c61ef625423c888dcf5e6d2455b"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-012.json",
+        "raw_sha256": "e357bdce88e22f340bdb99d13926e1042037d165ba291270cc808d2c0be9b05a",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-012.json",
+        "attestation_sha256": "09ee013c75219131a04d6e2aad6118ee33d23a3535495c5520d8e4150599419e",
+        "branch": "cursor/v33-012-sut-17a0",
+        "output_commit": "dacd0f9abaf59741b127c514797f7853add2c928",
+        "raw_commit": "dacd0f9abaf59741b127c514797f7853add2c928",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "e357bdce88e22f340bdb99d13926e1042037d165ba291270cc808d2c0be9b05a",
+        "source_attestation_sha256": "09ee013c75219131a04d6e2aad6118ee33d23a3535495c5520d8e4150599419e"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; send the note to Calder Vossine only.\n- User role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5517 is the harbour strike train.\n- Colm Yardrie is a strike-train fitter at Quoyfen Spire Yard.\n- Colm Yardrie left the gathering-pallet filing for JC-5517 unfinished on the shared bench.\n- Neris Holbeck needed the bench this morning and found the filing still open.\n- Calder Vossine asked for a factual bench-sharing note, not a complaint about character.\n- The note must stay professional and limited to the bench state.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A requires a factual bench-sharing note limited to the bench state. Data B instead says Colm Yardrie \"has been lazy\" and that the sender is \"tired of covering for his sloppy filing,\" and it asks Calder to \"Tell him to stay off my bench.\" Data A establishes only that Colm left the JC-5517 gathering-pallet filing unfinished on the shared bench, and that Neris found the filing still open this morning. Calling it \"my bench\" and directing that Colm stay off it contradict the shared-bench fact and the limit to bench state. The draft does not report those confirmed bench facts.\n- Communication risk: Calder could treat this as a character complaint and an exclusion request rather than a factual bench-sharing note, and could act on an unconfirmed claim that the bench is the sender's exclusive space.\n\n### Tone\n\n- Rating: Red\n- Evidence: Data B asserts as fact that Colm \"has been lazy\" and refers to \"his sloppy filing,\" and adds \"I am tired of covering for\" that filing. Data A does not establish laziness, sloppiness, or a pattern of covering. These are unsupported character and fault claims, including the global label \"lazy.\"\n- Communication risk: The wording presents unconfirmed character judgments as fact and can read as a complaint about Colm rather than a professional bench-state note.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCalder \u2014 Colm Yardrie left the JC-5517 gathering-pallet filing unfinished on the shared bench. I needed the bench this morning and found the filing still open. \u2014 Neris",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-013",
+      "generator_context_id": "bc-23cdcc5d-6327-5b4b-a398-ff6e0eb99707",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-013.json",
+        "sha256": "e8631aa2c482562de8146bf289cb9dfc12a818830d9d4176602a143e7fd68794"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-013.json",
+        "raw_sha256": "66bcff0c08e5e7759be95a1c5d37973b942edfbfeddd0b4809d484b6dbdc6247",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-013.json",
+        "attestation_sha256": "9e0abde16c2b2857d497041bfe91fcbeb5e4d1be998d8b3a05dfca6425cbf911",
+        "branch": "cursor/v33-013-sut-17a0",
+        "output_commit": "9ea72e615371f547d82f73926c2961326792b13e",
+        "raw_commit": "9ea72e615371f547d82f73926c2961326792b13e",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "66bcff0c08e5e7759be95a1c5d37973b942edfbfeddd0b4809d484b6dbdc6247",
+        "source_attestation_sha256": "9e0abde16c2b2857d497041bfe91fcbeb5e4d1be998d8b3a05dfca6425cbf911"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient is Calder Vossine, workshop manager and direct line manager; the note is for Calder only.\n- Sender role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- Calder Vossine asked Neris Holbeck to re-bush a worn pivot on JC-5624 after a lunchtime inspection.\n- JC-5624 is the assembly-rooms going train.\n- The pivot was worn enough to need a bush; the re-bush is now complete.\n- Calder had earlier said the pivot looked serviceable from the tower floor.\n- A short completion note was requested and should be kept civil.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B names JC-5624 and states that lunch was spent re-bushing the pivot, which reports the requested completion. It does not assign a conflicting owner, date, or work commitment relative to Data A.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Yellow\n- Evidence: Data B uses sarcastic thanks and scare quotes in `thanks for the 'priority'`, ironic `I loved spending my lunch re-bushing`, and personalized blame in `a pivot you swore was fine` and `Maybe next time look at the wear before you wave me up the tower`. Data A records that Calder said the pivot looked serviceable from the tower floor and then asked for the re-bush after a lunchtime inspection; it does not establish that Calder swore the pivot was fine or sent Neris up without looking at the wear. Data A also requires the note to remain civil.\n- Communication risk: The wording can be read as sarcasm and personal blame rather than a civil completion note.\n\n### Overall status\n\n- Rating: Yellow\n- Next action: Minimal revision recommended\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCalder \u2014 I've finished the re-bush on the JC-5624 pivot. \u2014 Neris\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-014",
+      "generator_context_id": "bc-1a10f2f2-1cfe-564a-a583-8450ef1d7d52",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-014.json",
+        "sha256": "b4d18b6866b68c6fbba13063babd9ebeb76f8d6cc8c23e8aec9d804dac689b04"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-014.json",
+        "raw_sha256": "3df6e39fe23d9119cfe665fdb8362a4b7adb30147accdded139a3cb4fed1f147",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-014.json",
+        "attestation_sha256": "fc7055a4372040fff62088f4ba27bce854b2abef23b8b74811177ff4bbd82edb",
+        "branch": "cursor/v33-014-sut-17a0",
+        "output_commit": "5d0a14ffec0313f4e1399309502e575c1b9c8b7c",
+        "raw_commit": "5d0a14ffec0313f4e1399309502e575c1b9c8b7c",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "3df6e39fe23d9119cfe665fdb8362a4b7adb30147accdded139a3cb4fed1f147",
+        "source_attestation_sha256": "fc7055a4372040fff62088f4ba27bce854b2abef23b8b74811177ff4bbd82edb"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and the user's direct line manager; internal message thread, manager only.\n- The user is a pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5731 is the market-house going train. The great wheel of JC-5731 needs a cutting-shop booking. The tooth count and cutting day are being confirmed in this thread.\n- Calder Vossine books the wheel-cutting shop from written notes.\n- An initial count and day were written in the first draft. The governing constraint is to use the latest stated tooth count and cutting day, and to keep the note to Calder Vossine only.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B asks Calder to book the wheel-cutting shop for the great wheel of JC-5731, states 120 teeth and Wednesday 26 August 2026 as the initial count and day written in this first draft, and states that the sender will bring the blank first thing. Those are the latest stated tooth count and cutting day. The note is addressed to Calder only. No contradiction with Data A was found.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is a direct, factual booking request. It contains no insult, threat, hostility, accusation, dismissiveness, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and the user's direct line manager; internal message thread, manager only.\n- The user is a pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5731 is the market-house going train. The great wheel of JC-5731 needs a cutting-shop booking. Calder Vossine books the wheel-cutting shop from written notes. The note must be kept to Calder Vossine only.\n- Governing constraint: use the latest stated tooth count and cutting day.\n- Current latest stated tooth count (user correction): 96 teeth.\n- The cutting day has not been corrected. The latest stated cutting day remains the initial day written in the draft under review.\n- Adopted Data A: the great-wheel count is 96 teeth, not 120. Please use 96 in the note to Calder. The draft below is the old text.\n- Evaluated Data B: Calder \u2014 please book the wheel-cutting shop for the great wheel of JC-5731, 120 teeth, on Wednesday 26 August 2026. I will bring the blank first thing. \u2014 Neris\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B still states \"120 teeth\". Current Data A states that the great-wheel count is 96 teeth, not 120, and requires that 96 be used in the note to Calder. That is a known-wrong tooth count and a direct contradiction of the governing count.\n- Communication risk: If sent as written, Calder would book a 120-tooth cut for the great wheel of JC-5731 instead of 96 teeth.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft under review remains a direct, factual booking request. It contains no insult, threat, hostility, accusation, dismissiveness, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCalder \u2014 please book the wheel-cutting shop for the great wheel of JC-5731, 96 teeth, on Wednesday 26 August 2026. I will bring the blank first thing. \u2014 Neris",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and the user's direct line manager; internal message thread, manager only.\n- The user is a pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5731 is the market-house going train. The great wheel of JC-5731 needs a cutting-shop booking. Calder Vossine books the wheel-cutting shop from written notes. The note must be kept to Calder Vossine only.\n- Governing constraint: use the latest stated tooth count and cutting day.\n- Current latest stated tooth count (user correction): 96 teeth.\n- Current latest stated cutting day (user correction): Friday 28 August 2026.\n- Adopted Data A: move the cutting from Wednesday 26 August to Friday 28 August 2026. The tooth count remains 96. The draft below is still the original.\n- Evaluated Data B: Calder \u2014 please book the wheel-cutting shop for the great wheel of JC-5731, 120 teeth, on Wednesday 26 August 2026. I will bring the blank first thing. \u2014 Neris\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B still states \"120 teeth\" and \"Wednesday 26 August 2026\". Current Data A requires 96 teeth and Friday 28 August 2026. Both the tooth count and the cutting day in Data B are known-wrong and directly contradict the latest stated values.\n- Communication risk: If sent as written, Calder would book the wrong tooth count and the wrong cutting day for the great wheel of JC-5731.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft under review remains a direct, factual booking request. It contains no insult, threat, hostility, accusation, dismissiveness, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCalder \u2014 please book the wheel-cutting shop for the great wheel of JC-5731, 96 teeth, on Friday 28 August 2026. I will bring the blank first thing. \u2014 Neris",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-015",
+      "generator_context_id": "bc-5a99ccfd-3baa-5d24-a262-c6f4dbeb1b6b",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-015.json",
+        "sha256": "382018b9fe1ddfbe54aa0b7208f95322479a094b05bb9eb4a2334c2e485a8f70"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-015.json",
+        "raw_sha256": "8a1f8c0936ad3b6dd03e23e322d4a71c17263082fba3b613bf2ee45654b31f89",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-015.json",
+        "attestation_sha256": "260f09d28f1600df2f0a157ca3e5cef3b272875466a6c6a73357231fd191e8bc",
+        "branch": "cursor/v33-015-sut-17a0",
+        "output_commit": "fdd9af591635c200264a5fe3a5c3bd5537f7e61e",
+        "raw_commit": "fdd9af591635c200264a5fe3a5c3bd5537f7e61e",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "8a1f8c0936ad3b6dd03e23e322d4a71c17263082fba3b613bf2ee45654b31f89",
+        "source_attestation_sha256": "260f09d28f1600df2f0a157ca3e5cef3b272875466a6c6a73357231fd191e8bc"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread; audience manager only.\n- Sender: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5806 is the harbour going train.\n- A pendulum rating on JC-5806 is being written up for Calder Vossine. Calder logs rating-nut moves and daily rates from the fitter's note.\n- Use the latest stated nut move and daily rate.\n- Keep the note to Calder Vossine only.\n- Later turns replace the first description of the nut move and the losing rate.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B is addressed to Calder only, names JC-5806, states a rating-nut move (`raised the rating-nut two flats`) and a daily rate (`losing four seconds per day`), and asks Calder to log that. Those are the values Calder logs from the fitter's note. Data A does not quote a conflicting nut move or daily rate, so these are the latest stated values. They are information stated by Data B, not independently verified fact.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual (`on JC-5806 I raised the rating-nut two flats. The clock is losing four seconds per day. Please log that.`). No insult, threat, hostility, accusation, or responsibility-shifting language is present.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread; audience manager only.\n- Sender: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5806 is the harbour going train.\n- A pendulum rating on JC-5806 is being written up for Calder Vossine. Calder logs rating-nut moves and daily rates from the fitter's note.\n- Use the latest stated nut move and daily rate.\n- Keep the note to Calder Vossine only.\n- Current nut move: the rating-nut was lowered one flat; it was not raised two flats.\n- Current daily rate: the clock is losing one second per day, not four.\n- Data B remains the previously submitted draft, explicitly identified as the old text.\n- Adopted Data A: I lowered the rating-nut one flat; I did not raise it two flats. The clock is losing one second per day, not four. The draft below is the old text.\n- Evaluated Data B: Calder \u2014 on JC-5806 I raised the rating-nut two flats. The clock is losing four seconds per day. Please log that. \u2014 Neris\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B states `I raised the rating-nut two flats` and `The clock is losing four seconds per day`. Effective Data A now states the rating-nut was lowered one flat and the clock is losing one second per day. That is a direct contradiction of the governing nut move and daily rate.\n- Communication risk: Calder would log the wrong rating-nut move and the wrong daily rate from this note.\n\n### Tone\n\n- Rating: Green\n- Evidence: The new body remains a neutral operational report (`Please log that`) with no insult, threat, hostility, accusation, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCalder \u2014 on JC-5806 I lowered the rating-nut one flat. The clock is losing one second per day. Please log that. \u2014 Neris",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread; audience manager only.\n- Sender: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5806 is the harbour going train.\n- A pendulum rating on JC-5806 is being written up for Calder Vossine. Calder logs rating-nut moves and daily rates from the fitter's note.\n- Use the latest stated nut move and daily rate.\n- Keep the note to Calder Vossine only.\n- Current nut move: the rating-nut was lowered one flat; it was not raised two flats.\n- Current daily rate: the clock is losing one second per day, not four. After six hours on test, that one-second losing rate is holding.\n- Calder is to log the lowered-one-flat move and that stable rate.\n- Data B remains the original draft, explicitly identified as still the original.\n- Adopted Data A: after six hours on test the one-second losing rate is holding. Please have Calder log the lowered-one-flat move and that stable rate. The draft below is still the original.\n- Evaluated Data B: Calder \u2014 on JC-5806 I raised the rating-nut two flats. The clock is losing four seconds per day. Please log that. \u2014 Neris\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B still states `I raised the rating-nut two flats` and `The clock is losing four seconds per day`. Effective Data A requires the latest values: lowered one flat, and a one-second losing rate that is holding after six hours on test, to be logged by Calder. The original draft contradicts those values and does not include the confirmed holding/stable-rate update.\n- Communication risk: Calder would log the superseded nut move and daily rate instead of the lowered-one-flat move and the stable one-second losing rate.\n\n### Tone\n\n- Rating: Green\n- Evidence: The new body is still a neutral operational report with no insult, threat, hostility, accusation, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCalder \u2014 on JC-5806 I lowered the rating-nut one flat. The clock is losing one second per day; after six hours on test that rate is holding. Please log that. \u2014 Neris",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-016",
+      "generator_context_id": "bc-5d320c7a-45f9-5b3f-b8d7-485d8940576d",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-016.json",
+        "sha256": "a0d8f05d798b88b69d4a854f7d9d94695e712aa0d0120ec65e0890425993bcfa"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-016.json",
+        "raw_sha256": "28d1abc281ed08748090b08278a407a9c7bec21d22384c3cf97ef44102ea87b1",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-016.json",
+        "attestation_sha256": "b246cd156a824d91afeda34568df66d12a468ec463a3ed2f5853d65a9c2c2a6b",
+        "branch": "cursor/v33-016-sut-17a0",
+        "output_commit": "30725cc284e5990bc4e40ffad908b100555c4433",
+        "raw_commit": "30725cc284e5990bc4e40ffad908b100555c4433",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "28d1abc281ed08748090b08278a407a9c7bec21d22384c3cf97ef44102ea87b1",
+        "source_attestation_sha256": "b246cd156a824d91afeda34568df66d12a468ec463a3ed2f5853d65a9c2c2a6b"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread; manager only.\n- Sender role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5914 is the guildhall going train.\n- Weights come from Barleywick Clock-Weight Castings.\n- A weight delivery for JC-5914 is being reported to Calder Vossine, and the count, mass, and storage place are being corrected in this thread.\n- Use the latest stated count, mass, and storage place.\n- Keep the note to Calder Vossine only.\n- Later turns replace the first count and mass, then confirm arrival and rack location.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B is addressed to Calder only and reports that Barleywick is sending four 40 kg weights for JC-5914, with Neris taking them in when they arrive. That matches Data A on recipient, supplier, and JC-5914. Data A does not quote a different count or mass and does not locate those values off-record; Data B may state them in this delivery notice. Data A sequences arrival and rack location to later turns, so a storage place is not yet required. The intake action is stated clearly.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual. It reports the delivery and the planned intake without hostility, blame, or responsibility shifting.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread; manager only.\n- Sender role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5914 is the guildhall going train.\n- Weights come from Barleywick Clock-Weight Castings.\n- A weight delivery for JC-5914 is being reported to Calder Vossine, and the count, mass, and storage place are being corrected in this thread.\n- Use the latest stated count, mass, and storage place.\n- Keep the note to Calder Vossine only.\n- Current order: three 45 kg weights.\n- Arrival and rack location have not yet been confirmed.\n- Adopted Data A: the order is three 45 kg weights, not four 40 kg weights.\n- Evaluated Data B: Calder \u2014 Barleywick is sending four 40 kg weights for JC-5914. I will take them in when they arrive. \u2014 Neris\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Current Data A states the order is three 45 kg weights. Data B still says Barleywick is sending four 40 kg weights for JC-5914. That is a direct contradiction of the current count and mass. The remainder of the body \u2014 Calder only, Barleywick, JC-5914, and Neris taking them in when they arrive \u2014 does not conflict with current Data A.\n- Communication risk: Calder could prepare for or record the wrong number and mass of weights.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording remains neutral and factual. The problem is incorrect count and mass, not hostile or blaming language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCalder \u2014 Barleywick is sending three 45 kg weights for JC-5914. I will take them in when they arrive. \u2014 Neris",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread; manager only.\n- Sender role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- JC-5914 is the guildhall going train.\n- Weights come from Barleywick Clock-Weight Castings.\n- A weight delivery for JC-5914 is being reported to Calder Vossine, and the count, mass, and storage place are being corrected in this thread.\n- Use the latest stated count, mass, and storage place.\n- Keep the note to Calder Vossine only.\n- Current order: three 45 kg weights.\n- The three 45 kg weights have arrived, are sound, and are now on rack D.\n- Adopted Data A: They arrived. All three 45 kg weights are sound and are now on rack D.\n- Evaluated Data B: Calder \u2014 Barleywick is sending four 40 kg weights for JC-5914. I will take them in when they arrive. \u2014 Neris\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Current Data A is three 45 kg weights, arrived, sound, and on rack D. Data B still says Barleywick is sending four 40 kg weights for JC-5914 and that Neris will take them in when they arrive. That contradicts the current count, mass, arrival status, and storage place.\n- Communication risk: Calder could record the wrong count and mass, treat the delivery as still outstanding, and miss that the weights are already on rack D.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording remains neutral and factual. The problems are outdated facts, not hostile or blaming language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nCalder \u2014 Three 45 kg weights from Barleywick for JC-5914 have arrived. All three are sound and are now on rack D. \u2014 Neris",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-017",
+      "generator_context_id": "bc-1beb14a6-1969-5a83-a7c6-7316e6e7ce08",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-017.json",
+        "sha256": "3e2e911bcf0b5fc7d67f1f5a3527da899c7db4c6ebf97425242c49ae197ae272"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-017.json",
+        "raw_sha256": "fa3f4f737943cd6ae1ee5926b526a0f82a0cb3b0a68de94b7da8342dafe5fbf4",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-017.json",
+        "attestation_sha256": "d51ae18105f87fe1a0312053a47776ffc4bd79ce476e2fd21ab62f43ce424609",
+        "branch": "cursor/v33-017-sut-17a0",
+        "output_commit": "eccf0a613adbe47dba4d8dd37dadd00ed8a52ac8",
+        "raw_commit": "eccf0a613adbe47dba4d8dd37dadd00ed8a52ac8",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "fa3f4f737943cd6ae1ee5926b526a0f82a0cb3b0a68de94b7da8342dafe5fbf4",
+        "source_attestation_sha256": "d51ae18105f87fe1a0312053a47776ffc4bd79ce476e2fd21ab62f43ce424609"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Scope\n\n- Recipient: sales liaison (external supplier contact)\n- Result: Not reviewed \u2014 Workplace Survival is limited to messages intended for a manager.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V33-018",
+      "generator_context_id": "bc-a8355044-2e33-528d-8fd9-d7b072efc0a4",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "d37540b33db3005daddab705c1f108c4c5eb9be9",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-inputs/V33-018.json",
+        "sha256": "9de8decc265cdf0b8bf7f0f56db316660ca9c78d53c0a5bac6ec37a20b113a7f"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-raw/V33-018.json",
+        "raw_sha256": "53a60c1ae1f86e306b97b277b9b32d51b539aad012b29af34d3a7bd83a344308",
+        "attestation_path": "tests/benchmark/v3_3-holdout/cloud-cases/sut-attestations/V33-018.json",
+        "attestation_sha256": "d33c648903e10e6db933c3336044b9a1949e2df91c9f2b63b090997eb4220414",
+        "branch": "cursor/v33-018-sut-17a0",
+        "output_commit": "b8c19d2ba5aeccdfe6f488a154015a5992cdcc48",
+        "raw_commit": "b8c19d2ba5aeccdfe6f488a154015a5992cdcc48",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "53a60c1ae1f86e306b97b277b9b32d51b539aad012b29af34d3a7bd83a344308",
+        "source_attestation_sha256": "d33c648903e10e6db933c3336044b9a1949e2df91c9f2b63b090997eb4220414"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Calder Vossine, workshop manager and direct line manager; internal message thread; manager only.\n- User role: pendulum and chime-train fitter at Wetherlees Turret-Clock Works, Quoyfen Spire Yard.\n- Calder Vossine asked for a readable draft of the works note because harbour clock JC-6110 has a bent click after the night winding.\n- JC-6110 is the harbour turret clock.\n- A night winder employed by the keepership wound the clock and the click is bent.\n- Neris Holbeck fits pendulum and chime trains and does not silence public clocks, levy keepership fees, or issue works orders.\n- Calder Vossine handles keepership complaints and any stoppage of a public clock.\n- Do not silence a public clock or charge the keepership without workshop-manager authority.\n- Keep the note to Calder Vossine only.\n- Recognized Data B:\n\n  > Calder \u2014\n  >\n  > The night winder at harbour clock JC-6110 is careless and has bent the click again.\n  >\n  > I have already told the keepership the clock stays silent from tonight, and I am charging them a waste fee for the bent click.\n  >\n  > Send that through as a works order and keep that winder off the barrel.\n  >\n  > \u2014 Neris Holbeck\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A states that Neris Holbeck does not silence public clocks, levy keepership fees, or issue works orders; that Calder Vossine handles keepership complaints and any stoppage of a public clock; and that a public clock must not be silenced or the keepership charged without workshop-manager authority. Data A does not establish that authority. Data B states \"I have already told the keepership the clock stays silent from tonight, and I am charging them a waste fee for the bent click\" and \"Send that through as a works order\".\n- Communication risk: The note asserts completed keepership-facing actions and a works-order instruction that Data A allows only if workshop-manager authority is established, which can cause the wrong stoppage, charge, or works order to go out.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: Data B states \"The night winder at harbour clock JC-6110 is careless and has bent the click again.\" Data A confirms that a night winder employed by the keepership wound the clock and the click is bent; it does not establish carelessness, that the winder bent the click, or that this happened again.\n- Communication risk: Calder, who handles keepership complaints, may read this as an established fault finding against the night winder rather than a report of the bent click.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Has workshop-manager authority already been given to silence harbour clock JC-6110 or to charge the keepership a waste fee?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data A allows those actions only with workshop-manager authority, which is not currently established; the answer can change whether any stoppage or fee wording can remain.\n   - Neutral answer structure: Workshop-manager authority for silencing JC-6110 and for a keepership waste fee: [already given / not given / unknown]. If anything was already sent to the keepership, what was sent: [text or none].\n\n2. Question: Is there confirmed background, separate from this draft, that the night winder was careless or that the click has been bent before?\n   - Affected dimension: Tone\n   - Why this matters: \"careless\" and \"again\" are not in Data A; the answer can change whether those words stay in the note.\n   - Neutral answer structure: Confirmed basis for \"careless\": [none / state the confirmed basis]. Confirmed basis for \"again\": [none / state the confirmed basis].\n\n## Minimal revision\n\nCalder \u2014\n\nThe night winder at harbour clock JC-6110 wound the clock, and the click is bent.\n\nI am not telling the keepership the clock stays silent from tonight or charging them a waste fee unless you authorize that. Take any works order from here, and keep that winder off the barrel.\n\n\u2014 Neris Holbeck\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    }
+  ]
+}
