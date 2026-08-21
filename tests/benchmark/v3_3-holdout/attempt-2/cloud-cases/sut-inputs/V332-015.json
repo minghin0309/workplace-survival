@@ -1,0 +1,41 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V332-015",
+  "recipient_context": {
+    "recipient_name": "Edlyn Marrow",
+    "recipient_role": "punching-room manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "punching-room coordinator",
+    "organization": "Rowanleat Cork Works",
+    "site": "Braydon Cut punching rooms",
+    "situation": "The steam-expansion house needs extra coverage this evening, and Wren is correcting who will stay and how they will be paid.",
+    "known_facts": [
+      "Extra evening coverage in steam-expansion requires Edlyn's approval.",
+      "Wren may update names and pay type in follow-up notes.",
+      "A later note from Wren replaces an earlier staffing picture."
+    ],
+    "constraints": [
+      "Use Wren's latest names and pay type.",
+      "Do not treat an earlier two-person paid-overtime request as final after it is corrected."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this evening-cover request to Edlyn. I have two people.\n\nDraft under review:\nEdlyn \u2014 Please approve two extra hours this evening, 16:30 to 18:30, for Osa Flint and Gareth Pumice in the steam-expansion house. Wren Calloway, punching-room coordinator."
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Dorrin Kedge is staying as well. Please revise the request to three people.\n\nDraft under review:\nEdlyn \u2014 Please approve two extra hours this evening, 16:30 to 18:30, for Osa Flint, Gareth Pumice and Dorrin Kedge in the steam-expansion house. Wren Calloway, punching-room coordinator."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "They will take time-off-in-lieu, not extra wages. Please send that version to Edlyn.\n\nDraft under review:\nEdlyn \u2014 Please approve two extra hours this evening, 16:30 to 18:30, for Osa Flint, Gareth Pumice and Dorrin Kedge in the steam-expansion house, taken as time-off-in-lieu rather than extra wages. Wren Calloway, punching-room coordinator."
+    }
+  ]
+}

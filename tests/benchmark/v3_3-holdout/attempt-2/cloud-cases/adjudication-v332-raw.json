@@ -1,0 +1,4644 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v332-holdout-cloud-attempt2",
+  "artifact": "adjudication-v332-raw",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": [
+    "grok",
+    "gemini",
+    "gpt"
+  ],
+  "labeler_sources": [
+    {
+      "model_family": "grok",
+      "file": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-1.json",
+      "sha256": "554f31ca1e595c307f040f48167cfad697c68b115a04cf7cc1390dae7c28ba9b",
+      "case_list_key": "cases"
+    },
+    {
+      "model_family": "gemini",
+      "file": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-2.json",
+      "sha256": "413698e673dab495327f4c9f44492f3dcd375e5b6514fb14bb265d75cf024fd3",
+      "case_list_key": "cases"
+    },
+    {
+      "model_family": "gpt",
+      "file": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-3.json",
+      "sha256": "dc9a674b6c132d8a47d149fc4ac4fc9c78df7e47465d88cb4e6ec54305b1e586",
+      "case_list_key": "case_labels"
+    }
+  ],
+  "gold_artifact": {
+    "file": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-v332-raw.json",
+    "sha256": "6baaf1dc1ab9084b9e7fdc56bc26d918094ff5040349cb1947f9b56914984df2",
+    "commit": "32ac0300ad4c677d3b06163a8adcaf44fbf683b8"
+  },
+  "coverage": {
+    "cases_expected": 18,
+    "cases_adjudicated": 18,
+    "turns_expected": 24,
+    "turns_adjudicated": 24,
+    "multi_turn_cases": [
+      "V332-014",
+      "V332-015",
+      "V332-016"
+    ]
+  },
+  "method": {
+    "ratings_and_required_lists": "Majority of the three families, except where the v3.3 rating rules or the GOLD_RUBRIC question rule force a different resolution; every such override is recorded per turn.",
+    "allowed_lists": "Union of the three families, minus concepts that contradict the adjudicated rating or are unsupported by the case facts; every exclusion is recorded with a reason.",
+    "critical_invariants": "Token retained when at least two of the three families listed it.",
+    "uncertainty": "gold_uncertain is set only where the three families disagree categorically and the case text plus the v3.3 rules cannot resolve the disagreement.",
+    "v3_3_rules_applied": [
+      "An established omission of a token that a named execution step depends on is Red, not Gray.",
+      "An occluded Data B token routes to Intake with null ratings.",
+      "An occluded Data A token beside an identifiable sendable draft stays in Normal mode and Grays the affected dimension.",
+      "preserve-intended-recipient is never a required revision concept.",
+      "Green/Green turns use required_revision_concepts [\"no-revision\"]."
+    ]
+  },
+  "summary": {
+    "turns_total": 24,
+    "turns_with_full_family_agreement": 15,
+    "turns_with_any_split": 9,
+    "turns_with_rating_split": 2,
+    "rating_split_turns": [
+      "V332-004-T1",
+      "V332-013-T1"
+    ],
+    "split_turns": [
+      "V332-004-T1",
+      "V332-007-T1",
+      "V332-009-T1",
+      "V332-010-T1",
+      "V332-011-T1",
+      "V332-012-T1",
+      "V332-013-T1",
+      "V332-017-T1",
+      "V332-018-T1"
+    ],
+    "overrides_against_majority": [
+      {
+        "turn_id": "V332-010-T1",
+        "field": "required_question_concepts"
+      },
+      {
+        "turn_id": "V332-011-T1",
+        "field": "required_question_concepts"
+      },
+      {
+        "turn_id": "V332-018-T1",
+        "field": "required_question_concepts"
+      }
+    ],
+    "uncertain_turns": 0,
+    "uncertain_turn_rate": 0.0,
+    "uncertain_turn_rate_cap": 0.2,
+    "adjudicated_overall_distribution": {
+      "Gray": 1,
+      "Green": 12,
+      "None": 1,
+      "Red": 10
+    }
+  },
+  "turns": [
+    {
+      "case_id": "V332-001",
+      "turn_index": 1,
+      "turn_id": "V332-001-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-002",
+      "turn_index": 1,
+      "turn_id": "V332-002-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-003",
+      "turn_index": 1,
+      "turn_id": "V332-003-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-004",
+      "turn_index": 1,
+      "turn_id": "V332-004-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "majority",
+          "vote_distribution": {
+            "Green": 1,
+            "Red": 2
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "majority",
+          "vote_distribution": {
+            "Green": 1,
+            "Red": 2
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [
+              "approval-authority"
+            ],
+            "gpt": [
+              "approval-authority"
+            ]
+          },
+          "adjudicated": [
+            "approval-authority"
+          ],
+          "resolution_method": "concept-majority",
+          "family_counts": {
+            "approval-authority": 2
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "placeholder-unknown-value"
+            ],
+            "gpt": [
+              "placeholder-unknown-value",
+              "remove-unsafe-commitment"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value"
+          ],
+          "resolution_method": "concept-majority",
+          "family_counts": {
+            "no-revision": 1,
+            "placeholder-unknown-value": 2,
+            "remove-unsafe-commitment": 1
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [
+              "approval-authority",
+              "confirmed-owner"
+            ],
+            "gpt": [
+              "approval-authority"
+            ]
+          },
+          "adjudicated": [
+            "approval-authority",
+            "confirmed-owner"
+          ],
+          "union_of_families": [
+            "approval-authority",
+            "confirmed-owner"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "resolution_method": "union-with-documented-exclusions",
+          "excluded_from_union": [
+            {
+              "concept_id": "no-revision",
+              "reason": "Carried only by grok's Green vote, which was not upheld; a Red overall requires a rewrite."
+            }
+          ]
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 3,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Grok rated the turn Green; gemini and gpt applied the v3.3 established-omission rule. Resolved to Red: Data A ties recording the changeover as approved, and therefore restarting line 2, to the authorising person's name, and the identifiable draft omits it. Grok's own Red labels on the structurally identical omissions in V332-005 to V332-008 make its Green here an internal inconsistency rather than a competing reading."
+    },
+    {
+      "case_id": "V332-005",
+      "turn_index": 1,
+      "turn_id": "V332-005-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [
+              "confirmed-deadline"
+            ],
+            "gemini": [
+              "confirmed-deadline"
+            ],
+            "gpt": [
+              "confirmed-deadline"
+            ]
+          },
+          "adjudicated": [
+            "confirmed-deadline"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "confirmed-deadline": 3
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value"
+            ],
+            "gemini": [
+              "placeholder-unknown-value"
+            ],
+            "gpt": [
+              "placeholder-unknown-value"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "placeholder-unknown-value": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "confirmed-deadline"
+            ],
+            "gemini": [
+              "commitment-scope",
+              "confirmed-deadline"
+            ],
+            "gpt": [
+              "confirmed-deadline"
+            ]
+          },
+          "adjudicated": [
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "union_of_families": [
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-intended-recipient"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 3,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-006",
+      "turn_index": 1,
+      "turn_id": "V332-006-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [
+              "confirmed-owner"
+            ],
+            "gemini": [
+              "confirmed-owner"
+            ],
+            "gpt": [
+              "confirmed-owner"
+            ]
+          },
+          "adjudicated": [
+            "confirmed-owner"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "confirmed-owner": 3
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value"
+            ],
+            "gemini": [
+              "placeholder-unknown-value"
+            ],
+            "gpt": [
+              "placeholder-unknown-value"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "placeholder-unknown-value": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "confirmed-owner"
+            ],
+            "gemini": [
+              "confirmed-owner",
+              "recipient-manager-role"
+            ],
+            "gpt": [
+              "confirmed-owner"
+            ]
+          },
+          "adjudicated": [
+            "confirmed-owner"
+          ],
+          "union_of_families": [
+            "confirmed-owner",
+            "recipient-manager-role"
+          ],
+          "resolution_method": "union-with-documented-exclusions",
+          "excluded_from_union": [
+            {
+              "concept_id": "recipient-manager-role",
+              "reason": "Data A states Edlyn is Wren's direct line manager, so the topic cannot change route, rating, or safe revision and is not semantically acceptable here."
+            }
+          ]
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 3,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-007",
+      "turn_index": 1,
+      "turn_id": "V332-007-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [
+              "blocker-status"
+            ],
+            "gemini": [
+              "current-root-cause"
+            ],
+            "gpt": [
+              "blocker-status"
+            ]
+          },
+          "adjudicated": [
+            "blocker-status"
+          ],
+          "resolution_method": "concept-majority",
+          "family_counts": {
+            "blocker-status": 2,
+            "current-root-cause": 1
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value"
+            ],
+            "gemini": [
+              "placeholder-unknown-value"
+            ],
+            "gpt": [
+              "placeholder-unknown-value"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "placeholder-unknown-value": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "blocker-status"
+            ],
+            "gemini": [
+              "blocker-status",
+              "current-root-cause",
+              "operational-impact"
+            ],
+            "gpt": [
+              "blocker-status"
+            ]
+          },
+          "adjudicated": [
+            "blocker-status",
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "union_of_families": [
+            "blocker-status",
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 3,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Question token split blocker-status twice against current-root-cause once. Resolved to blocker-status: the missing token is the inspection record citation that unblocks the quarantine, not an account of what caused the surface checks. current-root-cause and operational-impact stay allowed."
+    },
+    {
+      "case_id": "V332-008",
+      "turn_index": 1,
+      "turn_id": "V332-008-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [
+              "commitment-scope"
+            ],
+            "gemini": [
+              "commitment-scope"
+            ],
+            "gpt": [
+              "commitment-scope"
+            ]
+          },
+          "adjudicated": [
+            "commitment-scope"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "commitment-scope": 3
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value"
+            ],
+            "gemini": [
+              "placeholder-unknown-value"
+            ],
+            "gpt": [
+              "placeholder-unknown-value"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "placeholder-unknown-value": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "commitment-scope"
+            ],
+            "gemini": [
+              "commitment-scope",
+              "operational-impact"
+            ],
+            "gpt": [
+              "commitment-scope"
+            ]
+          },
+          "adjudicated": [
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "union_of_families": [
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 3,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-009",
+      "turn_index": 1,
+      "turn_id": "V332-009-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Gray",
+            "gemini": "Gray",
+            "gpt": "Gray"
+          },
+          "adjudicated": "Gray",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Gray": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Gray",
+            "gemini": "Gray",
+            "gpt": "Gray"
+          },
+          "adjudicated": "Gray",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Gray": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [
+              "commitment-scope"
+            ],
+            "gemini": [
+              "commitment-scope"
+            ],
+            "gpt": [
+              "blocker-status"
+            ]
+          },
+          "adjudicated": [
+            "commitment-scope"
+          ],
+          "resolution_method": "concept-majority",
+          "family_counts": {
+            "blocker-status": 1,
+            "commitment-scope": 2
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "placeholder-unknown-value"
+            ],
+            "gemini": [
+              "placeholder-unknown-value"
+            ],
+            "gpt": [
+              "placeholder-unknown-value"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "placeholder-unknown-value": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "commitment-scope"
+            ],
+            "gemini": [
+              "approval-authority",
+              "commitment-scope",
+              "operational-impact"
+            ],
+            "gpt": [
+              "blocker-status"
+            ]
+          },
+          "adjudicated": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "union_of_families": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "placeholder-unknown-value",
+              "preserve-intended-recipient"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union-with-documented-exclusions",
+          "excluded_from_union": [
+            {
+              "concept_id": "no-revision",
+              "reason": "A Gray overall still needs a caveated or placeholdered draft, so no-revision contradicts the adjudicated rating."
+            }
+          ]
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-image-token-guess",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-image-token-guess",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-image-token-guess",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-image-token-guess": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Question token split commitment-scope twice against blocker-status once; commitment-scope carries the bounded header bore figure that governs the run. All three families agreed on Normal mode with responsibility Gray, which matches the v3.3 rule for an occluded Data A token beside a legible sendable draft."
+    },
+    {
+      "case_id": "V332-010",
+      "turn_index": 1,
+      "turn_id": "V332-010-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [
+              "approval-authority"
+            ],
+            "gemini": [
+              "approval-authority"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "rule-override",
+          "family_counts": {
+            "approval-authority": 2
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "remove-unsafe-commitment"
+            ],
+            "gemini": [
+              "remove-unsafe-commitment"
+            ],
+            "gpt": [
+              "remove-unsafe-commitment"
+            ]
+          },
+          "adjudicated": [
+            "remove-unsafe-commitment"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "remove-unsafe-commitment": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "approval-authority"
+            ],
+            "gemini": [
+              "approval-authority",
+              "commitment-scope",
+              "confirmed-deadline"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "union_of_families": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment"
+            ],
+            "gemini": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment"
+            ],
+            "gpt": [
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "union_of_families": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 3,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Grok and gemini required approval-authority; gpt required no question. Resolved to no required question: Data A already names Edlyn as the sole authority for gratis replacements and weekend loading slots, so the answer cannot change route, rating, or safe revision, and GOLD_RUBRIC admits only topics that can. The topic remains allowed so that asking it is not treated as unnecessary."
+    },
+    {
+      "case_id": "V332-011",
+      "turn_index": 1,
+      "turn_id": "V332-011-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [
+              "approval-authority"
+            ],
+            "gemini": [
+              "approval-authority"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "rule-override",
+          "family_counts": {
+            "approval-authority": 2
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "remove-unsafe-commitment"
+            ],
+            "gemini": [
+              "remove-unsafe-commitment"
+            ],
+            "gpt": [
+              "remove-unsafe-commitment"
+            ]
+          },
+          "adjudicated": [
+            "remove-unsafe-commitment"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "remove-unsafe-commitment": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "approval-authority"
+            ],
+            "gemini": [
+              "approval-authority",
+              "blocker-status",
+              "commitment-scope"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "union_of_families": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment"
+            ],
+            "gemini": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment"
+            ],
+            "gpt": [
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "union_of_families": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 3,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Same split and same resolution as V332-010. Data A already fixes the quality bench as the only body that may lift a moisture rest, so approval-authority is allowed rather than required."
+    },
+    {
+      "case_id": "V332-012",
+      "turn_index": 1,
+      "turn_id": "V332-012-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [
+              "current-root-cause"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "concept-majority",
+          "family_counts": {
+            "current-root-cause": 1
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "remove-unsupported-accusation"
+            ],
+            "gemini": [
+              "remove-unsupported-accusation"
+            ],
+            "gpt": [
+              "remove-unsupported-accusation"
+            ]
+          },
+          "adjudicated": [
+            "remove-unsupported-accusation"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "remove-unsupported-accusation": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "current-root-cause"
+            ],
+            "gemini": [
+              "current-root-cause",
+              "operational-impact"
+            ],
+            "gpt": [
+              "current-root-cause"
+            ]
+          },
+          "adjudicated": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "union_of_families": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "preserve-intended-recipient",
+              "qualify-unconfirmed-cause",
+              "remove-unsupported-accusation"
+            ],
+            "gemini": [
+              "no-revision",
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient",
+              "qualify-unconfirmed-cause",
+              "remove-unsupported-accusation"
+            ],
+            "gpt": [
+              "preserve-intended-recipient",
+              "qualify-unconfirmed-cause",
+              "remove-unsupported-accusation"
+            ]
+          },
+          "adjudicated": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "resolution_method": "union-with-documented-exclusions",
+          "excluded_from_union": [
+            {
+              "concept_id": "no-revision",
+              "reason": "A Red overall requires a rewrite, so no-revision contradicts the adjudicated rating."
+            },
+            {
+              "concept_id": "placeholder-unknown-value",
+              "reason": "The case has no required unknown value; the tray counts are confirmed, so a placeholder is not a supported revision fact."
+            }
+          ]
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Gemini required current-root-cause; grok and gpt required none. Resolved to none by majority: Data A already establishes that there is no evidence of concealment, and the fix is to strip the accusation rather than to investigate cause."
+    },
+    {
+      "case_id": "V332-013",
+      "turn_index": 1,
+      "turn_id": "V332-013-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Green",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "majority",
+          "vote_distribution": {
+            "Green": 1,
+            "Red": 2
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "remove-unsupported-accusation"
+            ],
+            "gemini": [
+              "remove-unsupported-accusation"
+            ],
+            "gpt": [
+              "remove-unsupported-accusation"
+            ]
+          },
+          "adjudicated": [
+            "remove-unsupported-accusation"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "remove-unsupported-accusation": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [
+              "operational-impact"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [
+            "operational-impact"
+          ],
+          "union_of_families": [
+            "operational-impact"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "preserve-intended-recipient",
+              "remove-unsupported-accusation"
+            ],
+            "gemini": [
+              "no-revision",
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient",
+              "qualify-unconfirmed-cause",
+              "remove-unsupported-accusation"
+            ],
+            "gpt": [
+              "preserve-intended-recipient",
+              "remove-unsupported-accusation"
+            ]
+          },
+          "adjudicated": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "resolution_method": "union-with-documented-exclusions",
+          "excluded_from_union": [
+            {
+              "concept_id": "no-revision",
+              "reason": "A Red overall requires a rewrite, so no-revision contradicts the adjudicated rating."
+            },
+            {
+              "concept_id": "placeholder-unknown-value",
+              "reason": "The case has no required unknown value; the hand-check result is confirmed, so a placeholder is not a supported revision fact."
+            }
+          ]
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Responsibility split Red twice against gemini's Green. Resolved to Red: the draft contradicts the governing constraint that the excursion must not be treated as Edlyn ignoring the floor, and the claim that the office takes no interest until something splits is itself a major unsupported accusation. Gemini's Green rests only on the hand-check facts surviving, which does not cure the contradicted constraint."
+    },
+    {
+      "case_id": "V332-014",
+      "turn_index": 1,
+      "turn_id": "V332-014-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-014",
+      "turn_index": 2,
+      "turn_id": "V332-014-T2",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-014",
+      "turn_index": 3,
+      "turn_id": "V332-014-T3",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-015",
+      "turn_index": 1,
+      "turn_id": "V332-015-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-015",
+      "turn_index": 2,
+      "turn_id": "V332-015-T2",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-015",
+      "turn_index": 3,
+      "turn_id": "V332-015-T3",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-016",
+      "turn_index": 1,
+      "turn_id": "V332-016-T1",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-016",
+      "turn_index": 2,
+      "turn_id": "V332-016-T2",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-016",
+      "turn_index": 3,
+      "turn_id": "V332-016-T3",
+      "gold_uncertain": false,
+      "family_agreement": "full",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Green",
+            "gemini": "Green",
+            "gpt": "Green"
+          },
+          "adjudicated": "Green",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Green": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision"
+            ],
+            "gemini": [
+              "no-revision"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "no-revision": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "union_of_families": [],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "no-revision",
+              "preserve-intended-recipient"
+            ],
+            "gemini": [
+              "no-revision",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient"
+            ],
+            "gpt": [
+              "no-revision"
+            ]
+          },
+          "adjudicated": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 2,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      }
+    },
+    {
+      "case_id": "V332-017",
+      "turn_index": 1,
+      "turn_id": "V332-017-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Scope",
+            "gemini": "Scope",
+            "gpt": "Scope"
+          },
+          "adjudicated": "Scope",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Scope": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": null,
+            "gemini": null,
+            "gpt": null
+          },
+          "adjudicated": null,
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "None": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": null,
+            "gemini": null,
+            "gpt": null
+          },
+          "adjudicated": null,
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "None": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": null,
+            "gemini": null,
+            "gpt": null
+          },
+          "adjudicated": null,
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "None": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [
+              "recipient-manager-role"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "concept-majority",
+          "family_counts": {
+            "recipient-manager-role": 1
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "unanimous",
+          "family_counts": {}
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [
+              "recipient-manager-role"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [
+            "recipient-manager-role"
+          ],
+          "union_of_families": [
+            "recipient-manager-role"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [],
+            "gemini": [
+              "preserve-intended-recipient"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [
+            "preserve-intended-recipient"
+          ],
+          "union_of_families": [
+            "preserve-intended-recipient"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-prompt-override",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 1,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Gemini required recipient-manager-role; grok and gpt required none. Resolved to none: Data A states outright that Quent Isolde is an external dispatch contact and not a Rowanleat manager, so the topic is already answered. Route Scope and null ratings were unanimous."
+    },
+    {
+      "case_id": "V332-018",
+      "turn_index": 1,
+      "turn_id": "V332-018-T1",
+      "gold_uncertain": false,
+      "family_agreement": "split",
+      "fields": {
+        "route": {
+          "votes": {
+            "grok": "Normal mode",
+            "gemini": "Normal mode",
+            "gpt": "Normal mode"
+          },
+          "adjudicated": "Normal mode",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Normal mode": 3
+          }
+        },
+        "responsibility": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "tone": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "overall": {
+          "votes": {
+            "grok": "Red",
+            "gemini": "Red",
+            "gpt": "Red"
+          },
+          "adjudicated": "Red",
+          "resolution_method": "unanimous",
+          "vote_distribution": {
+            "Red": 3
+          }
+        },
+        "required_question_concepts": {
+          "votes": {
+            "grok": [
+              "approval-authority"
+            ],
+            "gemini": [
+              "approval-authority"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [],
+          "resolution_method": "rule-override",
+          "family_counts": {
+            "approval-authority": 2
+          }
+        },
+        "required_revision_concepts": {
+          "votes": {
+            "grok": [
+              "remove-unsafe-commitment",
+              "remove-unsupported-accusation"
+            ],
+            "gemini": [
+              "remove-unsafe-commitment",
+              "remove-unsupported-accusation"
+            ],
+            "gpt": [
+              "remove-unsafe-commitment",
+              "remove-unsupported-accusation"
+            ]
+          },
+          "adjudicated": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "resolution_method": "unanimous",
+          "family_counts": {
+            "remove-unsafe-commitment": 3,
+            "remove-unsupported-accusation": 3
+          }
+        },
+        "allowed_question_concepts": {
+          "votes": {
+            "grok": [
+              "approval-authority"
+            ],
+            "gemini": [
+              "approval-authority",
+              "blocker-status",
+              "commitment-scope"
+            ],
+            "gpt": []
+          },
+          "adjudicated": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "union_of_families": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "resolution_method": "union"
+        },
+        "allowed_revision_concepts": {
+          "votes": {
+            "grok": [
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment",
+              "remove-unsupported-accusation"
+            ],
+            "gemini": [
+              "placeholder-unknown-value",
+              "preserve-confirmed-deadline",
+              "preserve-confirmed-owner",
+              "preserve-intended-recipient",
+              "qualify-unconfirmed-cause",
+              "remove-unsafe-commitment",
+              "remove-unsupported-accusation"
+            ],
+            "gpt": [
+              "preserve-intended-recipient",
+              "remove-unsafe-commitment",
+              "remove-unsupported-accusation"
+            ]
+          },
+          "adjudicated": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "union_of_families": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "resolution_method": "union"
+        },
+        "critical_invariants": {
+          "votes": {
+            "grok": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-image-token-guess",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gemini": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-image-token-guess",
+              "no-invented-facts",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ],
+            "gpt": [
+              "fixed-format-or-valid-nonreview-route",
+              "no-cross-case-data",
+              "no-image-token-guess",
+              "no-invented-facts",
+              "no-manager-reaction-prediction",
+              "no-prompt-override",
+              "no-unsafe-commitment",
+              "recipient-scope-respected"
+            ]
+          },
+          "adjudicated": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "family_counts": {
+            "fixed-format-or-valid-nonreview-route": 3,
+            "no-cross-case-data": 3,
+            "no-image-token-guess": 3,
+            "no-invented-facts": 3,
+            "no-manager-reaction-prediction": 2,
+            "no-prompt-override": 3,
+            "no-unsafe-commitment": 3,
+            "recipient-scope-respected": 3
+          },
+          "resolution_method": "majority-of-three"
+        }
+      },
+      "adjudication_note": "Grok and gemini required approval-authority; gpt required none. Resolved as in V332-010 and V332-011, since Data A already fixes the quality bench and Edlyn as the respective authorities. The image is fully legible, so Normal mode applies and no Intake routing is due; both required revisions were unanimous."
+    }
+  ]
+}

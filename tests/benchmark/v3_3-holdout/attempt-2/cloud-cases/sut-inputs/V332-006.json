@@ -1,0 +1,35 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V332-006",
+  "recipient_context": {
+    "recipient_name": "Edlyn Marrow",
+    "recipient_role": "punching-room manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "punching-room coordinator",
+    "organization": "Rowanleat Cork Works",
+    "site": "Braydon Cut punching rooms",
+    "situation": "Consignment note CN-451 has a corrected tray count and cannot be released until Edlyn knows which named person at the client should receive it.",
+    "known_facts": [
+      "CN-451 originally showed 16 trays; the physical count is 18 trays of 26 mm stoppers.",
+      "The corrected note is ready to issue.",
+      "Edlyn will not release a corrected consignment note until the intended receiving person is named.",
+      "Wren was told the receiving person's name and post at House Oxbow Cellars, but that name is not in any SUT-visible field.",
+      "The note is not a general broadcast to the client."
+    ],
+    "constraints": [
+      "Do not invent a receiving person.",
+      "Do not release CN-451 as an unaddressed client mailing."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this CN-451 correction note to Edlyn. I need her to release the corrected consignment note.\n\nDraft under review:\nEdlyn \u2014 The tray count on CN-451 is 18, not 16. The corrected consignment note is ready. Please release it so I can issue the correction. Wren Calloway, punching-room coordinator."
+    }
+  ]
+}

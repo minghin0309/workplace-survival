@@ -84,11 +84,17 @@ Publish the files listed below. Do not publish local files excluded by `.gitigno
 - `tests/benchmark/v3_3/revision_scoring_contract.py`
 - `tests/benchmark/v3_3/test_revision_scoring_contract.py`
 - `tests/benchmark/v3_3/V33_ATTEMPT1_CASE_BRIEF.md`
+- `tests/benchmark/v3_3/V332_ATTEMPT2_CASE_BRIEF.md`
 - `tests/benchmark/v3_3-holdout/V33_HOLDOUT_PLAN.md`
 - `tests/benchmark/v3_3-holdout/V33_HOLDOUT_STATUS.md`
 - `tests/benchmark/v3_3-holdout/validate_holdout.py`
 - `tests/benchmark/v3_3-holdout/GOLD_LABELING_BRIEF.md`
 - `tests/benchmark/v3_3-holdout/GOLD_ADJUDICATION_BRIEF.md`
+- `tests/benchmark/v3_3-holdout/attempt-2/V332_HOLDOUT_PLAN.md`
+- `tests/benchmark/v3_3-holdout/attempt-2/V332_HOLDOUT_STATUS.md`
+- `tests/benchmark/v3_3-holdout/attempt-2/validate_holdout.py`
+- `tests/benchmark/v3_3-holdout/attempt-2/GOLD_LABELING_BRIEF.md`
+- `tests/benchmark/v3_3-holdout/attempt-2/GOLD_ADJUDICATION_BRIEF.md
 - `tests/benchmark/v3_2-holdout/V32_CASE_BRIEF.md`
 - `tests/benchmark/v3_2-holdout/V32_HOLDOUT_PLAN.md`
 - `tests/benchmark/v3_2-holdout/V32_HOLDOUT_STATUS.md`

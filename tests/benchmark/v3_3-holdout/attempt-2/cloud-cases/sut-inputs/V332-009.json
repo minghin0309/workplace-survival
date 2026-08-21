@@ -1,0 +1,36 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V332-009",
+  "recipient_context": {
+    "recipient_name": "Edlyn Marrow",
+    "recipient_role": "punching-room manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "punching-room coordinator",
+    "organization": "Rowanleat Cork Works",
+    "site": "Braydon Cut punching rooms",
+    "situation": "A special-order punching run is booked on line 3 this afternoon; the bore figure lives only on the punching-room header strip.",
+    "known_facts": [
+      "Line 3 is free after 14:00 today.",
+      "Trays C-20, C-21 and C-22 are reserved for the special-order run.",
+      "Edlyn sets the punching die from the header bore figure before the run starts.",
+      "The header strip is the only place the bore figure was recorded.",
+      "Wren holds the millimetre figure and it is not written in any text field."
+    ],
+    "constraints": [
+      "Do not invent a millimetre figure.",
+      "Do not set a die without Edlyn confirming the header bore."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review the on-screen draft to Edlyn before I send it. Line 3's special-order run needs her confirmation this afternoon.",
+      "image_path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/images/V332-009.png"
+    }
+  ]
+}

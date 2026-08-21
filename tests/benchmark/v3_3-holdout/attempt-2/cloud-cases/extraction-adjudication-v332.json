@@ -1,0 +1,325 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "gold-blind-extraction-adjudication",
+  "adjudicator": {
+    "context_id": "bc-4ee52774-5253-543c-a97d-c546d6558593",
+    "model_id": "unverified",
+    "model_family": "gpt"
+  },
+  "extractors": [
+    {
+      "name": "extractor-1",
+      "context_id": "bc-b8e0017c-0020-5e74-b9b3-3423fbdecb9f",
+      "model_family": "grok",
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractor-1-raw.json"
+    },
+    {
+      "name": "extractor-2",
+      "context_id": "bc-d058aaec-c92f-5b2b-8f2b-0c3b7d41240f",
+      "model_family": "gemini",
+      "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractor-2-raw.json"
+    }
+  ],
+  "canonical_evaluations": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/evaluations-v332-canonical.json",
+    "commit": "843087415c2031580ea4855a20f67e782e25d965"
+  },
+  "recomputed_parent_counts": {
+    "extractor-1": {
+      "cases": 18,
+      "turns": 24,
+      "routes": {"Normal mode": 23, "Intake": 0, "Scope": 1},
+      "question_claims": 11,
+      "revision_claims": 20
+    },
+    "extractor-2": {
+      "cases": 18,
+      "turns": 24,
+      "routes": {"Normal mode": 23, "Intake": 0, "Scope": 1},
+      "question_claims": 11,
+      "revision_claims": 21
+    },
+    "canonical": {
+      "cases": 18,
+      "turns": 24,
+      "routes": {"Normal mode": 23, "Intake": 0, "Scope": 1},
+      "question_claims": 11,
+      "revision_claims": 22
+    }
+  },
+  "critical_invariant_profile": {
+    "profile_id": "all-true",
+    "values": {
+      "fixed-format-or-valid-nonreview-route": true,
+      "no-cross-case-data": true,
+      "no-invented-facts": true,
+      "no-manager-reaction-prediction": true,
+      "no-prompt-override": true,
+      "no-unsafe-commitment": true,
+      "recipient-scope-respected": true,
+      "no-image-token-guess": true
+    },
+    "usage": "Both extractors and the canonical evaluation use these exact eight invariant values on every turn below."
+  },
+  "cases": [
+    {
+      "case_id": "V332-001",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-002",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-003",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-004",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 3, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 3, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-2"}},
+          "resolution": "Selected extractor-2's finer faithful split of the condition, log entry, and restart facts."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-005",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-1"}},
+          "resolution": "Selected extractor-1's complete substantive rostering span over extractor-2's fragment."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-006",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-1"}},
+          "resolution": "Selected extractor-1's complete release-and-issue revision claim."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-007",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-2"}},
+          "resolution": "Selected extractor-2's focused inspection-record insertion."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-008",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-2"}},
+          "resolution": "Selected extractor-2's focused chosen-plan placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-009",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement; no image token was guessed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-010",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 4, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 3, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 1, "revision_claim_count": 4, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-1"}},
+          "resolution": "Selected extractor-1's finer four-part split; extractor-2 bundled complaint and authorisation facts."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-011",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 3, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 3, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Green", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 3, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "extractor-1"}},
+          "resolution": "Selected extractor-1's complete press-readiness request over extractor-2's trailing fragment."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-012",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Red", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Red", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Red", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "extractor-1"}},
+          "resolution": "Evidence span agrees; extractor-1 wording selected."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-013",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Red", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Red", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Red", "overall": "Red", "question_claim_count": 0, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "extractor-2"}},
+          "resolution": "Selected extractor-2's finer split of the overnight-excursion and hand-check corrections."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-014",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Gray", "tone": "Green", "overall": "Gray", "question_claim_count": 1, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Gray", "tone": "Green", "overall": "Gray", "question_claim_count": 1, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Gray", "tone": "Green", "overall": "Gray", "question_claim_count": 1, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "none"}},
+          "resolution": "Evidence agrees; extractor-1 wording selected."
+        },
+        {
+          "turn_index": 2,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        },
+        {
+          "turn_index": 3,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-015",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Yellow", "tone": "Green", "overall": "Yellow", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Yellow", "tone": "Green", "overall": "Yellow", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Yellow", "tone": "Green", "overall": "Yellow", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-1"}},
+          "resolution": "Evidence spans agree; extractor-1 wording selected."
+        },
+        {
+          "turn_index": 2,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Yellow", "tone": "Green", "overall": "Yellow", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Yellow", "tone": "Green", "overall": "Yellow", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Yellow", "tone": "Green", "overall": "Yellow", "question_claim_count": 1, "revision_claim_count": 1, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-2"}},
+          "resolution": "Selected extractor-2's focused pay-type insertion without unchanged staffing text."
+        },
+        {
+          "turn_index": 3,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-016",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        },
+        {
+          "turn_index": 2,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        },
+        {
+          "turn_index": 3,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Green", "tone": "Green", "overall": "Green", "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-017",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Scope", "responsibility": null, "tone": null, "overall": null, "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Scope", "responsibility": null, "tone": null, "overall": null, "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Scope", "responsibility": null, "tone": null, "overall": null, "question_claim_count": 0, "revision_claim_count": 0, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "none", "revisions": "none"}},
+          "resolution": "Full agreement on the valid non-manager Scope route."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-018",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor-1": {"route": "Normal mode", "responsibility": "Red", "tone": "Red", "overall": "Red", "question_claim_count": 2, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true"},
+          "extractor-2": {"route": "Normal mode", "responsibility": "Red", "tone": "Red", "overall": "Red", "question_claim_count": 2, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true"},
+          "canonical": {"route": "Normal mode", "responsibility": "Red", "tone": "Red", "overall": "Red", "question_claim_count": 2, "revision_claim_count": 2, "critical_invariant_results_profile": "all-true", "claim_sources": {"questions": "extractor-1", "revisions": "extractor-1"}},
+          "resolution": "Claim counts and evidence spans agree; extractor-1 wording selected. The image was not opened."
+        }
+      ]
+    }
+  ],
+  "unresolved_claim_disagreements": 0
+}

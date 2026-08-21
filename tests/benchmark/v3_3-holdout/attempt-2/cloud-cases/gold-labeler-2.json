@@ -1,0 +1,803 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v332-holdout-cloud-attempt2",
+  "labeler_id": "gold-labeler-2",
+  "model_family": "gemini",
+  "case_count": 18,
+  "turn_count": 24,
+  "cases": [
+    {
+      "case_id": "V332-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "End-of-shift status note accurately conveys all job facts inside coordinator role and requires no changes."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Overtime approval request accurately conveys named staff, hours, wage, and operational moisture risk without assuming prior approval."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Branding iron update is factual, confirms test results, and preserves the scheduled branding date."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Under v3.3 omission rules, the draft asks to record the die changeover in the log but omits the required authorising person's name held off-record, defeating the execution step."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Under v3.3 omission rules, rostering the loading-bay clerk requires the collection time held off-record; omitting it in the draft defeats the purpose of the note."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-owner"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-owner",
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Under v3.3 omission rules, releasing the corrected consignment note requires naming the receiving person at the client, which is omitted from the draft."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "current-root-cause"
+          ],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Under v3.3 omission rules, quarantining the tray requires citing the inspection record identifier, which the draft omits despite Wren possessing it off-record."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Under v3.3 omission rules, instructing the floor requires naming which specific disposal plan was chosen; referencing an unstated plan defeats the purpose."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Under v3.3 rules, only the Data A background bore specification is occluded while Data B is fully legible; route stays Normal mode, responsibility is Gray, and tone is Green."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft makes unauthorized commitments to provide 2,000 free replacement stoppers and open a Saturday loading slot without manager approval."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft purports to skip the mandatory quality-bench moisture rest without authority, creating severe operational risk."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [
+            "current-root-cause"
+          ],
+          "allowed_question_concepts": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Tone and responsibility contain severe unsupported accusations and hostility toward the chamfering bench, accusing them of hiding scrap and altering tickets without evidence."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Tone is hostile, condescending, and insubordinate toward the manager and office staff."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial status note accurately conveys tray C-9 clear for branding."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Correction note accurately updates status with C-9 on hold and C-10 clear."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Final list accurately confirms C-10 clear and C-9 held on the stillage."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial request for two staff members' evening overtime is clear and accurate."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Updated request properly includes all three staff members."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Final version accurately specifies time-off-in-lieu rather than extra wages for all three workers."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial note requests Thursday slot for lot BK-2230 appropriately."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Revision updates delivery day to Friday accurately."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Final revision updates lot number to BK-2231 for Friday arrival."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [
+            "recipient-manager-role"
+          ],
+          "allowed_question_concepts": [
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Recipient Quent Isolde is an external client contact, not a manager; message is out of manager-review scope."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "On-screen draft is fully legible; contains unauthorized commitments overriding quality-bench rest and promising client collection, with hostile disparagement of the quality bench."
+        }
+      ]
+    }
+  ]
+}

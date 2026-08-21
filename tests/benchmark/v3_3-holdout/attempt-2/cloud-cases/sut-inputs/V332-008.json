@@ -1,0 +1,36 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V332-008",
+  "recipient_context": {
+    "recipient_name": "Edlyn Marrow",
+    "recipient_role": "punching-room manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "punching-room coordinator",
+    "organization": "Rowanleat Cork Works",
+    "site": "Braydon Cut punching rooms",
+    "situation": "Press 3 produced undersize discs this morning, and Edlyn asked Wren to tell her which of two already-discussed disposal plans to execute this afternoon.",
+    "known_facts": [
+      "Press 3 produced one tray of undersize agglomerated discs after the morning cycle.",
+      "Two disposal plans were already discussed with Edlyn.",
+      "One plan sends the discs back through press 1 for a second agglomeration cycle.",
+      "The other plan releases them as a lower grade to an outside drinks bottler.",
+      "Edlyn cannot instruct the floor until Wren names which plan to run.",
+      "Wren was told which plan to run and has not written the choice into any SUT-visible field."
+    ],
+    "constraints": [
+      "Do not invent which disposal plan was chosen.",
+      "Do not move the discs until Edlyn has the chosen plan."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this undersize-disc note to Edlyn. She asked me to tell her which disposal plan to run this afternoon.\n\nDraft under review:\nEdlyn \u2014 Press 3 produced a tray of undersize discs this morning. Please have those discs moved this afternoon under the plan we discussed. Wren Calloway, punching-room coordinator."
+    }
+  ]
+}

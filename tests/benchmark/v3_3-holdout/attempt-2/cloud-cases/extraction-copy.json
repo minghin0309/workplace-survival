@@ -1,0 +1,34 @@
+{
+  "schema_version": "v3.3-attempt2-extraction-copy",
+  "method": "git show",
+  "merged": false,
+  "holdout_branch": "cursor/blind-v332-holdout-17a0",
+  "extractors": [
+    {
+      "n": 1,
+      "family": "grok",
+      "context_id": "bc-b8e0017c-0020-5e74-b9b3-3423fbdecb9f",
+      "source_branch": "cursor/v332-extractor-grok-17a0",
+      "source_commit": "797795cd2c3dcda6a0507e3062a852f0a2fb123a",
+      "draft_pr": 103,
+      "raw_path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractor-1-raw.json",
+      "attestation_path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractor-1-attestation.json",
+      "cases": 18,
+      "turns": 24
+    },
+    {
+      "n": 2,
+      "family": "gemini",
+      "context_id": "bc-d058aaec-c92f-5b2b-8f2b-0c3b7d41240f",
+      "source_branch": "cursor/v332-extractor-gemini-17a0",
+      "source_commit": "82c0e2377e09fc44666bb54511b7cd24ce8facba",
+      "draft_pr": 104,
+      "raw_path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractor-2-raw.json",
+      "attestation_path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractor-2-attestation.json",
+      "raw_sha256": "df4a3f302d2afcc07554b17e8e65ad78c5a18978995f53d901a29946ba084ab6",
+      "attestation_sha256": "5bf9158c4c71706f055ac14944fce3499358553e5d7db258ec50a4ef60a5ba32",
+      "cases": 18,
+      "turns": 24
+    }
+  ]
+}

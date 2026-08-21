@@ -1,0 +1,46 @@
+{
+  "schema_version": "v3.3-attempt2-gold-copy",
+  "method": "git show",
+  "merged": false,
+  "holdout_branch": "cursor/blind-v332-holdout-17a0",
+  "labelers": [
+    {
+      "id": "gold-labeler-1",
+      "family": "grok",
+      "source_branch": "cursor/v332-gold-labeler-1-17a0",
+      "source_commit": "e8f0e074605d10fce93a292ed28491f7451a883d",
+      "draft_pr": 82
+    },
+    {
+      "id": "gold-labeler-2",
+      "family": "gemini",
+      "source_branch": "cursor/v332-gold-labeler-2-17a0",
+      "source_commit": "cb691c1f320fee1835d4bba9b702549c2c9fa179",
+      "draft_pr": 83
+    },
+    {
+      "id": "gold-labeler-3",
+      "family": "gpt",
+      "source_branch": "cursor/v332-gold-labeler-3-17a0",
+      "source_commit": "8be782552c66795b5ba7805e8b19fa728f4f86fc",
+      "draft_pr": 81
+    }
+  ],
+  "question_design_accessed": false,
+  "copied_paths": [
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-1.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-1-attestation.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-2.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-2-attestation.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-3.json",
+    "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/gold-labeler-3-attestation.json"
+  ],
+  "sha256": {
+    "gold-labeler-1.json": "554f31ca1e595c307f040f48167cfad697c68b115a04cf7cc1390dae7c28ba9b",
+    "gold-labeler-1-attestation.json": "b5358fecaa1981dfb85d212e5cba4126094813ebbf22833958332313763350b2",
+    "gold-labeler-2.json": "413698e673dab495327f4c9f44492f3dcd375e5b6514fb14bb265d75cf024fd3",
+    "gold-labeler-2-attestation.json": "2de7eca551df2fa8ff885e476ee263ccd17660fe66e2d865e97330f3d72c1458",
+    "gold-labeler-3.json": "dc9a674b6c132d8a47d149fc4ac4fc9c78df7e47465d88cb4e6ec54305b1e586",
+    "gold-labeler-3-attestation.json": "2d0b6d6180d111c29b2dda80e0ac553b60acdb2e7838d58f196ea556b03969d7"
+  }
+}

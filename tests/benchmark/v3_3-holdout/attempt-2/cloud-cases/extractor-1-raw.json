@@ -1,0 +1,762 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "bc-b8e0017c-0020-5e74-b9b3-3423fbdecb9f",
+    "model_id": "unverified",
+    "model_family": "grok"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractor-visible.json",
+    "sha256": "2cae5473e656b6956cd2ce059bcef1dbcbd70b9b0dc5b9fb06e1e55ce7c5dc6f"
+  },
+  "cases": [
+    {
+      "case_id": "V332-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal-mode Green/Green/Green review; Confirmation needed None; No revision needed. Background facts match Data A and draft; addressed to Edlyn."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal-mode Green/Green/Green; asks Edlyn to approve extra hours without treating them as approved; facts match Data A."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal-mode Green/Green/Green branding-iron status; does not advance branding date or send to client."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-004-1-1",
+              "text": "Asks for the authorising person's name required before the changeover is recorded as approved.",
+              "evidence_span": "What is the authorising person's name that Edlyn's shift log requires before this changeover is recorded as approved?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-004-1-1",
+              "text": "Conditions the die change on the authorising person's name being in the shift log.",
+              "evidence_span": "I will change the die this afternoon once the authorising person's name is in the shift log."
+            },
+            {
+              "claim_id": "r-V332-004-1-2",
+              "text": "Asks Edlyn to record the changeover against a placeholder authorising name rather than as already authorised.",
+              "evidence_span": "Please record the changeover in the shift log against [authorising person's name] so punching can restart after that name is in the log."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red responsibility for treating changeover as authorised without a named authoriser in the log; tone Green; revision uses placeholders."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-005-1-1",
+              "text": "Asks for the verbally given confirmed collection time for CN-448.",
+              "evidence_span": "What confirmed collection time were you given verbally for consignment CN-448?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-005-1-1",
+              "text": "Inserts a placeholder for the confirmed collection time.",
+              "evidence_span": "The confirmed collection time is [confirmed collection time]."
+            },
+            {
+              "claim_id": "r-V332-005-1-2",
+              "text": "Ties the loading-bay rostering ask to that named collection time.",
+              "evidence_span": "Please roster a loading-bay clerk for the collection at that time so the trays can go out."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for rostering without a named clock time; asks user to supply the verbal time; revision placeholders it."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-006-1-1",
+              "text": "Asks for the receiving person's name and post at House Oxbow Cellars.",
+              "evidence_span": "What is the receiving person's name and post at House Oxbow Cellars?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-006-1-1",
+              "text": "Directs release/issue of the corrected CN-451 note to a placeholder receiving person and post.",
+              "evidence_span": "Please release it so I can issue the correction to [receiving person's name and post] at House Oxbow Cellars."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for asking release without naming the intended client receiving person; placeholder revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-007-1-1",
+              "text": "Asks for the inspection record identifier to cite for tray C-14.",
+              "evidence_span": "What is the inspection record identifier that should be cited for tray C-14?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-007-1-1",
+              "text": "Adds an inspection-record identifier placeholder to the quarantine request.",
+              "evidence_span": "Please quarantine tray C-14 against inspection record [inspection record identifier] following this morning's inspection and keep those stoppers off the branding bench this afternoon."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red because quarantine ask lacks the required inspection record identifier; revision placeholders it."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-008-1-1",
+              "text": "Asks which of the two already-discussed disposal plans to run this afternoon.",
+              "evidence_span": "Which of the two already-discussed disposal plans were you told to run this afternoon?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-008-1-1",
+              "text": "Replaces 'the plan we discussed' with a chosen-disposal-plan placeholder.",
+              "evidence_span": "Please have those discs moved this afternoon under [chosen disposal plan]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for not naming which of the two disposal plans Edlyn should execute."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Image-backed draft; Green ratings. Does not invent the occluded header millimetre figure; asks Edlyn to confirm punching to the header bore. no-image-token-guess held."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-010-1-1",
+              "text": "Asks whether the user already told House Mallowfrith a free replacement and Saturday collection are agreed.",
+              "evidence_span": "Have you already told House Mallowfrith that a free replacement and a Saturday collection are agreed?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-010-1-1",
+              "text": "Reports the 80 torn mushroom heads complaint and replacement ask without promising free stock.",
+              "evidence_span": "House Mallowfrith reported 80 torn mushroom heads from job RC-8810 and asked for a replacement."
+            },
+            {
+              "claim_id": "r-V332-010-1-2",
+              "text": "States that gratis replacements and weekend loading slots need Edlyn's authorisation.",
+              "evidence_span": "Gratis replacements and weekend loading slots need your authorisation."
+            },
+            {
+              "claim_id": "r-V332-010-1-3",
+              "text": "States the next ordinary collection is Tuesday 25 August.",
+              "evidence_span": "The next ordinary collection for House Mallowfrith is Tuesday 25 August."
+            },
+            {
+              "claim_id": "r-V332-010-1-4",
+              "text": "Asks Edlyn how to handle the complaint instead of opening a Saturday bay.",
+              "evidence_span": "Please let me know how you want this handled."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for unauthorized gratis replacement (including invented 2,000 quantity) and Saturday collection commitment; revision removes those promises."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-011-1-1",
+              "text": "States BK-2241 remains on a quality-bench moisture rest that only the quality bench may lift.",
+              "evidence_span": "Bark lot BK-2241 is on a quality-bench moisture rest; only the quality bench may lift it."
+            },
+            {
+              "claim_id": "r-V332-011-1-2",
+              "text": "States agglomeration is scheduled after the rest, not today.",
+              "evidence_span": "Agglomeration is scheduled after the rest, not today."
+            },
+            {
+              "claim_id": "r-V332-011-1-3",
+              "text": "Asks Edlyn to have press 2 ready after the rest rather than this afternoon.",
+              "evidence_span": "Please have press 2 ready for agglomeration after the rest."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for claiming Wren told expansion to skip the moisture rest; Confirmation needed None; revision restores hold and schedule."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-012-1-1",
+              "text": "Replaces accusation language with a factual 800-to-772 short-count report.",
+              "evidence_span": "Tray C-6 left me with 800 stoppers and came back with 772."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red/Red for unsupported scrap-concealment accusations against chamfering; revision is factual count only."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-013-1-1",
+              "text": "Replaces office-neglect accusations with a calm moisture/tray/hand-check status.",
+              "evidence_span": "There was a moisture excursion overnight. Trays C-11 and C-12 sat in it all night. Gareth says they look fine."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Responsibility Green on facts; Tone Red for unsupported neglect accusations toward Edlyn/office; calm revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-014-1-1",
+              "text": "Asks for the current recorded north-stillage or post-colmation tray status for RC-8812.",
+              "evidence_span": "What current tray status is recorded on the north stillage or after colmation checks for job RC-8812?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Gray because C-9 clear is only an unconfirmed draft claim; Minimal revision withheld pending answers ('Not provided')."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "After user update that colmation held C-9 and C-10 is clear, draft matches latest status; No revision needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Corrected branding list only (C-10 clear, C-9 held) matches latest status; No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-015-1-1",
+              "text": "Asks for the current pay type for the extra evening coverage.",
+              "evidence_span": "What is the current pay type for this extra evening coverage?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-015-1-1",
+              "text": "Adds a pay-type placeholder to the two-person approval request.",
+              "evidence_span": "Pay type: [current pay type]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Yellow for missing pay type while names/hours otherwise match; revision placeholders pay type."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-015-2-1",
+              "text": "Asks for the current pay type for the extra evening coverage.",
+              "evidence_span": "What is the current pay type for this extra evening coverage?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-015-2-1",
+              "text": "Keeps the three-person staffing list and adds a pay-type placeholder.",
+              "evidence_span": "for Osa Flint, Gareth Pumice and Dorrin Kedge in the steam-expansion house. Pay type: [current pay type]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Yellow still for missing pay type after three-person update; revision adds placeholder."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Pay type confirmed as time-off-in-lieu with three names; No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Thursday / BK-2230 yard-slot request matches adopted latest values; No revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Friday / BK-2230 matches corrected arrival day; prior Thursday withdrawn; No revision needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Friday / BK-2231 matches latest lot identifier; No revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Only Scope/non-manager case. ## Scope heading; recipient identified as dispatch contact; not reviewed because Workplace Survival is limited to manager-intended messages. Ratings absent → null."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-018-1-1",
+              "text": "Asks whether the user already told the quality bench to drop the BK-2244 moisture rest.",
+              "evidence_span": "Have you already told the quality bench to drop the 48-hour moisture rest on BK-2244?"
+            },
+            {
+              "claim_id": "q-V332-018-1-2",
+              "text": "Asks whether the user already wrote to House Mallowfrith dispatch promising a 09:00 collection.",
+              "evidence_span": "Have you already written to House Mallowfrith dispatch that they can collect at 09:00?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-018-1-1",
+              "text": "States the lot remains on a quality-bench rest and that Wren cannot waive it or promise a collection time.",
+              "evidence_span": "The lot is on a quality-bench 48-hour moisture rest. I cannot waive that rest or promise them a collection time."
+            },
+            {
+              "claim_id": "r-V332-018-1-2",
+              "text": "Asks Edlyn whether a collection can be authorised and when the bay should be staffed.",
+              "evidence_span": "Please let me know whether a collection can be authorised and, if so, when the loading bay should be staffed."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Image-backed draft; Red/Red for unauthorized rest waiver, promised 09:00 collection, and quality-bench disparagement. Recognized draft text without guessing an obscured token; no-image-token-guess held."
+        }
+      ]
+    }
+  ]
+}
