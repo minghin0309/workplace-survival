@@ -1,0 +1,851 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v33-holdout-cloud-attempt1",
+  "case_count": 18,
+  "turn_count": 24,
+  "cases": [
+    {
+      "case_id": "V33-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Accurate beat-rating confirmation to line manager Calder Vossine matching all verified facts. No issues with responsibility or tone."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Factual and confirmed site-visit confirmation to workshop manager Calder Vossine. All dates, times, and scope align with approved plan."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Accurate goods-in notification to line manager Calder Vossine reflecting verified packing list details and storage location."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Under workshop standing order 12, overtime booking messages require the approving authority to be named; omitting the approver invalidates the booking and defeats the main purpose (v3.3 omission rule: Red). Tone is professional."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder requires a specific confirmed ready-date to forward to keepership, but the draft omits the date and merely says 'the confirmed date', defeating the core execution purpose (Red). Tone is professional."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-owner"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-owner",
+            "commitment-scope",
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder requires the specific keepership contact to be named before forwarding the winding card; omitting the contact's name defeats the execution purpose (Red). Tone is professional."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Standing order 8 requires citing the traceable source document for the leaf count to book a wheel cut; omitting the source name prevents booking (Red). Tone is professional."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "operational-impact",
+            "blocker-status"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The sendable draft is clearly distinct and readable in the image, but the background job card length token is occluded. Under v3.3 rules, the review remains in Normal mode, responsibility is Gray due to the unreadable background token, and the missing value is queried."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "commitment-scope"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "approval-authority"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder requires the specific chosen rewind option to raise a purchase order; referring generically to 'the selected rewind option' without naming it omits the governing execution token and defeats the main purpose (Red). Tone is professional."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The fitter lacks authority to authorize outside trades or instruct suppliers to invoice the keepership; this unauthorized financial and contractual commitment is a major execution risk (Red). Dismissive tone to manager ('Please just file the paperwork') presents communication risk (Yellow)."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Cancelling a posted public stoppage and reassigning another fitter exceeds the fitter's role and authority (only Calder may do so), creating a major operational/execution risk (Red). Tone is neutral."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsupported-accusation",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft contains hostile language and unsupported character accusations against a coworker ('lazy', 'sloppy', 'stay off my bench'), violating tone requirements (Red). Responsibility has communication/boundary issues (Yellow)."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact",
+            "blocker-status"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsupported-accusation",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft conveys the factual completion of the re-bush but uses hostile sarcasm and complaints directed at the line manager ('thanks for the priority', 'loved spending my lunch', 'look at the wear before you wave me up'), violating tone standards (Red)."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial wheel-cutting booking accurately reflects the user's initial stated parameters. Responsibility and tone are Green."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "preserve-confirmed-deadline"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft contains the uncorrected 120-tooth count directly contradicting the user's explicit correction to 96 teeth (Red). The confirmed date (26 August) is preserved. Tone is professional."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "preserve-confirmed-deadline"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft contradicts both the updated tooth count (96) and the updated cutting day (Friday 28 August 2026) provided in the user's latest correction (Red). The new date is preserved."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial rating note is consistent with the initial user message. Responsibility and tone are Green."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft contradicts user's explicit corrections regarding the rating-nut move (lowered one flat vs raised two flats) and daily rate (losing one second vs four seconds) (Red)."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft fails to reflect the confirmed stability on test and contradicts the corrected nut adjustment and rate (Red)."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial delivery notice accurately reflects the initial stated delivery details. Responsibility and tone are Green."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft states four 40 kg weights, directly contradicting the user's correction to three 45 kg weights (Red)."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft incorrectly treats the weights as pending arrival with old specifications, whereas they have arrived, are sound, and are stored on rack D (Red)."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "recipient-manager-role"
+          ],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Recipient Merrin Daske is an external supplier contact (sales liaison at Kellstrand Compensation Rods) and not a manager. The skill scope is strictly for messages to a manager, so this routes to Scope with null ratings."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "current-root-cause"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "preserve-intended-recipient",
+            "preserve-confirmed-owner",
+            "preserve-confirmed-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The draft contains unauthorized actions (silencing a public clock, levying keepership fees, ordering works orders) that exceed the fitter's authority (Red). It also contains hostile accusations and insults against the night winder ('careless', 'keep that winder off the barrel') (Red)."
+        }
+      ]
+    }
+  ]
+}
