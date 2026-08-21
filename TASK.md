@@ -437,6 +437,22 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - gold, matches, evaluations, ontology, scorer, and runtime Skill files are unchanged.
 - Evidence: `tests/benchmark/v3_2-holdout/attempt-3/SCORE_TRIAGE.md`.
 
+#### T14.18 — Benchmark methodology v3.3 revision scoring
+
+- [x] Completed
+
+- Source requirement: Attempt-3 triage H-001, H-003, G-001, and G-003. No product behavior change. No rescore of v3.2 attempt 1–3, v3.1, or v2.
+- Owner files: `tests/benchmark/v3_3/`, `TASK.md`, `CHANGELOG.md`, and `PUBLISH_MANIFEST.md`.
+- Acceptance:
+  - empty Green `revision_claims` credit required `no-revision`;
+  - `preserve-intended-recipient` is not a scored required revision and cannot appear in gold required lists;
+  - established-omission question candidates must be gold Red; occluded Data B tokens must be gold Intake;
+  - v3.2 freeze-chain rules, thresholds, and `NOT_APPLICABLE` zero denominators remain;
+  - v3.2 attempt-3 score report and v3.2 scorer bytes are unchanged;
+  - unit and mutation tests kill disabled empty-credit, still-required recipient, and missing-envelope defects;
+  - validation uses synthetic fixtures plus frozen attempt-3 gold as a negative contract fixture.
+- Evidence: v3.3 methodology contract, unit results, mutation results, validation report, and archive note.
+
 ## Task template
 
 Copy this block when adding work:

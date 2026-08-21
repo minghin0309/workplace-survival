@@ -1,0 +1,27 @@
+{
+  "schema_version": "v3.3",
+  "baseline_passed": true,
+  "mutants": [
+    {
+      "mutation_id": "M1_PRESERVE_RECIPIENT_MAY_BE_REQUIRED",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": ".F.....F..\n======================================================================\nFAIL: test_attempt3_gold_fails_preserve_recipient_contract (tests.benchmark.v3_3.test_revision_scoring_contract.RevisionContractTests.test_attempt3_gold_fails_preserve_recipient_contract)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_3/test_revision_scoring_contract.py\", line 142, in test_attempt3_gold_fails_preserve_recipient_contract\n    with self.assertRaisesRegex(ValueError, \"preserve-intended-recipient\"):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_required_preserve_intended_recipient_fails (tests.benchmark.v3_3.test_revision_scoring_contract.RevisionContractTests.test_required_preserve_intended_recipient_fails)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_3/test_revision_scoring_contract.py\", line 63, in test_required_preserve_intended_recipient_fails\n    with self.assertRaisesRegex(ValueError, \"preserve-intended-recipient\"):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 10 tests in 0.003s\n\nFAILED (failures=2)\n"
+    },
+    {
+      "mutation_id": "M2_ESTABLISHED_OMISSION_MAY_BE_GRAY",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "...F......\n======================================================================\nFAIL: test_established_omission_requires_gold_red (tests.benchmark.v3_3.test_revision_scoring_contract.RevisionContractTests.test_established_omission_requires_gold_red)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_3/test_revision_scoring_contract.py\", line 76, in test_established_omission_requires_gold_red\n    with self.assertRaisesRegex(ValueError, \"established omission\"):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 10 tests in 0.003s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "mutation_id": "M3_OCCLUDED_ROLE_OPTIONAL",
+      "killed": true,
+      "return_code": 1,
+      "failure_excerpt": "....F.....\n======================================================================\nFAIL: test_image_only_requires_occluded_role (tests.benchmark.v3_3.test_revision_scoring_contract.RevisionContractTests.test_image_only_requires_occluded_role)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/tests/benchmark/v3_3/test_revision_scoring_contract.py\", line 95, in test_image_only_requires_occluded_role\n    with self.assertRaisesRegex(ValueError, \"occluded_role\"):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 10 tests in 0.004s\n\nFAILED (failures=1)\n"
+    }
+  ],
+  "killed": 3,
+  "total": 3,
+  "mutation_score": 1.0
+}
