@@ -470,7 +470,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - dual extraction and semantic matching precede a single v3.3 scorer invocation;
   - v3.2 attempt 3 is not rescored.
 - Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
-- Progress: construction `VALID`; gold frozen `VALID_COVERAGE` SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7`. SUT outputs frozen SHA-256 `700af74d2fcbe94a03ccaa15a9e756d423b971a6e10e8be280a2d7312184ba5b`. Extractor-1 grok copied (not merged). Extractor-2 gemini still running. v3.2 attempt 3 is not rescored.
+- Progress: construction `VALID`; gold frozen `VALID_COVERAGE` SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7`. SUT outputs frozen SHA-256 `700af74d2fcbe94a03ccaa15a9e756d423b971a6e10e8be280a2d7312184ba5b`. Dual gold-blind extractors copied (not merged). GPT extraction adjudicator next. v3.2 attempt 3 is not rescored.
 
 ## Task template
 
