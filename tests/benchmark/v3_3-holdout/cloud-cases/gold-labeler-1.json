@@ -1,0 +1,935 @@
+{
+  "labeler_id": "gold-labeler-1",
+  "envelope_version": "v3.3",
+  "suite_id": "v33-holdout-cloud-attempt1",
+  "model_family": "grok",
+  "case_count": 18,
+  "turn_count": 24,
+  "local_concept_definitions": {
+    "cite-leaf-count-source": {
+      "domain": "revision",
+      "description": "Name the traceable source document for the escape-wheel leaf count in the cutting-shop booking."
+    },
+    "correct-cutting-day": {
+      "domain": "revision",
+      "description": "Replace the stale cutting day with the latest confirmed cutting day."
+    },
+    "correct-daily-rate": {
+      "domain": "revision",
+      "description": "Replace the stale daily losing rate with the latest confirmed rate."
+    },
+    "correct-nut-move": {
+      "domain": "revision",
+      "description": "Replace the stale rating-nut move with the latest confirmed nut move."
+    },
+    "correct-tooth-count": {
+      "domain": "revision",
+      "description": "Replace the stale great-wheel tooth count with the latest confirmed count."
+    },
+    "correct-weight-count-mass": {
+      "domain": "revision",
+      "description": "Replace the stale weight count and mass with the latest confirmed order."
+    },
+    "finished-length-mm": {
+      "domain": "question",
+      "description": "Ask for the finished invar-rod length in millimetres to state in the draft."
+    },
+    "keepership-contact-name": {
+      "domain": "question",
+      "description": "Ask for the named keepership contact who should receive the forwarded winding card."
+    },
+    "leaf-count-source": {
+      "domain": "question",
+      "description": "Ask for the traceable source document of the escape-wheel leaf count."
+    },
+    "name-keepership-contact": {
+      "domain": "revision",
+      "description": "Name the keepership contact Calder should forward the winding card to."
+    },
+    "name-selected-rewind-option": {
+      "domain": "revision",
+      "description": "Name which already-costed rewind option parts should be ordered for."
+    },
+    "preserve-arrival-and-rack": {
+      "domain": "revision",
+      "description": "Keep the confirmed arrival state and rack storage location."
+    },
+    "preserve-beat-rating-facts": {
+      "domain": "revision",
+      "description": "Keep the confirmed beat-rating figures, nut move, and test duration."
+    },
+    "preserve-bench-state-facts": {
+      "domain": "revision",
+      "description": "Keep the factual unfinished gathering-pallet filing left on the shared bench."
+    },
+    "preserve-click-incident-facts": {
+      "domain": "revision",
+      "description": "Keep the factual bent-click report on the harbour clock after night winding."
+    },
+    "preserve-completion-facts": {
+      "domain": "revision",
+      "description": "Keep the factual re-bush completion on the named going train."
+    },
+    "preserve-floorboard-condition": {
+      "domain": "revision",
+      "description": "Keep the factual worn winding-stool floorboards report for manager handling."
+    },
+    "preserve-goods-in-facts": {
+      "domain": "revision",
+      "description": "Keep the packing-list match, spring type/count, and rack location."
+    },
+    "preserve-job-identity": {
+      "domain": "revision",
+      "description": "Keep the stated turret-clock or job identity."
+    },
+    "preserve-leaf-count-thirty": {
+      "domain": "revision",
+      "description": "Keep the confirmed escape-wheel leaf count of thirty."
+    },
+    "preserve-public-stoppage": {
+      "domain": "revision",
+      "description": "Keep the posted public stoppage and roster facts without cancelling or reassigning them."
+    },
+    "preserve-rating-stable-hold": {
+      "domain": "revision",
+      "description": "Keep the confirmed six-hour stable hold of the latest losing rate."
+    },
+    "preserve-silent-hours": {
+      "domain": "revision",
+      "description": "Keep the revised silent striking hours of 07:00 to 21:00."
+    },
+    "preserve-site-visit-facts": {
+      "domain": "revision",
+      "description": "Keep the approved visit time, spare-pallet location, and stand-off window."
+    },
+    "preserve-strike-stand-off-window": {
+      "domain": "revision",
+      "description": "Keep the booked strike stand-off window for the pallet change."
+    },
+    "selected-rewind-option": {
+      "domain": "question",
+      "description": "Ask which of the two already-costed rewind options was selected."
+    },
+    "state-approving-authority": {
+      "domain": "revision",
+      "description": "Name the approving authority that authorises the Saturday overtime booking."
+    },
+    "state-confirmed-ready-date": {
+      "domain": "revision",
+      "description": "State the confirmed ready-date for the compensated pendulum."
+    },
+    "state-finished-length-mm": {
+      "domain": "revision",
+      "description": "State the finished invar-rod length in millimetres in the sendable draft."
+    }
+  },
+  "cases": [
+    {
+      "case_id": "V33-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-beat-rating-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-scoped beat-rating note matches the given rate, nut move, and six-hour hold. No concrete responsibility or tone issue; Green/Green needs no rewrite."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-site-visit-facts",
+            "preserve-strike-stand-off-window"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Site-visit confirmation correctly states the approved pallet refit time, spare location, and stand-off window. No concrete issue; no revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-goods-in-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Goods-in note matches packing list KR-2281, spring count/type, rack location, and no-shortage status. Green/Green with no revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": ["approval-authority"],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "state-approving-authority"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "state-approving-authority"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Standing order 12 makes overtime booking depend on naming the approving authority. Data A establishes overtime is authorised but omits the name from SUT-visible fields, and the draft books the bench without naming that authority, so responsibility is Red for established omission defeating purpose. Ask for the authority; revise to name it or keep a placeholder; do not invent the name."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "state-confirmed-ready-date"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "state-confirmed-ready-date"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The note's purpose is to supply the confirmed ready-date Calder will forward. A confirmed date exists off-record but is absent from SUT-visible fields, and the draft only gestures at 'the confirmed date' without stating it, so responsibility is Red for established omission. Ask for the date; state it or placeholder; do not invent it."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["keepership-contact-name"],
+          "allowed_question_concepts": ["keepership-contact-name"],
+          "required_revision_concepts": [
+            "name-keepership-contact",
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "preserve-silent-hours"
+          ],
+          "allowed_revision_concepts": [
+            "name-keepership-contact",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-silent-hours"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder will forward only to one named keepership contact. The sender holds that name off-record, but the draft leaves the addressee generic, so responsibility is Red for established omission defeating forwarding purpose. Ask for the contact name; revise to name it or placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["leaf-count-source"],
+          "allowed_question_concepts": ["leaf-count-source"],
+          "required_revision_concepts": [
+            "cite-leaf-count-source",
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "preserve-leaf-count-thirty"
+          ],
+          "allowed_revision_concepts": [
+            "cite-leaf-count-source",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-leaf-count-thirty"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Standing order 8 requires the cutting-shop booking to cite the traceable source of the thirty-leaf count. The count is stated, but the source document is established as held off-record and omitted from the draft, so responsibility is Red for established omission. Ask for the source; cite it or placeholder; keep thirty leaves."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["finished-length-mm"],
+          "allowed_question_concepts": ["finished-length-mm"],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-job-identity",
+            "state-finished-length-mm"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "state-finished-length-mm"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Image-only case with a readable sendable draft, so route stays Normal. The finished-length millimetre token in the job-card background is occluded and is not stated in the draft or Data A packet, so responsibility is Gray on the missing length rather than Red established omission. Ask for the length; do not guess the occluded image token; revise with a stated length or placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["selected-rewind-option"],
+          "allowed_question_concepts": ["selected-rewind-option"],
+          "required_revision_concepts": [
+            "name-selected-rewind-option",
+            "placeholder-unknown-value",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "name-selected-rewind-option",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Parts ordering depends on naming which of the two costed rewind options was selected. A selection is established as made but absent from SUT-visible fields, and the draft orders 'the selected rewind option' without naming it, so responsibility is Red for established omission. Ask which option; name it or placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-floorboard-condition",
+            "preserve-job-identity",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-floorboard-condition",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The sender may not authorise keepership spending or instruct outside trades; Calder handles works orders. The draft authorises Barleywick's carpenter and directs keepership invoicing, a major unsafe commitment, so responsibility is Red. Tone is civil. Revise to report the floor condition and remove the unauthorised commitments."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-job-identity",
+            "preserve-public-stoppage",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-public-stoppage",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Only Calder may cancel a posted public stoppage or move another fitter's roster. The draft cancels the 2 September stoppage and reassigns Colm Yardrie, so responsibility is Red for unsafe unauthorised commitments. Tone is civil. Remove those commitments and preserve the posted stoppage facts."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-bench-state-facts",
+            "preserve-job-identity",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-bench-state-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Calder asked for a factual bench-sharing note. The draft instead calls Colm lazy and sloppy and tells him to stay off the bench, which is unsupported character accusation and hostile tone, so responsibility and tone are Red. Revise to the unfinished filing facts and remove the accusations."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-completion-facts",
+            "preserve-job-identity",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-completion-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "A short civil completion note was requested and the re-bush is complete, but the draft uses sarcasm and hostility toward Calder's earlier judgment. Tone is Red for explicit hostility; responsibility is Yellow for framing the completion as a personal rebuke rather than a factual note. Revise to a civil completion report and remove the unsupported dig."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial booking states 120 teeth on Wednesday 26 August 2026 and matches the first-turn facts. No concrete issue; no revision."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-tooth-count",
+            "preserve-confirmed-deadline",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-tooth-count",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest instruction confirms 96 teeth, but the supplied draft still books 120 teeth, a direct contradiction of the material cutting count. Responsibility is Red; tone remains civil. Revise the tooth count to 96 and keep Wednesday 26 August 2026."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-cutting-day",
+            "correct-tooth-count",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-cutting-day",
+            "correct-tooth-count",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest facts are 96 teeth on Friday 28 August 2026, but the draft still has 120 teeth on Wednesday 26 August. Responsibility is Red for contradicting both confirmed booking tokens. Revise count and day; do not invent other facts."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "First-turn rating note matches the stated raised-two-flats move and four-seconds-per-day losing rate. Green/Green with no revision."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-daily-rate",
+            "correct-nut-move",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-daily-rate",
+            "correct-nut-move",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest correction is lowered one flat and losing one second per day, but the draft still states raised two flats and four seconds. Responsibility is Red for contradicting the confirmed rating tokens. Revise both."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-daily-rate",
+            "correct-nut-move",
+            "preserve-job-identity",
+            "preserve-rating-stable-hold"
+          ],
+          "allowed_revision_concepts": [
+            "correct-daily-rate",
+            "correct-nut-move",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "preserve-rating-stable-hold"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest update keeps lowered-one-flat and one-second losing rate and adds a six-hour stable hold, but the draft still has the original raised-two-flats / four-seconds text. Responsibility is Red. Revise nut move, rate, and stable-hold fact."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "First-turn weight notice matches the stated four 40 kg weights still to arrive. Green/Green with no revision."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-weight-count-mass",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-weight-count-mass",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Latest order is three 45 kg weights, but the draft still says four 40 kg. Responsibility is Red for contradicting the confirmed delivery tokens. Revise count and mass."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "correct-weight-count-mass",
+            "preserve-arrival-and-rack",
+            "preserve-job-identity"
+          ],
+          "allowed_revision_concepts": [
+            "correct-weight-count-mass",
+            "preserve-arrival-and-rack",
+            "preserve-intended-recipient",
+            "preserve-job-identity"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Weights have arrived: three sound 45 kg weights on rack D. The draft still describes a future four 40 kg delivery, contradicting count, mass, and arrival/storage state. Responsibility is Red. Revise to the latest arrival facts."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Recipient Merrin Daske is an external supplier sales liaison, not a manager, and no manager is included. Route is Scope; ratings are null."
+        }
+      ]
+    },
+    {
+      "case_id": "V33-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-click-incident-facts",
+            "preserve-job-identity",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-click-incident-facts",
+            "preserve-intended-recipient",
+            "preserve-job-identity",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Fully readable image draft to the manager, so route is Normal. The draft calls the night winder careless, silences the public clock, levies a waste fee, and directs a works order and barrel ban—actions outside the fitter's authority and an unsupported character attack. Responsibility and tone are Red. Revise to a factual bent-click report and remove unsafe commitments and accusations."
+        }
+      ]
+    }
+  ]
+}
