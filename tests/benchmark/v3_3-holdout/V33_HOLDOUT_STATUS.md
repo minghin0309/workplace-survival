@@ -8,7 +8,7 @@
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v33-attempt1-cases-r8n3-17a0` @ `1c9a8da` (not merged) |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `b3e08901063eb2377285f0dac02501a9e07b34631182425e719addedb0d15bc7` (roles `gold` + `ontology` + `scorer`) |
-| SUT | wave 1–4 copied (V33-001–012); V33-014 and V33-015 copied. V33-013 still running. 016–018 queued. |
+| SUT | wave 1–5 copied (V33-001–015). wave 6 launched: V33-016, V33-017, V33-018 (isolated, not merged). Last wave. |
 | Formal score | not started |
 
 SUT wave 1 (do not merge):
@@ -47,7 +47,7 @@ SUT wave 5 (do not merge):
 
 | case | branch | agent id |
 | --- | --- | --- |
-| V33-013 | `cursor/v33-013-sut-17a0` | `bc-23cdcc5d-6327-5b4b-a398-ff6e0eb99707` |
+| V33-013 | `cursor/v33-013-sut-17a0` @ `9ea72e6` (draft PR #69) | `bc-23cdcc5d-6327-5b4b-a398-ff6e0eb99707` |
 | V33-014 | `cursor/v33-014-sut-17a0` @ `5d0a14f` (draft PR #68) | `bc-1a10f2f2-1cfe-564a-a583-8450ef1d7d52` |
 | V33-015 | `cursor/v33-015-sut-17a0` @ `fdd9af5` (draft PR #67) | `bc-5a99ccfd-3baa-5d24-a262-c6f4dbeb1b6b` |
 
