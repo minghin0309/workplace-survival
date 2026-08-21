@@ -35,9 +35,9 @@ Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design
 
 SUT wave 2 (do not merge):
 
-| case | intended branch | notes |
+| case | intended branch | agent id |
 | --- | --- | --- |
-| V332-004 | `cursor/v332-004-sut-17a0` | 1 turn, no image |
-| V332-005 | `cursor/v332-005-sut-17a0` | 1 turn, no image |
-| V332-006 | `cursor/v332-006-sut-17a0` | 1 turn, no image |
+| V332-004 | `cursor/v332-004-sut-17a0` | `bc-449ab87e-33a7-5f64-b53f-a8fdc2f79493` |
+| V332-005 | `cursor/v332-005-sut-17a0` | `bc-c09f4d73-2477-545e-a84d-d7360a2c0bd9` |
+| V332-006 | `cursor/v332-006-sut-17a0` | `bc-660b0ddc-a33a-575b-bd8e-19f541b1e0ea` |
 
