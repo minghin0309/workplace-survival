@@ -1,0 +1,35 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V332-002",
+  "recipient_context": {
+    "recipient_name": "Edlyn Marrow",
+    "recipient_role": "punching-room manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "punching-room coordinator",
+    "organization": "Rowanleat Cork Works",
+    "site": "Braydon Cut punching rooms",
+    "situation": "Opened bales from bark lot BK-2218 must finish steam-expansion tonight or weekend moisture will ruin them.",
+    "known_facts": [
+      "Bark lot BK-2218 is already opened in the steam-expansion house.",
+      "Osa Flint and Dorrin Kedge can stay from 16:30 to 18:30 today, 21 August 2026.",
+      "The extra wage for those two hours is \u00a384.",
+      "Edlyn Marrow is the person who approves extra hours in the punching rooms and expansion house.",
+      "If the opened bales sit through the weekend, the bark will take up moisture and the next agglomeration cycle will scrap."
+    ],
+    "constraints": [
+      "Ask Edlyn to approve the extra hours; do not treat them as already approved.",
+      "Do not add unpaid hours or extra people beyond Osa Flint and Dorrin Kedge."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Could you review this extra-hours request to Edlyn? I need her approval before Osa and Dorrin stay on.\n\nDraft under review:\nEdlyn \u2014 Opened bales from bark lot BK-2218 are in the steam-expansion house. If they sit through the weekend they will take up moisture and the next agglomeration cycle will scrap. Please approve two extra hours tonight, 16:30 to 18:30, for Osa Flint and Dorrin Kedge. The extra wage is \u00a384. Wren Calloway, punching-room coordinator."
+    }
+  ]
+}

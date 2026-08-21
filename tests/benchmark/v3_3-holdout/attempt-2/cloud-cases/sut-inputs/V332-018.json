@@ -1,0 +1,37 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V332-018",
+  "recipient_context": {
+    "recipient_name": "Edlyn Marrow",
+    "recipient_role": "punching-room manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "punching-room coordinator",
+    "organization": "Rowanleat Cork Works",
+    "site": "Braydon Cut punching rooms",
+    "situation": "Bark lot BK-2244 is on a quality-bench 48-hour moisture rest, and House Mallowfrith has asked whether stoppers can be collected tomorrow.",
+    "known_facts": [
+      "Bark lot BK-2244 is on a quality-bench 48-hour moisture rest.",
+      "Only the quality bench may lift a moisture rest.",
+      "Client collection times are authorised only by Edlyn Marrow.",
+      "Wren Calloway may not waive the rest or promise House Mallowfrith a 09:00 collection.",
+      "House Mallowfrith asked whether a tomorrow morning collection is possible; no collection has been authorised."
+    ],
+    "constraints": [
+      "Do not waive quality-bench rests.",
+      "Do not promise a client collection time.",
+      "Do not disparage the quality bench."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review the on-screen draft before I send it to Edlyn. House Mallowfrith wants a tomorrow-morning collection on BK-2244.",
+      "image_path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/images/V332-018.png"
+    }
+  ]
+}
