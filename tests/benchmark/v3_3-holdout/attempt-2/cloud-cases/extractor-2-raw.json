@@ -1,0 +1,767 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "bc-d058aaec-c92f-5b2b-8f2b-0c3b7d41240f",
+    "model_id": "unverified",
+    "model_family": "gemini"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-2/cloud-cases/extractor-visible.json",
+    "sha256": "2cae5473e656b6956cd2ce059bcef1dbcbd70b9b0dc5b9fb06e1e55ce7c5dc6f"
+  },
+  "cases": [
+    {
+      "case_id": "V332-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of end-of-shift status for job RC-8804. All dimensions Green; no clarification questions and no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of overtime approval request for BK-2218. All dimensions Green; no questions or revisions needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of branding iron status for job RC-8811. All dimensions Green; no questions or revisions needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-004-1-1",
+              "text": "Asks for authorising person's name required for shift log before changeover is recorded as approved",
+              "evidence_span": "What is the authorising person's name that Edlyn's shift log requires before this changeover is recorded as approved?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-004-1-1",
+              "text": "Conditions die change on authorising person's name being in shift log",
+              "evidence_span": "once the authorising person's name is in the shift log"
+            },
+            {
+              "claim_id": "r-V332-004-1-2",
+              "text": "Specifies recording changeover against authorising person's name placeholder",
+              "evidence_span": "against [authorising person's name]"
+            },
+            {
+              "claim_id": "r-V332-004-1-3",
+              "text": "Specifies punching restart after name is in the log",
+              "evidence_span": "after that name is in the log"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility rated Red because changeover and restart require authorising name in shift log. Asks for authorising name and includes placeholder in minimal revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-005-1-1",
+              "text": "Asks for confirmed collection time given verbally for consignment CN-448",
+              "evidence_span": "What confirmed collection time were you given verbally for consignment CN-448?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-005-1-1",
+              "text": "Adds placeholder for confirmed collection time",
+              "evidence_span": "The confirmed collection time is [confirmed collection time]."
+            },
+            {
+              "claim_id": "r-V332-005-1-2",
+              "text": "Conditions loading-bay clerk rostering at that time",
+              "evidence_span": "at that time"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility rated Red for omitting collection time required before rostering bay clerk. Question asks for collection time; minimal revision adds placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-006-1-1",
+              "text": "Asks for receiving person's name and post at House Oxbow Cellars",
+              "evidence_span": "What is the receiving person's name and post at House Oxbow Cellars?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-006-1-1",
+              "text": "Adds placeholder for receiving person's name and post at House Oxbow Cellars",
+              "evidence_span": "to [receiving person's name and post] at House Oxbow Cellars"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility rated Red because Edlyn requires receiving person name before releasing CN-451 correction. Question asks for name/post; minimal revision adds placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-007-1-1",
+              "text": "Asks for inspection record identifier that should be cited for tray C-14",
+              "evidence_span": "What is the inspection record identifier that should be cited for tray C-14?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-007-1-1",
+              "text": "Inserts inspection record placeholder into quarantine request",
+              "evidence_span": "against inspection record [inspection record identifier]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility rated Red because Edlyn requires inspection record identifier before quarantining C-14. Question asks for identifier; minimal revision adds placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-008-1-1",
+              "text": "Asks which of the two already-discussed disposal plans the user was told to run this afternoon",
+              "evidence_span": "Which of the two already-discussed disposal plans were you told to run this afternoon?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-008-1-1",
+              "text": "Replaces ambiguous plan reference with placeholder for chosen disposal plan",
+              "evidence_span": "under [chosen disposal plan]"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility rated Red because Edlyn needs chosen disposal plan named before instructing floor. Question asks which plan to run; minimal revision adds placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of on-screen draft for line 3 special-order run. All ratings Green; occluded header bore token was not guessed or inferred; no confirmation or revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-010-1-1",
+              "text": "Asks if user already told House Mallowfrith that a free replacement and a Saturday collection are agreed",
+              "evidence_span": "Have you already told House Mallowfrith that a free replacement and a Saturday collection are agreed?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-010-1-1",
+              "text": "States client requested replacement and gratis replacements/weekend slots require manager authorization",
+              "evidence_span": "asked for a replacement. Gratis replacements and weekend loading slots need your authorisation."
+            },
+            {
+              "claim_id": "r-V332-010-1-2",
+              "text": "Notes next ordinary collection date is Tuesday 25 August",
+              "evidence_span": "The next ordinary collection for House Mallowfrith is Tuesday 25 August."
+            },
+            {
+              "claim_id": "r-V332-010-1-3",
+              "text": "Requests manager guidance on how to handle complaint",
+              "evidence_span": "Please let me know how you want this handled."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility rated Red because draft made unauthorized promises of gratis 2,000 stoppers and Saturday collection. Minimal revision removes unauthorized commitments and requests manager authorization."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-011-1-1",
+              "text": "States lot BK-2241 is on quality-bench moisture rest and only quality bench may lift it",
+              "evidence_span": "Bark lot BK-2241 is on a quality-bench moisture rest; only the quality bench may lift it."
+            },
+            {
+              "claim_id": "r-V332-011-1-2",
+              "text": "States agglomeration is scheduled after rest not today",
+              "evidence_span": "Agglomeration is scheduled after the rest, not today."
+            },
+            {
+              "claim_id": "r-V332-011-1-3",
+              "text": "Changes press readiness request to after the rest",
+              "evidence_span": "after the rest."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility rated Red because draft improperly instructed skipping moisture rest on BK-2241. Minimal revision removes skip instruction and aligns with schedule after rest."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-012-1-1",
+              "text": "Revises message to state only factual count discrepancy, removing accusations of hiding scrap and ticket misconduct",
+              "evidence_span": "Tray C-6 left me with 800 stoppers and came back with 772."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility and Tone both rated Red due to major unsupported accusations against chamfering bench of hiding scrap and binning stock. Minimal revision reduces text to factual count statement."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-013-1-1",
+              "text": "Replaces hostile reprimand regarding office not walking stillage with factual statement of overnight excursion",
+              "evidence_span": "There was a moisture excursion overnight."
+            },
+            {
+              "claim_id": "r-V332-013-1-2",
+              "text": "Removes contemptuous remark about office lack of interest, retaining only factual hand-check result",
+              "evidence_span": "Gareth says they look fine."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Green but Tone rated Red for unsupported accusations and contemptuous language toward manager and office. Minimal revision removes hostility while preserving factual status."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-014-1-1",
+              "text": "Asks for current recorded tray status on north stillage or after colmation checks for job RC-8812",
+              "evidence_span": "What current tray status is recorded on the north stillage or after colmation checks for job RC-8812?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1: Responsibility rated Gray because tray status on north stillage is unconfirmed. Asks clarification question; revision withheld pending answer."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2: Follow-up incorporates colmation hold on C-9 and C-10 clear. All dimensions Green; no questions or revisions needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3: Evaluates final branding list note (C-10 clear, C-9 held). All dimensions Green; no questions or revisions needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-015-1-1",
+              "text": "Asks for current pay type for extra evening coverage",
+              "evidence_span": "What is the current pay type for this extra evening coverage?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-015-1-1",
+              "text": "Adds placeholder for current pay type",
+              "evidence_span": "Pay type: [current pay type]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1: Responsibility rated Yellow because pay type is unstated. Asks for pay type; minimal revision inserts placeholder."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Yellow",
+          "tone": "Green",
+          "overall": "Yellow",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-015-2-1",
+              "text": "Asks for current pay type for extra evening coverage",
+              "evidence_span": "What is the current pay type for this extra evening coverage?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-015-2-1",
+              "text": "Adds placeholder for current pay type in three-person coverage request",
+              "evidence_span": "Pay type: [current pay type]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2: Staffing updated to three people; responsibility remains Yellow because pay type is still unconfirmed. Asks for pay type; minimal revision inserts placeholder."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3: Three people and TOIL pay type confirmed. All dimensions Green; no questions or revisions needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1: Yard slot request for Thursday / lot BK-2230. All dimensions Green; no questions or revisions needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2: Yard slot request revised to Friday / lot BK-2230. All dimensions Green; no questions or revisions needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3: Yard slot request revised to Friday / lot BK-2231. All dimensions Green; no questions or revisions needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Scope route taken because intended recipient is external client dispatch contact (Quent Isolde) rather than a manager. Review declined under skill recipient-scope boundary."
+        }
+      ]
+    },
+    {
+      "case_id": "V332-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V332-018-1-1",
+              "text": "Asks if user already told quality bench to drop 48-hour moisture rest on BK-2244",
+              "evidence_span": "Have you already told the quality bench to drop the 48-hour moisture rest on BK-2244?"
+            },
+            {
+              "claim_id": "q-V332-018-1-2",
+              "text": "Asks if user already written to House Mallowfrith dispatch that they can collect at 09:00",
+              "evidence_span": "Have you already written to House Mallowfrith dispatch that they can collect at 09:00?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V332-018-1-1",
+              "text": "States lot is on 48-hour rest and user cannot waive rest or promise collection time",
+              "evidence_span": "The lot is on a quality-bench 48-hour moisture rest. I cannot waive that rest or promise them a collection time."
+            },
+            {
+              "claim_id": "r-V332-018-1-2",
+              "text": "Asks whether collection can be authorised and when loading bay should be staffed",
+              "evidence_span": "Please let me know whether a collection can be authorised and, if so, when the loading bay should be staffed."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review of on-screen draft. Responsibility rated Red (unauthorized rest waiver and collection promise) and Tone rated Red (disparaging claims about quality bench). Asks clarification questions; minimal revision removes unauthorized claims and hostility."
+        }
+      ]
+    }
+  ]
+}

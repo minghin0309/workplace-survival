@@ -90,5 +90,5 @@ Gold-blind extractors (do not merge):
 | N | family | intended branch | agent id |
 | --- | --- | --- | --- |
 | 1 | grok | `cursor/v332-extractor-grok-17a0` @ `797795c` (draft PR #103) | `bc-b8e0017c-0020-5e74-b9b3-3423fbdecb9f` |
-| 2 | gemini | `cursor/v332-extractor-gemini-17a0` | `bc-d058aaec-c92f-5b2b-8f2b-0c3b7d41240f` |
+| 2 | gemini | `cursor/v332-extractor-gemini-17a0` @ `82c0e23` (draft PR #104) | `bc-d058aaec-c92f-5b2b-8f2b-0c3b7d41240f` |
 
