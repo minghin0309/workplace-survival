@@ -80,5 +80,5 @@ Extractors (do not merge; gold-blind):
 
 | N | family | branch | agent id |
 | --- | --- | --- | --- |
-| 1 | grok | `cursor/v333-extractor-grok-17a0` | `bc-af985572-8f24-5338-9e70-62914baf4859` |
+| 1 | grok | `cursor/v333-extractor-grok-17a0` @ `e9a4c72` (draft PR #133) | `bc-af985572-8f24-5338-9e70-62914baf4859` |
 | 2 | gemini | `cursor/v333-extractor-gemini-17a0` | `bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4` |
