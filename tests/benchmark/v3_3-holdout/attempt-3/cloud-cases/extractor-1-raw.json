@@ -1,0 +1,802 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+    "model_id": "unverified",
+    "model_family": "grok"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractor-visible.json",
+    "sha256": "64ac7a5fe722de80aa8ea18403a61f19b8bdb31cd095424e4b954d394980c6f1"
+  },
+  "cases": [
+    {
+      "case_id": "V333-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Green review; Confirmation needed None; No revision needed. Background facts match SUT Data A and draft."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Green release-line review; no questions; no revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Green EV-4 handover review; no questions; no revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-004-1-1",
+              "text": "Asks who currently holds retest-pass release sign-off for ST-3319",
+              "evidence_span": "Who currently holds retest-pass release sign-off for ST-3319?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-004-1-1",
+              "text": "Adds named sign-off placeholder to the formal packing-release line",
+              "evidence_span": "Named sign-off: [person who currently holds retest-pass release sign-off]"
+            },
+            {
+              "claim_id": "r-V333-004-1-2",
+              "text": "Removes commitment to tell Greta to take the stack this afternoon",
+              "evidence_span": "Please send this as the formal release to packing: ST-3319 is released to bay 3. Named sign-off: [person who currently holds retest-pass release sign-off]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for unnamed retest-pass release and instructing Greta without named sign-off; asks for sign-off holder; revision uses placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-005-1-1",
+              "text": "Asks what packing deadline to state in the AW-2240 confirmation",
+              "evidence_span": "What is the packing deadline to state in the AW-2240 confirmation?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-005-1-1",
+              "text": "Inserts packing-deadline placeholder into the Highspire confirmation",
+              "evidence_span": "AW-2240 will meet Highspire's packing deadline of [packing deadline] if I keep EV-6 on that stack through lunch."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for time-less Highspire confirmation; asks for missing packing deadline; revision placeholders it."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-006-1-1",
+              "text": "Asks what specific receiving point packing should print for ST-3328",
+              "evidence_span": "What specific receiving point should packing print for ST-3328?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-006-1-1",
+              "text": "Replaces unnamed confirmed receiving point with an explicit placeholder",
+              "evidence_span": "ST-3328 to Tretower Field Station, to [receiving point]."
+            },
+            {
+              "claim_id": "r-V333-006-1-2",
+              "text": "Removes claim that station-name addressing was treated as sufficient",
+              "evidence_span": "please send packing this dispatch line: ST-3328 to Tretower Field Station, to [receiving point]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for dispatch line that does not name a receiving point; asks for the point; revision placeholders it and drops sufficiency claim."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-007-1-1",
+              "text": "Asks for the press-log diaphragm lot identifier for ST-3340",
+              "evidence_span": "What diaphragm lot identifier is recorded on the press log for ST-3340?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-007-1-1",
+              "text": "Replaces 'lot we discussed' with press-log diaphragm lot placeholder",
+              "evidence_span": "used diaphragm lot [diaphragm lot recorded on the press log]"
+            },
+            {
+              "claim_id": "r-V333-007-1-2",
+              "text": "Removes claim that an unnamed lot discussion is enough to file",
+              "evidence_span": "ST-3340 (Loern) has a cosmetic solder halo, leak-up 0.07 hPa per 10 min, and used diaphragm lot [diaphragm lot recorded on the press log]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for lot-less concession filing; asks for press-log lot; revision placeholders citation."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-008-1-1",
+              "text": "Asks for the numeric leak-up recorded on the chamber strip for ST-3345",
+              "evidence_span": "What numeric leak-up is recorded on the chamber strip for ST-3345?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-008-1-1",
+              "text": "Replaces 'take this as the figure' with chamber-strip numeric leak-up placeholder",
+              "evidence_span": "Please take [numeric leak-up from the chamber strip] as the figure for the contract note."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for missing numeric leak-up in Loern file note; asks for chamber-strip value; revision placeholders it."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-009-1-1",
+              "text": "Asks which press set-up option Tavish chose this morning for ST-3351",
+              "evidence_span": "What press set-up option did Tavish choose this morning for ST-3351?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Gray because chosen option is off-record and draft does not name it; Minimal revision withheld. Explicitly does not treat occluded bench-ticket token as the option (no-image-token-guess true)."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-010-1-1",
+              "text": "Removes claim that Keldhouse was told the stack is accepted",
+              "evidence_span": "Keldhouse has not been told anything about ST-3360 today"
+            },
+            {
+              "claim_id": "r-V333-010-1-2",
+              "text": "Removes claim that Greta was instructed to pack the stack",
+              "evidence_span": "Greta has not been asked by quality or by you to pack it"
+            },
+            {
+              "claim_id": "r-V333-010-1-3",
+              "text": "Adds instruction not to treat ST-3360 as accepted without concession route",
+              "evidence_span": "Please do not treat the stack as accepted without the proper concession route"
+            },
+            {
+              "claim_id": "r-V333-010-1-4",
+              "text": "Adds instruction not to instruct packing as if quality has already signed",
+              "evidence_span": "do not instruct packing as if quality has already signed"
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for unauthorized acceptance and packing instruction; no questions; revision restores Data A facts and constraints."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-011-1-1",
+              "text": "States Tavish has not agreed to absorb a no-charge replacement",
+              "evidence_span": "You have not agreed to absorb the replacement stack at no charge"
+            },
+            {
+              "claim_id": "r-V333-011-1-2",
+              "text": "States no Monday dock date has been committed",
+              "evidence_span": "no Monday dock date has been committed"
+            },
+            {
+              "claim_id": "r-V333-011-1-3",
+              "text": "States Edric has not agreed to sign the metrology waiver",
+              "evidence_span": "Edric has not agreed to sign the metrology waiver"
+            },
+            {
+              "claim_id": "r-V333-011-1-4",
+              "text": "Withdraws treating the commercial answer as settled and asks what to send",
+              "evidence_span": "I have not treated that as settled. Please advise what you want sent to Highspire."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for unauthorized commercial commitments in Tavish's name; revision negates those commitments."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-012-1-1",
+              "text": "Restores factual incident line that EV-3 dropped to atmosphere twice on 21 September morning shift",
+              "evidence_span": "EV-3 dropped to atmosphere twice during the 21 September morning shift."
+            },
+            {
+              "claim_id": "r-V333-012-1-2",
+              "text": "States Hester Dalrymple was the named setter without personnel judgment",
+              "evidence_span": "Hester Dalrymple was the named setter on EV-3 for that shift."
+            },
+            {
+              "claim_id": "r-V333-012-1-3",
+              "text": "Adds that maintenance has not yet issued a cause finding",
+              "evidence_span": "Maintenance has not yet issued a cause finding."
+            },
+            {
+              "claim_id": "r-V333-012-1-4",
+              "text": "Removes laziness/sabotage accusations and discipline demand",
+              "evidence_span": "EV-3 dropped to atmosphere twice during the 21 September morning shift. Hester Dalrymple was the named setter on EV-3 for that shift. Maintenance has not yet issued a cause finding."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red responsibility and tone for unsupported character/sabotage accusations and discipline demand; revision is factual incident line only."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-013-1-1",
+              "text": "Replaces insult/ultimatum with civil fact that PS-4408 lists bimetal batch BM-55",
+              "evidence_span": "ST-3340's packing note PS-4408 lists bimetal batch BM-55."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red responsibility and tone for insult, unsupported shipping claim, and ultimatum; revision is civil packing-note clarification."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-014-1-1",
+              "text": "Asks for the latest bench-card identity of the stack that is actually ready",
+              "evidence_span": "What is the latest bench-card identity for the stack that is actually ready?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Gray because Data A does not quote bench-card identity and draft's ST-3372 cannot be treated as recorded; revision withheld."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "After correction that 0.09 leak-up was ST-3371 and ST-3372 not ready; Green; no revision."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-014-3-1",
+              "text": "Asks which single stack the latest bench-card identity says is actually ready",
+              "evidence_span": "According to the latest bench-card identity, which stack should this note name as actually ready?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-014-3-1",
+              "text": "Collapses dual-ready wording to a single placeholder ready-stack identity",
+              "evidence_span": "[latest bench-card stack identity] is ready for bay 3."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for describing both ST-3371 and ST-3372 as ready; asks which single identity governs; revision uses placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-015-1-1",
+              "text": "Asks for latest incoming inspection result for DF-1201 vs thickness spec",
+              "evidence_span": "What is the latest incoming inspection result for DF-1201 against the 0.10 mm plus or minus 0.005 mm spec?"
+            },
+            {
+              "claim_id": "q-V333-015-1-2",
+              "text": "Asks whether DF-1202 has an inspection result and what it is vs thickness spec",
+              "evidence_span": "Has incoming inspection posted a result for DF-1202, and if so what is that result against the 0.10 mm plus or minus 0.005 mm spec?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-015-1-1",
+              "text": "Conditions DF-1201 assignment on in-spec latest inspection result",
+              "evidence_span": "please assign DF-1201 to AW-2266 only if the latest inspection result is inside 0.10 mm plus or minus 0.005 mm."
+            },
+            {
+              "claim_id": "r-V333-015-1-2",
+              "text": "Adds placeholder for DF-1201 latest inspection result in the note",
+              "evidence_span": "Latest inspection result: [latest inspection result for DF-1201]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red for assigning DF-1201 without inspection result; asks about both candidate lots; revision conditions assignment and placeholders result."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Hold note matches posted DF-1201 out-of-spec result; Green; no revision."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Swap to in-spec DF-1202 with certificate match and DF-1201 hold; Green; no revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Accepts board note bench/time from draft as live status; Green; no revision. Facts used are in the turn draft text."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-016-2-1",
+              "text": "Removes cancelled 19:00 pinch-off from the board correction wording",
+              "evidence_span": "EV-4 pump failed, ST-3380 residual rose. Stack is isolated and waiting for a live bench."
+            },
+            {
+              "claim_id": "r-V333-016-2-2",
+              "text": "Keeps pump-failure, residual-rise, and waiting-for-live-bench facts without posting cancelled pinch-off",
+              "evidence_span": "correction: EV-4 pump failed, ST-3380 residual rose. Stack is isolated and waiting for a live bench."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Red because board correction posts cancelled 19:00 pinch-off contrary to constraint; revision drops that cancelled time."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Updated EV-2 / 0.42 Pa / 21:40 board note matches live status; Green; no revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Only Scope/non-manager case; recipient identified as supplier dispatch clerk; Not reviewed — limited to manager messages. Ratings absent (null)."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-018-1-1",
+              "text": "Restates ST-3391 missed packing cut-off after span-adjustment rework as manager-only holding note",
+              "evidence_span": "ST-3391 for Tretower Field Station missed yesterday's packing cut-off after a span-adjustment rework. This is a manager-only holding note."
+            },
+            {
+              "claim_id": "r-V333-018-1-2",
+              "text": "Removes unauthorized Wynna personal-payment commitment to Tretower",
+              "evidence_span": "This is a manager-only holding note."
+            },
+            {
+              "claim_id": "r-V333-018-1-3",
+              "text": "Removes client-facing incompetence blame of Oswin Crail",
+              "evidence_span": "ST-3391 for Tretower Field Station missed yesterday's packing cut-off after a span-adjustment rework."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Image-only draft presented as Recognized Data B; Red responsibility and tone for payment commitment and incompetence blame. Revision is manager-only holding note from Data A. No obscured-token guess asserted."
+        }
+      ]
+    }
+  ]
+}
