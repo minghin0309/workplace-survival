@@ -1,0 +1,123 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v334-holdout-cloud-attempt4",
+  "artifact": "adjudicator-v334-raw-attestation",
+  "role": "gold-adjudicator",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": ["grok", "gemini", "gpt"],
+  "branch": "cursor/v334-gold-adjudicator-17a0",
+  "base_branch": "cursor/blind-v334-holdout-17a0",
+  "base_commit": "05c31da0977c01f6e94d592d4ddf7ef502a23471",
+  "question_design_accessed": false,
+  "skill_files_accessed": false,
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/GOLD_ADJUDICATION_BRIEF.md",
+      "sha256": "e30ac7aadcefa8ebba27bd9fb756405ddea993551fce405d742fab881a4a4ae9"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/GOLD_LABELING_BRIEF.md",
+      "sha256": "f95488ca670c766bea71d68ee62dc220abba9784b58ed2ce35c0e5e1df1bcc34"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/cases.json",
+      "sha256": "4c7fe4a9d69f45aa1bcd7c4eadb2b8b47d468a87f3474633119ea78f5dd482af"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/images/V334-009.png",
+      "sha256": "a1ddec2cb4773bc190a63ab4513bf1989461fa1c0cb9f17cde17d4fb64c0fe05",
+      "note": "Referenced by V334-009-T1; hash matches the image_spec.sha256 recorded in cases.json."
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/images/V334-018.png",
+      "sha256": "67c65f05975cad61bb0986012368b72615bf87fceb3f1ecf12da91cca6219ff0",
+      "note": "Referenced by V334-018-T1; hash matches the image_spec.sha256 recorded in cases.json."
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/gold-labeler-1.json",
+      "sha256": "39604d9d10f8f176b76a4456fe84650cea08f6c64d6e9888ce03a029aa8f9e1d",
+      "note": "grok label set; case array key is 'labels'."
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/gold-labeler-2.json",
+      "sha256": "0761b5ccd62ad3756b99a0ffb056e2de843862d1245a2e6b23d15dddcdeeceb1",
+      "note": "gemini label set; case array key is 'cases'."
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/gold-labeler-3.json",
+      "sha256": "e82750c184838f8d3cad68dbbafed709e5eb793acc524ce930619a4bb1b4d2b7",
+      "note": "gpt label set; case array key is 'cases'."
+    }
+  ],
+  "files_written": [
+    "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/gold-v334-raw.json",
+    "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/adjudication-v334-raw.json",
+    "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/adjudicator-v334-raw-attestation.json"
+  ],
+  "isolation": {
+    "read_only_allowlisted_files": true,
+    "globbed": false,
+    "listed_holdout_tree": false,
+    "question_design_json_read": false,
+    "oracle_notes_read": false,
+    "construction_mutations_read": false,
+    "construction_copy_read": false,
+    "designer_attestation_read": false,
+    "gold_labeler_attestations_read": false,
+    "skill_files_read": false,
+    "spec_read": false,
+    "tests_or_methodology_read": false,
+    "freeze_scripts_read": false,
+    "scorer_read": false,
+    "scorer_executed": false,
+    "prior_attempt_cloud_cases_read": false,
+    "non_case_referenced_pngs_read": false,
+    "relabelled_from_scratch": false,
+    "git_history_inspected": false,
+    "git_commands_used": [
+      "git rev-parse --abbrev-ref HEAD",
+      "git rev-parse HEAD",
+      "git checkout -b cursor/v334-gold-adjudicator-17a0",
+      "git add",
+      "git commit",
+      "git log --oneline -1",
+      "git push -u origin cursor/v334-gold-adjudicator-17a0"
+    ],
+    "holdout_branch_pushed": false,
+    "merged": false
+  },
+  "coverage": {
+    "case_count": 18,
+    "case_ids_first": "V334-001",
+    "case_ids_last": "V334-018",
+    "turn_count": 24,
+    "multi_turn_cases": ["V334-014", "V334-015", "V334-016"],
+    "turns_per_multi_turn_case": 3,
+    "all_three_label_sets_mapped_onto_all_24_turns": true,
+    "envelope_key_difference_handled": "gold-labeler-1.json exposes its case array as 'labels' rather than 'cases'; it was mapped onto the same 18 cases and 24 turns and no turn was dropped."
+  },
+  "adjudication_result": {
+    "uncertain_turn_count": 0,
+    "uncertain_turn_ids": [],
+    "uncertain_turn_fraction": 0.0,
+    "uncertainty_budget": "<=4 of 24 turns (20%)",
+    "uncertainty_within_budget": true,
+    "turns_with_unanimous_route_and_ratings": 21,
+    "turns_decided_by_2_of_3_majority": 3,
+    "split_turns": ["V334-014-T1", "V334-015-T1", "V334-016-T1"],
+    "vote_distributions_preserved": true,
+    "overall_derivation_verified": true,
+    "required_subset_of_allowed_verified": true,
+    "preserve_intended_recipient_never_required": true,
+    "green_green_turns_use_no_revision": true
+  },
+  "declaration": "I adjudicated the three independent gold label sets for the frozen v3.3 attempt-4 holdout without relabelling from scratch, without running the Skill, without scoring, and without reading question-design.json, oracle notes, construction artifacts, designer or labeler attestations, Skill files, SPEC, scorers, or any prior attempt's cloud-cases. Only the files listed in files_read were opened, and only the two PNGs referenced by V334-009 and V334-018 were viewed."
+}
