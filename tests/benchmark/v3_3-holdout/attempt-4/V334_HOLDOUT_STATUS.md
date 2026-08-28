@@ -12,7 +12,7 @@
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607` (artifacts `d460f3e`, not merged). Designer `bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18`. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `2f78ce0662e2d0d885d5fe50a6c550d393afd61a08d5e661335e5ba60c398a18` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `c3f4504b4f40ba86cc45d3ff006a5cdf42d6096a49af4dce877e211abe3aba41`. Uncertain 0/24. Copied from `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b` (not merged). |
-| SUT | waves 1–2 copied with `git show` (not merged). Wave 3 pending. |
+| SUT | waves 1–3 copied with `git show` (not merged). Wave 4 launching. |
 | Extraction | not started |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
@@ -50,5 +50,15 @@ SUT wave 2 (do not merge):
 | V334-006 | `cursor/v334-006-sut-17a0` @ `542ca16` | `bc-d0539f69-a312-50ab-a355-355775b56605` | #147 |
 
 Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on 004–006.
+
+SUT wave 3 (do not merge):
+
+| case | branch | agent id | draft PR |
+| --- | --- | --- | --- |
+| V334-007 | `cursor/v334-007-sut-17a0` @ `cea71e4` | `bc-03f09aa3-72b3-5a5d-8baf-40bb30e331fa` | #152 |
+| V334-008 | `cursor/v334-008-sut-17a0` @ `f27df9b` | `bc-e5c50344-1bb3-5285-9dd2-1ea9beb54c76` | #150 |
+| V334-009 | `cursor/v334-009-sut-17a0` @ `3ba6a7d` | `bc-8d964f87-d971-542d-8e75-aa5e1ee59f3e` | #151 |
+
+Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true. V334-009 attested PNG read; hash matches construction.
 
 Do not invent the workplace domain on this branch. Copy cases with `git show` from the dedicated designer branch after it validates.
