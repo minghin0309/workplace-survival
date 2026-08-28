@@ -33,3 +33,11 @@ SUT wave 1 (do not merge):
 | V333-001 | `cursor/v333-001-sut-17a0` @ `00b2204` | `bc-6b4f2c89-585a-5227-b608-e807123328e8` | #115 |
 | V333-002 | `cursor/v333-002-sut-17a0` @ `42ac275` | `bc-8bd0aa6d-b7f7-5985-b054-2b6a77bc37b1` | #117 |
 | V333-003 | `cursor/v333-003-sut-17a0` @ `c6c55c2` | `bc-efbfd8e8-bc83-539c-8857-2107d35b8bf8` | #116 |
+
+SUT wave 2 (do not merge):
+
+| case | agent id |
+| --- | --- |
+| V333-004 | `bc-afef334f-f227-5002-830a-51cb5b6515b9` |
+| V333-005 | `bc-fa8301cd-23c8-5b2b-bc2d-056244b3afb0` |
+| V333-006 | `bc-200b68ff-b0e7-5bd4-a695-93ddd2183a76` |
