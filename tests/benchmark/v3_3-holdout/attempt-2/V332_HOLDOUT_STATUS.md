@@ -11,7 +11,7 @@
 | SUT | frozen SHA-256 `7bf0eb2fc752620295da37f335eaaf5020549878b1bdfd8e7f363e077f9deeec`. 18 cases / 24 turns. Dedicated branches not merged. |
 | Extraction | frozen SHA-256 `e61eb61d3861cab60036dd693d57cba3b56b740d615e49abd302532c7e489866`. Canonical 11 question / 22 revision claims; unresolved disagreements 0. |
 | Matching | frozen in evaluation snapshot SHA-256 `08671018c3238468bdee2776a507b269690af30d1a42be990153633cb59ec2eb`. Claude matcher copied from `cursor/v332-matcher-claude-17a0` @ `f1fb437` (draft PR #106, not merged). 33/33 claims decided (28 semantic, 5 unsupported). |
-| Formal score | `SCORED`; thresholds not passed. Report SHA-256 `de7123b79fdaa35549d3ee7eaaa64f9cfdd2f1a7e47c584dcf0c4418daef321d`. Formal scorer invocations: 1. Do not rescore. |
+| Formal score | `SCORED`; thresholds not passed. Report SHA-256 `de7123b79fdaa35549d3ee7eaaa64f9cfdd2f1a7e47c584dcf0c4418daef321d`. Formal scorer invocations: 1. Do not rescore. Triage: `SCORE_TRIAGE.md`. |
 
 Designer (do not merge): `cursor/v332-attempt2-cases-w4q9-17a0` @ `6e66158`. Domain: Rowanleat Cork Works, Braydon Cut. Image-only question V332-009 `occluded_role: data_a`. Readable image V332-018. V332-017 is the only non-manager recipient.
 

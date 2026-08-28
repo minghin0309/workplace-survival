@@ -4,6 +4,14 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### v3.3 attempt-2 score triage
+
+- Did not rescore or rewrite attempt 2, attempt 1, or runtime Skill files.
+- S-001 holds on 004–008. S-002 and S-007 closed (004 condition gold-allowed; 018 tone Red).
+- Question recall 5/6 is S-008 (009 occluded bore rated Green, no question). Precision 8/11 and 20/22 are S-009/S-010 green-control over-asks (014 T1, 015 T1/T2).
+- Revision recall 19/24 is those three plus 009 placeholder plus one H-004 silent strip on 018.
+- 013 responsibility Green vs gold Red is G-007 (tone-trap; do not merge ratings). Do not Skill-patch H-004 or G-007.
+
 ### Fresh benchmark v3.3 unseen holdout attempt 2
 
 - Did not rescore or rewrite v3.3 attempt 1, and did not change runtime Skill files.
