@@ -4,6 +4,24 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### v3.3 attempt-3 score triage
+
+- Did not rescore or rewrite attempt 3, attempt 2, attempt 1, or runtime Skill files.
+- S-001 holds on 004–009 and 015. S-007, S-008 (Gray+ask), and S-010 closed. G-007 closed as a rating miss. H-004-on-018 closed.
+- Question recall 7/11 is S-011 (010/011) plus G-008 (012). Precision 8/10 is S-009 / S-009b on 014 T1/T3.
+- Revision recall 24/37 is mostly H-004 placeholder/insult squeezes, plus S-012 withheld 009 placeholder, S-002 residual on 005, and three green-control `no-revision` misses (014 T1/T3, 016 T2 / S-013).
+- Responsibility 20/23 is only 014 T1, 014 T3, and 016 T2. Do not Skill-patch H-004 or G-008.
+
+### Fresh benchmark v3.3 unseen holdout attempt 3
+
+- Did not rescore or rewrite v3.3 attempt 1 or attempt 2, and did not change runtime Skill files.
+- Built 18 unseen Selkith aneroid / Cinderholt pressing-rooms cases in an isolated cloud designer and copied them with `git show`.
+- Gold freeze `VALID_COVERAGE` (11 question concepts / 10 cases, 0 uncertain turns, 37 revision concepts / 17 cases).
+- Ran 18 distinct cloud SUT contexts against the T14.24 Skill runtime.
+- Dual gold-blind extraction plus Claude matching, then one `score_semantic_v3_3.py` invocation: `SCORED`, thresholds not passed.
+- Question recall 7/11; revision recall 24/37. Route/tone/invariants passed. Responsibility 20/23; question precision 8/10; revision precision 26/29.
+- Report SHA-256 `fa7c922c3b1868a5b809f14e68d97f2936b407d5f42f84a9e7888c38b26180e6`. No in-version rerun.
+
 ### S-008/S-009/S-010 green-control remediation
 
 - Gray an unquoted off-record measurement when Data B only points at that unread source; never invent the figure.

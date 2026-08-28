@@ -12,7 +12,7 @@
 | SUT | frozen SHA-256 `7d0fdb211d4f1b7a5b8ced36ee8d86d8afdbdfb90f4bca5e99e9908f83bbc40c`. 18 cases / 24 turns. Dedicated branches not merged. |
 | Extraction | frozen SHA-256 `7a794b103e8e01930d505c953d8c9ef7b02664a88eec28b691269bced1020884`. Canonical 10 question / 29 revision claims; unresolved disagreements 0. Adjudicator `cursor/v333-extractor-adjudicator-17a0` @ `3c69938` (draft PR #135, not merged). |
 | Matching | frozen in evaluation snapshot SHA-256 `b0cf43791c46cf595c94291f9d5c1d1022bc86f181c4d1db70923996e5d31656`. Claude matcher copied from `cursor/v333-matcher-claude-17a0` @ `a647d19` (draft PR #136, not merged). 39/39 claims decided (34 semantic, 5 unsupported). |
-| Formal score | not started; one-shot after freezes |
+| Formal score | `SCORED`; thresholds not passed. Report SHA-256 `fa7c922c3b1868a5b809f14e68d97f2936b407d5f42f84a9e7888c38b26180e6`. Formal scorer invocations: 1. Do not rescore. Triage: `SCORE_TRIAGE.md`. |
 
 Designer (do not merge): `cursor/v333-attempt3-cases-k7m2-17a0` @ `446a20b`. Domain: Selkith Aneroid Works, Cinderholt Pressing Rooms. Image-only question V333-009 `occluded_role: data_a`. Readable image V333-018. V333-017 is the only non-manager recipient. Isolation: five allowlisted files only.
 
@@ -86,3 +86,7 @@ Extractors (do not merge; gold-blind):
 Adjudicator (do not merge; gold-blind): `cursor/v333-extractor-adjudicator-17a0` @ `3c69938` (draft PR #135). Family gpt. Agent `bc-1f67bf2a-4162-5f03-baab-908b0fdc5dfa`. Copied with `git show`. Isolation: allowlisted EVALUATION_BRIEF + EXTRACTION_BRIEF + extractor-visible + both extractor-raw + 18 sut-inputs. `gold_or_scoring_accessed` false, `scoring_performed` false. Canonical evaluations SHA-256 `cbc7a157d507a3ea3c4402a75d4be4bba1d85e9a26bf9801df52dc78bf5024c2`.
 
 Semantic matcher (do not merge; gold access required): `cursor/v333-matcher-claude-17a0` @ `a647d19` (draft PR #136). Family claude. Agent `bc-88925d40-d154-5533-a6fc-924e4b57d67a`. Copied with `git show`. `gold_access` true, `scorer_run` false. 18/24, 39 claims (semantic 34, unsupported 5). Matches SHA-256 `b03c9a858ec568a3f2bb180132e328918c0dcf52c8f8c1ebfbfcfcd5f497c2e2`. Base: extraction freeze SHA-256 `7a794b103e8e01930d505c953d8c9ef7b02664a88eec28b691269bced1020884`.
+
+SUT freeze: `outputs-manifest-v333.json` SHA-256 `7d0fdb211d4f1b7a5b8ced36ee8d86d8afdbdfb90f4bca5e99e9908f83bbc40c`. Extraction freeze SHA-256 `7a794b103e8e01930d505c953d8c9ef7b02664a88eec28b691269bced1020884`. Evaluation freeze SHA-256 `b0cf43791c46cf595c94291f9d5c1d1022bc86f181c4d1db70923996e5d31656`. Score report SHA-256 `fa7c922c3b1868a5b809f14e68d97f2936b407d5f42f84a9e7888c38b26180e6`. Formal scorer invocations: 1. Do not rescore.
+
+Score (one-shot, do not rerun): `SCORED`, `thresholds_passed: false`. Route 24/24, tone 23/23, invariants 0, uncertain 0. Responsibility 20/23, overall 20/23, question recall 7/11, question precision 8/10, revision recall 24/37, revision precision 26/29. Case pass: 6/18. Failed: V333-004–013, 014, 016. Later holdouts must denylist Selkith aneroid / Cinderholt pressing rooms.
