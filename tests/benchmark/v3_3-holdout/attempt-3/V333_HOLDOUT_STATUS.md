@@ -7,11 +7,13 @@
 | Methodology | v3.3 |
 | Frozen attempt 1 | do not rescore |
 | Frozen attempt 2 | do not rescore |
-| Construction | isolated designer launched (`bc-891cc11a-21f6-5e13-abc4-ca17369cbf10`, model `cursor-grok-4.6-high-fast`). Not copied yet. Do not merge. |
+| Construction | `VALID`; copied with `git show` from `cursor/v333-attempt3-cases-k7m2-17a0` @ `446a20b` (artifacts `2738181`, not merged). Designer `bc-891cc11a-21f6-5e13-abc4-ca17369cbf10`. |
 | Gold | not started |
 | SUT | not started |
 | Extraction | not started |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
 
-Designer (do not merge): running. Copy with `git show` after it validates. Parent must not invent the workplace domain.
+Designer (do not merge): `cursor/v333-attempt3-cases-k7m2-17a0` @ `446a20b`. Domain: Selkith Aneroid Works, Cinderholt Pressing Rooms. Image-only question V333-009 `occluded_role: data_a`. Readable image V333-018. V333-017 is the only non-manager recipient. Isolation: five allowlisted files only.
+
+Gold labelers (do not merge): pending after this construction copy is on the holdout tip.

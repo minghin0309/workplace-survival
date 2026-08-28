@@ -1,0 +1,69 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "designer-attestation",
+  "suite_id": "v333-holdout-cloud-attempt3",
+  "cloud_context": {
+    "bc_id": "bc-891cc11a-21f6-5e13-abc4-ca17369cbf10",
+    "run_name": "v333 attempt-3 case designer",
+    "source": "internal"
+  },
+  "model_metadata": {
+    "reported_identity": "Cursor Grok 4.6",
+    "run_info_original_model_name": null
+  },
+  "branch": "cursor/v333-attempt3-cases-k7m2-17a0",
+  "commit_sha": "2738181050eba0369497005776d0272de767a08a",
+  "base_branch": "cursor/blind-v333-holdout-17a0",
+  "files_read": [
+    "tests/benchmark/v3_3/V333_ATTEMPT3_CASE_BRIEF.md",
+    "tests/benchmark/v3_3-holdout/attempt-3/validate_holdout.py",
+    "tests/benchmark/v3_1/question_candidate_contract.py",
+    "tests/benchmark/v3_2/recipient_manager_contract.py",
+    "tests/benchmark/v3_3/revision_scoring_contract.py"
+  ],
+  "no_other_repository_content_accessed": true,
+  "did_not_run_skill": true,
+  "did_not_score": true,
+  "did_not_read_prior_holdouts": true,
+  "domain": {
+    "workplace": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "craft": "corrugated-diaphragm aneroid barometer capsule pressing, evacuation, leak-up, and compensation-bimetal fitting",
+    "why_not_denylisted": "Scientific-instrument capsule manufacture is not millinery, harpworks, aerostats or hot-air balloons, cold-cathode neon, turret-clock restoration, industrial cork, or any other domain, material, or named entity on the attempt-3 aggregate novelty denylist. No denylisted organisation, person, job code, or figure is reused or respelled."
+  },
+  "manager_recipient_invariant": {
+    "statement": "V333-017 is the only non-manager recipient. Every other case, including V333-004 through V333-009 and V333-018, is a manager recipient with relationship_to_user exactly 'direct line manager', audience_scope exactly 'manager only', additional_recipients exactly [], and recipient_role containing 'manager' with none of the forbidden negation phrases.",
+    "only_non_manager_case_id": "V333-017",
+    "non_manager_role": "supplier dispatch clerk",
+    "non_manager_relationship": "supplier contact"
+  },
+  "image_only_question_candidate": {
+    "case_id": "V333-009",
+    "occluded_role": "data_a",
+    "occlusion_method": "Filled rectangle over bench-ticket chrome; occluded Data A token never rendered as glyphs. Missing decision-option answer is absent from all SUT-visible fields including image pixels."
+  },
+  "images": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/images/v333-009.png",
+      "case_id": "V333-009",
+      "sha256": "232aa4d17a2c325c601d4e9f3a0305311f5f9835b807573581b6cb4a7d9befa8",
+      "png_chunks": ["IHDR", "IDAT", "IEND"],
+      "opened_as_image_after_write": false
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/images/v333-018.png",
+      "case_id": "V333-018",
+      "sha256": "df82bb23806c87c32df9bcbaab79830cf371fdd8cd9d516eba1670f6af7945f3",
+      "png_chunks": ["IHDR", "IDAT", "IEND"],
+      "opened_as_image_after_write": false
+    }
+  ],
+  "construction_summary": {
+    "case_ids": "V333-001 through V333-018",
+    "turn_count": 24,
+    "three_turn_cases": ["V333-014", "V333-015", "V333-016"],
+    "green_controls": ["V333-001", "V333-002", "V333-003"],
+    "question_candidates": ["V333-004", "V333-005", "V333-006", "V333-007", "V333-008", "V333-009"],
+    "data_b_contains_unconfirmed_token": false
+  }
+}
