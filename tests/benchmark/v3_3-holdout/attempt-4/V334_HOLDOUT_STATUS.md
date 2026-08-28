@@ -13,7 +13,7 @@
 | Construction | `VALID`; copied with `git show` from `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607` (artifacts `d460f3e`, not merged). Designer `bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18`. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `2f78ce0662e2d0d885d5fe50a6c550d393afd61a08d5e661335e5ba60c398a18` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `c3f4504b4f40ba86cc45d3ff006a5cdf42d6096a49af4dce877e211abe3aba41`. Uncertain 0/24. Copied from `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b` (not merged). |
 | SUT | waves 1–6 copied with `git show` (not merged). Frozen 18 dedicated contexts / 24 turns. Manifest SHA-256 `a078d980d5dec7f155406165364054a9c24db6ffb4f6b483731bbbf7ab7138c5`. |
-| Extraction | gold-blind extractors copied with `git show` (not merged). Envelope 18/24 each. Route/rating split 0. Adjudicator launching. |
+| Extraction | gold-blind extractors + adjudicator copied with `git show` (not merged). Canonical 18/24; unresolved 0; 17 question / 42 revision claims. Freeze next. |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
 
@@ -99,5 +99,7 @@ Gold-blind extractors (do not merge):
 | 2 | gemini | `cursor/v334-extractor-gemini-17a0` @ `3ba5f82` | `bc-69aead49-e14e-5189-919d-9aa60cbf0a6d` | #163 |
 
 Isolation: `gold_or_scoring_accessed` false, `scoring_performed` false. Copied with `git show`. Route/rating disagreements 0.
+
+Extraction adjudicator (do not merge): `cursor/v334-extractor-adjudicator-17a0` @ `fe05ef3`. Family gpt. `gold_or_scoring_accessed` false. Unresolved 0. Draft PR #164.
 
 Do not invent the workplace domain on this branch. Copy cases with `git show` from the dedicated designer branch after it validates.
