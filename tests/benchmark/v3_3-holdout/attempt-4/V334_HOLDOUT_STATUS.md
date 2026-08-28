@@ -11,7 +11,7 @@
 | Frozen attempt 2 | do not rescore |
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607` (artifacts `d460f3e`, not merged). Designer `bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18`. |
-| Gold | not started |
+| Gold | three isolated label sets copied with `git show` (not merged). Adjudication pending. |
 | SUT | not started |
 | Extraction | not started |
 | Matching | not started |
@@ -19,6 +19,16 @@
 
 Designer (do not merge): `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607`. Domain: Idleacre Nib Works, The Grind Loft. Image-only question V334-009 `occluded_role: data_a`. Readable image V334-018. V334-017 is the only non-manager recipient. Isolation: five allowlisted files only.
 
-Gold labelers (do not merge): pending.
+Gold labelers (do not merge):
+
+| N | family | model | branch | agent id | draft PR |
+| --- | --- | --- | --- | --- | --- |
+| 1 | grok | `cursor-grok-4.5-high` | `cursor/v334-gold-labeler-1-17a0` @ `f6391e2` | `bc-71267ed7-00b7-5b7e-9a7f-98cf05712ec1` | #142 |
+| 2 | gemini | `gemini-3.7-flash-high` | `cursor/v334-gold-labeler-2-17a0` @ `27235d7` | `bc-45804b0b-558e-541a-b2e2-0f33002e11e4` | #141 |
+| 3 | gpt | `gpt-5.6-sol-high` | `cursor/v334-gold-labeler-3-17a0` @ `4f08836` | `bc-1b3b1f64-8753-5f26-92d0-09473d76c141` | #140 |
+
+Isolation: `question_design_accessed` false, `skill_files_accessed` false on 1–3. Envelope: 18 cases / 24 turns each. Labeler 1 stores cases under `labels`; 2 and 3 use `cases`.
+
+Adjudicator (do not merge): pending.
 
 Do not invent the workplace domain on this branch. Copy cases with `git show` from the dedicated designer branch after it validates.
