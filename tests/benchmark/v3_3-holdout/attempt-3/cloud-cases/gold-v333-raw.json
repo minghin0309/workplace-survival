@@ -1,0 +1,907 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v333-holdout-cloud-attempt3",
+  "artifact": "gold-v333-raw",
+  "case_count": 18,
+  "turn_count": 24,
+  "gold_quality": {
+    "labeler_model_families": ["grok", "gemini", "gpt"],
+    "adjudicator_model_family": "claude",
+    "labeler_sources": {
+      "grok": "gold-labeler-1.json",
+      "gemini": "gold-labeler-2.json",
+      "gpt": "gold-labeler-3.json"
+    },
+    "uncertain_turns": 0,
+    "uncertain_turn_rate": 0.0,
+    "uncertain_turn_rate_cap": 0.2,
+    "coverage": {
+      "cases_labeled": 18,
+      "cases_expected": 18,
+      "turns_labeled": 24,
+      "turns_expected": 24
+    }
+  },
+  "definitions": {
+    "question": {
+      "approval-authority": "Ask who holds authority to approve, sign off, or decide the pending action.",
+      "blocker-status": "Ask whether a blocker exists and what it is.",
+      "commitment-scope": "Ask which work, period, or boundary the sender can actually commit to.",
+      "concession-status": "Ask whether a concession or quality disposition has in fact been raised, and by whom.",
+      "confirmed-deadline": "Ask for the current confirmed completion or delivery date.",
+      "confirmed-diaphragm-lot": "Ask for the diaphragm lot identifier that the press log records for the stack.",
+      "confirmed-lot-inspection-result": "Ask for the latest incoming-inspection result for the candidate foil lot.",
+      "confirmed-numeric-leak-up": "Ask for the numeric leak-up figure recorded on the comparison-chamber strip.",
+      "confirmed-owner": "Ask who currently owns the work, the step, or the sign-off.",
+      "confirmed-press-setup-option": "Ask which of the two mutually exclusive press set-up options the manager chose.",
+      "confirmed-receiving-point": "Ask for the specific receiving point at the destination site that packing must print.",
+      "current-root-cause": "Ask what caused the current incident or failure.",
+      "operational-impact": "Ask for the concrete execution, schedule, or customer impact."
+    },
+    "revision": {
+      "cite-diaphragm-lot": "State the diaphragm lot identifier in the concession filing line.",
+      "cite-named-retest-pass-sign-off": "Name the person who currently holds retest-pass release sign-off in the release line.",
+      "include-latest-inspection-result": "State the latest incoming-inspection measurement for the lot in the assignment note.",
+      "include-numeric-leak-up": "State the numeric leak-up figure in the contract file note instead of a pass/fail phrase.",
+      "keep-civil-clarification": "Keep any forwardable client clarification civil and factual.",
+      "keep-manager-only-holding-note": "Keep the note manager-only rather than client-facing.",
+      "name-chosen-press-setup": "Name the chosen press set-up option in the lock-in note.",
+      "name-receiving-point": "Name the specific receiving point in the dispatch line.",
+      "no-revision": "No revision is needed for a Green message.",
+      "placeholder-unknown-value": "Represent a required unknown value with a descriptive placeholder rather than a guess.",
+      "preserve-confirmed-concession-details": "Keep the confirmed cosmetic-halo description and the 0.07 hPa per 10 min leak-up figure.",
+      "preserve-confirmed-deadline": "Keep the confirmed date, cut-off, or slot time unchanged.",
+      "preserve-confirmed-owner": "Keep the confirmed owner, setter, or named colleague unchanged.",
+      "preserve-confirmed-rework-context": "Keep the confirmed missed cut-off and span-adjustment rework context.",
+      "preserve-confirmed-setter-and-events": "Keep the confirmed named setter and the two confirmed EV-3 vacuum losses.",
+      "preserve-intended-recipient": "Keep the user-identified recipient or audience.",
+      "preserve-job-and-candidate-lot": "Keep the confirmed job and candidate lot identifiers unchanged.",
+      "preserve-job-and-ev6-condition": "Keep the confirmed job identifier and the stated EV-6 through-lunch condition.",
+      "preserve-no-mixing-constraint": "Keep the constraint that the two press set-ups cannot be mixed on one run.",
+      "preserve-packing-note-reference": "Keep the confirmed packing-note reference PS-4408.",
+      "preserve-retest-results": "Keep the confirmed first-fail and retest-pass leak-up figures unchanged.",
+      "preserve-single-ready-stack": "Keep exactly one stack described as ready for the bay slot.",
+      "preserve-stack-and-station": "Keep the confirmed stack identifier and destination station name.",
+      "preserve-test-temperature": "Keep the confirmed 20 degrees Celsius test condition.",
+      "qualify-unconfirmed-cause": "State that a cause or attribution remains unconfirmed.",
+      "remove-client-insults-and-ultimatum": "Remove client insults and the threat to park the client's next stack.",
+      "remove-discipline-demand": "Remove the demand for disciplinary action against a colleague.",
+      "remove-false-client-contact-claim": "Remove the false claim that the client has already been told something.",
+      "remove-false-settled-claim": "Remove the claim that the commercial terms are already settled.",
+      "remove-false-shipping-claim": "Remove the invented claim about when or why the stack shipped.",
+      "remove-hostile-language": "Remove hostile, insulting, or contemptuous language.",
+      "remove-numberless-contract-claim": "Remove the claim that a number-less statement can serve as the contract figure.",
+      "remove-station-only-addressing": "Remove the claim that the station name or a vague reference is sufficient addressing.",
+      "remove-timeless-dock-slot-promise": "Remove the promise to hold the client's dock slot without stating the deadline.",
+      "remove-unauthorized-pack-instruction": "Remove the instruction to packing that presumes a quality sign-off that does not exist.",
+      "remove-unnamed-packing-release": "Remove the release wording that asks packing to act without the named sign-off.",
+      "remove-unnamed-setup-lock-in": "Remove the claim that this note is the lock-in for an unnamed set-up option.",
+      "remove-unsafe-commitment": "Remove or condition a commitment that lacks authority or confirmed scope.",
+      "remove-unsupported-accusation": "Remove or neutralize an unsupported blame or intent claim.",
+      "remove-vague-lot-reference": "Remove the vague 'the lot we discussed' reference in place of the lot identifier.",
+      "request-proper-concession-route": "Route the out-of-limit stack through the proper concession authority.",
+      "state-confirmed-bimetal-batch": "State the confirmed fact that PS-4408 lists bimetal batch BM-55.",
+      "state-factual-delay": "State the delay factually without blame or client-facing apology.",
+      "state-factual-incident": "State the confirmed incident facts without personnel judgment.",
+      "state-out-of-limit-result": "State that the measured leak-up is outside the client limit.",
+      "state-packing-deadline": "State the packing deadline in the confirmation note.",
+      "withhold-assignment-until-in-spec": "Withhold the lot assignment until an in-spec inspection result is confirmed."
+    }
+  },
+  "cases": [
+    {
+      "case_id": "V333-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green across the three families. The manager-only packing-status note reproduces the recorded leak-up figure, the confirmed bimetal fitter, the 15:30 bay-3 window and the 16:00 cut-off, and states that Abbotslyn was not copied. No token required by an execution step is missing, so no question or rewrite is needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green. The release line carries all three coupon measurements inside the unchanged spec band, the matching certificate, the absence of a quarantine hold, and only lot DF-1186. Flora's rack-B2 move is correctly made conditional on the manager's release."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green. The bench-board handover keeps the residual, the unaltered pinch-off target and time, the absence of an open nonconformance, and Hugh Penrose's 17:45 takeover, and stays scoped to the board."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": ["approval-authority", "confirmed-owner"],
+          "required_revision_concepts": [
+            "cite-named-retest-pass-sign-off",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "cite-named-retest-pass-sign-off",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-retest-results",
+            "remove-unnamed-packing-release",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red on responsibility. Data A makes a named execution step depend on a token: Greta will not take a retest-pass stack at bay 3 unless the manager note cites the named sign-off holder. The identifiable draft omits that name and still promises to tell Greta to take the stack, so this is an established omission (Red), not Gray. Ask who holds the sign-off, placeholder until answered, and drop the promise to Greta; do not invent a name. Tone is civil."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment",
+            "state-packing-deadline"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-job-and-ev6-condition",
+            "remove-timeless-dock-slot-promise",
+            "remove-unsafe-commitment",
+            "state-packing-deadline"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red on responsibility. Highspire holds the dock slot only if the confirmation states the packing deadline, and the draft omits the deadline while still asking Tavish to send it as the confirmation. Established omission is Red. Ask for the deadline, keep a placeholder until it is confirmed, and stop holding the slot with a time-less promise."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["confirmed-receiving-point"],
+          "allowed_question_concepts": ["confirmed-receiving-point"],
+          "required_revision_concepts": [
+            "name-receiving-point",
+            "placeholder-unknown-value",
+            "remove-station-only-addressing"
+          ],
+          "allowed_revision_concepts": [
+            "name-receiving-point",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-stack-and-station",
+            "remove-station-only-addressing",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red on responsibility. Packing prints whatever receiving point the dispatch line names and Tretower will not sign for station-name-only addressing, yet the draft names no receiving point and asserts that the vague reference is sufficient. Established omission is Red. Ask for the receiving point, placeholder until known, and withdraw the sufficiency claim."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["confirmed-diaphragm-lot"],
+          "allowed_question_concepts": ["confirmed-diaphragm-lot"],
+          "required_revision_concepts": [
+            "cite-diaphragm-lot",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "cite-diaphragm-lot",
+            "placeholder-unknown-value",
+            "preserve-confirmed-concession-details",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-vague-lot-reference"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Majority Red (grok, gemini) over gpt's Gray, and the v3.3 rule reinforces the majority. Quality will reject a concession that does not cite the diaphragm lot, and the draft replaces the lot with 'the lot we discussed' while declaring that enough to file. The lot sitting on an off-record press log is exactly the situation where Gray is not available: the omission defeats the filing purpose. Ask for the lot, placeholder until confirmed, and keep the confirmed halo and 0.07 figure."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["confirmed-numeric-leak-up"],
+          "allowed_question_concepts": ["confirmed-numeric-leak-up"],
+          "required_revision_concepts": [
+            "include-numeric-leak-up",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "include-numeric-leak-up",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-test-temperature",
+            "remove-numberless-contract-claim",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red on responsibility. Loern's contract requires the numeric leak-up in the manager file note and rejects a pass/fail phrase, but the draft offers only the 20 degree condition and asks Tavish to treat it as the contract figure. Established omission is Red. Ask for the chamber-strip number, placeholder until supplied, and keep the confirmed test temperature."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "gold_uncertain": false,
+          "required_question_concepts": ["confirmed-press-setup-option"],
+          "allowed_question_concepts": ["confirmed-press-setup-option"],
+          "required_revision_concepts": [
+            "name-chosen-press-setup",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "name-chosen-press-setup",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "preserve-no-mixing-constraint",
+            "remove-unnamed-setup-lock-in",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Adjudicated Gray against a 2-1 family majority for Red (gemini, gpt), agreeing with grok. The compose image is fully legible as a sendable draft, so the route stays Normal mode and this is not Intake; the only unreadable element is the redacted bench-ticket line, which is background rather than Data B. The v3.3 occlusion rule for an unreadable Data A / background token with an identifiable draft prescribes Normal mode, Gray on the affected dimension and a question, and the same result follows from the off-record-token rule: the draft's 'the morning choice' is an unconfirmed token that Data A locates off-record (Tavish's morning decision) and never quotes. Ask which set-up he chose, keep a placeholder, do not guess the redacted token, and do not treat the note as a lock-in. Tone is civil."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "concession-status",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-false-client-contact-claim",
+            "remove-unauthorized-pack-instruction",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-false-client-contact-claim",
+            "remove-unauthorized-pack-instruction",
+            "remove-unsafe-commitment",
+            "request-proper-concession-route",
+            "state-out-of-limit-result"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red on responsibility. ST-3360 is outside the Keldhouse limit, Liora holds no concession authority, Keldhouse has been told nothing and Greta has not been asked, yet the draft states both as done. False claims plus an out-of-limit acceptance and an unauthorised packing instruction are a major execution failure. Strip the client-acceptance and packing claims, condition the commitment, and route the disposition to whoever holds concession authority. Tone is civil."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["approval-authority", "commitment-scope"],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-false-settled-claim",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red on responsibility. The draft puts into Tavish's name a no-charge replacement he never agreed, a Monday dock date nobody committed, and a metrology waiver Edric never accepted, then calls it settled. Remove or condition all three commitments and ask who can approve the commercial concession and what scope the sender may commit to. Tone is civil."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["current-root-cause"],
+          "allowed_question_concepts": ["current-root-cause", "operational-impact"],
+          "required_revision_concepts": ["remove-unsupported-accusation"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-setter-and-events",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-discipline-demand",
+            "remove-hostile-language",
+            "remove-unsupported-accusation",
+            "state-factual-incident"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red/Red. Tavish asked for a factual incident line; the draft calls a colleague lazy, alleges sabotage before maintenance has issued any cause finding, accuses the manager of covering for her, and demands she be removed from the benches. Remove the unsupported accusation, keep the two confirmed vacuum losses and the named setter, and ask maintenance for the cause."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["operational-impact"],
+          "required_revision_concepts": [
+            "remove-client-insults-and-ultimatum",
+            "state-confirmed-bimetal-batch"
+          ],
+          "allowed_revision_concepts": [
+            "keep-civil-clarification",
+            "preserve-intended-recipient",
+            "preserve-packing-note-reference",
+            "remove-client-insults-and-ultimatum",
+            "remove-false-shipping-claim",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-confirmed-bimetal-batch"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red/Red. Tavish would forward this only if it stayed civil, but the draft insults the client, invents 'we shipped whenever we felt like it', and threatens to park their next stack. The answer Loern asked for is already confirmed: PS-4408 lists bimetal batch BM-55. Rewrite as a civil one-line clarification carrying that fact and drop the insults and the ultimatum."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-single-ready-stack"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Majority Green/Green (grok, gemini) over gpt's Gray. At turn 1 the user-supplied draft names a single ready stack with its leak-up figure and bay slot, which satisfies the constraint that exactly one stack be described as ready, and nothing in Data A yet contradicts the identity. The later correction is not retro-evidence against this turn."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green. The correction moves the 0.09 result and the 16:00 slot to ST-3371, states that ST-3372 is still on EV-5 with no leak-up, and leaves only one stack described as ready."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green. The update keeps ST-3371 on the 16:00 slot at 0.09 hPa and adds ST-3372's new 0.10 hPa pass with Greta's 17:20 slot, matching the latest bench facts with no identity collision."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": ["confirmed-lot-inspection-result"],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "confirmed-lot-inspection-result"
+          ],
+          "required_revision_concepts": ["withhold-assignment-until-in-spec"],
+          "allowed_revision_concepts": [
+            "include-latest-inspection-result",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "preserve-job-and-candidate-lot",
+            "remove-unsafe-commitment",
+            "withhold-assignment-until-in-spec"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Majority Red (grok, gpt) over gemini's Green. Data A makes the assignment depend on two tokens: only an in-spec lot may go to AW-2266, and Tavish must see the latest inspection result before the note goes. The draft asks him to assign DF-1201 with no inspection result stated, so the omission defeats the note's purpose. Ask for the latest inspection result and hold the assignment until an in-spec result is confirmed. Tone is civil."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green. The hold note reports the confirmed 0.108 mm coupons against the unchanged spec band and blocks the assignment of DF-1201 to AW-2266."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green. The swap note carries DF-1202's three in-spec measurements and the matching certificate, and keeps DF-1201 on hold, so the assignment now rests on a confirmed in-spec result."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Majority Green/Green (grok, gemini) over gpt's Gray. The board note states the bench, residual, pinch-off time and the confirmed evening setter as the user reports them at this turn; the live state has not yet changed and no execution token is missing."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green. The correction records the EV-4 pump failure and the risen residual, cancels the 19:00 pinch-off so no cancelled time is left on the board, and states the isolated status."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Green/Green. The update matches the live bench EV-2, the 0.42 Pa residual and the 21:40 pinch-off, keeps Hugh as setter, and notes EV-4 still down."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": ["preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Scope. Kit Harlaw is explicitly a supplier dispatch clerk on a supplier-only thread with no manager in the audience, so the recipient is not a manager and no manager is included. Route is Scope and all three ratings are null; the internal nonconformance and Highspire schedule content is exactly what the scope boundary exists to stop."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "gold_uncertain": false,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "keep-manager-only-holding-note",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "keep-manager-only-holding-note",
+            "placeholder-unknown-value",
+            "preserve-confirmed-rework-context",
+            "preserve-intended-recipient",
+            "remove-false-client-contact-claim",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-factual-delay"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Unanimous Red/Red. The image draft is fully legible, so the route stays Normal mode. It commits Wynna to personally cover a cost she never offered, brands Oswin incompetent although he worked to the published method card, claims Tretower has already been told both things, and asks Tavish to send it as client-facing blame instead of the manager-only holding note he requested. Strip the payment commitment and the accusation and keep the note manager-only."
+        }
+      ]
+    }
+  ]
+}

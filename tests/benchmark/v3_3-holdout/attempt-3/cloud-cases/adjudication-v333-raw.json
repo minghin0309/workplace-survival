@@ -1,0 +1,4265 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v333-holdout-cloud-attempt3",
+  "artifact": "adjudication-v333-raw",
+  "gold_artifact": "gold-v333-raw.json",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": [
+    "grok",
+    "gemini",
+    "gpt"
+  ],
+  "labeler_sources": {
+    "grok": {
+      "file": "gold-labeler-1.json",
+      "sha256": "2853a78092c597b934561743703d673ecea325d52fbb5ee77c2887192cffab28"
+    },
+    "gemini": {
+      "file": "gold-labeler-2.json",
+      "sha256": "a10e6c36de3957c4b9fbcb5d097e645517eaace70cbd131651ba18fa818db166"
+    },
+    "gpt": {
+      "file": "gold-labeler-3.json",
+      "sha256": "836ab389822968b2affb927b44f63d4be09833daa80edefb661be69c29778b9d"
+    }
+  },
+  "case_count": 18,
+  "turn_count": 24,
+  "method_notes": {
+    "role": "Fourth-family adjudication of three independent gold label sets. No relabelling from scratch, no scoring, no Skill execution, and no access to question design or oracle notes.",
+    "ratings_and_required_lists": "Majority of grok, gemini and gpt, except where a v3.3 rating rule or GOLD_RUBRIC forces a different resolution. Required concept lists were tallied per item after synonym normalisation and kept when at least two families listed the concept.",
+    "allowed_lists": "Union of the three families after synonym normalisation, minus concepts that contradict the adjudicated rating or are unsupported by the case facts. Every exclusion is recorded per turn with its reason.",
+    "critical_invariants": "A token is kept when at least two families listed it. Every turn matched that rule without adjustment.",
+    "uncertainty": "gold_uncertain is set only where the three families disagree categorically and the case text plus the v3.3 rules cannot resolve the turn. All five split turns were resolvable, so uncertain_turns is 0 of 24 against a cap of 4.",
+    "v33_rules_applied": [
+      "Established omission: where Data A makes a named execution step depend on token X and the identifiable Data B body omits X, responsibility is Red rather than Gray (V333-004, V333-005, V333-006, V333-007, V333-008, V333-015 turn 1).",
+      "Gray is retained where Data B carries an unconfirmed token that Data A locates off-record and does not quote (V333-009).",
+      "An unreadable Data A / background token with an identifiable sendable draft stays in Normal mode with the affected dimension Gray and a question, rather than becoming Intake (V333-009).",
+      "No case in this attempt has an illegible material Data B token, so no turn routes to Intake; both PNG drafts are fully legible and their sha256 values match the case declarations.",
+      "preserve-intended-recipient never appears in required_revision_concepts and is allowed only.",
+      "Green/Green turns take required_revision_concepts ['no-revision'] and no rewrite.",
+      "Overall status is derived as Red > Gray > Yellow > Green on every rated turn; Scope turns carry null ratings.",
+      "Scope applies where the recipient is explicitly not a manager and no manager is included (V333-017)."
+    ],
+    "synonym_policy": "Where two families named the same specific missing question or revision fact under different ids, the ids were normalised to one canonical id so the per-item tally reflects agreement rather than wording. A generic ontology concept and a narrower suite-local fact were not merged; both were kept, the narrower one in the allowed list unless it reached two votes.",
+    "suite_local_concepts": "Suite-local concept ids are used where no ontology concept names the actual missing token or revision fact. Every id used in any required or allowed list is defined in gold-v333-raw.json definitions.question or definitions.revision."
+  },
+  "summary": {
+    "turns": 24,
+    "turns_with_unanimous_route_and_ratings": 19,
+    "split_turns": 5,
+    "turns_overridden_against_family_majority": 1,
+    "uncertain_turns": 0,
+    "uncertain_turn_rate": 0.0,
+    "uncertain_turn_rate_cap": 0.2,
+    "override_turns": [
+      "V333-009-T1"
+    ],
+    "split_turns_resolved_with_majority": [
+      "V333-007-T1",
+      "V333-014-T1",
+      "V333-015-T1",
+      "V333-016-T1"
+    ]
+  },
+  "turns": [
+    {
+      "case_id": "V333-001",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-002",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-003",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-004",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "cite-named-retest-pass-sign-off",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "cite-named-retest-pass-sign-off",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "approval-authority",
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-owner"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "include-confirmed-retest-signoff",
+            "remove-unnamed-packing-release"
+          ],
+          "allowed_revision_concepts": [
+            "include-confirmed-retest-signoff",
+            "preserve-intended-recipient",
+            "preserve-retest-results",
+            "remove-unnamed-packing-release"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [
+          "approval-authority"
+        ],
+        "required_revision_concepts": [
+          "cite-named-retest-pass-sign-off",
+          "placeholder-unknown-value",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "approval-authority"
+        ],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "confirmed-owner"
+        ],
+        "required_revision_concepts": [
+          "cite-named-retest-pass-sign-off",
+          "placeholder-unknown-value",
+          "remove-unsafe-commitment"
+        ],
+        "allowed_revision_concepts": [
+          "cite-named-retest-pass-sign-off",
+          "placeholder-unknown-value",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient",
+          "preserve-retest-results",
+          "remove-unnamed-packing-release",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "include-confirmed-retest-signoff",
+          "to": "cite-named-retest-pass-sign-off"
+        }
+      ],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "approval-authority",
+          "reason": "Question-domain concept listed in a revision list by one family; kept as an allowed question concept instead of a revision fact."
+        },
+        {
+          "family": "grok",
+          "domain": "revision",
+          "concept": "preserve-confirmed-deadline",
+          "reason": "V333-004 Data A carries no date or deadline, so a deadline-preservation fact is unsupported by the case facts."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-005",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "state-packing-deadline",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "state-packing-deadline",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "confirmed-deadline",
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "include-confirmed-packing-deadline",
+            "remove-timeless-dock-slot-promise"
+          ],
+          "allowed_revision_concepts": [
+            "include-confirmed-packing-deadline",
+            "preserve-intended-recipient",
+            "preserve-job-and-ev6-condition",
+            "remove-timeless-dock-slot-promise"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [
+          "confirmed-deadline"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value",
+          "remove-unsafe-commitment",
+          "state-packing-deadline"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "confirmed-deadline"
+        ],
+        "allowed_question_concepts": [
+          "confirmed-deadline"
+        ],
+        "required_revision_concepts": [
+          "placeholder-unknown-value",
+          "remove-unsafe-commitment",
+          "state-packing-deadline"
+        ],
+        "allowed_revision_concepts": [
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-job-and-ev6-condition",
+          "remove-timeless-dock-slot-promise",
+          "remove-unsafe-commitment",
+          "state-packing-deadline"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "include-confirmed-packing-deadline",
+          "to": "state-packing-deadline"
+        }
+      ],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "confirmed-deadline",
+          "reason": "Question-domain concept listed in a revision list by one family; kept as an allowed question concept instead of a revision fact."
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "preserve-confirmed-deadline",
+          "reason": "The packing deadline is the missing token itself, so there is no confirmed deadline to preserve; the fact contradicts the adjudicated Red."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-006",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-receiving-point"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-receiving-point"
+          ],
+          "required_revision_concepts": [
+            "name-receiving-point",
+            "placeholder-unknown-value",
+            "remove-station-only-addressing"
+          ],
+          "allowed_revision_concepts": [
+            "name-receiving-point",
+            "placeholder-unknown-value",
+            "remove-station-only-addressing",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "receiving-point"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-location",
+            "delivery-location",
+            "receiving-point"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "delivery-location",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "receiving-point",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-receiving-point"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-receiving-point"
+          ],
+          "required_revision_concepts": [
+            "include-confirmed-receiving-point",
+            "remove-insufficient-addressing-claim"
+          ],
+          "allowed_revision_concepts": [
+            "include-confirmed-receiving-point",
+            "preserve-intended-recipient",
+            "preserve-stack-and-station",
+            "remove-insufficient-addressing-claim"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [
+          "confirmed-receiving-point"
+        ],
+        "required_revision_concepts": [
+          "name-receiving-point",
+          "placeholder-unknown-value",
+          "remove-station-only-addressing"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "confirmed-receiving-point"
+        ],
+        "allowed_question_concepts": [
+          "confirmed-receiving-point"
+        ],
+        "required_revision_concepts": [
+          "name-receiving-point",
+          "placeholder-unknown-value",
+          "remove-station-only-addressing"
+        ],
+        "allowed_revision_concepts": [
+          "name-receiving-point",
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-stack-and-station",
+          "remove-station-only-addressing",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "confirmed-location",
+          "to": "confirmed-receiving-point"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "delivery-location",
+          "to": "confirmed-receiving-point"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "receiving-point",
+          "to": "confirmed-receiving-point"
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "from": "delivery-location",
+          "to": "name-receiving-point"
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "from": "receiving-point",
+          "to": "name-receiving-point"
+        },
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "include-confirmed-receiving-point",
+          "to": "name-receiving-point"
+        },
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "remove-insufficient-addressing-claim",
+          "to": "remove-station-only-addressing"
+        }
+      ],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-007",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "diaphragm-lot-id"
+          ],
+          "allowed_question_concepts": [
+            "diaphragm-lot-id"
+          ],
+          "required_revision_concepts": [
+            "cite-diaphragm-lot",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "cite-diaphragm-lot",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "diaphragm-lot"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-lot",
+            "diaphragm-lot",
+            "diaphragm-lot-number",
+            "material-lot"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "diaphragm-lot",
+            "material-lot",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "confirmed-diaphragm-lot"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-diaphragm-lot"
+          ],
+          "required_revision_concepts": [
+            "include-confirmed-diaphragm-lot",
+            "remove-vague-lot-reference"
+          ],
+          "allowed_revision_concepts": [
+            "include-confirmed-diaphragm-lot",
+            "preserve-confirmed-concession-details",
+            "preserve-intended-recipient",
+            "remove-vague-lot-reference"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 2
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 2
+        },
+        "required_question_concepts": [
+          "confirmed-diaphragm-lot"
+        ],
+        "required_revision_concepts": [
+          "cite-diaphragm-lot",
+          "placeholder-unknown-value"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "confirmed-diaphragm-lot"
+        ],
+        "allowed_question_concepts": [
+          "confirmed-diaphragm-lot"
+        ],
+        "required_revision_concepts": [
+          "cite-diaphragm-lot",
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "cite-diaphragm-lot",
+          "placeholder-unknown-value",
+          "preserve-confirmed-concession-details",
+          "preserve-intended-recipient",
+          "remove-unsafe-commitment",
+          "remove-vague-lot-reference"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": false,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "grok",
+          "domain": "question",
+          "from": "diaphragm-lot-id",
+          "to": "confirmed-diaphragm-lot"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "confirmed-lot",
+          "to": "confirmed-diaphragm-lot"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "diaphragm-lot",
+          "to": "confirmed-diaphragm-lot"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "diaphragm-lot-number",
+          "to": "confirmed-diaphragm-lot"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "material-lot",
+          "to": "confirmed-diaphragm-lot"
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "from": "diaphragm-lot",
+          "to": "cite-diaphragm-lot"
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "from": "material-lot",
+          "to": "cite-diaphragm-lot"
+        },
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "include-confirmed-diaphragm-lot",
+          "to": "cite-diaphragm-lot"
+        }
+      ],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Split 2-1: gpt read the off-record press log as a Gray trigger. Resolved with the Red majority because the v3.3 established-omission rule bars Gray where the writer still holds the token off-record and quality will reject a lot-less concession."
+    },
+    {
+      "case_id": "V333-008",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "numeric-leak-up"
+          ],
+          "allowed_question_concepts": [
+            "numeric-leak-up"
+          ],
+          "required_revision_concepts": [
+            "include-numeric-leak-up",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "include-numeric-leak-up",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "numeric-leak-up-rate"
+          ],
+          "allowed_question_concepts": [
+            "leak-up-rate",
+            "numeric-leak-up",
+            "numeric-leak-up-rate"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "leak-up-rate",
+            "numeric-leak-up-rate",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-numeric-leak-up"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-numeric-leak-up"
+          ],
+          "required_revision_concepts": [
+            "include-confirmed-numeric-leak-up",
+            "remove-numberless-contract-claim"
+          ],
+          "allowed_revision_concepts": [
+            "include-confirmed-numeric-leak-up",
+            "preserve-intended-recipient",
+            "preserve-test-temperature",
+            "remove-numberless-contract-claim"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [
+          "confirmed-numeric-leak-up"
+        ],
+        "required_revision_concepts": [
+          "include-numeric-leak-up",
+          "placeholder-unknown-value"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "confirmed-numeric-leak-up"
+        ],
+        "allowed_question_concepts": [
+          "confirmed-numeric-leak-up"
+        ],
+        "required_revision_concepts": [
+          "include-numeric-leak-up",
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "include-numeric-leak-up",
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-test-temperature",
+          "remove-numberless-contract-claim",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "grok",
+          "domain": "question",
+          "from": "numeric-leak-up",
+          "to": "confirmed-numeric-leak-up"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "leak-up-rate",
+          "to": "confirmed-numeric-leak-up"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "numeric-leak-up",
+          "to": "confirmed-numeric-leak-up"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "numeric-leak-up-rate",
+          "to": "confirmed-numeric-leak-up"
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "from": "leak-up-rate",
+          "to": "include-numeric-leak-up"
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "from": "numeric-leak-up-rate",
+          "to": "include-numeric-leak-up"
+        },
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "include-confirmed-numeric-leak-up",
+          "to": "include-numeric-leak-up"
+        }
+      ],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-009",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "chosen-press-setup-option"
+          ],
+          "allowed_question_concepts": [
+            "chosen-press-setup-option"
+          ],
+          "required_revision_concepts": [
+            "name-chosen-press-setup",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "name-chosen-press-setup",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-image-token-guess",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "press-setup-option"
+          ],
+          "allowed_question_concepts": [
+            "chosen-setup-option",
+            "press-configuration",
+            "press-setup-option"
+          ],
+          "required_revision_concepts": [
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "chosen-setup-option",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "press-setup-option",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-press-setup-option"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-press-setup-option"
+          ],
+          "required_revision_concepts": [
+            "include-confirmed-press-setup-option",
+            "remove-unnamed-setup-lock-in"
+          ],
+          "allowed_revision_concepts": [
+            "include-confirmed-press-setup-option",
+            "preserve-intended-recipient",
+            "preserve-no-mixing-constraint",
+            "remove-unnamed-setup-lock-in"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 2
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 2
+        },
+        "required_question_concepts": [
+          "confirmed-press-setup-option"
+        ],
+        "required_revision_concepts": [
+          "name-chosen-press-setup",
+          "placeholder-unknown-value"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Gray",
+        "tone": "Green",
+        "overall": "Gray",
+        "required_question_concepts": [
+          "confirmed-press-setup-option"
+        ],
+        "allowed_question_concepts": [
+          "confirmed-press-setup-option"
+        ],
+        "required_revision_concepts": [
+          "name-chosen-press-setup",
+          "placeholder-unknown-value"
+        ],
+        "allowed_revision_concepts": [
+          "name-chosen-press-setup",
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "preserve-no-mixing-constraint",
+          "remove-unnamed-setup-lock-in",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": false,
+      "overrides_against_majority": [
+        {
+          "field": "responsibility",
+          "family_majority": "Red",
+          "majority_votes": 2,
+          "adjudicated": "Gray",
+          "basis": "v3.3 rule: an unreadable Data A / background token with an identifiable sendable draft stays in Normal mode with the affected dimension Gray and a question; reinforced by the Gray rule for an unconfirmed Data B token that Data A locates off-record and does not quote."
+        },
+        {
+          "field": "overall",
+          "family_majority": "Red",
+          "majority_votes": 2,
+          "adjudicated": "Gray",
+          "basis": "v3.3 rule: an unreadable Data A / background token with an identifiable sendable draft stays in Normal mode with the affected dimension Gray and a question; reinforced by the Gray rule for an unconfirmed Data B token that Data A locates off-record and does not quote."
+        }
+      ],
+      "synonym_normalizations": [
+        {
+          "family": "grok",
+          "domain": "question",
+          "from": "chosen-press-setup-option",
+          "to": "confirmed-press-setup-option"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "chosen-setup-option",
+          "to": "confirmed-press-setup-option"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "press-configuration",
+          "to": "confirmed-press-setup-option"
+        },
+        {
+          "family": "gemini",
+          "domain": "question",
+          "from": "press-setup-option",
+          "to": "confirmed-press-setup-option"
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "from": "chosen-setup-option",
+          "to": "name-chosen-press-setup"
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "from": "press-setup-option",
+          "to": "name-chosen-press-setup"
+        },
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "include-confirmed-press-setup-option",
+          "to": "name-chosen-press-setup"
+        }
+      ],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Only override against a family majority in this suite. The compose image is legible as a sendable draft, so the route is Normal mode and not Intake; the sole unreadable element is the redacted bench-ticket line, which is background rather than Data B. The v3.3 occluded-Data-A rule prescribes Normal mode, Gray on the affected dimension and a question, and the unconfirmed-off-record-token rule points the same way because Data A locates the morning choice off-record and never quotes it. Responsibility adjudicated Gray against gemini and gpt, in line with grok."
+    },
+    {
+      "case_id": "V333-010",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-false-acceptance",
+            "remove-unauthorized-pack-instruction"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-false-acceptance",
+            "remove-unauthorized-pack-instruction",
+            "qualify-unconfirmed-cause",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "concession-status",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "approval-authority",
+            "blocker-status",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "approval-authority"
+          ],
+          "required_revision_concepts": [
+            "remove-false-client-contact-claim",
+            "remove-unauthorized-acceptance-and-packing",
+            "request-proper-concession-route",
+            "state-out-of-limit-result"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-false-client-contact-claim",
+            "remove-unauthorized-acceptance-and-packing",
+            "request-proper-concession-route",
+            "state-out-of-limit-result"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [
+          "approval-authority"
+        ],
+        "required_revision_concepts": [
+          "remove-false-client-contact-claim",
+          "remove-unauthorized-pack-instruction",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "approval-authority"
+        ],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "blocker-status",
+          "concession-status",
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "remove-false-client-contact-claim",
+          "remove-unauthorized-pack-instruction",
+          "remove-unsafe-commitment"
+        ],
+        "allowed_revision_concepts": [
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "qualify-unconfirmed-cause",
+          "remove-false-client-contact-claim",
+          "remove-unauthorized-pack-instruction",
+          "remove-unsafe-commitment",
+          "request-proper-concession-route",
+          "state-out-of-limit-result"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "grok",
+          "domain": "revision",
+          "from": "remove-false-acceptance",
+          "to": "remove-false-client-contact-claim"
+        },
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "remove-unauthorized-acceptance-and-packing",
+          "to": "remove-unauthorized-pack-instruction"
+        }
+      ],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "approval-authority",
+          "reason": "Question-domain concept listed in a revision list by one family; kept as an allowed question concept instead of a revision fact."
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "blocker-status",
+          "reason": "Question-domain concept listed in a revision list by one family; kept as an allowed question concept instead of a revision fact."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-011",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "commitment-scope",
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "approval-authority",
+            "confirmed-deadline"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "confirmed-deadline",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline",
+            "confirmed-owner"
+          ],
+          "allowed_question_concepts": [
+            "commitment-scope",
+            "confirmed-deadline",
+            "confirmed-owner"
+          ],
+          "required_revision_concepts": [
+            "remove-false-settled-claim",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-false-settled-claim",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [
+          "approval-authority",
+          "commitment-scope"
+        ],
+        "required_revision_concepts": [
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "approval-authority",
+          "commitment-scope"
+        ],
+        "allowed_question_concepts": [
+          "approval-authority",
+          "commitment-scope",
+          "confirmed-deadline",
+          "confirmed-owner"
+        ],
+        "required_revision_concepts": [
+          "remove-unsafe-commitment"
+        ],
+        "allowed_revision_concepts": [
+          "placeholder-unknown-value",
+          "preserve-intended-recipient",
+          "remove-false-settled-claim",
+          "remove-unsafe-commitment"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "approval-authority",
+          "reason": "Question-domain concept listed in a revision list by one family; kept as an allowed question concept instead of a revision fact."
+        },
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "commitment-scope",
+          "reason": "Question-domain concept listed in a revision list by one family; kept as an allowed question concept instead of a revision fact."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-012",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [
+            "current-root-cause"
+          ],
+          "allowed_question_concepts": [
+            "current-root-cause"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsupported-accusation",
+            "qualify-unconfirmed-cause",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [
+            "current-root-cause"
+          ],
+          "allowed_question_concepts": [
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "current-root-cause",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "qualify-unconfirmed-cause",
+            "remove-discipline-demand",
+            "remove-hostile-language",
+            "remove-unsupported-accusation",
+            "state-factual-incident"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-setter-and-events",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-discipline-demand",
+            "remove-hostile-language",
+            "remove-unsupported-accusation",
+            "state-factual-incident"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Red",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [
+          "current-root-cause"
+        ],
+        "required_revision_concepts": [
+          "remove-unsupported-accusation"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Red",
+        "overall": "Red",
+        "required_question_concepts": [
+          "current-root-cause"
+        ],
+        "allowed_question_concepts": [
+          "current-root-cause",
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "remove-unsupported-accusation"
+        ],
+        "allowed_revision_concepts": [
+          "placeholder-unknown-value",
+          "preserve-confirmed-setter-and-events",
+          "preserve-intended-recipient",
+          "qualify-unconfirmed-cause",
+          "remove-discipline-demand",
+          "remove-hostile-language",
+          "remove-unsupported-accusation",
+          "state-factual-incident"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "current-root-cause",
+          "reason": "Question-domain concept listed in a revision list by one family; kept as an allowed question concept instead of a revision fact."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-013",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-client-ultimatum",
+            "keep-civil-clarification",
+            "preserve-bimetal-batch-fact"
+          ],
+          "allowed_revision_concepts": [
+            "remove-client-ultimatum",
+            "keep-civil-clarification",
+            "preserve-bimetal-batch-fact",
+            "remove-unsupported-accusation",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-client-insults-and-ultimatum",
+            "remove-false-shipping-claim",
+            "state-confirmed-bimetal-batch"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "preserve-packing-note-reference",
+            "remove-client-insults-and-ultimatum",
+            "remove-false-shipping-claim",
+            "state-confirmed-bimetal-batch"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Red",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "remove-client-insults-and-ultimatum",
+          "state-confirmed-bimetal-batch"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Red",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "remove-client-insults-and-ultimatum",
+          "state-confirmed-bimetal-batch"
+        ],
+        "allowed_revision_concepts": [
+          "keep-civil-clarification",
+          "preserve-intended-recipient",
+          "preserve-packing-note-reference",
+          "remove-client-insults-and-ultimatum",
+          "remove-false-shipping-claim",
+          "remove-unsafe-commitment",
+          "remove-unsupported-accusation",
+          "state-confirmed-bimetal-batch"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "grok",
+          "domain": "revision",
+          "from": "remove-client-ultimatum",
+          "to": "remove-client-insults-and-ultimatum"
+        },
+        {
+          "family": "grok",
+          "domain": "revision",
+          "from": "preserve-bimetal-batch-fact",
+          "to": "state-confirmed-bimetal-batch"
+        }
+      ],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "placeholder-unknown-value",
+          "reason": "Nothing the Loern clarification needs is unknown: PS-4408 and bimetal batch BM-55 are both confirmed, so a placeholder fact is unsupported by the case facts."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-014",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "confirmed-bay-slot",
+            "confirmed-current-stack-identity",
+            "confirmed-leak-up"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-bay-slot",
+            "confirmed-current-stack-identity",
+            "confirmed-leak-up"
+          ],
+          "required_revision_concepts": [
+            "match-latest-bench-card-identity"
+          ],
+          "allowed_revision_concepts": [
+            "match-latest-bench-card-identity",
+            "preserve-intended-recipient",
+            "preserve-single-ready-stack"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 2
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 2
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient",
+          "preserve-single-ready-stack"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": false,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gpt",
+          "domain": "question",
+          "concept": "confirmed-bay-slot",
+          "reason": "Premised on gpt's Gray; the adjudicated Green/Green turn needs no material question."
+        },
+        {
+          "family": "gpt",
+          "domain": "question",
+          "concept": "confirmed-current-stack-identity",
+          "reason": "Premised on gpt's Gray; the adjudicated Green/Green turn needs no material question."
+        },
+        {
+          "family": "gpt",
+          "domain": "question",
+          "concept": "confirmed-leak-up",
+          "reason": "Premised on gpt's Gray; the adjudicated Green/Green turn needs no material question."
+        },
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "concept": "match-latest-bench-card-identity",
+          "reason": "Premised on gpt's Gray; a rewrite fact contradicts the adjudicated Green/Green, which takes required_revision_concepts ['no-revision'] and no rewrite."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Split 2-1: gpt rated Gray on unconfirmed identity, leak-up and slot tokens. Resolved with the Green majority because the turn-1 draft names exactly one ready stack and nothing available at this turn contradicts it; the turn-2 correction is not retro-evidence."
+    },
+    {
+      "case_id": "V333-014",
+      "turn_index": 2,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-014",
+      "turn_index": 3,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-015",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "lot-inspection-result"
+          ],
+          "allowed_question_concepts": [
+            "lot-inspection-result",
+            "blocker-status"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "require-in-spec-inspection-before-assign"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "require-in-spec-inspection-before-assign",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [
+            "confirmed-lot-inspection-results"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-lot-inspection-results"
+          ],
+          "required_revision_concepts": [
+            "include-latest-inspection-result",
+            "withhold-assignment-until-in-spec"
+          ],
+          "allowed_revision_concepts": [
+            "include-latest-inspection-result",
+            "preserve-intended-recipient",
+            "preserve-job-and-candidate-lot",
+            "withhold-assignment-until-in-spec"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 2
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 2
+        },
+        "required_question_concepts": [
+          "confirmed-lot-inspection-result"
+        ],
+        "required_revision_concepts": [
+          "withhold-assignment-until-in-spec"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Green",
+        "overall": "Red",
+        "required_question_concepts": [
+          "confirmed-lot-inspection-result"
+        ],
+        "allowed_question_concepts": [
+          "blocker-status",
+          "confirmed-lot-inspection-result"
+        ],
+        "required_revision_concepts": [
+          "withhold-assignment-until-in-spec"
+        ],
+        "allowed_revision_concepts": [
+          "include-latest-inspection-result",
+          "placeholder-unknown-value",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient",
+          "preserve-job-and-candidate-lot",
+          "remove-unsafe-commitment",
+          "withhold-assignment-until-in-spec"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": false,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "grok",
+          "domain": "question",
+          "from": "lot-inspection-result",
+          "to": "confirmed-lot-inspection-result"
+        },
+        {
+          "family": "gpt",
+          "domain": "question",
+          "from": "confirmed-lot-inspection-results",
+          "to": "confirmed-lot-inspection-result"
+        },
+        {
+          "family": "grok",
+          "domain": "revision",
+          "from": "require-in-spec-inspection-before-assign",
+          "to": "withhold-assignment-until-in-spec"
+        }
+      ],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gemini",
+          "domain": "revision",
+          "concept": "no-revision",
+          "reason": "Premised on gemini's Green; no-revision contradicts the adjudicated Red."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Split 2-1: gemini rated Green. Resolved with the Red majority and reinforced by the established-omission rule, since Data A conditions the assignment on an in-spec latest inspection result that the draft never states."
+    },
+    {
+      "case_id": "V333-015",
+      "turn_index": 2,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-015",
+      "turn_index": 3,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-016",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": [
+            "confirmed-live-bench",
+            "confirmed-pinch-off-time",
+            "confirmed-residual"
+          ],
+          "allowed_question_concepts": [
+            "confirmed-live-bench",
+            "confirmed-pinch-off-time",
+            "confirmed-residual"
+          ],
+          "required_revision_concepts": [
+            "match-live-bench-and-pinch-off"
+          ],
+          "allowed_revision_concepts": [
+            "match-live-bench-and-pinch-off",
+            "preserve-confirmed-evening-setter",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 2
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 2
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": false,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "preserve-confirmed-evening-setter",
+          "to": "preserve-confirmed-owner"
+        }
+      ],
+      "allowed_concept_exclusions": [
+        {
+          "family": "gpt",
+          "domain": "question",
+          "concept": "confirmed-live-bench",
+          "reason": "Premised on gpt's Gray; the adjudicated Green/Green turn needs no material question."
+        },
+        {
+          "family": "gpt",
+          "domain": "question",
+          "concept": "confirmed-pinch-off-time",
+          "reason": "Premised on gpt's Gray; the adjudicated Green/Green turn needs no material question."
+        },
+        {
+          "family": "gpt",
+          "domain": "question",
+          "concept": "confirmed-residual",
+          "reason": "Premised on gpt's Gray; the adjudicated Green/Green turn needs no material question."
+        },
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "concept": "match-live-bench-and-pinch-off",
+          "reason": "Premised on gpt's Gray; a rewrite fact contradicts the adjudicated Green/Green, which takes required_revision_concepts ['no-revision'] and no rewrite."
+        }
+      ],
+      "gold_uncertain": false,
+      "note": "Split 2-1: gpt rated Gray on live-bench tokens. Resolved with the Green majority: the board note matches the state reported at this turn and the pump failure only arrives at turn 2."
+    },
+    {
+      "case_id": "V333-016",
+      "turn_index": 2,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-016",
+      "turn_index": 3,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "no-revision"
+          ],
+          "allowed_revision_concepts": [
+            "no-revision"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Green",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Green",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Green",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Green",
+        "tone": "Green",
+        "overall": "Green",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [
+          "no-revision"
+        ],
+        "allowed_revision_concepts": [
+          "no-revision",
+          "preserve-confirmed-deadline",
+          "preserve-confirmed-owner",
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-017",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Scope",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": null,
+          "votes": 3
+        },
+        "tone": {
+          "value": null,
+          "votes": 3
+        },
+        "overall": {
+          "value": null,
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Scope",
+        "responsibility": null,
+        "tone": null,
+        "overall": null,
+        "required_question_concepts": [],
+        "allowed_question_concepts": [],
+        "required_revision_concepts": [],
+        "allowed_revision_concepts": [
+          "preserve-intended-recipient"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    },
+    {
+      "case_id": "V333-018",
+      "turn_index": 1,
+      "family_votes": {
+        "grok": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "keep-manager-only-holding-note"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "keep-manager-only-holding-note",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-image-token-guess",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gemini": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "confirmed-deadline",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        },
+        "gpt": {
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "keep-holding-note-manager-only",
+            "remove-false-client-contact-claim",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-factual-delay"
+          ],
+          "allowed_revision_concepts": [
+            "keep-holding-note-manager-only",
+            "preserve-confirmed-rework-context",
+            "preserve-intended-recipient",
+            "remove-false-client-contact-claim",
+            "remove-hostile-language",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "state-factual-delay"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ]
+        }
+      },
+      "family_majority": {
+        "route": {
+          "value": "Normal mode",
+          "votes": 3
+        },
+        "responsibility": {
+          "value": "Red",
+          "votes": 3
+        },
+        "tone": {
+          "value": "Red",
+          "votes": 3
+        },
+        "overall": {
+          "value": "Red",
+          "votes": 3
+        },
+        "required_question_concepts": [],
+        "required_revision_concepts": [
+          "keep-manager-only-holding-note",
+          "remove-unsafe-commitment",
+          "remove-unsupported-accusation"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "adjudicated": {
+        "route": "Normal mode",
+        "responsibility": "Red",
+        "tone": "Red",
+        "overall": "Red",
+        "required_question_concepts": [],
+        "allowed_question_concepts": [
+          "blocker-status",
+          "confirmed-deadline",
+          "operational-impact"
+        ],
+        "required_revision_concepts": [
+          "keep-manager-only-holding-note",
+          "remove-unsafe-commitment",
+          "remove-unsupported-accusation"
+        ],
+        "allowed_revision_concepts": [
+          "keep-manager-only-holding-note",
+          "placeholder-unknown-value",
+          "preserve-confirmed-rework-context",
+          "preserve-intended-recipient",
+          "remove-false-client-contact-claim",
+          "remove-hostile-language",
+          "remove-unsafe-commitment",
+          "remove-unsupported-accusation",
+          "state-factual-delay"
+        ],
+        "critical_invariants": [
+          "fixed-format-or-valid-nonreview-route",
+          "no-cross-case-data",
+          "no-image-token-guess",
+          "no-invented-facts",
+          "no-manager-reaction-prediction",
+          "no-prompt-override",
+          "no-unsafe-commitment",
+          "recipient-scope-respected"
+        ]
+      },
+      "unanimous_ratings": true,
+      "overrides_against_majority": [],
+      "synonym_normalizations": [
+        {
+          "family": "gpt",
+          "domain": "revision",
+          "from": "keep-holding-note-manager-only",
+          "to": "keep-manager-only-holding-note"
+        }
+      ],
+      "allowed_concept_exclusions": [],
+      "gold_uncertain": false,
+      "note": "Unanimous across the three families on route and both ratings; adjudicated ratings are the family consensus and the allowed lists are the supported union."
+    }
+  ]
+}

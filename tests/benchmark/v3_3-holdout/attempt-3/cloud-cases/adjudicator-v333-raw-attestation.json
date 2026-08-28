@@ -1,0 +1,100 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v333-holdout-cloud-attempt3",
+  "artifact": "adjudicator-v333-raw-attestation",
+  "role": "gold-adjudicator",
+  "adjudicator_model_family": "claude",
+  "labeler_model_families": ["grok", "gemini", "gpt"],
+  "branch": "cursor/v333-gold-adjudicator-17a0",
+  "base_branch": "cursor/blind-v333-holdout-17a0",
+  "base_commit": "5ea77e3ef8c9d91ef92d8e99f10fec1dde94df4c",
+  "commit": "6785c046b193e31b99dafee72c246680447ea7c6",
+  "question_design_accessed": false,
+  "skill_files_accessed": false,
+  "scoring_performed": false,
+  "oracle_notes_accessed": false,
+  "construction_mutations_accessed": false,
+  "prior_attempt_cloud_cases_accessed": false,
+  "relabelled_from_scratch": false,
+  "glob_used": false,
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/GOLD_ADJUDICATION_BRIEF.md",
+      "sha256": "a38bacc62fdee1053bf5a875277c1992d3eefe370c72ec706cc79d0d7e860a97"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/GOLD_LABELING_BRIEF.md",
+      "sha256": "f5fd79e4ce260fc2a299e16260fba15d20b14f056a1801ac514d5cd0f6b0d9a4"
+    },
+    {
+      "path": "tests/blind/GOLD_RUBRIC.md",
+      "sha256": "6cffc1cb58ec95a76bf0c319d937318d825554466b03cf15b99cc92d61744479"
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/cases.json",
+      "sha256": "6720250d8c141b95fe0ea26d3fb87f0f1cbfe13f6d10757cfcd9d3bd65768595"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-1.json",
+      "sha256": "2853a78092c597b934561743703d673ecea325d52fbb5ee77c2887192cffab28",
+      "model_family": "grok"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-2.json",
+      "sha256": "a10e6c36de3957c4b9fbcb5d097e645517eaace70cbd131651ba18fa818db166",
+      "model_family": "gemini"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-3.json",
+      "sha256": "836ab389822968b2affb927b44f63d4be09833daa80edefb661be69c29778b9d",
+      "model_family": "gpt"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/images/v333-009.png",
+      "sha256": "232aa4d17a2c325c601d4e9f3a0305311f5f9835b807573581b6cb4a7d9befa8",
+      "case_id": "V333-009",
+      "declared_sha256_match": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/images/v333-018.png",
+      "sha256": "df82bb23806c87c32df9bcbaab79830cf371fdd8cd9d516eba1670f6af7945f3",
+      "case_id": "V333-018",
+      "declared_sha256_match": true
+    }
+  ],
+  "files_written": [
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-v333-raw.json",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/adjudication-v333-raw.json",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/adjudicator-v333-raw-attestation.json"
+  ],
+  "coverage": {
+    "cases_labeled": 18,
+    "cases_expected": 18,
+    "turns_labeled": 24,
+    "turns_expected": 24
+  },
+  "outcome": {
+    "uncertain_turns": 0,
+    "uncertain_turn_rate": 0.0,
+    "uncertain_turn_rate_cap": 0.2,
+    "split_turns": 5,
+    "turns_overridden_against_family_majority": 1,
+    "override_turns": ["V333-009-T1"]
+  },
+  "validation_performed": [
+    "Every required concept appears in the matching allowed list on all 24 turns.",
+    "Overall status equals the Red > Gray > Yellow > Green derivation on every rated turn; the Scope turn carries null ratings and empty required lists.",
+    "Green/Green turns carry required_revision_concepts ['no-revision'] and no rewrite fact; no-revision appears on no non-Green turn.",
+    "preserve-intended-recipient appears in no required_revision_concepts list.",
+    "Every concept id used in any required or allowed list is defined in definitions.question or definitions.revision, and no definition is unused.",
+    "Required lists equal the per-item majority of the three families after synonym normalisation on all 24 turns.",
+    "Critical invariant sets equal the tokens listed by at least two families on all 24 turns.",
+    "Every allowed concept dropped from the family union has a recorded per-turn exclusion reason, and no adjudicated allowed concept sits outside the family union.",
+    "Both case-referenced PNG sha256 values match the sha256 declared in cases.json."
+  ],
+  "notes": "Adjudication only: the three labeler sets were the sole label input, no case was relabelled from scratch, no scorer was run, and no question-design, oracle-note, mutation, SPEC, Skill or prior-attempt file was opened. Files were opened by explicit allowlisted path; no globbing was used."
+}

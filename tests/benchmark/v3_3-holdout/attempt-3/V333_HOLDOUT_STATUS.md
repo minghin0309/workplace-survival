@@ -8,7 +8,7 @@
 | Frozen attempt 1 | do not rescore |
 | Frozen attempt 2 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v333-attempt3-cases-k7m2-17a0` @ `446a20b` (artifacts `2738181`, not merged). Designer `bc-891cc11a-21f6-5e13-abc4-ca17369cbf10`. |
-| Gold | three labelers copied (`git show`, not merged). Adjudicator launched: `bc-15777191-0cb6-5a6f-9438-0dfada82fe06` (claude opus). |
+| Gold | `VALID_COVERAGE`; copied with `git show` from `cursor/v333-gold-adjudicator-17a0` @ `6eece7a` (not merged). Gold JSON SHA-256 `f47bd218c185a076444d12eb270f41cb2658c2312d5086ac9a4e0d07556fbc08`. Uncertain 0/24. |
 | SUT | not started |
 | Extraction | not started |
 | Matching | not started |
@@ -24,4 +24,4 @@ Gold labelers (do not merge):
 | 2 | gemini | `gemini-3.7-flash-high` | `cursor/v333-gold-labeler-2-17a0` @ `dee1d04` | `bc-50b62d40-cc75-580b-ad43-4baa4434022e` |
 | 3 | gpt | `gpt-5.6-sol-high` | `cursor/v333-gold-labeler-3-17a0` @ `b804783` | `bc-b7c43f0e-59ed-5a25-91a8-092070816448` |
 
-Adjudicator (do not merge): `cursor/v333-gold-adjudicator-17a0` pending. Family claude.
+Adjudicator (do not merge): `cursor/v333-gold-adjudicator-17a0` @ `6eece7a`. Family claude. Copied with `git show`. Isolation: question-design and Skill not read. Uncertain 0/24.
