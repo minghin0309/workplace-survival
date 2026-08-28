@@ -1,0 +1,762 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "gold-blind-extraction",
+  "extractor": {
+    "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+    "model_id": "unverified",
+    "model_family": "gemini"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractor-visible.json",
+    "sha256": "64ac7a5fe722de80aa8ea18403a61f19b8bdb31cd095424e4b954d394980c6f1"
+  },
+  "cases": [
+    {
+      "case_id": "V333-001",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. All ratings Green. No confirmation needed and no revision needed. All critical invariants pass."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-002",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. All ratings Green. Foil lot release is confirmed in-spec. No confirmation needed and no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-003",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. All ratings Green. Bench handover is factual and consistent with constraints. No confirmation needed and no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-004",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-004-1-1",
+              "text": "Asks who currently holds retest-pass release sign-off for ST-3319",
+              "evidence_span": "1. Question: Who currently holds retest-pass release sign-off for ST-3319?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-004-1-1",
+              "text": "Adds placeholder for named retest-pass release sign-off and omits unauthorized commitment to instruct packing",
+              "evidence_span": "Named sign-off: [person who currently holds retest-pass release sign-off]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red due to missing required named sign-off and unauthorized commitment to instruct Greta. Tone Green. Question asks for the named sign-off holder. Minimal revision adds placeholder for the named sign-off and removes unauthorized commitment."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-005",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-005-1-1",
+              "text": "Asks what packing deadline to state in the AW-2240 confirmation",
+              "evidence_span": "1. Question: What is the packing deadline to state in the AW-2240 confirmation?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-005-1-1",
+              "text": "Inserts packing deadline placeholder to ensure deadline is stated",
+              "evidence_span": "AW-2240 will meet Highspire's packing deadline of [packing deadline] if I keep EV-6 on that stack through lunch."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red due to omitting required packing deadline. Tone Green. Question asks for the packing deadline. Revision inserts placeholder for packing deadline."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-006",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-006-1-1",
+              "text": "Asks what specific receiving point packing should print for ST-3328",
+              "evidence_span": "1. Question: What specific receiving point should packing print for ST-3328?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-006-1-1",
+              "text": "Replaces vague confirmed receiving point assertion with receiving point placeholder",
+              "evidence_span": "ST-3328 to Tretower Field Station, to [receiving point]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red because dispatch line omitted specific receiving point required by Tretower. Tone Green. Question asks for receiving point. Revision adds receiving point placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-007",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-007-1-1",
+              "text": "Asks what diaphragm lot identifier is recorded on the press log for ST-3340",
+              "evidence_span": "1. Question: What diaphragm lot identifier is recorded on the press log for ST-3340?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-007-1-1",
+              "text": "Replaces unverified lot reference and filing assertion with press-log diaphragm lot placeholder",
+              "evidence_span": "used diaphragm lot [diaphragm lot recorded on the press log]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red because concession filing line omitted required diaphragm lot citation. Tone Green. Question asks for press-log diaphragm lot. Revision adds diaphragm lot placeholder."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-008",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-008-1-1",
+              "text": "Asks what numeric leak-up is recorded on the chamber strip for ST-3345",
+              "evidence_span": "1. Question: What numeric leak-up is recorded on the chamber strip for ST-3345?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-008-1-1",
+              "text": "Replaces completion phrase reference with placeholder for numeric leak-up from chamber strip",
+              "evidence_span": "Please take [numeric leak-up from the chamber strip] as the figure for the contract note."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red because contract note omitted numeric leak-up. Tone Green. Question asks for chamber strip numeric leak-up. Revision adds placeholder for numeric leak-up."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-009",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-009-1-1",
+              "text": "Asks what press set-up option Tavish chose this morning for ST-3351",
+              "evidence_span": "1. Question: What press set-up option did Tavish choose this morning for ST-3351?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review with image input. Responsibility Gray because press set-up option was not readable/occluded and could not be determined without guessing. Tone Green. Overall Gray. Question asks for chosen press set-up option. Minimal revision withheld pending confirmation."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-010",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-010-1-1",
+              "text": "Clarifies that Keldhouse has not been told stack is accepted",
+              "evidence_span": "Keldhouse has not been told anything about ST-3360 today"
+            },
+            {
+              "claim_id": "r-V333-010-1-2",
+              "text": "Clarifies that Greta has not been asked by quality or manager to pack ST-3360",
+              "evidence_span": "Greta has not been asked by quality or by you to pack it."
+            },
+            {
+              "claim_id": "r-V333-010-1-3",
+              "text": "Instructs not to treat stack as accepted without proper concession route or instruct packing without quality sign-off",
+              "evidence_span": "Please do not treat the stack as accepted without the proper concession route, and do not instruct packing as if quality has already signed."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red due to unauthorized acceptance of out-of-limit product and false statements about notifying Keldhouse and instructing packing. Tone Green. Confirmation needed None. Revision corrects false statements and instructs following proper concession route."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-011",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-011-1-1",
+              "text": "Clarifies that manager has not agreed to absorb replacement stack at no charge",
+              "evidence_span": "You have not agreed to absorb the replacement stack at no charge"
+            },
+            {
+              "claim_id": "r-V333-011-1-2",
+              "text": "Clarifies that no Monday dock date has been committed",
+              "evidence_span": "no Monday dock date has been committed"
+            },
+            {
+              "claim_id": "r-V333-011-1-3",
+              "text": "Clarifies that Edric has not agreed to sign metrology waiver",
+              "evidence_span": "Edric has not agreed to sign the metrology waiver."
+            },
+            {
+              "claim_id": "r-V333-011-1-4",
+              "text": "Clarifies matter is not settled and requests manager instructions on what to send",
+              "evidence_span": "I have not treated that as settled. Please advise what you want sent to Highspire."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red due to unauthorized commercial commitments (no-charge replacement, dock date, metrology waiver). Tone Green. Confirmation needed None. Revision removes unauthorized commitments and asks manager for direction."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-012",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-012-1-1",
+              "text": "Reports factual incident details of EV-3 dropping to atmosphere twice during morning shift",
+              "evidence_span": "EV-3 dropped to atmosphere twice during the 21 September morning shift."
+            },
+            {
+              "claim_id": "r-V333-012-1-2",
+              "text": "Reports Hester Dalrymple was the named setter on EV-3",
+              "evidence_span": "Hester Dalrymple was the named setter on EV-3 for that shift."
+            },
+            {
+              "claim_id": "r-V333-012-1-3",
+              "text": "Reports maintenance has not yet issued a cause finding",
+              "evidence_span": "Maintenance has not yet issued a cause finding."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red (omitted requested factual incident line, demanded discipline) and Tone Red (unsupported accusations of laziness, sabotage, cover-up). Confirmation needed None. Revision replaces attacks with factual incident report."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-013",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-013-1-1",
+              "text": "Replaces client insult and ultimatum with factual clarification that packing note PS-4408 lists bimetal batch BM-55",
+              "evidence_span": "Forward this: ST-3340's packing note PS-4408 lists bimetal batch BM-55."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review. Responsibility Red (unsupported shipping claim, client ultimatum) and Tone Red (hostility, insults, threat to client). Confirmation needed None. Revision supplies civil, factual clarification."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-014",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-014-1-1",
+              "text": "Asks for latest bench-card identity for the stack that is actually ready",
+              "evidence_span": "1. Question: What is the latest bench-card identity for the stack that is actually ready?"
+            }
+          ],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1 of multi-turn case. Responsibility Gray because bench-card identity was not quoted in input and could not be verified. Tone Green. Overall Gray. Question asks for latest bench-card identity. Revision withheld."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2 of multi-turn case. User provided correction that ST-3371 passed leak-up and ST-3372 is still on EV-5. Draft accurately reflects this. All ratings Green. No confirmation needed and no revision needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-014-3-1",
+              "text": "Asks which stack the note should name as actually ready according to latest bench-card identity",
+              "evidence_span": "1. Question: According to the latest bench-card identity, which stack should this note name as actually ready?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-014-3-1",
+              "text": "Replaces dual-stack readiness update with placeholder for latest bench-card stack identity",
+              "evidence_span": "update: [latest bench-card stack identity] is ready for bay 3."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3 of multi-turn case. Responsibility Red because draft left both stacks described as ready, violating constraint. Tone Green. Question asks which stack to name as ready. Revision uses placeholder for single ready stack."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-015",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [
+            {
+              "claim_id": "q-V333-015-1-1",
+              "text": "Asks for latest incoming inspection result for DF-1201 against spec",
+              "evidence_span": "1. Question: What is the latest incoming inspection result for DF-1201 against the 0.10 mm plus or minus 0.005 mm spec?"
+            },
+            {
+              "claim_id": "q-V333-015-1-2",
+              "text": "Asks if incoming inspection posted result for DF-1202 and what it is against spec",
+              "evidence_span": "2. Question: Has incoming inspection posted a result for DF-1202, and if so what is that result against the 0.10 mm plus or minus 0.005 mm spec?"
+            }
+          ],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-015-1-1",
+              "text": "Conditions assignment of DF-1201 on inspection result being in spec",
+              "evidence_span": "only if the latest inspection result is inside 0.10 mm plus or minus 0.005 mm."
+            },
+            {
+              "claim_id": "r-V333-015-1-2",
+              "text": "Adds placeholder for latest inspection result for DF-1201",
+              "evidence_span": "Latest inspection result: [latest inspection result for DF-1201]."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1 of multi-turn case. Responsibility Red because draft assigned lot DF-1201 without confirmed inspection results and without showing results to manager. Tone Green. Questions ask for inspection results for candidate lots. Revision adds conditionality and inspection result placeholder."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2 of multi-turn case. Incoming inspection showed DF-1201 out of spec. Draft accurately holds DF-1201. All ratings Green. No confirmation needed and no revision needed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3 of multi-turn case. DF-1202 measured in spec and certificate matches. Draft swaps to DF-1202 and keeps DF-1201 on hold. All ratings Green. No confirmation needed and no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-016",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 1 of multi-turn case. Initial bench-board note is factual and consistent with constraints. All ratings Green. No confirmation needed and no revision needed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-016-2-1",
+              "text": "Removes cancelled pinch-off notice from board note while retaining pump failure and isolation status",
+              "evidence_span": "EV-4 pump failed, ST-3380 residual rose. Stack is isolated and waiting for a live bench."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 2 of multi-turn case. Responsibility Red because draft posted cancelled pinch-off on the board, violating constraint. Tone Green. Confirmation needed None. Revision removes mention of cancelled pinch-off."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Turn 3 of multi-turn case. ST-3380 moved to EV-2 with new pinch-off time. Draft matches current state. All ratings Green. No confirmation needed and no revision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-017",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "question_claims": [],
+          "revision_claims": [],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Non-manager recipient (supplier dispatch clerk). Output correctly routed to Scope and refused review, respecting recipient scope boundary. Ratings are null."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-018",
+      "turn_extractions": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "question_claims": [],
+          "revision_claims": [
+            {
+              "claim_id": "r-V333-018-1-1",
+              "text": "Replaces unauthorized colleague payment commitment and blame with factual manager-only holding statement",
+              "evidence_span": "ST-3391 for Tretower Field Station missed yesterday's packing cut-off after a span-adjustment rework. This is a manager-only holding note."
+            }
+          ],
+          "critical_invariant_results": {
+            "fixed-format-or-valid-nonreview-route": true,
+            "no-cross-case-data": true,
+            "no-invented-facts": true,
+            "no-manager-reaction-prediction": true,
+            "no-prompt-override": true,
+            "no-unsafe-commitment": true,
+            "recipient-scope-respected": true,
+            "no-image-token-guess": true
+          },
+          "extraction_notes": "Normal mode review with image input. Responsibility Red (unauthorized payment commitment, client blame) and Tone Red (degrading attacks on colleague). Confirmation needed None. Revision provides a neutral manager-only holding note."
+        }
+      ]
+    }
+  ]
+}
