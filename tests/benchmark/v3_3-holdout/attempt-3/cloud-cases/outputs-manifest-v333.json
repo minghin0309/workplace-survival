@@ -1,0 +1,308 @@
+{
+  "version": "3.3",
+  "immutable": true,
+  "stage": "outputs",
+  "sut_execution_authorized": true,
+  "frozen_at_utc": "2026-08-28T06:54:59.204236Z",
+  "canonical_parent_commit": "98dbf74b2998b51387f6ea203b5ff878788c2a54",
+  "parent_manifest": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-manifest-v333.json",
+    "sha256": "669d089a602cac71889e85aea84bc84eeafc0df77a38c4c2c17e6870d29e923e"
+  },
+  "artifacts": [
+    {
+      "role": "outputs",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/outputs-v333-raw.json",
+      "sha256": "32c5ac78ffe0cac6eee43436ba979935f352e20fd7310463e0c4a8ef4408ea02",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "8316a25390222d208e8002d319356077ab0558d4"
+    },
+    {
+      "role": "sut-input-manifest",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-input-manifest.json",
+      "sha256": "07af1a0be4f95d72866cbe7f835ca88786f92708fdd266157dc1e0b6e1cf39b7",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "98dbf74b2998b51387f6ea203b5ff878788c2a54"
+    },
+    {
+      "role": "protocol-audits",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-protocol-audits.json",
+      "sha256": "f626d683a86e96e669bc2a8e383a18cac743e9c1dd21791513473f8e587b31a3",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "8316a25390222d208e8002d319356077ab0558d4"
+    },
+    {
+      "role": "source-index",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-source-index.json",
+      "sha256": "00a95e8fcc45367cb70122a4bd008a67abb530bdf025629ec2199e124d45fdaa",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "8316a25390222d208e8002d319356077ab0558d4"
+    },
+    {
+      "role": "assembler",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/assemble_sut_outputs.py",
+      "sha256": "39163bd4243c0f57875c33e36fa45f061fa0810b4b79dab66a3cdf5862679fc0",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "7c5548d1354ce261d5a71f0a585d5410482af068"
+    },
+    {
+      "role": "freezer",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/freeze_sut.py",
+      "sha256": "b34dcbf27377478212b4f04c6e0428697f47719f525099ff8779f372b9e76d56",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e847564e4367d5ffda2806cf5b99e32e02b3b317"
+    },
+    {
+      "role": "raw-output:V333-001",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-001.json",
+      "sha256": "daaca6aacbec30ae6dd109144719551b29cd821e90a69931e4ef072d88859959",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "23819d40a073b66fda29cbb02c324dd4015c0a3a"
+    },
+    {
+      "role": "source-evidence:V333-001",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-001.json",
+      "sha256": "75f5e24ca5031acf8c30d32a31b0565b5f025cedf38e45c0f1b5a6eda06a3fff",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "23819d40a073b66fda29cbb02c324dd4015c0a3a"
+    },
+    {
+      "role": "raw-output:V333-002",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-002.json",
+      "sha256": "0a1718ad94f5db5f5f66537ed2d4c75b15ccb6847d02ec4c26a7a8f2fcf2fd0f",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "b762577462c8166b3188706ce7f6e43c2e16de63"
+    },
+    {
+      "role": "source-evidence:V333-002",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-002.json",
+      "sha256": "9b285d18935901a1d7a2efb4fe6f36f527da90ea70f0dc60e14bba902b86cd70",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "b762577462c8166b3188706ce7f6e43c2e16de63"
+    },
+    {
+      "role": "raw-output:V333-003",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-003.json",
+      "sha256": "827cca019e2ea22c928e53acddb6e277488657944c665ec731539e557baeaa97",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "23819d40a073b66fda29cbb02c324dd4015c0a3a"
+    },
+    {
+      "role": "source-evidence:V333-003",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-003.json",
+      "sha256": "e1c9b61301a4b21d69c50cf325b76ebe71fd6f756c16df3d9ccaaea1962d5a50",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "23819d40a073b66fda29cbb02c324dd4015c0a3a"
+    },
+    {
+      "role": "raw-output:V333-004",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-004.json",
+      "sha256": "4facb4ba92e41c0c55c286ae7baf75408ac324d76c51b90ca2bdd2b309abf564",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "ffda49e1d59938a47cda9a31f4311cc745e3d035"
+    },
+    {
+      "role": "source-evidence:V333-004",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-004.json",
+      "sha256": "1552928e0a97fc455dbd2ea691d4d818644f534dc5c0df85591a327501a4151e",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "ffda49e1d59938a47cda9a31f4311cc745e3d035"
+    },
+    {
+      "role": "raw-output:V333-005",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-005.json",
+      "sha256": "0b96024e2240c4f7c7190f2db43d29257dda145c70b09fed99847fc6a3eb393b",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "79a06e9572f5c3d9e4f9e8068f907f5d80ab8505"
+    },
+    {
+      "role": "source-evidence:V333-005",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-005.json",
+      "sha256": "8d5b00b4cc55f8ba333f71c58fec2dc2614d73daae9c846706394eb09b3f0fc1",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "79a06e9572f5c3d9e4f9e8068f907f5d80ab8505"
+    },
+    {
+      "role": "raw-output:V333-006",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-006.json",
+      "sha256": "303d0b8810bd322f4979747f00a7840706a952c9135698861e32438a46f1d361",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "1d0d04e872f84074200c879f204dba9feb803728"
+    },
+    {
+      "role": "source-evidence:V333-006",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-006.json",
+      "sha256": "fe5434aa5dc1fdd34e1d60715d1df9935c7584f16f26e3e8542ff2780809b8b0",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "1d0d04e872f84074200c879f204dba9feb803728"
+    },
+    {
+      "role": "raw-output:V333-007",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-007.json",
+      "sha256": "afd07320af4e616ebafabb398f835dfe7a67b1b4560edbed833d72d218bc4df8",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "291621ba7275fcffd8953c2349b3efa8d3a2d66b"
+    },
+    {
+      "role": "source-evidence:V333-007",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-007.json",
+      "sha256": "b7a746b1917ab1e2f69f53b2b8abdd350f3f81634a35714b055e0fce6fe2eeb2",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "291621ba7275fcffd8953c2349b3efa8d3a2d66b"
+    },
+    {
+      "role": "raw-output:V333-008",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-008.json",
+      "sha256": "aaf6842b4a6a5e1bd4dcfbfa5453f64b433f3592533c457ee2400afdcd67bac1",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "291621ba7275fcffd8953c2349b3efa8d3a2d66b"
+    },
+    {
+      "role": "source-evidence:V333-008",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-008.json",
+      "sha256": "f1d1cd77bd8158bf0dc16d11b900e0325d3051d8ef3927359e085dbbe7eb94fb",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "291621ba7275fcffd8953c2349b3efa8d3a2d66b"
+    },
+    {
+      "role": "raw-output:V333-009",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-009.json",
+      "sha256": "6ddcd855233a11504c07b11bd362b33851556eb495c389f02e2b69c275595c73",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "97528b70dbf2648ce29631a65b6305dbc7e706d1"
+    },
+    {
+      "role": "source-evidence:V333-009",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-009.json",
+      "sha256": "d3912436f1189796be0388c00ad8136b6f40115357fb2f877d3c96e71363cdbf",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "97528b70dbf2648ce29631a65b6305dbc7e706d1"
+    },
+    {
+      "role": "raw-output:V333-010",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-010.json",
+      "sha256": "162ee320bffe7c5de37a993577d4854027bc53f35218680ae44f5589481df34b",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "5f9fda073afb2489a434d4f5c6a7459cb183b8c7"
+    },
+    {
+      "role": "source-evidence:V333-010",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-010.json",
+      "sha256": "657a558bf5758f3ab399c6097145bae7dc1546abf33fd5d1e0897ba1b4f68a12",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "5f9fda073afb2489a434d4f5c6a7459cb183b8c7"
+    },
+    {
+      "role": "raw-output:V333-011",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-011.json",
+      "sha256": "a1efc405d64a237753299bdfef5693034e684e83b72e615f56c470532adbcbd5",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e3abe776ae3d3cdf688e47d55e265ef5c74f044f"
+    },
+    {
+      "role": "source-evidence:V333-011",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-011.json",
+      "sha256": "ed47f8ab299cb43209db248580f06b8f975d6aae687dd804d3af85de7a2bd9a5",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e3abe776ae3d3cdf688e47d55e265ef5c74f044f"
+    },
+    {
+      "role": "raw-output:V333-012",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-012.json",
+      "sha256": "69dd61271e48cf298b33fb7473e1f9e505ce625e52300ffe9a68fbfcb0ddd02d",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e3abe776ae3d3cdf688e47d55e265ef5c74f044f"
+    },
+    {
+      "role": "source-evidence:V333-012",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-012.json",
+      "sha256": "cb1c2293723b20b50ac01e13250042b8cd9335cd19fa1db4b30321010dd88fc2",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e3abe776ae3d3cdf688e47d55e265ef5c74f044f"
+    },
+    {
+      "role": "raw-output:V333-013",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-013.json",
+      "sha256": "c6245c107a0753a105036a355c8cb60f0b6fcd5a1585ebb32b0297e8feac875b",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "2904fbc2b2da8ba3fd1e603920c8d262716cb236"
+    },
+    {
+      "role": "source-evidence:V333-013",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-013.json",
+      "sha256": "8cef61351cae1d2ceb24d9974a9540e253f80af16bb1b9842491cffec5c3a734",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "2904fbc2b2da8ba3fd1e603920c8d262716cb236"
+    },
+    {
+      "role": "raw-output:V333-014",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-014.json",
+      "sha256": "02cee6ffbf495ddc9ffd44dcb68ea51cddd58e418126aed70854f95ebecea5a5",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e2ef58938e8b3b1607f1f7a319ec8cb63700c64f"
+    },
+    {
+      "role": "source-evidence:V333-014",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-014.json",
+      "sha256": "289befe179fbf782e781573a1ecf1c6671447c8983718f65a594326f6bbbce56",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e2ef58938e8b3b1607f1f7a319ec8cb63700c64f"
+    },
+    {
+      "role": "raw-output:V333-015",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-015.json",
+      "sha256": "b91cccfb560c2801014a5bf010a795121b94c0b43d75930fa4e4d81d39a4ac52",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e2ef58938e8b3b1607f1f7a319ec8cb63700c64f"
+    },
+    {
+      "role": "source-evidence:V333-015",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-015.json",
+      "sha256": "12c225bb44e1c56921c0746f89f96a56b42688abaf9dcbeac4d82e59c5aa7899",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "e2ef58938e8b3b1607f1f7a319ec8cb63700c64f"
+    },
+    {
+      "role": "raw-output:V333-016",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-016.json",
+      "sha256": "c059746a53f857a0b26b4c0f141046410bda7574ca89bcd1206e8607486871c3",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "7c5548d1354ce261d5a71f0a585d5410482af068"
+    },
+    {
+      "role": "source-evidence:V333-016",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-016.json",
+      "sha256": "13245bd63bcbfbeecedd6a43bb8cd0dec8800901c3b12712d1617e9b652fdb57",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "7c5548d1354ce261d5a71f0a585d5410482af068"
+    },
+    {
+      "role": "raw-output:V333-017",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-017.json",
+      "sha256": "0d7df9e3635cfddb1454b38d210df4ccf396d7430db2d94dc072b14a21f0fd16",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "b73d812393b3ff37e236ca6b00cc2d91e649db84"
+    },
+    {
+      "role": "source-evidence:V333-017",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-017.json",
+      "sha256": "47cfc4c28f4d6bc2add23a56df918207ec94372e146e4669b61c784eeeb70f15",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "b73d812393b3ff37e236ca6b00cc2d91e649db84"
+    },
+    {
+      "role": "raw-output:V333-018",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-raw/V333-018.json",
+      "sha256": "1e2914236289c75a0cc943ccad0b0b1c0d76c8d87c197eb736bae2fc6c80c319",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "7c5548d1354ce261d5a71f0a585d5410482af068"
+    },
+    {
+      "role": "source-evidence:V333-018",
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/sut-attestations/V333-018.json",
+      "sha256": "33e53f7889e697c19befd4bddcd61923cf7fcf26cb0fa2141ba860f0eb017379",
+      "cloud_branch": "cursor/blind-v333-holdout-17a0",
+      "cloud_commit": "7c5548d1354ce261d5a71f0a585d5410482af068"
+    }
+  ]
+}

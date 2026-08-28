@@ -8,8 +8,8 @@ Fill SHA-256 values after the extraction freeze. Do not launch the matcher befor
 
 1. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractions-manifest-v333.json` SHA-256 `FILL_AFTER_EXTRACTION_FREEZE`
 2. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/evaluations-v333-canonical.json` SHA-256 `FILL_AFTER_EXTRACTION_FREEZE`
-3. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/outputs-v333-raw.json` SHA-256 `FILL_AFTER_SUT_FREEZE`
-4. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-v333.json` SHA-256 `FILL_AFTER_GOLD_FREEZE`
+3. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/outputs-v333-raw.json` SHA-256 `32c5ac78ffe0cac6eee43436ba979935f352e20fd7310463e0c4a8ef4408ea02`
+4. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-v333.json` SHA-256 `f47bd218c185a076444d12eb270f41cb2658c2312d5086ac9a4e0d07556fbc08`
 5. `tests/benchmark/SEMANTIC_ONTOLOGY.json` SHA-256 `3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926`
 
 Do not read any other repository file. Do not glob or `ls` the holdout tree. Do not open images, oracle-notes, question-design, construction-mutations, scorer, methodology, plans, extractor-raw files, this brief, or runtime Skill files. Do not run the scorer. Do not modify gold, ontology, evaluations, or claims.
