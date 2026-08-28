@@ -583,6 +583,26 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - gold, matches, evaluations, ontology, scorer, and runtime Skill files are unchanged.
 - Evidence: `tests/benchmark/v3_3-holdout/attempt-3/SCORE_TRIAGE.md`.
 
+#### T14.27 — S-009/S-011/S-012/S-013/S-002 Skill remediation
+
+- [x] Completed
+
+- Source requirement: `SPEC.md` Data B, Follow-up questions, and Revisions. Attempt-3 triage S-009/S-009b (card-match and dual-slot Green controls), S-011 (strip-without-asking), S-012 (Gray without placeholder), S-013 (cancellation treated as live time), S-002 residual (placeholder deadline keeping a dock hold).
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/`, `tests/TEST_CASES.md`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - a user-supplied current identity is not Gray solely because the note must match a later card or board check;
+  - two items with distinct current slots are not rewritten into one ready identity;
+  - stating a cancellation is not rated Red as leaving that cancelled time live;
+  - after stripping an unauthorized commitment, Confirmation needed still asks remaining authority or scope when that is not already in Data A;
+  - Gray for an unquoted off-record token that the outgoing note must name gets a placeholdered revision, including when case data forbids a guessed mix;
+  - placeholdering a missing deadline does not leave a time-less dock-slot hold sendable;
+  - a cause Data A says has not been issued is not asked (G-008 lock);
+  - TC-119, TC-120, TC-115, TC-117, and TC-07 still pass;
+  - v3.3 attempt 3 is not rescored and its gold is not rewritten;
+  - H-004 and G-007 are not Skill-patched.
+- Tests: TC-122–TC-128; TC-119, TC-120, TC-115, TC-117, and TC-07 must still pass.
+- Evidence: functional results for the new cases.
+
 ## Task template
 
 Copy this block when adding work:

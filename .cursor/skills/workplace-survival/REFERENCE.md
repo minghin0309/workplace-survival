@@ -88,6 +88,18 @@ Do not treat the following as locating a governing token off-record:
 
 If Data A asks the user to give the current status in the message and the user is giving that status in this turn, apply the answer rule. Do not Gray, ask, or replace the revision with `Not provided — answer the questions above first` solely because a later check could change the picture.
 
+A requirement that the note match the latest card, board, or similar check does not locate a governing token off-record when Data B already states a current identity, status, or slot for this turn and Data A does not quote a conflicting recorded value. Do not Gray solely because that card can be rechecked later.
+
+A constraint not to describe two items as ready for the same slot does not require a question or rewrite when Data B assigns them distinct current slots and does not assert both for the same slot.
+
+A draft that records a time, booking, or commitment as cancelled, withdrawn, or no longer in effect satisfies a constraint not to leave that cancelled item as the live plan. Do not rate that cancellation Red or strip the cancellation wording.
+
+When Data A locates an unquoted off-record token that the outgoing note must name, Gray, ask, and if a revision is produced, use a placeholder for that token. Do not withhold the entire revision with `Not provided — answer the questions above first` solely because that token is unknown. Case-data wording that forbids a guessed, mixed, or invented value does not forbid this skill's descriptive placeholder.
+
+After stripping or conditioning an unauthorized commitment, still ask as Confirmation needed who holds remaining authority or what scope may be committed, when that fact is not already explicit in Data A. Burying "please advise" only in the revision body does not replace that question. Do not ask for a cause, owner, date, or other fact Data A already states is unissued or unknown.
+
+Placeholdering a missing deadline or similar condition does not make a time-less external hold, dock-slot promise, or equivalent sendable. Strip or explicitly condition that hold in the same response.
+
 A note that a field may be updated in a later message is not an explicit current requirement to include that field. Do not rate Yellow or Red, ask, or insert a placeholder for a field that Data A does not currently require and that Data B does not assert.
 
 Data B never becomes Data A merely because the user wrote or submitted it. A fact stated only in Data B remains a claim under review. It enters Data A only if the user separately supplies or confirms it as background under the Data A rules.
@@ -501,9 +513,10 @@ Ask a follow-up question only when its answer can materially change a rating or 
 - Data B conflicts with Data A;
 - Data A explicitly shows that a relevant fact is not confirmed;
 - Data B omits an explicit requirement from Data A and the missing value cannot be safely supplied from Data A;
-- Data A locates a governing token off-record, including an unquoted header or occluded image region, and Data B defers to that unread source without quoting it.
+- Data A locates a governing token off-record, including an unquoted header or occluded image region, and Data B defers to that unread source without quoting it;
+- Data B made an unauthorized commitment that this response strips or conditions, and who holds remaining authority or what scope may be committed is not already explicit in Data A.
 
-Do not ask a question when the answer cannot change the rating or revision. When both dimensions are green, ask no follow-up questions. Do not ask solely because Data A says a value can change later or that the recipient uses the user's notes, when the user is supplying the current status in this turn. Do not ask for a field Data A only says may be updated in a later message, when that field is not a current requirement and Data B does not assert it.
+Do not ask a question when the answer cannot change the rating or revision. When both dimensions are green, ask no follow-up questions. Do not ask solely because Data A says a value can change later or that the recipient uses the user's notes, when the user is supplying the current status in this turn. Do not ask for a field Data A only says may be updated in a later message, when that field is not a current requirement and Data B does not assert it. Do not ask which of two currently reported items is "actually ready" when Data B already assigns them distinct current slots. Do not ask for a cause, owner, date, or other fact already explicit in effective Data A, including a finding Data A states has not been issued.
 
 ### Question limit and priority
 
@@ -562,9 +575,10 @@ Revise only the concrete issues identified by the ratings and evidence.
 - Insert a known value only when it is explicit in Data A, explicit in Data B where Data B is answering Data A's request, or explicitly confirmed by the user.
 - Represent any required but unknown value with a clear descriptive placeholder such as `[missing information]`.
 - Never invent a date, person, owner, responsibility, progress update, commitment, or manager intent.
-- If gray is the only rating requiring action and no safe revision is possible, do not provide a revised message.
+- If gray is the only rating requiring action and no safe revision is possible, do not provide a revised message. An outgoing note that must name an unquoted off-record token is a safe placeholdered revision; do not withhold it solely because that token is unknown.
 - If red or yellow issues coexist with gray issues, revise only the confirmed red or yellow issues and use placeholders where unresolved information is required.
 - An unestablished authorization does not make an already-visible unsafe commitment Gray-only. Rate that commitment Red and strip or condition it in the same response. A remaining question about who is authorized must not defer that revision or replace it with `Not provided — answer the questions above first`.
+- Placeholdering a missing deadline or authorization does not leave a time-less external hold or dock-slot promise intact; strip or explicitly condition that hold in the same response.
 
 ### Green messages
 

@@ -16,11 +16,12 @@ Representative T13.10 records:
 
 ## Current status
 
-- Cases currently specified: 121.
+- Cases currently specified: 128.
 - Latest evidence-complete functional execution: TC-01–TC-114, 114 passed and 0 failed.
 - T14.15 added TC-115–TC-117; semantic check of TC-07 plus the three new cases: 4 passed, 0 failed. See `tests/blind/remediation/S001_S002_RESULTS.md`.
 - T14.21 added TC-118; semantic check of TC-60, TC-68, TC-112 plus the new case: 4 passed, 0 failed. See `tests/blind/remediation/S007_RESULTS.md`.
 - T14.24 added TC-119–TC-121; semantic check of TC-07, TC-115, TC-118 plus the three new cases: 6 passed, 0 failed. See `tests/blind/remediation/S008_S010_RESULTS.md`.
+- T14.27 added TC-122–TC-128; semantic check of TC-119, TC-120, TC-115, TC-117, TC-07 plus the seven new cases: 12 passed, 0 failed. See `tests/blind/remediation/S009_S013_RESULTS.md`.
 - Text cases in the current specification: 104.
 - Attached-image cases: 13 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
 
@@ -421,6 +422,16 @@ This is a targeted consistency matrix, not the full evidence-complete acceptance
 - TC-115 still passes: off-record Data B-only tokens remain Gray.
 - TC-118 still passes: unsupported `careless`/`again` remain Tone Red.
 - v3.3 attempt 2 was not rescored. H-004 and G-007 were not Skill-patched.
+
+## T14.27 S-009/S-011/S-012/S-013/S-002 Skill remediation — 2026-08-28
+
+- New cases TC-122–TC-128: 7 passed, 0 failed in semantic check against the updated card-match, dual-slot, cancellation, strip-and-ask, placeholder-lock-in, and dock-hold rules.
+- TC-119 still passes: unquoted header width remains Gray, not Green-by-omission.
+- TC-120 still passes: user-supplied current status remains Green.
+- TC-115 still passes: off-record Data B-only tokens remain Gray.
+- TC-117 still passes: unestablished authorization is stripped now.
+- TC-07 still passes: manager-requested values in Data B remain answers when Data A locates no off-record source.
+- v3.3 attempt 3 was not rescored. H-004, G-007, and G-008 were not Skill-patched.
 
 ## Remediation evidence-complete record index
 

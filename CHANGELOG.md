@@ -4,6 +4,15 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### S-009/S-011/S-012/S-013/S-002 residual remediation
+
+- Do not Gray a user-supplied current identity solely because the note must match a later card check.
+- Distinct current slots are not the same-slot dual-ready fault. A cancellation statement is not a live cancelled time.
+- After stripping an unauthorized commitment, still ask remaining authority in Confirmation needed.
+- Gray off-record lock-ins get a placeholdered revision; case-data "no placeholder mix" does not forbid that placeholder.
+- Placeholdering a missing deadline does not leave a time-less dock-slot hold sendable.
+- Added TC-122–TC-128. Kept TC-119, TC-120, TC-115, TC-117, and TC-07. Did not rescore v3.3 attempt 3. Did not Skill-patch H-004, G-007, or G-008.
+
 ### v3.3 attempt-3 score triage
 
 - Did not rescore or rewrite attempt 3, attempt 2, attempt 1, or runtime Skill files.

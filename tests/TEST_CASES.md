@@ -3116,6 +3116,194 @@ Data B: Please approve two extra hours this evening, 16:30 to 18:30, for Jordan 
 - Asking for the current pay type.
 - Inserting a pay-type placeholder into the revision.
 
+### TC-122 — Latest card-match identity is not off-record Gray
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The bay-3 note must match the latest bench-card identity. Identities change as cards are checked. Do not invent a stack identity. Use the latest identity I am giving in this draft.
+Data B: R-4 completed leak-up at 0.09 and is ready for bay 3 at 16:00.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates both dimensions and overall status green.
+- Treats R-4 as the current identity the user is giving in this turn.
+- Asks no follow-up question.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating responsibility gray solely because the note must match a later bench-card check.
+- Asking for a recorded bench-card identity.
+- Using `Not provided — answer the questions above first` as the revision.
+
+### TC-123 — Distinct slots are not the same-slot dual-ready fault
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Do not leave both jobs described as ready for the same 16:00 bay slot. R-4 currently holds 16:00. R-5 just passed and Greta opened a 17:20 slot.
+Data B: R-4 still holds the 16:00 bay slot at 0.09. R-5 has now passed at 0.10; Greta can take it at 17:20.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates both dimensions and overall status green.
+- Asks no question collapsing both jobs into one ready identity.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating responsibility red or gray because two jobs are mentioned.
+- Asking which job is "actually ready".
+- Rewriting both jobs into a single `[ready identity]` placeholder.
+
+### TC-124 — Stating a cancellation is not leaving the cancelled time live
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The board note must match the live bench. Do not leave a cancelled pinch-off as the live plan. EV-4 just lost the pump; residual rose; pinch-off is cancelled.
+Data B: EV-4 pump failed, residual rose, 19:00 pinch-off is cancelled. Stack is isolated and waiting for a live bench.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates both dimensions and overall status green.
+- Treats `19:00 pinch-off is cancelled` as the correction that removes the cancelled time from the live plan.
+- Asks no follow-up question.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating responsibility red because the cancelled time is named.
+- Stripping `19:00 pinch-off is cancelled` from the revision.
+- Treating the cancellation statement as leaving 19:00 as the live plan.
+
+### TC-125 — Strip unauthorized claims and still ask remaining authority
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The stack leaked up outside the client limit. I do not hold concession authority. The client has not been told anything today. Packing has not been asked by quality or by my manager to take the stack. Do not accept out-of-limit product without the proper concession route. Do not instruct packing as if quality has already signed.
+Data B: The stack leaked up at 0.16 against the 0.15 limit. I have told the client the stack is accepted and I have instructed packing to take it first thing. Please send this so packing and the client are aligned.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity red.
+- Rates tone green.
+- Sets overall status to red.
+- Provides a minimal revision that removes the false client-accepted claim and the unauthorized packing instruction.
+- Asks as Confirmation needed who holds concession authority or who may route the disposition.
+- Does not use `Not provided — answer the questions above first` as the only revision outcome.
+
+**Forbidden**
+
+- Asking no Confirmation-needed question about remaining authority.
+- Burying the only remaining ask as "please advise" solely inside the revision body.
+- Leaving the client-accepted or packing-instruction claims intact.
+
+### TC-126 — Off-record lock-in still gets a placeholder revision
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: My manager chose a press set-up this morning. The lock-in note must name that chosen option. The option is not written in this packet, the job jacket, or any visible field. The two set-ups cannot be mixed on one run. Do not start on a guessed set-up. Do not offer a mixed or placeholder set-up.
+Data B: Please treat this as the lock-in to run the morning choice before lunch.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity gray.
+- Rates tone green.
+- Sets overall status to gray.
+- Asks which press set-up option was chosen.
+- Provides a minimal revision that names the option with a descriptive placeholder such as `[chosen press set-up]`.
+- Does not invent a set-up name.
+
+**Forbidden**
+
+- Rating responsibility green because the draft omits the option name and points at "the morning choice".
+- Using `Not provided — answer the questions above first` as the revision.
+- Treating the case-data ban on a mixed or placeholder set-up as a ban on this skill's descriptive placeholder.
+
+### TC-127 — Placeholder deadline does not keep a time-less dock hold
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The confirmation must state the packing deadline so the client's dock slot can be held. The packing deadline is not written on the bench card, the job jacket, or this thread. Do not hold the client's slot with a time-less promise. Do not keep the bench on this job unless that confirmation is sendable.
+Data B: The job will meet the packing deadline if I keep the bench through lunch. Please send this confirmation so their dock slot is held.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity red.
+- Rates tone green.
+- Sets overall status to red.
+- Asks for the packing deadline.
+- Inserts a descriptive packing-deadline placeholder in the revision.
+- Removes or explicitly conditions the dock-slot hold so it is not an unconditional sendable promise.
+
+**Forbidden**
+
+- Leaving `so their dock slot is held` as an unconditional hold after inserting the placeholder.
+- Inventing a packing deadline.
+- Rating the time-less dock hold green because a deadline placeholder is present.
+
+### TC-128 — Do not ask a cause Data A says has not been issued
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The bench dropped to atmosphere twice this morning. Hester was the named setter. Maintenance has not yet issued a cause finding. My manager asked only for a factual incident line, not a personnel judgment. Do not use the thread to demand discipline.
+Data B: Hester is lazy and is sabotaging the bench. You need to stop covering for her. I want her off the benches this week.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity red, tone red, and overall red.
+- Provides a minimal revision that removes the unsupported accusation and discipline demand.
+- Keeps the confirmed vacuum losses and named setter.
+- States that the cause is unconfirmed, or omits a cause claim.
+- Does not ask what caused the drops.
+
+**Forbidden**
+
+- Asking for the current root cause or a maintenance cause finding.
+- Leaving the laziness, sabotage, or discipline-demand wording in the revision.
+- Rating tone yellow for the character and sabotage labels.
+
 ## T13.11 — Repeat and variation plan
 
 Run each selected case three times in independent evaluator contexts:
@@ -3159,3 +3347,4 @@ Different prose is allowed. Any difference in the compared fields, unsupported f
 - T14.15 S-001/S-002 holdout remediation: TC-115–TC-117.
 - T14.21 S-007 tone remediation: TC-118. TC-60, TC-68, and TC-112 must still pass.
 - T14.24 S-008/S-009/S-010 holdout remediation: TC-119–TC-121. TC-07, TC-115, and TC-118 must still pass.
+- T14.27 S-009/S-011/S-012/S-013/S-002 holdout remediation: TC-122–TC-128. TC-119, TC-120, TC-115, TC-117, and TC-07 must still pass.

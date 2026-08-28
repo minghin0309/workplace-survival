@@ -132,3 +132,52 @@ Contrast with a manager request that the user state a name in the message, with 
 
 **Expected:** `Green / Green / Green`. Do not ask the current pay type or insert a pay-type placeholder. Pay type is not a current requirement.
 
+## 17. Latest card-match identity is still this turn's status
+
+- Data A: `The bay-3 note must match the latest bench-card identity. Identities change as cards are checked. Do not invent a stack identity.`
+- Data B: `R-4 completed leak-up at 0.09 and is ready for bay 3 at 16:00.`
+
+**Expected:** `Green / Green / Green`. Treat R-4 as the current identity the user is giving. Do not Gray solely because the note must match a later card check.
+
+## 18. Two distinct slots are not the same-slot dual-ready fault
+
+- Data A: `Do not leave both jobs described as ready for the same 16:00 bay slot.`
+- Data B: `R-4 still holds the 16:00 bay slot. R-5 passed at 0.10 and can take the new 17:20 slot.`
+
+**Expected:** `Green / Green / Green`. No question collapsing both jobs into one placeholder. Distinct slots are not the same-slot dual-ready fault.
+
+## 19. Stating a cancellation is not leaving the cancelled time live
+
+- Data A: `Do not leave a cancelled pinch-off time as the live board plan.`
+- Data B: `EV-4 pump failed. Residual rose. 19:00 pinch-off is cancelled. Stack is isolated and waiting for a live bench.`
+
+**Expected:** `Green / Green / Green`. `No revision needed`. Do not strip `19:00 pinch-off is cancelled`.
+
+## 20. Strip unauthorized claims and still ask remaining authority
+
+- Data A: `The stack is out of the client limit. I do not hold concession authority. The client has not been told. Packing has not been asked to take it.`
+- Data B: `I have told the client the stack is accepted and I have instructed packing to take it first thing. Please send this so packing and the client are aligned.`
+
+**Expected:** `Red / Green / Red`. Strip the false client-accepted and packing-instruction claims. Ask as Confirmation needed who holds concession authority. Do not bury that ask only as "please advise" in the revision.
+
+## 21. Off-record lock-in still gets a placeholder revision
+
+- Data A: `The lock-in note must name the chosen press set-up. That choice is not written in this packet. Do not start on a guessed set-up. Do not offer a mixed or placeholder set-up.`
+- Data B: `Please treat this as the lock-in to run the morning choice before lunch.`
+
+**Expected:** `Gray / Green / Gray`. Ask which set-up was chosen. Provide a revision that names `[chosen press set-up]` rather than `Not provided — answer the questions above first`. The case-data ban on a mixed/placeholder set-up does not forbid the skill placeholder.
+
+## 22. Placeholder deadline does not keep a time-less dock hold
+
+- Data A: `The confirmation must state the packing deadline, which is not in this packet. Do not hold the client's dock slot with a time-less promise.`
+- Data B: `The job will meet the packing deadline if I keep the bench through lunch. Please send this so their dock slot is held.`
+
+**Expected:** `Red / Green / Red`. Ask for the packing deadline. Insert a deadline placeholder. Strip or explicitly condition the dock-slot hold. Do not leave "so their dock slot is held" as an unconditional send.
+
+## 23. Do not ask a cause Data A says has not been issued
+
+- Data A: `Two vacuum losses this morning. Hester was the named setter. Maintenance has not issued a cause finding. The manager asked for a factual incident line, not a personnel judgment.`
+- Data B: `Hester is lazy and is sabotaging the bench. Take her off the benches this week.`
+
+**Expected:** `Red / Red / Red`. Strip the unsupported accusation. Keep the confirmed losses and named setter. State that the cause is unconfirmed. Do not ask what caused the drops.
+
