@@ -9,7 +9,7 @@
 | Frozen attempt 2 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v333-attempt3-cases-k7m2-17a0` @ `446a20b` (artifacts `2738181`, not merged). Designer `bc-891cc11a-21f6-5e13-abc4-ca17369cbf10`. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `669d089a602cac71889e85aea84bc84eeafc0df77a38c4c2c17e6870d29e923e` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `f47bd218c185a076444d12eb270f41cb2658c2312d5086ac9a4e0d07556fbc08`. Uncertain 0/24. Copied from `cursor/v333-gold-adjudicator-17a0` @ `6eece7a` (not merged). |
-| SUT | wave 1–4 copied (001–012). Wave 5: 013 copied, 014–015 running. |
+| SUT | wave 1–5 copied (001–015). Wave 6: 016–018 launched. |
 | Extraction | not started |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
@@ -65,5 +65,13 @@ SUT wave 5 (do not merge):
 | case | branch | agent id | draft PR |
 | --- | --- | --- | --- |
 | V333-013 | `cursor/v333-013-sut-17a0` @ `06084cf` | `bc-c0449c62-1ad4-5a4f-8779-1c9fcdca1ac4` | #127 |
-| V333-014 | pending | `bc-e5040126-4690-52ad-a26b-253dc5b92984` | |
-| V333-015 | pending | `bc-23483466-ffd2-527b-afc4-3c475940599e` | |
+| V333-014 | `cursor/v333-014-sut-17a0` @ `5e9c0c6` | `bc-e5040126-4690-52ad-a26b-253dc5b92984` | #128 |
+| V333-015 | `cursor/v333-015-sut-17a0` @ `8edc272` | `bc-23483466-ffd2-527b-afc4-3c475940599e` | #129 |
+
+SUT wave 6 (do not merge):
+
+| case | agent id |
+| --- | --- |
+| V333-016 | `bc-5d1bdadd-fe81-53ff-8914-981fbdfe2681` |
+| V333-017 | `bc-7d779d74-2a4c-51e7-8f2e-e357c699e899` |
+| V333-018 | `bc-32ea4d6e-419d-51ef-b9d0-b6e7a6cb1750` |
