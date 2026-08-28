@@ -1,0 +1,41 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V334-015",
+  "recipient_context": {
+    "recipient_name": "Benedick Rounsell",
+    "recipient_role": "grind-floor manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "nib-grinder",
+    "organization": "Idleacre Nib Works",
+    "site": "The Grind Loft, Idleacre Yard",
+    "situation": "NB-9118 needs a feed fitted before the grind can close. Which feed lot is used has been in flux.",
+    "known_facts": [
+      "NB-9118 is a fine grind waiting on a feed.",
+      "Jocelyn Purl has already turned the section.",
+      "Feed lots are booked by Alec Durn in stores."
+    ],
+    "constraints": [
+      "Write only to Benedick.",
+      "Do not keep a feed lot that a later turn has withdrawn."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this feed note to Benedick before I send it.\n\nDraft under review:\nBenedick \u2014 Feed lot FD-3180 is cleared for NB-9118. Jocelyn Purl's section is already turned, so I will fit that lot this afternoon and close the grind."
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Correction: FD-3180 failed the channel cut. Do not use it.\n\nDraft under review:\nBenedick \u2014 Feed lot FD-3180 is cleared for NB-9118. Jocelyn Purl's section is already turned, so I will fit that lot this afternoon and close the grind."
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "Please revise to say we will fit feed lot FD-3192 instead, which Alec Durn booked into bin 8 this morning.\n\nDraft under review:\nBenedick \u2014 Feed lot FD-3180 is cleared for NB-9118. Jocelyn Purl's section is already turned, so I will fit that lot this afternoon and close the grind."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V334-001",
+  "recipient_context": {
+    "recipient_name": "Benedick Rounsell",
+    "recipient_role": "grind-floor manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "nib-grinder",
+    "organization": "Idleacre Nib Works",
+    "site": "The Grind Loft, Idleacre Yard",
+    "situation": "Cressida Pemble has finished the extra-fine grind on job NB-9011 and needs Benedick Rounsell to know it is sitting in the finish tray.",
+    "known_facts": [
+      "Job NB-9011 is a size-6 extra-fine grind for Rook Stationers.",
+      "The grind was completed at 15:40 on 7 May 2026.",
+      "The nib is in finish-tray slot 4.",
+      "No further grind work is outstanding on NB-9011."
+    ],
+    "constraints": [
+      "Only Benedick Rounsell should receive this update.",
+      "Do not mention other open jobs."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Could you look over this finish-tray note to Benedick before I send it?\n\nDraft under review:\nBenedick \u2014 Job NB-9011, the size-6 extra-fine grind for Rook Stationers, is complete. I finished it at 15:40 on 7 May 2026 and placed the nib in finish-tray slot 4. No further grind work is outstanding on this job. I will wait for your look before it goes to cap-ring fitting."
+    }
+  ]
+}

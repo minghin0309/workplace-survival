@@ -11,8 +11,8 @@
 | Frozen attempt 2 | do not rescore |
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607` (artifacts `d460f3e`, not merged). Designer `bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18`. |
-| Gold | `VALID_COVERAGE`; copied with `git show` from `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b` (not merged). Uncertain 0/24. Adjudicator `bc-336c7d73-2281-5ca4-ac79-19399bd2c20f`. Draft PR #143. Freeze pending commit. |
-| SUT | not started |
+| Gold | `VALID_COVERAGE`; frozen SHA-256 `2f78ce0662e2d0d885d5fe50a6c550d393afd61a08d5e661335e5ba60c398a18` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `c3f4504b4f40ba86cc45d3ff006a5cdf42d6096a49af4dce877e211abe3aba41`. Uncertain 0/24. Copied from `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b` (not merged). |
+| SUT | inputs prepared; wave 1 pending isolated contexts |
 | Extraction | not started |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |

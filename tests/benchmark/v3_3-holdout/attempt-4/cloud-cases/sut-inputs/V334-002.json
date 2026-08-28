@@ -1,0 +1,34 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V334-002",
+  "recipient_context": {
+    "recipient_name": "Benedick Rounsell",
+    "recipient_role": "grind-floor manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "nib-grinder",
+    "organization": "Idleacre Nib Works",
+    "site": "The Grind Loft, Idleacre Yard",
+    "situation": "Tomorrow's grind list has two booked jobs already on the bench, and Cressida wants Benedick to confirm the order she has written down.",
+    "known_facts": [
+      "NB-9024 is a medium grind for Minter Nib Atelier.",
+      "NB-9037 is a broad grind for Piers Skelton's personal pen.",
+      "Both blanks are already on the grind bench.",
+      "Cressida proposes NB-9024 first, then NB-9037."
+    ],
+    "constraints": [
+      "Keep the note to the grind-floor manager only.",
+      "Do not add jobs that are not on tomorrow's list."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this sequence note to Benedick before I send it.\n\nDraft under review:\nBenedick \u2014 For tomorrow's grind list I propose NB-9024 (medium grind for Minter Nib Atelier) first, then NB-9037 (broad grind for Piers Skelton). Both blanks are already on the grind bench. Please confirm that sequence and I will set the rest-blocks overnight."
+    }
+  ]
+}

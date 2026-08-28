@@ -9,7 +9,7 @@ Fill SHA-256 values after the extraction freeze. Do not launch the matcher befor
 1. `tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/extractions-manifest-v334.json` SHA-256 `FILL_AFTER_EXTRACTION_FREEZE`
 2. `tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/evaluations-v334-canonical.json` SHA-256 `FILL_AFTER_EXTRACTION_FREEZE`
 3. `tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/outputs-v334-raw.json` SHA-256 `FILL_AFTER_SUT_FREEZE`
-4. `tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/gold-v334.json` SHA-256 `FILL_AFTER_GOLD_FREEZE`
+4. `tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/gold-v334.json` SHA-256 `c3f4504b4f40ba86cc45d3ff006a5cdf42d6096a49af4dce877e211abe3aba41`
 5. `tests/benchmark/SEMANTIC_ONTOLOGY.json` SHA-256 `3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926`
 
 Do not read any other repository file. Do not glob or `ls` the holdout tree. Do not open images, oracle-notes, question-design, construction-mutations, scorer, methodology, plans, extractor-raw files, this brief, or runtime Skill files. Do not run the scorer. Do not modify gold, ontology, evaluations, or claims.

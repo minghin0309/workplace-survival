@@ -1,0 +1,34 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V334-008",
+  "recipient_context": {
+    "recipient_name": "Benedick Rounsell",
+    "recipient_role": "grind-floor manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "nib-grinder",
+    "organization": "Idleacre Nib Works",
+    "site": "The Grind Loft, Idleacre Yard",
+    "situation": "NB-9086 cannot be ground until the grind style Dulcie Minter chose is written on the ticket. Benedick must open the ticket with that chosen option.",
+    "known_facts": [
+      "NB-9086 is for Minter Nib Atelier.",
+      "Dulcie Minter chose one of the two grind styles discussed on 9 May 2026.",
+      "The grind ticket cannot be opened until that chosen style is written on it.",
+      "Cressida will not start the cut until the ticket names the option."
+    ],
+    "constraints": [
+      "The grind ticket cannot open until the chosen style is written in full.",
+      "Phrases such as 'the one Dulcie picked' will not open the ticket."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this grind-ticket note to Benedick before I send it.\n\nDraft under review:\nBenedick \u2014 Please open the grind ticket for NB-9086 with the grind style Dulcie Minter chose. I will not start the cut until the ticket names that option."
+    }
+  ]
+}
