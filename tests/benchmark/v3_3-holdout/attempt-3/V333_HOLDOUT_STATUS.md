@@ -75,3 +75,10 @@ SUT wave 6 (do not merge):
 | V333-016 | `cursor/v333-016-sut-17a0` @ `dbfaf83` | `bc-5d1bdadd-fe81-53ff-8914-981fbdfe2681` | #131 |
 | V333-017 | `cursor/v333-017-sut-17a0` @ `b1da908` | `bc-7d779d74-2a4c-51e7-8f2e-e357c699e899` | #130 |
 | V333-018 | `cursor/v333-018-sut-17a0` @ `7376bd6` | `bc-32ea4d6e-419d-51ef-b9d0-b6e7a6cb1750` | #132 |
+
+Extractors (do not merge; gold-blind):
+
+| N | family | branch | agent id |
+| --- | --- | --- | --- |
+| 1 | grok | `cursor/v333-extractor-grok-17a0` | `bc-af985572-8f24-5338-9e70-62914baf4859` |
+| 2 | gemini | `cursor/v333-extractor-gemini-17a0` | `bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4` |
