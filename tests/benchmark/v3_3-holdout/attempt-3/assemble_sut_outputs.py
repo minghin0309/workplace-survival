@@ -27,7 +27,7 @@ SOURCES = [
     ("V333-003", "bc-efbfd8e8-bc83-539c-8857-2107d35b8bf8", "cursor/v333-003-sut-17a0"),
     ("V333-004", "bc-afef334f-f227-5002-830a-51cb5b6515b9", "cursor/v333-004-sut-17a0"),
     ("V333-005", "FILL_AFTER_SUT", "cursor/v333-005-sut-17a0"),
-    ("V333-006", "FILL_AFTER_SUT", "cursor/v333-006-sut-17a0"),
+    ("V333-006", "bc-200b68ff-b0e7-5bd4-a695-93ddd2183a76", "cursor/v333-006-sut-17a0"),
     ("V333-007", "FILL_AFTER_SUT", "cursor/v333-007-sut-17a0"),
     ("V333-008", "FILL_AFTER_SUT", "cursor/v333-008-sut-17a0"),
     ("V333-009", "FILL_AFTER_SUT", "cursor/v333-009-sut-17a0"),
