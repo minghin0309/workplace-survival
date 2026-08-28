@@ -4,6 +4,13 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### S-008/S-009/S-010 green-control remediation
+
+- Gray an unquoted off-record measurement when Data B only points at that unread source; never invent the figure.
+- Do not treat "can change later" or "recipient uses my notes" as an off-record source.
+- Do not ask or placeholder a field that Data A only says may be updated later.
+- Added TC-119–TC-121. Kept TC-07 and TC-115. Did not rescore v3.3 attempt 2. Did not Skill-patch H-004 or G-007.
+
 ### v3.3 attempt-2 score triage
 
 - Did not rescore or rewrite attempt 2, attempt 1, or runtime Skill files.

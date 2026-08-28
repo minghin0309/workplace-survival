@@ -534,6 +534,22 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
   - gold, matches, evaluations, ontology, scorer, and runtime Skill files are unchanged.
 - Evidence: `tests/benchmark/v3_3-holdout/attempt-2/SCORE_TRIAGE.md`.
 
+#### T14.24 — S-008/S-009/S-010 Skill remediation
+
+- [x] Completed
+
+- Source requirement: `SPEC.md` Data B and Ratings. Attempt-2 triage S-008 (off-record omit-and-defer Green), S-009 (user-supplied status as off-record Gray), S-010 (later-update field as current omission).
+- Owner files: `SPEC.md`, `.cursor/skills/workplace-survival/`, `tests/TEST_CASES.md`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - an unquoted off-record measurement, including a header or occluded image region, is Gray with a question and placeholder when Data B only points at that unread source;
+  - a user-supplied current status is not Gray solely because a later check can change it;
+  - a field Data A only says may be updated later is not a current Yellow/Red omission, question, or placeholder;
+  - TC-07 and TC-115 still pass (Data B may answer with no off-record source; off-record Data B-only tokens stay Gray);
+  - v3.3 attempt 2 is not rescored and its gold is not rewritten;
+  - H-004 and G-007 are not Skill-patched.
+- Tests: TC-119–TC-121; TC-07, TC-115, and TC-118 must still pass.
+- Evidence: functional results for the new cases.
+
 ## Task template
 
 Copy this block when adding work:

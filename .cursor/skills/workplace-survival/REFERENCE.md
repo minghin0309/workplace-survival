@@ -78,6 +78,18 @@ When the answer rule applies:
 
 Do not apply the answer rule, and do not assign Green, merely because Data A does not contradict Data B. If Data A says the governing date, name, owner, measurement, authorization, or similar token is recorded off-message and does not quote it, a token that appears only in Data B is an unconfirmed claim. Keep the affected responsibility assessment Gray, ask for the recorded value, and use a placeholder in any revision. Never treat the Data B-only token as the recorded value.
 
+The same Gray treatment applies when Data B omits that token and tells the recipient to use the unread off-record source. Unquoted headers, cards, boards, locker notes, and occluded image regions count as off-record sources. Do not rate Green merely because the draft does not invent the figure. Ask for the recorded value. If a revision must mention it, use a placeholder; never invent the token.
+
+Do not treat the following as locating a governing token off-record:
+
+- a statement that a value can change after a later check;
+- a statement that the recipient uses the user's notes;
+- a note that names or pay type may be updated in a follow-up message.
+
+If Data A asks the user to give the current status in the message and the user is giving that status in this turn, apply the answer rule. Do not Gray, ask, or replace the revision with `Not provided — answer the questions above first` solely because a later check could change the picture.
+
+A note that a field may be updated in a later message is not an explicit current requirement to include that field. Do not rate Yellow or Red, ask, or insert a placeholder for a field that Data A does not currently require and that Data B does not assert.
+
 Data B never becomes Data A merely because the user wrote or submitted it. A fact stated only in Data B remains a claim under review. It enters Data A only if the user separately supplies or confirms it as background under the Data A rules.
 
 ### New body and embedded content
@@ -272,7 +284,7 @@ A material token is visible text or structure whose interpretation can change a 
 Apply these rules:
 
 - If a material token in Data B is not reliably legible, treat Data B's new body as not reliably identifiable. Use intake, identify the uncertain region or plausible readings without choosing one, and produce no ratings or revision.
-- If a material token in Data A is uncertain, keep only the affected dimension Gray, identify the exact uncertainty, and continue any unaffected tone or responsibility assessment.
+- If a material token in Data A is uncertain, keep only the affected dimension Gray, identify the exact uncertainty, and continue any unaffected tone or responsibility assessment. An occluded or unquoted off-record measurement in Data A is that case even when Data B is fully legible and merely points at the unread source.
 - Do not infer a name, date, number, negation, or commitment from letter shape, context, grammar, probability, or the value used in Data B.
 - Do not restore a cropped prefix or suffix. If cropped content could add or remove a negation, commitment, owner, date, or other material meaning, request the exact text.
 - When strikethrough or editing marks cross material text, do not assume the marked text is active, deleted, replaced, or historical. Ask which value currently governs unless another clear, user-confirmed value resolves it.
@@ -323,7 +335,7 @@ An unanswered explicit requirement defeats the main purpose when at least one of
 - Data B supplies none of the substantive answers explicitly requested;
 - Data A states that the information is required before a named decision, approval, handoff, or execution step can proceed.
 
-If Data B answers the primary request but omits one of several requested details, use Yellow unless Data A directly establishes that the omitted detail is execution-critical. Omission of a clearly optional suggestion is Green.
+If Data B answers the primary request but omits one of several requested details, use Yellow unless Data A directly establishes that the omitted detail is execution-critical. Omission of a clearly optional suggestion is Green. A field that Data A only permits to be updated later is not a current explicit requirement.
 
 Do not use Gray merely because the requested value is unknown. When the requirement is clear and Data B plainly does not answer it, the failure to answer can be rated Red or Yellow under the omission rules even though the missing value must remain a placeholder. Use Gray when the uncertainty prevents determining which requirement or fact governs, not when the omission itself is already established.
 
@@ -488,9 +500,10 @@ Ask a follow-up question only when its answer can materially change a rating or 
 - Data B is materially ambiguous;
 - Data B conflicts with Data A;
 - Data A explicitly shows that a relevant fact is not confirmed;
-- Data B omits an explicit requirement from Data A and the missing value cannot be safely supplied from Data A.
+- Data B omits an explicit requirement from Data A and the missing value cannot be safely supplied from Data A;
+- Data A locates a governing token off-record, including an unquoted header or occluded image region, and Data B defers to that unread source without quoting it.
 
-Do not ask a question when the answer cannot change the rating or revision. When both dimensions are green, ask no follow-up questions.
+Do not ask a question when the answer cannot change the rating or revision. When both dimensions are green, ask no follow-up questions. Do not ask solely because Data A says a value can change later or that the recipient uses the user's notes, when the user is supplying the current status in this turn. Do not ask for a field Data A only says may be updated in a later message, when that field is not a current requirement and Data B does not assert it.
 
 ### Question limit and priority
 

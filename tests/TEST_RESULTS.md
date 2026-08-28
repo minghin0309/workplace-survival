@@ -16,11 +16,12 @@ Representative T13.10 records:
 
 ## Current status
 
-- Cases currently specified: 118.
+- Cases currently specified: 121.
 - Latest evidence-complete functional execution: TC-01–TC-114, 114 passed and 0 failed.
 - T14.15 added TC-115–TC-117; semantic check of TC-07 plus the three new cases: 4 passed, 0 failed. See `tests/blind/remediation/S001_S002_RESULTS.md`.
 - T14.21 added TC-118; semantic check of TC-60, TC-68, TC-112 plus the new case: 4 passed, 0 failed. See `tests/blind/remediation/S007_RESULTS.md`.
-- Text cases in the current specification: 101.
+- T14.24 added TC-119–TC-121; semantic check of TC-07, TC-115, TC-118 plus the three new cases: 6 passed, 0 failed. See `tests/blind/remediation/S008_S010_RESULTS.md`.
+- Text cases in the current specification: 104.
 - Attached-image cases: 13 passed and 0 failed; every PNG was opened and visually inspected in its evaluator context.
 
 ## Initial T10.1 run summary
@@ -412,6 +413,14 @@ This is a targeted consistency matrix, not the full evidence-complete acceptance
 - TC-60 still passes: explicit unsupported accusation remains Red.
 - TC-68 and TC-112 still pass: qualified low-severity fault suggestions remain Yellow.
 - v3.3 attempt 1 was not rescored. H-004, G-004, G-005, and G-006 were not Skill-patched.
+
+## T14.24 S-008/S-009/S-010 Skill remediation — 2026-08-28
+
+- New cases TC-119–TC-121: 3 passed, 0 failed in semantic check against the updated off-record omit-and-defer, user-supplied status, and later-update field rules.
+- TC-07 still passes: manager-requested values in Data B remain answers when Data A locates no off-record source.
+- TC-115 still passes: off-record Data B-only tokens remain Gray.
+- TC-118 still passes: unsupported `careless`/`again` remain Tone Red.
+- v3.3 attempt 2 was not rescored. H-004 and G-007 were not Skill-patched.
 
 ## Remediation evidence-complete record index
 
