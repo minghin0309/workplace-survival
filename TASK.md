@@ -550,6 +550,24 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - Tests: TC-119–TC-121; TC-07, TC-115, and TC-118 must still pass.
 - Evidence: functional results for the new cases.
 
+#### T14.25 — Fresh benchmark v3.3 unseen holdout attempt 3
+
+- [ ] Completed
+
+- Source requirement: Measure unseen-case performance after T14.24 on methodology v3.3. No in-version rescore of v3.3 attempt 1 or attempt 2.
+- Owner files: `tests/benchmark/v3_3-holdout/attempt-3/`, `TASK.md`, and `CHANGELOG.md`.
+- Acceptance:
+  - unseen cases use a domain that is not millinery, harpworks, Thornwick aerostat, Greaveholt cold-cathode, Wetherlees turret-clock, Rowanleat cork, or any denylisted prior domain;
+  - every case except the routing case is a manager recipient;
+  - question candidates omit the required token from Data B and set `data_b_contains_unconfirmed_token` false;
+  - image-only question candidates set `occluded_role`; Data B occlusion is not treated as Normal-mode review;
+  - gold freeze includes `SEMANTIC_ONTOLOGY.json` and `score_semantic_v3_3.py`;
+  - gold required revisions omit `preserve-intended-recipient`; established omissions are gold Red;
+  - each case uses a distinct cloud SUT context against the T14.24 runtime;
+  - dual extraction and semantic matching precede a single v3.3 scorer invocation;
+  - v3.3 attempt 1 and attempt 2 are not rescored.
+- Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
+
 ## Task template
 
 Copy this block when adding work:
