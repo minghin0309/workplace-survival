@@ -1,0 +1,36 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-002",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "Incoming BeCu foil lot DF-1186 is on thickness spec and Tavish asked for a written release so stores can move it to rack B2.",
+    "known_facts": [
+      "Lot DF-1186 is 0.10 mm beryllium-copper foil from Rudd BeCu Foil.",
+      "Three coupons measured 0.101 mm, 0.099 mm, and 0.100 mm.",
+      "Thickness spec is 0.10 mm plus or minus 0.005 mm.",
+      "Certificate RF-7721 matches the crate stencil for DF-1186.",
+      "There is no quarantine hold on DF-1186.",
+      "Flora Kennett can move the crate to rack B2 once Tavish has the release line."
+    ],
+    "constraints": [
+      "Release only DF-1186; do not mention other open lots.",
+      "Do not change the stated spec band."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Can you check this foil-release line for Tavish before I post it?\n\nDraft under review:\nTavish \u2014 DF-1186 (0.10 mm BeCu from Rudd) measured 0.101 / 0.099 / 0.100 mm on the three coupons, inside 0.10 mm \u00b1 0.005 mm. Certificate RF-7721 matches the crate stencil and there is no quarantine hold. Please take this as the release so Flora can move it to rack B2. \u2014 Liora"
+    }
+  ]
+}

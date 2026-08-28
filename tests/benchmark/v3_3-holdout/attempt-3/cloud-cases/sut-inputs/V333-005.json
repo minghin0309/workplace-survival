@@ -1,0 +1,37 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-005",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "Tavish asked Liora to confirm in writing that job AW-2240 will meet Highspire Transmitter Works' packing deadline, stating that deadline so Highspire's dock slot can be held.",
+    "known_facts": [
+      "AW-2240 is a four-capsule altitude-scale stack for Highspire Transmitter Works.",
+      "EV-6 is currently on AW-2240 and can stay on it through lunch if Tavish confirms.",
+      "Highspire holds a dock slot only if Selkith states the packing deadline in the confirmation note.",
+      "Tavish asked Liora to draft that confirmation for him to send.",
+      "The packing deadline itself is not written on the bench card, the job jacket, or this thread.",
+      "Today is Wednesday 16 September 2026."
+    ],
+    "constraints": [
+      "The confirmation must state the packing deadline.",
+      "Do not hold Highspire's slot with a time-less promise.",
+      "Do not keep EV-6 on AW-2240 unless that confirmation is sendable."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please check this Highspire deadline confirmation before I send it to Tavish.\n\nDraft under review:\nTavish \u2014 AW-2240 will meet Highspire's packing deadline if I keep EV-6 on that stack through lunch. Please send this confirmation so their dock slot is held. \u2014 Liora"
+    }
+  ]
+}

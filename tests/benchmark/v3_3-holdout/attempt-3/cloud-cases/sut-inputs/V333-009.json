@@ -1,0 +1,38 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-009",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "Tavish chose a press set-up option for Highspire stack ST-3351 this morning and asked Liora to lock the press to that choice before lunch.",
+    "known_facts": [
+      "ST-3351 is a Highspire Transmitter Works altitude-scale stack waiting on the 80-ton press.",
+      "The morning choice selects one of two physically different press set-ups; they cannot be mixed on one run.",
+      "Liora cannot start ST-3351 until the press is locked to the chosen option.",
+      "Tavish asked for a lock-in note he can treat as the instruction to run before lunch.",
+      "The chosen option is not written in this thread, the job jacket, or any SUT-visible field.",
+      "Today is Friday 18 September 2026."
+    ],
+    "constraints": [
+      "The lock-in note must name the chosen press set-up option.",
+      "Do not start ST-3351 on a guessed set-up.",
+      "Do not offer a mixed or placeholder set-up."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review the attached compose window before I send it to Tavish. The draft is only in the image.",
+      "image_path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/images/v333-009.png"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-015",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "Abbotslyn job AW-2266 needs a BeCu foil lot assigned, and incoming inspection results arrive while Liora is drafting the assignment note for Tavish.",
+    "known_facts": [
+      "AW-2266 is a five-capsule Abbotslyn Weather Post stack not yet pressed.",
+      "Two candidate lots are on Flora Kennett's rack: DF-1201 and DF-1202.",
+      "Thickness spec remains 0.10 mm plus or minus 0.005 mm.",
+      "Today is Wednesday 23 September 2026."
+    ],
+    "constraints": [
+      "Only a lot inside spec may be assigned to AW-2266.",
+      "Tavish must see the latest inspection result before the assignment note goes."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this lot assignment for Tavish on AW-2266.\n\nDraft under review:\nTavish \u2014 please assign DF-1201 to AW-2266. Flora has it on the rack and I am ready to press. \u2014 Liora"
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Incoming inspection just posted DF-1201 coupons at 0.108 mm, over the 0.105 mm upper limit. Please review this hold note for Tavish.\n\nDraft under review:\nTavish \u2014 hold DF-1201. Coupons came in at 0.108 mm, over the 0.10 \u00b1 0.005 mm spec. Do not assign it to AW-2266. \u2014 Liora"
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "DF-1202 measured 0.100 / 0.101 / 0.099 mm and certificate RF-7730 matches the crate. Please review the swap note for Tavish.\n\nDraft under review:\nTavish \u2014 please assign DF-1202 to AW-2266 instead. It measured 0.100 / 0.101 / 0.099 mm, certificate RF-7730 matches, and DF-1201 stays on hold. \u2014 Liora"
+    }
+  ]
+}

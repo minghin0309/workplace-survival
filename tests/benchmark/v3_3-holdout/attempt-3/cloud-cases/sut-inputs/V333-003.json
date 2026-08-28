@@ -1,0 +1,35 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-003",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "Hugh Penrose is taking over evacuation bench EV-4 and Tavish asked for a one-sentence handover he can pin to the bench board.",
+    "known_facts": [
+      "EV-4 is pumping stack ST-3312 for Keldhouse Altimeter Service.",
+      "Residual after 40 minutes is 0.4 Pa; pinch-off target is at or below 0.5 Pa.",
+      "Pinch-off is scheduled for 18:10 today, Monday 15 September 2026.",
+      "Hugh Penrose is already on site and will take EV-4 at 17:45.",
+      "There is no open nonconformance on EV-4."
+    ],
+    "constraints": [
+      "Handover is for the bench board only.",
+      "Do not alter the pinch-off target."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please look over this EV-4 handover sentence for Tavish's bench board.\n\nDraft under review:\nTavish \u2014 EV-4 handover for the board: ST-3312 (Keldhouse) is at 0.4 Pa after 40 min, target \u2264 0.5 Pa, pinch-off 18:10. No open nonconformance. Hugh Penrose is on site and takes the bench at 17:45. \u2014 Liora"
+    }
+  ]
+}
