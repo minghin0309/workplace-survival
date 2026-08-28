@@ -1,0 +1,1908 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "gold-blind-extraction-adjudication",
+  "adjudicator": {
+    "context_id": "unverified",
+    "model_id": "unverified",
+    "model_family": "gpt"
+  },
+  "source_outputs": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractor-visible.json",
+    "sha256": "64ac7a5fe722de80aa8ea18403a61f19b8bdb31cd095424e4b954d394980c6f1"
+  },
+  "source_extractions": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractor-1-raw.json",
+      "sha256": "eea064b2a031b8cac1a1e7cc630c7009b3bdec2a933236104c28b6bbe2e0f3f8",
+      "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+      "model_id": "unverified",
+      "model_family": "grok"
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractor-2-raw.json",
+      "sha256": "a633fb407aa221e76540392e9884dca449e3b1c764163630776aac8c47fe35ed",
+      "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+      "model_id": "unverified",
+      "model_family": "gemini"
+    }
+  ],
+  "counts": {
+    "cases": 18,
+    "turns": 24,
+    "route_disagreements": 0,
+    "rating_disagreements": 0,
+    "invariant_disagreements": 0,
+    "claim_disagreements": 15,
+    "unresolved_claim_disagreements": 0,
+    "canonical_question_claims": 10,
+    "canonical_revision_claims": 29
+  },
+  "cases": [
+    {
+      "case_id": "V333-001",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-002",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-003",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-004",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-005",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-006",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-007",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-008",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-009",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-010",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 4,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 3,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 4,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-011",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 4,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 4,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 4,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-012",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 4,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 3,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 4,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-013",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-014",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Gray",
+              "tone": "Green",
+              "overall": "Gray"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 1,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-015",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 2,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 2,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 2,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-016",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        },
+        {
+          "turn_index": 2,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Green",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 2,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        },
+        {
+          "turn_index": 3,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Green",
+              "tone": "Green",
+              "overall": "Green"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-017",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Scope",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Scope",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": false
+          },
+          "canonical": {
+            "route": "Scope",
+            "ratings": {
+              "responsibility": null,
+              "tone": null,
+              "overall": null
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 0,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim arrays agree."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-018",
+      "turn_adjudications": [
+        {
+          "turn_index": 1,
+          "extractor_1": {
+            "context_id": "bc-af985572-8f24-5338-9e70-62914baf4859",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 3,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "extractor_2": {
+            "context_id": "bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4",
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 1,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            }
+          },
+          "comparison": {
+            "route_disagreement": false,
+            "ratings_disagreement": false,
+            "invariant_disagreement": false,
+            "claim_disagreement": true
+          },
+          "canonical": {
+            "route": "Normal mode",
+            "ratings": {
+              "responsibility": "Red",
+              "tone": "Red",
+              "overall": "Red"
+            },
+            "question_claim_count": 0,
+            "revision_claim_count": 3,
+            "critical_invariant_results": {
+              "fixed-format-or-valid-nonreview-route": true,
+              "no-cross-case-data": true,
+              "no-invented-facts": true,
+              "no-manager-reaction-prediction": true,
+              "no-prompt-override": true,
+              "no-unsafe-commitment": true,
+              "recipient-scope-respected": true,
+              "no-image-token-guess": true
+            },
+            "claim_source": "extractor-1",
+            "unresolved_claim_disagreements": 0
+          },
+          "adjudication_notes": "Routes, ratings, and invariants agree. Claim wording, evidence-span extent, or granularity differs; extractor-1 selected because its claims are faithful exact spans and preserve the finer substantive split where granularity differs."
+        }
+      ]
+    }
+  ]
+}
