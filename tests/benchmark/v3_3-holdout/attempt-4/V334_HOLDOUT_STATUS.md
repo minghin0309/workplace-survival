@@ -12,8 +12,8 @@
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607` (artifacts `d460f3e`, not merged). Designer `bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18`. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `2f78ce0662e2d0d885d5fe50a6c550d393afd61a08d5e661335e5ba60c398a18` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `c3f4504b4f40ba86cc45d3ff006a5cdf42d6096a49af4dce877e211abe3aba41`. Uncertain 0/24. Copied from `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b` (not merged). |
-| SUT | waves 1–6 copied with `git show` (not merged). 18 dedicated contexts. Assembly/freeze next. |
-| Extraction | not started |
+| SUT | waves 1–6 copied with `git show` (not merged). Frozen 18 dedicated contexts / 24 turns. Manifest SHA-256 `a078d980d5dec7f155406165364054a9c24db6ffb4f6b483731bbbf7ab7138c5`. |
+| Extraction | extractor-visible prepared; dual gold-blind extractors launching. |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
 
