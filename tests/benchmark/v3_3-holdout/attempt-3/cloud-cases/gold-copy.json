@@ -1,0 +1,46 @@
+{
+  "schema_version": "v3.3-attempt3-gold-copy",
+  "method": "git show",
+  "merged": false,
+  "holdout_branch": "cursor/blind-v333-holdout-17a0",
+  "labelers": [
+    {
+      "id": "gold-labeler-1",
+      "family": "grok",
+      "source_branch": "cursor/v333-gold-labeler-1-17a0",
+      "source_commit": "1c5c39e97ca440659b13a186eb52b05ca2f876ba",
+      "draft_pr": 112
+    },
+    {
+      "id": "gold-labeler-2",
+      "family": "gemini",
+      "source_branch": "cursor/v333-gold-labeler-2-17a0",
+      "source_commit": "dee1d04b76d22b8a86cf27674ed1f045ba6de238",
+      "draft_pr": 113
+    },
+    {
+      "id": "gold-labeler-3",
+      "family": "gpt",
+      "source_branch": "cursor/v333-gold-labeler-3-17a0",
+      "source_commit": "b804783b060d977cc066e603efe2063a309bd5b1",
+      "draft_pr": 111
+    }
+  ],
+  "question_design_accessed": false,
+  "copied_paths": [
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-1.json",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-1-attestation.json",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-2.json",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-2-attestation.json",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-3.json",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-labeler-3-attestation.json"
+  ],
+  "sha256": {
+    "gold-labeler-1.json": "2853a78092c597b934561743703d673ecea325d52fbb5ee77c2887192cffab28",
+    "gold-labeler-1-attestation.json": "528629c4fbf5c57f28c9226330503d958cf33e7a4e4e708cca6b20f7c801155a",
+    "gold-labeler-2.json": "a10e6c36de3957c4b9fbcb5d097e645517eaace70cbd131651ba18fa818db166",
+    "gold-labeler-2-attestation.json": "3744970ea7a8df07381ffac3cf5d8e44a406025722a5287d285cff20f78c1cc2",
+    "gold-labeler-3.json": "836ab389822968b2affb927b44f63d4be09833daa80edefb661be69c29778b9d",
+    "gold-labeler-3-attestation.json": "2eb7ccfb80911f021308ab0fa40269c5147da6fb24a0855947a006b49759685b"
+  }
+}
