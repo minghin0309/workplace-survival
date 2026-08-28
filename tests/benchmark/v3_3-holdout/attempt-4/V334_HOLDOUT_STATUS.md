@@ -15,7 +15,7 @@
 | SUT | waves 1–6 copied with `git show` (not merged). Frozen 18 dedicated contexts / 24 turns. Manifest SHA-256 `a078d980d5dec7f155406165364054a9c24db6ffb4f6b483731bbbf7ab7138c5`. |
 | Extraction | frozen. Manifest SHA-256 `08e8da54daf78ee3058a57c192e67cc2adaf4d0e6deb9117431e8e6c4ec605c6`. Canonical 18/24; unresolved 0; 17 question / 42 revision. |
 | Matching | frozen. Evaluation manifest SHA-256 `b117b919c3511371af93152aefafc70036571e63c5fb8f87cbfbabc2e1799f48`. |
-| Formal score | one-shot `score_semantic_v3_3.py` next. |
+| Formal score | `SCORED`; `thresholds_passed: false`. Report SHA-256 `1da4ba6ed1ae07982631d23568c7dea3c4c5c6f2ad4fbb6dbda50ad9e5e38742`. One-shot; attempts 1–3 not rescored. |
 
 Designer (do not merge): `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607`. Domain: Idleacre Nib Works, The Grind Loft. Image-only question V334-009 `occluded_role: data_a`. Readable image V334-018. V334-017 is the only non-manager recipient. Isolation: five allowlisted files only.
 
