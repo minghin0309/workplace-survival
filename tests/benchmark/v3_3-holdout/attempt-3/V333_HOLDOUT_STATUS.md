@@ -11,7 +11,7 @@
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `669d089a602cac71889e85aea84bc84eeafc0df77a38c4c2c17e6870d29e923e` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `f47bd218c185a076444d12eb270f41cb2658c2312d5086ac9a4e0d07556fbc08`. Uncertain 0/24. Copied from `cursor/v333-gold-adjudicator-17a0` @ `6eece7a` (not merged). |
 | SUT | frozen SHA-256 `7d0fdb211d4f1b7a5b8ced36ee8d86d8afdbdfb90f4bca5e99e9908f83bbc40c`. 18 cases / 24 turns. Dedicated branches not merged. |
 | Extraction | frozen SHA-256 `7a794b103e8e01930d505c953d8c9ef7b02664a88eec28b691269bced1020884`. Canonical 10 question / 29 revision claims; unresolved disagreements 0. Adjudicator `cursor/v333-extractor-adjudicator-17a0` @ `3c69938` (draft PR #135, not merged). |
-| Matching | not started; extraction freeze exists; claude matcher launching |
+| Matching | extraction freeze exists; claude matcher launched on `cursor/v333-matcher-claude-17a0` (`bc-88925d40-d154-5533-a6fc-924e4b57d67a`) |
 | Formal score | not started; one-shot after freezes |
 
 Designer (do not merge): `cursor/v333-attempt3-cases-k7m2-17a0` @ `446a20b`. Domain: Selkith Aneroid Works, Cinderholt Pressing Rooms. Image-only question V333-009 `occluded_role: data_a`. Readable image V333-018. V333-017 is the only non-manager recipient. Isolation: five allowlisted files only.
@@ -84,3 +84,5 @@ Extractors (do not merge; gold-blind):
 | 2 | gemini | `cursor/v333-extractor-gemini-17a0` @ `aa5dcdb` (draft PR #134) | `bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4` |
 
 Adjudicator (do not merge; gold-blind): `cursor/v333-extractor-adjudicator-17a0` @ `3c69938` (draft PR #135). Family gpt. Agent `bc-1f67bf2a-4162-5f03-baab-908b0fdc5dfa`. Copied with `git show`. Isolation: allowlisted EVALUATION_BRIEF + EXTRACTION_BRIEF + extractor-visible + both extractor-raw + 18 sut-inputs. `gold_or_scoring_accessed` false, `scoring_performed` false. Canonical evaluations SHA-256 `cbc7a157d507a3ea3c4402a75d4be4bba1d85e9a26bf9801df52dc78bf5024c2`.
+
+Semantic matcher (do not merge; gold access required): `cursor/v333-matcher-claude-17a0`. Family claude. Agent `bc-88925d40-d154-5533-a6fc-924e4b57d67a`. Base: extraction freeze SHA-256 `7a794b103e8e01930d505c953d8c9ef7b02664a88eec28b691269bced1020884`.
