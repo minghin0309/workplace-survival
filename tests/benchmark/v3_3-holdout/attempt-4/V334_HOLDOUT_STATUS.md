@@ -12,7 +12,7 @@
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607` (artifacts `d460f3e`, not merged). Designer `bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18`. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `2f78ce0662e2d0d885d5fe50a6c550d393afd61a08d5e661335e5ba60c398a18` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `c3f4504b4f40ba86cc45d3ff006a5cdf42d6096a49af4dce877e211abe3aba41`. Uncertain 0/24. Copied from `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b` (not merged). |
-| SUT | wave 1 copied with `git show` (not merged). Wave 2 pending. |
+| SUT | waves 1–2 copied with `git show` (not merged). Wave 3 pending. |
 | Extraction | not started |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
@@ -40,5 +40,15 @@ SUT wave 1 (do not merge):
 | V334-003 | `cursor/v334-003-sut-17a0` @ `cab876d` | `bc-1ef0f2ca-99dc-58c9-a31b-7523f2902550` | #146 |
 
 Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true. Skill SHA-256 matches T14.27.
+
+SUT wave 2 (do not merge):
+
+| case | branch | agent id | draft PR |
+| --- | --- | --- | --- |
+| V334-004 | `cursor/v334-004-sut-17a0` @ `3c633f8` | `bc-d5c7067c-77ef-5f3e-948b-b09b67556333` | #149 |
+| V334-005 | `cursor/v334-005-sut-17a0` @ `ffd9d9f` | `bc-d89c8122-d38e-51d9-9068-02f54e95b8d3` | #148 |
+| V334-006 | `cursor/v334-006-sut-17a0` @ `542ca16` | `bc-d0539f69-a312-50ab-a355-355775b56605` | #147 |
+
+Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on 004–006.
 
 Do not invent the workplace domain on this branch. Copy cases with `git show` from the dedicated designer branch after it validates.
