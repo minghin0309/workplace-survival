@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[4]
 CLOUD = ROOT / "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases"
 RAW_DIR = CLOUD / "sut-raw"
 ATT_DIR = CLOUD / "sut-attestations"
-CANONICAL_PARENT = "FILL_AFTER_PREPARE_SUT_INPUTS"
+CANONICAL_PARENT = "571e5492332978a25dcec847798bcc2c29bd6316"
 HOLDOUT = "cursor/blind-v334-holdout-17a0"
 GOLD_MANIFEST = CLOUD / "gold-manifest-v334.json"
 INPUT_MANIFEST = CLOUD / "sut-input-manifest.json"
@@ -22,24 +22,24 @@ IMAGE_OPENS = {"V334-009", "V334-018"}
 # Fill context_id after isolated SUT copy. Shared placeholder keeps
 # distinct-context assembly failing until real bc- ids are written.
 SOURCES = [
-    ("V334-001", "FILL_AFTER_SUT", "cursor/v334-001-sut-17a0"),
-    ("V334-002", "FILL_AFTER_SUT", "cursor/v334-002-sut-17a0"),
-    ("V334-003", "FILL_AFTER_SUT", "cursor/v334-003-sut-17a0"),
-    ("V334-004", "FILL_AFTER_SUT", "cursor/v334-004-sut-17a0"),
-    ("V334-005", "FILL_AFTER_SUT", "cursor/v334-005-sut-17a0"),
-    ("V334-006", "FILL_AFTER_SUT", "cursor/v334-006-sut-17a0"),
-    ("V334-007", "FILL_AFTER_SUT", "cursor/v334-007-sut-17a0"),
-    ("V334-008", "FILL_AFTER_SUT", "cursor/v334-008-sut-17a0"),
-    ("V334-009", "FILL_AFTER_SUT", "cursor/v334-009-sut-17a0"),
-    ("V334-010", "FILL_AFTER_SUT", "cursor/v334-010-sut-17a0"),
-    ("V334-011", "FILL_AFTER_SUT", "cursor/v334-011-sut-17a0"),
-    ("V334-012", "FILL_AFTER_SUT", "cursor/v334-012-sut-17a0"),
-    ("V334-013", "FILL_AFTER_SUT", "cursor/v334-013-sut-17a0"),
-    ("V334-014", "FILL_AFTER_SUT", "cursor/v334-014-sut-17a0"),
-    ("V334-015", "FILL_AFTER_SUT", "cursor/v334-015-sut-17a0"),
-    ("V334-016", "FILL_AFTER_SUT", "cursor/v334-016-sut-17a0"),
-    ("V334-017", "FILL_AFTER_SUT", "cursor/v334-017-sut-17a0"),
-    ("V334-018", "FILL_AFTER_SUT", "cursor/v334-018-sut-17a0"),
+    ("V334-001", "bc-7f6f43e4-8244-50ab-8b09-4b62a5d7f071", "cursor/v334-001-sut-17a0"),
+    ("V334-002", "bc-dfc036f2-16f3-5753-8c1b-f0f8417af256", "cursor/v334-002-sut-17a0"),
+    ("V334-003", "bc-1ef0f2ca-99dc-58c9-a31b-7523f2902550", "cursor/v334-003-sut-17a0"),
+    ("V334-004", "bc-d5c7067c-77ef-5f3e-948b-b09b67556333", "cursor/v334-004-sut-17a0"),
+    ("V334-005", "bc-d89c8122-d38e-51d9-9068-02f54e95b8d3", "cursor/v334-005-sut-17a0"),
+    ("V334-006", "bc-d0539f69-a312-50ab-a355-355775b56605", "cursor/v334-006-sut-17a0"),
+    ("V334-007", "bc-03f09aa3-72b3-5a5d-8baf-40bb30e331fa", "cursor/v334-007-sut-17a0"),
+    ("V334-008", "bc-e5c50344-1bb3-5285-9dd2-1ea9beb54c76", "cursor/v334-008-sut-17a0"),
+    ("V334-009", "bc-8d964f87-d971-542d-8e75-aa5e1ee59f3e", "cursor/v334-009-sut-17a0"),
+    ("V334-010", "bc-f89345bc-3535-5cef-8a82-80c45f32893d", "cursor/v334-010-sut-17a0"),
+    ("V334-011", "bc-5d2cb333-bfff-57d1-981e-11795e19c3e0", "cursor/v334-011-sut-17a0"),
+    ("V334-012", "bc-cfbaa733-e6dd-58e3-8424-beb4c819f7a0", "cursor/v334-012-sut-17a0"),
+    ("V334-013", "bc-656a2acc-86ff-54e6-aad5-22e31306c107", "cursor/v334-013-sut-17a0"),
+    ("V334-014", "bc-b59fe7a9-9533-5516-bb3a-00ec147cb7fe", "cursor/v334-014-sut-17a0"),
+    ("V334-015", "bc-7fcce57a-c1ec-5580-8a98-7f2c5b2360cb", "cursor/v334-015-sut-17a0"),
+    ("V334-016", "bc-a075588a-3999-5d54-b597-53d21e7dd19e", "cursor/v334-016-sut-17a0"),
+    ("V334-017", "bc-ebdc959f-bc26-5099-9ac1-858ed14702f3", "cursor/v334-017-sut-17a0"),
+    ("V334-018", "bc-c645680a-bfed-58f4-af7e-9a631213f751", "cursor/v334-018-sut-17a0"),
 ]
 
 
