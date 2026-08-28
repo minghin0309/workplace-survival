@@ -42,7 +42,7 @@ SUT wave 2 (do not merge):
 | V333-005 | `cursor/v333-005-sut-17a0` @ `ae3a01b` | `bc-fa8301cd-23c8-5b2b-bc2d-056244b3afb0` | #120 |
 | V333-006 | `cursor/v333-006-sut-17a0` @ `20c8414` | `bc-200b68ff-b0e7-5bd4-a695-93ddd2183a76` | #119 |
 
-Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on 001–009. V333-009 attested PNG read. Skill SHA-256 matches T14.24.
+Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on 001–012. V333-009 attested PNG read. Skill SHA-256 matches T14.24.
 
 SUT wave 3 (do not merge):
 
