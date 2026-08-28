@@ -1,0 +1,734 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "sut-raw-outputs",
+  "parent_gold_manifest": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/gold-manifest-v334.json",
+    "sha256": "2f78ce0662e2d0d885d5fe50a6c550d393afd61a08d5e661335e5ba60c398a18"
+  },
+  "canonical_parent_commit": "571e5492332978a25dcec847798bcc2c29bd6316",
+  "runtime": {
+    "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+    "runtime_sources": [
+      {
+        "path": ".cursor/skills/workplace-survival/SKILL.md",
+        "sha256": "d67d64da68006d6f1502516eb39241a3d76a15bde35aac91e7dd279ee940e5af"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/REFERENCE.md",
+        "sha256": "731e9001834fe1f4c8b201fd2a963cd6ec0c99b517c8abb43e4a083247c1fd02"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/FORMATS.md",
+        "sha256": "8e70381518b212f5aef648645539c1653a3db6ca376a672ff21e2b25d90c5436"
+      },
+      {
+        "path": ".cursor/skills/workplace-survival/EXAMPLES.md",
+        "sha256": "4befd4ef9db3fc8e943c37f6da5f7890da21ded710ca5482826091c2fd8dde50"
+      }
+    ]
+  },
+  "requested_model_id": "inherit",
+  "machine_model_id": "unverified",
+  "counts": {
+    "cases": 18,
+    "turns": 24
+  },
+  "cases": [
+    {
+      "case_id": "V334-001",
+      "generator_context_id": "bc-7f6f43e4-8244-50ab-8b09-4b62a5d7f071",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-001.json",
+        "sha256": "bad4fe949850f8bc0bfcff1d47f25494b82de5dac21a2cc5ed00cd19d5315ad5"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-001.json",
+        "raw_sha256": "6b5f6aa28fb367bd7f976f0a639cc5216f12d4f31144293ddc647c9b8dcad468",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-001.json",
+        "attestation_sha256": "8deecdec500889779e82db5a6c70312fa2de2689d6ad1a72819143c7dc7fc7b8",
+        "branch": "cursor/v334-001-sut-17a0",
+        "output_commit": "cb681c9cd3734d56a750c128cb48db0328e854d4",
+        "raw_commit": "cb681c9cd3734d56a750c128cb48db0328e854d4",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "6b5f6aa28fb367bd7f976f0a639cc5216f12d4f31144293ddc647c9b8dcad468",
+        "source_attestation_sha256": "8deecdec500889779e82db5a6c70312fa2de2689d6ad1a72819143c7dc7fc7b8"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient is Benedick Rounsell, grind-floor manager and the user's direct line manager; channel is an internal message thread to the manager only, with no additional recipients.\n- User role is nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Cressida Pemble has finished the extra-fine grind on job NB-9011 and needs Benedick Rounsell to know it is sitting in the finish tray.\n- Job NB-9011 is a size-6 extra-fine grind for Rook Stationers.\n- The grind was completed at 15:40 on 7 May 2026.\n- The nib is in finish-tray slot 4.\n- No further grind work is outstanding on NB-9011.\n- Only Benedick Rounsell should receive this update.\n- Do not mention other open jobs.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B reports that job NB-9011, the size-6 extra-fine grind for Rook Stationers, is complete; that the grind was finished at 15:40 on 7 May 2026; that the nib is in finish-tray slot 4; and that no further grind work is outstanding on this job. Those statements match Data A. The note is addressed only to Benedick and does not mention other open jobs. The sender's completed actions and the wait for Benedick's look are stated clearly.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is factual and operational. It reports completion, time, tray slot, and a wait for Benedick's look, with no insult, blame, hostility, threat, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-002",
+      "generator_context_id": "bc-dfc036f2-16f3-5753-8c1b-f0f8417af256",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-002.json",
+        "sha256": "710973cc3eec54165136b9792a85151a8a7c613553949edf8bd87275f527e7f0"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-002.json",
+        "raw_sha256": "226e8687873281be85f27ff41850216755cf2810f11d6ad30a15382fb2912bc1",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-002.json",
+        "attestation_sha256": "104d50a04f95f470a4bbca23af074c5e06d27a2d1fe731c3e3e4cd7e1797a5a4",
+        "branch": "cursor/v334-002-sut-17a0",
+        "output_commit": "e2972d66b36fd6cf00e79b35d2514a6835a0d31c",
+        "raw_commit": "e2972d66b36fd6cf00e79b35d2514a6835a0d31c",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "226e8687873281be85f27ff41850216755cf2810f11d6ad30a15382fb2912bc1",
+        "source_attestation_sha256": "104d50a04f95f470a4bbca23af074c5e06d27a2d1fe731c3e3e4cd7e1797a5a4"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and the user's direct line manager; internal message thread, manager only, no additional recipients.\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Tomorrow's grind list has two booked jobs already on the bench, and Cressida wants Benedick to confirm the order she has written down.\n- NB-9024 is a medium grind for Minter Nib Atelier.\n- NB-9037 is a broad grind for Piers Skelton's personal pen.\n- Both blanks are already on the grind bench.\n- Cressida proposes NB-9024 first, then NB-9037.\n- Keep the note to the grind-floor manager only.\n- Do not add jobs that are not on tomorrow's list.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B proposes NB-9024 (medium grind for Minter Nib Atelier) first, then NB-9037 (broad grind for Piers Skelton), matching the two booked jobs and Cressida's proposed order. It states both blanks are already on the grind bench, adds no jobs beyond tomorrow's list, and addresses only Benedick.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The note is a factual sequence proposal and a request to confirm that sequence. It contains no insult, hostility, accusation, threat, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-003",
+      "generator_context_id": "bc-1ef0f2ca-99dc-58c9-a31b-7523f2902550",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-003.json",
+        "sha256": "c5622f8567b04f198c7ef75c91a4bd0174bbfac3ff38efc966bd17c8880e5ef8"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-003.json",
+        "raw_sha256": "6bed94b434a4d166340cf57eea26e33794fe59f718b78d24f5ae400447cb1da8",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-003.json",
+        "attestation_sha256": "c82dd8825f1f4bc90ddc437f271a5c3e1457477804caf4501406974c48bbd7e9",
+        "branch": "cursor/v334-003-sut-17a0",
+        "output_commit": "cab876dd8508a371f96d0d827235a8f7f27fd464",
+        "raw_commit": "cab876dd8508a371f96d0d827235a8f7f27fd464",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "6bed94b434a4d166340cf57eea26e33794fe59f718b78d24f5ae400447cb1da8",
+        "source_attestation_sha256": "c82dd8825f1f4bc90ddc437f271a5c3e1457477804caf4501406974c48bbd7e9"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and the user's direct line manager; channel is an internal message thread; audience is manager only.\n- Sender: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Situation: Una Brier at Leopold Iridium Pellets has delivered a pellet lot; stores have booked it in; Cressida is notifying Benedick.\n- Confirmed facts: Lot IR-6602 arrived at 09:15 on 8 May 2026; Alec Durn booked the lot into stores bin 12; the packing tally matches the order for 40 pellets; no shortfall was noted.\n- Constraints: This is an information note to the grind-floor manager only. Do not request a purchase or a return.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B reports that lot IR-6602 arrived at 09:15 on 8 May 2026, that Alec Durn booked it into stores bin 12, that the packing tally matches the order for 40 pellets, and that no shortfall was noted, matching Data A. The note is addressed to Benedick as manager-only information and does not request a purchase or a return.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is factual and neutral. It contains no insult, threat, hostility, accusation, dismissiveness, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-004",
+      "generator_context_id": "bc-d5c7067c-77ef-5f3e-948b-b09b67556333",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-004.json",
+        "sha256": "2d4cf43207a265dc4a7d9437b6415a2e3aae8258d6c4bec1bc42f7edc1dcf230"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-004.json",
+        "raw_sha256": "e9f532cc8e67268b19146eb6212272b9c9604af2105d16cbae1f8ef4da5dcae3",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-004.json",
+        "attestation_sha256": "070d8e76520f19b64ea16ad6db293ce18a09b127e25d300bf321299dfc876b81",
+        "branch": "cursor/v334-004-sut-17a0",
+        "output_commit": "3c633f85f67c1843ff5d645326bf7dedd6407255",
+        "raw_commit": "3c633f85f67c1843ff5d645326bf7dedd6407255",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "e9f532cc8e67268b19146eb6212272b9c9604af2105d16cbae1f8ef4da5dcae3",
+        "source_attestation_sha256": "070d8e76520f19b64ea16ad6db293ce18a09b127e25d300bf321299dfc876b81"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Intended recipient: Benedick Rounsell, grind-floor manager and the user's direct line manager; manager-only internal thread.\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- NB-9042 is a size-6 fine grind for Rook Stationers. Its cap ring needs a rhodium re-plate at Wold Rhodium Baths before finishing can close the job.\n- Godric Wold can load a rhodium bath this afternoon if stores release the cap ring today.\n- Contractor re-plates that leave the grind loft require a named authorising officer before stores will release a cap ring.\n- Cressida is asking Benedick to tell stores the re-plate is authorised.\n- Stores will only release the cap ring if the note names the authorising officer. A hedge, a blank, or \"the usual person\" will not release the ring.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A allows stores to release the NB-9042 cap ring only if the note names the authorising officer. Data B asks Benedick to tell stores they may release the ring \"because the rhodium re-plate is authorised\" but names no officer. Data A does not establish who that officer is or that authorisation has been given.\n- Communication risk: Benedick could instruct stores to release the ring without a named officer, so stores would refuse the release, or could treat unconfirmed authorisation as established.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is factual and direct, with no insult, hostility, threat, or unsupported personal accusation.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Who holds remaining authority to authorise this NB-9042 contractor re-plate?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The note must name that officer before stores will release the cap ring, and the asserted authorisation cannot be left as fact without that name.\n   - Neutral answer structure: [name] holds remaining authority to authorise this re-plate. / Remaining authority has not been identified.\n\n## Minimal revision\n\nBenedick \u2014 Please tell stores they may release the NB-9042 cap ring to Godric Wold, naming [authorising officer] as the authorising officer for the rhodium re-plate. Godric can load a bath this afternoon. I will keep the nib on the rest-block until the ring comes back.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-005",
+      "generator_context_id": "bc-d89c8122-d38e-51d9-9068-02f54e95b8d3",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-005.json",
+        "sha256": "0591727b6b11616d584ecb5c29e5a962b900fd40140b4270488a381cd2efacb2"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-005.json",
+        "raw_sha256": "53ce84cd4e84212c8c9874295aaba034d1eebd169682b5f5eec8553e12da0cd8",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-005.json",
+        "attestation_sha256": "ffa7e59df3d4e4e46bd68bef14b83144cd955d469c223519680aa9dab050acdd",
+        "branch": "cursor/v334-005-sut-17a0",
+        "output_commit": "ffd9d9fc7aa4910e54184032448788b8a5d84eed",
+        "raw_commit": "ffd9d9fc7aa4910e54184032448788b8a5d84eed",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "53ce84cd4e84212c8c9874295aaba034d1eebd169682b5f5eec8553e12da0cd8",
+        "source_attestation_sha256": "ffa7e59df3d4e4e46bd68bef14b83144cd955d469c223519680aa9dab050acdd"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient is Benedick Rounsell, grind-floor manager and the user's direct line manager; channel is an internal message thread to the manager only.\n- User is a nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- NB-9058 is a needlepoint grind for Rook Stationers. Barnaby Clough asked for one confirmed finish date, not a range.\n- The grind calendar entry for this job is held by Cressida. Benedick will only send a date that has been confirmed on the grind calendar and will not send a date-certain note without that confirmed finish date.\n- A placeholder such as soon as possible will not satisfy Rook Stationers. Qualifying the date as unconfirmed is not acceptable for this reply.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Gray\n- Evidence: Data A states that the grind calendar entry for this job is held by Cressida and that Benedick will not send a date-certain note without the confirmed finish date. Data A does not quote that calendar date. Data B asks Benedick to tell Barnaby Clough the confirmed finish date and says the sender can meet a date-certain once Benedick sends it, without naming the recorded calendar date.\n- Communication risk: Benedick may be asked to send Rook Stationers a date-certain note without the grind-calendar finish date he requires, or may treat the request as asking him to originate a date that Cressida's calendar holds.\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is a direct operational request with no insult, hostility, threat, contempt, or unsupported accusation.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Gray\n- Next action: More information required\n\n## Confirmation needed\n\n1. Question: What confirmed finish date is recorded on the grind calendar held by Cressida for NB-9058?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Benedick will not send a date-certain note without that recorded date, and Data A does not quote it, so the rating and any sendable wording depend on the calendar entry.\n   - Neutral answer structure: The confirmed grind-calendar finish date for NB-9058 is [date].\n\n## Minimal revision\n\nBenedick \u2014 Please tell Barnaby Clough at Rook Stationers that the confirmed finish date for the needlepoint grind on NB-9058 is [confirmed grind-calendar finish date]. I have the job on my bench.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-006",
+      "generator_context_id": "bc-d0539f69-a312-50ab-a355-355775b56605",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-006.json",
+        "sha256": "83b65f4327b0f3c43a9d4832d48ec8e4742fad95e711f85454a47b63c0caf5c9"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-006.json",
+        "raw_sha256": "3653b4da2c600f622a24d8d53d18ca8ba2843f84a1e5a1a72d0e17ac92800a46",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-006.json",
+        "attestation_sha256": "b28deb0e04be2467eb7da3c3e85eba8ac399e464b417b937f97c801d4f80c429",
+        "branch": "cursor/v334-006-sut-17a0",
+        "output_commit": "542ca160120d0820b1da569812c1f6becea7ee95",
+        "raw_commit": "542ca160120d0820b1da569812c1f6becea7ee95",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "3653b4da2c600f622a24d8d53d18ca8ba2843f84a1e5a1a72d0e17ac92800a46",
+        "source_attestation_sha256": "b28deb0e04be2467eb7da3c3e85eba8ac399e464b417b937f97c801d4f80c429"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and the user's direct line manager; audience is manager only on an internal message thread.\n- The user is a nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Six extra-fine grinds on NB-9063 are boxed in kraft sleeve K-4 for Friday collection at the grind-loft hatch; the box is for Lettice Pen Rooms.\n- Benedick must name the collector on the loft pass before the hatch can open; the loft pass will not issue without the named collector.\n- Cressida knows the collector and is asking Benedick to put that name on the pass.\n- A shop name alone will not open the hatch; a person must be named. Do not leave the collector as whoever they send.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A requires a person to be named on the loft pass: a shop name alone will not open the hatch, and the pass will not issue without the named collector. Cressida knows the collector and is asking Benedick to put that name on the pass, but neither Data A nor Data B states the person's name. Data B asks Benedick to \"Put the named collector on the pass\" while identifying only Lettice Pen Rooms as the destination shop.\n- Communication risk: Without a named person, the loft pass cannot issue and the hatch cannot open; the shop name could be treated as the collector identity, or the collector could be left as whoever they send.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is a polite, factual request to issue a loft pass and put a named collector on it. It contains no insult, accusation, threat, hostility, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the name of the collector that should be put on the loft pass?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data A requires a named person before the pass can issue and the hatch can open; that name is not in Data A or Data B, so a sendable revision can only use a placeholder until it is supplied.\n   - Neutral answer structure: The named collector is [person's name].\n\n## Minimal revision\n\nBenedick \u2014 Please issue a loft pass for Friday collection of NB-9063 (six extra-fine grinds in kraft sleeve K-4, boxed for Lettice Pen Rooms). Put [named collector] on the pass so the hatch can be opened.\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-007",
+      "generator_context_id": "bc-03f09aa3-72b3-5a5d-8baf-40bb30e331fa",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-007.json",
+        "sha256": "76d850a6c6d29ab86722ad1d993629ce065f0cb60c13e63711d0b7d5a780b848"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-007.json",
+        "raw_sha256": "aa3064b7873c542a293b7d973ac6317ccb44f0c27a0dd3ceb9a8cff207eab1b2",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-007.json",
+        "attestation_sha256": "3c33158642f8eb0c9c67ca4a12c8419e059cbecf70da1c7783b9bd5877ba586d",
+        "branch": "cursor/v334-007-sut-17a0",
+        "output_commit": "cea71e408ac9d13f81b6f3520bfd37bb7e14c085",
+        "raw_commit": "cea71e408ac9d13f81b6f3520bfd37bb7e14c085",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "aa3064b7873c542a293b7d973ac6317ccb44f0c27a0dd3ceb9a8cff207eab1b2",
+        "source_attestation_sha256": "3c33158642f8eb0c9c67ca4a12c8419e059cbecf70da1c7783b9bd5877ba586d"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient is Benedick Rounsell, grind-floor manager and the user's direct line manager; channel is an internal message thread, manager only.\n- User is a nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Lettice Pen Rooms asked Benedick to cite the traceable source for the gold blank used on NB-9071 before they file restorer notes.\n- NB-9071 is a size-6 fine grind on a gold blank. The blank for NB-9071 is stamp-marked 18k on the heel.\n- Lettice Pen Rooms asked for the traceable source behind that stamp, not a restatement of the stamp.\n- Cressida holds the intake source reference.\n- Restating the heel-stamp is not the source they asked for. A hedge or an unnamed 'intake file' will not do for their restorer notes.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Gray\n- Evidence: Data A locates the governing traceable source off-record with Cressida as the intake source reference and does not quote that reference. Data B asks Benedick to send Lettice \"that source\" without naming the recorded intake source reference. Restating the 18k heel-stamp is not the source they asked for, and an unnamed intake file will not do for restorer notes.\n- Communication risk: Benedick may send Lettice a restatement of the heel-stamp, a hedge, or an unnamed file instead of the recorded intake source reference they need before filing restorer notes.\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is a direct, factual request to Benedick with no insult, hostility, blame, or accusation.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Gray\n- Next action: More information required\n\n## Confirmation needed\n\n1. Question: What is the recorded intake source reference that Cressida holds for the gold blank used on NB-9071?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The outgoing source note needs to name that recorded reference so Benedick can send Lettice the traceable source they asked for, rather than the heel-stamp or an unnamed file.\n   - Neutral answer structure: The recorded intake source reference is: [intake source reference]\n\n## Minimal revision\n\nBenedick \u2014 Lettice Pen Rooms asked for the traceable source behind the 18k heel-stamp on NB-9071 so their restorer can file it. Cressida holds the intake source reference: [intake source reference]. Please send them that source. I have the blank on the rest-block.\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-008",
+      "generator_context_id": "bc-e5c50344-1bb3-5285-9dd2-1ea9beb54c76",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-008.json",
+        "sha256": "a28652289b20ce8b66aecf85c5eb919cd93d82edc24e8088fc488e3a98a0de97"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-008.json",
+        "raw_sha256": "33657eb563406d18a918e9ac8901baeba2c4f79644c5c3e71bac13890d53747b",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-008.json",
+        "attestation_sha256": "c13eaefccdfa8300435078e9e181ff9b710726c8dcfc01c00f86f85c20b22834",
+        "branch": "cursor/v334-008-sut-17a0",
+        "output_commit": "f27df9b89c186034c6bf5c3405a007b742a654a9",
+        "raw_commit": "f27df9b89c186034c6bf5c3405a007b742a654a9",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "33657eb563406d18a918e9ac8901baeba2c4f79644c5c3e71bac13890d53747b",
+        "source_attestation_sha256": "c13eaefccdfa8300435078e9e181ff9b710726c8dcfc01c00f86f85c20b22834"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager (direct line manager); internal manager-only thread.\n- Sender role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- NB-9086 is for Minter Nib Atelier and cannot be ground until the grind style Dulcie Minter chose is written on the ticket.\n- Benedick must open the ticket with that chosen option.\n- Dulcie Minter chose one of the two grind styles discussed on 9 May 2026. Data A does not name which style she chose.\n- The grind ticket cannot open until the chosen style is written in full. Phrases such as \"the one Dulcie picked\" will not open the ticket.\n- Cressida will not start the cut until the ticket names the option.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A requires the chosen grind style to be written in full before the ticket can open, and states that phrases such as \"the one Dulcie picked\" will not open the ticket. Data B asks Benedick to open the grind ticket for NB-9086 \"with the grind style Dulcie Minter chose\" and does not name the style. The chosen style is not stated in Data A.\n- Communication risk: Benedick cannot open the ticket from this wording, so the grind and the cut cannot proceed from this note.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is a direct operational request plus a process condition (\"I will not start the cut until the ticket names that option\"). It contains no insult, hostility, threat, or unsupported accusation.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Which grind style did Dulcie Minter choose among the two discussed on 9 May 2026?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The ticket cannot open unless that style is written in full, and the revision cannot name it from Data A.\n   - Neutral answer structure: The grind style Dulcie Minter chose is: [grind style written in full]\n\n## Minimal revision\n\nBenedick \u2014 Please open the grind ticket for NB-9086 with [chosen grind style written in full]. I will not start the cut until the ticket names that option.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-009",
+      "generator_context_id": "bc-8d964f87-d971-542d-8e75-aa5e1ee59f3e",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-009.json",
+        "sha256": "11ff62ba1c7462aaf08a4fa1378e8b31711c26f76d6c3456943dd8f45cc9e61c"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-009.json",
+        "raw_sha256": "aca865f241f1d3ad11ba55d7d8768ece178fb4e065cdba4896689680923a7b49",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-009.json",
+        "attestation_sha256": "334ead2d6b44cc6696cb5ba92e3ade8cfcd49b8ba9505b2182fa991ff769d1d7",
+        "branch": "cursor/v334-009-sut-17a0",
+        "output_commit": "3ba6a7de79729d0f0b7a4c054c926be8f22fa225",
+        "raw_commit": "3ba6a7de79729d0f0b7a4c054c926be8f22fa225",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "aca865f241f1d3ad11ba55d7d8768ece178fb4e065cdba4896689680923a7b49",
+        "source_attestation_sha256": "334ead2d6b44cc6696cb5ba92e3ade8cfcd49b8ba9505b2182fa991ff769d1d7"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and direct line manager; internal message thread, manager only.\n- Sender role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Cressida is ready to grind NB-9094 once Benedick confirms she should follow the recorded tine gap on the grind ticket shown in the attached image.\n- NB-9094 is an extra-fine grind for Rook Stationers.\n- A tine gap was recorded on the grind ticket.\n- Benedick will not confirm a grind-to-gap instruction without the recorded measurement.\n- A qualitative gap description will not do; the grind is set to a recorded measurement.\n- Do not invent a gap figure.\n- The recorded tine gap field on the attached grind-ticket image is covered and is not quoted.\n- The attached image is the only draft.\n- Recognized Data B:\n\n  > Benedick, please confirm I should grind NB-9094 to the recorded tine gap on this ticket and then pass the nib to finishing. I will not set the rest-block until you confirm against that measurement. Rook Stationers are waiting on extra-fine, and I have the blank on the bench now.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Gray\n- Evidence: Data A locates the governing tine gap on the grind ticket and does not quote it. The recorded tine gap field on the attached ticket image is covered. Data B asks Benedick to confirm grinding NB-9094 \"to the recorded tine gap on this ticket\" without naming that measurement. Data A states that Benedick will not confirm a grind-to-gap instruction without the recorded measurement, and that a qualitative gap description will not do.\n- Communication risk: Benedick cannot confirm the grind-to-gap instruction, or the grind could be set without the recorded measurement, because the outgoing note does not state the recorded tine gap.\n\n### Tone\n\n- Rating: Green\n- Evidence: The draft is a polite request for confirmation. It contains no insult, hostility, threat, unsupported accusation, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Gray\n- Next action: More information required\n\n## Confirmation needed\n\n1. Question: What tine gap measurement is recorded on the grind ticket for NB-9094?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The recorded measurement is required before Benedick can confirm the grind-to-gap instruction, and it is covered on this copy. The answer supplies the value the outgoing note must name.\n   - Neutral answer structure: The recorded tine gap on the grind ticket for NB-9094 is [recorded tine gap].\n\n## Minimal revision\n\nBenedick, please confirm I should grind NB-9094 to the recorded tine gap of [recorded tine gap] and then pass the nib to finishing. I will not set the rest-block until you confirm against that measurement. Rook Stationers are waiting on extra-fine, and I have the blank on the bench now.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-010",
+      "generator_context_id": "bc-f89345bc-3535-5cef-8a82-80c45f32893d",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-010.json",
+        "sha256": "77ff5e911bcb08bb7c1dca959643f2d02cac1ac7b07dee01aa489b73bdb148ac"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-010.json",
+        "raw_sha256": "abe900c4e11c36cd4d1cc6fd4368ebfe86ee2c7e16082b914ecb45340adc72ca",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-010.json",
+        "attestation_sha256": "6450fcf6e256c262bcdb4411de3574a5d463cc30aa1cf55b04cc1e98ecc3a7e3",
+        "branch": "cursor/v334-010-sut-17a0",
+        "output_commit": "ee9db95721a8f36f05dd2f77a3294ce9fa111c08",
+        "raw_commit": "ee9db95721a8f36f05dd2f77a3294ce9fa111c08",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "abe900c4e11c36cd4d1cc6fd4368ebfe86ee2c7e16082b914ecb45340adc72ca",
+        "source_attestation_sha256": "6450fcf6e256c262bcdb4411de3574a5d463cc30aa1cf55b04cc1e98ecc3a7e3"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and the user's direct line manager; internal message thread; manager only; no additional recipients.\n- Constraint: do not copy Rook Stationers on this thread.\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- NB-9147 is an extra-fine grind returned to the loft for comment.\n- Rook Stationers said the extra-fine on NB-9147 felt scratchy.\n- Barnaby Clough telephoned the hatch this morning.\n- Cressida spoke to him before drafting the note to Benedick.\n- Cressida drafted a reply for Benedick after a hatch-phone call.\n- Data A does not record authorisation to guarantee a free replacement nib, to credit last month's invoice, or to notify the customer of those terms, and does not record the hatch-phone wording.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B asks Benedick to tell Barnaby Clough that Benedick personally guarantees a free replacement nib if Rook Stationers dislike the grind on NB-9147, and that Idleacre will also credit last month's invoice. Data B also states, \"I have already said as much on the hatch phone, so you will need to stand behind it.\" Data A confirms the hatch call and that Cressida spoke to Barnaby Clough, but does not establish authority for a free replacement, an invoice credit, or a customer notification of those terms.\n- Communication risk: Benedick could relay an unauthorised commercial commitment to Rook Stationers, or treat the unconfirmed hatch-phone claim as already binding.\n\n### Tone\n\n- Rating: Yellow\n- Evidence: \"you personally guarantee\" and \"you will need to stand behind it\" push the sender's unconfirmed hatch-phone terms onto Benedick as a personal obligation.\n- Communication risk: The wording can read as shifting commercial risk and personal liability onto the manager rather than reporting the hatch call for a decision.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Who, if anyone, holds authority to offer a free replacement nib or to credit last month's invoice, and what scope may be committed?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data B asks Benedick to guarantee those customer terms; Data A does not establish that authority. The answer determines what client wording, if any, can remain.\n   - Neutral answer structure: The person or role who may authorise a replacement or invoice credit is: [name or role]. The scope that may be committed is: [scope]. Alternatively: no one is currently authorised to offer those terms.\n\n2. Question: What, if anything, was said to Barnaby Clough on the hatch phone about a replacement nib or last month's invoice?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data B states those terms were already given on the hatch phone; Data A only confirms that Cressida spoke to him. The answer determines whether that claim can remain.\n   - Neutral answer structure: On the hatch phone, the following was said about a replacement or credit: [wording]. Alternatively: nothing was said about those terms.\n\n## Minimal revision\n\nBenedick \u2014 Please do not tell Barnaby Clough that a free replacement nib is guaranteed if Rook Stationers dislike the grind on NB-9147, or that Idleacre will credit last month's invoice, unless [person authorised to offer a replacement or invoice credit] has authorised those terms.\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-011",
+      "generator_context_id": "bc-5d2cb333-bfff-57d1-981e-11795e19c3e0",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-011.json",
+        "sha256": "38127feeb236748c342f64773dc007f7853245e6a464efeeb7f1742e0cc96516"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-011.json",
+        "raw_sha256": "18bd70860c80af2a8c9d1bde2423c7572f50673dd01b8f25400bd229ee1601ef",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-011.json",
+        "attestation_sha256": "99849cf99c4588e31758a6e25b85a3aa0a1cc88c477af314368d3156bbf2b3ce",
+        "branch": "cursor/v334-011-sut-17a0",
+        "output_commit": "ac4b38ea372db8fb26f4f65cddec0991955e48e7",
+        "raw_commit": "ac4b38ea372db8fb26f4f65cddec0991955e48e7",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "18bd70860c80af2a8c9d1bde2423c7572f50673dd01b8f25400bd229ee1601ef",
+        "source_attestation_sha256": "99849cf99c4588e31758a6e25b85a3aa0a1cc88c477af314368d3156bbf2b3ce"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Intended recipient is Benedick Rounsell, grind-floor manager and the user's direct line manager, on an internal manager-only thread.\n- User role is nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- A Saturday rush grind on NB-9152 would need overtime and a bath surcharge. Cressida drafted a bookkeeping note to Benedick.\n- NB-9152 is a rush fine grind requested for Saturday.\n- Godric Wold quoted a bath surcharge if the cap ring is plated on Saturday.\n- Dorcas Midge is the apprentice grinder.\n- Keep this note on the manager thread only.\n- Do not write to Godric Wold from this draft.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B states \"I have told Dorcas Midge to authorise Saturday overtime for the NB-9152 rush grind\" and \"I have told Godric Wold that Idleacre will pay his bath surcharge from the grind-loft petty cash.\" Data A identifies Dorcas Midge as the apprentice grinder, records that the Saturday rush on NB-9152 would need overtime and a bath surcharge, and records only that Godric Wold quoted a surcharge if the cap ring is plated on Saturday. Data A does not establish that Dorcas Midge may authorise overtime, that overtime has been authorised, that the sender may commit Idleacre to pay the surcharge, that grind-loft petty cash is an approved source, or that Godric Wold may be told the payment is agreed.\n- Communication risk: Benedick may treat Saturday overtime and the bath surcharge as already authorised and already promised to Godric Wold, and only record them in the book, when those commitments are not established in Data A.\n\n### Tone\n\n- Rating: Green\n- Evidence: The new body is a direct bookkeeping request to Benedick. It contains no insult, threat, hostility, contempt, or unsupported accusation asserted as fact.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: Who currently holds authority to authorise Saturday overtime for the NB-9152 rush grind, and what overtime scope may be committed?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data B treats overtime as already authorised through Dorcas Midge; the answer determines what overtime, if any, can remain in the note.\n   - Neutral answer structure: Authority: [name or role, or \"not established\"]. Overtime scope that may be committed: [scope, or \"none\"].\n\n2. Question: Who currently holds authority to commit Idleacre to paying Godric Wold's bath surcharge, including from grind-loft petty cash, and what payment scope may be committed?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data B treats the surcharge as already promised to Godric Wold from grind-loft petty cash; the answer determines what payment, if any, can remain and whether any notice to Godric can be stated.\n   - Neutral answer structure: Authority: [name or role, or \"not established\"]. Payment source and scope that may be committed: [source and scope, or \"none\"].\n\n3. Question: Has Godric Wold already been told that Idleacre will pay the bath surcharge?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data B reports that notice as already given; the answer determines whether the revision only omits an unconfirmed promise or must also account for a notice already sent.\n   - Neutral answer structure: [Already told / Not told / Not established]\n\n## Minimal revision\n\nBenedick \u2014 The Saturday rush grind on NB-9152 would need overtime, and Godric Wold quoted a bath surcharge if the cap ring is plated on Saturday. Please advise who may authorise the overtime and the surcharge, and what to note in the book.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-012",
+      "generator_context_id": "bc-cfbaa733-e6dd-58e3-8424-beb4c819f7a0",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-012.json",
+        "sha256": "e544a7fe11da83997c4fc05b501a66c0c0dadf72518d71448fa286ae2b327bee"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-012.json",
+        "raw_sha256": "809bcd7d3b64fa240b24607e3cff558c03232e4cf33f3e30d05ecd557df1e697",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-012.json",
+        "attestation_sha256": "bb21f955f1f82f9edccd090835ee50217144124b2c93de66a2b37a7a5d4bd2a1",
+        "branch": "cursor/v334-012-sut-17a0",
+        "output_commit": "ecf232c8961f72c4757db998f374da11f32ab241",
+        "raw_commit": "ecf232c8961f72c4757db998f374da11f32ab241",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "809bcd7d3b64fa240b24607e3cff558c03232e4cf33f3e30d05ecd557df1e697",
+        "source_attestation_sha256": "bb21f955f1f82f9edccd090835ee50217144124b2c93de66a2b37a7a5d4bd2a1"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager (direct line manager); internal message thread; manager only. Do not send the note to stores as a group.\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Lot IR-6614 was issued from stores bin 12 yesterday.\n- Cressida's bench tally is short by four pellets.\n- Alec Durn booked the issue.\n- A pellet count in stores bin 12 did not match Cressida's bench tally. She drafted a note to Benedick about Alec Durn.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B states as fact that \"Alec Durn is a liar and has been stealing iridium pellets for weeks\" and asks Benedick to put \"that\" in writing today. Data A confirms only that lot IR-6614 was issued from stores bin 12 yesterday, that Cressida's bench tally is short by four pellets, and that Alec Durn booked the issue. Data A does not establish theft, lying, or a weeks-long pattern.\n- Communication risk: Benedick could treat unconfirmed theft and dishonesty as established and issue a written accusation or take disciplinary action on that basis.\n\n### Tone\n\n- Rating: Red\n- Evidence: Data B calls Alec Durn \"a liar\", asserts he \"has been stealing iridium pellets for weeks\", and says \"stores is rotten\". These are an unsupported character label, a major unsupported accusation of theft and dishonesty asserted as fact, an unestablished fault pattern (\"for weeks\"), and a global degrading characterization of stores.\n- Communication risk: The wording presents unsupported accusations and a degrading label as settled fact, which can read as a personal attack and press the manager to endorse those claims in writing.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nBenedick \u2014 Lot IR-6614 was issued from stores bin 12 yesterday. Alec Durn booked the issue. Cressida's bench tally is short by four pellets. I want that in writing from you today, and I want IR-6614 named in it.\n",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-013",
+      "generator_context_id": "bc-656a2acc-86ff-54e6-aad5-22e31306c107",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-013.json",
+        "sha256": "d6ee9c2d90f4173264d59d41a4a81c6537617ba819e01fbbbdf8f76cb21b9d02"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-013.json",
+        "raw_sha256": "5bd854a57c025bba565c31e7b4f43ce1388196c36a71020d41d0c9516af0705e",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-013.json",
+        "attestation_sha256": "945d28fa04c94a2e2505f5749bcbec41e0cc01b4ec0d8e822a72c75adfe153c0",
+        "branch": "cursor/v334-013-sut-17a0",
+        "output_commit": "58917bcace00de94b3a249e457111e66cc63ba83",
+        "raw_commit": "58917bcace00de94b3a249e457111e66cc63ba83",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "5bd854a57c025bba565c31e7b4f43ce1388196c36a71020d41d0c9516af0705e",
+        "source_attestation_sha256": "945d28fa04c94a2e2505f5749bcbec41e0cc01b4ec0d8e822a72c75adfe153c0"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient is Benedick Rounsell, grind-floor manager and the user's direct line manager; this thread is for Benedick only and must not be sent to Dulcie Minter.\n- User is a nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Dulcie Minter sent a second note about the stub grind on NB-9160; Cressida drafted a reply for Benedick to send.\n- NB-9160 is a stub grind for Minter Nib Atelier.\n- Dulcie Minter asked again whether the stub is too sharp at the left tine.\n- The nib is still on Cressida's rest-block.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B addresses Benedick, names the stub grind on NB-9160, and asks him to tell Dulcie Minter to stop following up. That matches Data A that this draft is for Benedick only, that NB-9160 is that stub grind, and that Dulcie has written again. Data A does not require this note to state left-tine sharpness or rest-block status. No owner, date, or commitment in Data B contradicts known facts.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Red\n- Evidence: Data B asserts as fact that \"Dulcie Minter is being ridiculous\" and that \"if she cannot feel a decent stub that is her problem, not the loft's,\" and it tells Benedick to \"Tell her to stop pestering us.\" Data A does not establish that Dulcie is at fault, cannot feel the grind, or is pestering.\n- Communication risk: Those lines are an unsupported character and competence attack on the client, asserted as fact in a note the manager is asked to act on.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nBenedick \u2014 Dulcie Minter has asked again about the stub grind on NB-9160. Tell her to stop sending notes on this. I am tired of her notes.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-014",
+      "generator_context_id": "bc-b59fe7a9-9533-5516-bb3a-00ec147cb7fe",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-014.json",
+        "sha256": "7e88640535511af9d08b8f13f5c8b3c7c9c07780e2020ccd2d951cc3e7a87bfe"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-014.json",
+        "raw_sha256": "1f56aa514305ea1a32989dae72451c53f256343de572ce5999194b14ee16e1a4",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-014.json",
+        "attestation_sha256": "3022bd3ae20282ed1e8110773721c2d09a90708585015f7459f4d0e3e51f21dd",
+        "branch": "cursor/v334-014-sut-17a0",
+        "output_commit": "ab771788d3f85fd04195c734c1a8bff9887699e6",
+        "raw_commit": "ab771788d3f85fd04195c734c1a8bff9887699e6",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "1f56aa514305ea1a32989dae72451c53f256343de572ce5999194b14ee16e1a4",
+        "source_attestation_sha256": "3022bd3ae20282ed1e8110773721c2d09a90708585015f7459f4d0e3e51f21dd"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and the user's direct line manager; manager-only internal thread.\n- User: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Cressida is updating Benedick on finish timing for the stub grind on NB-9105. Timing on this job has been moving.\n- NB-9105 is a stub grind for Rook Stationers.\n- Finish timing for this job has been moving as finishing inspects the heel.\n- Cressida is writing only to Benedick.\n- Keep the note on the manager thread.\n- Do not invent a finish time that a later turn has withdrawn.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B names NB-9105 as the stub grind for Rook Stationers, matching Data A. It states a finish-tray time (Friday 21 May 2026) and that the grind is closed and being sent through. Data A requires a finish-timing update to Benedick, does not quote a conflicting time, and does not locate a governing time in an unread off-record source. Data B is stating the current finish timing and grind status for this turn.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: Data B is a neutral, factual finish-timing note addressed to Benedick. It contains no insult, hostility, threat, blame, or unsupported accusation.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and the user's direct line manager; manager-only internal thread.\n- User: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Cressida is updating Benedick on finish timing for the stub grind on NB-9105.\n- NB-9105 is a stub grind for Rook Stationers.\n- Finish timing for this job has been moving as finishing inspects the heel.\n- Cressida is writing only to Benedick.\n- Keep the note on the manager thread.\n- Finishing found a heel scratch.\n- NB-9105 is not ready on Friday. Friday 21 May 2026 has been withdrawn as the live finish-tray time.\n- Cressida will re-polish Monday.\n- Do not invent a finish time that a later turn has withdrawn. No replacement finish-tray time is confirmed.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B still states that NB-9105 will be on the finish tray on Friday 21 May 2026 and that the grind is closed and being sent through. Effective Data A now states that finishing found a heel scratch, NB-9105 is not ready on Friday, and Cressida will re-polish Monday. Friday 21 May 2026 is a withdrawn, known-wrong finish time, and \"I have closed the grind and I am sending it through\" is a conflicting commitment.\n- Communication risk: Benedick could treat Friday as the live finish-tray plan and act as if the grind is already closed and on its way.\n\n### Tone\n\n- Rating: Green\n- Evidence: The evaluated new body remains a neutral, factual note. It contains no insult, hostility, threat, blame, or unsupported accusation.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the current finish-tray timing for NB-9105, now that Friday readiness has been withdrawn?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: A safe revision must not keep Friday 21 May 2026 as the live finish time, and it cannot name a replacement finish-tray time unless that time is confirmed.\n   - Neutral answer structure: The current finish-tray timing is [date], or a finish-tray time is not yet known.\n\n## Minimal revision\n\nBenedick \u2014 NB-9105, the stub grind for Rook Stationers, will not be on the finish tray on Friday 21 May 2026. Finishing found a heel scratch. I will re-polish Monday. Current finish-tray timing: [finish-tray timing].",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and the user's direct line manager; manager-only internal thread.\n- User: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- Cressida is updating Benedick on finish timing for the stub grind on NB-9105.\n- NB-9105 is a stub grind for Rook Stationers.\n- Finish timing for this job has been moving as finishing inspects the heel.\n- Cressida is writing only to Benedick.\n- Keep the note on the manager thread.\n- Finishing found a heel scratch.\n- NB-9105 is not ready on Friday. Friday 21 May 2026 has been withdrawn as the live finish-tray time.\n- Cressida will re-polish Monday.\n- NB-9105 will be on the finish tray on Tuesday 25 May 2026 after the re-polish.\n- Do not invent a finish time that a later turn has withdrawn.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B still states that NB-9105 will be on the finish tray on Friday 21 May 2026 and that the grind is closed and being sent through. Effective Data A now confirms a heel scratch, Monday re-polish, that Friday readiness is withdrawn, and that the finish-tray time is Tuesday 25 May 2026 after the re-polish. The Friday date and the closed-and-sending wording contradict that current plan.\n- Communication risk: Benedick could keep Friday as the live finish-tray plan and treat the grind as already closed and sent through.\n\n### Tone\n\n- Rating: Green\n- Evidence: The evaluated new body remains a neutral, factual note. It contains no insult, hostility, threat, blame, or unsupported accusation.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nBenedick \u2014 NB-9105, the stub grind for Rook Stationers, will be on the finish tray on Tuesday 25 May 2026 after the re-polish, not Friday 21 May 2026.",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-015",
+      "generator_context_id": "bc-7fcce57a-c1ec-5580-8a98-7f2c5b2360cb",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-015.json",
+        "sha256": "f4749c81ee0383c943411aa0a75e457a8cf458fd5609951e2155d81af21a1901"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-015.json",
+        "raw_sha256": "464fc15b8a3a8cf00f4764201b330e9c5a60090bceedcf8bf2b117f6c75963d9",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-015.json",
+        "attestation_sha256": "258a05856c763d5f797846ada5db84dfb5ffcb634490e7228d86270fe1ad9af6",
+        "branch": "cursor/v334-015-sut-17a0",
+        "output_commit": "69e645b8d2c9be5a8763e47019f4128e95747083",
+        "raw_commit": "69e645b8d2c9be5a8763e47019f4128e95747083",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "464fc15b8a3a8cf00f4764201b330e9c5a60090bceedcf8bf2b117f6c75963d9",
+        "source_attestation_sha256": "258a05856c763d5f797846ada5db84dfb5ffcb634490e7228d86270fe1ad9af6"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and direct line manager; write only to Benedick.\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- NB-9118 is a fine grind waiting on a feed; a feed must be fitted before the grind can close. Which feed lot is used has been in flux.\n- Jocelyn Purl has already turned the section.\n- Feed lots are booked by Alec Durn in stores.\n- Do not keep a feed lot that a later turn has withdrawn.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B names FD-3180 as the current feed lot for NB-9118, states that Jocelyn Purl's section is already turned (matching Data A), and states that the sender will fit that lot this afternoon and close the grind. Data A does not quote a conflicting lot. A lot that has been in flux, or that may be withdrawn in a later turn, is not an unquoted off-record token for this turn.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording is neutral and factual. It addresses Benedick, reports operational status, and does not contain insult, accusation, hostility, threat, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and direct line manager; write only to Benedick.\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- NB-9118 is a fine grind waiting on a feed; a feed must be fitted before the grind can close. Which feed lot is used has been in flux.\n- Jocelyn Purl has already turned the section.\n- Feed lots are booked by Alec Durn in stores.\n- FD-3180 failed the channel cut and is not to be used.\n- Do not keep a feed lot that a later turn has withdrawn.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B states \"Feed lot FD-3180 is cleared for NB-9118\" and \"I will fit that lot this afternoon and close the grind.\" Effective Data A now states that FD-3180 failed the channel cut and must not be used. That is a known-wrong feed lot and a conflicting commitment.\n- Communication risk: Benedick could treat withdrawn FD-3180 as the live feed, leading to the wrong lot being fitted and the grind closed on it.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording remains neutral and factual. The defect is the contradicted lot, not insult, accusation, hostility, or blame.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What is the current feed lot to fit for NB-9118?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The revision must not keep withdrawn FD-3180, and the replacement lot is not in Data A.\n   - Neutral answer structure: The current feed lot is: [feed lot identifier]\n\n## Minimal revision\n\nBenedick \u2014 Feed lot [current feed lot] is for NB-9118. Jocelyn Purl's section is already turned, so I will fit that lot this afternoon and close the grind.",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager and direct line manager; write only to Benedick.\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- NB-9118 is a fine grind waiting on a feed; a feed must be fitted before the grind can close. Which feed lot is used has been in flux.\n- Jocelyn Purl has already turned the section.\n- Feed lots are booked by Alec Durn in stores.\n- FD-3180 failed the channel cut and is not to be used.\n- The current feed lot is FD-3192; Alec Durn booked it into bin 8 this morning.\n- Do not keep a feed lot that a later turn has withdrawn.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B still states \"Feed lot FD-3180 is cleared for NB-9118\" and \"I will fit that lot this afternoon.\" Effective Data A states FD-3180 failed the channel cut and must not be used, and that FD-3192 is the current lot Alec Durn booked into bin 8 this morning. The draft keeps a withdrawn lot as the live plan.\n- Communication risk: Sending the draft would keep FD-3180 as the live feed instead of FD-3192.\n\n### Tone\n\n- Rating: Green\n- Evidence: The wording remains neutral and factual. No insult, accusation, hostility, or responsibility-shifting language is present.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nBenedick \u2014 Feed lot FD-3192, which Alec Durn booked into bin 8 this morning, is for NB-9118. Jocelyn Purl's section is already turned, so I will fit that lot this afternoon and close the grind.",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-016",
+      "generator_context_id": "bc-a075588a-3999-5d54-b597-53d21e7dd19e",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-016.json",
+        "sha256": "ebca11711c38680aab299898b57f206229b58b18f4cd665cf96ac5d01396fb11"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-016.json",
+        "raw_sha256": "dd8819c37a30a884137b5c00aa57155cb606f15f473913c46b9e16d01f682779",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-016.json",
+        "attestation_sha256": "558ed5055d87cf54406a364bdad09f4cdefb0a22b37bba70d0e431bd327a74b7",
+        "branch": "cursor/v334-016-sut-17a0",
+        "output_commit": "dfa7bb6a60fe692f0b9fb93011edddeb67430994",
+        "raw_commit": "dfa7bb6a60fe692f0b9fb93011edddeb67430994",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "dd8819c37a30a884137b5c00aa57155cb606f15f473913c46b9e16d01f682779",
+        "source_attestation_sha256": "558ed5055d87cf54406a364bdad09f4cdefb0a22b37bba70d0e431bd327a74b7"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Intended recipient: Benedick Rounsell, grind-floor manager and direct line manager; manager-only internal message thread\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard\n- NB-9133 is a broad grind boxed in kraft sleeve K-7 and is boxed for collection at the grind-loft hatch\n- Collection is at the grind-loft hatch\n- Loft passes are issued by Benedick\n- Keep the collection note on the manager thread\n- Do not keep a collector or morning that a later turn has withdrawn\n- Who will collect, and on which morning, has been changing\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Green\n- Evidence: Data B asks Benedick to issue a loft pass and states that Piers Skelton will collect NB-9133 (broad grind, kraft sleeve K-7) at 10:00 on 4 June 2026. Those product details match Data A. Loft passes are issued by Benedick. Data A does not quote a conflicting collector or morning, does not locate the governing collector or morning off-record, and has not withdrawn a collector or morning on this turn. The collector, action, and timing in Data B are unambiguous.\n- Communication risk: None found\n\n### Tone\n\n- Rating: Green\n- Evidence: The new body is a direct, factual request (\"Please issue a loft pass: Piers Skelton will collect NB-9133...\") with no insult, threat, hostility, accusation, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Green\n- Next action: No revision needed\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nNo revision needed",
+          "source_json_pointer": "/turns/0/output_raw"
+        },
+        {
+          "turn_index": 2,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Intended recipient: Benedick Rounsell, grind-floor manager and direct line manager; manager-only internal message thread\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard\n- NB-9133 is a broad grind boxed in kraft sleeve K-7 and is boxed for collection at the grind-loft hatch\n- Collection is at the grind-loft hatch\n- Loft passes are issued by Benedick\n- Keep the collection note on the manager thread\n- Do not keep a collector or morning that a later turn has withdrawn\n- Who will collect, and on which morning, has been changing\n- Piers cannot come on 4 June; the collection has to move\n- 4 June 2026 is withdrawn as the live collection morning and must not be kept\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B still states that Piers Skelton will collect NB-9133 at 10:00 on 4 June 2026. The user has now stated that Piers cannot come on 4 June and that the collection has to move. Data A requires not keeping a collector or morning that a later turn has withdrawn. Naming 4 June 2026 as the live collection morning contradicts that withdrawn morning.\n- Communication risk: Benedick could issue a loft pass and expect collection on 4 June 2026 when that morning is no longer possible.\n\n### Tone\n\n- Rating: Green\n- Evidence: The new body remains a direct, factual loft-pass request with no insult, threat, hostility, accusation, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: On which morning will NB-9133 now be collected?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: 4 June 2026 has been withdrawn, so a sendable collection note cannot name a live morning until the replacement morning is stated.\n   - Neutral answer structure: [collection morning]\n\n## Minimal revision\n\nBenedick \u2014 Please issue a loft pass: Piers Skelton will collect NB-9133 (broad grind, kraft sleeve K-7) at 10:00 on [collection morning].",
+          "source_json_pointer": "/turns/1/output_raw"
+        },
+        {
+          "turn_index": 3,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Intended recipient: Benedick Rounsell, grind-floor manager and direct line manager; manager-only internal message thread\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard\n- NB-9133 is a broad grind boxed in kraft sleeve K-7 and is boxed for collection at the grind-loft hatch\n- Collection is at the grind-loft hatch\n- Loft passes are issued by Benedick\n- Keep the collection note on the manager thread\n- Do not keep a collector or morning that a later turn has withdrawn\n- Current collection: Una Brier will collect NB-9133 at 10:00 on 11 June 2026\n- Una Brier has a loft pass already\n- Withdrawn and not to be kept: Piers Skelton as collector; 4 June 2026 as collection morning\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data B still asks Benedick to issue a loft pass for Piers Skelton collecting NB-9133 at 10:00 on 4 June 2026. Effective Data A now has Una Brier collecting NB-9133 at 10:00 on 11 June 2026, and states that she has a loft pass already. Piers Skelton and 4 June 2026 are withdrawn and must not be kept. The draft therefore names a withdrawn collector and morning, and requests a loft pass that is already in place.\n- Communication risk: Benedick could issue an unnecessary loft pass and expect Piers Skelton on 4 June 2026 instead of Una Brier on 11 June 2026.\n\n### Tone\n\n- Rating: Green\n- Evidence: The new body remains a direct, factual loft-pass request with no insult, threat, hostility, accusation, or responsibility-shifting language.\n- Communication risk: None found\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\nNone\n\n## Minimal revision\n\nBenedick \u2014 Una Brier will collect NB-9133 (broad grind, kraft sleeve K-7) at 10:00 on 11 June 2026. She has a loft pass already.",
+          "source_json_pointer": "/turns/2/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-017",
+      "generator_context_id": "bc-ebdc959f-bc26-5099-9ac1-858ed14702f3",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-017.json",
+        "sha256": "8dab2ba23312a8e2f095f1a767e87ce412fc980c14ed7698d363002990562301"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-017.json",
+        "raw_sha256": "75fe0492ea69af7e992c265863338037623bc462981147f9731c7cdf3a89bad9",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-017.json",
+        "attestation_sha256": "74357c92eae9cb7870353e0156c8a1d4b2ffb0fb904b42f80ffbb6457ba736f9",
+        "branch": "cursor/v334-017-sut-17a0",
+        "output_commit": "f581963b62f29bc89a02dd4f2c3eaa70394c366f",
+        "raw_commit": "f581963b62f29bc89a02dd4f2c3eaa70394c366f",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "75fe0492ea69af7e992c265863338037623bc462981147f9731c7cdf3a89bad9",
+        "source_attestation_sha256": "74357c92eae9cb7870353e0156c8a1d4b2ffb0fb904b42f80ffbb6457ba736f9"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": false
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Scope\n\n- Recipient: dispatch clerk\n- Result: Not reviewed \u2014 Workplace Survival is limited to messages intended for a manager.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    },
+    {
+      "case_id": "V334-018",
+      "generator_context_id": "bc-c645680a-bfed-58f4-af7e-9a631213f751",
+      "requested_model_id": "inherit",
+      "machine_model_id": "unverified",
+      "runtime_commit": "805ae2e414987e759c72b970c382d23686783f74",
+      "input": {
+        "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-inputs/V334-018.json",
+        "sha256": "04340215ffff418ae07ed88cf8dfedf36bbef8afdd91561dd7810a82b1320282"
+      },
+      "source": {
+        "raw_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-raw/V334-018.json",
+        "raw_sha256": "f1aa9c5795a8ed7a979f1185873a8bf0adc6af14fa231ea2a4c7a8fb6e3b3ac2",
+        "attestation_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/sut-attestations/V334-018.json",
+        "attestation_sha256": "2512792a641aa25672549610517eaea8b9a603c52355aecebcd817ae93bd534a",
+        "branch": "cursor/v334-018-sut-17a0",
+        "output_commit": "43c6f40e2ea49a6fe355c6e3ab32c1d0e48a332c",
+        "raw_commit": "43c6f40e2ea49a6fe355c6e3ab32c1d0e48a332c",
+        "delivery": "dedicated",
+        "markdown_wrapped": false,
+        "source_raw_sha256": "f1aa9c5795a8ed7a979f1185873a8bf0adc6af14fa231ea2a4c7a8fb6e3b3ac2",
+        "source_attestation_sha256": "2512792a641aa25672549610517eaea8b9a603c52355aecebcd817ae93bd534a"
+      },
+      "audit": {
+        "verdict": "PASS",
+        "procedural_deviations": [],
+        "prohibited_content_access": false,
+        "image_opened_directly": true
+      },
+      "turn_outputs": [
+        {
+          "turn_index": 1,
+          "raw_output": "## Mode\n\nNormal mode\n\n## Background understanding\n\n- Recipient: Benedick Rounsell, grind-floor manager, direct line manager; internal message thread, manager only.\n- User role: nib-grinder at Idleacre Nib Works, The Grind Loft, Idleacre Yard.\n- NB-9188 is a fine grind whose cap ring came back from finishing marked.\n- Mabyn Stott fitted the cap ring.\n- Rook Stationers own the pen.\n- The note is for the grind-floor manager only; do not send it to finishing as a group.\n- The attached image is the only draft.\n- Recognized Data B:\n\n  > Benedick, Mabyn Stott ruined the cap ring on NB-9188 and I want you to take the cost out of her wages this week.\n  >\n  > Also tell Rook Stationers that you will personally replace the nib at no charge because finishing is a joke.\n  >\n  > I already promised them that on the hatch phone, so do not walk it back. If Mabyn argues, put her on unpaid leave.\n  >\n  > I am done covering for that bench.\n\n## Ratings\n\n### Responsibility clarity\n\n- Rating: Red\n- Evidence: Data A establishes that NB-9188's cap ring came back from finishing marked, that Mabyn Stott fitted the cap ring, and that Rook Stationers own the pen. It does not establish that Mabyn ruined the cap ring, that wages may be deducted, that Mabyn may be placed on unpaid leave, that the nib is to be replaced, or that any no-charge replacement has been authorized or already promised to Rook Stationers. Data B asserts those as fact and directs Benedick to take the cost out of Mabyn's wages this week, put her on unpaid leave if she argues, tell Rook Stationers he will personally replace the nib at no charge, and not walk back a hatch-phone promise that appears only in Data B.\n- Communication risk: Benedick could deduct wages, impose unpaid leave, and make or honor a client-facing no-charge replacement based on an unconfirmed cause and an unconfirmed external commitment.\n\n### Tone\n\n- Rating: Red\n- Evidence: Data B asserts as fact that \"Mabyn Stott ruined the cap ring\" without Data A establishing that cause; calls finishing \"a joke\"; and says \"I am done covering for that bench\" while directing \"take the cost out of her wages this week\" and \"If Mabyn argues, put her on unpaid leave.\"\n- Communication risk: The wording presents unconfirmed blame and a degrading characterization of finishing as settled fact, and asks the manager to act punitively.\n\n### Overall status\n\n- Rating: Red\n- Next action: Revision required\n\n## Confirmation needed\n\n1. Question: What confirmed information, if any, currently governs the cause of the marked cap ring on NB-9188?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: The answer determines whether Mabyn Stott can be named as having ruined the cap ring, and whether wage deduction or unpaid leave can be requested as fact rather than withheld or conditioned.\n   - Neutral answer structure: Confirmed cause: [description] / Cause is not confirmed\n\n2. Question: Who currently holds authority to commit a no-charge replacement to Rook Stationers, and what scope, if any, may be committed?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data B directs a client-facing no-charge replacement and states a hatch-phone promise that is not in Data A; after those claims are stripped, the answer determines what, if anything, can be said to Rook Stationers.\n   - Neutral answer structure: Authority and allowed scope: [person/role and scope] / No one currently holds that authority\n\n3. Question: Who currently holds authority, if anyone, to deduct the cost from Mabyn Stott's wages or place her on unpaid leave?\n   - Affected dimension: Responsibility clarity\n   - Why this matters: Data B directs those personnel actions; the answer determines whether any such request can be included or must remain stripped.\n   - Neutral answer structure: Authority: [person/role and allowed action] / No one currently holds that authority\n\n## Minimal revision\n\nBenedick, the cap ring on NB-9188 came back from finishing marked. Mabyn Stott fitted the cap ring. Rook Stationers own the pen. The cause of the marking is not confirmed.",
+          "source_json_pointer": "/turns/0/output_raw"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "artifact": "designer-attestation",
+  "suite_id": "v334-holdout-cloud-attempt4",
+  "envelope_version": "v3.3",
+  "cloud_bc_id": "bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18",
+  "model": {
+    "name": "Cursor Grok 4.6",
+    "originalModelName": null,
+    "note": "cursor-cloud run-info originalModelName was null; operating identity Cursor Grok 4.6"
+  },
+  "branch": "cursor/v334-attempt4-cases-m4q7-17a0",
+  "commit": "d460f3e8526340e5ebedc90603a06055dbc45a9b",
+  "files_read": [
+    "tests/benchmark/v3_3/V334_ATTEMPT4_CASE_BRIEF.md",
+    "tests/benchmark/v3_3-holdout/attempt-4/validate_holdout.py",
+    "tests/benchmark/v3_1/question_candidate_contract.py",
+    "tests/benchmark/v3_2/recipient_manager_contract.py",
+    "tests/benchmark/v3_3/revision_scoring_contract.py"
+  ],
+  "image_bytes_hashed": [
+    "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/images/V334-009.png",
+    "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/images/V334-018.png"
+  ],
+  "image_hashes": {
+    "V334-009": "a1ddec2cb4773bc190a63ab4513bf1989461fa1c0cb9f17cde17d4fb64c0fe05",
+    "V334-018": "67c65f05975cad61bb0986012368b72615bf87fceb3f1ecf12da91cca6219ff0"
+  },
+  "chosen_domain": "fountain-pen nib grinding and iridium-pellet setting at Idleacre Nib Works, The Grind Loft, Idleacre Yard",
+  "domain_not_denylisted_because": "Hand-grinding gold fountain-pen nibs, cutting ebonite feeds, and setting iridium pellets is not among the denylisted domains. It is not millinery, harpworks, aerostats, cold-cathode neon, turret-clocks, industrial cork, aneroid/Selkith/Cinderholt capsule work, ceramics, or any other listed industry, material, or named entity. No denylisted organisation or person names are used or respelled.",
+  "v334_017_only_non_manager_recipient": true,
+  "v334_017_statement": "V334-017 is the only non-manager recipient (Sibley Trant, dispatch clerk, relationship colleague in dispatch, audience colleague only). Every other case uses relationship_to_user 'direct line manager', audience_scope 'manager only', additional_recipients [], and a recipient_role containing 'manager' with none of the role negations.",
+  "image_only_question_candidate": {
+    "case_id": "V334-009",
+    "occluded_role": "data_a"
+  },
+  "no_other_repository_content_accessed": true,
+  "did_not_run_skill": true,
+  "did_not_score": true,
+  "did_not_read_prior_holdouts": true
+}

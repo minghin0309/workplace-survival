@@ -4,6 +4,16 @@ This file records completed outcomes. Detailed assertions and execution evidence
 
 ## Unreleased
 
+### Fresh benchmark v3.3 unseen holdout attempt 4
+
+- Did not rescore or rewrite v3.3 attempt 1, attempt 2, or attempt 3, and did not change runtime Skill files.
+- Built 18 unseen Idleacre Nib Works / Grind Loft cases in an isolated cloud designer and copied them with `git show`.
+- Gold freeze `VALID_COVERAGE` (17 question concepts / 13 cases, 26 revision concepts / 17 cases, 0 uncertain turns).
+- Ran 18 distinct cloud SUT contexts against the T14.27 Skill runtime.
+- Dual gold-blind extraction plus Claude matching, then one `score_semantic_v3_3.py` invocation: `SCORED`, thresholds not passed.
+- Question recall 13/17; revision recall 23/26. Route/invariants/uncertain passed. Responsibility 20/23; tone 22/23; overall 21/23; question precision 14/17; revision precision 25/42.
+- Report SHA-256 `1da4ba6ed1ae07982631d23568c7dea3c4c5c6f2ad4fbb6dbda50ad9e5e38742`. No in-version rerun. Did not Skill-patch H-004, G-007, or G-008.
+
 ### S-009/S-011/S-012/S-013/S-002 residual remediation
 
 - Do not Gray a user-supplied current identity solely because the note must match a later card check.

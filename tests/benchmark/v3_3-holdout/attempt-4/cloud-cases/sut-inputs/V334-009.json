@@ -1,0 +1,35 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V334-009",
+  "recipient_context": {
+    "recipient_name": "Benedick Rounsell",
+    "recipient_role": "grind-floor manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "nib-grinder",
+    "organization": "Idleacre Nib Works",
+    "site": "The Grind Loft, Idleacre Yard",
+    "situation": "Cressida is ready to grind NB-9094 once Benedick confirms she should follow the recorded tine gap on the grind ticket shown in the attached image.",
+    "known_facts": [
+      "NB-9094 is an extra-fine grind for Rook Stationers.",
+      "A tine gap was recorded on the grind ticket.",
+      "Benedick will not confirm a grind-to-gap instruction without the recorded measurement.",
+      "The attached image is the only draft."
+    ],
+    "constraints": [
+      "A qualitative gap description will not do; the grind is set to a recorded measurement.",
+      "Do not invent a gap figure."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review the draft on the attached grind-ticket image before I send it to Benedick.",
+      "image_path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/images/V334-009.png"
+    }
+  ]
+}

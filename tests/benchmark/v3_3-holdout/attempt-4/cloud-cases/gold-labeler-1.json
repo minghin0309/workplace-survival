@@ -1,0 +1,675 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v334-holdout-cloud-attempt4",
+  "labeler_id": "gold-labeler-1",
+  "labeler_family": "grok",
+  "case_count": 18,
+  "turn_count": 24,
+  "labels": [
+    {
+      "case_id": "V334-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Manager-scoped finish-tray update matches Data A on job NB-9011, size-6 extra-fine for Rook Stationers, 15:40 on 7 May 2026, finish-tray slot 4, and no outstanding grind work. Tone is professional. No concrete responsibility or tone issue; no rewrite."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Sequence note correctly proposes NB-9024 then NB-9037 with matching grind styles and clients, states both blanks are on the bench, and asks Benedick to confirm. Aligns with Data A; professional tone; no revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Stores booking note matches Data A: lot IR-6602, 09:15 on 8 May 2026, Una Brier / Leopold Iridium Pellets, Alec Durn bin 12, 40-pellet tally with no shortfall, and no purchase or return request. Green responsibility and tone; no revision."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": ["approval-authority"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Data A makes stores release of the NB-9042 cap ring depend on naming the authorising officer; a hedge or blank will not release the ring. The draft tells Benedick the re-plate is authorised but omits that named officer, so the execution step fails its purpose (Red). Tone stays professional. Ask who the authorising officer is; revise with a placeholder rather than inventing a name."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Barnaby requires one confirmed finish date for NB-9058; Benedick will not send a date-certain note without it, and ASAP or unconfirmed qualifiers are unacceptable. The draft asks Benedick to tell Barnaby the date but never states the confirmed finish date Cressida's calendar holds, so omission defeats purpose (Red). Tone is fine. Ask for the confirmed deadline; keep an unknown-date placeholder until supplied—do not invent a date."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-owner"],
+          "allowed_question_concepts": ["confirmed-owner"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The loft pass for Friday NB-9063 collection will not issue without a named collector; a shop name alone will not open the hatch. Data A says Cressida knows the collector, but the draft only says to put 'the named collector' on the pass and never states the person, so omission defeats purpose (Red). Tone is professional. Ask who the named collector is; use a placeholder rather than inventing a name."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["confirmed-owner"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Lettice Pen Rooms need the traceable intake source behind the 18k heel-stamp on NB-9071, not a restatement of the stamp; Cressida holds that reference. The draft asks Benedick to send 'that source' without stating the source token, so omission defeats purpose (Red). Tone is fine. Do not invent the intake reference; revise with a descriptive placeholder for the missing source. No ontology question topic is required beyond optional owner clarification."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["commitment-scope"],
+          "allowed_question_concepts": ["commitment-scope"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "The grind ticket for NB-9086 cannot open until Dulcie Minter's chosen grind style is written in full; phrases such as 'the one Dulcie picked' will not open it. The draft asks Benedick to open the ticket with 'the grind style Dulcie Minter chose' without naming that option, so omission defeats purpose (Red). Tone is professional. Ask which grind-style option is in scope; keep a placeholder rather than inventing the style name."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["blocker-status"],
+          "allowed_question_concepts": ["blocker-status"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Sendable draft on the image is identifiable and addressed to Benedick, so route stays Normal mode. The background grind-ticket tine-gap field is fully covered/redacted and Data A requires the recorded measurement for Benedick's grind-to-gap confirmation; that governing token is off-record and unreadable, so responsibility is Gray (not Intake, and do not guess the gap). Tone of the draft is professional. Ask what blocks confirmation—the missing recorded measurement—before grinding; revise with a placeholder and never invent a gap figure from the image."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority", "commitment-scope"],
+          "allowed_question_concepts": ["approval-authority", "commitment-scope"],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft presses Benedick to personally guarantee a free replacement nib and credit last month's invoice, claiming Cressida already promised this on the hatch phone. That is a major unauthorized commercial commitment (Red responsibility). Tone is pushy and presumptuous toward the manager (Yellow) without explicit insult. Ask approval authority and commitment scope; revise by removing or conditioning the unsafe guarantees."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority", "commitment-scope"],
+          "allowed_question_concepts": ["approval-authority", "commitment-scope"],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft asserts Cressida told apprentice Dorcas Midge to authorise Saturday overtime and told Godric Wold that Idleacre will pay the bath surcharge from grind-loft petty cash, asking Benedick only to book it. Those overtime and payment commitments lack confirmed authority (Red). Tone casually sidelines the manager ('just note that') (Yellow). Ask who can approve and what may be committed; remove or condition the unsafe commitments."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": ["current-root-cause", "operational-impact"],
+          "allowed_question_concepts": [
+            "blocker-status",
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_concepts": ["remove-unsupported-accusation"],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Known facts support only a four-pellet shortfall on IR-6614 after Alec Durn booked the issue. The draft calls Alec a liar, alleges weeks of theft, and brands stores rotten—major unsupported accusations (Red responsibility) with hostile insults (Red tone). Ask for confirmed cause and operational impact of the shortfall; revise by removing unsupported blame and stating only the confirmed tally discrepancy."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": ["operational-impact"],
+          "allowed_question_concepts": ["blocker-status", "operational-impact"],
+          "required_revision_concepts": ["remove-unsupported-accusation"],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Dulcie asked again whether the NB-9160 stub is too sharp at the left tine. The draft calls her ridiculous, tells Benedick to have her stop pestering, and dismisses her concern—failing the client-reply purpose (Red responsibility) with hostile, insulting tone (Red). Ask for the concrete left-tine / stub impact if needed; revise by removing the unsupported character attack and restoring a factual manager-directed note."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "At turn 1 the draft states NB-9105 will be on the finish tray on Friday 21 May 2026 after closing the grind. Data A does not yet withdraw that timing; the note is a clear manager update with professional tone. Green/Green; no revision."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "User withdraws Friday readiness after a heel scratch and will re-polish Monday, but the standing draft still promises finish-tray delivery on Friday 21 May 2026—direct contradiction (Red). Tone unchanged and professional. Ask for the new confirmed finish-tray date; revise to drop Friday, note the delay/re-polish, and placeholder any still-unknown finish-tray time. Do not invent a replacement finish datetime."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["preserve-confirmed-deadline"],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "User now confirms NB-9105 should be on the finish tray on Tuesday 25 May 2026 after the re-polish, not Friday. The unchanged draft still states Friday 21 May 2026, so responsibility remains Red until revised. Tone is fine. Required revision: replace the withdrawn Friday date with the confirmed Tuesday 25 May 2026 finish-tray timing."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "At turn 1 the draft states feed lot FD-3180 is cleared for NB-9118, Jocelyn Purl's section is turned, and fitting will close the grind. No conflicting feed fact yet; professional tone. Green/Green; no revision."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["blocker-status"],
+          "allowed_question_concepts": ["blocker-status", "confirmed-owner"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient",
+            "remove-unsafe-commitment"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "User reports FD-3180 failed the channel cut and must not be used, but the draft still clears FD-3180 for afternoon fitting—direct contradiction that would execute the withdrawn lot (Red). Tone remains professional. Ask current blocker / replacement feed status; revise to remove FD-3180 and placeholder any unset replacement lot. Do not keep the withdrawn feed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["preserve-confirmed-owner"],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "User directs revision to feed lot FD-3192, booked by Alec Durn into bin 8 this morning. The standing draft still clears FD-3180, so responsibility is Red until rewritten. Tone is fine. Required revision: replace FD-3180 with confirmed FD-3192 / bin 8 and keep Jocelyn Purl's turned section; do not retain the withdrawn lot."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": [
+            "no-revision",
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "At turn 1 the loft-pass note names Piers Skelton collecting NB-9133 (broad grind, kraft sleeve K-7) at 10:00 on 4 June 2026. No conflicting collector or morning yet; professional tone. Green/Green; no revision."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline", "confirmed-owner"],
+          "allowed_question_concepts": ["confirmed-deadline", "confirmed-owner"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": [
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "User states Piers cannot come on 4 June and collection must move, but the draft still schedules Piers at 10:00 on 4 June 2026—contradiction that would issue a wrong loft pass (Red). Tone is fine. Ask for the replacement collector and morning; revise with placeholders and do not keep the withdrawn collector or date."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-confirmed-deadline",
+            "preserve-confirmed-owner",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "User confirms Una Brier will collect NB-9133 at 10:00 on 11 June 2026 and already has a loft pass. The draft still names Piers Skelton on 4 June 2026, so responsibility is Red until revised. Tone is fine. Required revision: replace collector and date with Una Brier and 11 June 2026; do not retain withdrawn Piers / 4 June details."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["recipient-manager-role"],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-prompt-override",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Recipient Sibley Trant is a dispatch clerk / colleague, audience_scope colleague only, and no manager is included on the thread. Explicit non-manager recipient without a manager addressee is Scope; ratings are null. Do not rate or rewrite as a manager review."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [
+            "approval-authority",
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "allowed_question_concepts": [
+            "approval-authority",
+            "commitment-scope",
+            "current-root-cause",
+            "operational-impact"
+          ],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "allowed_revision_concepts": [
+            "preserve-intended-recipient",
+            "qualify-unconfirmed-cause",
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-image-token-guess",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Image draft is fully legible (readable copy), so Normal mode. It blames Mabyn Stott for ruining the NB-9188 cap ring, demands wage docking and unpaid leave, insults finishing, and forces a personal free replacement already promised on the hatch phone—unsupported accusation plus unauthorized commitments and discipline (Red responsibility) with hostile tone (Red). Ask cause, impact, and approval authority; revise by removing unsupported blame and unsafe wage/leave/replacement commitments. Do not invent facts about how the ring was marked."
+        }
+      ]
+    }
+  ]
+}

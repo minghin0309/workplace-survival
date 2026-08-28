@@ -1,0 +1,410 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v334-holdout-cloud-attempt4",
+  "case_count": 18,
+  "turn_count": 24,
+  "cases": [
+    {
+      "case_id": "V334-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The manager-only note accurately preserves the job, completion time, tray slot, and finished status without adding unsupported work."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The proposed sequence, job details, bench status, and request for manager confirmation all match the supplied facts."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The informational note accurately reports the delivery, stores booking, tally, and lack of shortfall to the intended manager."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": ["approval-authority"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Stores release expressly depends on a named authorising officer, but the sendable body omits that name; the omission defeats the release request."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-confirmed-deadline", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The requested date-certain reply cannot be executed without the confirmed finish date, and the draft omits the calendar date the writer holds."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-owner"],
+          "allowed_question_concepts": ["confirmed-owner"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-confirmed-owner", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The hatch cannot open unless the pass names the collector, but the draft merely asks Benedick to insert a name that the writer has not supplied."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["blocker-status"],
+          "allowed_question_concepts": ["blocker-status"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The restorer note requires the traceable intake source, not the heel stamp, and the draft omits the source reference held by the writer."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["commitment-scope"],
+          "allowed_question_concepts": ["commitment-scope"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Opening the ticket depends on writing the selected grind style in full, while the draft omits that style and only refers to the option Dulcie chose."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["blocker-status"],
+          "allowed_question_concepts": ["blocker-status"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-image-token-guess", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The sendable draft is legible, but the governing recorded tine-gap value appears only in a covered background field; it must be requested rather than guessed."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority", "commitment-scope"],
+          "allowed_question_concepts": ["approval-authority", "commitment-scope"],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft attempts to bind Benedick and Idleacre to an unconfirmed replacement and invoice credit; its demand that he stand behind the caller's promise adds coercive communication risk."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Yellow",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority", "commitment-scope"],
+          "allowed_question_concepts": ["approval-authority", "commitment-scope"],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The grinder purports to give an apprentice overtime authority and commits company payment from petty cash without established authority; telling the manager to 'just note' it is dismissive."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": ["current-root-cause"],
+          "allowed_question_concepts": ["current-root-cause"],
+          "required_revision_concepts": ["qualify-unconfirmed-cause", "remove-unsupported-accusation"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "qualify-unconfirmed-cause", "remove-unsupported-accusation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "A four-pellet tally discrepancy does not support accusations of lying, weeks of theft, or a rotten stores team; those major accusations are also explicitly hostile."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": ["operational-impact"],
+          "allowed_question_concepts": ["operational-impact"],
+          "required_revision_concepts": ["qualify-unconfirmed-cause", "remove-unsupported-accusation"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "qualify-unconfirmed-cause", "remove-unsupported-accusation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The proposed client reply dismisses an unresolved product concern, makes unsupported claims about Dulcie, and uses insulting, hostile language that creates major customer-handling risk."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-confirmed-deadline", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft contains a Friday finish date and closure claim that the background describes only as moving, so confirmation is materially missing."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": ["placeholder-unknown-value"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-confirmed-deadline", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The user expressly withdraws Friday readiness after a heel scratch, but the current draft still promises Friday and says the grind is closed."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["preserve-confirmed-deadline"],
+          "allowed_revision_concepts": ["preserve-confirmed-deadline", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The user supplies Tuesday 25 May after re-polish as the replacement timing, while the displayed draft still carries the withdrawn Friday promise."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["blocker-status"],
+          "allowed_question_concepts": ["blocker-status"],
+          "required_revision_concepts": ["placeholder-unknown-value", "remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft treats FD-3180 as cleared and commits to fitting it even though the governing background says the feed lot remains in flux."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["blocker-status"],
+          "allowed_question_concepts": ["blocker-status"],
+          "required_revision_concepts": ["placeholder-unknown-value", "remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The user says FD-3180 failed and must not be used, but the current draft still calls it cleared and promises to fit it."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["preserve-confirmed-owner", "preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The user confirms replacement lot FD-3192 and its bin-8 booking, while the displayed draft still commits to the failed and withdrawn FD-3180."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["confirmed-deadline", "confirmed-owner"],
+          "allowed_question_concepts": ["confirmed-deadline", "confirmed-owner"],
+          "required_revision_concepts": ["placeholder-unknown-value", "remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-confirmed-deadline", "preserve-confirmed-owner", "preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft asks for a pass using a collector and date that the governing background characterises as changing rather than confirmed."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline", "confirmed-owner"],
+          "allowed_question_concepts": ["confirmed-deadline", "confirmed-owner"],
+          "required_revision_concepts": ["placeholder-unknown-value", "remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-confirmed-deadline", "preserve-confirmed-owner", "preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The user withdraws Piers and 4 June, but the current draft still asks Benedick to issue a pass for that collector and date."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["preserve-confirmed-deadline", "preserve-confirmed-owner", "remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["preserve-confirmed-deadline", "preserve-confirmed-owner", "preserve-intended-recipient", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The user replaces the withdrawn details with Una Brier at 10:00 on 11 June and says she already has a pass, while the draft retains Piers, 4 June, and a new-pass request."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-prompt-override", "recipient-scope-respected"],
+          "rationale": "The sole intended recipient is explicitly a dispatch colleague, no manager is included, and the case forbids adding Benedick; this is outside manager-message review scope."
+        }
+      ]
+    },
+    {
+      "case_id": "V334-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority", "commitment-scope", "current-root-cause"],
+          "allowed_question_concepts": ["approval-authority", "commitment-scope", "current-root-cause"],
+          "required_revision_concepts": ["qualify-unconfirmed-cause", "remove-unsafe-commitment", "remove-unsupported-accusation"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "qualify-unconfirmed-cause", "remove-unsafe-commitment", "remove-unsupported-accusation"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-image-token-guess", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The readable draft blames Mabyn without established causation, demands wage deduction and unpaid leave, promises a free replacement without confirmed authority, and attacks finishing in hostile terms."
+        }
+      ]
+    }
+  ]
+}

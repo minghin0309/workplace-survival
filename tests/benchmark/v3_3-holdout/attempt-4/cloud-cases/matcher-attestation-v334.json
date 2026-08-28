@@ -1,0 +1,91 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "matcher-attestation",
+  "role": "semantic-matcher",
+  "matcher": {
+    "context_id": "bc-804b363a-1c49-5732-8fda-68001cad324b",
+    "model_id": "unverified",
+    "model_family": "claude"
+  },
+  "branch": "cursor/v334-matcher-claude-17a0",
+  "base_branch": "cursor/blind-v334-holdout-17a0",
+  "gold_access": true,
+  "scorer_run": false,
+  "isolation": {
+    "files_read_exclusive": true,
+    "directory_listing_used": false,
+    "glob_used": false,
+    "matching_brief_read": false,
+    "methodology_read": false,
+    "scorer_read": false,
+    "skill_files_read": false,
+    "extractor_raw_read": false,
+    "oracle_notes_read": false,
+    "question_design_read": false,
+    "images_opened": false,
+    "gold_modified": false,
+    "ontology_modified": false,
+    "evaluations_modified": false,
+    "claims_modified": false
+  },
+  "files_read": [
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/extractions-manifest-v334.json",
+      "sha256": "08e8da54daf78ee3058a57c192e67cc2adaf4d0e6deb9117431e8e6c4ec605c6",
+      "hash_verified_before_read": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/evaluations-v334-canonical.json",
+      "sha256": "0de57a3c21f9eb89ecb04aa72bc7bfcee8cf619652de787ffaf12e1a4bb64ae8",
+      "hash_verified_before_read": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/outputs-v334-raw.json",
+      "sha256": "566a24ab98b7b6ed7988b99efac4f305f6a0777fa28503375147e83c059d3343",
+      "hash_verified_before_read": true
+    },
+    {
+      "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/gold-v334.json",
+      "sha256": "c3f4504b4f40ba86cc45d3ff006a5cdf42d6096a49af4dce877e211abe3aba41",
+      "hash_verified_before_read": true
+    },
+    {
+      "path": "tests/benchmark/SEMANTIC_ONTOLOGY.json",
+      "sha256": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926",
+      "hash_verified_before_read": true
+    }
+  ],
+  "output": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-4/cloud-cases/matches-v334.json"
+  },
+  "coverage": {
+    "cases": 18,
+    "turns": 24,
+    "question_claims": 17,
+    "revision_claims": 42,
+    "claims_total": 59,
+    "claims_matched_or_adjudicated": 59,
+    "claims_unmatched": 0,
+    "every_claim_id_appears_exactly_once": true,
+    "empty_turns_emitted": true
+  },
+  "match_type_counts": {
+    "exact": 0,
+    "alias": 0,
+    "semantic": 39,
+    "unsupported": 20
+  },
+  "claims_unmatched": 0,
+  "decision_rules_applied": {
+    "concept_restricted_to_turn_allowed_lists": true,
+    "null_concept_when_unsupported": true,
+    "exact_or_alias_requires_text_equals_evidence_span_and_ontology_alias_hit": true,
+    "claims_with_text_equal_to_evidence_span": 0,
+    "semantic_confidence_floor": 0.8,
+    "min_semantic_confidence_emitted": 0.8,
+    "one_concept_per_claim": true,
+    "concepts_invented": 0,
+    "claims_dropped": 0,
+    "local_gold_concept_definitions_treated_as_semantic_targets_only": true
+  }
+}
