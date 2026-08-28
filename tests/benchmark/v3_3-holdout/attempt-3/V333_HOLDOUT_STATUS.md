@@ -20,6 +20,6 @@ Gold labelers (do not merge): launched after construction copy.
 
 | N | family | model | branch | agent id |
 | --- | --- | --- | --- |
-| 1 | grok | `cursor-grok-4.5-high` | pending | `bc-8953d067-d02d-5202-b8b5-7b48dbecf052` |
+| 1 | grok | `cursor-grok-4.5-high` | `cursor/v333-gold-labeler-1-17a0` @ `1c5c39e` | `bc-8953d067-d02d-5202-b8b5-7b48dbecf052` |
 | 2 | gemini | `gemini-3.7-flash-high` | pending | `bc-50b62d40-cc75-580b-ad43-4baa4434022e` |
 | 3 | gpt | `gpt-5.6-sol-high` | `cursor/v333-gold-labeler-3-17a0` @ `b804783` | `bc-b7c43f0e-59ed-5a25-91a8-092070816448` |
