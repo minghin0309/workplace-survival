@@ -11,7 +11,7 @@
 | Frozen attempt 2 | do not rescore |
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607` (artifacts `d460f3e`, not merged). Designer `bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18`. |
-| Gold | three isolated label sets copied with `git show` (not merged). Adjudication pending. |
+| Gold | `VALID_COVERAGE`; copied with `git show` from `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b` (not merged). Uncertain 0/24. Adjudicator `bc-336c7d73-2281-5ca4-ac79-19399bd2c20f`. Draft PR #143. Freeze pending commit. |
 | SUT | not started |
 | Extraction | not started |
 | Matching | not started |
@@ -29,6 +29,6 @@ Gold labelers (do not merge):
 
 Isolation: `question_design_accessed` false, `skill_files_accessed` false on 1–3. Envelope: 18 cases / 24 turns each. Labeler 1 stores cases under `labels`; 2 and 3 use `cases`.
 
-Adjudicator (do not merge): pending.
+Adjudicator (do not merge): `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b`. Family claude. Copied with `git show`. Isolation: question-design and Skill not read. Uncertain 0/24. Draft PR #143. Parent added ontology `definitions` to the holdout `gold-v334-raw.json` copy only; labels unchanged.
 
 Do not invent the workplace domain on this branch. Copy cases with `git show` from the dedicated designer branch after it validates.
