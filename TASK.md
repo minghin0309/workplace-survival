@@ -605,7 +605,7 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 
 #### T14.28 — Fresh benchmark v3.3 unseen holdout attempt 4
 
-- [ ] Completed
+- [x] Completed
 
 - Source requirement: Measure unseen-case performance after T14.27 on methodology v3.3. No in-version rescore of v3.3 attempt 1, attempt 2, or attempt 3.
 - Owner files: `tests/benchmark/v3_3-holdout/attempt-4/`, `TASK.md`, and `CHANGELOG.md`.
