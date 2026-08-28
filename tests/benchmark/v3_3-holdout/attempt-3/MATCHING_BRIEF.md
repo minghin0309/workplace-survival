@@ -6,8 +6,8 @@ Fill SHA-256 values after the extraction freeze. Do not launch the matcher befor
 
 ## Allowlist (exactly five files)
 
-1. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractions-manifest-v333.json` SHA-256 `FILL_AFTER_EXTRACTION_FREEZE`
-2. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/evaluations-v333-canonical.json` SHA-256 `FILL_AFTER_EXTRACTION_FREEZE`
+1. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractions-manifest-v333.json` SHA-256 `7a794b103e8e01930d505c953d8c9ef7b02664a88eec28b691269bced1020884`
+2. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/evaluations-v333-canonical.json` SHA-256 `cbc7a157d507a3ea3c4402a75d4be4bba1d85e9a26bf9801df52dc78bf5024c2`
 3. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/outputs-v333-raw.json` SHA-256 `32c5ac78ffe0cac6eee43436ba979935f352e20fd7310463e0c4a8ef4408ea02`
 4. `tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-v333.json` SHA-256 `f47bd218c185a076444d12eb270f41cb2658c2312d5086ac9a4e0d07556fbc08`
 5. `tests/benchmark/SEMANTIC_ONTOLOGY.json` SHA-256 `3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926`
