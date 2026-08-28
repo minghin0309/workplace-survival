@@ -28,8 +28,8 @@ Adjudicator (do not merge): `cursor/v333-gold-adjudicator-17a0` @ `6eece7a`. Fam
 
 SUT wave 1 (do not merge):
 
-| case | agent id |
-| --- | --- |
-| V333-001 | `bc-6b4f2c89-585a-5227-b608-e807123328e8` |
-| V333-002 | `bc-8bd0aa6d-b7f7-5985-b054-2b6a77bc37b1` |
-| V333-003 | `bc-efbfd8e8-bc83-539c-8857-2107d35b8bf8` |
+| case | branch | agent id | draft PR |
+| --- | --- | --- | --- |
+| V333-001 | `cursor/v333-001-sut-17a0` @ `00b2204` | `bc-6b4f2c89-585a-5227-b608-e807123328e8` | #115 |
+| V333-002 | pending | `bc-8bd0aa6d-b7f7-5985-b054-2b6a77bc37b1` | |
+| V333-003 | `cursor/v333-003-sut-17a0` @ `c6c55c2` | `bc-efbfd8e8-bc83-539c-8857-2107d35b8bf8` | #116 |
