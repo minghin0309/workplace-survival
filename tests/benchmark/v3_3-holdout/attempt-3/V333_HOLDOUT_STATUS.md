@@ -8,7 +8,7 @@
 | Frozen attempt 1 | do not rescore |
 | Frozen attempt 2 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v333-attempt3-cases-k7m2-17a0` @ `446a20b` (artifacts `2738181`, not merged). Designer `bc-891cc11a-21f6-5e13-abc4-ca17369cbf10`. |
-| Gold | three labelers copied (`git show`, not merged). Adjudicator pending. |
+| Gold | three labelers copied (`git show`, not merged). Adjudicator launched: `bc-15777191-0cb6-5a6f-9438-0dfada82fe06` (claude opus). |
 
 | SUT | not started |
 | Extraction | not started |
