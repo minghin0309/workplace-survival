@@ -12,7 +12,7 @@
 | Frozen attempt 3 | do not rescore |
 | Construction | `VALID`; copied with `git show` from `cursor/v334-attempt4-cases-m4q7-17a0` @ `1513607` (artifacts `d460f3e`, not merged). Designer `bc-e26d9b6b-9931-516e-be55-5c2fc5db4a18`. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `2f78ce0662e2d0d885d5fe50a6c550d393afd61a08d5e661335e5ba60c398a18` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `c3f4504b4f40ba86cc45d3ff006a5cdf42d6096a49af4dce877e211abe3aba41`. Uncertain 0/24. Copied from `cursor/v334-gold-adjudicator-17a0` @ `f1bd87b` (not merged). |
-| SUT | waves 1–3 copied with `git show` (not merged). Wave 4 launching. |
+| SUT | waves 1–4 copied with `git show` (not merged). Wave 5 launching. |
 | Extraction | not started |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
@@ -60,5 +60,15 @@ SUT wave 3 (do not merge):
 | V334-009 | `cursor/v334-009-sut-17a0` @ `3ba6a7d` | `bc-8d964f87-d971-542d-8e75-aa5e1ee59f3e` | #151 |
 
 Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true. V334-009 attested PNG read; hash matches construction.
+
+SUT wave 4 (do not merge):
+
+| case | branch | agent id | draft PR |
+| --- | --- | --- | --- |
+| V334-010 | `cursor/v334-010-sut-17a0` @ `ee9db95` | `bc-f89345bc-3535-5cef-8a82-80c45f32893d` | #153 |
+| V334-011 | `cursor/v334-011-sut-17a0` @ `ac4b38e` | `bc-5d2cb333-bfff-57d1-981e-11795e19c3e0` | #154 |
+| V334-012 | `cursor/v334-012-sut-17a0` @ `ecf232c` | `bc-cfbaa733-e6dd-58e3-8424-beb4c819f7a0` | #155 |
+
+Isolation: `gold_accessed` false, `other_cases_accessed` false, `question_design_accessed` false, `skill_files_accessed` true on 010–012.
 
 Do not invent the workplace domain on this branch. Copy cases with `git show` from the dedicated designer branch after it validates.
