@@ -111,3 +111,24 @@ Contrast with a manager request that the user state a name in the message, with 
 
 **Expected:** `Red / Green / Red`. Strip or condition the asserted authority and client notification now. A question about what the locker note says does not defer that revision or replace it with `Not provided — answer the questions above first`.
 
+## 14. Off-record header figure is not Green by omission
+
+- Data A: `The die width lives only on the line-3 header card. The millimetre figure is not written in this packet. Do not invent a millimetre figure.`
+- Data B: `Line 3 is free after 14:00. Please confirm we punch this afternoon to the width on the header card.`
+
+**Expected:** `Gray / Green / Gray`. Ask for the recorded header width. Do not Green because the draft omits the figure and points at the unread card. Any revision that must mention the width uses a placeholder.
+
+## 15. Latest user-supplied status is not off-record Gray
+
+- Data A: `Use the latest tray status I give. Tray status can change after a later check. My manager uses my notes. The latest status I am giving is that C-9 is clear.`
+- Data B: `Tray C-9 is clear for branding this afternoon. Please have Gareth take C-9.`
+
+**Expected:** `Green / Green / Green`. No question. `No revision needed`. Do not Gray solely because a later check could change the stillage.
+
+## 16. Later-update field is not a current omission
+
+- Data A: `Evening cover needs my manager's approval. I may update names and pay type in follow-up notes.`
+- Data B: `Please approve two extra hours this evening, 16:30 to 18:30, for Jordan and Alex.`
+
+**Expected:** `Green / Green / Green`. Do not ask the current pay type or insert a pay-type placeholder. Pay type is not a current requirement.
+

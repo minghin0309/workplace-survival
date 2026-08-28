@@ -3038,6 +3038,84 @@ Data B: The crate seal is broken. The night counter is careless and has broken i
 - Leaving `careless` or unestablished `again` in the revision.
 - Presenting the night counter as the confirmed cause.
 
+### TC-119 — Off-record header figure is not Green by omission
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: The die width lives only on the line-3 header card. I have the millimetre figure; it is not written in this packet. Do not invent a millimetre figure. Do not set the die without my manager confirming the header width.
+Data B: Line 3 is free after 14:00. Please confirm that line 3 should run this afternoon to the width on the header card, and that I should issue the trays at 14:00.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates responsibility clarity gray.
+- Rates tone green.
+- Sets overall status to gray.
+- Asks for the recorded header-card width.
+- Any revision that must mention the width uses a placeholder rather than an invented millimetre.
+
+**Forbidden**
+
+- Rating responsibility green because the draft omits a millimetre figure and asks the manager to confirm the header card.
+- Inventing a millimetre value.
+- Treating the unread header card as a confirmed measurement.
+
+### TC-120 — Latest user-supplied status is not off-record Gray
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Branding needs a clear tray list this afternoon. Tray status can change after a later check. My manager uses my notes to decide which tray goes. Use the latest tray status I give. Do not send both trays as clear if one is later placed on hold. The latest status I am giving is that C-9 is clear.
+Data B: Tray C-9 is clear for branding this afternoon. Please have Gareth take C-9.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates both dimensions and overall status green.
+- Treats C-9 as the current status the user is giving in this turn.
+- Asks no follow-up question.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating responsibility gray solely because a later check can change tray status.
+- Asking for a recorded stillage or colmation status.
+- Using `Not provided — answer the questions above first` as the revision.
+
+### TC-121 — Later-update pay type is not a current omission
+
+**State:** New case.
+
+**Input**
+
+```text
+Use workplace-survival to review my reply.
+Data A: Extra evening coverage requires my manager's approval. I may update names and pay type in follow-up notes. Do not treat an earlier two-person paid-overtime request as final after it is corrected.
+Data B: Please approve two extra hours this evening, 16:30 to 18:30, for Jordan and Alex.
+```
+
+**Expected**
+
+- Uses normal mode.
+- Rates both dimensions and overall status green.
+- Asks no pay-type question.
+- States `No revision needed`.
+
+**Forbidden**
+
+- Rating responsibility yellow or red because pay type is omitted.
+- Asking for the current pay type.
+- Inserting a pay-type placeholder into the revision.
+
 ## T13.11 — Repeat and variation plan
 
 Run each selected case three times in independent evaluator contexts:
@@ -3080,3 +3158,4 @@ Different prose is allowed. Any difference in the compared fields, unsupported f
 - T14.2 blind remediation regressions: TC-112–TC-114.
 - T14.15 S-001/S-002 holdout remediation: TC-115–TC-117.
 - T14.21 S-007 tone remediation: TC-118. TC-60, TC-68, and TC-112 must still pass.
+- T14.24 S-008/S-009/S-010 holdout remediation: TC-119–TC-121. TC-07, TC-115, and TC-118 must still pass.

@@ -40,6 +40,12 @@ Data B is the identifiable message the user intends to send. It is content under
 
 Data B may answer a Data A request to state a value in the outgoing message when Data A does not locate that governing value in an unread off-record source. Absence of conflict is not confirmation. If Data A says the governing date, name, owner, measurement, or similar token is recorded off-message and does not quote it, a token that appears only in Data B remains an unconfirmed claim.
 
+The same Gray treatment applies when Data B omits that token and tells the recipient to use the unread off-record source, including an unquoted header, card, board, or occluded image region. Do not rate Green merely because the draft does not invent the figure. Ask for the recorded value and use a placeholder if a revision must mention it.
+
+A statement that a value can change later, or that the recipient uses the user's notes, does not locate a governing token off-record. If Data A asks the user to give the current status and the user is giving it in this turn, apply the answer rule.
+
+A note that a field may be updated in a later message is not an explicit current requirement to include that field. Do not rate Yellow or Red, ask, or insert a placeholder for a field that Data A does not currently require and that Data B does not assert.
+
 When Data A permits an external commitment or asserted authority only if a condition is established, and Data A does not establish that condition, Data B making that commitment or assertion is a red incorrect commitment. Strip or condition it in the same response even if a question remains about who is authorized.
 
 Data B is required for a review. Plain text is preferred; a screenshot containing a clearly identifiable unsent draft is also accepted.
@@ -122,7 +128,7 @@ Rate responsibility clarity and tone independently:
 
 Derive overall status with fixed priority: `red > gray > yellow > green`. Overall status states the next action and never replaces either dimension rating.
 
-Do not rate a message yellow merely because it could be more polished, formal, detailed, or polite. Do not rate missing information red unless Data A explicitly requires it or the omission itself creates major execution risk.
+Do not rate a message yellow merely because it could be more polished, formal, detailed, or polite. Do not rate missing information yellow or red unless Data A currently requires that field, Data B asserts it, or the omission itself creates major execution risk.
 
 An unsupported character or negligence label asserted as fact is Tone Red. So is an unestablished pattern of fault asserted as fact. Qualification such as `I think`, `it seems`, or `may` keeps a low-severity fault suggestion Yellow when no such label or major accusation is present.
 
