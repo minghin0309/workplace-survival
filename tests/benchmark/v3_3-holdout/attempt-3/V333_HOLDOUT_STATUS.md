@@ -24,4 +24,12 @@ Gold labelers (do not merge):
 | 2 | gemini | `gemini-3.7-flash-high` | `cursor/v333-gold-labeler-2-17a0` @ `dee1d04` | `bc-50b62d40-cc75-580b-ad43-4baa4434022e` |
 | 3 | gpt | `gpt-5.6-sol-high` | `cursor/v333-gold-labeler-3-17a0` @ `b804783` | `bc-b7c43f0e-59ed-5a25-91a8-092070816448` |
 
-Adjudicator (do not merge): `cursor/v333-gold-adjudicator-17a0` @ `6eece7a`. Family claude. Copied with `git show`. Isolation: question-design and Skill not read. Uncertain 0/24.
+Adjudicator (do not merge): `cursor/v333-gold-adjudicator-17a0` @ `6eece7a`. Family claude. Copied with `git show`. Isolation: question-design and Skill not read. Uncertain 0/24. Draft PR #114.
+
+SUT wave 1 (do not merge):
+
+| case | agent id |
+| --- | --- |
+| V333-001 | `bc-6b4f2c89-585a-5227-b608-e807123328e8` |
+| V333-002 | `bc-8bd0aa6d-b7f7-5985-b054-2b6a77bc37b1` |
+| V333-003 | `bc-efbfd8e8-bc83-539c-8857-2107d35b8bf8` |
