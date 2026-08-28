@@ -7,13 +7,11 @@
 | Methodology | v3.3 |
 | Frozen attempt 1 | do not rescore |
 | Frozen attempt 2 | do not rescore |
-| Construction | pending isolated designer |
+| Construction | isolated designer launched (`bc-891cc11a-21f6-5e13-abc4-ca17369cbf10`, model `cursor-grok-4.6-high-fast`). Not copied yet. Do not merge. |
 | Gold | not started |
 | SUT | not started |
 | Extraction | not started |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
 
-Designer (do not merge): pending.
-
-Do not invent the workplace domain on this branch. Copy cases with `git show` from the dedicated designer branch after it validates.
+Designer (do not merge): running. Copy with `git show` after it validates. Parent must not invent the workplace domain.
