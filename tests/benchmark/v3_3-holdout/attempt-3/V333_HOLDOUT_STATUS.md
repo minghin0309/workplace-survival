@@ -10,7 +10,7 @@
 | Construction | `VALID`; copied with `git show` from `cursor/v333-attempt3-cases-k7m2-17a0` @ `446a20b` (artifacts `2738181`, not merged). Designer `bc-891cc11a-21f6-5e13-abc4-ca17369cbf10`. |
 | Gold | `VALID_COVERAGE`; frozen SHA-256 `669d089a602cac71889e85aea84bc84eeafc0df77a38c4c2c17e6870d29e923e` (roles `gold` + `ontology` + `scorer`). Gold JSON SHA-256 `f47bd218c185a076444d12eb270f41cb2658c2312d5086ac9a4e0d07556fbc08`. Uncertain 0/24. Copied from `cursor/v333-gold-adjudicator-17a0` @ `6eece7a` (not merged). |
 | SUT | frozen SHA-256 `7d0fdb211d4f1b7a5b8ced36ee8d86d8afdbdfb90f4bca5e99e9908f83bbc40c`. 18 cases / 24 turns. Dedicated branches not merged. |
-| Extraction | extractor 1 (grok) and extractor 2 (gemini) copied; adjudicator launching |
+| Extraction | extractor 1 (grok) and extractor 2 (gemini) copied; gpt adjudicator launched |
 | Matching | not started |
 | Formal score | not started; one-shot after freezes |
 
@@ -82,3 +82,5 @@ Extractors (do not merge; gold-blind):
 | --- | --- | --- | --- |
 | 1 | grok | `cursor/v333-extractor-grok-17a0` @ `e9a4c72` (draft PR #133) | `bc-af985572-8f24-5338-9e70-62914baf4859` |
 | 2 | gemini | `cursor/v333-extractor-gemini-17a0` @ `aa5dcdb` (draft PR #134) | `bc-647ca6f7-c5b0-5a4a-939e-399d7e7938e4` |
+
+Adjudicator (do not merge; gold-blind): `cursor/v333-extractor-adjudicator-17a0`. Family gpt. Agent `bc-1f67bf2a-4162-5f03-baab-908b0fdc5dfa`.
