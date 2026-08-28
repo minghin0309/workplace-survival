@@ -38,6 +38,6 @@ SUT wave 2 (do not merge):
 
 | case | agent id |
 | --- | --- |
-| V333-004 | `bc-afef334f-f227-5002-830a-51cb5b6515b9` |
+| V333-004 | `cursor/v333-004-sut-17a0` @ `e52453a` | `bc-afef334f-f227-5002-830a-51cb5b6515b9` | pending |
 | V333-005 | `bc-fa8301cd-23c8-5b2b-bc2d-056244b3afb0` |
 | V333-006 | `bc-200b68ff-b0e7-5bd4-a695-93ddd2183a76` |
