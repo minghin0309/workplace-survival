@@ -78,6 +78,7 @@ Apply these fixed values:
 - If both dimensions are green, write `No revision needed` under `Minimal revision`.
 - If missing information prevents any safe revision, write `Not provided — answer the questions above first`.
 - Do not use that unavailable line when a confirmed red unsafe commitment or asserted unauthorized authority can be stripped or conditioned. Provide that revision and use placeholders or questions only for the still-unknown authorization.
+- Do not use that unavailable line when Gray is solely an unquoted off-record token that the outgoing note must name; provide a placeholdered revision. Case-data wording that forbids a guessed or mixed value does not forbid that placeholder.
 - If a partial revision is safe, use clear descriptive placeholders for unresolved required information.
 - When Data B contains embedded content, add `Evaluated Data B: [verbatim new body]` and `Excluded from evaluation: [quoted / forwarded / reply-header / original-message / chat-preview content]` under `Background understanding`.
 - Identify the excluded content type without reproducing it as Data A.
