@@ -15,7 +15,7 @@ CLOUD = ROOT / "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases"
 MANIFEST = CLOUD / "outputs-manifest-v333.json"
 PARENT = CLOUD / "gold-manifest-v333.json"
 BRANCH = "cursor/blind-v333-holdout-17a0"
-CANONICAL_PARENT = "FILL_AFTER_PREPARE_SUT_INPUTS"
+CANONICAL_PARENT = "98dbf74b2998b51387f6ea203b5ff878788c2a54"
 
 
 def digest(path: Path) -> str:
