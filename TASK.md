@@ -550,6 +550,39 @@ Complete tasks in numerical order. T13.1–T13.3 must be rebuilt because their e
 - Tests: TC-119–TC-121; TC-07, TC-115, and TC-118 must still pass.
 - Evidence: functional results for the new cases.
 
+#### T14.25 — Fresh benchmark v3.3 unseen holdout attempt 3
+
+- [x] Completed
+
+- Source requirement: Measure unseen-case performance after T14.24 on methodology v3.3. No in-version rescore of v3.3 attempt 1 or attempt 2.
+- Owner files: `tests/benchmark/v3_3-holdout/attempt-3/`, `TASK.md`, and `CHANGELOG.md`.
+- Acceptance:
+  - unseen cases use a domain that is not millinery, harpworks, Thornwick aerostat, Greaveholt cold-cathode, Wetherlees turret-clock, Rowanleat cork, or any denylisted prior domain;
+  - every case except the routing case is a manager recipient;
+  - question candidates omit the required token from Data B and set `data_b_contains_unconfirmed_token` false;
+  - image-only question candidates set `occluded_role`; Data B occlusion is not treated as Normal-mode review;
+  - gold freeze includes `SEMANTIC_ONTOLOGY.json` and `score_semantic_v3_3.py`;
+  - gold required revisions omit `preserve-intended-recipient`; established omissions are gold Red;
+  - each case uses a distinct cloud SUT context against the T14.24 runtime;
+  - dual extraction and semantic matching precede a single v3.3 scorer invocation;
+  - v3.3 attempt 1 and attempt 2 are not rescored.
+- Evidence: gold/output/evaluation manifests, protocol audits, and one v3.3 score report.
+- Progress: `SCORED`; thresholds not passed. Report SHA-256 `fa7c922c3b1868a5b809f14e68d97f2936b407d5f42f84a9e7888c38b26180e6`. Formal scorer invocations: 1. Do not rescore. Attempt 1 and attempt 2 are not rescored. Triage is `tests/benchmark/v3_3-holdout/attempt-3/SCORE_TRIAGE.md`.
+
+#### T14.26 — v3.3 attempt-3 score triage
+
+- [x] Completed
+
+- Source requirement: Split Skill defects from methodology and gold on the frozen v3.3 attempt-3 score. No product behavior change. No in-version rescore.
+- Owner files: `tests/benchmark/v3_3-holdout/attempt-3/SCORE_TRIAGE.md`, `TASK.md`, `CHANGELOG.md`.
+- Acceptance:
+  - every failed metric is attributed to Skill, gold quality, or extraction/scoring contract;
+  - S-001, S-007, S-008 (as rating/question), S-010, H-001, H-003, G-001, G-007 (as rating), and H-004-on-018 are recorded as closed on this freeze;
+  - H-004 and G-008 are not treated as Skill seeds;
+  - remaining Skill seeds are S-009 / S-009b, S-011, S-012, S-013, and S-002 residual;
+  - gold, matches, evaluations, ontology, scorer, and runtime Skill files are unchanged.
+- Evidence: `tests/benchmark/v3_3-holdout/attempt-3/SCORE_TRIAGE.md`.
+
 ## Task template
 
 Copy this block when adding work:

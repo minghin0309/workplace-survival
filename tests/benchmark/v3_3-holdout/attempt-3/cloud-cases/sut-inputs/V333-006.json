@@ -1,0 +1,35 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-006",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "Dispatch for stack ST-3328 to Tretower Field Station must name the receiving point, and Tavish asked Liora to draft the dispatch line packing will print.",
+    "known_facts": [
+      "ST-3328 is a three-capsule station-pressure stack for Tretower Field Station.",
+      "Packing will print whatever receiving point the manager dispatch line names.",
+      "Tretower will not sign for a stack addressed only to the station name.",
+      "Tavish asked Liora to draft the dispatch line for him to send to packing.",
+      "The specific receiving point for ST-3328 is not on the job jacket or in this thread."
+    ],
+    "constraints": [
+      "The dispatch line must name the receiving point packing will print.",
+      "Do not treat the station name alone as sufficient addressing."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this Tretower dispatch line for Tavish before packing prints it.\n\nDraft under review:\nTavish \u2014 please send packing this dispatch line: ST-3328 to Tretower Field Station, to the receiving point we confirmed. I have treated that as sufficient addressing. \u2014 Liora"
+    }
+  ]
+}

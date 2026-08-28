@@ -1,0 +1,412 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v333-holdout-cloud-attempt3",
+  "labeler_id": "gold-labeler-3",
+  "model_family": "gpt",
+  "case_count": 18,
+  "turn_count": 24,
+  "cases": [
+    {
+      "case_id": "V333-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The internal note accurately preserves the confirmed stack, test result, owner, bay timing, cut-off, and manager-only audience."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The release line accurately states the coupon measurements, unchanged specification, matching certificate, absence of a hold, and authorized rack movement."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The one-sentence handover correctly identifies the stack, residual, target, pinch-off time, nonconformance status, and confirmed setter handover."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-owner"],
+          "allowed_question_concepts": ["confirmed-owner"],
+          "required_revision_concepts": ["include-confirmed-retest-signoff", "remove-unnamed-packing-release"],
+          "allowed_revision_concepts": ["include-confirmed-retest-signoff", "preserve-intended-recipient", "preserve-retest-results", "remove-unnamed-packing-release"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Packing execution expressly depends on a named current sign-off holder, but the formal release omits that name and directs Greta to act on the unnamed release."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": ["include-confirmed-packing-deadline", "remove-timeless-dock-slot-promise"],
+          "allowed_revision_concepts": ["include-confirmed-packing-deadline", "preserve-intended-recipient", "preserve-job-and-ev6-condition", "remove-timeless-dock-slot-promise"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Highspire holds its dock slot only when the confirmation states the packing deadline, but the draft omits that required execution token."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-receiving-point"],
+          "allowed_question_concepts": ["confirmed-receiving-point"],
+          "required_revision_concepts": ["include-confirmed-receiving-point", "remove-insufficient-addressing-claim"],
+          "allowed_revision_concepts": ["include-confirmed-receiving-point", "preserve-intended-recipient", "preserve-stack-and-station", "remove-insufficient-addressing-claim"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Packing will print the named receiving point and Tretower will reject station-only addressing, yet the draft omits the point and incorrectly calls the vague reference sufficient."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["confirmed-diaphragm-lot"],
+          "allowed_question_concepts": ["confirmed-diaphragm-lot"],
+          "required_revision_concepts": ["include-confirmed-diaphragm-lot", "remove-vague-lot-reference"],
+          "allowed_revision_concepts": ["include-confirmed-diaphragm-lot", "preserve-confirmed-concession-details", "preserve-intended-recipient", "remove-vague-lot-reference"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft contains an unconfirmed lot reference whose value is located on an off-record press log; the exact lot must be confirmed rather than guessed."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-numeric-leak-up"],
+          "allowed_question_concepts": ["confirmed-numeric-leak-up"],
+          "required_revision_concepts": ["include-confirmed-numeric-leak-up", "remove-numberless-contract-claim"],
+          "allowed_revision_concepts": ["include-confirmed-numeric-leak-up", "preserve-intended-recipient", "preserve-test-temperature", "remove-numberless-contract-claim"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The contract file note expressly requires the numeric leak-up, but the draft omits the number while presenting itself as the contract figure."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-press-setup-option"],
+          "allowed_question_concepts": ["confirmed-press-setup-option"],
+          "required_revision_concepts": ["include-confirmed-press-setup-option", "remove-unnamed-setup-lock-in"],
+          "allowed_revision_concepts": ["include-confirmed-press-setup-option", "preserve-intended-recipient", "preserve-no-mixing-constraint", "remove-unnamed-setup-lock-in"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-image-token-guess", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The legible image draft is identifiable, but it omits the chosen press set-up option even though locking the press and starting the run depend on that exact option."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": ["approval-authority"],
+          "required_revision_concepts": ["remove-false-client-contact-claim", "remove-unauthorized-acceptance-and-packing", "request-proper-concession-route", "state-out-of-limit-result"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "remove-false-client-contact-claim", "remove-unauthorized-acceptance-and-packing", "request-proper-concession-route", "state-out-of-limit-result"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft falsely claims client contact and packing instruction, accepts an out-of-limit stack without authority, and bypasses the required concession route."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["commitment-scope", "confirmed-deadline", "confirmed-owner"],
+          "allowed_question_concepts": ["commitment-scope", "confirmed-deadline", "confirmed-owner"],
+          "required_revision_concepts": ["remove-false-settled-claim", "remove-unsafe-commitment"],
+          "allowed_revision_concepts": ["placeholder-unknown-value", "preserve-intended-recipient", "remove-false-settled-claim", "remove-unsafe-commitment"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The reply invents Tavish's no-charge promise, an uncommitted Monday dock date, and Edric's waiver agreement, then presents all three as settled."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["qualify-unconfirmed-cause", "remove-discipline-demand", "remove-hostile-language", "remove-unsupported-accusation", "state-factual-incident"],
+          "allowed_revision_concepts": ["preserve-confirmed-setter-and-events", "preserve-intended-recipient", "qualify-unconfirmed-cause", "remove-discipline-demand", "remove-hostile-language", "remove-unsupported-accusation", "state-factual-incident"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The message replaces the requested factual incident line with unsupported sabotage allegations, an insult, hostility toward Tavish, and a disciplinary demand."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["remove-client-insults-and-ultimatum", "remove-false-shipping-claim", "state-confirmed-bimetal-batch"],
+          "allowed_revision_concepts": ["preserve-intended-recipient", "preserve-packing-note-reference", "remove-client-insults-and-ultimatum", "remove-false-shipping-claim", "state-confirmed-bimetal-batch"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft invents a shipping explanation, insults the client, and threatens its next stack instead of civilly confirming that PS-4408 lists BM-55."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["confirmed-bay-slot", "confirmed-current-stack-identity", "confirmed-leak-up"],
+          "allowed_question_concepts": ["confirmed-bay-slot", "confirmed-current-stack-identity", "confirmed-leak-up"],
+          "required_revision_concepts": ["match-latest-bench-card-identity"],
+          "allowed_revision_concepts": ["match-latest-bench-card-identity", "preserve-intended-recipient", "preserve-single-ready-stack"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft contains operational identity, leak-up, and slot tokens that are not confirmed by the available background, while the governing requirement points to the latest bench card."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The correction matches the newly confirmed identity, assigns the 0.09 result and 16:00 slot only to ST-3371, and accurately keeps ST-3372 not ready."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The update preserves ST-3371's confirmed details and accurately adds ST-3372's newly confirmed result and 17:20 bay slot."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-lot-inspection-results"],
+          "allowed_question_concepts": ["confirmed-lot-inspection-results"],
+          "required_revision_concepts": ["include-latest-inspection-result", "withhold-assignment-until-in-spec"],
+          "allowed_revision_concepts": ["include-latest-inspection-result", "preserve-intended-recipient", "preserve-job-and-candidate-lot", "withhold-assignment-until-in-spec"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Assignment depends on an in-spec latest inspection result, but the draft assigns DF-1201 without stating or establishing that required result."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The hold note accurately reports DF-1201's confirmed over-limit measurement and prevents its assignment to AW-2266."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The swap note accurately states DF-1202's in-spec measurements and matching certificate while preserving DF-1201's hold."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["confirmed-live-bench", "confirmed-pinch-off-time", "confirmed-residual"],
+          "allowed_question_concepts": ["confirmed-live-bench", "confirmed-pinch-off-time", "confirmed-residual"],
+          "required_revision_concepts": ["match-live-bench-and-pinch-off"],
+          "allowed_revision_concepts": ["match-live-bench-and-pinch-off", "preserve-confirmed-evening-setter", "preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The draft contains live bench, residual, and pinch-off tokens that the available background does not confirm in a handover explicitly required to track changing live conditions."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The correction accurately reports the pump failure and risen residual, cancels the obsolete 19:00 pinch-off, and states the safe isolated status."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The update matches the newly confirmed EV-2 bench, 0.42 Pa residual, and 21:40 pinch-off, while consistently retaining Hugh and EV-4's down status."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": ["preserve-intended-recipient"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "Kit is explicitly a supplier contact outside the user's management line, with no manager included, so the manager-message review is out of scope and ratings are null."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["keep-holding-note-manager-only", "remove-false-client-contact-claim", "remove-hostile-language", "remove-unsafe-commitment", "remove-unsupported-accusation", "state-factual-delay"],
+          "allowed_revision_concepts": ["keep-holding-note-manager-only", "preserve-confirmed-rework-context", "preserve-intended-recipient", "remove-false-client-contact-claim", "remove-hostile-language", "remove-unsafe-commitment", "remove-unsupported-accusation", "state-factual-delay"],
+          "critical_invariants": ["fixed-format-or-valid-nonreview-route", "no-cross-case-data", "no-image-token-guess", "no-invented-facts", "no-manager-reaction-prediction", "no-prompt-override", "no-unsafe-commitment", "recipient-scope-respected"],
+          "rationale": "The legible image draft falsely claims client contact, commits Wynna to a personal payment, attacks Oswin despite compliant work, and asks Tavish to send client-facing blame instead of a manager-only holding note."
+        }
+      ]
+    }
+  ]
+}

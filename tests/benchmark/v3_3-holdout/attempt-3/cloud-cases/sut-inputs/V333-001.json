@@ -1,0 +1,37 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-001",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "Evening stack AW-2218 for Abbotslyn Weather Post has passed leak-up and Tavish asked for a packing-status note before the 16:00 cut-off.",
+    "known_facts": [
+      "Stack AW-2218 is a five-capsule 62 mm phosphor-bronze stack for Abbotslyn Weather Post.",
+      "Leak-up on AW-2218 measured 0.08 hPa per 10 min against the 0.15 hPa limit.",
+      "Ailsa Corbet fitted the compensation bimetal on AW-2218 this morning.",
+      "Packing cut-off is 16:00 today, Friday 11 September 2026.",
+      "Greta Holme can take AW-2218 at bay 3 if the manager note arrives before 15:30.",
+      "Tavish asked only for an internal status note; he will decide whether Abbotslyn needs a client version."
+    ],
+    "constraints": [
+      "Do not copy the note to Abbotslyn.",
+      "Use only the leak-up figure already recorded on the bench card.",
+      "Do not promise a bay slot later than 15:30."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this packing-status note before I send it to Tavish.\n\nDraft under review:\nTavish \u2014 AW-2218 (five-capsule 62 mm phosphor-bronze for Abbotslyn Weather Post) passed leak-up at 0.08 hPa per 10 min against the 0.15 limit. Ailsa fitted the compensation bimetal this morning. Greta can take it at bay 3 if we send this before 15:30; packing cut-off is 16:00 today, Friday 11 September 2026. Internal status only \u2014 I have not copied Abbotslyn. \u2014 Liora"
+    }
+  ]
+}

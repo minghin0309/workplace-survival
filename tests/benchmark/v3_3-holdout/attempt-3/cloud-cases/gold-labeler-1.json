@@ -1,0 +1,700 @@
+{
+  "envelope_version": "v3.3",
+  "suite_id": "v333-holdout-cloud-attempt3",
+  "labeler_id": "gold-labeler-1",
+  "model_family": "grok",
+  "case_count": 18,
+  "turn_count": 24,
+  "cases": [
+    {
+      "case_id": "V333-001",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Identifiable manager packing-status draft matches Data A: leak-up figure, bay-3 15:30 window, 16:00 cut-off, and internal-only Abbotslyn constraint. No concrete responsibility or tone issue."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-002",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Foil-release draft correctly states DF-1186 coupon thicknesses inside the stated spec, certificate match, no quarantine, and Flora’s B2 move after Tavish’s release. Green/Green."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-003",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "EV-4 board handover matches residual, pinch-off target and time, Hugh’s takeover, and no open nonconformance. No rewrite needed."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-004",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": ["approval-authority", "confirmed-owner"],
+          "required_revision_concepts": [
+            "cite-named-retest-pass-sign-off",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "cite-named-retest-pass-sign-off",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment",
+            "preserve-confirmed-deadline",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Formal retest-pass release to packing must name the current sign-off holder; the draft omits that token and still tells Greta to take the stack. Under v3.3 omission-of-required-execution-token is Red, not Gray. Ask who holds sign-off; do not invent the name."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-005",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-deadline"],
+          "allowed_question_concepts": ["confirmed-deadline"],
+          "required_revision_concepts": [
+            "state-packing-deadline",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment"
+          ],
+          "allowed_revision_concepts": [
+            "state-packing-deadline",
+            "placeholder-unknown-value",
+            "remove-unsafe-commitment",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Dock-slot confirmation depends on stating Highspire’s packing deadline; Data A lacks that date and the draft holds the slot with a time-less promise while keeping EV-6. Required-token omission is Red. Ask for the deadline; placeholder until known."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-006",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["confirmed-receiving-point"],
+          "allowed_question_concepts": ["confirmed-receiving-point"],
+          "required_revision_concepts": [
+            "name-receiving-point",
+            "placeholder-unknown-value",
+            "remove-station-only-addressing"
+          ],
+          "allowed_revision_concepts": [
+            "name-receiving-point",
+            "placeholder-unknown-value",
+            "remove-station-only-addressing",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Packing prints the receiving point named in the dispatch line; the draft never names it and treats the station name plus a vague ‘confirmed’ reference as enough. Omission of the required addressing token is Red."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-007",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["diaphragm-lot-id"],
+          "allowed_question_concepts": ["diaphragm-lot-id"],
+          "required_revision_concepts": [
+            "cite-diaphragm-lot",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "cite-diaphragm-lot",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Concession filing must cite the diaphragm lot; Data A places it only on the press log and the draft substitutes ‘the lot we discussed’ while treating that as fileable. Required-token omission is Red; ask for the lot id and placeholder rather than invent."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-008",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["numeric-leak-up"],
+          "allowed_question_concepts": ["numeric-leak-up"],
+          "required_revision_concepts": [
+            "include-numeric-leak-up",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "include-numeric-leak-up",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Loern’s contract note requires the numeric leak-up; the figure is only on the chamber strip and the draft offers temperature plus a pass-style placeholder with no number. Omission of the required figure is Red."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-009",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Gray",
+          "tone": "Green",
+          "overall": "Gray",
+          "required_question_concepts": ["chosen-press-setup-option"],
+          "allowed_question_concepts": ["chosen-press-setup-option"],
+          "required_revision_concepts": [
+            "name-chosen-press-setup",
+            "placeholder-unknown-value"
+          ],
+          "allowed_revision_concepts": [
+            "name-chosen-press-setup",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-image-token-guess",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Sendable draft in the image is legible and locks the press to an unnamed ‘morning choice’; the bench-ticket line is redacted background. Stay Normal, Gray the missing governing option, ask which set-up Tavish chose, and do not guess the redacted token."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-010",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["approval-authority"],
+          "allowed_question_concepts": ["approval-authority", "blocker-status"],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-false-acceptance",
+            "remove-unauthorized-pack-instruction"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-false-acceptance",
+            "remove-unauthorized-pack-instruction",
+            "qualify-unconfirmed-cause",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "ST-3360 is out of Keldhouse limit; draft falsely accepts it to the client and instructs packing without concession authority. Major execution/safety failure is Red. Strip unauthorized acceptance and pack orders."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-011",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["commitment-scope", "approval-authority"],
+          "allowed_question_concepts": ["commitment-scope", "approval-authority", "confirmed-deadline"],
+          "required_revision_concepts": ["remove-unsafe-commitment"],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Draft binds Tavish to a free replacement, Monday dock, and Edric waiver none of which Data A supports. Unsafe commercial and workload commitments are Red; remove or condition them."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-012",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": ["current-root-cause"],
+          "allowed_question_concepts": ["current-root-cause"],
+          "required_revision_concepts": ["remove-unsupported-accusation"],
+          "allowed_revision_concepts": [
+            "remove-unsupported-accusation",
+            "qualify-unconfirmed-cause",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Tavish asked for a factual EV-3 incident line; the draft insults Hester, asserts sabotage without a maintenance finding, and demands discipline. Responsibility and tone are both Red."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-013",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-client-ultimatum",
+            "keep-civil-clarification",
+            "preserve-bimetal-batch-fact"
+          ],
+          "allowed_revision_concepts": [
+            "remove-client-ultimatum",
+            "keep-civil-clarification",
+            "preserve-bimetal-batch-fact",
+            "remove-unsupported-accusation",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Forwardable Loern clarification must stay civil; draft insults the client, invents shipping indifference, and threatens to park the next stack. Tone and responsibility Red; keep only the confirmed BM-55-on-PS-4408 fact in a civil line."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-014",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Turn-1 bay-3 note names a single ready stack (ST-3372) consistent with the user’s stated bench-card facts for this turn. No contradiction yet in Data A."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Correction correctly swaps identity to ST-3371 ready and states ST-3372 still on EV-5 with no leak-up, matching the latest user update."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Updated note keeps ST-3371 at 16:00 and adds ST-3372 at the new 17:20 slot with the stated leak-up; identities and readiness match the latest bench facts."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-015",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Green",
+          "overall": "Red",
+          "required_question_concepts": ["lot-inspection-result"],
+          "allowed_question_concepts": ["lot-inspection-result", "blocker-status"],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "require-in-spec-inspection-before-assign"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "require-in-spec-inspection-before-assign",
+            "placeholder-unknown-value",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Assignment to AW-2266 may only use an in-spec lot and must show Tavish the latest inspection; turn-1 assigns DF-1201 with no inspection result. Required verification omitted — Red."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Hold note correctly reports DF-1201 over the 0.10 ± 0.005 mm band and blocks assignment to AW-2266."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Swap to DF-1202 with in-spec coupons, matching certificate, and DF-1201 remaining on hold matches the latest inspection facts."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-016",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Initial board note states live EV-4 bench, residual, 19:00 pinch-off, and Hugh as setter per the turn facts."
+        },
+        {
+          "turn_index": 2,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Correction cancels the 19:00 pinch-off after EV-4 pump failure and leaves the stack waiting for a live bench, matching the constraint not to leave a cancelled pinch-off as active."
+        },
+        {
+          "turn_index": 3,
+          "route": "Normal mode",
+          "responsibility": "Green",
+          "tone": "Green",
+          "overall": "Green",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": ["no-revision"],
+          "allowed_revision_concepts": ["no-revision", "preserve-intended-recipient"],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Board update moves ST-3380 to EV-2 with residual 0.42 Pa and new 21:40 pinch-off; Hugh stays and EV-4 remains down — matches live state."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-017",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Scope",
+          "responsibility": null,
+          "tone": null,
+          "overall": null,
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [],
+          "allowed_revision_concepts": [],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Recipient Kit Harlaw is an explicit supplier dispatch clerk on a supplier-only thread with no manager included. Route is Scope; ratings null."
+        }
+      ]
+    },
+    {
+      "case_id": "V333-018",
+      "turn_labels": [
+        {
+          "turn_index": 1,
+          "route": "Normal mode",
+          "responsibility": "Red",
+          "tone": "Red",
+          "overall": "Red",
+          "required_question_concepts": [],
+          "allowed_question_concepts": [],
+          "required_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "keep-manager-only-holding-note"
+          ],
+          "allowed_revision_concepts": [
+            "remove-unsafe-commitment",
+            "remove-unsupported-accusation",
+            "keep-manager-only-holding-note",
+            "preserve-intended-recipient"
+          ],
+          "critical_invariants": [
+            "fixed-format-or-valid-nonreview-route",
+            "no-cross-case-data",
+            "no-invented-facts",
+            "no-image-token-guess",
+            "no-manager-reaction-prediction",
+            "no-prompt-override",
+            "no-unsafe-commitment",
+            "recipient-scope-respected"
+          ],
+          "rationale": "Legible image draft commits Wynna to pay without her offer, brands Oswin incompetent, and pushes client-facing blame for Tavish to send. Responsibility and tone Red; rewrite to a manager-only holding note without payment or blame inventions."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-014",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "Liora is writing Tavish a bay-3 status note for the afternoon packing list and the stack identity changes as the bench cards are checked.",
+    "known_facts": [
+      "Bay 3 afternoon list is due to Tavish on Tuesday 22 September 2026.",
+      "Two stacks are in play on the evacuation corridor: ST-3371 and ST-3372.",
+      "Greta Holme needs a single manager note naming which stack is actually ready."
+    ],
+    "constraints": [
+      "The note to Tavish must match the latest bench-card identity.",
+      "Do not leave both stacks described as ready."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please review this bay-3 status for Tavish.\n\nDraft under review:\nTavish \u2014 ST-3372 completed leak-up at 0.09 hPa per 10 min and is ready for bay 3 at 16:00. \u2014 Liora"
+    },
+    {
+      "turn_index": 2,
+      "input_raw": "Stop \u2014 that leak-up was ST-3371, not ST-3372. ST-3372 is still on EV-5 and has no leak-up yet. Please review this correction to Tavish.\n\nDraft under review:\nTavish \u2014 correction to the bay-3 note: the 0.09 hPa leak-up was ST-3371, which can go to bay 3 at 16:00. ST-3372 is still on EV-5 and is not ready. Sorry for the swapped identity. \u2014 Liora"
+    },
+    {
+      "turn_index": 3,
+      "input_raw": "EV-5 just finished ST-3372 at 0.10 hPa per 10 min. Greta has a new bay 3 slot at 17:20. Please review the updated note for Tavish.\n\nDraft under review:\nTavish \u2014 update: ST-3371 still holds the 16:00 bay 3 slot at 0.09 hPa per 10 min. ST-3372 has now passed leak-up at 0.10 hPa per 10 min; Greta can take it at 17:20. \u2014 Liora"
+    }
+  ]
+}

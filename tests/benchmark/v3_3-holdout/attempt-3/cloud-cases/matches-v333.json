@@ -1,0 +1,537 @@
+{
+  "schema_version": "v3.3",
+  "artifact": "semantic-matches",
+  "matcher": {
+    "context_id": "bc-88925d40-d154-5533-a6fc-924e4b57d67a",
+    "model_id": "unverified",
+    "model_family": "claude",
+    "gold_access": true
+  },
+  "extraction_snapshot": {
+    "path": "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractions-manifest-v333.json",
+    "sha256": "7a794b103e8e01930d505c953d8c9ef7b02664a88eec28b691269bced1020884"
+  },
+  "source_hashes": {
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/extractions-manifest-v333.json": "7a794b103e8e01930d505c953d8c9ef7b02664a88eec28b691269bced1020884",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/evaluations-v333-canonical.json": "cbc7a157d507a3ea3c4402a75d4be4bba1d85e9a26bf9801df52dc78bf5024c2",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/outputs-v333-raw.json": "32c5ac78ffe0cac6eee43436ba979935f352e20fd7310463e0c4a8ef4408ea02",
+    "tests/benchmark/v3_3-holdout/attempt-3/cloud-cases/gold-v333.json": "f47bd218c185a076444d12eb270f41cb2658c2312d5086ac9a4e0d07556fbc08",
+    "tests/benchmark/SEMANTIC_ONTOLOGY.json": "3e2520b736c25b79baaddb49c9291fde48eb8b98ea7fa39be2ca09fc7496e926"
+  },
+  "matching_notes": {
+    "counts": {
+      "claims_total": 39,
+      "exact": 0,
+      "alias": 0,
+      "semantic": 34,
+      "unsupported": 5
+    },
+    "decision_rules": [
+      "No claim satisfied the exact/alias bar: no claim text equals its evidence_span anywhere in the evaluation set, and no claim text equals an ontology concept_id or alias, so exact and alias counts are zero.",
+      "Every non-null concept_id was taken from that turn's gold allowed_question_concepts or allowed_revision_concepts; local gold concept_definitions text was used as the semantic target definition when the concept is not in the ontology.",
+      "Where a claim's definition support spanned two allowed concepts, the more specific concept covering the claim's distinctive content was chosen, and the sibling claims in the same turn were used to decide which facet each claim contributes.",
+      "For placeholder-insertion revision claims the field-specific concept (cite/name/state/include the required value in the named line) was preferred over the generic placeholder-unknown-value, since the field concept identifies the value slot the revision actually adds.",
+      "For 'replaces X with Y' revision claims the concept describing the added content Y was preferred, consistent with the evidence_span pointing at the added text.",
+      "Two claims in the same turn were allowed to map to the same concept when both faithfully instantiate it; no claim received more than one concept.",
+      "preserve-intended-recipient was not used for any claim; no claim was best described by keeping the intended recipient.",
+      "Unsupported was used whenever the turn's allowed list was empty or contained no concept that faithfully describes the claim; no concept outside the allowed lists was invented."
+    ],
+    "coverage": { "cases": 18, "turns": 24 },
+    "unsupported_notes": [
+      "q-V333-014-1-1 and q-V333-014-3-1: gold allows no question concepts on V333-014 turns 1 and 3 (allowed_question_concepts is empty), so the extracted questions have no allowed target.",
+      "r-V333-014-3-1: V333-014 turn 3 allows only no-revision, preserve-confirmed-deadline, preserve-confirmed-owner and preserve-intended-recipient; collapsing dual-ready wording to a single placeholder ready-stack identity is not described by any of them (preserve-single-ready-stack is allowed on turn 1 only).",
+      "r-V333-016-2-1 and r-V333-016-2-2: V333-016 turn 2 allows only no-revision, preserve-confirmed-owner and preserve-intended-recipient; removing the cancelled 19:00 pinch-off and keeping the pump-failure/residual-rise/live-bench facts are not described by any of them."
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "V333-001",
+      "turn_matches": [
+        { "turn_index": 1, "question_matches": [], "revision_matches": [] }
+      ]
+    },
+    {
+      "case_id": "V333-002",
+      "turn_matches": [
+        { "turn_index": 1, "question_matches": [], "revision_matches": [] }
+      ]
+    },
+    {
+      "case_id": "V333-003",
+      "turn_matches": [
+        { "turn_index": 1, "question_matches": [], "revision_matches": [] }
+      ]
+    },
+    {
+      "case_id": "V333-004",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-004-1-1",
+              "concept_id": "approval-authority",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "The claim asks who currently holds retest-pass release sign-off, which is the authority to sign off and release the stack. The ontology lists signoff-owner as an alias of approval-authority, making it a better fit than the also-allowed confirmed-owner, which covers ownership of the work step."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-004-1-1",
+              "concept_id": "cite-named-retest-pass-sign-off",
+              "match_type": "semantic",
+              "confidence": 0.86,
+              "rationale": "The revision adds a named sign-off slot to the formal packing-release line, which is what the local definition 'Name the person who currently holds retest-pass release sign-off in the release line' describes. The placeholder form is the mechanism, so the field-specific concept was preferred over placeholder-unknown-value."
+            },
+            {
+              "claim_id": "r-V333-004-1-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "Dropping the promise to tell Greta to take the stack this afternoon removes an action the sender committed to without the confirmed release sign-off. That is exactly 'remove or condition a commitment that lacks authority or confirmed scope'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-005",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-005-1-1",
+              "concept_id": "confirmed-deadline",
+              "match_type": "semantic",
+              "confidence": 0.93,
+              "rationale": "The claim asks what packing deadline to state in the AW-2240 confirmation, which is a request for the current confirmed delivery cut-off. confirmed-deadline is the only allowed question concept and matches directly."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-005-1-1",
+              "concept_id": "state-packing-deadline",
+              "match_type": "semantic",
+              "confidence": 0.86,
+              "rationale": "The revision inserts the packing-deadline slot into the Highspire confirmation note, matching 'State the packing deadline in the confirmation note'. The placeholder is the representation of the unknown value, so the field-specific concept was preferred."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-006",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-006-1-1",
+              "concept_id": "confirmed-receiving-point",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim asks what specific receiving point packing should print for ST-3328, which restates the definition 'Ask for the specific receiving point at the destination site that packing must print' almost word for word."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-006-1-1",
+              "concept_id": "name-receiving-point",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The revision puts an explicit receiving-point slot into the dispatch line, matching 'Name the specific receiving point in the dispatch line'. The placeholder stands in for the unknown value, so the field-specific concept was preferred over placeholder-unknown-value."
+            },
+            {
+              "claim_id": "r-V333-006-1-2",
+              "concept_id": "remove-station-only-addressing",
+              "match_type": "semantic",
+              "confidence": 0.94,
+              "rationale": "The claim removes the assertion that addressing by station name was treated as sufficient, which is the definition of remove-station-only-addressing almost verbatim."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-007",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-007-1-1",
+              "concept_id": "confirmed-diaphragm-lot",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim asks for the diaphragm lot identifier recorded on the press log for ST-3340, which is exactly 'Ask for the diaphragm lot identifier that the press log records for the stack'."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-007-1-1",
+              "concept_id": "cite-diaphragm-lot",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The evidence span is the added filing-line text 'used diaphragm lot [diaphragm lot recorded on the press log]', so the claim's added content is the diaphragm lot slot in the concession filing line. The added content decides the match for replace-with claims."
+            },
+            {
+              "claim_id": "r-V333-007-1-2",
+              "concept_id": "remove-vague-lot-reference",
+              "match_type": "semantic",
+              "confidence": 0.84,
+              "rationale": "Removing the claim that an unnamed lot discussion is enough to file is removing reliance on the vague 'the lot we discussed' reference in place of the lot identifier, which is what remove-vague-lot-reference describes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-008",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-008-1-1",
+              "concept_id": "confirmed-numeric-leak-up",
+              "match_type": "semantic",
+              "confidence": 0.94,
+              "rationale": "The claim asks for the numeric leak-up recorded on the chamber strip for ST-3345, matching 'Ask for the numeric leak-up figure recorded on the comparison-chamber strip'."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-008-1-1",
+              "concept_id": "include-numeric-leak-up",
+              "match_type": "semantic",
+              "confidence": 0.86,
+              "rationale": "The revision replaces the number-less 'take this as the figure' wording with a numeric leak-up slot for the contract note, which is 'State the numeric leak-up figure in the contract file note instead of a pass/fail phrase'. The added content decides the match."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-009",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-009-1-1",
+              "concept_id": "confirmed-press-setup-option",
+              "match_type": "semantic",
+              "confidence": 0.95,
+              "rationale": "The claim asks which press set-up option the manager chose this morning for ST-3351, matching 'Ask which of the two mutually exclusive press set-up options the manager chose'."
+            }
+          ],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V333-010",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-010-1-1",
+              "concept_id": "remove-false-client-contact-claim",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "The claim removes the assertion that Keldhouse, the client, was told the stack is accepted, and the span states that Keldhouse has not been told anything today. That is 'Remove the false claim that the client has already been told something'."
+            },
+            {
+              "claim_id": "r-V333-010-1-2",
+              "concept_id": "remove-unauthorized-pack-instruction",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The claim removes the assertion that Greta was instructed to pack the stack, an instruction to packing that presumes a quality sign-off that does not exist."
+            },
+            {
+              "claim_id": "r-V333-010-1-3",
+              "concept_id": "request-proper-concession-route",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "The claim adds an instruction not to treat the out-of-limit stack as accepted without the proper concession route, which is the routing requirement described by request-proper-concession-route."
+            },
+            {
+              "claim_id": "r-V333-010-1-4",
+              "concept_id": "remove-unauthorized-pack-instruction",
+              "match_type": "semantic",
+              "confidence": 0.87,
+              "rationale": "The claim adds the direction not to instruct packing as if quality has already signed, which is the same corrective content as 'Remove the instruction to packing that presumes a quality sign-off that does not exist', stated as a directive rather than a deletion."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-011",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-011-1-1",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.87,
+              "rationale": "Stating that the no-charge replacement stack has not been agreed retracts a commercial commitment the sender had no authority to make, which is 'Remove or condition a commitment that lacks authority or confirmed scope'."
+            },
+            {
+              "claim_id": "r-V333-011-1-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.86,
+              "rationale": "Stating that no Monday dock date has been committed withdraws an unauthorized delivery commitment, matching remove-unsafe-commitment."
+            },
+            {
+              "claim_id": "r-V333-011-1-3",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "Stating that Edric has not agreed to sign the metrology waiver withdraws a commitment made on another person's behalf without confirmed authority."
+            },
+            {
+              "claim_id": "r-V333-011-1-4",
+              "concept_id": "remove-false-settled-claim",
+              "match_type": "semantic",
+              "confidence": 0.93,
+              "rationale": "The claim withdraws treating the commercial answer as settled and asks the manager what to send, which is 'Remove the claim that the commercial terms are already settled'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-012",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-012-1-1",
+              "concept_id": "state-factual-incident",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "The claim restores the plain incident line that EV-3 dropped to atmosphere twice during the 21 September morning shift, stating the confirmed incident facts without personnel judgment."
+            },
+            {
+              "claim_id": "r-V333-012-1-2",
+              "concept_id": "preserve-confirmed-setter-and-events",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The claim keeps Hester Dalrymple as the confirmed named setter for that shift, which is the setter half of 'Keep the confirmed named setter and the two confirmed EV-3 vacuum losses'."
+            },
+            {
+              "claim_id": "r-V333-012-1-3",
+              "concept_id": "qualify-unconfirmed-cause",
+              "match_type": "semantic",
+              "confidence": 0.93,
+              "rationale": "Adding that maintenance has not yet issued a cause finding states that the cause remains unconfirmed, which is qualify-unconfirmed-cause."
+            },
+            {
+              "claim_id": "r-V333-012-1-4",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The claim strips the laziness and sabotage accusations along with the discipline demand; the leading content is removal of unsupported blame and intent claims, which remove-unsupported-accusation covers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-013",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-013-1-1",
+              "concept_id": "state-confirmed-bimetal-batch",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "The evidence span is the added line stating that ST-3340's packing note PS-4408 lists bimetal batch BM-55, which is state-confirmed-bimetal-batch verbatim. The added content decides the match for replace-with claims."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-014",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-014-1-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.9,
+              "rationale": "V333-014 turn 1 has an empty allowed_question_concepts list, so no allowed concept can describe the request for the latest bench-card identity."
+            }
+          ],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-014-3-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.9,
+              "rationale": "V333-014 turn 3 has an empty allowed_question_concepts list, so the question about which stack the latest bench-card identity names as ready has no allowed target."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-014-3-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.88,
+              "rationale": "Turn 3 allows only no-revision, preserve-confirmed-deadline, preserve-confirmed-owner and preserve-intended-recipient. Collapsing dual-ready wording into a single placeholder ready-stack identity is not faithfully described by any of them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "V333-015",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [
+            {
+              "claim_id": "q-V333-015-1-1",
+              "concept_id": "confirmed-lot-inspection-result",
+              "match_type": "semantic",
+              "confidence": 0.94,
+              "rationale": "The claim asks for the latest incoming inspection result for DF-1201 against the thickness spec, which is 'Ask for the latest incoming-inspection result for the candidate foil lot'."
+            },
+            {
+              "claim_id": "q-V333-015-1-2",
+              "concept_id": "confirmed-lot-inspection-result",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "The claim asks whether incoming inspection has posted a result for the other candidate lot DF-1202 and what it is against the same spec, which is the same concept applied to the second candidate foil lot rather than a blocker question."
+            }
+          ],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-015-1-1",
+              "concept_id": "withhold-assignment-until-in-spec",
+              "match_type": "semantic",
+              "confidence": 0.94,
+              "rationale": "The claim conditions the DF-1201 assignment on the latest inspection result being inside the spec band, which is 'Withhold the lot assignment until an in-spec inspection result is confirmed'."
+            },
+            {
+              "claim_id": "r-V333-015-1-2",
+              "concept_id": "include-latest-inspection-result",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The revision adds a latest-inspection-result line for DF-1201 to the assignment note, matching 'State the latest incoming-inspection measurement for the lot in the assignment note'; the placeholder is the representation of the still-unknown value."
+            }
+          ]
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V333-016",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": []
+        },
+        {
+          "turn_index": 2,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-016-2-1",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.88,
+              "rationale": "V333-016 turn 2 allows only no-revision, preserve-confirmed-owner and preserve-intended-recipient. Removing the cancelled 19:00 pinch-off from the board correction is not described by any of them."
+            },
+            {
+              "claim_id": "r-V333-016-2-2",
+              "concept_id": null,
+              "match_type": "unsupported",
+              "confidence": 0.87,
+              "rationale": "Keeping the pump-failure, residual-rise and waiting-for-live-bench facts is a preservation of event facts, which none of the three allowed concepts for this turn covers; preserve-confirmed-owner is about the confirmed owner or named colleague."
+            }
+          ]
+        },
+        {
+          "turn_index": 3,
+          "question_matches": [],
+          "revision_matches": []
+        }
+      ]
+    },
+    {
+      "case_id": "V333-017",
+      "turn_matches": [
+        { "turn_index": 1, "question_matches": [], "revision_matches": [] }
+      ]
+    },
+    {
+      "case_id": "V333-018",
+      "turn_matches": [
+        {
+          "turn_index": 1,
+          "question_matches": [],
+          "revision_matches": [
+            {
+              "claim_id": "r-V333-018-1-1",
+              "concept_id": "keep-manager-only-holding-note",
+              "match_type": "semantic",
+              "confidence": 0.85,
+              "rationale": "The claim restates the ST-3391 delay as a manager-only holding note, and the span carries the explicit 'This is a manager-only holding note' sentence. The reframing away from client-facing wording is the corrective act, so keep-manager-only-holding-note was preferred over the preservation concept preserve-confirmed-rework-context."
+            },
+            {
+              "claim_id": "r-V333-018-1-2",
+              "concept_id": "remove-unsafe-commitment",
+              "match_type": "semantic",
+              "confidence": 0.92,
+              "rationale": "Dropping the personal-payment promise made to Tretower on Wynna's behalf removes a commitment made without authority or confirmed scope."
+            },
+            {
+              "claim_id": "r-V333-018-1-3",
+              "concept_id": "remove-unsupported-accusation",
+              "match_type": "semantic",
+              "confidence": 0.88,
+              "rationale": "Removing the client-facing incompetence blame of Oswin Crail removes an unsupported blame claim about a colleague, which is remove-unsupported-accusation."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

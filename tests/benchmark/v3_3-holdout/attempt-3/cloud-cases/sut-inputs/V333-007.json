@@ -1,0 +1,35 @@
+{
+  "schema_version": "v3.3",
+  "case_id": "V333-007",
+  "recipient_context": {
+    "recipient_name": "Tavish Morel",
+    "recipient_role": "pressing-rooms manager",
+    "relationship_to_user": "direct line manager",
+    "channel": "internal message thread",
+    "audience_scope": "manager only",
+    "additional_recipients": []
+  },
+  "data_a": {
+    "user_role": "senior capsule fitter",
+    "organization": "Selkith Aneroid Works",
+    "site": "Cinderholt Pressing Rooms",
+    "situation": "A concession note for stack ST-3340 must cite the diaphragm lot used, and Tavish asked Liora to draft the filing line.",
+    "known_facts": [
+      "ST-3340 used a BeCu diaphragm lot that is recorded on the press log but not copied into this thread or Data A.",
+      "Quality will reject a concession that does not cite the diaphragm lot.",
+      "Tavish asked Liora to draft the concession filing line for ST-3340.",
+      "The concession is for a cosmetic solder halo only; leak-up on ST-3340 was 0.07 hPa per 10 min.",
+      "ST-3340 is for Loern Summit Observatory."
+    ],
+    "constraints": [
+      "The filing line must cite the diaphragm lot.",
+      "Do not file a lot-less concession."
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "input_raw": "Please look at this concession filing line for Tavish before I hand it over.\n\nDraft under review:\nTavish \u2014 please approve this concession wording for filing: ST-3340 (Loern) has a cosmetic solder halo, leak-up 0.07 hPa per 10 min, and used the lot we discussed. I am treating that as enough to file. \u2014 Liora"
+    }
+  ]
+}
